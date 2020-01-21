@@ -1,0 +1,3434 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+<?properties open_access?>
+<?DTDIdentifier.IdentifierValue
+-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN
+?>
+<?DTDIdentifier.IdentifierType public?>
+<?SourceDTD.DTDName JATS-journalpublishing1.dtd?>
+<?SourceDTD.Version 1.1?>
+<?ConverterInfo.XSLTName jp2nlmx2.xsl?>
+<?ConverterInfo.Version 1?>
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">J Antimicrob Chemother</journal-id>
+<journal-id journal-id-type="iso-abbrev">J. Antimicrob. Chemother</journal-id>
+<journal-id journal-id-type="publisher-id">jac</journal-id>
+<journal-title-group>
+<journal-title>Journal of Antimicrobial Chemotherapy</journal-title>
+</journal-title-group>
+<issn pub-type="ppub">0305-7453</issn>
+<issn pub-type="epub">1460-2091</issn>
+<publisher>
+<publisher-name>Oxford University Press</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="pmcid">6753497</article-id>
+<article-id pub-id-type="doi">10.1093/jac/dkz261</article-id>
+<article-id pub-id-type="publisher-id">dkz261</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Original Research</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>
+Rates of HIV-1 virological suppression and patterns of acquired drug resistance among fisherfolk on first-line antiretroviral therapy in Uganda
+</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name>
+<surname>Omooja</surname>
+<given-names>Jonah</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+<xref ref-type="aff" rid="dkz261-aff2">2</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Nannyonjo</surname>
+<given-names>Maria</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Sanyu</surname>
+<given-names>Grace</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff3">3</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Nabirye</surname>
+<given-names>Stella E</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Nassolo</surname>
+<given-names>Faridah</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Lunkuse</surname>
+<given-names>Sandra</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Kapaata</surname>
+<given-names>Anne</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Segujja</surname>
+<given-names>Farouk</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+<xref ref-type="aff" rid="dkz261-aff2">2</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Kateete</surname>
+<given-names>David Patrick</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff2">2</xref>
+<xref ref-type="aff" rid="dkz261-aff4">4</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Ssebaggala</surname>
+<given-names>Eric</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Bbosa</surname>
+<given-names>Nicholas</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Aling</surname>
+<given-names>Emmanuel</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Nsubuga</surname>
+<given-names>Rebecca N</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Kaleebu</surname>
+<given-names>Pontiano</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+<xref ref-type="aff" rid="dkz261-aff3">3</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid" authenticated="false">http://orcid.org/0000-0001-9675-4234</contrib-id>
+<name>
+<surname>Ssemwanga</surname>
+<given-names>Deogratius</given-names>
+</name>
+<xref ref-type="aff" rid="dkz261-aff1">1</xref>
+<xref ref-type="aff" rid="dkz261-aff3">3</xref>
+<xref ref-type="corresp" rid="dkz261-cor1"/>
+<!-- <email>Deogratius.Ssemwanga@mrcuganda.org</email> -->
+</contrib>
+</contrib-group>
+<aff id="dkz261-aff1">
+<label>1</label>
+Medical Research Council (MRC)/Uganda Virus Research Institute (UVRI) and London School of Hygiene and Tropical Medicine (LSHTM)
+<institution>Uganda Research Unit</institution>
+, Entebbe, Uganda
+</aff>
+<aff id="dkz261-aff2">
+<label>2</label>
+Department of Medical Microbiology,
+<institution>College of Health Sciences, Makerere University</institution>
+, Kampala, Uganda
+</aff>
+<aff id="dkz261-aff3">
+<label>3</label>
+<institution>Uganda Virus Research Institute</institution>
+, Entebbe, Uganda
+</aff>
+<aff id="dkz261-aff4">
+<label>4</label>
+Department of Immunology and Molecular Biology,
+<institution>College of Health Sciences</institution>
+, Makerere University, Kampala, Uganda
+</aff>
+<author-notes>
+<corresp id="dkz261-cor1">
+Corresponding author. MRC/UVRI and LSHTM Uganda Research Unit, PO Box 49, Entebbe, Uganda. Tel: +256 0 417 704170; E-mail:
+<email>Deogratius.Ssemwanga@mrcuganda.org</email>
+</corresp>
+</author-notes>
+<pub-date pub-type="ppub">
+<month>10</month>
+<year>2019</year>
+</pub-date>
+<pub-date pub-type="epub" iso-8601-date="2019-06-30">
+<day>30</day>
+<month>6</month>
+<year>2019</year>
+</pub-date>
+<pub-date pub-type="pmc-release">
+<day>30</day>
+<month>6</month>
+<year>2019</year>
+</pub-date>
+<!--
+ PMC Release delay is 0 months and 0 days and was based on the <pub-date pub-type="epub"/>.
+-->
+<volume>74</volume>
+<issue>10</issue>
+<fpage>3021</fpage>
+<lpage>3029</lpage>
+<history>
+<date date-type="received">
+<day>6</day>
+<month>3</month>
+<year>2019</year>
+</date>
+<date date-type="rev-request">
+<day>06</day>
+<month>5</month>
+<year>2019</year>
+</date>
+<date date-type="rev-recd">
+<day>17</day>
+<month>5</month>
+<year>2019</year>
+</date>
+<date date-type="accepted">
+<day>22</day>
+<month>5</month>
+<year>2019</year>
+</date>
+</history>
+<permissions>
+<copyright-statement>
+© The Author(s) 2019. Published by Oxford University Press on behalf of the British Society for Antimicrobial Chemotherapy.
+</copyright-statement>
+<copyright-year>2019</copyright-year>
+<license license-type="cc-by-nc" xlink:href="http://creativecommons.org/licenses/by-nc/4.0/">
+<license-p>
+This is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (
+<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc/4.0/">http://creativecommons.org/licenses/by-nc/4.0/</ext-link>
+), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited. For commercial re-use, please contact journals.permissions@oup.com
+</license-p>
+</license>
+</permissions>
+<self-uri xlink:href="dkz261.pdf"/>
+<abstract>
+<title>Abstract</title>
+<sec id="s1">
+<title>Objectives</title>
+<p>
+We examined virological outcomes, patterns of acquired HIV drug resistance (ADR), correlates of virological failure (VF) and acquired drug resistance among fisherfolk on first-line ART.
+</p>
+</sec>
+<sec id="s2">
+<title>Methods</title>
+<p>
+We enrolled 1169 adults on ART for a median duration of 6, 12, 24, 36 and ≥48 months and used a pooled VL testing approach to identify VF (VL ≥1000 copies/mL). We performed genotyping among VF cases and determined correlates of VF and ADR by logistic regression.
+</p>
+</sec>
+<sec id="s3">
+<title>Results</title>
+<p>
+The overall virological suppression rate was 91.7% and ADR was detected in 71/97 (73.2%) VF cases. The most prevalent mutations were M184V/I (53.6%) for NRTIs and K103N (39.2%) for NNRTIs. Thymidine analogue mutations were detected in 21.6% of VF cases while PI mutations were absent. A zidovudine-based ART regimen, duration on ART (≥24 months) and secondary/higher education level were significantly associated with VF. A nevirapine-based regimen [adjusted OR (aOR): 1.87; 95% CI: 0.03–0.54)] and VL ≥10000 copies/mL (aOR: 3.48; 95% CI: 1.37–8.85) were ADR correlates. The pooling strategies for VL testing with a negative predictive value (NPV) of ≥95.2% saved US $20320 (43.5%) in VL testing costs.
+</p>
+</sec>
+<sec id="s4">
+<title>Conclusions</title>
+<p>
+We observed high virological suppression rates among these highly mobile fisherfolk; however, there was widespread ADR among those with VF at the first VL testing prior to intensive adherence counselling. Timely treatment switching and adherence support is recommended for better treatment outcomes. Adoption of pooled VL testing could be cost effective, particularly in resource-limited settings.
+</p>
+</sec>
+</abstract>
+<funding-group>
+<award-group award-type="grant">
+<funding-source>
+<named-content content-type="funder-name">UK Medical Research Council</named-content>
+</funding-source>
+</award-group>
+<award-group award-type="grant">
+<funding-source>
+<named-content content-type="funder-name">MRC</named-content>
+<named-content content-type="funder-identifier">10.13039/501100000265</named-content>
+</funding-source>
+</award-group>
+<award-group award-type="grant">
+<funding-source>
+<named-content content-type="funder-name">UK Department for International Development</named-content>
+</funding-source>
+</award-group>
+<award-group award-type="grant">
+<funding-source>
+<named-content content-type="funder-name">DFID</named-content>
+<named-content content-type="funder-identifier">10.13039/501100000278</named-content>
+</funding-source>
+</award-group>
+<award-group award-type="grant">
+<funding-source>
+<named-content content-type="funder-name">MRC/DFID</named-content>
+</funding-source>
+</award-group>
+<award-group award-type="grant">
+<funding-source>
+<named-content content-type="funder-name">Career Development Fellowship</named-content>
+</funding-source>
+</award-group>
+<award-group award-type="grant">
+<funding-source>
+<named-content content-type="funder-name">TMA</named-content>
+</funding-source>
+</award-group>
+<award-group award-type="grant">
+<funding-source>
+<named-content content-type="funder-name">Career Development Fellowship</named-content>
+</funding-source>
+</award-group>
+<award-group award-type="grant">
+<funding-source>
+<named-content content-type="funder-name">
+European and Developing Countries Clinical Trials Partnership
+</named-content>
+<named-content content-type="funder-identifier">10.13039/501100001713</named-content>
+</funding-source>
+</award-group>
+</funding-group>
+<counts>
+<page-count count="9"/>
+</counts>
+</article-meta>
+</front>
+<body>
+<sec sec-type="intro">
+<title>Introduction</title>
+<p>
+ART is the cornerstone of HIV treatment and prevention.
+<xref rid="dkz261-B1" ref-type="bibr">
+<sup>1</sup>
+</xref>
+Provision of ART is aimed at virological suppression in HIV-infected people, reduction of HIV-associated morbidity and mortality and reduction of HIV transmission.
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+Maximizing virological suppression (the ‘third 90’) is cardinal in realizing the UNAIDS 90-90-90 target.
+<xref rid="dkz261-B3" ref-type="bibr">
+<sup>3</sup>
+</xref>
+Uganda adopted the WHO approach of universal ‘test and treat’ and standardized regimens for first-line and second-line therapy.
+<xref rid="dkz261-B4" ref-type="bibr">
+<sup>4</sup>
+</xref>
+A more potent first-line regimen comprising tenofovir disoproxil fumarate, lamivudine and dolutegravir has recently been recommended for adults.
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+</p>
+<p>
+Increased HIV acquired drug resistance (ADR) and transmitted drug resistance (TDR) following the scale-up of ART
+<xref rid="dkz261-B5" ref-type="bibr">
+<sup>5</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B6" ref-type="bibr">
+<sup>6</sup>
+</xref>
+pose a threat to the success of ART. ADR occurs when mutations emerge due to viral replication in individuals on ART and this form of HIV drug resistance (HIVDR) may occur due to suboptimal adherence to treatment, treatment interruption, insufficient plasma drug concentrations or the use of less efficacious drug regimens.
+<xref rid="dkz261-B7" ref-type="bibr">
+<sup>7</sup>
+</xref>
+A high prevalence of ADR (71%) was reported among individuals failing the WHO-recommended NNRTI-based first-line regimen
+<xref rid="dkz261-B7" ref-type="bibr">
+<sup>7</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B8" ref-type="bibr">
+<sup>8</sup>
+</xref>
+and, similarly, low virological suppression rates (50%–60%) were observed among individuals on ART in Uganda.
+<xref rid="dkz261-B9" ref-type="bibr">
+<sup>9</sup>
+</xref>
+The WHO
+<xref rid="dkz261-B7" ref-type="bibr">
+<sup>7</sup>
+</xref>
+reported a pooled prevalence of 68% ADR among individuals failing an NNRTI-based regimen with an overall virological suppression rate of 82% in low- and middle-income countries (LMICs). In contrast, the emergence of ADR has almost ceased in some resource-rich settings.
+<xref rid="dkz261-B10" ref-type="bibr">
+<sup>10</sup>
+</xref>
+To curb HIVDR and associated treatment failure, routine viral load (VL) testing and resistance testing are recommended for monitoring ART
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B7" ref-type="bibr">
+<sup>7</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B8" ref-type="bibr">
+<sup>8</sup>
+</xref>
+but are inhibited by high costs.
+</p>
+<p>
+Fisherfolk engage in high-risk sexual behaviour and are highly mobile
+<xref rid="dkz261-B11" ref-type="bibr">
+<sup>11</sup>
+</xref>
+so fisherfolk in Uganda are disproportionately affected by HIV.
+<xref rid="dkz261-B12" ref-type="bibr">
+<sup>12</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B13" ref-type="bibr">
+<sup>13</sup>
+</xref>
+Whereas the national adult prevalence of HIV is 6.5%,
+<xref rid="dkz261-B9" ref-type="bibr">
+<sup>9</sup>
+</xref>
+HIV prevalence is over 25% among fisherfolk.
+<xref rid="dkz261-B12" ref-type="bibr">
+<sup>12</sup>
+</xref>
+This vulnerability is also linked to the time spent away from home, accessibility to daily cash, their demographic profile (most are sexually active youths), readily available transactional sex
+<xref rid="dkz261-B11" ref-type="bibr">
+<sup>11</sup>
+</xref>
+and high alcohol consumption.
+<xref rid="dkz261-B14" ref-type="bibr">
+<sup>14</sup>
+</xref>
+These factors limit fisherfolk’s access to HIV/AIDS prevention, treatment and care services.
+<xref rid="dkz261-B15" ref-type="bibr">
+<sup>15</sup>
+</xref>
+We hypothesized that fisherfolk on ART have suboptimal adherence to ART, low virological suppression rates and high prevalence of ADR. There is a paucity of data on virological suppression rates and ADR among fisherfolk in Uganda. We therefore determined virological suppression rates, assessed ADR and determined the correlates of both virological failure (VF) and ADR among fisherfolk on first-line ART. To save costs involved in individual VL testing, we integrated pooled VL testing
+<xref rid="dkz261-B16" ref-type="bibr">
+<sup>16–18</sup>
+</xref>
+in population surveillance of ADR.
+</p>
+</sec>
+<sec sec-type="methods">
+<title>Methods</title>
+<sec>
+<title>Study design</title>
+<p>
+In this cross-sectional study, we enrolled 1169 HIV-1-infected adults (≥15 years old) who had been on ART for at least 6 months at the time of enrolment. We randomly selected these participants from a multi-site cohort of 6000 participants of the HIV Molecular Epidemiology study that aimed to determine HIV subtypes and transmission dynamics among both high-risk and general populations in Uganda. Eligible participants attending HIV care clinics in the fisherfolk communities were consecutively enrolled for the study between August 2016 and March 2017. In this current study, participants with a history of ART exposure for prevention of mother-to-child transmission (PMTCT) or for post-exposure prophylaxis and those on a second-line regimen were excluded as our objectives were focused on the outcomes of the first-line regimen. Demographic and clinical data were extracted from participants’ treatment records. We stratified participants by median duration on ART of 6, 12, 24, 36 and ≥48 months.
+</p>
+</sec>
+<sec>
+<title>Pooled VL testing of plasma samples</title>
+<p>
+We constituted pools of plasma from all participants and performed two pooling strategies as previously described.
+<xref rid="dkz261-B16" ref-type="bibr">
+<sup>16–18</sup>
+</xref>
+First, we used mini-pools of five samples each (generating 234 mini-pools) and then 10 × 10 matrix pools of mini-pool samples above the threshold (VL >200 copies/mL) only. VF for an individual sample was defined as VL ≥1000 copies/mL and this translated to a VL of ≥200 copies/mL to define a positive mini-pool and ≥100 copies/mL for a positive matrix pool. From the 234 mini-pools, 120 pools (600 samples) had a VL of ≥200 copies/mL; these samples were arranged in six 10 × 10 matrix pools, each with 100 samples. We resolved the matrix pools as previously described.
+<xref rid="dkz261-B16" ref-type="bibr">
+<sup>16–18</sup>
+</xref>
+Briefly, we used results of column and row pools to guide on which individual sample to test first, thus minimizing the number of individual tests and costs. We used the Cobas
+<sup>®</sup>
+AmpliPrep/Cobas
+<sup>®</sup>
+TaqMan 48 system with a detection range of 20–100000000 copies/mL to perform all VL tests. The mini-pool platform was used for initial screening as we hypothesized that it had a higher sensitivity and NPV than a 10 × 10 matrix pool. We addressed the issue of false negatives by testing 21 randomly selected ‘negatives’ from each pooling strategy, thus determining their NPV. Our negatives were samples with a VL x1000 copies/mL and the positives were samples with a VL ≥1000 copies/mL.
+</p>
+</sec>
+<sec>
+<title>HIV genotypic resistance testing</title>
+<p>
+We performed genotypic resistance testing in the WHO-designated HIVDR laboratory at the MRC/Uganda Virus Research Institute (UVRI) and London School of Hygiene and Tropical Medicine (LSHTM) Uganda Research Unit as previously described.
+<xref rid="dkz261-B8" ref-type="bibr">
+<sup>8</sup>
+</xref>
+Briefly, RNA was extracted from 140 μL of plasma using a QIAGEN viral RNA extraction kit (QIAGEN, Hilden, Germany); reverse transcription and complementary DNA synthesis were done with the superscript III high-fidelity one step PCR Kit (Invitrogen) and, following nested PCR, sequencing of the HIV-1 complete protease gene (1–99 amino acids) and the reverse transcriptase gene (1–252 amino acids) was done. The resulting chromatograms were base-called using a customized RECall software program
+<xref rid="dkz261-B19" ref-type="bibr">
+<sup>19</sup>
+</xref>
+and drug resistance mutations (DRMs) were analysed using the Stanford HIVdb Program using the 2009 WHO mutation list.
+<xref rid="dkz261-B20" ref-type="bibr">
+<sup>20</sup>
+</xref>
+For quality control purposes, our laboratory is enrolled in the Virology Quality Assurance Program and all sequences generated in the laboratory are assessed for cross-contamination by phylogenetic analysis. Sequences from this study were deposited in GenBank under accession numbers
+<ext-link ext-link-type="gen" xlink:href="MK371106">MK371106</ext-link>
+–
+<ext-link ext-link-type="gen" xlink:href="MK371202">MK371202</ext-link>
+. HIVDR results were communicated to the facility clinicians for participant management.
+</p>
+</sec>
+<sec>
+<title>Statistical analysis</title>
+<p>
+We performed statistical analyses using Stata v12 (StataCorp, TX, USA). To assess the distributions of the independent variables, we used medians (and IQRs) for the continuous variables and frequencies and proportions for the categorical variables. We performed univariate logistic regression analysis to assess association of each of the independent potential correlates with each outcome. Variables that had an OR with
+<italic>P</italic>
+≤
+<italic></italic>
+0.15 were included in multivariate logistic regression models together with age and sex as potential confounders. The independent variables considered were: level of education, marital status, ART regimen, duration on ART and VL. We present the results of adjusted ORs (aORs) with 95% CI. Variables were considered significantly associated with the outcome if the
+<italic>P</italic>
+value for the aOR was less than 0.05.
+</p>
+</sec>
+<sec>
+<title>Ethical considerations</title>
+<p>
+The HIV Molecular Epidemiology study was approved by the UVRI Research and Ethics Committee [UVRI-REC Federalwide Assurance (FWA) No. 00001354] and the Uganda National Council for Science and Technology (UNCST FWA No. 00001293). All participants were recruited voluntarily and provided written informed consent.
+</p>
+</sec>
+</sec>
+<sec sec-type="results">
+<title>Results</title>
+<sec>
+<title>Study profile and participants</title>
+<p>
+The study profile is presented in Figure
+<xref ref-type="fig" rid="dkz261-F1">1</xref>
+. Among the 1169 participants, the median age was 36 years (IQR: 30–44), 648 (55.4%) were women and the overall median time on ART was 24.0 months (IQR: 11.3–37.6). We enrolled 878 fisherfolk from the island fishing sites and 291 from the mainland fish-landing sites. Most (74.7%) of the participants were on tenofovir + lamivudine + efavirenz/nevirapine (TDF + 3TC + EFV/NVP), 24.1% on zidovudine + lamivudine + efavirenz/nevirapine (ZDV + 3TC + EFV/NVP) and 1.2% were on other first-line ART combinations. Details of the participants’ demographic and clinical characteristics are summarized in Table
+<xref rid="dkz261-T1" ref-type="table">1</xref>
+.
+</p>
+<fig id="dkz261-F1" orientation="portrait" position="float">
+<label>Figure 1.</label>
+<caption>
+<p>
+Study profile. Of 1169 individuals analysed for virological suppression, 1072 had virological suppression and 97 had virological failure, of which 71 had ADR.
+</p>
+</caption>
+<graphic xlink:href="dkz261f1"/>
+</fig>
+<table-wrap id="dkz261-T1" orientation="portrait" position="float">
+<label>Table 1.</label>
+<caption>
+<p>
+Demographic and clinical data of study participants
+</p>
+</caption>
+<table frame="hsides" rules="groups">
+<colgroup span="1">
+<col valign="top" align="left" span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2" colspan="1">Characteristic</th>
+<th colspan="6" rowspan="1">
+Median months on ART,
+<italic>n</italic>
+(%)
+<hr/>
+</th>
+</tr>
+<tr>
+<th align="center" rowspan="1" colspan="1">6</th>
+<th align="center" rowspan="1" colspan="1">12</th>
+<th align="center" rowspan="1" colspan="1">24</th>
+<th align="center" rowspan="1" colspan="1">36</th>
+<th align="center" rowspan="1" colspan="1">≥48</th>
+<th align="center" rowspan="1" colspan="1">total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="1" colspan="1">Overall</td>
+<td align="center" rowspan="1" colspan="1">238</td>
+<td align="center" rowspan="1" colspan="1">237</td>
+<td align="center" rowspan="1" colspan="1">238</td>
+<td align="center" rowspan="1" colspan="1">230</td>
+<td align="center" rowspan="1" colspan="1">226</td>
+<td align="center" rowspan="1" colspan="1">1169</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Gender</td>
+<td colspan="6" rowspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">male</td>
+<td rowspan="1" colspan="1">116 (48.7)</td>
+<td rowspan="1" colspan="1">109 (46.0)</td>
+<td rowspan="1" colspan="1">101 (42.4)</td>
+<td rowspan="1" colspan="1">92 (40.0)</td>
+<td rowspan="1" colspan="1">103 (45.6)</td>
+<td rowspan="1" colspan="1">521 (44.6)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">female</td>
+<td rowspan="1" colspan="1">122 (51.3)</td>
+<td rowspan="1" colspan="1">128 (54.0)</td>
+<td rowspan="1" colspan="1">137 (57.6)</td>
+<td rowspan="1" colspan="1">138 (60.0)</td>
+<td rowspan="1" colspan="1">123 (54.4)</td>
+<td rowspan="1" colspan="1">648 (55.4)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Age group (years)</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">s35</td>
+<td rowspan="1" colspan="1">126 (52.9)</td>
+<td rowspan="1" colspan="1">112 (47.3)</td>
+<td rowspan="1" colspan="1">106 (44.5)</td>
+<td rowspan="1" colspan="1">83 (36.1)</td>
+<td rowspan="1" colspan="1">86 (38.0)</td>
+<td rowspan="1" colspan="1">513 (43.9)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">≥35</td>
+<td rowspan="1" colspan="1">112 (47.1)</td>
+<td rowspan="1" colspan="1">125 (52.7)</td>
+<td rowspan="1" colspan="1">132 (55.5)</td>
+<td rowspan="1" colspan="1">147 (63.9)</td>
+<td rowspan="1" colspan="1">140 (62.0)</td>
+<td rowspan="1" colspan="1">656 (56.1)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Source</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">HIVCOMB</td>
+<td rowspan="1" colspan="1">36 (15.1)</td>
+<td rowspan="1" colspan="1">32 (13.5)</td>
+<td rowspan="1" colspan="1">30 (12.6)</td>
+<td rowspan="1" colspan="1">33 (14.4)</td>
+<td rowspan="1" colspan="1">27 (12.0)</td>
+<td rowspan="1" colspan="1">158 (13.5)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Kalangala-A</td>
+<td rowspan="1" colspan="1">61 (25.6)</td>
+<td rowspan="1" colspan="1">88 (37.1)</td>
+<td rowspan="1" colspan="1">94 (39.5)</td>
+<td rowspan="1" colspan="1">79 (34.3)</td>
+<td rowspan="1" colspan="1">86 (38.1)</td>
+<td rowspan="1" colspan="1">408 (34.9)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Kalangala-B</td>
+<td rowspan="1" colspan="1">59 (24.8)</td>
+<td rowspan="1" colspan="1">56 (23.6)</td>
+<td rowspan="1" colspan="1">58 (24.4)</td>
+<td rowspan="1" colspan="1">65 (28.3)</td>
+<td rowspan="1" colspan="1">51 (22.6)</td>
+<td rowspan="1" colspan="1">289 (24.7)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">LaVIISWA</td>
+<td rowspan="1" colspan="1">49 (20.6)</td>
+<td rowspan="1" colspan="1">34 (14.4)</td>
+<td rowspan="1" colspan="1">35 (14.7)</td>
+<td rowspan="1" colspan="1">28 (12.2)</td>
+<td rowspan="1" colspan="1">35 (15.5)</td>
+<td rowspan="1" colspan="1">181 (15.5)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Masaka fisherfolk</td>
+<td rowspan="1" colspan="1">33 (13.9)</td>
+<td rowspan="1" colspan="1">27 (11.4)</td>
+<td rowspan="1" colspan="1">21 (8.8)</td>
+<td rowspan="1" colspan="1">25 (10.9)</td>
+<td rowspan="1" colspan="1">27 (12.0)</td>
+<td rowspan="1" colspan="1">133 (11.4)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Education level</td>
+<td colspan="6" rowspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">none</td>
+<td rowspan="1" colspan="1">44 (18.5)</td>
+<td rowspan="1" colspan="1">25 (10.6)</td>
+<td rowspan="1" colspan="1">34 (14.3)</td>
+<td rowspan="1" colspan="1">46 (20.0)</td>
+<td rowspan="1" colspan="1">40 (17.7)</td>
+<td rowspan="1" colspan="1">189 (16.2)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">primary</td>
+<td rowspan="1" colspan="1">178 (74.8)</td>
+<td rowspan="1" colspan="1">202 (85.2)</td>
+<td rowspan="1" colspan="1">186 (78.2)</td>
+<td rowspan="1" colspan="1">173 (75.2)</td>
+<td rowspan="1" colspan="1">168 (74.3)</td>
+<td rowspan="1" colspan="1">907 (77.6)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">secondary/higher</td>
+<td rowspan="1" colspan="1">16 (6.7)</td>
+<td rowspan="1" colspan="1">10 (4.2)</td>
+<td rowspan="1" colspan="1">18 (7.6)</td>
+<td rowspan="1" colspan="1">11 (4.8)</td>
+<td rowspan="1" colspan="1">18 (8.0)</td>
+<td rowspan="1" colspan="1">73 (6.2)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Marital status</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">married</td>
+<td rowspan="1" colspan="1">147 (61.8)</td>
+<td rowspan="1" colspan="1">152 (64.1)</td>
+<td rowspan="1" colspan="1">145 (60.9)</td>
+<td rowspan="1" colspan="1">136 (59.1)</td>
+<td rowspan="1" colspan="1">132 (58.4)</td>
+<td rowspan="1" colspan="1">712 (60.9)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">not married</td>
+<td rowspan="1" colspan="1">91 (38.2)</td>
+<td rowspan="1" colspan="1">85 (35.9)</td>
+<td rowspan="1" colspan="1">93 (39.1)</td>
+<td rowspan="1" colspan="1">94 (40.9)</td>
+<td rowspan="1" colspan="1">94 (41.6)</td>
+<td rowspan="1" colspan="1">457 (39.1)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">On ART</td>
+<td align="center" rowspan="1" colspan="1">238</td>
+<td align="center" rowspan="1" colspan="1">237</td>
+<td align="center" rowspan="1" colspan="1">238</td>
+<td align="center" rowspan="1" colspan="1">230</td>
+<td align="center" rowspan="1" colspan="1">226</td>
+<td align="center" rowspan="1" colspan="1">1169</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+ART regimen (
+<italic>N</italic>
+= 1155)
+</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">TDF + 3TC + EFV/NVP</td>
+<td rowspan="1" colspan="1">219/237 (92.4)</td>
+<td rowspan="1" colspan="1">214/234 (91.5)</td>
+<td rowspan="1" colspan="1">201 (84.5)</td>
+<td rowspan="1" colspan="1">143/227 (63.0)</td>
+<td rowspan="1" colspan="1">96/219 (43.8)</td>
+<td rowspan="1" colspan="1">873/1155 (75.6)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ZDV + 3TC + EFV/NVP</td>
+<td rowspan="1" colspan="1">18/237 (7.6)</td>
+<td rowspan="1" colspan="1">20/234 (8.5)</td>
+<td rowspan="1" colspan="1">37 (15.5)</td>
+<td rowspan="1" colspan="1">84/227 (37.0)</td>
+<td rowspan="1" colspan="1">123/219 (56.2)</td>
+<td rowspan="1" colspan="1">282/1155 (24.4)</td>
+</tr>
+</tbody>
+</table>
+<table-wrap-foot>
+<fn id="tblfn1">
+<p>
+3TC, lamivudine; EFV, efavirenz; NVP, nevirapine; TDF, tenofovir; ZDV, zidovudine; LaVIISWA, The Lake Victoria Island Intervention Study on Worms and Allergy-related diseases Project; HIVCOMB, HIV Combination Interventions Project.
+</p>
+</fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec>
+<title>
+Prevalence of virological suppression and correlates of VF
+</title>
+<p>
+The overall virological suppression rate was 91.7% (1072/1169) (Figure
+<xref ref-type="fig" rid="dkz261-F1">1</xref>
+); virological suppression rates for specific durations on ART were 88.7% (211/238), 91.6% (217/237), 93.3% (222/238), 93.0% (214/230) and 92.0% (208/226) for individuals on ART for median durations of 6, 12, 24, 36 and ≥48 months respectively (Figure
+<xref ref-type="fig" rid="dkz261-F2">2</xref>
+).
+</p>
+<fig id="dkz261-F2" orientation="portrait" position="float">
+<label>Figure 2.</label>
+<caption>
+<p>
+Prevalence of virological suppression was estimated for different median durations on ART. Virological suppression was defined as having VL s1000 copies/mL. The denominator was the number of individuals analysed at a given median duration on ART.
+</p>
+</caption>
+<graphic xlink:href="dkz261f2"/>
+</fig>
+<p>
+We observed statistically significant associations between VF and a number of factors (Table
+<xref rid="dkz261-T2" ref-type="table">2</xref>
+). Being 35 years or older (aOR: 0.65; 95% CI: 0.43–0.99;
+<italic>P</italic>
+= 0.042), duration on ART of ≥24 months (aOR: 0.61; 95% CI: 0.39–0.97;
+<italic>P</italic>
+= 0.035) and being on an efavirenz-based regimen (aOR: 0.59; 95% CI: 0.34–0.91;
+<italic>P</italic>
+= 0.02) were protective against VF (Table
+<xref rid="dkz261-T2" ref-type="table">2</xref>
+). However, having attained secondary/higher education (aOR: 2.42; 95% CI: 1.04–5.64;
+<italic>P</italic>
+= 0.041) and being on a zidovudine-based regimen (aOR: 2.10; 95% CI: 1.29–3.46;
+<italic>P</italic>
+= 0.003) were risk factors for VF (Table
+<xref rid="dkz261-T2" ref-type="table">2</xref>
+).
+</p>
+<table-wrap id="dkz261-T2" orientation="portrait" position="float">
+<label>Table 2.</label>
+<caption>
+<p>
+Correlates of VF among fisherfolk on first-line ART in Uganda
+</p>
+</caption>
+<table frame="hsides" rules="groups">
+<colgroup span="1">
+<col valign="top" align="left" span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+<col valign="top" align="char" char="." span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+<col valign="top" align="char" char="." span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th rowspan="1" colspan="1">Characteristic</th>
+<th rowspan="1" colspan="1">
+VL ≥1000 copies/mL,
+<italic>n/N</italic>
+(%)
+</th>
+<th rowspan="1" colspan="1">Unadjusted OR (95% CI)</th>
+<th rowspan="1" colspan="1">
+<italic>P</italic>
+value
+</th>
+<th rowspan="1" colspan="1">aOR</th>
+<th rowspan="1" colspan="1">
+<italic>P</italic>
+value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="1" colspan="1">Gender</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">male</td>
+<td rowspan="1" colspan="1">47/521 (9.0)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">female</td>
+<td rowspan="1" colspan="1">50/648 (7.7)</td>
+<td rowspan="1" colspan="1">0.84 (0.56–1.29)</td>
+<td rowspan="1" colspan="1">0.422</td>
+<td rowspan="1" colspan="1">0.82 (0.53–1.25)</td>
+<td rowspan="1" colspan="1">0.350</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<xref ref-type="table-fn" rid="tblfn4">
+<sup>a</sup>
+</xref>
+Age group (years)
+</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">s35</td>
+<td rowspan="1" colspan="1">52/513 (10.1)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">≥35</td>
+<td rowspan="1" colspan="1">45/656 (6.9)</td>
+<td rowspan="1" colspan="1">0.65 (0.43–0.99)</td>
+<td rowspan="1" colspan="1">0.045</td>
+<td rowspan="1" colspan="1">0.64 (0.41–0.97)</td>
+<td rowspan="1" colspan="1">
+<bold>0.042</bold>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Education level</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1">0.056</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1">
+<bold>0.043</bold>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">never</td>
+<td rowspan="1" colspan="1">13/189 (6.9)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">primary</td>
+<td rowspan="1" colspan="1">72/907 (7.9)</td>
+<td rowspan="1" colspan="1">1.17 (0.63–2.15)</td>
+<td rowspan="1" colspan="1">0.620</td>
+<td rowspan="1" colspan="1">1.08 (0.58–2.00)</td>
+<td rowspan="1" colspan="1">0.807</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">secondary/higher</td>
+<td rowspan="1" colspan="1">12/73 (16.4)</td>
+<td rowspan="1" colspan="1">2.66 (1.15–6.15)</td>
+<td rowspan="1" colspan="1">0.022</td>
+<td rowspan="1" colspan="1">2.42 (1.04–5.64)</td>
+<td rowspan="1" colspan="1">
+<bold>0.041</bold>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<xref ref-type="table-fn" rid="tblfn5">
+<sup>b</sup>
+</xref>
+Marital status
+</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">married</td>
+<td rowspan="1" colspan="1">57/712 (8.0)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">not married</td>
+<td rowspan="1" colspan="1">40/457 (8.7)</td>
+<td rowspan="1" colspan="1">1.10 (0.72–1.68)</td>
+<td rowspan="1" colspan="1">0.651</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<xref ref-type="table-fn" rid="tblfn4">
+<sup>a</sup>
+</xref>
+ART regimen
+</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">NVP versus EFV (NNRTIs)</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">NVP-based</td>
+<td rowspan="1" colspan="1">31/295 (10.5)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">EFV-based</td>
+<td rowspan="1" colspan="1">66/880 (7.5)</td>
+<td rowspan="1" colspan="1">0.70 (0.44–1.09)</td>
+<td rowspan="1" colspan="1">0.048</td>
+<td rowspan="1" colspan="1">0.59 (0.34–0.91)</td>
+<td rowspan="1" colspan="1">
+<bold>0.020</bold>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">TDF versus ZDV (NRTIs)</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">TDF + 3TC + EFV/NVP</td>
+<td rowspan="1" colspan="1">65/873 (7.4)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ZDV + 3TC + EFV/NVP</td>
+<td rowspan="1" colspan="1">32/282 (11.3)</td>
+<td rowspan="1" colspan="1">1.59 (1.02–2.49)</td>
+<td rowspan="1" colspan="1">0.041</td>
+<td rowspan="1" colspan="1">2.10 (1.29–3.46)</td>
+<td rowspan="1" colspan="1">
+<bold>0.003</bold>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Median months on ART</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">≤12</td>
+<td rowspan="1" colspan="1">47/474 (9.9)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">≥24</td>
+<td rowspan="1" colspan="1">50/694 (7.2)</td>
+<td rowspan="1" colspan="1">0.71 (0.47–1.07)</td>
+<td rowspan="1" colspan="1">0.113</td>
+<td rowspan="1" colspan="1">0.61 (0.39–0.97)</td>
+<td rowspan="1" colspan="1">
+<bold>0.035</bold>
+</td>
+</tr>
+</tbody>
+</table>
+<table-wrap-foot>
+<fn id="tblfn2">
+<p>
+3TC, lamivudine; EFV, efavirenz; NVP, nevirapine; TDF, tenofovir; ZDV, zidovudine. Statistically significant
+<italic>P</italic>
+values are shown in bold.
+</p>
+</fn>
+<fn id="tblfn3">
+<p>
+We classified the ART regimen into two categories, i.e. an NNRTI component (nevirapine-based versus efavirenz-based) and the second category based on the NRTI component (tenofovir versus zidovudine). We report
+<italic>P</italic>
+values of other variables in the model where the NNRTI component was included, although the statistical significance of the listed variables was maintained in the model in which we included the NRTI component (logistic regression model results of other variables were excluded except for NRTI variables in this case).
+</p>
+</fn>
+<fn id="tblfn4">
+<label>a</label>
+<p>
+Only variables with a
+<italic>P</italic>
+value of ≤0.15 and
+<italic>a priori</italic>
+confounders (gender and age) were included in multivariate regression models.
+</p>
+</fn>
+<fn id="tblfn5">
+<label>b</label>
+<p>Not married means single, divorced or separated.</p>
+</fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec>
+<title>Prevalence and patterns of acquired HIVDR</title>
+<p>
+Of the 97 genotyped VF cases, we observed HIVDR in 71/97 (73.2%) individuals, yielding an overall ADR prevalence of 6.1% (71/1169) in the sampled population. While all 71 (73.2%) participants had mutations conferring resistance to NNRTIs, 57 (58.8%) had dual-class (both NRTI and NNRTI) mutations and 14 (14.4%) had only NNRTI mutations. The most prevalent NRTI mutations were M184V/I (53.6%), K65R (17.5%) and thymidine analogue mutations (TAMs) were present in 21.6% of VF cases. The most prevalent NNRTI mutations were K103N (39.2%), Y181C (19.6%) and G190A (15.5%) (Figure
+<xref ref-type="fig" rid="dkz261-F3">3</xref>
+).
+</p>
+<fig id="dkz261-F3" orientation="portrait" position="float">
+<label>Figure 3.</label>
+<caption>
+<p>
+Prevalence of NRTI and NNRTI mutations in sequences of 97 VF cases.
+</p>
+</caption>
+<graphic xlink:href="dkz261f3"/>
+</fig>
+</sec>
+<sec>
+<title>Correlates of ADR</title>
+<p>
+Among the VF cases, VL and drug regimen were independently associated with ADR (Table
+<xref rid="dkz261-T3" ref-type="table">3</xref>
+). An efavirenz-based regimen, in comparison with a nevirapine-based regimen, was protective against ADR (aOR: 0.13; 95% CI: 0.03–0.54;
+<italic>P</italic>
+= 0.005). Other characteristics that were significantly associated with ADR were: current VL ≥10000 copies/mL (aOR: 4.39; 95% CI: 1.53–12.56;
+<italic>P</italic>
+= 0.032) and a zidovudine-based regimen (aOR: 3.74; 95% CI: 1.12–12.50;
+<italic>P</italic>
+= 0.006) as shown in Table
+<xref rid="dkz261-T3" ref-type="table">3</xref>
+. We noted that all ADR was driven by NNRTI (73.2%) and dual-class DRMs (58.8%) (Figure
+<xref ref-type="fig" rid="dkz261-F3">3</xref>
+).
+</p>
+<table-wrap id="dkz261-T3" orientation="portrait" position="float">
+<label>Table 3.</label>
+<caption>
+<p>
+Correlates of ADR in 97 fisherfolk failing on first-line ART in Uganda
+</p>
+</caption>
+<table frame="hsides" rules="groups">
+<colgroup span="1">
+<col valign="top" align="left" span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+<col valign="top" align="char" char="." span="1"/>
+<col valign="top" align="char" char="(" span="1"/>
+<col valign="top" align="char" char="." span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th rowspan="1" colspan="1">Characteristic</th>
+<th rowspan="1" colspan="1">
+ADR,
+<italic>n/N</italic>
+(%)
+</th>
+<th rowspan="1" colspan="1">Unadjusted OR</th>
+<th rowspan="1" colspan="1">
+<italic>P</italic>
+value
+</th>
+<th rowspan="1" colspan="1">aOR</th>
+<th rowspan="1" colspan="1">
+<italic>P</italic>
+value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="1" colspan="1">Gender</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">male</td>
+<td rowspan="1" colspan="1">32/47 (68.1)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">female</td>
+<td rowspan="1" colspan="1">39/50 (78.0)</td>
+<td rowspan="1" colspan="1">1.66 (0.67-4.12)</td>
+<td rowspan="1" colspan="1">0.273</td>
+<td rowspan="1" colspan="1">1.92 (0.66–5.55)</td>
+<td rowspan="1" colspan="1">0.231</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Age group (years)</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">s35</td>
+<td rowspan="1" colspan="1">37/52 (71.2)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">≥35</td>
+<td rowspan="1" colspan="1">34/45 (75.6)</td>
+<td rowspan="1" colspan="1">1.25 (0.51–3.10)</td>
+<td rowspan="1" colspan="1">0.626</td>
+<td rowspan="1" colspan="1">1.64 (0.55–4.92)</td>
+<td rowspan="1" colspan="1">0.373</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Education level</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1">0.535</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">never</td>
+<td rowspan="1" colspan="1">11/13 (84.6)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">primary</td>
+<td rowspan="1" colspan="1">52/72 (72.2)</td>
+<td rowspan="1" colspan="1">0.47 (0.10–2.32)</td>
+<td rowspan="1" colspan="1">0.356</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">secondary/higher</td>
+<td rowspan="1" colspan="1">8/12 (66.7)</td>
+<td rowspan="1" colspan="1">0.36 (0.53–2.50)</td>
+<td rowspan="1" colspan="1">0.303</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<xref ref-type="table-fn" rid="tblfn7">
+<sup>a</sup>
+</xref>
+Marital status
+</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">married</td>
+<td rowspan="1" colspan="1">38/57 (66.7)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">not married</td>
+<td rowspan="1" colspan="1">33/40 (82.5)</td>
+<td rowspan="1" colspan="1">2.36 (0.88–6.31)</td>
+<td rowspan="1" colspan="1">0.088</td>
+<td rowspan="1" colspan="1">2.10 (0.69–6.37)</td>
+<td rowspan="1" colspan="1">0.192</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<xref ref-type="table-fn" rid="tblfn8">
+<sup>b</sup>
+</xref>
+ART regimen
+</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">NVP versus EFV (NNRTI backbone)</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">NVP-based</td>
+<td rowspan="1" colspan="1">28/31 (90.3)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">EFV-based</td>
+<td rowspan="1" colspan="1">43/66 (65.1)</td>
+<td rowspan="1" colspan="1">0.20 (0.05–0.73)</td>
+<td rowspan="1" colspan="1">0.015</td>
+<td rowspan="1" colspan="1">0.13 (0.03–0.54)</td>
+<td rowspan="1" colspan="1">
+<bold>0.005</bold>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">TDF versus ZDV (NRTI main component)</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">TDF + 3TC + EFV/NVP</td>
+<td rowspan="1" colspan="1">44/65 (67.7)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ZDV + 3TC + EFV/NVP</td>
+<td rowspan="1" colspan="1">27/32 (84.4)</td>
+<td rowspan="1" colspan="1">2.58 (0.87–7.64)</td>
+<td rowspan="1" colspan="1">0.088</td>
+<td rowspan="1" colspan="1">3.74 (1.12–12.50)</td>
+<td rowspan="1" colspan="1">
+<bold>0.032</bold>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">Median months on ART</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">≤12</td>
+<td rowspan="1" colspan="1">35/47 (74.5)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">≥24</td>
+<td rowspan="1" colspan="1">36/50 (72.0)</td>
+<td rowspan="1" colspan="1">0.88 (0.36–2.17)</td>
+<td rowspan="1" colspan="1">0.784</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<xref ref-type="table-fn" rid="tblfn8">
+<sup>b</sup>
+</xref>
+VL (copies/mL)
+</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">s10000</td>
+<td rowspan="1" colspan="1">20/35 (57.1)</td>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+<td rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">≥10000</td>
+<td rowspan="1" colspan="1">51/62 (82.3)</td>
+<td rowspan="1" colspan="1">3.48 (1.37–8.85)</td>
+<td rowspan="1" colspan="1">0.009</td>
+<td rowspan="1" colspan="1">4.39 (1.53–12.56)</td>
+<td rowspan="1" colspan="1">
+<bold>0.006</bold>
+</td>
+</tr>
+</tbody>
+</table>
+<table-wrap-foot>
+<fn id="tblfn6">
+<p>
+3TC, lamivudine; EFV, efavirenz; NVP, nevirapine; TDF, tenofovir; ZDV, zidovudine. Statistically significant
+<italic>P</italic>
+values are shown in bold.
+</p>
+</fn>
+<fn id="tblfn7">
+<label>a</label>
+<p>Not married means single, divorced or separated.</p>
+</fn>
+<fn id="tblfn8">
+<label>b</label>
+<p>
+For ART regimen, subvariables (a) and (b) were entered in different multivariate logistic models since they are interacting variables. In both models, the bold
+<italic>P</italic>
+values remained statistically significant for other correlates. The reported
+<italic>P</italic>
+values are those in the model where nevirapine versus efavirenz was included. Only variables with a
+<italic>P</italic>
+value ≤0.15 and
+<italic>a priori</italic>
+confounders in univariate analysis (gender and age) were included in multivariable regression models.
+</p>
+</fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec>
+<title>Stanford drug resistance scores at VF</title>
+<p>
+Based on the Stanford drug resistance genotype scoring system (GSS), zidovudine had the highest predicted susceptibility (82.5%), followed by tenofovir (65%), among NRTIs. For NNRTIs, the predicted susceptibility to both nevirapine and efavirenz was 28.9%. Cross-resistance to the second-generation NNRTIs etravirine and rilpivirine occurred in 35% and 46.4% of the participants, respectively (Figure
+<xref ref-type="fig" rid="dkz261-F4">4</xref>
+).
+</p>
+<fig id="dkz261-F4" orientation="portrait" position="float">
+<label>Figure 4.</label>
+<caption>
+<p>
+Predicted efficacy of NRTIs and NNRTIs after VF among 97 individuals on NNRTI-based first-line ART. The predicted susceptibility and resistance is based on Stanford genotype susceptibility scores.
+</p>
+</caption>
+<graphic xlink:href="dkz261f4"/>
+</fig>
+</sec>
+<sec>
+<title>NPV and cost-efficiency of pooled VL testing assay</title>
+<p>
+For the mini-pool assay, all 21 suspected negatives had VL a 1000 copies/mL (true negatives), hence an NPV of 100%. Of the 21 suspected negatives from the 10 × 10 matrix pools, 20 were true negatives, giving an NPV of 95.2%. Overall, we did 661 VL tests of pooled and individual samples to resolve the 1169 participant samples. We thus saved US $20320 of VL testing of 508 samples (43.5%), given the current retail price of US $40 per VL test in Uganda.
+</p>
+</sec>
+</sec>
+<sec sec-type="discussion">
+<title>Discussion</title>
+<p>
+Limited virological monitoring of ART programmes and the use of low-genetic-barrier regimens enhance the emergence of ADR during first-line ART and impede the realization of the UNAIDS 90-90-90 targets. We report a higher overall virological suppression rate (91.7%) than the UNAIDS 90% target
+<xref rid="dkz261-B3" ref-type="bibr">
+<sup>3</sup>
+</xref>
+among fisherfolk on first-line ART in Uganda. Our results agree with those reported in national surveys conducted between 2014 and 2016 in Vietnam and Zambia, where virological suppression rates of 90% were realized.
+<xref rid="dkz261-B7" ref-type="bibr">
+<sup>7</sup>
+</xref>
+However, our overall virological suppression rate was higher than the pooled virological suppression rate (82.1%) reported by the WHO from 2014 to 2017 in LMICs.
+<xref rid="dkz261-B7" ref-type="bibr">
+<sup>7</sup>
+</xref>
+We further noted improved virological suppression with time on ART, which is in agreement with the findings in resource-rich settings where virological suppression rates increased up to 93% with increased duration on ART.
+<xref rid="dkz261-B21" ref-type="bibr">
+<sup>21</sup>
+</xref>
+Our results also concur with the local findings in which high prevalence of virological suppression (>80%) was achieved in Ugandan individuals, closely monitored for adherence, based on VL testing.
+<xref rid="dkz261-B22" ref-type="bibr">
+<sup>22</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B23" ref-type="bibr">
+<sup>23</sup>
+</xref>
+The higher virological suppression rates in our study could be due to improved access to HIV care services provided by development partners to combat HIV in this high-risk population of fisherfolk. In addition, the virological suppression rates were high for all median durations on ART, which suggests that the WHO first-line regimen is efficacious among individuals with optimal adherence.
+</p>
+<p>
+In this setting, independent correlates of VF, including age ≥35 years, an efavirenz-based regimen and being on ART for ≥24 months, were all protective, while a zidovudine-based regimen and, surprisingly, secondary/higher-level education were risk factors for VF. We observed that most fisherfolk have low education levels and those with secondary/higher-level education with high prevalence of ADR are probably mobile groups such as sex workers and other unemployed persons trying to make a living in fishing communities. A recent study on the phylogeography of HIV-1 suggests that Ugandan fishing communities are a sink for, and not a source of, HIV virus from general populations,
+<xref rid="dkz261-B24" ref-type="bibr">
+<sup>24</sup>
+</xref>
+and this could be the case with resistant variants as well. Young age has been reported as a predictor of VF by other studies.
+<xref rid="dkz261-B23" ref-type="bibr">
+<sup>23</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B25" ref-type="bibr">
+<sup>25</sup>
+</xref>
+Most fisherfolk are young and sexually active, stay away from home for long periods, engage in transactional sex
+<xref rid="dkz261-B11" ref-type="bibr">
+<sup>11</sup>
+</xref>
+and are involved in alcoholism and drug abuse.
+<xref rid="dkz261-B14" ref-type="bibr">
+<sup>14</sup>
+</xref>
+These factors increase vulnerability to HIV and limit access to HIV care services thus promoting suboptimal adherence and increasing the odds of VF.
+<xref rid="dkz261-B11" ref-type="bibr">
+<sup>11</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B15" ref-type="bibr">
+<sup>15</sup>
+</xref>
+This calls for HIV care services, like voluntary counselling and testing, and adherence support that is tailored for the youth. In this study, the use of a tenofovir regimen was protective against both VF and ADR, probably because tenofovir-based regimens have been associated with superior virological suppression and tolerability.
+<xref rid="dkz261-B26" ref-type="bibr">
+<sup>26</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B27" ref-type="bibr">
+<sup>27</sup>
+</xref>
+Similarly, better treatment outcomes have been associated with the use of efavirenz rather than nevirapine as the NNRTI in first-line regimens.
+<xref rid="dkz261-B28" ref-type="bibr">
+<sup>28</sup>
+</xref>
+Resistance to nevirapine is higher owing to its lower genetic barrier compared with efavirenz.
+<xref rid="dkz261-B29" ref-type="bibr">
+<sup>29</sup>
+</xref>
+It is also possible that the previous use of nevirapine for PMTCT could have been undisclosed in females, increasing its resistance in this setting.
+</p>
+<p>
+We report ADR prevalence of 73.2% among VF cases, mainly attributed to NNRTI mutations known to drive HIVDR.
+<xref rid="dkz261-B8" ref-type="bibr">
+<sup>8</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B30" ref-type="bibr">
+<sup>30</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B31" ref-type="bibr">
+<sup>31</sup>
+</xref>
+This is expected in settings where low-genetic-barrier NNRTIs are components of first-line ART and these results are consistent with the findings of Kaleebu
+<italic>et al.</italic>
+,
+<xref rid="dkz261-B8" ref-type="bibr">
+<sup>8</sup>
+</xref>
+who reported ADR prevalence of 71% among VF cases on first-line ART in Uganda. Within East Africa, we report a higher ADR prevalence than that previously reported in a rural Kenyan cohort (52.7%) among VF cases,
+<xref rid="dkz261-B32" ref-type="bibr">
+<sup>32</sup>
+</xref>
+an observation that was probably due to the longer median duration on ART of our study participants compared with those in the Kenyan cohort (24.0 versus 13.9 months). This supports the notion that prolonged ART exposure increases the risk of emergence of ADR variants.
+<xref rid="dkz261-B33" ref-type="bibr">
+<sup>33</sup>
+</xref>
+Our results agree with the WHO pooled estimates of 68% ADR among VF cases in LMICs
+<xref rid="dkz261-B7" ref-type="bibr">
+<sup>7</sup>
+</xref>
+and findings of other studies in Africa
+<xref rid="dkz261-B6" ref-type="bibr">
+<sup>6</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B34" ref-type="bibr">
+<sup>34–36</sup>
+</xref>
+and developed countries
+<xref rid="dkz261-B37" ref-type="bibr">
+<sup>37</sup>
+</xref>
+that have highlighted a significant increase in drug resistance with time on ART. Increase in HIVDR translates to failure of ART regimens/programmes, increased morbidity and mortality, increased risk of transmission of resistant virus strains and increased demand for ART regimen switch to classes that are costly and inaccessible in resource-limited settings like Uganda.
+</p>
+<p>
+The DRM profiles reported here are similar to those documented earlier in this region where the first-line regimen combination includes two NRTIs and one NNRTI.
+<xref rid="dkz261-B7" ref-type="bibr">
+<sup>7</sup>
+</xref>
+<sup>
+,
+<xref rid="dkz261-B8" ref-type="bibr">8</xref>
+,
+<xref rid="dkz261-B30" ref-type="bibr">30</xref>
+,
+<xref rid="dkz261-B34" ref-type="bibr">34</xref>
+,
+<xref rid="dkz261-B37" ref-type="bibr">37</xref>
+</sup>
+The most prevalent NRTI mutations, M184V/I, are selected by and cause high-level resistance to cytosine analogue NRTIs, lamivudine and emtricitabine.
+<xref rid="dkz261-B29" ref-type="bibr">
+<sup>29</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B30" ref-type="bibr">
+<sup>30</sup>
+</xref>
+The K65R mutation, which is selected by lamivudine and tenofovir,
+<xref rid="dkz261-B31" ref-type="bibr">
+<sup>31</sup>
+</xref>
+was highly prevalent among VF cases in our study, which indicates the prolonged use of lamivudine and tenofovir in this setting. The rampant prevalence of the M184V/I and K65R mutations may not warrant the discontinuation of NRTI usage because these mutations confer increased susceptibility to zidovudine (a second-line regimen component in Uganda
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+) and reduced virological fitness to HIV.
+<xref rid="dkz261-B31" ref-type="bibr">
+<sup>31</sup>
+</xref>
+On the other hand, emtricitabine and lamivudine remain preferable because of their tolerability
+<xref rid="dkz261-B1" ref-type="bibr">
+<sup>1</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B29" ref-type="bibr">
+<sup>29</sup>
+</xref>
+and as such they may still be useful components of the second-line regimen in Uganda.
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+The high prevalence of TAMs (21.6%) is of concern because they confer cross-resistance to other NRTIs. However, the second-line regimen would be efficacious in such individuals, especially when combined with PIs
+<xref rid="dkz261-B38" ref-type="bibr">
+<sup>38</sup>
+</xref>
+or with dolutegravir.
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B4" ref-type="bibr">
+<sup>4</sup>
+</xref>
+The use of dolutegravir has recently been recommended in first-line ART regimens in Uganda
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+to address the low treatment efficacy and escalating drug resistance to NNRTIs.
+<xref rid="dkz261-B39" ref-type="bibr">
+<sup>39</sup>
+</xref>
+Timely switching of individuals failing NNRTI-based first-line ART has the benefit of preserving NRTI components for use in a second-line regimen.
+<xref rid="dkz261-B7" ref-type="bibr">
+<sup>7</sup>
+</xref>
+</p>
+<p>
+All individuals with ADR had NNRTI mutations with K103N/S, Y181C, K101E/Q and G190S/A being more prevalent, depicting extensive use of the NNRTIs nevirapine and efavirenz in first-line regimens in this setting.
+<xref rid="dkz261-B8" ref-type="bibr">
+<sup>8</sup>
+</xref>
+Nevirapine and efavirenz have a low genetic barrier to resistance in that one mutation generates resistance to nevirapine and two mutations generate resistance to efavirenz.
+<xref rid="dkz261-B29" ref-type="bibr">
+<sup>29</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B30" ref-type="bibr">
+<sup>30</sup>
+</xref>
+This probably explains why an efavirenz-based regimen was protective against ADR compared with a nevirapine-based regimen. The GSS showed cross-resistance of 46.4% and 35% to the second-generation NNRTIs rilpivirine and etravirine, respectively, which were not used in this cohort. These findings support the replacement of NNRTIs with dolutegravir in the first-line regimen as outlined in Uganda’s new HIV treatment guidelines.
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+The increasing HIVDR associated with NNRTIs, the superior efficacy of dolutegravir due to a higher genetic barrier and its better tolerability support the introduction of dolutegravir in the first-line therapy.
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+</p>
+<p>
+Individuals with a VL ≥10000 copies/mL were at higher odds of developing ADR compared with those with a VL s10000 copies/mL. We set this threshold based on findings that the risk of resistance selection peaks at a VL of 10000 copies/mL.
+<xref rid="dkz261-B40" ref-type="bibr">
+<sup>40</sup>
+</xref>
+Our findings therefore reiterate the need for maximum virological suppression if ADR is to be controlled.
+<xref rid="dkz261-B3" ref-type="bibr">
+<sup>3</sup>
+</xref>
+</p>
+<p>
+Among VF cases, we report the absence of DRMs in 26.8% of our participants, which is similar to findings of other studies in which some VF cases lacked DRMs.
+<xref rid="dkz261-B8" ref-type="bibr">
+<sup>8</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B41" ref-type="bibr">
+<sup>41</sup>
+</xref>
+This suggests interrupted treatment and/or non-adherence and underscores the need for routine VL monitoring and genotypic resistance testing, otherwise these individuals could have been unnecessarily switched to a costly second-line regimen.
+</p>
+<p>
+In Uganda, VL tests are recommended 6 months after ART initiation and then annually for suppressed adults. Individuals with VF are given three intensive adherence counselling (IAC) sessions, 1 month apart, and a repeat VL test 1 month after the third session. If VF persists, individuals are offered a regimen switch whereas those with virological suppression are maintained on their regimen with adherence support.
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+In this first VL testing that detected 97 VF cases in our cohorts, IAC was unnecessary in 73.2% of VF cases with ADR. Worse still, the current ART guidelines
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+do not recommend genotypic resistance testing for individuals failing on a first-line regimen, yet IAC alone cannot detect ADR and could delay regimen switch. Early detection of HIVDR and timely switching to a second-line regimen prevents accumulation of DRMs in patients failing on a first-line regimen.
+<xref rid="dkz261-B42" ref-type="bibr">
+<sup>42</sup>
+</xref>
+The omission (in Uganda’s current ART policy) of genotypic resistance testing at the time of first-line failure to guide regimen switch is due to high costs.
+<xref rid="dkz261-B43" ref-type="bibr">
+<sup>43</sup>
+</xref>
+However, genotypic resistance testing helps clinicians select the most efficacious regimen thus preventing VF and accumulation of HIVDR.
+<xref rid="dkz261-B29" ref-type="bibr">
+<sup>29</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B44" ref-type="bibr">
+<sup>44</sup>
+</xref>
+In this study, both VL testing and genotypic resistance testing were vital in monitoring first-line ART.
+</p>
+<p>
+These findings should be interpreted in the light of several caveats. First, being a cross-sectional survey, we diagnosed VF using one plasma VL estimation yet at least two are preferable.
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+Consequently, blips in VL that occur even during effective treatment
+<xref rid="dkz261-B35" ref-type="bibr">
+<sup>35</sup>
+</xref>
+may have been mistaken for VF. Additionally, our cross-sectional analysis does not include participants lost to follow-up or participants who died during the course of treatment and as such our virological suppression rates may be overestimated. We excluded individuals with virological suppression from genotypic resistance testing yet a recent study in Kenya showed virological suppressors had accumulated DRMs.
+<xref rid="dkz261-B45" ref-type="bibr">
+<sup>45</sup>
+</xref>
+The effect of pre-treatment drug resistance known to contribute to VF in clients on ART
+<xref rid="dkz261-B41" ref-type="bibr">
+<sup>41</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B46" ref-type="bibr">
+<sup>46</sup>
+</xref>
+was not analysed. A recent WHO survey indicated that the prevalence of pre-treatment HIVDR in Uganda was 15.4%;
+<xref rid="dkz261-B7" ref-type="bibr">
+<sup>7</sup>
+</xref>
+the results from this survey and other countries led to changes in treatment guidelines.
+<xref rid="dkz261-B2" ref-type="bibr">
+<sup>2</sup>
+</xref>
+Another previous study estimated the prevalence of pre-treatment HIVDR among fisherfolk to be between 5% and 15% (moderate) for NNRTIs and z5% (low) for NRTI- and PI-based regimens.
+<xref rid="dkz261-B47" ref-type="bibr">
+<sup>47</sup>
+</xref>
+Lastly, Sanger sequencing may have missed minority variants that have been associated with VF and HIVDR.
+<xref rid="dkz261-B48" ref-type="bibr">
+<sup>48</sup>
+</xref>
+Despite those shortcomings, the general concepts and observations highlighted in this study may still be applicable in other settings including those whose HIV ART regimens and policies differ from ours.
+</p>
+<p>
+The strength of this study was the use of a large multi-site sample size involving fisherfolk from both onshore and island fishing sites. To our knowledge, this is the first study in Uganda to integrate cost-saving pooled VL testing in population surveillance of ADR and document virological suppression and ADR among fisherfolk. Pooled VL testing has demonstrated efficiency with both plasma and dried-blood spot (DBS) samples in settings where VF is less than 25%,
+<xref rid="dkz261-B16" ref-type="bibr">
+<sup>16</sup>
+</xref>
+<sup>,</sup>
+<xref rid="dkz261-B17" ref-type="bibr">
+<sup>17</sup>
+</xref>
+and thus is feasible in our setting with similar conditions. In other African settings similar to ours, Newman
+<italic>et al.</italic>
+<xref rid="dkz261-B49" ref-type="bibr">
+<sup>49</sup>
+</xref>
+used a qualitative mini-pool for detection of VF and HIVDR in South African patients on first-line ART, while Pannus
+<italic>et al.</italic>
+<xref rid="dkz261-B50" ref-type="bibr">
+<sup>50</sup>
+</xref>
+combined pooled testing with DBS samples in a Malawian hospital; both studies reported appreciable feasibility and cost efficiency. However, there is a need to address barriers such as inadequate resources, lack of validated pooling protocols usable by all laboratories and limited experienced manpower in VL pooling. Consequently, the designs and application prospects of pooling strategies are dependent on resource availability, local laboratory needs and assurance of reliable turnaround time of results.
+</p>
+<sec>
+<title>Conclusions</title>
+<p>
+In this study, based on the first VL testing done before IAC, we report high virological suppression rates among highly vulnerable and mobile fisherfolk; but with widespread ADR among VF cases. The three sessions of IAC and repeat VL testing without genotypic resistance testing, as currently recommended in Uganda for potential first-line VF cases, need to be revisited. We therefore recommend timely treatment switching and adherence support guided by routine VL testing and genotypic resistance testing for better treatment outcomes. The adoption of pooled VL testing could be cost-effective for monitoring of ART programmes, especially in resource-limited settings.
+</p>
+</sec>
+</sec>
+</body>
+<back>
+<ack id="ACK1">
+<title>Acknowledgements</title>
+<p>
+We acknowledge all the facility staff and study participants.
+</p>
+<sec>
+<title>Funding</title>
+<p>
+This work was funded by the UK Medical Research Council (MRC) and the UK Department for International Development (DFID) under the MRC/DFID Concordat agreement. Further support is from a Career Development Fellowship (Grant number Traning and Mobility Actions (TMA) 2015 Career Development Fellowship (CDF)-982 to D. Ssemwanga) from the European and Developing Countries Clinical Trials Partnership.
+</p>
+</sec>
+<sec>
+<title>Transparency declarations</title>
+<p>None to declare.</p>
+<sec>
+<title>Author contributions</title>
+<p>
+Conceived and designed the study: D. S., P. K. and J. O. Collected data: N. B., E. S. and D. S. Conducted laboratory analysis: M. N., S. E. N., F. N., S. L., J. O., G. S. and F. S. Analysed the data: J. O., M. N., N. B., G. S., A. K., E. A., R. N. N. and D. S. Wrote the paper: J. O., N. B., D. P. K., P. K. and D. S. All authors reviewed, revised and approved the final paper.
+</p>
+</sec>
+</sec>
+<sec>
+<title>Disclaimer</title>
+<p>
+The findings and conclusions in this report are those of the authors and do not necessarily represent the official position of the funding agencies.
+</p>
+</sec>
+</ack>
+<ref-list id="REF1">
+<title>References</title>
+<ref id="dkz261-B1">
+<label>1</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Günthard</surname>
+<given-names>HF</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Saag</surname>
+<given-names>MS</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Benson</surname>
+<given-names>CA</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Antiretroviral drugs for treatment and prevention of HIV infection in adults: 2016 recommendations of the International Antiviral society-USA panel
+</article-title>
+.
+<source>JAMA</source>
+<year>2016</year>
+;
+<volume>316</volume>
+:
+<fpage>191</fpage>
+–
+<lpage>210</lpage>
+.
+<pub-id pub-id-type="pmid">27404187</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B2">
+<label>2</label>
+<mixed-citation publication-type="other">
+Ministry of Health.
+<italic>
+Consolidated Guidelines for Prevention and Treatment of HIV and AIDS in Uganda.
+</italic>
+<year>2018</year>
+<ext-link ext-link-type="uri" xlink:href="https://elearning.idi.co.ug/pluginfile.php/5675/mod_page/content/19/Uganda%20HIV%20%20Guidelines%20-%20September%202018.pdf">
+https://elearning.idi.co.ug/pluginfile.php/5675/mod_page/content/19/Uganda%20HIV%20%20Guidelines%20-%20September%202018.pdf
+</ext-link>
+.
+</mixed-citation>
+</ref>
+<ref id="dkz261-B3">
+<label>3</label>
+<mixed-citation publication-type="other">
+UNAIDS.
+<italic>
+90-90-90: An Ambitious Treatment Target to Help End the AIDS Epidemic
+</italic>
+<year>2014</year>
+<ext-link ext-link-type="uri" xlink:href="http://www.unaids.org/sites/default/files/media_asset/90-90-90_en.pdf">
+http://www.unaids.org/sites/default/files/media_asset/90-90-90_en.pdf
+</ext-link>
+.
+</mixed-citation>
+</ref>
+<ref id="dkz261-B4">
+<label>4</label>
+<mixed-citation publication-type="other">
+WHO.
+<italic>
+Consolidated Guidelines on the Use of Antiretroviral Drugs for Treating and Preventing HIV Infection: Recommendations for a
+</italic>
+<italic>Public Health Approach</italic>
+<year>2016</year>
+<ext-link ext-link-type="uri" xlink:href="http://www.deslibris.ca/ID/10089566">http://www.deslibris.ca/ID/10089566</ext-link>
+.
+</mixed-citation>
+</ref>
+<ref id="dkz261-B5">
+<label>5</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Kyeyune</surname>
+<given-names>F</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Nankya</surname>
+<given-names>I</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Metha</surname>
+<given-names>S</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Treatment failure and drug resistance is more frequent in HIV-1 subtype D versus subtype A-infected Ugandans over a 10-year study period
+</article-title>
+.
+<source>AIDS</source>
+<year>2013</year>
+;
+<volume>27</volume>
+:
+<fpage>1899</fpage>
+–
+<lpage>909</lpage>
+.
+<pub-id pub-id-type="pmid">23727942</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B6">
+<label>6</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Ssemwanga</surname>
+<given-names>D</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Lihana</surname>
+<given-names>RW</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ugoji</surname>
+<given-names>C</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Update on HIV-1 acquired and transmitted drug resistance in Africa
+</article-title>
+.
+<source>AIDS Rev</source>
+<year>2015</year>
+;
+<volume>17</volume>
+:
+<fpage>3</fpage>
+–
+<lpage>20</lpage>
+.
+<pub-id pub-id-type="pmid">25427100</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B7">
+<label>7</label>
+<mixed-citation publication-type="other">
+WHO, CDC, Global Fund.
+<italic>HIV Drug Resistance Report 2017</italic>
+<year>2017</year>
+<ext-link ext-link-type="uri" xlink:href="http://apps.who.int/iris/bitstream/10665/255896/1/9789241512831-eng.pdf">
+http://apps.who.int/iris/bitstream/10665/255896/1/9789241512831-eng.pdf
+</ext-link>
+.
+</mixed-citation>
+</ref>
+<ref id="dkz261-B8">
+<label>8</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Kaleebu</surname>
+<given-names>P</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Kirungi</surname>
+<given-names>W</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Watera</surname>
+<given-names>C</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Virological response and antiretroviral drug resistance emerging during antiretroviral therapy at three treatment centers in Uganda
+</article-title>
+.
+<source>PLoS One</source>
+<year>2015</year>
+;
+<volume>10</volume>
+:
+<fpage>e0145536.</fpage>
+<pub-id pub-id-type="pmid">26700639</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B9">
+<label>9</label>
+<mixed-citation publication-type="other">
+Centres for Disease Control and Prevention and Ministry of Health.
+<italic>
+Uganda Population-Based HIV Impact Assessment (UPHIA) 2016-2017
+</italic>
+<year>2017</year>
+<ext-link ext-link-type="uri" xlink:href="https://www.afro.who.int/sites/default/files/2017-08/UPHIA%20Uganda%20factsheet.pdf">
+https://www.afro.who.int/sites/default/files/2017-08/UPHIA%20Uganda%20factsheet.pdf
+</ext-link>
+.
+</mixed-citation>
+</ref>
+<ref id="dkz261-B10">
+<label>10</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Scherrer</surname>
+<given-names>AU</given-names>
+</name>
+,
+<name name-style="western">
+<surname>von Wyl</surname>
+<given-names>V</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Yang</surname>
+<given-names>W-L</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Emergence of acquired HIV-1 drug resistance almost stopped in Switzerland: a 15-year prospective cohort analysis
+</article-title>
+.
+<source>Clin Infect Dis</source>
+<year>2016</year>
+;
+<volume>62</volume>
+:
+<fpage>1310</fpage>
+–
+<lpage>7</lpage>
+.
+<pub-id pub-id-type="pmid">26962075</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B11">
+<label>11</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Allison</surname>
+<given-names>EH</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Seeley</surname>
+<given-names>JA.</given-names>
+</name>
+</person-group>
+<article-title>
+HIV and AIDS among fisherfolk: a threat to ‘responsible fisheries’?
+</article-title>
+<source>Fish Fisheries</source>
+<year>2004</year>
+;
+<volume>5</volume>
+:
+<fpage>215</fpage>
+–
+<lpage>34</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="dkz261-B12">
+<label>12</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Asiki</surname>
+<given-names>G</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Mpendo</surname>
+<given-names>J</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Abaasa</surname>
+<given-names>A</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+HIV and syphilis prevalence and associated risk factors among fishing communities of Lake Victoria, Uganda
+</article-title>
+.
+<source>Sex Transm Infect</source>
+<year>2011</year>
+;
+<volume>87</volume>
+:
+<fpage>511</fpage>
+–
+<lpage>5</lpage>
+.
+<pub-id pub-id-type="pmid">21835763</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B13">
+<label>13</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Kiwanuka</surname>
+<given-names>N</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ssetaala</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Nalutaaya</surname>
+<given-names>A</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+High incidence of HIV-1 infection in a general population of fishing communities around Lake Victoria, Uganda
+</article-title>
+.
+<source>PLoS One</source>
+<year>2014</year>
+;
+<volume>9</volume>
+:
+<fpage>e94932.</fpage>
+<pub-id pub-id-type="pmid">24866840</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B14">
+<label>14</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Tumwesigye</surname>
+<given-names>NM</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Atuyambe</surname>
+<given-names>L</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Wanyenze</surname>
+<given-names>RK</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Alcohol consumption and risky sexual behaviour in the fishing communities: evidence from two fish landing sites on Lake Victoria in Uganda
+</article-title>
+.
+<source>BMC Public Health</source>
+<year>2012</year>
+;
+<volume>12</volume>
+:
+<fpage>1069.</fpage>
+<pub-id pub-id-type="pmid">23231779</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B15">
+<label>15</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Seeley</surname>
+<given-names>JA</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Allison</surname>
+<given-names>EH.</given-names>
+</name>
+</person-group>
+<article-title>
+HIV/AIDS in fishing communities: challenges to delivering antiretroviral therapy to vulnerable groups
+</article-title>
+.
+<source>AIDS Care</source>
+<year>2005</year>
+;
+<volume>17</volume>
+:
+<fpage>688</fpage>
+–
+<lpage>97</lpage>
+.
+<pub-id pub-id-type="pmid">16036255</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B16">
+<label>16</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>van Zyl</surname>
+<given-names>GU</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Preiser</surname>
+<given-names>W</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Potschka</surname>
+<given-names>S</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Pooling strategies to reduce the cost of HIV-1 RNA load monitoring in a resource-limited setting
+</article-title>
+.
+<source>Clin Infect Dis</source>
+<year>2011</year>
+;
+<volume>52</volume>
+:
+<fpage>264</fpage>
+–
+<lpage>70</lpage>
+.
+<pub-id pub-id-type="pmid">21288854</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B17">
+<label>17</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>May</surname>
+<given-names>S</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Gamst</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Haubrich</surname>
+<given-names>R</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Pooled nucleic acid testing to identify antiretroviral treatment failure during HIV infection
+</article-title>
+.
+<source>J Acquir Immune Defic Syndr</source>
+<year>2010</year>
+;
+<volume>53</volume>
+:
+<fpage>194</fpage>
+–
+<lpage>201</lpage>
+.
+<pub-id pub-id-type="pmid">19770802</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B18">
+<label>18</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Smith</surname>
+<given-names>DM</given-names>
+</name>
+,
+<name name-style="western">
+<surname>May</surname>
+<given-names>SJ</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Pérez-Santiago</surname>
+<given-names>J</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+The use of pooled viral load testing to identify antiretroviral treatment failure
+</article-title>
+.
+<source>AIDS</source>
+<year>2009</year>
+;
+<volume>23</volume>
+:
+<fpage>2151</fpage>
+–
+<lpage>8</lpage>
+.
+<pub-id pub-id-type="pmid">19730348</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B19">
+<label>19</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Woods</surname>
+<given-names>CK</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Brumme</surname>
+<given-names>CJ</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Liu</surname>
+<given-names>TF</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Automating HIV drug resistance genotyping with RECall, a freely accessible sequence analysis tool
+</article-title>
+.
+<source>J Clin Microbiol</source>
+<year>2012</year>
+;
+<fpage>1936</fpage>
+–
+<lpage>42</lpage>
+.
+<pub-id pub-id-type="pmid">22403431</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B20">
+<label>20</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Liu</surname>
+<given-names>TF</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Shafer</surname>
+<given-names>RW.</given-names>
+</name>
+</person-group>
+<article-title>
+Web resources for HIV type 1 genotypic-resistance test interpretation
+</article-title>
+.
+<source>Clin Infect Dis</source>
+<year>2006</year>
+;
+<volume>42</volume>
+:
+<fpage>1608</fpage>
+–
+<lpage>18</lpage>
+.
+<pub-id pub-id-type="pmid">16652319</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B21">
+<label>21</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Hanna</surname>
+<given-names>DB</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Felsen</surname>
+<given-names>UR</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ginsberg</surname>
+<given-names>MS</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Increased antiretroviral therapy use and virologic suppression in the Bronx in the context of multiple HIV prevention strategies
+</article-title>
+.
+<source>AIDS Res Hum Retroviruses</source>
+<year>2016</year>
+;
+<volume>32</volume>
+:
+<fpage>955</fpage>
+–
+<lpage>63</lpage>
+.
+<pub-id pub-id-type="pmid">26892622</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B22">
+<label>22</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Billioux</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Nakigozi</surname>
+<given-names>G</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Newell</surname>
+<given-names>K</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Durable suppression of HIV-1 after virologic monitoring-based antiretroviral adherence counseling in Rakai, Uganda
+</article-title>
+.
+<source>PLoS One</source>
+<year>2015</year>
+;
+<volume>10</volume>
+:
+<fpage>e0127235.</fpage>
+<pub-id pub-id-type="pmid">26011158</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B23">
+<label>23</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Bulage</surname>
+<given-names>L</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ssewanyana</surname>
+<given-names>I</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Nankabirwa</surname>
+<given-names>V</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Factors associated with virological non-suppression among HIV-positive patients on antiretroviral therapy in Uganda, August 2014–July 2015
+</article-title>
+.
+<source>BMC Infect Dis</source>
+<year>2017</year>
+;
+<volume>17</volume>
+:
+<fpage>326</fpage>
+.
+<pub-id pub-id-type="pmid">28468608</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B24">
+<label>24</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Bbosa</surname>
+<given-names>N</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ssemwanga</surname>
+<given-names>D</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Nsubuga</surname>
+<given-names>RN</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Phylogeography of HIV-1 suggests that Ugandan fishing communities are a sink for, not a source of, virus from general populations
+</article-title>
+.
+<source>Sci Rep</source>
+<year>2019</year>
+;
+<volume>9</volume>
+:
+<fpage>1051</fpage>
+.
+<pub-id pub-id-type="pmid">30705307</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B25">
+<label>25</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Yehia</surname>
+<given-names>BR</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Rebeiro</surname>
+<given-names>P</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Althoff</surname>
+<given-names>KN</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Impact of age on retention in care and viral suppression
+</article-title>
+.
+<source>J Acquir Immune Defic Syndr</source>
+<year>2015</year>
+;
+<volume>68</volume>
+:
+<fpage>413</fpage>
+–
+<lpage>9</lpage>
+.
+<pub-id pub-id-type="pmid">25559604</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B26">
+<label>26</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Pozniak</surname>
+<given-names>AL</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Gallant</surname>
+<given-names>JE</given-names>
+</name>
+,
+<name name-style="western">
+<surname>DeJesus</surname>
+<given-names>E</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Tenofovir disoproxil fumarate, emtricitabine, and efavirenz versus fixed-dose zidovudine/lamivudine and efavirenz in antiretroviral-naive patients: virologic, immunologic, and morphologic changes—a 96-week analysis
+</article-title>
+.
+<source>J Acquir Immune Defic Syndr</source>
+<year>2006</year>
+;
+<volume>43</volume>
+:
+<fpage>535</fpage>
+–
+<lpage>40</lpage>
+.
+<pub-id pub-id-type="pmid">17057609</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B27">
+<label>27</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Kefale</surname>
+<given-names>AT</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Dadi</surname>
+<given-names>TL</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Biru</surname>
+<given-names>TT</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Treatment outcome and adverse events of tenofovir disoproxil fumarate based regimens as compared to zidovudine based regimens among people living with HIV/AIDS: a systematic review and meta-analysis of observational studies
+</article-title>
+.
+<source>Open AIDS J</source>
+<year>2018</year>
+;
+<volume>12</volume>
+:
+<fpage>38</fpage>
+–
+<lpage>52</lpage>
+.
+<pub-id pub-id-type="pmid">30008973</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B28">
+<label>28</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Pillay</surname>
+<given-names>P</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ford</surname>
+<given-names>N</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Shubber</surname>
+<given-names>Z</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Outcomes for efavirenz versus nevirapine-containing regimens for treatment of HIV-1 infection: a systematic review and meta-analysis
+</article-title>
+.
+<source>PLoS One</source>
+<year>2013</year>
+;
+<volume>8</volume>
+:
+<fpage>e68995.</fpage>
+<pub-id pub-id-type="pmid">23894391</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B29">
+<label>29</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Clutter</surname>
+<given-names>DS</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Jordan</surname>
+<given-names>MR</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Bertagnolio</surname>
+<given-names>S</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>HIV-1 drug resistance and resistance testing</article-title>
+.
+<source>Infect Genet Evol</source>
+<year>2016</year>
+;
+<volume>46</volume>
+:
+<fpage>292</fpage>
+–
+<lpage>307</lpage>
+.
+<pub-id pub-id-type="pmid">27587334</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B30">
+<label>30</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Gregson</surname>
+<given-names>J</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Tang</surname>
+<given-names>M</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ndembi</surname>
+<given-names>N</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Global epidemiology of drug resistance after failure of WHO recommended first-line regimens for adult HIV-1 infection: a multicentre retrospective cohort study
+</article-title>
+.
+<source>Lancet Infect Dis</source>
+<year>2016</year>
+;
+<volume>16</volume>
+:
+<fpage>565</fpage>
+–
+<lpage>75</lpage>
+.
+<pub-id pub-id-type="pmid">26831472</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B31">
+<label>31</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Rhee</surname>
+<given-names>S-Y</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Varghese</surname>
+<given-names>V</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Holmes</surname>
+<given-names>SP</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Mutational correlates of virological failure in individuals receiving a WHO-recommended tenofovir-containing first-line regimen: an international collaboration
+</article-title>
+.
+<source>EBioMedicine</source>
+<year>2017</year>
+;
+<volume>18</volume>
+:
+<fpage>225</fpage>
+–
+<lpage>35</lpage>
+.
+<pub-id pub-id-type="pmid">28365230</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B32">
+<label>32</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Hassan</surname>
+<given-names>AS</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Nabwera</surname>
+<given-names>HM</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Mwaringa</surname>
+<given-names>SM</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+HIV-1 virologic failure and acquired drug resistance among first-line antiretroviral experienced adults at a rural HIV clinic in coastal Kenya: a cross-sectional study
+</article-title>
+.
+<source>AIDS Res Ther</source>
+<year>2014</year>
+;
+<volume>11</volume>
+:
+<fpage>9.</fpage>
+<pub-id pub-id-type="pmid">24456757</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B33">
+<label>33</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Liu</surname>
+<given-names>H</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ma</surname>
+<given-names>Y</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Su</surname>
+<given-names>Y</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Emerging trends of HIV drug resistance in Chinese HIV-infected patients receiving first-line highly active antiretroviral therapy: a systematic review and meta-analysis
+</article-title>
+.
+<source>Clin Infect Dis</source>
+<year>2014</year>
+;
+<volume>59</volume>
+:
+<fpage>1495</fpage>
+–
+<lpage>502</lpage>
+.
+<pub-id pub-id-type="pmid">25053721</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B34">
+<label>34</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Barth</surname>
+<given-names>RE</given-names>
+</name>
+,
+<name name-style="western">
+<surname>van der Loeff</surname>
+<given-names>MFS</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Schuurman</surname>
+<given-names>R</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Virological follow-up of adult patients in antiretroviral treatment programmes in sub-Saharan Africa: a systematic review
+</article-title>
+.
+<source>Lancet Infect Dis</source>
+<year>2010</year>
+;
+<volume>10</volume>
+:
+<fpage>155</fpage>
+–
+<lpage>66</lpage>
+.
+<pub-id pub-id-type="pmid">20185094</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B35">
+<label>35</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Hofstra</surname>
+<given-names>LM</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Mudrikova</surname>
+<given-names>T</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Stam</surname>
+<given-names>AJ</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Residual viremia is preceding viral blips and persistent low-level viremia in treated HIV-1 patients
+</article-title>
+.
+<source>PLoS One</source>
+<year>2014</year>
+;
+<volume>9</volume>
+:
+<fpage>e110749.</fpage>
+<pub-id pub-id-type="pmid">25354368</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B36">
+<label>36</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Wensing</surname>
+<given-names>AM</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Calvez</surname>
+<given-names>V</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Günthard</surname>
+<given-names>HF</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+2017 update of the drug resistance mutations in HIV-1
+</article-title>
+.
+<source>Top Antivir Med</source>
+<year>2016</year>
+;
+<volume>24</volume>
+:
+<fpage>132</fpage>
+–
+<lpage>41</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="dkz261-B37">
+<label>37</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Baxter</surname>
+<given-names>J</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Dunn</surname>
+<given-names>D</given-names>
+</name>
+,
+<name name-style="western">
+<surname>White</surname>
+<given-names>E</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Global HIV-1 transmitted drug resistance in the INSIGHT Strategic Timing of AntiRetroviral Treatment (START) trial
+</article-title>
+.
+<source>HIV Med</source>
+<year>2015</year>
+;
+<volume>16</volume>
+:
+<fpage>77</fpage>
+–
+<lpage>87</lpage>
+.
+<pub-id pub-id-type="pmid">25711326</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B38">
+<label>38</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Paton</surname>
+<given-names>NI</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Kityo</surname>
+<given-names>C</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hoppe</surname>
+<given-names>A</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Assessment of second-line antiretroviral regimens for HIV therapy in Africa
+</article-title>
+.
+<source>N Engl J Med</source>
+<year>2014</year>
+;
+<volume>371</volume>
+:
+<fpage>234</fpage>
+–
+<lpage>47</lpage>
+.
+<pub-id pub-id-type="pmid">25014688</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B39">
+<label>39</label>
+<mixed-citation publication-type="other">
+WHO. Updated Recommendations on First-line and Second-line Antiretroviral Regimens and Post-exposure Prophylaxis and Recommendations on Early Infant Diagnosis of HIV. Supplement to the
+<italic>
+2016 Consolidated Guidelines on the Use of Antiretroviral Drugs for Treating and Preventing HIV Infection
+</italic>
+<year>2018</year>
+<ext-link ext-link-type="uri" xlink:href="https://apps.who.int/iris/bitstream/handle/10665/277395/WHO-CDS-HIV-18.51-eng.pdf?ua=1">
+https://apps.who.int/iris/bitstream/handle/10665/277395/WHO-CDS-HIV-18.51-eng.pdf? ua=1
+</ext-link>
+.
+</mixed-citation>
+</ref>
+<ref id="dkz261-B40">
+<label>40</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Prosperi</surname>
+<given-names>MCF</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Mackie</surname>
+<given-names>N</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Di Giambenedetto</surname>
+<given-names>S</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Detection of drug resistance mutations at low plasma HIV-1 RNA load in a European multicentre cohort study
+</article-title>
+.
+<source>J Antimicrob Chemother</source>
+<year>2011</year>
+;
+<volume>66</volume>
+:
+<fpage>1886</fpage>
+–
+<lpage>96</lpage>
+.
+<pub-id pub-id-type="pmid">21624929</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B41">
+<label>41</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Boender</surname>
+<given-names>TS</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hoenderboom</surname>
+<given-names>BM</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Sigaloff</surname>
+<given-names>KCE</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Pretreatment HIV drug resistance increases regimen switches in sub-Saharan Africa
+</article-title>
+.
+<source>Clin Infect Dis</source>
+<year>2015</year>
+;
+<volume>61</volume>
+:
+<fpage>1749</fpage>
+–
+<lpage>58</lpage>
+.
+<pub-id pub-id-type="pmid">26240203</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B42">
+<label>42</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Hamers</surname>
+<given-names>RL</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Sigaloff</surname>
+<given-names>KCE</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Kityo</surname>
+<given-names>C</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Emerging HIV-1 drug resistance after roll-out of antiretroviral therapy in sub-Saharan Africa
+</article-title>
+.
+<source>Curr Opin HIV AIDS</source>
+<year>2013</year>
+;
+<volume>8</volume>
+:
+<fpage>19</fpage>
+–
+<lpage>26</lpage>
+.
+<pub-id pub-id-type="pmid">23143140</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B43">
+<label>43</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Phillips</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Cambiano</surname>
+<given-names>V</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Nakagawa</surname>
+<given-names>F</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Cost-effectiveness of HIV drug resistance testing to inform switching to second line antiretroviral therapy in low income settings
+</article-title>
+.
+<source>PLoS One</source>
+<year>2014</year>
+;
+<volume>9</volume>
+:
+<fpage>e109148</fpage>
+.
+<pub-id pub-id-type="pmid">25290340</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B44">
+<label>44</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Weinstein</surname>
+<given-names>MC</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Goldie</surname>
+<given-names>SJ</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Losina</surname>
+<given-names>E</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Use of genotypic resistance testing to guide HIV therapy: clinical impact and cost-effectiveness
+</article-title>
+.
+<source>Ann Intern Med</source>
+<year>2001</year>
+;
+<volume>134</volume>
+:
+<fpage>440</fpage>
+–
+<lpage>50</lpage>
+.
+<pub-id pub-id-type="pmid">11255519</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B45">
+<label>45</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Kantor</surname>
+<given-names>R</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Delong</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Schreier</surname>
+<given-names>L</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+HIV second-line failure and drug resistance at high- and low-level viremia in Western Kenya
+</article-title>
+.
+<source>AIDS</source>
+<year>2018</year>
+;
+<volume>32</volume>
+:
+<fpage>2485</fpage>
+–
+<lpage>96</lpage>
+.
+<pub-id pub-id-type="pmid">30134290</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B46">
+<label>46</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Hamers</surname>
+<given-names>RL</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Schuurman</surname>
+<given-names>R</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Sigaloff</surname>
+<given-names>KC</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Effect of pretreatment HIV-1 drug resistance on immunological, virological, and drug-resistance outcomes of first-line antiretroviral treatment in sub-Saharan Africa: a multicentre cohort study
+</article-title>
+.
+<source>Lancet Infect Dis</source>
+<year>2012</year>
+;
+<volume>12</volume>
+:
+<fpage>307</fpage>
+–
+<lpage>17</lpage>
+.
+<pub-id pub-id-type="pmid">22036233</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B47">
+<label>47</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Nazziwa</surname>
+<given-names>J</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Njai</surname>
+<given-names>HF</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ndembi</surname>
+<given-names>N</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Short communication: HIV type 1 transmitted drug resistance and evidence of transmission clusters among recently infected antiretroviral-naive individuals from Ugandan fishing communities of Lake Victoria
+</article-title>
+.
+<source>AIDS Res Hum Retroviruses</source>
+<year>2013</year>
+;
+<volume>29</volume>
+:
+<fpage>788</fpage>
+–
+<lpage>95</lpage>
+.
+<pub-id pub-id-type="pmid">23173702</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B48">
+<label>48</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Cozzi-Lepri</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Noguera-Julian</surname>
+<given-names>M</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Di Giallonardo</surname>
+<given-names>F</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Low-frequency drug-resistant HIV-1 and risk of virological failure to first-line NNRTI-based ART: a multicohort European case–control study using centralized ultrasensitive 454 pyrosequencing
+</article-title>
+.
+<source>J Antimicrob Chemother</source>
+<year>2015</year>
+;
+<volume>70</volume>
+:
+<fpage>930</fpage>
+–
+<lpage>40</lpage>
+.
+<pub-id pub-id-type="pmid">25336166</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B49">
+<label>49</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Newman</surname>
+<given-names>H</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Breunig</surname>
+<given-names>L</given-names>
+</name>
+,
+<name name-style="western">
+<surname>van Zyl</surname>
+<given-names>G</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+A qualitative PCR minipool strategy to screen for virologic failure and antiretroviral drug resistance in South African patients on first-line antiretroviral therapy
+</article-title>
+.
+<source>J Clin Virol</source>
+<year>2014</year>
+;
+<volume>60</volume>
+:
+<fpage>387</fpage>
+–
+<lpage>91</lpage>
+.
+<pub-id pub-id-type="pmid">24929754</pub-id>
+</mixed-citation>
+</ref>
+<ref id="dkz261-B50">
+<label>50</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Pannus</surname>
+<given-names>P</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Fajardo</surname>
+<given-names>E</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Metcalf</surname>
+<given-names>C</given-names>
+</name>
+</person-group>
+<etal>et al</etal>
+<article-title>
+Pooled HIV-1 viral load testing using dried blood spots to reduce the cost of monitoring antiretroviral treatment in a resource-limited setting
+</article-title>
+.
+<source>J Acquir Immune Defic Syndr</source>
+<year>2013</year>
+;
+<volume>64</volume>
+:
+<fpage>134</fpage>
+–
+<lpage>7</lpage>
+.
+<pub-id pub-id-type="pmid">23892241</pub-id>
+</mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

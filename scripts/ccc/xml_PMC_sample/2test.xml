@@ -1,0 +1,2835 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+<?properties open_access?>
+<?DTDIdentifier.IdentifierValue
+-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.0 20120330//EN
+?>
+<?DTDIdentifier.IdentifierType public?>
+<?SourceDTD.DTDName JATS-journalpublishing1.dtd?>
+<?SourceDTD.Version 1.0?>
+<?ConverterInfo.XSLTName jp2nlmx2.xsl?>
+<?ConverterInfo.Version 1?>
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">Int J Prison Health</journal-id>
+<journal-id journal-id-type="iso-abbrev">Int J Prison Health</journal-id>
+<journal-id journal-id-type="publisher-id">IJPH</journal-id>
+<journal-id journal-id-type="doi">10.1108/IJPH</journal-id>
+<journal-title-group>
+<journal-title>International Journal of Prisoner Health</journal-title>
+</journal-title-group>
+<issn pub-type="ppub">1744-9200</issn>
+<issn pub-type="epub">1744-9219</issn>
+<publisher>
+<publisher-name>Emerald Publishing Limited</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="pmcid">6761913</article-id>
+<article-id pub-id-type="publisher-id">622892</article-id>
+<article-id pub-id-type="doi">10.1108/IJPH-12-2017-0061</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Paper</subject>
+</subj-group>
+<subj-group subj-group-type="subject">
+<compound-subject>
+<compound-subject-part content-type="code">cat-HSC</compound-subject-part>
+<compound-subject-part content-type="label">Health a  social care</compound-subject-part>
+</compound-subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>
+Optimising opioid substitution therapy in the prison environment
+</article-title>
+<alt-title alt-title-type="running-head">Optimising OST in the prison environment</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes">
+<name>
+<surname>Alam</surname>
+<given-names>Farrukh</given-names>
+</name>
+<!-- <string-name>Farrukh Alam</string-name> -->
+<xref ref-type="aff" rid="aff1"/>
+<xref ref-type="bio" rid="bio1">*</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Wright</surname>
+<given-names>Nat</given-names>
+</name>
+<!-- <string-name>Nat Wright</string-name> -->
+<email>natwright@nhs.net</email>
+<xref ref-type="aff" rid="aff2"/>
+<xref ref-type="bio" rid="bio2">*</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Roberts</surname>
+<given-names>Paul</given-names>
+</name>
+<!-- <string-name>Paul Roberts</string-name> -->
+<xref ref-type="aff" rid="aff3"/>
+<xref ref-type="bio" rid="bio3">*</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Dhadley</surname>
+<given-names>Sunny</given-names>
+</name>
+<!-- <string-name>Sunny Dhadley</string-name> -->
+<email>sdhadley@wolverhamptonvsc.org.uk</email>
+<xref ref-type="aff" rid="aff4"/>
+<xref ref-type="bio" rid="bio4">*</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Townley</surname>
+<given-names>Joanne</given-names>
+</name>
+<!-- <string-name>Joanne Townley</string-name> -->
+<xref ref-type="aff" rid="aff5"/>
+<xref ref-type="bio" rid="bio5">*</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Webster</surname>
+<given-names>Russell</given-names>
+</name>
+<!-- <string-name>Russell Webster</string-name> -->
+<xref ref-type="aff" rid="aff6"/>
+<xref ref-type="bio" rid="bio6">*</xref>
+</contrib>
+<aff id="aff1">
+<label>1</label>
+Central and North West London NHS Foundation Trust, London,
+<country country="GB">UK</country>
+</aff>
+<aff id="aff2">
+<label>2</label>
+Transform Research Alliance, Leeds,
+<country country="GB">UK</country>
+</aff>
+<aff id="aff3">
+<label>3</label>
+HM Inspectorate of Prisons, London,
+<country country="GB">UK</country>
+</aff>
+<aff id="aff4">
+<label>4</label>
+Wolverhampton Volunteer Sector Council, Wolverhampton,
+<country country="GB">UK</country>
+</aff>
+<aff id="aff5">
+<label>5</label>
+Pathways to Recovery, Warrington,
+<country country="GB">UK</country>
+</aff>
+<aff id="aff6">
+<label>6</label>
+London,
+<country country="GB">UK</country>
+</aff>
+</contrib-group>
+<pub-date pub-type="epub" iso-8601-date="2019-12-05">
+<day>5</day>
+<month>12</month>
+<year>2019</year>
+</pub-date>
+<pub-date date-type="pub" publication-format="print" iso-8601-date="2019">
+<year>2019</year>
+</pub-date>
+<volume>15</volume>
+<issue>4</issue>
+<fpage>293</fpage>
+<lpage>307</lpage>
+<history>
+<date date-type="received" iso-8601-date="2017-12-18">
+<day>18</day>
+<month>12</month>
+<year>2017</year>
+</date>
+<date date-type="rev-recd" iso-8601-date="2018-06-08">
+<day>08</day>
+<month>6</month>
+<year>2018</year>
+</date>
+<date date-type="rev-recd" iso-8601-date="2018-09-18">
+<day>18</day>
+<month>9</month>
+<year>2018</year>
+</date>
+<date date-type="accepted" iso-8601-date="2018-10-02">
+<day>02</day>
+<month>10</month>
+<year>2018</year>
+</date>
+</history>
+<permissions>
+<copyright-statement>
+© Farrukh Alam, Nat Wright, Paul Roberts, Sunny Dhadley, Joanne Townley and Russell Webster
+</copyright-statement>
+<copyright-year>2019</copyright-year>
+<copyright-holder>
+Farrukh Alam, Nat Wright, Paul Roberts, Sunny Dhadley, Joanne Townley and Russell Webster
+</copyright-holder>
+<license license-type="open-access">
+<license-p>
+Published by Emerald Publishing Limited. This article is published under the Creative Commons Attribution (CC BY 4.0) licence. Anyone may reproduce, distribute, translate and create derivative works of this article (for both commercial and non-commercial purposes), subject to full attribution to the original publication and authors. The full terms of this licence may be seen at
+<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licences/by/4.0/legalcode">
+http://creativecommons.org/licences/by/4.0/legalcode
+</ext-link>
+</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="IJPH-12-2017-0061.pdf"/>
+<abstract id="abstr1" abstract-type="structured">
+<sec>
+<title content-type="abstract-subheading">Purpose</title>
+<p>
+The purpose of this paper is to examine the current provision of opioid substitution therapy (OST) during and immediately following release from detention in prisons in England and Wales.
+</p>
+</sec>
+<sec>
+<title content-type="abstract-subheading">Design/methodology/approach</title>
+<p>
+A group of experts was convened to comment on current practices and to make recommendations for improving OST management in prison. Current practices were previously assessed using an online survey and a focus group with experience of OST in prison (Webster, 2017).
+</p>
+</sec>
+<sec>
+<title content-type="abstract-subheading">Findings</title>
+<p>
+Disruption to the management of addiction and reduced treatment choice for OST adversely influences adequate provision of OST in prison. A key concern was the routine diversion of opiate substitutes to other prisoners. The new controlled drug formulations were considered a positive development to ensure streamlined and efficient OST administration. The following patient populations were identified as having concerns beyond their opioid use, and therefore require additional considerations in prison: older people with comorbidities and complex treatment needs; women who have experienced trauma and have childcare issues; and those with existing mental health needs requiring effective understanding and treatment in prison.
+</p>
+</sec>
+<sec>
+<title content-type="abstract-subheading">Originality/value</title>
+<p>
+Integration of clinical and psychosocial services would enable a joint care plan to be tailored for each individual with opioid dependence and include options for detoxification or maintenance treatment. This would better enable those struggling with opioid use to make informed choices concerning their care during incarceration and for the period immediately following their release. Improvements in coordination of OST would facilitate inclusion of strategies to further streamline this process for the benefit of prisoners and prison staff.
+</p>
+</sec>
+</abstract>
+<kwd-group kwd-group-type="author-generated">
+<kwd>Health in prison</kwd>
+<kwd>Prison</kwd>
+<kwd>Drug abuse</kwd>
+<kwd>Drug dependence</kwd>
+<kwd>Opioid substitution therapy</kwd>
+<kwd>Prison medicine</kwd>
+</kwd-group>
+<counts>
+<fig-count count="1"/>
+<table-count count="0"/>
+<equation-count count="0"/>
+<ref-count count="49"/>
+<page-count count="15"/>
+<word-count count="8713"/>
+</counts>
+<custom-meta-group>
+<custom-meta>
+<meta-name>peer-reviewed</meta-name>
+<meta-value>yes</meta-value>
+</custom-meta>
+<custom-meta>
+<meta-name>academic-content</meta-name>
+<meta-value>yes</meta-value>
+</custom-meta>
+<custom-meta>
+<meta-name>EContentType</meta-name>
+<meta-value>JOURNAL</meta-value>
+</custom-meta>
+<custom-meta>
+<meta-name>rightslink</meta-name>
+<meta-value>excluded</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001">
+<title>
+The current delivery of OST in prisons shows inconsistencies and is often carried out in isolation from routine clinical assessments
+</title>
+<p>
+A recent
+<xref rid="ref017" ref-type="bibr">Freedom of Information Request (2017)</xref>
+revealed that over 22,500 prisoners received opioid substitution therapy (OST) during the 2016 calendar year; an average of 205 individuals per prison. An online survey of 102 opiate-using detainees across the UK assessed the real-life access to OST by prisoners during their previous detention period (
+<xref rid="ref043" ref-type="bibr">Webster, 2017</xref>
+).
+</p>
+<p>
+The survey employed two main methods to gain service-user views. First, an online survey was completed by 102 opiate users who had been in an English or Welsh prison in the previous two years. Opiate-using prisoners were identified and recruited by ten peer researchers trained, supervised and supported by the Revolving Doors Agency. Researchers were based throughout England and Wales and each was set a target of recruiting ten survey respondents. Peer researchers received a payment of £100 each for recruiting survey respondents. Analysis of this survey data informed the second stage of the research study; a focus group comprising nine individuals with recent experience of OST in prison was convened by the Revolving Doors Agency and held on 10 May 2017. The focus group was structured to allow respondents to give detailed first-hand accounts of their experiences of seeking OST in prison and on their release.
+</p>
+<p>
+Using these methods, the survey asked whether respondents wanted and were able to access OST in prison and on release, and how easy or not this access was. Respondents were also asked to suggest improvements to the current provision.
+</p>
+<p>
+Survey respondents were first asked whether they wanted medication for their opiate dependency; whether they wanted methadone or buprenorphine; and whether they wanted to be on maintenance or withdrawal prescription. In total, 95 per cent of respondents did want medication, with a majority of respondents (49 per cent) wanting a maintenance prescription vs a withdrawal prescription (43 per cent) and also preferring methadone (61 per cent) to buprenorphine (31 per cent).
+</p>
+<p>
+Respondents were then asked: “If you wanted medication, did you get it?” and were given a choice of five options that reflected ease of access:
+<list list-type="order" id="list1">
+<list-item>
+<p>Yes – I was offered medication.</p>
+</list-item>
+<list-item>
+<p>Yes – I asked for medication and got it easily.</p>
+</list-item>
+<list-item>
+<p>
+Yes – I asked for medication and had to work hard to get it.
+</p>
+</list-item>
+<list-item>
+<p>
+Yes – I got some medication, but not what (or as much) as I wanted.
+</p>
+</list-item>
+<list-item>
+<p>No – I did not get medication.</p>
+</list-item>
+</list>
+</p>
+<p>
+The vast majority of respondents (88/94=94 per cent) received at least some medication with varying degrees of ease of access.
+</p>
+<p>
+<xref ref-type="fig" rid="F_IJPH-12-2017-0061001">Figure 1</xref>
+(a) provides a breakdown of access to medication by substance, where it can be seen that respondents found it much easier to access methadone with over half (33/60=55 per cent) getting what they wanted easily and a large majority (51/60=85 per cent) achieving their goal, if sometimes after a lengthy battle. This compares with less than half (13/28=46 per cent) of those wanting buprenorphine getting what they wanted easily and almost one-third (9/28=32 per cent) not achieving their goal.
+</p>
+<p>
+Respondents were then asked to consider the aforementioned questions with respect to whether, if they received medication in prison, they were offered a continuing prescription on release. In total, 86 survey respondents answered this question and 56 of them wanted medication on release.
+<xref ref-type="fig" rid="F_IJPH-12-2017-0061001">Figure 1</xref>
+(b) shows that just over half (29/56=52 per cent) were either offered medication on release or asked for it and secured it easily. However, almost two-fifths (21/56=38 per cent) either received no medication or did not get the type or as much as they wanted.
+</p>
+<p>
+Overall, the survey showed that the choice of OST was largely limited to methadone or buprenorphine and that OST provision often differed from that requested by the individual, with methadone being the most common substitute medication provided (
+<xref ref-type="fig" rid="F_IJPH-12-2017-0061001">Figure 1</xref>
+(a)).
+</p>
+<p>
+Following release from prison, the continuity of treatment on re-entering the community was variable, with some individuals finding the transition straightforward and their treatment needs met (
+<xref ref-type="fig" rid="F_IJPH-12-2017-0061001">Figure 1</xref>
+(b)); however, others did not receive the OST they requested or found that doses were frequently inconsistent with those received in prison or restricted to 1–3 days following their release. In some cases, no provision was made for continuity of OST after the individual’s release from detention; any disruption to treatment provision frequently resulted in relapse and a return to illicit opioid use.
+</p>
+<p>
+Key themes from this research showed that the quality of OST provision is broadly inconsistent across the prison system and is not uniformly coordinated with community provision or with the needs of every individual receiving the service. Sometimes prison OST is appropriate for arriving inmates, and is readily available – sometimes more so than out in the community. At other times, those arriving in prison are given a lower dose of OST medication than they had been receiving, or a different medication altogether, for no obvious reason, without checks conducted for their medical or psychosocial profiles. For administrative reasons, these inappropriate dosage regimens are sometimes difficult to modify. Inmates who happen to arrive after hours can have long delays in treatment, or may not receive treatment at all, facing possible withdrawal symptoms.
+</p>
+<p>
+Such findings contravene current government guidelines; uninterrupted treatment in custody, integrated with psychosocial care, and with clear plans for what happens on release are mainstays of the prison recommendations within the “Orange Book” (
+<xref rid="ref047" ref-type="bibr">Independent Expert Working Group, 2017</xref>
+).
+</p>
+<p>
+In the online survey, satisfaction with OST provision was graded as “terrible”, “poor”, “good” or “excellent”. The overall survey results showed that this experience was evenly split, with 48 per cent of respondents giving an experience of “terrible/poor” and 49 per cent stating “good/excellent” (
+<xref rid="ref043" ref-type="bibr">Webster, 2017</xref>
+).
+</p>
+<p>
+The findings from this survey were discussed in a focus group with experts by experience (individuals with recent experience of OST in prison). These focus group members suggested a number of key improvements including: increasing the available support for prisoners requiring OST; reducing the availability of illicit drugs, especially new psychoactive substances; providing dedicated recovery wings in prisons for those with opioid dependence; and increasing the continuity of care during the transition between prison and re-integration into the community healthcare system after release.
+</p>
+</sec>
+<sec id="sec002">
+<title>
+Exploring existing models of OST provision in prisons: what does “good” provision look like?
+</title>
+<p>
+An expert group consisting of individuals with extensive experience of OST in prisons from a range of perspectives (clinicians, psychosocial care providers, prison inspectors, researchers and service user representatives) was convened to develop an authoritative assessment of current practices and to make recommendations for improving OST service delivery. Details of the members of this expert group are provided at the beginning of this paper.
+</p>
+<p>
+Following the findings of the
+<xref rid="ref043" ref-type="bibr">Webster Survey (2017)</xref>
+, the group was asked to answer the following questions:
+<list list-type="bullet" id="list2">
+<list-item>
+<p>
+What is the availability of OST in prisons currently?
+</p>
+</list-item>
+<list-item>
+<p>How efficient is the OST service generally?</p>
+</list-item>
+<list-item>
+<p>
+What are the recent trends in prison OST provision?
+</p>
+</list-item>
+<list-item>
+<p>
+What is the extent of user/prisoner choice around substance, maintenance or withdrawal, and dose?
+</p>
+</list-item>
+<list-item>
+<p>
+What are the practicalities in terms of choice and diversion of medication?
+</p>
+</list-item>
+<list-item>
+<p>What are the challenges facing OST programmes?</p>
+</list-item>
+<list-item>
+<p>
+What are the important features of best practice in OST provision?
+</p>
+</list-item>
+</list>
+</p>
+<p>
+Answers were gathered by the group Chair after moderated discussion, and sorted into a consensus of current landscape observations in prison OST provision in the UK, and into recommendations for potential improvements.
+</p>
+<p>
+Recent positive examples of best practice in the delivery of OST in a prison setting were examined. Where an overall priority was given to addressing drug use and treatment in prisons, OST treatment provision was optimised by the creation of separate recovery wings for those on OST and those not receiving substitute treatment. Once effective OST provision was in place, further steps could then be taken to address the reduction of harm, supply and demand, leading to increased benefits throughout the prisons and ultimately contributing to making the prison environment a safer place for all prisoners and staff.
+</p>
+<p>
+An example of this effective approach cited by several expert group members was operative at a UK prison (the prison) between 2011 and 2013 (see the later section). The success of this approach was attributed to strong leadership by the prison governor, who positively influenced the entire prison staff, who were, in turn, supportive of prioritising treatment for drug addiction as a means of making improvements throughout the prison as a whole.
+</p>
+<p>
+Undertaking such an approach requires a general culture change to ensure that prisoners requiring OST are not effectively punished by having their medication denied or delayed and where inadequacies in the provision of OST are recognised and addressed. The advantage of having a supportive prison governor to champion good OST provision is that they demonstrate what good practice looks like so the OST regimen can be driven and aligned to this view. In addition, the integration of best practice within the whole prison is essential to allow an overall understanding of the individual’s needs (e.g. why extra time with a counsellor or pain clinic may be required).
+</p>
+<p>
+Tellingly, practice at the prison was considered to have deteriorated following the promotion and transfer of the governor who had led this approach of prioritising effective OST.
+</p>
+<p>
+It is equally important to acknowledge what bad practice looks like and that there is a need to challenge any attitudes among prison staff that are contrary to the desire to avoid all unnecessary drug-related deaths and harms. All prison staff should be required to align with the message that recovery from problematic drug use is an achievable goal for many and that help is available to reduce harm in the meantime. Increasing the recovery rates from drug addiction is a key step towards addressing bad practice.
+</p>
+</sec>
+<sec id="sec003">
+<title>
+New treatments and regimens for improved OST provision in prison
+</title>
+<p>
+The expert group shared the view that one of the key factors affecting the lack of patient choice around OST medications was the concern that opiate substitutes (and other medications prescribed in prison) were routinely diverted and sold illicitly to other prisoners. Recommendations for improvements in OST provision were put forward in full knowledge of the importance of minimising the diversion of OST medication.
+</p>
+<p>
+One suggestion for improving OST administration in prison may be alternate-day dosing, simply to reduce the queues for supervised self-administration of substitute medications. Some within the expert group questioned the practicality of this approach in the prison setting however, noting that introducing such changes would require a rigorous system to avoid any mistakes with dosing.
+</p>
+<p>
+Alternate-day dosing has been found to be efficient (
+<xref rid="ref026" ref-type="bibr">
+Magura
+<italic>et al.</italic>
+, 2009
+</xref>
+), halving the number of times a patient needs to stand in a queue. Medically, it is perfectly sound. Buprenorphine can be given on alternate days in higher doses and it requires a shorter drug-free period than methadone before induction with naltrexone for prevention of relapse (
+<xref rid="ref006" ref-type="bibr">British National Formulary, 2018</xref>
+). There is some evidence that alternate-day treatment using multiples of the daily doses may yield better outcomes than daily dosing (
+<xref rid="ref001" ref-type="bibr">
+Amass
+<italic>et al.</italic>
+, 2000
+</xref>
+). It “may suit some patients”, in the language of the Orange Book (
+<xref rid="ref047" ref-type="bibr">Independent Expert Working Group, 2017</xref>
+). According to a study in 1998, patients overwhelmingly prefer it (
+<xref rid="ref002" ref-type="bibr">
+Amass
+<italic>et al.</italic>
+, 1998
+</xref>
+). There is a shortage of literature on any operational drawbacks to alternate-day administration that may exist. The
+<xref rid="ref012" ref-type="bibr">Department of Health’s (2006)</xref>
+“Clinical management of drug dependence in the adult prison setting” simply made no comment on it.
+</p>
+<p>
+Prisons and other closed facilities create opportunities for transmission of infectious diseases, particularly HIV and viral hepatitis, both during detention and after release (
+<xref rid="ref046" ref-type="bibr">
+Wirtz
+<italic>et al.</italic>
+, 2018
+</xref>
+;
+<xref rid="ref030" ref-type="bibr">Peate, 2011</xref>
+). A recent eight-year study in Australia showed that, upon entry to prison, injecting drug use decreased but syringe sharing increased among injectors. Younger individuals are most likely to exhibit high-risk injecting behaviours while in prison (
+<xref rid="ref010" ref-type="bibr">
+Cunningham
+<italic>et al.</italic>
+, 2018
+</xref>
+).
+</p>
+<p>
+Thus, there is a disproportionate impact of HIV and hepatitis C (HCV) on prisoners worldwide (
+<xref rid="ref034" ref-type="bibr">Sander and Murphy, 2017</xref>
+). Current estimates suggest that 15 per cent of all prisoners worldwide are chronically infected with HCV, and this number is even higher in regions with high rates of injecting drug use (
+<xref rid="ref003" ref-type="bibr">
+Bielen
+<italic>et al.</italic>
+, 2018
+</xref>
+). Sharing of injecting drug equipment in prisons has undeniably contributed to higher prevalence of blood-borne diseases in prisoners than in the general population.
+</p>
+<p>
+Prevention programmes specific to key populations are important, particularly for populations that are criminalised and/or may cycle in and out of prison (
+<xref rid="ref046" ref-type="bibr">
+Wirtz
+<italic>et al.</italic>
+, 2018
+</xref>
+). Surprisingly few exist (
+<xref rid="ref024" ref-type="bibr">
+Lazarus
+<italic>et al.</italic>
+, 2018
+</xref>
+). More research is needed on exactly how effective harm-reduction programmes are (
+<xref rid="ref024" ref-type="bibr">
+Lazarus
+<italic>et al.</italic>
+, 2018
+</xref>
+). Reductions can be modest and require long-term sustained intervention coverage (
+<xref rid="ref042" ref-type="bibr">
+Vickerman
+<italic>et al.</italic>
+, 2012
+</xref>
+), but there is good evidence for the effectiveness of OST as a form of harm-reduction intervention, because it reduces injecting risk behaviour. OST is associated with a reduction in the risk of both HIV and HCV acquisition (
+<xref rid="ref031" ref-type="bibr">
+Platt
+<italic>et al.</italic>
+, 2017
+</xref>
+).
+</p>
+<p>
+In addition, in a supportive environment, prison can represent a “teachable moment” for individuals who feel able to follow a detoxification programme with support from within the prison prior to release. At present, if an individual’s initial efforts to detox are unsuccessful, re-initiation onto methadone prior to release is frequently seen. This represents a negative step for the individual, which could jeopardise their efforts to detox in the future.
+</p>
+<p>
+The current administration of OST in prisons typically involves long waiting times and queues, as well as considerable prison officer resources to supervise the consumption of substitute medications and to ensure that oral doses are taken as intended and not diverted for sale and misuse within the prison. The new formulations of controlled drugs were considered by expert group members to be positive developments that will help ensure that OST administration is as streamlined and efficient as possible. This includes the fast-dissolving wafer formulation of buprenorphine (Espranor), which has recently been approved for use across the NHS in the UK. There are other novel formulations of buprenorphine currently under review by the regulatory authorities, including long-acting depot-style injections and an implant that may prove beneficial in preventing the diversion and misuse of buprenorphine-based OST medications in prison (
+<xref rid="ref004" ref-type="bibr">
+Bi-Mohammed
+<italic>et al.</italic>
+, 2017
+</xref>
+). Liquid formulations of other drugs commonly prescribed alongside opiate substitutes, such as gabapentin and diazepam have also been recently developed (
+<xref rid="ref303" ref-type="bibr">
+Gabapentin Summary of Product Characteristics, 2019
+</xref>
+;
+<xref rid="ref302" ref-type="bibr">Diazepam Summary of Product Characteristics, 2018</xref>
+).
+</p>
+</sec>
+<sec id="sec004">
+<title>
+Case study: an effective prison drug-treatment strategy
+</title>
+<p>
+This case study highlights an effective approach to tackling drugs employed at the prison between 2011 and 2013. The write-up of the experience at the prison has been developed based on the experiences of expert group members and the report from an unannounced inspection by the
+<xref rid="ref020" ref-type="bibr">HM Chief Inspector of Prisons (2013)</xref>
+.
+</p>
+<p>
+The key characteristic of the approach at the prison was the governor’s prioritisation of tackling drugs, with an emphasis on providing excellent treatment as well as reducing supply. A whole-prison approach was taken, which was underpinned by a belief in the importance of staff–prisoner relations. This was identified by the prison inspectors:
+<disp-quote>
+<p>
+At the heart of the prison’s success were very good staff–prisoner relationships, which were among the best we have seen in a local prison. Most prisoners told us they were treated with respect, and this was reflected both in the individual interactions we observed and well-developed consultation arrangements.
+</p>
+<attrib>
+(
+<xref rid="ref020" ref-type="bibr">HM Chief Inspector of Prisons, 2013</xref>
+)
+</attrib>
+</disp-quote>
+</p>
+<p>
+The inspectors noted that the prison was characterised by “a generally safe and respectful environment [which] created the conditions in which prisoners could have a very good amount of time out of cell” (
+<xref rid="ref020" ref-type="bibr">HM Chief Inspector of Prisons, 2013</xref>
+). This, in turn, helped to create a virtuous circle of continuous improvement:
+<disp-quote>
+<p>
+Because the prison was generally safe, prisoners could spend a lot of time out of their cell. Prisoners used this opportunity to take part in activities likely to reduce the risk they would reoffend. Because prisoners felt they were making progress, that helped make the prison safer and relationships more relaxed.
+</p>
+<attrib>
+(
+<xref rid="ref020" ref-type="bibr">HM Chief Inspector of Prisons, 2013</xref>
+)
+</attrib>
+</disp-quote>
+</p>
+<p>
+A comprehensive treatment programme was put in place for all prisoners with substance-use problems (including alcohol), a staged approach that began with their reception in prison. Prisoners were steered through detoxification or maintenance treatment in the recovery unit (D wing) and into intensive support and group work in the post-recovery unit (E wing). The inspectors highlighted the high-quality supervision and support provided by the uniformed officers in both of these wings and noted that they had received specific extra training on substance misuse.
+</p>
+<p>
+Clinical reviews of prisoners were led by a GP specialising in substance use, and involved Integrated Drug Treatment System (IDTS) nurses and Counselling, Assessment, Referral, Advice and Throughcare (CARAT) workers. Prisoners typically stayed in the recovery unit for six weeks, where they had access to regular one-to-one support, IDTS psychosocial group work, Narcotics Anonymous and Alcoholics Anonymous (AA) groups and a good range of clinics and classes. The recovery unit also provided peer support from prisoner “recovery champions”. Similar provisions were available in the post-recovery unit, with the addition of a Self-Management and Recovery Training recovery programme for addictive behaviours. Throughout the process, prisoners who failed mandatory drug testing were subject to special support reviews. Psychosocial support was available throughout the prison.
+</p>
+<p>
+At the time of the inspection, there were 218 prisoners receiving opiate substitution treatment, of whom 80 were on reducing detoxification doses. The emphasis on dose reduction was assessed by inspectors as “impressive” and “largely well-received by prisoners” (
+<xref rid="ref020" ref-type="bibr">HM Chief Inspector of Prisons, 2013</xref>
+). Alcohol treatment was also integrated into the recovery-centred approach, with access to detoxification, one-to-one sessions with CARAT staff, AA and group work, including a special compulsive binge-drinkers’ group.
+</p>
+<p>
+The success of the prison’s approach was particularly noteworthy because it was delivered in a prison that:
+<disp-quote>
+<p>
+[…] had a notorious reputation for violence and brutality. At the time of the inspection it faced many of the typical challenges of a large, Victorian, inner-city local prison: it was chronically overcrowded, the physical condition of some parts of the prison was poor, and it held a challenging and needy population.
+</p>
+<attrib>
+(
+<xref rid="ref020" ref-type="bibr">HM Chief Inspector of Prisons, 2013</xref>
+)
+</attrib>
+</disp-quote>
+</p>
+<p>
+The inspectors also noted that there remained work to do, and that – although impressive – the improvements were fragile. This assessment proved prophetic, because progress quickly stalled, at least partly because of the transfer of the governor. An
+<xref rid="ref022" ref-type="bibr">Independent Monitoring Boards (2017)</xref>
+report stated that drug use at the prison was unacceptably high.
+</p>
+</sec>
+<sec id="sec005">
+<title>
+Improved management strategies for OST provision in prisons
+</title>
+<sec id="sec005.1">
+<title>OST initiation</title>
+<p>
+An effective OST strategy requires clear expectations of what the affected individual is to receive when entering prison, during detention and on release. From the perspective of the prison, the completion of a full needs assessment for addiction services was found to be rarely carried out either by commissioners or providers. From the perspective of prisoners, entering the prison system can be a confusing time when a large amount of information is expected to be absorbed. Such conditions are not always conducive to effective decision making regarding the correct OST prescription.
+</p>
+<p>
+Despite the Orange Book stating the broad expectations for treatment in prisons (
+<xref rid="ref047" ref-type="bibr">Independent Expert Working Group, 2017</xref>
+), currently individuals cannot rely on their OST continuing while in prison. There is a need to streamline the transition into custody so that prisoners can be confident of receiving continued OST at the correct dose and understand the different regimens for detoxification or maintenance treatment so that an informed choice can be made regarding their treatment. It is important for prison services to realise that dependent opioid users being received into treatment in prison may already be experiencing withdrawal symptoms and may be preoccupied by the need to secure any form of OST; they may not be in an appropriately secure emotional state to discuss their medium- to long-term needs and wishes.
+</p>
+<p>
+The expert group suggested that there would be considerable value in the prison service co-producing, with drug user and prisoner groups, a short national statement of basic rights for opioid-dependent prisoners in terms of what OST options will be available in prison with an emphasis on ensuring informed patient consent to different treatment regimens. It was envisaged that this statement could be displayed in the prison reception and healthcare areas.
+</p>
+<p>
+It is also important to ensure that the correct OST dose is provided in a timely manner to avoid withdrawal symptoms that would compromise the individual’s ongoing care. Owing to the large numbers of people entering prison with OST needs, an initial goal of stabilising on methadone or buprenorphine should be set, after which they should be assessed to determine whether maintenance or reduction treatment is more appropriate, with flexibility being provided for prisoner involvement in relation to their preferred choice of dosage and treatment type.
+</p>
+</sec>
+<sec id="sec005.2">
+<title>Transition from prison to community OST provision</title>
+<p>
+Similar consideration needs to be given to continuity of treatment for those leaving prison and re-integrating into community healthcare. This is a moment of great vulnerability for the addict who is trying to recover, a period characterised by the Orange Book as “high risk” (
+<xref rid="ref047" ref-type="bibr">Independent Expert Working Group, 2017</xref>
+). The current (positive) practice of moving people towards the end of their sentence to a prison located nearer their home often results in disruption to their OST. There is a need for ongoing assessment at all times throughout a prison stay to ensure continuity of treatment and that the correct OST regimen for maintenance or detoxification is prescribed during this transition, with the full informed consent of the patient.
+</p>
+<p>
+Hand-in-hand with this is the importance of developing protocols and procedures to ensure that the OST provided in prison is adopted seamlessly by community healthcare providers to preserve the continuity of treatment after release. On this, the Orange Book is adamant, throughout Chapter 5, calling for professionals involved in rehabilitating prisoners “to establish effective working relationships and open channels of communication with substance misuse providers and healthcare staff in custody and in the community to ensure that treatment requirements and conditions are met and that continuity of care arrangements are supported” (
+<xref rid="ref047" ref-type="bibr">Independent Expert Working Group, 2017</xref>
+; for the USA, see
+<xref rid="ref029" ref-type="bibr">
+Patel
+<italic>et al.</italic>
+, 2014
+</xref>
+). This clearly necessitates communication between OST providers, probation services and housing provision services upon the individual’s release, to avoid any delays in receiving OST due to errors in assigning an address and difficulties with housing arrangements. It is acknowledged that prisoners are often not released to secure accommodation and that care needs to be taken to ensure that community prescribing arrangements are compatible with both the individual’s immediate housing situation on release and any likely changes in the short to medium term.
+</p>
+<p>
+The timing of release also needs to be taken into consideration to avoid gaps in treatment which may occur following a Friday release when prescriptions may not be filled until the following Monday (
+<xref rid="ref047" ref-type="bibr">Independent Expert Working Group, 2017</xref>
+). Care arrangements need to be coordinated so that housing provision, OST and psychosocial support are not disrupted on the individual’s release from the prison. There are benefits to the wider community in terms of crime reduction following a positive experience of leaving prison, with the individual’s needs for OST provision having been addressed as part of a coordinated release process.
+</p>
+<p>
+In the community primary care setting, the FP10 prescription system aims to ensure that prescriptions are made available to prison healthcare services so that a seamless transfer of prescribing care is made between prisons and the community upon release of inmates. A prescription is provided on prisoner release, often for several doses of OST, but for not more than one to three days’ duration. This system is not currently in universal use and, in the absence of any published feasibility studies, the authors feel it should remain this way. Managing several doses for the transition out of prison would need coordination in relation to home visits to ensure the safe storage of medication within the home, for reasons of child protection. Access to prescribing services in the community can be difficult to organise, particularly if a newly released prisoner misses an initial appointment, but the consideration of a right to emergency access should be made in the interest of the individual’s health and crime reduction in the community. The prisoner’s physician records should be checked in advance of release to ensure that the individual has confirmed access to primary care on release.
+</p>
+<p>
+Another key element of release planning is the provision of advice and information about the increased risk of death from overdose that comes from reduced opioid tolerance (including the provision of relevant information to the individual’s family and friends) and the routine provision of naloxone, which rapidly reverses the effects of heroin or methadone – the most lethal of which being the way they cause respiratory depression, the factor most closely associated with death by overdose. The expert group’s experience was that the availability of naloxone for released prisoners varied considerably between different prisons in England and Wales.
+</p>
+<p>
+The period following release from prison is a time of extraordinarily high mortality (
+<xref rid="ref040" ref-type="bibr">
+Strang
+<italic>et al.</italic>
+, 2013
+</xref>
+). In Scotland, the provision of overdose-prevention training and the supply of take-home naloxone kits to people on release from prison has been established as part of a nationally funded programme (the first in the world) since 2011. In this time, 12,000 kits have been issued from prisons across Scotland. A recently published evaluation of this programme demonstrated a 36 per cent reduction in opioid-related deaths in the four weeks following release from prison (
+<xref rid="ref005" ref-type="bibr">
+Bird
+<italic>et al.</italic>
+, 2016
+</xref>
+;
+<xref rid="ref039" ref-type="bibr">
+Strang
+<italic>et al.</italic>
+, 2014
+</xref>
+). Worldwide, take-home naloxone has been available for 20 years now (
+<xref rid="ref025" ref-type="bibr">
+McDonald
+<italic>et al.</italic>
+, 2017
+</xref>
+;
+<xref rid="ref013" ref-type="bibr">
+Dettmer
+<italic>et al.</italic>
+, 2001
+</xref>
+). Provision for its use has widened, with public buy-in (
+<xref rid="ref025" ref-type="bibr">
+McDonald
+<italic>et al.</italic>
+, 2017
+</xref>
+). It needs to be widened even more, as the death toll due to overdosing continues to rise (
+<xref rid="ref025" ref-type="bibr">
+McDonald
+<italic>et al.</italic>
+, 2017
+</xref>
+). The logistics of this are currently under investigation in the UK (
+<xref rid="ref027" ref-type="bibr">
+Meade
+<italic>et al.</italic>
+, 2018
+</xref>
+).
+</p>
+<p>
+There is much left to learn, and study should continue. It is now established that prison-based substitution therapy reduces drug use and injection in penal institutions and brings down drugs charges and re-admission rates (
+<xref rid="ref037" ref-type="bibr">Stallwitz and Stöver, 2007</xref>
+). This is as true for women offenders as for men (
+<xref rid="ref015" ref-type="bibr">
+Farrell-MacDonald
+<italic>et al.</italic>
+, 2014
+</xref>
+). The numbers are not always enormous. In one recent study, by way of example, within 12 months of release from prison, 58 per cent of heroin users who did not receive OST had been re-incarcerated, compared with 41 per cent of those who did receive OST (
+<xref rid="ref038" ref-type="bibr">Stöver and Michels, 2010</xref>
+).The effectiveness of methadone therapy measured in terms of treatment retention and recidivism varies from study to study, from as little as 20 per cent to as much as 70 per cent (
+<xref rid="ref009" ref-type="bibr">Crnić, 2017</xref>
+; for the methodological difficulties in conducting studies in prison settings, see
+<xref rid="ref011" ref-type="bibr">
+de Andrade
+<italic>et al.</italic>
+, 2018
+</xref>
+). Numerous clinical studies are now investigating the reasons for its effectiveness, both on the underlying clinical symptoms of addiction and on social and health implications. Interestingly, being allowed to continue in prison an OST regimen begun before arrest may also have a beneficial effect on eventual recidivism rates (
+<xref rid="ref044" ref-type="bibr">
+Westerberg
+<italic>et al.</italic>
+, 2016
+</xref>
+). Length of care and consistency, whatever else is true, do appear critical (
+<xref rid="ref044" ref-type="bibr">
+Westerberg
+<italic>et al.</italic>
+, 2016
+</xref>
+).
+</p>
+</sec>
+<sec id="sec005.3">
+<title>
+Integrating clinical and psychosocial care in prisons
+</title>
+<p>
+In order for OST provision to improve, the expert group shared the view that an integrated approach that addresses all aspects of healthcare during detention is needed (
+<xref rid="ref033" ref-type="bibr">
+Sander
+<italic>et al.</italic>
+, 2016
+</xref>
+). To achieve this, integration between clinical and psychosocial care is essential. Often these services are commissioned separately; where this is the case, it is important that all drug-treatment staff are co-located so that the same account of patient needs is heard by all members of the care team and a coordinated treatment/care plan can be implemented and managed.
+</p>
+<p>
+Currently, it is not unusual for a named drug worker to be assigned to a prisoner entering prison. However, in some cases, a named clinical nurse is also available to allow the development of a joint care plan. This care plan should then be reviewed with the full care team present so that the patient’s clinical and psychosocial care can be assessed and ongoing plans can be formulated involving all the relevant aspects of an individual’s care. Such integrated care would allow the prisoner a clearer view of their treatment as a whole and enable them to make better-informed decisions regarding their future care.
+</p>
+<p>
+Making decisions without such information may fuel the prescription of higher-than-needed maintenance doses of methadone as clinical staff have insufficient information regarding the psychosocial welfare of the service user; higher doses are then justified as there is a lack of psychological support for those on lower or reducing doses of OST. A good care model for OST would have clinical and psychosocial care fully integrated to instil confidence that all aspects of care are being covered. It is envisaged that this would also include care plans for additional health issues, such as general self-care and management of smoking cessation, together with the integration of social services with OST provision within the prison setting.
+</p>
+</sec>
+</sec>
+<sec id="sec006">
+<title>
+Diverse prison populations need tailored provision of OST
+</title>
+<p>
+Optimising the care model for provision of OST in prison will need to take into account several diverse patient populations. Recent policy directives within the Scottish Prison Service point out that many health promotion activities target the general prison population and may not address the needs of minority groups. The framework argues the importance of using an impact assessment (such as the “Health Inequalities Impact Assessment”) on all new prison policies “to understand the impact on health and wellbeing on all prisoners but especially of the minority groups”. The Service defines minority groups to include (among others) older prisoners, prisoners with any kind of disability, women and prisoners of minority ethnic origin (
+<xref rid="ref035" ref-type="bibr">Scottish Prison Service, 2014</xref>
+). Brigadier Hugh Monro, HM Chief Inspector of Prisons for Scotland, stated that although much has improved in prison buildings in recent years, rehabilitation is still a major issue. He says there needs to be a strategic shift in the way prisoners are rehabilitated, particularly women prisoners, who are simply not being given enough to do during the day, especially with regard to work and education opportunities (
+<xref rid="ref019" ref-type="bibr">HM Chief Inspector of Prisons, 2012–2013</xref>
+). Occasional initiatives in the UK, sometimes outside the realms of work and education, show promise of enriching inmates’ lives and making them more amenable to rehabilitation. One such is the “Good Vibrations” arts project for older offenders, whose result was perceptible increase in insight and reflection in individual prisoners and a stronger cohesion in groups of prisoners (
+<xref rid="ref045" ref-type="bibr">Wilkinson and Caulfield, 2017</xref>
+). Broadly speaking, though, sustained and successful efforts at meaningful rehabilitation strategies are difficult to find. It is within this reality that policies for provision of OST reside.
+</p>
+<sec id="sec006.1">
+<title>The older offender</title>
+<p>
+There is an increasing population of ageing incarcerated drug users (
+<xref rid="ref032" ref-type="bibr">PPO, 2017</xref>
+), with additional comorbidities, poly drug use and general additional health issues that affect their OST needs. Psychological disorders vary with age (
+<xref rid="ref028" ref-type="bibr">
+O’Hara
+<italic>et al.</italic>
+, 2016
+</xref>
+). Some severe functional impairment has been shown to decrease as opioid maintenance age increases, but depression is routinely higher in older people (
+<xref rid="ref028" ref-type="bibr">
+O’Hara
+<italic>et al.</italic>
+, 2016
+</xref>
+). In addition, somatic comorbidity, particularly the incidence of liver disease, also increases with age. Social isolation and the despair over reconnecting with family after years of neglect are other documentable features of older patients in recovery (
+<xref rid="ref018" ref-type="bibr">Gaulen, 2017</xref>
+). Indeed, many of the older population can be expected to have very poor social networks. Factors like these underline the need for coordinated care within prisons and the need for continued, consistent care in the community healthcare system following release. However, care has not been forthcoming. In the past eight years, the Prison Reform Trust has found that the majority of prisons have nothing specific in place to support the resettlement needs of older people, and that older people feel that planning for their release is inadequate. The government introduced radical changes to support people on release from prison with the Care Act 2014, with its wide-ranging implications for the care of older people (
+<xref rid="ref008" ref-type="bibr">
+Cornish
+<italic>et al.</italic>
+, 2016
+</xref>
+). It remains to be seen what effect this will have.
+</p>
+</sec>
+<sec id="sec006.2">
+<title>The mentally ill</title>
+<p>
+In a survey of psychiatric morbidity in prisons in England and Wales, 97 per cent of sentenced drug-dependent men had at least one co-occurring mental health condition and 77 per cent had at least two such conditions (
+<xref rid="ref036" ref-type="bibr">
+Singleton
+<italic>et al.</italic>
+, 1999
+</xref>
+). Hence, there is likely to be a widespread occurrence of prisoners requiring treatment for both their opiate use and for their mental health concerns. The clearer coordination of treatment and any relevant treatment sequencing is needed to avoid individuals in prison being sent back and forth between mental health support and OST supervision, with each requiring the other to be addressed first. Ongoing care for the ill after release has been limited. Despite this, it has been shown in trials that opiate substitution treatments reduce substance misuse relapse and possibly reoffending (
+<xref rid="ref016" ref-type="bibr">
+Fazel
+<italic>et al.</italic>
+, 2016
+</xref>
+).
+</p>
+</sec>
+<sec id="sec006.3">
+<title>Women</title>
+<p>
+Women in prison present with unique requirements for OST. Data suggest that incarcerated women are more likely than men to inject opioids, are more likely to be addicted to multiple substances and are at an increased risk of post-release overdose. They have higher rates of psychiatric comorbidities than men or non-incarcerated women and are more likely than men to have chronic or communicable diseases (including HIV and HCV). Women offenders have higher rates of trauma and are more likely than men to be victims of staff misconduct while incarcerated. Nearly two-thirds of women in prison have dependent children at home. They are less likely than men to commit violent crimes, but more likely to commit other drug-related offences (
+<xref rid="ref014" ref-type="bibr">Evans, 2015</xref>
+). These realities align with women’s existing, often complex physical and mental health concerns, and additional considerations need to be taken into account if there are children in their care or in the care of local services. The coordination between prison and community services is especially important where assessments may be needed of the women’s home environments if OST medication is to be stored within the home and children may be present. Unfortunately, the evidence remains slim that the introduction of women-specific policies and support programmes has had a great impact on womens’ post-release success (
+<xref rid="ref007" ref-type="bibr">Carlton and Segrave, 2016</xref>
+).
+</p>
+</sec>
+<sec id="sec006.4">
+<title>Ethnic and cultural minority populations</title>
+<p>
+Similarly, improvements in cultural competence in the provision of addiction treatment within the British Black, Asian and minority ethnic population are needed; the survey conducted for this paper (
+<xref rid="ref043" ref-type="bibr">Webster, 2017</xref>
+) reported that people in this patient population find OST harder to access although treatment provision should strive for consistency for all individuals in every setting. The Orange Book does encourage particular consideration of minority ethnic groups in treatment, to deliver OST in culturally sensitive ways wherever possible (
+<xref rid="ref047" ref-type="bibr">Independent Expert Working Group, 2017</xref>
+). Research into how well this is being done is only beginning. Likewise, studies on institutional provision for after-prison care that is specifically for minorities are hard to find. One study noted the considerable difficulty implementing a service: a methadone maintenance programme in an indigenous community in Canada had difficulty in uptake because the intervention was misunderstood at first and stigmatised (
+<xref rid="ref023" ref-type="bibr">
+Landry
+<italic>et al.</italic>
+, 2016
+</xref>
+).
+</p>
+</sec>
+</sec>
+<sec id="sec007">
+<title>
+Educational needs for healthcare providers and administration of OST
+</title>
+<p>
+Many GPs lack experience with the administration of OST within the prison environment and the expert group advocated the provision of a key drug worker for GPs (analogous to the “shared care” model prevalent in the community) to be a source of reliable information when they are unsure of any specialised knowledge about opioid use, misuse or treatment.
+</p>
+<p>
+Aligned with this is the assessment of the availability of drugs within a particular prison. The examination of specific local markets may give very different pictures (including from both the dispensing and service-user perspectives); assessment should focus on which drugs are available and the extent of the diversion of OST medications within a particular prison. It is clear from feedback that these drug markets can change very quickly in relation to supply and demand and the desire to use more in prison due to the circumstances of incarceration. Prison drug markets have recently been complicated by the availability of large amounts of different new psychoactive substances (
+<xref rid="ref041" ref-type="bibr">User Voice, 2016</xref>
+).
+</p>
+<p>
+The expert group also agreed that introducing more structured days and more purposeful activities for prison inmates would offset the inherent boredom and long queues for treatment administration, resulting in greater adherence and compliance with OST regimens. Aligned with this is the lack of OST integration within the prisons’ wider healthcare services – it is suggested that by working more closely together, integrated healthcare services, including those given by visiting GPs, would help improve engagement with OST provision overall. However, it was noted that at present there is some tension between clinicians dealing with the administration of treatment for OST and those dealing with the rest of prison healthcare.
+</p>
+</sec>
+<sec id="sec008">
+<title>Summary</title>
+<p>
+Barriers to effective management of OST in prisons have recently been identified (
+<xref rid="ref047" ref-type="bibr">Independent Expert Working Group, 2017</xref>
+). These barriers include a lack of coordination of care between healthcare providers in prison, resulting in the disrupted management of addiction. The integration of clinical and psychosocial care in prisons would enable a joint care plan for each individual with opioid dependence to be developed and modified as required.
+</p>
+<p>
+Improvements in the overall coordination of OST administration would facilitate the inclusion of strategies to further streamline this process for the benefit of individuals in prison and prison staff alike. Improvements would include clearer information being made available for opioid-dependent individuals about the range of OST medications available and whether these are prescribed on a maintenance or reduction basis. Further study is needed into the viability and desirability of alternate-day dosing for supervised self-administration of OST medications.
+</p>
+<p>
+Prioritising effective management strategies for drug addiction in prisons and championing by senior prison managers would foster a more supportive environment for the successful delivery of maintenance or detoxification OST as needed.
+</p>
+<p>
+Training prison inmates with experience of OST to provide peer support and advocacy to individuals seeking OST on their reception into prison is an initiative that was also recommended for further exploration by the expert group.
+</p>
+<p>
+The expert group was convened before the publication of the 2017
+<italic>Drug Strategy</italic>
+(
+<xref rid="ref021" ref-type="bibr">HM Government, 2017</xref>
+). That strategy sets out a number of key actions to address drug use in prison that are consonant with the recommendations in this paper, including:
+<list list-type="bullet" id="list3">
+<list-item>
+<p>
+governors working in partnership with health commissioners to co-commission integrated and patient-focussed drug treatment programmes;
+</p>
+</list-item>
+<list-item>
+<p>
+improving continuity of care with community services;
+</p>
+</list-item>
+<list-item>
+<p>
+reassessing the substance misuse treatment pathway for prisoners and how these services, including peer support, meet the treatment and recovery needs of offenders;
+</p>
+</list-item>
+<list-item>
+<p>
+more highly trained prison officers playing a bigger role in the provision of services while building more constructive and relevant relationships with offenders; and
+</p>
+</list-item>
+<list-item>
+<p>
+developing options to address the misuse of prescribed medicines more effectively.
+</p>
+</list-item>
+</list>
+</p>
+<p>
+To go along with this, we propose the following expedients:
+<list list-type="bullet" id="list4">
+<list-item>
+<p>
+establish a clear OST strategy between care team and prisoner at the moment of arrival, with careful note of the individual’s specific needs;
+</p>
+</list-item>
+<list-item>
+<p>
+ensure that the OST is prompt, reliable and can be adjusted;
+</p>
+</list-item>
+<list-item>
+<p>
+establish clear protocols for transition to the community on release, with no gaps in care, and no changes, and with adequate safeguards against overdose; and
+</p>
+</list-item>
+<list-item>
+<p>
+integrate clinical and psychosocial care, using a full-team care plan that regards the prisoner as part of the team.
+</p>
+</list-item>
+</list>
+</p>
+</sec>
+</body>
+<back>
+<ack id="ack">
+<p>
+This paper was developed based on a meeting organised and funded by Martindale Pharma. Writing support was provided by Succinct Medical Communications and funded by Martindale Pharma. All drafts were fully reviewed and updated by the authors.
+</p>
+</ack>
+<bio id="bio1">
+<p>
+Farrukh Alam (MD) is Divisional Medical Director at Central a  North West London NHS Foundation Trust, London, UK. He has published widely in the field of addiction, and his current interests are in prescription opioid analgesic dependence and substance misuse in vulnerable populations.
+</p>
+</bio>
+<bio id="bio2">
+<p>
+Dr Nat Wright (MD, MBBS) is Clinical Research Director for the Transform Research Alliance at Spectrum Community Health and Honorary GP Consultant for Rotherham Doncaster and South Humber NHS Foundation Trust (RDaSH). He undertakes clinical work in both community and prison general practice and is the Primary Care Specialty Lead for the National Institute for Health Research (NIHR) Yorkshire and Humber Clinical Research Network. Dr Wright graduated from the University of Leeds and has published extensively in the area of healthcare provision for prisoners and wider vulnerable groups.
+</p>
+</bio>
+<bio id="bio3">
+<p>
+Paul Roberts is Substance Use Inspector, HM Inspectorate of Prisons, London. He has been a vital member of HM Prison Inspection teams for many years and has been involved in the development of multiple reports on the changing patterns of substance misuse in adult prisons and service responses to these changes to ensure that the most vulnerable prisoners are kept safe.
+</p>
+</bio>
+<bio id="bio4">
+<p>
+Sunny Dhadley (FRSA CMgr) is Service User Involvement Officer at the Wolverhampton Drug a  Alcohol Service User Involvement Team (SUIT). Mr Dhadley works with individuals on a one-to-one basis delivering support sessions, interventions and referrals to meet the wide range of needs of those suffering from addiction. Mr Dhadley graduated from the University of Wolverhampton and has recently completed the Executive Course on Drug Policy, Diplomacy and Global Public Health at The Graduate Institute, Geneva.
+</p>
+</bio>
+<bio id="bio5">
+<p>
+Joanne Townley is Prisons Manager at the charity Pathways to Recovery, a free and confidential drug and alcohol service for adults (including offenders), families and carers in Warrington. She has a special interest in addition, recovery, crime reduction initiatives and improving the transition between prison and the community.
+</p>
+</bio>
+<bio id="bio6">
+<p>
+Russell Webster is Independent Consultant, Researcher, Writer, Trainer and Expert in Drug Treatment and Criminal Justice. Mr Webster graduated from Cambridge University, is a trained probation officer, and has worked for a range of voluntary sector organisations with homeless people, ex-offenders and young at-risk people. Since 1996, Mr Webster has worked as an independent consultant specialising in the fields of substance misuse and crime and is the author or co-author of over thirty national publications on issues relating to drugs, alcohol and offending.
+</p>
+</bio>
+<ref-list id="refs1">
+<title>References</title>
+<ref id="ref001">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Amass</surname>
+<given-names>L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Kamien</surname>
+<given-names>J.B.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Mikulich</surname>
+<given-names>S.K.</given-names>
+</name>
+</person-group>
+(
+<year>2000</year>
+), “
+<article-title>
+Efficacy of daily and alternate-day dosing regimens with the combination buprenorphine-naloxone tablet
+</article-title>
+”,
+<source>Drug and Alcohol Dependence</source>
+, Vol.
+<volume>58</volume>
+Nos
+<issue>1-2</issue>
+, pp.
+<fpage>143</fpage>
+-
+<lpage>52</lpage>
+.
+<pub-id pub-id-type="pmid">10669065</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref002">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Amass</surname>
+<given-names>L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Bickel</surname>
+<given-names>W.K.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Crean</surname>
+<given-names>J.P.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Blake</surname>
+<given-names>J.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Higgins</surname>
+<given-names>S.T.</given-names>
+</name>
+</person-group>
+(
+<year>1998</year>
+), “
+<article-title>
+Alternate-day buprenorphine dosing is preferred to daily dosing by opioid-dependent humans
+</article-title>
+”,
+<source>Psychopharmacology</source>
+, Vol.
+<volume>136</volume>
+No.
+<issue>3</issue>
+, pp.
+<fpage>217</fpage>
+-
+<lpage>25</lpage>
+.
+<pub-id pub-id-type="pmid">9566806</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref003">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Bielen</surname>
+<given-names>R.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Stumo</surname>
+<given-names>S.R.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Halford</surname>
+<given-names>R.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Werling</surname>
+<given-names>K.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Reic</surname>
+<given-names>T.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Stöver</surname>
+<given-names>H.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Robaeys</surname>
+<given-names>G.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Lazarus</surname>
+<given-names>J.V.</given-names>
+</name>
+</person-group>
+(
+<year>2018</year>
+), “
+<article-title>
+Harm reduction and viral hepatitis C in European prisons: a cross-sectional survey of 25 countries
+</article-title>
+”,
+<source>Harm Reduction Journal</source>
+, Vol.
+<volume>15</volume>
+No.
+<issue>1</issue>
+, p.
+<fpage>25</fpage>
+, doi:
+<pub-id pub-id-type="doi">10.1186/s12954-018-0230-1</pub-id>
+.
+<pub-id pub-id-type="pmid">29751763</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref004">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Bi-Mohammed</surname>
+<given-names>Z.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Wright</surname>
+<given-names>N.M.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hearty</surname>
+<given-names>P.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>King</surname>
+<given-names>N.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Gavin</surname>
+<given-names>H.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+), “
+<article-title>
+Prescription opioid abuse in prison settings: a systematic review of prevalence, practice and treatment responses
+</article-title>
+”,
+<source>Drug and Alcohol Dependence</source>
+, Vol.
+<volume>171</volume>
+, pp.
+<fpage>122</fpage>
+-
+<lpage>31</lpage>
+.
+<pub-id pub-id-type="pmid">28086177</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref005">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Bird</surname>
+<given-names>S.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>McAuley</surname>
+<given-names>A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Perry</surname>
+<given-names>S.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Hunter</surname>
+<given-names>C.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+), “
+<article-title>
+Effectiveness of Scotland’s national naloxone programme for reducing opioid-related deaths: a before (2006–10) versus after (2011–13) comparison
+</article-title>
+”,
+<source>Addiction</source>
+, Vol.
+<volume>111</volume>
+No.
+<issue>5</issue>
+, pp.
+<fpage>883</fpage>
+-
+<lpage>91</lpage>
+, doi:
+<pub-id pub-id-type="doi">10.1111/add.13265</pub-id>
+.
+<pub-id pub-id-type="pmid">26642424</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref006">
+<mixed-citation publication-type="web">
+<person-group person-group-type="author">
+<collab>British National Formulary</collab>
+</person-group>
+(
+<year>2018</year>
+), “
+<article-title>Opioid substitution therapy</article-title>
+”,
+<comment>available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="https://bnf.nice.org.uk/treatment-summary/substance-dependence.html">
+https://bnf.nice.org.uk/treatment-summary/substance-dependence.html
+</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref007">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Carlton</surname>
+<given-names>B.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Segrave</surname>
+<given-names>M.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+), “
+<article-title>
+Rethinking women’s post-release reintegration and ‘success’
+</article-title>
+”,
+<source>Australian a  New Zealand Journal of Criminology</source>
+, Vol.
+<volume>49</volume>
+No.
+<issue>2</issue>
+, pp.
+<fpage>281</fpage>
+-
+<lpage>99</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="ref008">
+<mixed-citation publication-type="web">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Cornish</surname>
+<given-names>N.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Edgar</surname>
+<given-names>K.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hewson</surname>
+<given-names>A.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Ware</surname>
+<given-names>S.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+), “
+<article-title>
+Social care or systematic neglect? older people on release from prison: Prison Reform Trust
+</article-title>
+”,
+<comment>available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="http://www.prisonreformtrust.org.uk/Portals/0/Documents/Older-prisoner-resettlement.pdf">
+www.prisonreformtrust.org.uk/Portals/0/Documents/Older-prisoner-resettlement.pdf
+</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref009">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Crnić</surname>
+<given-names>K.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+), “
+<article-title>
+Recidivism with opiate addicted patients on buprenorphine substitution treatment: case report
+</article-title>
+”,
+<source>Hospital Pharmacology</source>
+, Vol.
+<volume>4</volume>
+No.
+<issue>2</issue>
+, pp.
+<fpage>533</fpage>
+-
+<lpage>41</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="ref010">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Cunningham</surname>
+<given-names>E.B.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hajarizadeh</surname>
+<given-names>B.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Amin</surname>
+<given-names>J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Bretana</surname>
+<given-names>N.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Dore</surname>
+<given-names>G.J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Degenhardt</surname>
+<given-names>L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Larney</surname>
+<given-names>S.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Luciani</surname>
+<given-names>F.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Lloyd</surname>
+<given-names>A.R.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Grebely</surname>
+<given-names>J.</given-names>
+</name>
+,
+<collab>the HITS-p Investigators</collab>
+</person-group>
+(
+<year>2018</year>
+), “
+<article-title>
+Longitudinal injecting risk behaviours among people with a history of injecting drug use in an Australian prison setting: the HITS-p study
+</article-title>
+”,
+<source>International Journal on Drug Policy</source>
+, Vol.
+<volume>54</volume>
+, pp.
+<fpage>18</fpage>
+-
+<lpage>25</lpage>
+.
+<pub-id pub-id-type="pmid">29367011</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref011">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>de Andrade</surname>
+<given-names>D.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ritchie</surname>
+<given-names>J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Rowlands</surname>
+<given-names>M.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Mann</surname>
+<given-names>E.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Hides</surname>
+<given-names>L.</given-names>
+</name>
+</person-group>
+(
+<year>2018</year>
+), “
+<article-title>
+Substance use and recidivism outcomes for prison-based drug and alcohol interventions
+</article-title>
+”,
+<source>Epidemiologic Reviews</source>
+, Vol.
+<volume>40</volume>
+No.
+<issue>1</issue>
+, pp.
+<fpage>121</fpage>
+-
+<lpage>33</lpage>
+.
+<pub-id pub-id-type="pmid">29733373</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref012">
+<mixed-citation publication-type="web">
+<person-group person-group-type="author">
+<collab>Department of Health</collab>
+</person-group>
+(
+<year>2006</year>
+), “
+<article-title>
+Clinical management of drug dependence in the adult prison setting
+</article-title>
+”,
+<comment>available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="http://www.dldocs.stir.ac.uk/documents/adultprisons.pdf">www.dldocs.stir.ac.uk/documents/adultprisons.pdf</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref013">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Dettmer</surname>
+<given-names>K.</given-names>
+</name>
+<etal>et al.</etal>
+</person-group>
+(
+<year>2001</year>
+), “
+<article-title>
+Take home naloxone and the prevention of deaths from opiate overdose: two pilot schemes
+</article-title>
+”,
+<source>BMJ</source>
+, Vol.
+<volume>322</volume>
+, p.
+<fpage>895</fpage>
+.
+<pub-id pub-id-type="pmid">11302902</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref302">
+<mixed-citation publication-type="web">
+<person-group person-group-type="author">
+<collab>Diazepam Summary of Product Characteristics</collab>
+</person-group>
+(
+<year>2018</year>
+),
+<comment>available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="http://www.medicines.org.uk/emc/product/4522/smpc">www.medicines.org.uk/emc/product/4522/smpc</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref014">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Evans</surname>
+<given-names>E.A.</given-names>
+</name>
+</person-group>
+(
+<year>2015</year>
+), “
+<article-title>
+Women with opioid use disorders in the criminal justice system: a brief report
+</article-title>
+”,
+<source>Journal of Addiction Medicine and Therapy</source>
+, Vol.
+<volume>1</volume>
+, p.
+<fpage>1011</fpage>
+.
+</mixed-citation>
+</ref>
+<ref id="ref015">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Farrell-MacDonald</surname>
+<given-names>S.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>MacSwain</surname>
+<given-names>M.-A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Cheverie</surname>
+<given-names>M.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Tiesmaki</surname>
+<given-names>M.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Fischer</surname>
+<given-names>B.</given-names>
+</name>
+</person-group>
+(
+<year>2014</year>
+), “
+<article-title>
+Impact of methadone maintenance treatment on women offenders’ post-release recidivism
+</article-title>
+”,
+<source>European Addiction Research</source>
+, Vol.
+<volume>20</volume>
+No.
+<issue>4</issue>
+, pp.
+<fpage>192</fpage>
+-
+<lpage>9</lpage>
+.
+<pub-id pub-id-type="pmid">24513717</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref016">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Fazel</surname>
+<given-names>S.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hayes</surname>
+<given-names>A.J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Bartellas</surname>
+<given-names>K.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Clerici</surname>
+<given-names>M.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Trestman</surname>
+<given-names>R.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+), “
+<article-title>
+The mental health of prisoners: a review of prevalence, adverse outcomes and interventions
+</article-title>
+”,
+<source>Lancet Psychiatry</source>
+, Vol.
+<volume>3</volume>
+No.
+<issue>9</issue>
+, pp.
+<fpage>871</fpage>
+-
+<lpage>81</lpage>
+.
+<pub-id pub-id-type="pmid">27426440</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref017">
+<mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<collab>Freedom of Information Request</collab>
+</person-group>
+(
+<year>2017</year>
+),
+<comment>
+Freedom of Information Request provided 24 May 2017 for the calendar year 2016
+</comment>
+.
+</mixed-citation>
+</ref>
+<ref id="ref303">
+<mixed-citation publication-type="web">
+<person-group person-group-type="author">
+<collab>Gabapentin Summary of Product Characteristics</collab>
+</person-group>
+(
+<year>2019</year>
+),
+<comment>available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="http://www.medicines.org.uk/emc/product/4636/smpc">www.medicines.org.uk/emc/product/4636/smpc</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref018">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Gaulen</surname>
+<given-names>Z.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+), “
+<article-title>
+Health and social issues among older patients in opioid maintenance treatment in Norway
+</article-title>
+”,
+<source>Nordic Studies on Alcohol and Drugs</source>
+, Vol.
+<volume>34</volume>
+No.
+<issue>1</issue>
+, pp.
+<fpage>80</fpage>
+-
+<lpage>90</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="ref019">
+<mixed-citation publication-type="web">
+<person-group person-group-type="author">
+<collab>HM Chief Inspector of Prisons</collab>
+</person-group>
+(
+<year>2012–2013</year>
+), “
+<article-title>
+HM Chief Inspector of Prisons for Scotland Annual Report
+</article-title>
+”,
+<comment>available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="https://www.justice.gov.uk/downloads/publications/corporate-reports/hmi-prisons/hm-inspectorate-prisons-annual-report-2012-13.pdf">
+www.justice.gov.uk/downloads/publications/corporate-reports/hmi-prisons/hm-inspectorate-prisons-annual-report-2012-13.pdf
+</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref020">
+<mixed-citation publication-type="report">
+<person-group person-group-type="author">
+<collab>HM Chief Inspector of Prisons</collab>
+</person-group>
+(
+<year>2013</year>
+), “
+<article-title>Report on an unannounced inspection of HMP prison</article-title>
+”,
+<comment>January 2013, available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="https://www.justiceinspectorates.gov.uk/hmiprisons/inspections/">
+www.justiceinspectorates.gov.uk/hmiprisons/inspections/
+</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref021">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<collab>HM Government</collab>
+</person-group>
+(
+<year>2017</year>
+),
+<source>Drug Strategy</source>
+,
+<publisher-name>HM Government</publisher-name>
+,
+<publisher-loc>London</publisher-loc>
+,
+<comment>July 2017, available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/628148/Drug_strategy_2017.PDF">
+www.gov.uk/government/uploads/system/uploads/attachment_data/file/628148/Drug_strategy_2017.PDF
+</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref047">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<collab>Independent Expert Working Group</collab>
+</person-group>
+(
+<year>2017</year>
+),
+<source>
+Drug Misuse and Dependence: UK Guidelines on Clinical Management
+</source>
+,
+<publisher-name>Department of Health</publisher-name>
+,
+<publisher-loc>London</publisher-loc>
+.
+</mixed-citation>
+</ref>
+<ref id="ref022">
+<mixed-citation publication-type="report">
+<person-group person-group-type="author">
+<collab>Independent Monitoring Boards</collab>
+</person-group>
+(
+<year>2017</year>
+), “
+<article-title>
+Annual report for reporting year 1 January to 31 December 2016
+</article-title>
+”,
+<comment>June, available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="https://www.imb.org.uk/reports/2017-annual-reports/page/3/">www.imb.org.uk/reports/2017-annual-reports/page/3/</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref023">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Landry</surname>
+<given-names>M.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Veilleux</surname>
+<given-names>N.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Arseneault</surname>
+<given-names>J.E.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Abboud</surname>
+<given-names>S.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Barrieau</surname>
+<given-names>A.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Bélanger</surname>
+<given-names>M.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+), “
+<article-title>
+Impact of a methadone maintenance program on an Aboriginal community: a qualitative study
+</article-title>
+”,
+<source>CMAJ Open</source>
+, Vol.
+<volume>4</volume>
+No.
+<issue>3</issue>
+, pp.
+<fpage>E431</fpage>
+-
+<lpage>E435</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="ref024">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Lazarus</surname>
+<given-names>J.V.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Safreed-Harmon</surname>
+<given-names>K.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hetherington</surname>
+<given-names>K.L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Bromberg</surname>
+<given-names>D.J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ocampo</surname>
+<given-names>D.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Graf</surname>
+<given-names>N.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Dichtl</surname>
+<given-names>A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Stöver</surname>
+<given-names>H.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Wolff</surname>
+<given-names>H.</given-names>
+</name>
+</person-group>
+(
+<year>2018</year>
+), “
+<article-title>
+Health outcomes for clients of needle and syringe programs in prisons
+</article-title>
+”,
+<source>Epidemiologic Reviews</source>
+, Vol.
+<volume>40</volume>
+No.
+<issue>1</issue>
+, pp.
+<fpage>96</fpage>
+-
+<lpage>104</lpage>
+.
+<pub-id pub-id-type="pmid">29659780</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref025">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>McDonald</surname>
+<given-names>R.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Campbell</surname>
+<given-names>N.D.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Strang</surname>
+<given-names>J.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+), “
+<article-title>
+Twenty years of take-home naloxone for the prevention of overdose deaths from heroin and other opioids-conception and maturation
+</article-title>
+”,
+<source>Drug and Alcohol Dependence</source>
+, Vol.
+<volume>178</volume>
+, pp.
+<fpage>176</fpage>
+-
+<lpage>87</lpage>
+, doi:
+<pub-id pub-id-type="doi">10.1016/j.drugalcdep.2017.05.001</pub-id>
+.
+<pub-id pub-id-type="pmid">28654870</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref026">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Magura</surname>
+<given-names>S.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Lee</surname>
+<given-names>J.D.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hershberger</surname>
+<given-names>J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Joseph</surname>
+<given-names>H.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Marsch</surname>
+<given-names>L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Shropshire</surname>
+<given-names>C.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Rosenblum</surname>
+<given-names>A.</given-names>
+</name>
+</person-group>
+(
+<year>2009</year>
+), “
+<article-title>
+Buprenorphine and methadone maintenance in jail and post-release: a randomized clinical trial
+</article-title>
+”,
+<source>Drug and Alcohol Dependence</source>
+, Vol.
+<volume>99</volume>
+Nos
+<issue>1-3</issue>
+, pp.
+<fpage>222</fpage>
+-
+<lpage>30</lpage>
+, doi:
+<pub-id pub-id-type="doi">10.1016/j.drugalcdep.2008.08.006</pub-id>
+.
+<pub-id pub-id-type="pmid">18930603</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref027">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Meade</surname>
+<given-names>A.M.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Bird</surname>
+<given-names>S.M.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Strang</surname>
+<given-names>J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Pepple</surname>
+<given-names>T.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Nichols</surname>
+<given-names>L.L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Mascarenhas</surname>
+<given-names>M.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Choo</surname>
+<given-names>L.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Parmar</surname>
+<given-names>M.K.B.</given-names>
+</name>
+</person-group>
+(
+<year>2018</year>
+), “
+<chapter-title>
+Methods for delivering the UK’s multi-centre prison-based naloxone-on-release pilot randomised trial (N-ALIVE)
+</chapter-title>
+”,
+<source>Drug and Alcohol Review</source>
+, Vol.
+<volume>37</volume>
+No.
+<issue>4</issue>
+, pp.
+<fpage>487</fpage>
+-
+<lpage>98</lpage>
+.
+<pub-id pub-id-type="pmid">28940805</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref028">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>O’Hara</surname>
+<given-names>K.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Forsyth</surname>
+<given-names>K.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Webb</surname>
+<given-names>R.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Senior</surname>
+<given-names>J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hayes</surname>
+<given-names>A.J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Challis</surname>
+<given-names>D.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Fazel</surname>
+<given-names>S.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Shaw</surname>
+<given-names>J.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+), “
+<article-title>
+Links between depressive symptoms and unmet health and social care needs among older prisoners
+</article-title>
+”,
+<source>Age and Ageing</source>
+, Vol.
+<volume>45</volume>
+No.
+<issue>1</issue>
+, pp.
+<fpage>158</fpage>
+-
+<lpage>63</lpage>
+.
+<pub-id pub-id-type="pmid">26764402</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref029">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Patel</surname>
+<given-names>K.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Boutwell</surname>
+<given-names>A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Brockmann</surname>
+<given-names>B.W.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Rich</surname>
+<given-names>J.D.</given-names>
+</name>
+</person-group>
+(
+<year>2014</year>
+), “
+<article-title>
+Integrating correctional and community health care for formerly incarcerated people who are eligible for Medicaid
+</article-title>
+”,
+<source>Health Affairs (Project Hope)</source>
+, Vol.
+<volume>33</volume>
+No.
+<issue>3</issue>
+, pp.
+<fpage>468</fpage>
+-
+<lpage>73</lpage>
+.
+<pub-id pub-id-type="pmid">24590947</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref030">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Peate.</surname>
+<given-names>I.</given-names>
+</name>
+</person-group>
+(
+<year>2011</year>
+), “
+<article-title>
+Prisoner health: HIV infection and other blood-borne viral infections
+</article-title>
+”,
+<source>British Journal of Nursing</source>
+, Vol.
+<volume>20</volume>
+No.
+<issue>10</issue>
+, pp.
+<fpage>605</fpage>
+-
+<lpage>6</lpage>
+.
+<pub-id pub-id-type="pmid">21646991</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref031">
+<mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Platt</surname>
+<given-names>L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Minozzi</surname>
+<given-names>S.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Reed</surname>
+<given-names>J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Vickerman</surname>
+<given-names>P.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hagan</surname>
+<given-names>H.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>French</surname>
+<given-names>C.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Jordan</surname>
+<given-names>A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Degenhardt</surname>
+<given-names>L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hope</surname>
+<given-names>V.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hutchinson</surname>
+<given-names>S.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Maher</surname>
+<given-names>L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Palmateer</surname>
+<given-names>N.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Taylor</surname>
+<given-names>A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Bruneau</surname>
+<given-names>J.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Hickman</surname>
+<given-names>M.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+), “
+<article-title>
+Needle syringe programmes and opioid substitution therapy for preventing hepatitis C transmission in people who inject drugs
+</article-title>
+”,
+<comment>
+Cochrane Database of Systematic Reviews, No. 9, Article No. CD012021
+</comment>
+, doi:
+<pub-id pub-id-type="doi">10.1002/14651858.CD012021.pub2</pub-id>
+.
+</mixed-citation>
+</ref>
+<ref id="ref032">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<collab>PPO</collab>
+</person-group>
+(
+<year>2017</year>
+),
+<source>Learning From PPO Investigations</source>
+,
+<comment>Older Prisoners</comment>
+,
+<publisher-name>Prisons and Probations Ombudsman</publisher-name>
+,
+<publisher-loc>London</publisher-loc>
+,
+<comment>available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="http://www.ppo.gov.uk/wp-content/uploads/2017/06/6-3460_PPO_Older-Prisoners_WEB.pdf">
+www.ppo.gov.uk/wp-content/uploads/2017/06/6-3460_PPO_Older-Prisoners_WEB.pdf
+</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref033">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Sander</surname>
+<given-names>G.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Scandurra</surname>
+<given-names>A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Kamenska</surname>
+<given-names>A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>MacNamara</surname>
+<given-names>C.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Kalpaki</surname>
+<given-names>C.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Bessa</surname>
+<given-names>C.F.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Laso</surname>
+<given-names>G.N.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Parisi</surname>
+<given-names>G.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Varley</surname>
+<given-names>L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Wolny</surname>
+<given-names>M.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Moudatsou</surname>
+<given-names>M.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Pontes</surname>
+<given-names>N.H.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Mannix-McNamara</surname>
+<given-names>P.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Libianchi</surname>
+<given-names>S.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Antypas</surname>
+<given-names>T.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+), “
+<article-title>
+Overview of harm reduction in prisons in seven European countries
+</article-title>
+”,
+<source>Harm Reduction Journal</source>
+, Vol.
+<volume>13</volume>
+No.
+<issue>1</issue>
+, p.
+<fpage>28</fpage>
+.
+<pub-id pub-id-type="pmid">27717368</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref034">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Sander</surname>
+<given-names>G.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Murphy</surname>
+<given-names>F.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+), “
+<article-title>
+The furthest left behind: the urgent need to scale up harm reduction in prisons
+</article-title>
+”,
+<source>International Journal of Prisoner Health</source>
+, Vol.
+<volume>13</volume>
+Nos
+<issue>3-4</issue>
+, pp.
+<fpage>185</fpage>
+-
+<lpage>91</lpage>
+.
+<pub-id pub-id-type="pmid">28914120</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref035">
+<mixed-citation publication-type="web">
+<person-group person-group-type="author">
+<collab>Scottish Prison Service</collab>
+</person-group>
+(
+<year>2014</year>
+), “
+<article-title>
+Unlocking potential: delivering a strategy for purposeful activity in the Scottish prison service
+</article-title>
+”,
+<comment>available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="http://www.sps.gov.uk/Corporate/Publications/PurposefulActivity.aspx">
+www.sps.gov.uk/Corporate/Publications/PurposefulActivity.aspx
+</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref036">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Singleton</surname>
+<given-names>N.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Farrell</surname>
+<given-names>M.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Meltzer</surname>
+<given-names>H.</given-names>
+</name>
+</person-group>
+(
+<year>1999</year>
+),
+<source>
+Substance Misuse Among Prisoners in England and Wale
+</source>
+,
+<publisher-name>Office for National Statistics</publisher-name>
+,
+<publisher-loc>London</publisher-loc>
+,
+<comment>available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="https://www.ons.gov.uk/ons/rel/psychiatric-morbidity/substance-misuse-among-prisoners/substance-misuse-among-prisoners/substance-misuse---among-prisoners.pdf">
+www.ons.gov.uk/ons/rel/psychiatric-morbidity/substance-misuse-among-prisoners/substance-misuse-among-prisoners/substance-misuse---among-prisoners.pdf
+</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref037">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Stallwitz</surname>
+<given-names>A.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Stöver</surname>
+<given-names>H.</given-names>
+</name>
+</person-group>
+(
+<year>2007</year>
+), “
+<article-title>
+The impact of substitution treatment in prisons: a literature review
+</article-title>
+”,
+<source>International Journal on Drug Policy</source>
+, Vol.
+<volume>18</volume>
+No.
+<issue>6</issue>
+, pp.
+<fpage>464</fpage>
+-
+<lpage>74</lpage>
+.
+<pub-id pub-id-type="pmid">18061872</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref038">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Stöver</surname>
+<given-names>H.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Michels</surname>
+<given-names>I.I.</given-names>
+</name>
+</person-group>
+(
+<year>2010</year>
+), “
+<article-title>
+Drug use and opioid substitution treatment for prisoners
+</article-title>
+”,
+<source>Harm Reduction Journal</source>
+, Vol.
+<volume>7</volume>
+, p.
+<fpage>17</fpage>
+, doi:
+<pub-id pub-id-type="doi">10.1186/1477-7517-7-17</pub-id>
+.
+<pub-id pub-id-type="pmid">20642849</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref039">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Strang</surname>
+<given-names>J.</given-names>
+</name>
+<etal>et al.</etal>
+</person-group>
+(
+<year>2014</year>
+), “
+<article-title>
+Take-home emergency naloxone to prevent deaths from heroin overdose
+</article-title>
+”,
+<source>BMJ</source>
+, Vol.
+<volume>349</volume>
+, p.
+<fpage>g6580</fpage>
+.
+<pub-id pub-id-type="pmid">25378248</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref040">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Strang</surname>
+<given-names>J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Bird</surname>
+<given-names>S.M.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Parmar</surname>
+<given-names>M.K.B.</given-names>
+</name>
+</person-group>
+(
+<year>2013</year>
+), “
+<article-title>
+Take-home emergency naloxone to prevent heroin overdose deaths after prison release: rationale and practicalities for the N-ALIVE randomized trial
+</article-title>
+”,
+<source>Journal of Urban Health</source>
+, Vol.
+<volume>9</volume>
+No.
+<issue>5</issue>
+, pp.
+<fpage>983</fpage>
+-
+<lpage>96</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="ref041">
+<mixed-citation publication-type="web">
+<person-group person-group-type="author">
+<collab>User Voice</collab>
+</person-group>
+(
+<year>2016</year>
+), “
+<article-title>
+Spice: the bird killer. What prisoners think about the use of spice and other legal highs in prison
+</article-title>
+”,
+<comment>available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="http://www.uservoice.org/wp-content/uploads/2016/05/User-Voice-Spice-The-Bird-Killer-Report-Low-Res.pdf">
+www.uservoice.org/wp-content/uploads/2016/05/User-Voice-Spice-The-Bird-Killer-Report-Low-Res.pdf
+</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref042">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Vickerman</surname>
+<given-names>P.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Martin</surname>
+<given-names>N.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Turner</surname>
+<given-names>K.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Hickman</surname>
+<given-names>M.</given-names>
+</name>
+</person-group>
+(
+<year>2012</year>
+), “
+<article-title>
+Can needle and syringe programmes and opiate substitution therapy achieve substantial reductions in hepatitis C virus prevalence? Model projections for different epidemic settings
+</article-title>
+”,
+<source>Addiction</source>
+, Vol.
+<volume>107</volume>
+No.
+<issue>11</issue>
+, pp.
+<fpage>1984</fpage>
+-
+<lpage>95</lpage>
+.
+<pub-id pub-id-type="pmid">22564041</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref043">
+<mixed-citation publication-type="web">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Webster</surname>
+<given-names>R.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+), “
+<article-title>
+Service user views of opioid substitution treatment in prison and on release
+</article-title>
+”,
+<comment>available at:</comment>
+<ext-link ext-link-type="uri" xlink:href="http://www.russellwebster.com/SUOST17.pdf">www.russellwebster.com/SUOST17.pdf</ext-link>
+<comment>(accessed</comment>
+<date-in-citation content-type="access-date">August 2019</date-in-citation>
+).
+</mixed-citation>
+</ref>
+<ref id="ref044">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Westerberg</surname>
+<given-names>V.S.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>McCrady</surname>
+<given-names>B.S.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Owens</surname>
+<given-names>M.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Guerin</surname>
+<given-names>P.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+), “
+<article-title>
+Community-based methadone maintenance in a large detention center is associated with decreases in inmate recidivism
+</article-title>
+”,
+<source>Journal of Substance Abuse Treatment</source>
+, Vol.
+<volume>70</volume>
+, pp.
+<fpage>1</fpage>
+-
+<lpage>6</lpage>
+, doi:
+<pub-id pub-id-type="doi">10.1016/j.jsat.2016.07.007</pub-id>
+.
+<pub-id pub-id-type="pmid">27692182</pub-id>
+</mixed-citation>
+</ref>
+<ref id="ref045">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Wilkinson</surname>
+<given-names>D.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Caulfield</surname>
+<given-names>L.S.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+), “
+<article-title>
+The perceived benefits of an arts project for health and wellbeing of older offenders
+</article-title>
+”,
+<source>Europe’s Journal of Psychology</source>
+, Vol.
+<volume>13</volume>
+No.
+<issue>1</issue>
+, pp.
+<fpage>16</fpage>
+-
+<lpage>27</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="ref046">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Wirtz</surname>
+<given-names>A.L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Yeh</surname>
+<given-names>P.T.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Flath</surname>
+<given-names>N.L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Beyrer</surname>
+<given-names>C.</given-names>
+</name>
+and
+<name name-style="western">
+<surname>Dolan</surname>
+<given-names>K.</given-names>
+</name>
+</person-group>
+(
+<year>2018</year>
+), “
+<article-title>
+HIV and viral hepatitis among imprisoned key populations
+</article-title>
+”,
+<source>Epidemiologic Reviews</source>
+, Vol.
+<volume>40</volume>
+No.
+<issue>1</issue>
+, pp.
+<fpage>12</fpage>
+-
+<lpage>26</lpage>
+.
+<pub-id pub-id-type="pmid">29688317</pub-id>
+</mixed-citation>
+</ref>
+</ref-list>
+</back>
+<floats-group>
+<fig id="F_IJPH-12-2017-0061001" orientation="portrait" fig-type="diagram" position="float">
+<label>Figure 1</label>
+<caption>
+<p>
+Ease of access to OST whilst in prison and to continued prescription on release
+</p>
+</caption>
+<graphic xlink:href="intjprisonhealth-15-0293-g001"/>
+</fig>
+</floats-group>
+</article>

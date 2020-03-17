@@ -1,0 +1,1808 @@
+{
+  "head" : {
+    "vars" : [ "doiLiteral", "beLiteral" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1038/nrc1317"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Jordan, MA, Wilson, L. Microtubules as a target for anticancer drugs. Nat Rev Cancer 2004; 4: 253–65. PMID: 15057285"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1038/nrd3253"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Dumontet, C, Jordan, MA. Microtubule-binding agents: a dynamic field of cancer therapeutics. Nat Rev Drug Discov 2010; 9: 790–803. PMID: 20885410"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.ejmech.2014.09.051"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Kaur, R, Kaur, G, Gill, RK, et al. Recent developments in tubulin polymerization inhibitors: an overview. Eur J Med Chem 2014; 87: 89–124. PMID: 25240869"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1002/chin.199835328"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Shi, Q, Chen, K, Morris-Natschke, SL, Lee, KH. Recent progress in the development of tubulin inhibitors as antimitotic antitumor agents. Curr Pharm Des 1998; 4: 219–48. PMID: 10197041"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2174/13895575112091394"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Bukhari, SNA, Jasamai, M, Jantan, I. Synthesis and biological evaluation of chalcone derivatives (mini review). Mini Rev Med Chem 2012; 12: 1394–403. PMID: 22876958"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1002/(sici)1098-1128(199807)18:4<259::aid-med3>3.0.co;2-u"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Jordan, A, Hadfield, JA, Lawrence, NJ, McGown, AT. Tubulin as a target for anticancer drugs: agents which interact with the mitotic spindle. Med Res Rev 1998; 18: 259–96. PMID: 9664292"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3390/molecules22081210"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Gomes, MN, Muratov, EN, Pereira, M, et al. Chalcone derivatives: promising starting points for drug design. Molecules 2017; 22: 1210."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1021/acs.chemrev.7b00020"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Zhuang, CL, Zhang, W, Sheng, CQ, et al. Chalcone: a privileged structure in medicinal chemistry. Chem Rev 2017; 117: 7762–810. PMID: 28488435"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.ejmech.2016.05.067"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Mirzaei, H, Emami, S. Recent advances of cytotoxic chalconoids targeting tubulin polymerization: synthesis and biological activity. Eur J Med Chem 2016; 121: 610–39. PMID: 27318983"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.ejmech.2015.05.004"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Mahapatra, DM, Bharti, SK, Asati, V. Anti-cancer chalcones: structural and molecular target perspectives. Eur J Med Chem 2015; 98: 69–114. PMID: 26005917"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2174/1871520615666150518093144"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Sharma, R, Kumar, R, Kodwani, R, et al. A review on mechanisms of anti tumor activity of chalcones. Anticancer Agents Med Chem 2015; 16: 200–11. PMID: 25980813"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1007/s00280-008-0802-y"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Loa, J, Chow, P, Zhang, K. Studies of structure-activity relationship on plant polyphenol-induced suppression of human liver cancer cells. Cancer Chemother Pharmacol 2009; 63: 1007–16. PMID: 18766342"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.canlet.2014.08.041"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Lee, JM, Lee, MS, Koh, D, et al. A new synthetic 2′-hydroxy-2,4,6-trimethoxy-5′,6′-naphthochalcone induces g2/m cell cycle arrest and apoptosis by disrupting the microtubular network of human colon cancer cells. Cancer Lett 2014; 354: 348–54. PMID: 25193463"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s0960-894x(01)00617-5"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Pouget, C, Lauthier, F, Simon, A, et al. Flavonoids: structural requirements for antiproliferative activity on breast cancer cells. Bioorg Med Chem Lett 2001; 11: 3095–7. PMID: 11720850"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.ejmech.2011.10.033"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Singh, P, Raj, R, Kumar, V, et al. 1,2,3-triazole tethered beta-lactam-chalcone bifunctional hybrids: synthesis and anticancer evaluation. Eur J Med Chem 2012; 47: 594–600. PMID: 22071256"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1021/jf4034688"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Shin, SY, Kim, JH, Yoon, H, et al. Novel antimitotic activity of 2-hydroxy-4-methoxy-2′,3′-benzochalcone (hymnpro) through the inhibition of tubulin polymerization. J Agric Food Chem 2013; 61: 12588–97. PMID: 24308485"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.ejmech.2018.04.011"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Li, L, Jiang, SB, Li, XX, et al. Recent advances in trimethoxyphenyl (tmp) based tubulin inhibitors targeting the colchicine binding site. Eur J Med Chem 2018; 151: 482–94. PMID: 29649743"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1038/s41598-017-10972-0"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Lindamulage, IK, Vu, HY, Karthikeyan, C, et al. Novel quinolone chalcones targeting colchicine-binding pocket kill multidrug-resistant cancer cells by inhibiting tubulin activity and mrp1 function. Sci Rep 2017; 7: 10298. PMID: 28860494"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/cbdd.12776"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Konieczny, MT, Bulakowska, A, Pirska, D, et al. Influence of s-oxidation on cytotoxic activity of oxathiole-fused chalcones. Chem Biol Drug Des 2016; 88: 519–33. PMID: 27198732"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/cbdd.12296"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Konieczny, MT, Bulakowska, A, Polak, J, et al. Structural factors affecting cytotoxic activity of (e)-1-(benzo d 1,3 oxathiol-6-yl)-3-phenylprop-2-en-1-one derivatives. Chem Biol Drug Des 2014; 84: 86–91. PMID: 24476543"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.bmc.2010.02.012"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Tu, HY, Huang, AM, Hour, TC, et al. Synthesis and biological evaluation of 2′,5′-dimethoxychalcone derivatives as microtubule-targeted anticancer agents. Bioorg Med Chem 2010; 18: 2089–98. PMID: 20199865"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.bmc.2014.02.028"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Wang, G, Li, C, He, L, et al. Design, synthesis and biological evaluation of a series of pyrano chalcone derivatives containing indole moiety as novel anti-tubulin agents. Bioorg Med Chem 2014; 22: 2060–79. PMID: 24629450"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.ejmech.2014.10.075"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Konieczny, MT, Buɬakowska, A, Pirska, D, et al. Structural factors affecting affinity of cytotoxic oxathiole-fused chalcones toward tubulin. Eur J Med Chem 2015; 89: 733–42. PMID: 25462279"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2174/0929867322666150114163732"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ji, YT, Liu, YN, Liu, ZP. Tubulin colchicine binding site inhibitors as vascular disrupting agents in clinical developments. Curr Med Chem 2015; 22: 1348–60. PMID: 25620094"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.ejmech.2017.07.054"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Zhou, ZZ, Shi, XD, Feng, HF, et al. Discovery of 9h-purins as potential tubulin polymerization inhibitors: synthesis, biological evaluation and structure activity relationships. Eur J Med Chem 2017; 138: 1126–34. PMID: 28763647"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1080/14756366.2019.1594802"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ettari, R, Pallio, G, Pizzino, G, et al. Non-covalent immunoproteasome inhibitors induce cell cycle arrest in multiple myeloma mm.1r cells. J Enzyme Inhib Med Chem 2019; 34: 1307–13. PMID: 31307247"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1002/jcc.21334"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Trott, O, Olson, AJ. Software news and update autodock vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading. J Comput Chem 2010; 31: 455–61. PMID: 19499576"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1046/j.1365-2591.1997.00092.x"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Sjogren, U, Figdor, D, Persson, S, et al. Influence of infection at the time of root filling on the outcome of endodontic treatment of teeth with apical periodontitis. Int Endod J. 1997; 30(5): 297–7. PMID: 9477818"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.joen.2007.07.018"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Imura, N, Pinheiro, ET, Gomes, BP, et al. The outcome of endodontic treatment: a retrospective study of 2000 cases performed by a specialist. J Endod. 2007; 33(11): 1278–1282. PMID: 17963946"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1097/00004770-200112000-00021"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Lazarski, MP, Walker, WA, 3rd, Flores, CM, et al. Epidemiological evaluation of the outcomes of nonsurgical root canal treatment in a large cohort of insured dental patients. J Endod. 2001; 27(12): 791–796. PMID: 11771594"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/j.1365-2591.1993.tb00765.x"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Smith, CS, Setchell, DJ, Harty, FJ. Factors influencing the success of conventional root canal therapy–a five-year retrospective study. Int Endod J. 1993; 26(6): 321–333. PMID: 8144241"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s0099-2399(07)80180-4"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Sjogren, U, Hagglund, B, Sundqvist, G, et al. Factors affecting the long-term results of endodontic treatment. J Endod. 1990; 16(10): 498–504. PMID: 2084204"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1046/j.1365-2591.2003.00640.x"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Dugas, NN, Lawrence, HP, Teplitsky, PE, et al. Periapical health and treatment quality assessment of root-filled teeth in two Canadian populations. Int Endod J. 2003; 36(3): 181–192. PMID: 12657144"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.14219/jada.archive.2005.0140"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Lin, LM, Rosenberg, PA, Lin, J. Do procedural errors cause endodontic treatment failure? J Am Dent Assoc. 2005; 136(2): 187–193. quiz 231 PMID: 15782522"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/j.1600-0579.2006.00397.x"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Lynch, CD, Burke, FM. Quality of root canal fillings performed by undergraduate dental students on single-rooted teeth. Eur J Dent Educ. 2006; 10(2): 67–72. PMID: 16634813"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1155/2014/751274"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Vukadinov, T, Blazic, L, Kantardzic, I, et al. Technical quality of root fillings performed by undergraduate students: a radiographic study. ScientificWorldJournal. 2014; 2014: 751274. PMID: 24672365"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.22037/iej.v13i1.16800"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Zambon da Silva, P, Carlos Ribeiro, F, Machado Barroso Xavier, J, et al. Radiographic evaluation of root canal treatment performed by undergraduate students, part I; iatrogenic errors. Iran Endod J. 2018; 13(1): 30–36. PMID: 29692832"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.4103/0253-7176.116232"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Charan, J, Biswas, T. How to calculate sample size for different study designs in medical research? Indian J Psychol Med. 2013; 35(2): 121–126. PMID: 24049221"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/j.1365-2591.1987.tb00592.x"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Reit, C. The influence of observer calibration on radiographic periapical diagnosis. Int Endod J. 1987; 20(2): 75–81. PMID: 3471728"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1177/00220345860650031201"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Valachovic, RW, Douglass, CW, Berkey, CS, et al. Examiner reliability in dental radiography. J Dent Res. 1986; 65(3): 432–436. PMID: 3457049"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1177/00220345860650020701"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Hunt, RJ. Percent agreement, Pearson’s correlation, and kappa as measures of inter-examiner reliability. J Dent Res. 1986; 65(2): 128–130. PMID: 3455967"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/j.1365-2591.2006.01158.x"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Er, O, Sagsen, B, Maden, M, et al. Radiographic technical quality of root fillings performed by dental students in Turkey. Int Endod J. 2006; 39(11): 867–872. PMID: 17014524"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/j.1365-2591.2005.01008.x"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Eleftheriadis, GI, Lambrianidis, TP. Technical quality of root canal treatment and detection of iatrogenic errors in an undergraduate dental clinic. Int Endod J. 2005; 38(10): 725–734. PMID: 16164687"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2298/sgs1103139k"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Kulić, L, Nogo-Živanović, D, Krunic, J, et al. Radiological assessment of the quality of root canal fillings in teeth endodontically treated at students’ practical sessions. Serb Dent J. 2011; 58."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/0030-4220(71)90230-1"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Schneider, SW. A comparison of canal preparations in straight and curved root canals. Oral Surg Oral Med Oral Pathol. 1971; 32(2): 271–275. PMID: 5284110"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1155/2015/673914"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Yousuf, W, Khan, M, Mehdi, H. Endodontic procedural errors: frequency, type of error, and the most frequently treated tooth. Int J Dent. 2015; 2015: 673914. PMID: 26347779"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1186/s12903-015-0137-0"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Barbieri, N, Leonardi, DP, Baechtold, MS, et al. Influence of cervical preflaring on apical transportation in curved root canals instrumented by reciprocating file systems. BMC Oral Health. 2015; 15: 149. PMID: 26593244"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/j.1365-2591.2009.01679.x"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Balto, H, Al Khalifah, S, Al Mugairin, S, et al. Technical quality of root fillings performed by undergraduate students in Saudi Arabia. Int Endod J. 2010; 43(4): 292–300. PMID: 20487448"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/0030-4220(90)90217-g"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Greene, KJ, Krell, KV. Clinical factors associated with ledged canals in maxillary and mandibular molars. Oral Surg Oral Med Oral Pathol. 1990; 70(4): 490–497. PMID: 2216387"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1034/j.1600-9657.2000.016005229.x"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Kapalas, A, Lambrianidis, T. Factors associated with root canal ledging during instrumentation. Endod Dent Traumatol. 2000; 16(5): 229–231. PMID: 11202887"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/j.1365-2591.2010.01706.x"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Khabbaz, MG, Protogerou, E, Douka, E. Radiographic quality of root fillings performed by undergraduate students. Int Endod J. 2010; 43(6): 499–508. PMID: 20536578"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.22037/iej.v13i1.18507"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Hendi, SS, Karkehabadi, H, Eskandarloo, A. Iatrogenic errors during root canal instrumentation performed by dental students. Iran Endod J. 2018; 13(1): 126–131. PMID: 29692848"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1590/1678-775720130542"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Sousa, K, Andrade-Junior, CV, Silva, JM, et al. Comparison of the effects of tripleGates and gates-glidden burs on cervical dentin thickness and root canal area by using cone beam computed tomography. J appl oral sci. 2015; 23(2): 164–168. PMID: 26018308"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s0099-2399(88)80196-1"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Walia, HM, Brantley, WA, Gerstein, H. An initial investigation of the bending and torsional properties of Nitinol root canal files. J Endod. 1988; 14(7): 346–351. PMID: 3251996"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.joen.2018.03.012"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Haug, SR, Solfjeld, AF, Ranheim, LE, et al. Impact of case difficulty on endodontic mishaps in an undergraduate student clinic. J Endod. 2018; 44(7): 1088–1095. PMID: 29803337"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/j.1747-4477.2010.00270.x"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Rafeek, RN, Smith, WA, Mankee, MS, et al. Radiographic evaluation of the technical quality of root canal fillings performed by dental students. Aust Endod J. 2012; 38(2): 64–69. PMID: 22827818"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.joen.2006.03.001"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Iqbal, MK, Kohli, MR, Kim, JS. A retrospective clinical study of incidence of root canal instrument separation in an endodontics graduate program: a PennEndo database study. J Endod. 2006; 32(11): 1048–1052. PMID: 17055904"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.jdent.2004.01.002"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Barrieshi-Nusair, KM, Al-Omari, MA, Al-Hiyasat, AS. Radiographic technical quality of root canal treatment performed by dental students at the dental teaching center in Jordan. J Dent. 2004; 32(4): 301–307. PMID: 15053913"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.7508/iej.2015.04.012"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Alsulaimani, RS, Al-Manei, KK, Alsubait, SA, et al. Effects of clinical training and case difﬁculty on the radiographic quality of root canal ﬁllings performed by dental students in Saudi Arabia. Iran Endod J. 2015; 10: 268–273. PMID: 26523143"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.20944/preprints201801.0110.v1"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Aspatwar, A, Haapanen, S, Parkkila, S. An update on the metabolic roles of carbonic anhydrases in the model Alga Chlamydomonas reinhardtii. Metabolites 2018; 8: 22."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1007/978-94-007-7359-2_8"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Aspatwar, A, Tolvanen, ME, Ortutay, C, Parkkila, S. Carbonic anhydrase related proteins: molecular biology and evolution. Subcell Biochem 2014; 75: 135–56. PMID: 24146378"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1021/cr200176r"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Alterio, V, Di Fiore, A, D'Ambrosio, K, et al. Multiple binding modes of inhibitors to carbonic anhydrases: how to design specific drugs targeting 15 different isoforms? Chem Rev 2012; 112: 4421–68. PMID: 22607219"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.cbpa.2010.06.161"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Gilmour, KM. Perspectives on carbonic anhydrase. Comp Biochem Physiol A Mol Integr Physiol 2010; 157: 193–7. PMID: 20541618"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3109/14756366.2012.737323"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Aggarwal, M, Boone, CD, Kondeti, B, McKenna, R. Structural annotation of human carbonic anhydrases. J Enzyme Inhib Med Chem 2013; 28: 267–77. PMID: 23137351"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.bmc.2013.07.044"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Sethi, KK, Vullo, D, Verma, SM, et al. Carbonic anhydrase inhibitors: synthesis and inhibition of the human carbonic anhydrase isoforms I II VII IX and XII with benzene sulfonamides incorporating 4567-tetrabromophthalimide moiety. Bioorg Med Chem 2013; 21: 5973–82. PMID: 23965175"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.ejmech.2017.03.026"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Mboge, MY, Mahon, BP, Lamas, N, et al. Structure activity study of carbonic anhydrase IX: selective inhibition with ureido-substituted benzenesulfonamides. Eur J Med Chem 2017; 132: 184–91. PMID: 28363153"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1021/acs.jmedchem.7b00766"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Falsini, M, Squarcialupi, L, Catarzi, D, et al. 3-Hydroxy-1H-quinazoline-24-dione as a new scaffold to develop potent and selective inhibitors of the tumor-associated carbonic anhydrases IX and XII. J Med Chem 2017; 60: 6428–39. PMID: 28658574"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2174/187152011796817664"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Liu, K, Zhu, HL. Nitroimidazoles as anti-tumor agents. Anticancer Agents Med Chem 2011; 11: 687–91. PMID: 21521156"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1038/bjc.1982.300"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Overgaard, J, Overgaard, M, Nielsen, OS, et al. A comparative investigation of nimorazole and misonidazole as hypoxic radiosensitizers in a C3H mammary carcinoma in vivo. Br J Cancer 1982; 46: 904–11. PMID: 7150484"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.4155/fmc.11.69"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Supuran, CT. Carbonic anhydrase inhibitors and activators for novel therapeutic applications. Future Med Chem 2011; 3: 1165–80. PMID: 21806379"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1080/14756366.2018.1482285"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Aspatwar, A, Becker, HM, Parvathaneni, NK, et al. Nitroimidazole-based inhibitors DTP338 and DTP348 are safe for zebrafish embryos and efficiently inhibit the activity of human CA IX in Xenopus oocytes. J Enzyme Inhib Med Chem 2018; 33: 1064–73. PMID: 29909747"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1007/978-3-319-33826-2_2"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Gourmelon, A, Delrue, N. Validation in support of internationally harmonised OECD Test Guidelines for assessing the safety of chemicals. Adv Exp Med Biol 2016; 856: 9–32. PMID: 27671718"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1080/14756366.2017.1332056"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Aspatwar, A, Hammaren, M, Koskinen, S, et al. beta-CA-specific inhibitor dithiocarbamate Fc14-584B: a novel antimycobacterial agent with potential to treat drug-resistant tuberculosis. J Enzyme Inhib Med Chem 2017; 32: 832–40. PMID: 28629306"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1080/01480545.2016.1223095"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Kazokaite, J, Aspatwar, A, Kairys, V, et al. Fluorinated benzenesulfonamide anticancer inhibitors of carbonic anhydrase IX exhibit lower toxic effects on zebrafish embryonic development than ethoxzolamide. Drug Chem Toxicol 2017; 40: 309–19. PMID: 27600313"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.radonc.2015.08.022"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Dubois, LJ, Niemans, R, van Kuijk, SJ, et al. New ways to image and target tumour hypoxia and its molecular responses. Radiother Oncol 2015; 116: 352–7. PMID: 26324018"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1021/jm4009532"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Rami, M, Dubois, L, Parvathaneni, NK, et al. Hypoxia-targeting carbonic anhydrase IX inhibitors by a new series of nitroimidazole-sulfonamides/sulfamides/sulfamates. J Med Chem 2013; 56: 8512–20. PMID: 24128000"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1080/14756366.2017.1349764"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "De Simone, G, Langella, E, Esposito, D, et al. Insights into the binding mode of sulphamates and sulphamides to hCA II: crystallographic studies and binding free energy calculations. J Enzyme Inhib Med Chem 2017; 32: 1002–11. PMID: 28738704"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1371/journal.pone.0146021"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ritz, C, Baty, F, Streibig, JC, Gerhard, D. Dose-response analysis using R. PLoS One 2015; 10: e0146021. PMID: 26717316"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3791/59315"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Aspatwar, A, Hammaren, MM, Parikka, M, Parkkila, S. Rapid evaluation of toxicity of chemical compounds using zebrafish embryos. J Vis Exp 2019; 150: e59315."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.phrs.2013.01.011"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ernst, IM, Palani, K, Esatbeyoglu, T, et al. Synthesis and Nrf2-inducing activity of the isothiocyanates iberverin iberin and cheirolin. Pharmacol Res 2013; 70: 155–62. PMID: 23403058"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.radonc.2013.06.018"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Dubois, L, Peeters, SG, van Kuijk, SJ, et al. Targeting carbonic anhydrase IX by nitroimidazole based sulfamides enhances the therapeutic effect of tumor irradiation: a new concept of dual targeting drugs. Radiother Oncol 2013; 108: 523–8. PMID: 23849171"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.bmc.2014.02.039"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Bonnet, M, Hong, CR, Gu, Y, et al. Novel nitroimidazole alkylsulfonamides as hypoxic cell radiosensitisers. Bioorg Med Chem 2014; 22: 2123–32. PMID: 24650701"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1007/s11095-008-9661-9"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Anand, P, Kunnumakara, A, Sundaram, C, et al. Cancer is a preventable disease that requires major lifestyle changes. Pharm Res 2008; 25: 2097–116. PMID: 18626751"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1002/cncr.20299"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Siemann, DW, Chaplin, DJ, Horsman, MR. Vascular-targeting therapies for treatment of malignant disease. Cancer 2004; 100: 2491–9. PMID: 15197790"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s0163-7258(98)00044-8"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Traxler, P, Furet, P. Strategies toward the design of novel and selective protein tyrosine kinase inhibitors. Pharmacol Ther 1999; 82: 195–206. PMID: 10454197"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2174/138161209787582219"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Sharma, PS, Sharma, R, Tyagi, T. Receptor tyrosine kinase inhibitors as potent weapons in war against cancers. Curr Pharm Des 2009; 15: 758–76. PMID: 19275641"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2174/138945009788488378"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ocana, A, Serrano, R, Calero, R, Pandiella, A. Novel tyrosine kinase inhibitors in the treatment of cancer. Curr Drug Targets 2009; 10: 575–6. PMID: 19519359"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1021/jm401490p"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Clark, JD, Flanagan, ME, Telliez, JB. Discovery and development of Janus Kinase (JAK) inhibitors for inflammatory diseases: miniperspective. J Med Chem 2014; 57: 5023–38. PMID: 24417533"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.tips.2013.11.004"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Huang, M, Shen, A, Ding, J, Geng, M. Molecularly targeted cancer therapy: some lessons from the past decade. Trends Pharmacol Sci 2014; 35: 41–50. PMID: 24361003"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1158/1078-0432.ccr-14-2329"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Touat, M, Ileana, E, Postel-Vinay, S, et al. Targeting FGFR signaling in cancer. Clin Cancer Res 2015; 21: 2684–94. PMID: 26078430"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1158/2159-8290.cd-12-0362"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Dieci, MV, Arnedos, M, Andre, F, Soria, JC. Fibroblast growth factor receptor inhibitors as a cancer treatment: from a biologic rationale to medical perspectives. Cancer Discovery 2013; 3: 264–79. PMID: 23418312"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.tcb.2014.11.003"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Carter, EP, Fearon, AE, Grose, RP. Careless talk costs lives: fibroblast growth factor receptor signalling and the consequences of pathway malfunction. Trends Cell Biol 2015; 25: 221–33. PMID: 25467007"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1126/science.1220834"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Singh, D, Chan, JM, Zoppoli, P, et al. Transforming fusions of FGFR and TACC genes in human glioblastoma. Science 2012; 337: 1231–5. PMID: 22837387"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1158/2159-8290.cd-13-0050"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Wu, YM, Su, F, Kalyana-Sundaram, S, et al. Identification of targetable FGFR gene fusions in diverse cancers. Cancer Discovery 2013; 3: 636–47. PMID: 23558953"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1158/0008-5472.can-07-6307"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Hilberg, F, Roth, GJ, Krssak, M, et al. BIBF 1120: triple angiokinase inhibitor with sustained receptor blockade and good antitumor efficacy. Cancer Res 2008; 68: 4774–82. PMID: 18559524"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1158/1078-0432.ccr-14-3212"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Helsten, T, Elkin, S, Arthur, E, et al. The FGFR landscape in cancer: analysis of 4,853 tumors by next-generation sequencing. Clin Cancer Res 2016; 22: 259–67. PMID: 26373574"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1021/jm900431g"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Roth, GJ, Heckel, A, Colbatzky, F, et al. Design, synthesis, and evaluation of indolinones as triple angiokinase inhibitors and the discovery of a highly specific 6-methoxycarbonyl-substituted indolinone (BIBF 1120). J Med Chem 2009; 52: 4466–80. PMID: 19522465"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1089/dna.2016.3404"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Olagnier, D, Muscolini, M, Coyne, CB, Diamond, MS, Hiscott, J. Mechanisms of Zika virus infection and Neuropathogenesis, DNA Cell Biol, 2016, 35, 8, 367, 372, DOI: 10.1089/dna.2016.3404, PMID: 27348136"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2471/blt.16.178608"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Jaenisch, T, Rosenberger, KD, Brito, C, Brady, O, Brasil, P, Marques, ET. Risk of microcephaly after Zika virus infection in Brazil, 2015 to 2016, Bull World Health Organ, 2017, 95, 3, 191, 198, DOI: 10.2471/BLT.16.178608, PMID: 28250532"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1371/journal.pmed.1002203"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Krauer, F, Riesen, M, Reveiz, L, Oladapo, OT, Martinez-Vega, R, Porgo, TV, Haefliger, A, Broutet, NJ, Low, N, Group WHOZCW. Zika virus infection as a cause of congenital brain abnormalities and Guillain-Barre syndrome: systematic review, PLoS Med, 2017, 14, 1, e1002203, DOI: 10.1371/journal.pmed.1002203, PMID: 28045901"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1371/journal.pntd.0003580"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Cleton, NB, Godeke, GJ, Reimerink, J, Beersma, MF, Doorn, HR, Franco, L, Goeijenbier, M, Jimenez-Clavero, MA, Johnson, BW, Niedrig, M. Spot the difference-development of a syndrome based protein microarray for specific serological detection of multiple flavivirus infections in travelers, PLoS Negl Trop Dis, 2015, 9, 3, e0003580, DOI: 10.1371/journal.pntd.0003580, PMID: 25767876"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1001/jamapediatrics.2016.3982"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Moore, CA, Staples, JE, Dobyns, WB, Pessoa, A, Ventura, CV, Fonseca, EB, Ribeiro, EM, Ventura, LO, Neto, NN, Arena, JF. Characterizing the pattern of anomalies in congenital Zika syndrome for pediatric clinicians, JAMA Pediatr, 2017, 171, 3, 288, 295, DOI: 10.1001/jamapediatrics.2016.3982, PMID: 27812690"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.ebiom.2017.01.008"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Wong, SJ, Furuya, A, Zou, J, Xie, X, Dupuis, AP, 2nd, Kramer, LD, Shi, PY. A multiplex microsphere immunoassay for Zika virus diagnosis, EBioMedicine, 2017, 16, 136, 140, DOI: 10.1016/j.ebiom.2017.01.008, PMID: 28094237"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1093/cid/ciw324"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Culjat, M, Darling, SE, Nerurkar, VR, Ching, N, Kumar, M, Min, SK, Wong, R, Grant, L, Melish, ME. Clinical and imaging findings in an infant with Zika Embryopathy, Clin Infect Dis, 2016, 63, 6, 805, 811, DOI: 10.1093/cid/ciw324, PMID: 27193747"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1007/s00381-016-3074-6"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Cavalheiro, S, Lopez, A, Serra, S, Da Cunha, A, da Costa, MD, Moron, A, Lederman, HM. Microcephaly and Zika virus: neonatal neuroradiological aspects, Childs Nerv Syst, 2016, 32, 6, 1057, 1060, DOI: 10.1007/s00381-016-3074-6, PMID: 27080092"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.15585/mmwr.mm6549e1"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Cuevas, EL, Tong, VT, Rozo, N, Valencia, D, Pacheco, O, Gilboa, SM, Mercado, M, Renquist, CM, Gonzalez, M, Ailes, EC. Preliminary report of microcephaly potentially associated with Zika virus infection during pregnancy -Colombia, January-November 2016, MMWR Morb Mortal Wkly Rep, 2016, 65, 49, 1409, 1413, DOI: 10.15585/mmwr.mm6549e1, PMID: 27977645"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s0140-6736(16)00006-4"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ventura, CV, Maia, M, Bravo-Filho, V, Gois, AL, Belfort, R, Jr. Zika virus in Brazil and macular atrophy in a child with microcephaly, Lancet, 2016, 387, 10015, 228, DOI: 10.1016/S0140-6736(16)00006-4, PMID: 26775125"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1007/s11604-017-0641-z"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Mehrjardi MZ. · Carteaux, G, · Poretti, a,·, Taheri MS, · Bermudez, S, · Werner, H, · Hygino da Cruz Jr, L.C: Neuroimaging findings of postnatally acquired Zika virus infection: a pictorial essay. Jpn J Radiol. 2017;35:341–9."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s0140-6736(16)30776-0"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ventura, CV, Maia, M, Dias, N, Ventura, LO, Belfort, R, Jr. Zika: neurological and ocular findings in infant without microcephaly, Lancet, 2016, 387, 10037, 2502, DOI: 10.1016/S0140-6736(16)30776-0, PMID: 27287830"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.15585/mmwr.mm6547e2"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "van der Linden, V, Pessoa, A, Dobyns, W, Barkovich, AJ, Junior, HV, Filho, EL, Ribeiro, EM, Leal, MC, Coimbra, PP, Aragao, MF. Description of 13 infants born during October 2015-January 2016 with congenital Zika virus infection without microcephaly at birth -Brazil, MMWR Morb Mortal Wkly Rep, 2016, 65, 47, 1343, 1348, DOI: 10.15585/mmwr.mm6547e2, PMID: 27906905"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1037/t11523-000"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Squires, J, Bricker, D. Ages & stages questionnaires, third edition (ASQ-3): a parent completed child monitoring system, 2009, Baltimore, Paul H. Brookes Publishing Co."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1056/nejmc1608612"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "de Oliveira, WK, Carmo, EH, Henriques, CM, Coelho, G, Vazquez, E, Cortez-Escalante, J, Molina, J, Aldighieri, S, Espinal, MA, Dye, C. Zika virus infection and associated neurologic disorders in Brazil, N Engl J Med, 2017, 376, 16, 1591, 1593, DOI: 10.1056/NEJMc1608612, PMID: 28402236"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1037/t14978-000"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Bayley, N. Bayley scales of infant and toddler development 3rd edition (Bayley-III), 2006, San Antonio, The Psychological Corporation"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2105/ccdml.2868.145"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Centers for Disease Control and Prevention Zika virus disease and Zika virus infection 2016 case definition. 2016. Available at: https://wwwn.cdc.gov/nndss/conditions/zika/case-definition/2016/06/."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1056/nejmoa0805715"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Duffy, MR, Chen, TH, Hancock, WT, Powers, AM, Kool, JL, Lanciotti, RS, Pretrick, M, Marfel, M, Holzbauer, S, Dubray, C. Zika virus outbreak on Yap Island, Federated States of Micronesia, N Engl J Med, 2009, 360, 24, 2536, 2543, DOI: 10.1056/NEJMoa0805715, PMID: 19516034"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3201/eid1408.080287"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Lanciotti, RS, Kosoy, OL, Laven, JJ, Velez, JO, Lambert, AJ, Johnson, AJ, Stanfield, SM, Duffy, MR. Genetic and serologic properties of Zika virus associated with an epidemic, yap state, Micronesia, 2007, Emerg Infect Dis, 2008, 14, 8, 1232, 1239, DOI: 10.3201/eid1408.080287, PMID: 18680646"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3201/eid2006.140138"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Cao-Lormeau, VM, Roche, C, Teissier, A, Robin, E, Berry, AL, Mallet, HP, Sall, AA, Musso, D. Zika virus, French polynesia, south pacific, 2013, Emerg Infect Dis, 2014, 20, 6, 1085, 1086, PMID: 24856001"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1007/s00430-015-0445-7"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Tappe, Dennis, Pérez-Girón, José Vicente, Zammarchi, Lorenzo, Rissland, Jürgen, Ferreira, Davis F, Jaenisch, Thomas, Gómez-Medina, Sergio, Günther, Stephan, Bartoloni, Alessandro, Muñoz-Fontela, César, Schmidt-Chanasit, Jonas. Cytokine kinetics of Zika virus-infected patients from acute to reconvalescent phase, Medical Microbiology and Immunology, 2015, 205, 3, 269, 273, DOI: 10.1007/s00430-015-0445-7, PMID: 26702627"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1186/s12916-016-0601-y"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Anaya, J-M, Ramirez-Santana, C, Salgado-Castaneda, I, Chang, C, Ansari, A, Gershwin, ME. Zika virus and neurologic autoimmunity: the putative role of gangliosides, BMC Med, 2016, 14, 49, DOI: 10.1186/s12916-016-0601-y, PMID: 27001187"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2807/1560-7917.es2014.19.9.20720"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Oehler, E, Watrin, L, Larre, P, Leparc-Goffart, I, Lastere, S, valour, F, Baudouin, L, Mallet, H, Musso, D, Ghawche, F. Zika virus infection complicated by Guillain-Barre syndrome-case report, French Polynesia, December 2013, Euro Surveill, 2014, 19, 9, DOI: 10.2807/1560-7917.ES2014.19.9.20720"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s0140-6736(16)00644-9"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Mecharles, S, Herrmann, C, Poullain, P, Tran, TH, Deschamps, N, Mathon, G, Landais, A, Breurec, S, Lannuzel, A. Acute myelitis due to Zika virus infection, Lancet, 2016, 387, 10026, 1481, DOI: 10.1016/S0140-6736(16)00644-9, PMID: 26946926"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1056/nejmc1602964"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Carteaux, G, Maquart, M, Bedet, A, Contou, D, Brugieres, P, Fourati, S, Cleret de Langavant, L, de Broucker, T, Brun-Buisson, C, Leparc-Goffart, I. Zika virus associated with Meningoencephalitis, N Engl J Med, 2016, 374, 16, 1595, 1596, DOI: 10.1056/NEJMc1602964, PMID: 26958738"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/trf.13681"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Barjas-Castro, ML, Angerami, RN, Cunha, MS, Suzuki, A, Nogueira, JS, Rocco, IM, Maeda, AY, Vasami, FG, Katz, G, Boin, IF. Probable transfusion-transmitted Zika virus in Brazil, Transfusion, 2016, 56, 7, 1684, 1688, DOI: 10.1111/trf.13681, PMID: 27329551"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2807/1560-7917.es2014.19.14.20761"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Musso, D, Nhan, T, Robin, E, Roche, C, Bierlaire, D, Zisou, K, Shan Yan, A, Cao-Lormeau, V, Broult, J. Potential for Zika virus transmission through blood transfusion demonstrated during an outbreak in French Polynesia, November 2013 to February 2014, Eurosurveillance, 2014, 19, 14, 20761, DOI: 10.2807/1560-7917.ES2014.19.14.20761, PMID: 24739982"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/trf.13677"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Lanteri, MC, Kleinman, SH, Glynn, SA, Musso, D, Keith Hoots, W, Custer, BS, Sabino, EC, Busch, MP. Zika virus: a new threat to the safety of the blood supply with worldwide impact and implications, Transfusion, 2016, 56, 7, 1907, 1914, DOI: 10.1111/trf.13677, PMID: 27282638"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.15585/mmwr.mm6508e2"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Hills, SL, Russell, K, Hennessey, M, Williams, C, Oster, AM, Fischer, M, Mead, P. Transmission of Zika virus through sexual contact with travelers to areas of ongoing transmission -continental United States, 2016, MMWR Morb Mortal Wkly Rep, 2016, 65, 8, 215, 216, DOI: 10.15585/mmwr.mm6508e2, PMID: 26937739"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3201/eid1705.101939"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Foy, BD, Kobylinski, KC, Chilson Foy, JL, Blitvich, BJ, Travassos da Rosa, A, Haddow, AD, Lanciotti, RS, Tesh, RB. Probable non-vector-borne transmission of Zika virus, Colorado, USA, Emerg Infect Dis, 2011, 17, 5, 880, 882, DOI: 10.3201/eid1705.101939, PMID: 21529401"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1136/bmj.i720"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "McCarthy, M. Zika virus was transmitted by sexual contact in Texas, health officials report, BMJ, 2016, 352, i720, DOI: 10.1136/bmj.i720, PMID: 26848011"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2807/1560-7917.es.2016.21.8.30148"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Venturi G, Zammarchi L, Fortuna C, Remoli ME, Benedetti E, Fiorentini C, Trotta M, Rizzo C, Mantella A, Rezza G, et al. An autochthonous case of Zika due to possible sexual transmission, Florence, Italy, 2014. Euro Surveill. 2016;21(8):30148."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2807/1560-7917.es.2016.21.23.30254"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Freour T, Mirallie S, Hubert B, Splingart C, Barriere P, Maquart M, Leparc-Goffart I. Sexual transmission of Zika virus in an entirely asymptomatic couple returning from a Zika epidemic area, France, April 2016. Euro Surveill. 2016;21(23):30254."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2807/1560-7917.es.2016.21.23.30252"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Frank C, Cadar D, Schlaphof A, Neddersen N, Gunther S, Schmidt-Chanasit J, Tappe D. Sexual transmission of Zika virus in Germany, April 2016. Euro Surveill. 2016;21(23):30252."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s0140-6736(16)30775-9"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Turmel, JM, Abgueguen, P, Hubert, B, Vandamme, YM, Maquart, M, Le Guillou-Guillemette, H, Leparc-Goffart, I. Late sexual transmission of Zika virus related to persistence in the semen, Lancet, 2016, 387, 10037, 2501, DOI: 10.1016/S0140-6736(16)30775-9, PMID: 27287833"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.15585/mmwr.mm6528e2"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Davidson, A, Slavinski, S, Komoto, K, Rakeman, J, Weiss, D. Suspected female-to-male sexual transmission of Zika virus -New York City, 2016, MMWR Morb Mortal Wkly Rep, 2016, 65, 28, 716, 717, DOI: 10.15585/mmwr.mm6528e2, PMID: 27442327"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1056/nejmc1610613"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Swaminathan, S, Schlaberg, R, Lewis, J, Hanson, KE, Couturier, MR. Fatal Zika virus infection with secondary nonsexual transmission, N Engl J Med, 2016, 375, 19, 1907, 1909, DOI: 10.1056/NEJMc1610613, PMID: 27681699"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1093/cid/ciw509"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Matheron, S, d'Ortenzio, E, Leparc-Goffart, I, Hubert, B, de Lamballerie, X, Yazdanpanah, Y. Long-lasting persistence of Zika virus in semen, Clin Infect Dis, 2016, 63, 9, 1264, PMID: 27470244"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1097/aog.0000000000001625"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Meaney-Delman, D, Oduyebo, T, Polen, KN, White, JL, Bingham, AM, Slavinski, SA, Heberlein-Larson, L, St George, K, Rakeman, JL, Hills, S. Prolonged detection of Zika virus RNA in pregnant women, Obstet Gynecol, 2016, 128, 4, 724, 730, DOI: 10.1097/AOG.0000000000001625, PMID: 27479770"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1056/nejmoa1601824"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Driggers, RW, Ho, CY, Korhonen, EM, Kuivanen, S, Jaaskelainen, AJ, Smura, T, Rosenberg, A, Hill, DA, DeBiasi, RL, Vezina, G. Zika virus infection with prolonged maternal Viremia and fetal brain abnormalities, N Engl J Med, 2016, 374, 22, 2142, 2151, DOI: 10.1056/NEJMoa1601824, PMID: 27028667"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2471/blt.16.171207"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Charrel, RN, Leparc-Goffart, I, Pas, S, de Lamballerie, X, Koopmans, M, Reusken, C. Background review for diagnostic test development for Zika virus infection, Bull World Health Organ, 2016, 94, 8, 574, 584D, DOI: 10.2471/BLT.16.171207, PMID: 27516635"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2807/1560-7917.es.2017.22.36.30609"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Mogling R, Zeller H, Revez J, Koopmans M, group Zrl, Reusken C: Status, quality and specific needs of Zika virus (ZIKV) diagnostic capacity and capability in National Reference Laboratories for arboviruses in 30 EU/EEA countries, May 2016. Euro Surveill. 2017;22(36):30609."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2471/blt.16.175950"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Corman, VM, Rasche, A, Baronti, C, Aldabbagh, S, Cadar, D, Reusken, CB, Pas, SD, Goorhuis, A, Schinkel, J, Molenkamp, R. Assay optimization for molecular detection of Zika virus, Bull World Health Organ, 2016, 94, 12, 880, 892, DOI: 10.2471/BLT.16.175950, PMID: 27994281"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1128/jcm.00987-17"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Charrel, R, Mogling, R, Pas, S, Papa, A, Baronti, C, Koopmans, M, Zeller, H, Leparc-Goffart, I, Reusken, CB. Variable sensitivity in molecular detection of Zika virus in European expert laboratories: external quality assessment, November 2016, J Clin Microbiol, 2017, 55, 11, 3219, 3226, DOI: 10.1128/JCM.00987-17, PMID: 28835479"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3201/eid2405.171747"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Fischer, C, Pedroso, C, Mendrone, A, Bispo de Filipis, AM, Vallinoto, ACR, Ribeiro, B, Durignon, EL, Marques, ETA, Campos, GS, Viana, IFT, Levi, JE, Scarpelli, LE, Nogueira, M, de Souza Bastos, M, Souza, NCS, Khouri, R, Lira, SMC, Komninakis, SV, Baronti, C, Charrel, RN, Kümmerer, BM, Drosten, C, Brites, C, de Lamballerie, X, Niedrig, M, Netto, EM, Drexler, JF. External Quality Assessment for Zika Virus Molecular Diagnostic Testing, Brazil, Emerg Infect Dis, 2018, 24, 5, 888, 892, DOI: 10.3201/eid2405.171747"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1128/jcm.00442-17"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "L'Huillier, AG, Hamid-Allie, A, Kristjanson, E, Papageorgiou, L, Hung, S, Wong, CF, Stein, DR, Olsha, R, Goneau, LW, Dimitrova, K. Evaluation of Euroimmun anti-Zika virus IgM and IgG enzyme-linked Immunosorbent assays for Zika virus serologic testing, J Clin Microbiol, 2017, 55, 8, 2462, 2471, DOI: 10.1128/JCM.00442-17, PMID: 28566316"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.jbi.2008.08.010"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Harris, PA, Taylor, R, Thielke, R, Payne, J, Gonzalez, N, Conde, JG. Research electronic data capture (REDCap)-a metadata-driven methodology and workflow process for providing translational research informatics support, J Biomed Inform, 2009, 42, 2, 377, 381, DOI: 10.1016/j.jbi.2008.08.010, PMID: 18929686"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1001/jama.2016.19006"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Honein, MA, Dawson, AL, Petersen, EE, Jones, AM, Lee, EH, Yazdy, MM, Ahmad, N, Macdonald, J, Evert, N, Bingham, A. Birth defects among fetuses and infants of US women with evidence of possible Zika virus infection during pregnancy, JAMA, 2017, 317, 1, 59, 68, DOI: 10.1001/jama.2016.19006, PMID: 27960197"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.15585/mmwr.mm6613e1"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Reynolds, MR, Jones, AM, Petersen, EE, Lee, EH, Rice, ME, Bingham, A, Ellington, SR, Evert, N, Reagan-Steiner, S, Oduyebo, T. Vital signs: update on Zika virus-associated birth defects and evaluation of all U.S. infants with congenital Zika virus exposure -U.S. Zika pregnancy registry, 2016, MMWR Morb Mortal Wkly Rep, 2017, 66, 13, 366, 373, DOI: 10.15585/mmwr.mm6613e1, PMID: 28384133"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.15585/mmwr.mm6623e1"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Shapiro-Mendoza, CK, Rice, ME, Galang, RR, Fulton, AC, VanMaldeghem, K, Prado, MV, Ellis, E, Anesi, MS, Simeone, RM, Petersen, EE. Pregnancy outcomes after maternal Zika virus infection during pregnancy -U.S. territories, January 1, 2016-April 25, 2017, MMWR Morb Mortal Wkly Rep, 2017, 66, 23, 615, 621, DOI: 10.15585/mmwr.mm6623e1, PMID: 28617773"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1056/nejmoa1709481"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Hoen, B, Schaub, B, Funk, AL, Ardillon, V, Boullard, M, Cabie, A, Callier, C, Carles, G, Cassadou, S, Cesaire, R. Pregnancy outcomes after ZIKV infection in French territories in the Americas, N Engl J Med, 2018, 378, 11, 985, 994, DOI: 10.1056/NEJMoa1709481, PMID: 29539287"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1371/journal.pntd.0002320"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Jaenisch, Thomas, Sakuntabhai, Anavaj, Wilder-Smith, Annelies. Dengue Research Funded by the European Commission-Scientific Strategies of Three European Dengue Research Consortia, PLoS Neglected Tropical Diseases, 2013, 7, 12, e2320, DOI: 10.1371/journal.pntd.0002320, PMID: 24349584"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s2214-109x(16)30255-8"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Van Kerkhove, MD, Reveiz, L, Souza, JP, Jaenisch, T, Carson, G, Broutet, N. Working group on ZHR: harmonisation of Zika virus research protocols to address key public health concerns, Lancet Glob Health, 2016, 4, 12, e911, e912, DOI: 10.1016/S2214-109X(16)30255-8, PMID: 27815145"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1186/s12916-018-1158-8"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "O'Reilly, KM, Lowe, R, Edmunds, WJ, Mayaud, P, Kucharski, A, Eggo, RM, Funk, S, Bhatia, D, Khan, K, Kraemer, MUG. Projecting the end of the Zika virus epidemic in Latin America: a modelling analysis, BMC Med, 2018, 16, 1, 180, DOI: 10.1186/s12916-018-1158-8, PMID: 30285863"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s0140-6736(16)32621-6"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Henao-Restrepo, AM, Camacho, A, Longini, IM, Watson, CH, Edmunds, WJ, Egger, M, Carroll, MW, Dean, NE, Diatta, I, Doumbia, M. Efficacy and effectiveness of an rVSV-vectored vaccine in preventing Ebola virus disease: final results from the Guinea ring vaccination, open-label, cluster-randomised trial (Ebola Ca Suffit!), Lancet, 2017, 389, 10068, 505, 518, DOI: 10.1016/S0140-6736(16)32621-6, PMID: 28017403"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s1473-3099(16)30463-7"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ujiie, M, Sasaki, K, Yoshikawa, N, Enami, T, Shobayashi, T. Introduction of a hepatitis B vaccine into the national routine immunisation programme of Japan, Lancet Infect Dis, 2016, 16, 1325, DOI: 10.1016/S1473-3099(16)30463-7"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.4254/wjh.v7.i3.488"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Lewis, JD, Enfield, KB, Sifri, CD. Hepatitis B in healthcare workers: transmission events and guidance for management, World J Hepatol, 2015, 7, 488, 497, DOI: 10.4254/wjh.v7.i3.488, PMID: 25848472"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1186/s12199-019-0769-9"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Yasin J, Fisseha R, Mekonnen F, Yirdaw K. Occupational exposure to blood and body fluids and associated factors among health care workers at the University of Gondar Hospital, Northwest Ethiopia. Environ Health Prev Med. 2019;24:18."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2957/kanzo.52.87"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Okuse, Chiaki, Yotsuyanagi, Hiroshi, Yamada, Norie, Yasuda, Kiyomi, Hara, Masatoshi, Matsuda, Takahide, Aono, Junko, Suzuki, Michihiro, Itoh, Fumio, Koike, Kazuhiko. Evaluation of usefulness of hepatitis B vaccination at St. Marianna University School of Medicine Hospital and related facilities, Kanzo, 2011, 52, 2, 87, 93, DOI: 10.2957/kanzo.52.87"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.jhep.2016.01.027"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Tong, S, Revill, P. Overview of hepatitis B viral replication and genetic variability, J Hepatol, 2016, 64, S4, 16, DOI: 10.1016/j.jhep.2016.01.027, PMID: 27084035"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.7883/yoken.65.476"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Shi, YH. Correlation between hepatitis B virus genotypes and clinical outcomes, Jpn J Infect Dis, 2012, 65, 476, 482, DOI: 10.7883/yoken.65.476, PMID: 23183198"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.15585/mmwr.rr6701a1"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Schillie, S, Vellozzi, C, Reingold, A, Harris, A, Haber, P, Ward, JW. Prevention of hepatitis B virus infection in the United States: recommendations of the Advisory Committee on Immunization Practices, MMWR Recomm Rep, 2018, 67, 1, 31, DOI: 10.15585/mmwr.rr6701a1"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.4161/hv.4.1.4747"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Cook, IF. Evidence based route of administration of vaccines, Hum Vaccin, 2008, 4, 63, 73, DOI: 10.4161/hv.4.1.4747"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.vaccine.2008.04.054"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Cook, IF. Sexual dimorphism of humoral immunity with human vaccines, Vaccine, 2008, 26, 3551, 3555, DOI: 10.1016/j.vaccine.2008.04.054, PMID: 18524433"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1002/hep.29876"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Nishida, N, Sugiyama, M, Sawai, H, Nishina, S, Sakai, A, Ohashi, J. Key HLA-DRB1-DQB1 haplotypes and role of the BTNL2 gene for response to a hepatitis B vaccine, Hepatology, 2018, 68, 848, 858, DOI: 10.1002/hep.29876, PMID: 29534301"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1007/s00535-017-1316-3"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Kato, M, Hamada-Tsutsumi, S, Okuse, C, Sakai, A, Matsumoto, N, Sato, M. Effects of vaccine-acquired polyclonal anti-HBs antibodies on the prevention of HBV infection of non-vaccine genotypes, J Gastroenterol, 2017, 52, 1051, 1063, DOI: 10.1007/s00535-017-1316-3, PMID: 28197802"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1371/journal.pone.0118062"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Hamada-Tsutsumi, S, Iio, E, Watanabe, T, Murakami, S, Isogawa, M, Iijima, S. Validation of cross-genotype neutralization by hepatitis B virus-specific monoclonal antibodies by in vitro and in vivo infection, PLoS One, 2015, 10, e0118062, DOI: 10.1371/journal.pone.0118062, PMID: 25693196"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/jgh.13030"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ito, K, Yotsuyanagi, H, Sugiyama, M, Yatsuhashi, H, Karino, Y, Takikawa, Y. Geographic distribution and characteristics of genotype A hepatitis B virus infection in acute and chronic hepatitis B patients in Japan, J Gastroenterol Hepatol, 2016, 31, 180, 189, DOI: 10.1111/jgh.13030, PMID: 26110395"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1002/hep.21249"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ozasa, A, Tanaka, Y, Orito, E, Sugiyama, M, Kang, JH, Hige, S. Influence of genotypes and precore mutations on fulminant or chronic outcome of acute hepatitis B virus infection, Hepatology, 2006, 44, 326, 334, DOI: 10.1002/hep.21249, PMID: 16871568"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1002/jmv.20320"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Suzuki, Y, Kobayashi, M, Ikeda, K, Suzuki, F, Arfase, Y, Akuta, N. Persistence of acute infection with hepatitis B virus genotype A and treatment in Japan, J Med Virol, 2005, 76, 33, 39, DOI: 10.1002/jmv.20320, PMID: 15779048"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1155/2017/1327492"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Sahana, HV, Sarala, N, Prasad, SR. Decrease in anti-HBs antibodies over time in medical students and healthcare workers after hepatitis B vaccination, Biomed Res Int, 2017, 2017, 1327492, DOI: 10.1155/2017/1327492, PMID: 29082237"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1056/nejmcp041507"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Gregory, A, Poland, GA, Jacobson, RM. Prevention of hepatitis B with the hepatitis B vaccine, N Engl J Med, 2004, 351, 2832, 2838, DOI: 10.1056/NEJMcp041507, PMID: 15625334"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3748/wjg.v20.i30.10383"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Filippelli, M, Lionetti, E, Gennaro, A, Lanzafame, A, Arrigo, T, Salpietro, C. Hepatitis B vaccine by intradermal route in non responder patients: an update, World J Gastroenterol, 2014, 20, 10383, 10394, DOI: 10.3748/wjg.v20.i30.10383, PMID: 25132754"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3109/00365548709117195"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Wahl, M, Hermodsson, S. Intradermal, subcutaneous or intramuscular administration of hepatitis B vaccine: side effects and antibody response, Scand J Infect Dis, 1987, 19, 617, 621, DOI: 10.3109/00365548709117195, PMID: 3441747"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.vetmic.2010.11.008"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Yu, H. Genetic diversity of H9N2 influenza viruses from pigs in China: a potential threat to human health, Vet Microbiol, 2011, 149, 254, 261, DOI: 10.1016/j.vetmic.2010.11.008, PMID: 21115230"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.meegid.2013.10.012"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Sun, X. Evidence of avian-like H9N2 influenza A virus among dogs in Guangxi, China, Infect Genet Evol, 2013, 20, 471, 475, DOI: 10.1016/j.meegid.2013.10.012, PMID: 24161411"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1111/tbed.12805"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Xue, R. H9N2 influenza virus isolated from minks has enhanced virulence in mice, Transbound Emerg Dis, 2018, 65, 904, 910, DOI: 10.1111/tbed.12805, PMID: 29333687"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1128/jvi.01059-18"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Kandeil, A. et al. Isolation and Characterization of a Distinct Influenza A Virus from Egyptian Bats. J Virol 93, 10.1128/JVI.01059-18 (2019)."
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3201/eid2407.172059"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ma, MJ. Avian Influenza A Virus Infection among Workers at Live Poultry Markets, China, 2013-2016, Emerg Infect Dis, 2018, 24, 1246, 1256, DOI: 10.3201/eid2407.172059, PMID: 29912708"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/s0140-6736(99)03311-5"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Peiris, M. Human infection with influenza H9N2, Lancet, 1999, 354, 916, 917, DOI: 10.1016/S0140-6736(99)03311-5, PMID: 10489954"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.2307/1588557"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Homme, PJ, Easterday, BC. Avian influenza virus infections. I. Characteristics of influenza A-turkey-Wisconsin-1966 virus, Avian Dis, 1970, 14, 66, 74, DOI: 10.2307/1588557, PMID: 4314007"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3390/vetsci5040082"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Pusch, Elizabeth, Suarez, David. The Multifaceted Zoonotic Risk of H9N2 Avian Influenza, Veterinary Sciences, 2018, 5, 4, 82, DOI: 10.3390/vetsci5040082"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3201/eid2501.180618"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ali, M. Avian Influenza A(H9N2) Virus in Poultry Worker, Pakistan, 2015, Emerg Infect Dis, 2019, 25, 136, 139, DOI: 10.3201/eid2501.180618, PMID: 30561309"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1371/journal.pone.0002923"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Wan, H. Replication and transmission of H9N2 influenza viruses in ferrets: evaluation of pandemic potential, PLoS One, 2008, 3, e2923, DOI: 10.1371/journal.pone.0002923, PMID: 18698430"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1007/s00705-013-1721-8"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Zhang, K. Experimental infection of non-human primates with avian influenza virus (H9N2), Arch Virol, 2013, 158, 2127, 2134, DOI: 10.1007/s00705-013-1721-8, PMID: 23665767"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.virusres.2013.04.004"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Zhang, K. Domestic cats and dogs are susceptible to H9N2 avian influenza virus, Virus Res, 2013, 175, 52, 57, DOI: 10.1016/j.virusres.2013.04.004, PMID: 23603563"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1073/pnas.160270697"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Lin, YP. Avian-to-human transmission of H9N2 subtype influenza A viruses: relationship between H9N2 and H5N1 human isolates, Proc Natl Acad Sci USA, 2000, 97, 9654, 9658, DOI: 10.1073/pnas.160270697, PMID: 10920197"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1073/pnas.96.16.9363"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Guan, Y, Shortridge, KF, Krauss, S, Webster, RG. Molecular characterization of H9N2 influenza viruses: were they the donors of the “internal” genes of H5N1 viruses in Hong Kong, Proc Natl Acad Sci USA, 1999, 96, 9363, 9367, DOI: 10.1073/pnas.96.16.9363, PMID: 10430948"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.vetmic.2014.09.029"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Gu, M. Enzootic genotype S of H9N2 avian influenza viruses donates internal genes to emerging zoonotic influenza viruses in China, Vet Microbiol, 2014, 174, 309, 315, DOI: 10.1016/j.vetmic.2014.09.029, PMID: 25457363"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3201/eid2208.160146"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Shen, YY. Novel Reassortant Avian Influenza A(H5N6) Viruses in Humans, Guangdong, China, 2015, Emerg Infect Dis, 2016, 22, 1507, 1509, DOI: 10.3201/eid2208.160146, PMID: 27331418"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1016/j.chom.2013.09.001"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Wu, A. Sequential reassortments underlie diverse influenza H7N9 genotypes in China, Cell Host Microbe, 2013, 14, 446, 452, DOI: 10.1016/j.chom.2013.09.001, PMID: 24055604"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.3390/v10090497"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Mostafa, Ahmed, Abdelwhab, Elsayed, Mettenleiter, Thomas, Pleschka, Stephan. Zoonotic Potential of Influenza A Viruses: A Comprehensive Overview, Viruses, 2018, 10, 9, 497, DOI: 10.3390/v10090497"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1128/jvi.02765-13"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Sutton, TC. Airborne transmission of highly pathogenic H7N1 influenza virus in ferrets, J Virol, 2014, 88, 6623, 6635, DOI: 10.1128/JVI.02765-13, PMID: 24696487"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1126/science.1229455"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Zhang, Y. H5N1 hybrid viruses bearing 2009/H1N1 virus genes transmit in guinea pigs by respiratory droplet, Science, 2013, 340, 1459, 1463, DOI: 10.1126/science.1229455, PMID: 23641061"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1371/journal.ppat.1000709"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Gao, Y. Identification of amino acids in HA and PB2 critical for the transmission of H5N1 avian influenza viruses in a mammalian host, PLoS Pathog, 2009, 5, e1000709, DOI: 10.1371/journal.ppat.1000709, PMID: 20041223"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1126/science.1213362"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Herfst, S. Airborne transmission of influenza A/H5N1 virus between ferrets, Science, 2012, 336, 1534, 1541, DOI: 10.1126/science.1213362, PMID: 22723413"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1002/embj.201387442"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "de Graaf, M, Fouchier, RA. Role of receptor binding specificity in influenza A virus transmission and pathogenesis, EMBO J, 2014, 33, 823, 841, DOI: 10.1002/embj.201387442, PMID: 24668228"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1126/science.1136212"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Tumpey, TM. A two-amino acid change in the hemagglutinin of the 1918 influenza virus abolishes transmission, Science, 2007, 315, 655, 659, DOI: 10.1126/science.1136212, PMID: 17272724"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1073/pnas.0507415102"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Gabriel, G. The viral polymerase mediates adaptation of an avian influenza virus to a mammalian host, Proc Natl Acad Sci USA, 2005, 102, 18590, 18595, DOI: 10.1073/pnas.0507415102, PMID: 16339318"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1128/jvi.02790-15"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Hanson, A. Identification of Stabilizing Mutations in an H5 Hemagglutinin Influenza Virus Protein, J Virol, 2015, 90, 2981, 2992, DOI: 10.1128/JVI.02790-15, PMID: 26719265"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1128/jvi.74.24.11825-11831.2000"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Suzuki, Y. Sialic acid species as a determinant of the host range of influenza A viruses, J Virol, 2000, 74, 11825, 11831, DOI: 10.1128/JVI.74.24.11825-11831.2000, PMID: 11090182"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1073/pnas.201401198"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Ha, Y, Stevens, DJ, Skehel, JJ, Wiley, DC. X-ray structures of H5 avian and H9 swine influenza virus hemagglutinins bound to avian and human receptor analogs, Proc Natl Acad Sci USA, 2001, 98, 11181, 11186, DOI: 10.1073/pnas.201401198, PMID: 11562490"
+      }
+    }, {
+      "doiLiteral" : {
+        "type" : "literal",
+        "value" : "10.1146/annurev.micro.59.030804.121059"
+      },
+      "beLiteral" : {
+        "type" : "literal",
+        "value" : "Parrish, CR, Kawaoka, Y. The origins of new pandemic viruses: the acquisition of new host ranges by canine parvovirus and influenza A viruses, Annu Rev Microbiol, 2005, 59, 553, 586, DOI: 10.1146/annurev.micro.59.030804.121059, PMID: 16153179"
+      }
+    } ]
+  }
+}

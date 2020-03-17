@@ -24,7 +24,7 @@ from datetime import datetime
 from time import sleep
 import re
 from lxml import etree
-
+from urllib.parse import unquote
 
 class EuropeanPubMedCentralProcessor(ReferenceProcessor):
     def __init__(self,
@@ -88,9 +88,9 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
                 "Processing article with local id '%s'." % cur_localid)
 
             if oa and not intext_refs:
-                ref_list_url = self.process_xml_source(cur_pmid)
+                ref_list_url = self.process_xml_source(cur_pmid, cur_doi, intext_refs=False)
             elif oa and intext_refs:
-                ref_list_url = self.process_xml_source(cur_pmid, intext_refs=True)
+                ref_list_url = self.process_xml_source(cur_pmid, cur_doi, intext_refs=True)
             else:
                 ref_list_url = self.process_references(cur_source, cur_id)
             if ref_list_url is not None:
@@ -172,13 +172,12 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
         }
 
     @staticmethod
-    def normalise_doi(id_string, include_prefix=False): # taken from https://github.com/opencitations/index/blob/master/identifier/doimanager.py
-        try:
-            doi_string = re.sub("\0+", "", re.sub("\s+", "", urllib.parse.unquote(id_string[id_string.index("10."):])))
+    def normalise_doi(doi_string, include_prefix=False): # taken from https://github.com/opencitations/index/blob/master/identifier/doimanager.py
+        if doi_string is not None:
+            doi_string = re.sub("\0+", "", re.sub("\s+", "", unquote(doi_string[doi_string.index("10."):])))
             return doi_string.lower().strip()
-        except:  # Any error in processing the DOI will return None
-            return None
-        #return doi_string.lower().strip()
+        return None
+        #return doi_string.lower().strip() if doi_string is not None else None
 
     @staticmethod
     def __create_entry_xml(xml_ref):
@@ -246,7 +245,7 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
                 if doi_string != "":
                     return doi_string
 
-    def process_xml_source(self, cur_pmid, intext_refs=False):
+    def process_xml_source(self, cur_pmid, cur_doi=None, intext_refs=False):
         if cur_pmid is not None:
             xml_source_url = self.xml_source_api.replace("XXX", cur_pmid)
 
@@ -316,8 +315,11 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
                                 if ref_xmlid == "":
                                     ref_xmlid = None
 
-                        self.rs.add_reference(entry_text, process_entry_text,
-                                              None, ref_doi, ref_pmid, ref_pmcid, ref_url, ref_xmlid)
+                        if cur_doi is not None and ref_doi is not None and cur_doi == ref_doi:
+                            pass
+                        else:
+                            self.rs.add_reference(entry_text, process_entry_text,
+                                            None, ref_doi, ref_pmid, ref_pmcid, ref_url, ref_xmlid)
 
 
                     if intext_refs and len(reference_pointers):

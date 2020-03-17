@@ -25,6 +25,7 @@ from script.ocdm.crossrefdatahandler import CrossrefDataHandler
 from script.ocdm.graphlib import GraphEntity
 from script.ccc.jats2oc import Jats2OC as jt
 from re import sub
+from fuzzywuzzy import fuzz
 
 
 class CrossrefProcessor(FormatProcessor):
@@ -44,10 +45,10 @@ class CrossrefProcessor(FormatProcessor):
                  timeout=30,
                  use_doi_in_bibentry_as_id=True,
                  use_url_in_bibentry_as_id=True,
-                 crossref_min_similarity_score=50.0,
+                 crossref_min_similarity_score=95.0,
                  intext_refs=False):
         self.crossref_api_works = "https://api.crossref.org/works/"
-        self.crossref_api_search = "https://api.crossref.org/works?rows=1&query.bibliographic=" # changed
+        self.crossref_api_search = "https://api.crossref.org/works?rows=3&query.bibliographic=" # return 3 results
         self.headers = headers
         self.sec_to_wait = sec_to_wait
         self.max_iteration = max_iteration
@@ -68,7 +69,7 @@ class CrossrefProcessor(FormatProcessor):
     def process_entry(self, entry):
         entry_cleaned = FormatProcessor.clean_entry(entry)
         cur_json = self.get_crossref_item(
-            self.__process_entity(entry_cleaned, self.crossref_api_search))
+            self.__process_entity(entry_cleaned, self.crossref_api_search),fuzzy_match=entry_cleaned) # returns first if similarity score > 95.0
         if cur_json is not None:
             return self.process_crossref_json(
                 cur_json, self.crossref_api_search + entry_cleaned,
@@ -149,9 +150,7 @@ class CrossrefProcessor(FormatProcessor):
                     cited_entities_xmlid_be, self.reference_pointers, self.g_set, \
                     self.curator, self.source_provider, self.source)
                 self.rf.update_graph_set(self.g_set)
-                # add link RP -> BE w/ same xml_id
-                # add link DE -> cited_entity
-                # create CI/AN
+
 
             return self.g_set
 
@@ -230,15 +229,7 @@ class CrossrefProcessor(FormatProcessor):
                                      "PMCID provided as input by %s." % self.source_provider,
                                      "PMCID", provided_pmcid))
 
-            # if cur_res is None and provided_url is not None:
-            #     cur_res = self.process_url(provided_url)
-            #     if cur_res is not None:
-            #         self.repok.add_sentence(
-            #             self.message("The entity has been found by means of the "
-            #                          "URL provided as input by %s." % self.source_provider,
-            #                          "URL", provided_url))
-
-            if cur_res is None and entry is not None:
+            if cur_res is None and entry is not None: # crossref API string search
                 if do_process_entry:
                     cur_res = self.process_entry(entry)
                 if cur_res is None:
@@ -250,15 +241,7 @@ class CrossrefProcessor(FormatProcessor):
                                 self.message("The entity for '%s' has been found by means of the "
                                              "DOI extracted from it." % entry,
                                              "DOI", extracted_doi))
-                    # if cur_res is None and self.get_bib_entry_url and extracted_url is not None:
-                    #     existing_res = self.rf.retrieve_from_url(extracted_url)
-                    #     if existing_res is not None:
-                    #         cur_res = self.g_set.add_br(
-                    #             self.name, self.source_provider, self.source, existing_res)
-                    #         self.repok.add_sentence(
-                    #             self.message("The entity for '%s' has been found by means of the "
-                    #                          "URL extracted from it." % entry,
-                    #                          "URL", extracted_url))
+
 
                 else:
                     self.repok.add_sentence(
@@ -351,15 +334,21 @@ class CrossrefProcessor(FormatProcessor):
             cur_id.create_xmlid(xmlid_string)
             cur_res.has_id(cur_id)
 
-    def get_crossref_item(self, json_crossref):
+    def get_crossref_item(self, json_crossref, fuzzy_match=None):
         result = None
         if json_crossref is not None and json_crossref["status"] == "ok":
             if json_crossref["message-type"] in ["work", "member"]:
                 result = json_crossref["message"]
             elif json_crossref["message-type"] == "work-list":
                 result = json_crossref["message"]["items"][0]
-                if result["score"] < self.crossref_min_similarity_score:
-                    result = None
+                if fuzzy_match is not None and result["score"] >= self.crossref_min_similarity_score:
+                    entry_cleaned = fuzzy_match
+                    result = jt.fuzzy_match(entry_cleaned, \
+                                json_crossref["message"]["items"], \
+                                self.crossref_min_similarity_score)
+                else:
+                    if result["score"] < self.crossref_min_similarity_score:
+                        result = None
         return result
 
     def process_crossref_json(

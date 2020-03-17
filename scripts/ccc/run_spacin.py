@@ -54,19 +54,21 @@ try:
                                                               dir_split=dir_split_number,
                                                               n_file_item=items_per_file,
                                                               default_dir=default_dir),
-                                               dir_split_number, items_per_file, supplier_prefix,wanted_label=False)
+                                               dir_split_number, items_per_file, supplier_prefix, triplestore_url,wanted_label=False)
                                 prov.generate_provenance(resp_agent="https://w3id.org/oc/ccc/prov/pa/0701") # TODO is it fine?
 
                                 res_storer = Storer(result,
                                                     context_map={context_path: context_file_path},
                                                     dir_split=dir_split_number,
                                                     n_file_item=items_per_file,
-                                                    default_dir=default_dir)
+                                                    default_dir=default_dir,
+                                                    nt=True)
 
                                 prov_storer = Storer(prov,
                                                      context_map={context_path: context_file_path},
                                                      dir_split=dir_split_number,
-                                                     n_file_item=items_per_file)
+                                                     n_file_item=items_per_file,
+                                                     nq=True)
 
                                 if do_parallel:
                                     base_share_dir = sharing_dir + sep + real_dir + \

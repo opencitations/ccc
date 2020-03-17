@@ -35,13 +35,14 @@ from rdflib import XSD
 class Storer(object):
 
     def __init__(self, graph_set=None, repok=None, reperr=None,
-                 context_map={}, default_dir="_", dir_split=0, n_file_item=1, nt=False):
-        self.nt=nt
+                 context_map={}, default_dir="_", dir_split=0, n_file_item=1, nt=False, nq=False):
+        self.nt = nt
+        self.nq = nq
         self.dir_split = dir_split
         self.n_file_item = n_file_item
         self.default_dir = default_dir
 
-        if not nt:
+        if not nt and not nq:
             self.context_map = context_map
             for context_url in context_map:
                 context_file_path = context_map[context_url]
@@ -230,7 +231,6 @@ class Storer(object):
                    (query_type, str(cur_g.identifier), cur_g.serialize(format="nt11", encoding="utf-8").decode("utf-8"))
 
     def __store_in_file(self, cur_g, cur_file_path, context_path):
-
         # Note: the following lines from here and until 'cur_json_ld' are a sort of hack for including all
         # the triples of the input graph into the final stored file. Some how, some of them are not written
         # in such file otherwise - in particular the provenance ones.
@@ -242,7 +242,8 @@ class Storer(object):
                 break
 
             new_g.addN([(s, p, o, g_iri)])
-        if not self.nt and context_path:
+
+        if not self.nt and not self.nq and context_path:
             cur_json_ld = json.loads(
                 new_g.serialize(format="json-ld", context=self.__get_context(context_path)).decode("utf-8"))
 
@@ -254,14 +255,16 @@ class Storer(object):
 
             with open(cur_file_path, "w") as f:
                 json.dump(cur_json_ld, f, indent=4, ensure_ascii=False)
-        else:
+        elif self.nt:
             new_g.serialize(cur_file_path, format="nt11", encoding="utf-8")
+        elif self.nq:
+            new_g.serialize(cur_file_path, format="nquads", encoding="utf-8")
 
         self.repok.add_sentence("File '%s' added." % cur_file_path)
 
     def dir_and_file_paths(self, cur_g, base_dir, base_iri):
         cur_subject = set(cur_g.subjects(None, None)).pop()
-        if self.nt:
+        if self.nt or self.nq:
             is_json = False
         else:
             is_json = True
@@ -392,7 +395,7 @@ class Storer(object):
         return cur_graph
 
     def __load_graph(self, file_path, cur_graph=None):
-        formats = ["json-ld", "rdfxml", "turtle", "trig","nt11"]
+        formats = ["json-ld", "rdfxml", "turtle", "trig", "nt11", "nquads"]
 
         current_graph = ConjunctiveGraph()
 

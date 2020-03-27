@@ -5,7 +5,7 @@ Preliminaries
  * install dependencies: fuzzywuzzy `pip install fuzzywuzzy`
  * config files:
    * change `script/bee/conf.py` (*do not change* the additional config file in `script/ccc/conf_bee.py`)
-   * change `script/ccc/conf_spacin.py` (*do not change* `script/spacin/conf.py` which is ignored by `script/ccc/run_spacin.py`)
+   * change `script/ccc/conf_spacin.py` (*do not change* `script/spacin/conf.py` which is ignored by `script/ccc/run_spacin.py`): Here use `context_path` included in `scripts/ccc/`
  * create a blazegraph with the same .properties file of occ
  * check for the gently_run/stop bash scripts
 

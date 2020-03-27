@@ -1,0 +1,4110 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+<?properties open_access?>
+<?DTDIdentifier.IdentifierValue
+-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables v1.0 20120330//EN
+?>
+<?DTDIdentifier.IdentifierType public?>
+<?SourceDTD.DTDName JATS-journalpublishing-oasis-article1.dtd?>
+<?SourceDTD.Version 1.0?>
+<?ConverterInfo.XSLTName jpoasis-nisons2nlmx2.xsl?>
+<?ConverterInfo.Version 1?>
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">J Enzyme Inhib Med Chem</journal-id>
+<journal-id journal-id-type="iso-abbrev">J Enzyme Inhib Med Chem</journal-id>
+<journal-id journal-id-type="publisher-id">IENZ</journal-id>
+<journal-id journal-id-type="publisher-id">ienz20</journal-id>
+<journal-title-group>
+<journal-title>
+Journal of Enzyme Inhibition and Medicinal Chemistry
+</journal-title>
+</journal-title-group>
+<issn pub-type="ppub">1475-6366</issn>
+<issn pub-type="epub">1475-6374</issn>
+<publisher>
+<publisher-name>Taylor a Francis</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="pmcid">6758606</article-id>
+<article-id pub-id-type="pmid">31537132</article-id>
+<article-id pub-id-type="doi">10.1080/14756366.2019.1666836</article-id>
+<article-id pub-id-type="publisher-id">1666836</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Paper</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>
+Novel 2-substituted-benzimidazole-6-sulfonamides as carbonic anhydrase inhibitors: synthesis, biological evaluation against isoforms I, II, IX and XII and molecular docking studies
+</article-title>
+<alt-title alt-title-type="running-authors">C. Milite et al.</alt-title>
+<alt-title alt-title-type="running-title">
+Journal of Enzyme Inhibition and Medicinal Chemistry
+</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-1000-1376</contrib-id>
+<name>
+<surname>Milite</surname>
+<given-names>Ciro</given-names>
+</name>
+<xref ref-type="aff" rid="AF0001">
+<sup>a</sup>
+</xref>
+<xref ref-type="author-notes" rid="FN0001">
+<sup>*</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-4271-5031</contrib-id>
+<name>
+<surname>Amendola</surname>
+<given-names>Giorgio</given-names>
+</name>
+<xref ref-type="aff" rid="AF0002">
+<sup>b</sup>
+</xref>
+<xref ref-type="author-notes" rid="FN0001">
+<sup>*</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-3342-702X</contrib-id>
+<name>
+<surname>Nocentini</surname>
+<given-names>Alessio</given-names>
+</name>
+<xref ref-type="aff" rid="AF0003">
+<sup>c</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-0107-2682</contrib-id>
+<name>
+<surname>Bua</surname>
+<given-names>Silvia</given-names>
+</name>
+<xref ref-type="aff" rid="AF0003">
+<sup>c</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-9062-5914</contrib-id>
+<name>
+<surname>Cipriano</surname>
+<given-names>Alessandra</given-names>
+</name>
+<xref ref-type="aff" rid="AF0001">
+<sup>a</sup>
+</xref>
+<xref ref-type="aff" rid="AF0004">
+<sup>d</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-9814-7195</contrib-id>
+<name>
+<surname>Barresi</surname>
+<given-names>Elisabetta</given-names>
+</name>
+<xref ref-type="aff" rid="AF0005">
+<sup>e</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-8960-7858</contrib-id>
+<name>
+<surname>Feoli</surname>
+<given-names>Alessandra</given-names>
+</name>
+<xref ref-type="aff" rid="AF0001">
+<sup>a</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-2181-2142</contrib-id>
+<name>
+<surname>Novellino</surname>
+<given-names>Ettore</given-names>
+</name>
+<xref ref-type="aff" rid="AF0006">
+<sup>f</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-7897-7917</contrib-id>
+<name>
+<surname>Da Settimo</surname>
+<given-names>Federico</given-names>
+</name>
+<xref ref-type="aff" rid="AF0005">
+<sup>e</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-4262-0323</contrib-id>
+<name>
+<surname>Supuran</surname>
+<given-names>Claudiu T.</given-names>
+</name>
+<xref ref-type="aff" rid="AF0003">
+<sup>c</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-7449-3704</contrib-id>
+<name>
+<surname>Castellano</surname>
+<given-names>Sabrina</given-names>
+</name>
+<xref ref-type="aff" rid="AF0001">
+<sup>a</sup>
+</xref>
+<xref ref-type="corresp" rid="AN0001"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-8900-0968</contrib-id>
+<name>
+<surname>Cosconati</surname>
+<given-names>Sandro</given-names>
+</name>
+<xref ref-type="aff" rid="AF0002">
+<sup>b</sup>
+</xref>
+<xref ref-type="corresp" rid="AN0002"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0001-8675-939X</contrib-id>
+<name>
+<surname>Taliani</surname>
+<given-names>Sabrina</given-names>
+</name>
+<xref ref-type="aff" rid="AF0005">
+<sup>e</sup>
+</xref>
+</contrib>
+<aff id="AF0001">
+<label>a</label>
+<institution>
+Department of Pharmacy, Epigenetic Med Chem Lab, University of Salerno
+</institution>
+, Fisciano (SA),
+<country>Italy</country>
+;
+</aff>
+<aff id="AF0002">
+<label>b</label>
+<institution>
+DiSTABiF, Università della Campania Luigi Vanvitelli
+</institution>
+, Caserta,
+<country>Italy</country>
+;
+</aff>
+<aff id="AF0003">
+<label>c</label>
+<institution>
+NEUROFARBA Department, Sezione di Scienze Farmaceutiche e Nutraceutiche, Università degli Studi di Firenze
+</institution>
+, Sesto Fiorentino (Florence),
+<country>Italy</country>
+;
+</aff>
+<aff id="AF0004">
+<label>d</label>
+<institution>
+PhD Program in Drug Discovery and Development, University of Salerno
+</institution>
+, Fisciano (SA),
+<country>Italy</country>
+;
+</aff>
+<aff id="AF0005">
+<label>e</label>
+<institution>Department of Pharmacy, Universy of Pisa</institution>
+, Pisa,
+<country>Italy</country>
+;
+</aff>
+<aff id="AF0006">
+<label>f</label>
+<institution>
+Department of Pharmacy, University Federico II of Naples
+</institution>
+, Naples,
+<country>Italy</country>
+</aff>
+</contrib-group>
+<author-notes>
+<fn id="FN0001">
+<label>*</label>
+<p>
+These two authors equally contributed to this paper.
+</p>
+</fn>
+<fn id="AUFN2">
+<p>
+Supplemental data for this article can be accessed
+<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1080/14756366.2019.1666836">
+<underline>here</underline>
+</ext-link>
+.
+</p>
+</fn>
+<corresp id="AN0001">
+CONTACT Sabrina Castellano
+<email>scastellano@unisa.it</email>
+<institution>
+Department of Pharmacy, Epigenetic Med Chem Lab, University of Salerno
+</institution>
+,
+<addr-line>via Giovanni Paolo II 132, I-84084 Fisciano</addr-line>
+, Salerno,
+<country>Italy</country>
+;
+</corresp>
+<corresp id="AN0002">
+Sandro Cosconati
+<email>sandro.cosconati@unicampania.it</email>
+<institution>
+DiSTABiF, University of Campania “Luigi Vanvitelli”
+</institution>
+,
+<addr-line>Via Vivaldi 43, 81100 Caserta</addr-line>
+,
+<country>Italy</country>
+</corresp>
+</author-notes>
+<pub-date pub-type="collection">
+<year>2019</year>
+</pub-date>
+<pub-date pub-type="epub">
+<day>20</day>
+<month>9</month>
+<year>2019</year>
+</pub-date>
+<volume>34</volume>
+<issue>1</issue>
+<fpage seq="167">1697</fpage>
+<lpage>1710</lpage>
+<history>
+<date date-type="received">
+<day>26</day>
+<month>7</month>
+<year>2019</year>
+</date>
+<date date-type="rev-recd">
+<day>05</day>
+<month>9</month>
+<year>2019</year>
+</date>
+<date date-type="accepted">
+<day>06</day>
+<month>9</month>
+<year>2019</year>
+</date>
+</history>
+<permissions>
+<copyright-statement>
+© 2019 The Author(s). Published by Informa UK Limited, trading as Taylor a Francis Group.
+</copyright-statement>
+<copyright-year>2019</copyright-year>
+<copyright-holder>The Author(s)</copyright-holder>
+<license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/">
+<license-p>
+This is an Open Access article distributed under the terms of the Creative Commons Attribution License (
+<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>
+), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="IENZ_34_1666836.pdf"/>
+<abstract>
+<title>Abstract</title>
+<p>
+Inhibition of Carbonic Anhydrases (CAs) has been clinically exploited for many decades for a variety of therapeutic applications. Within a research project aimed at developing novel classes of CA inhibitors (CAIs) with a proper selectivity for certain isoforms, a series of derivatives featuring the 2-substituted-benzimidazole-6-sulfonamide scaffold, conceived as frozen analogs of Schiff bases and secondary amines previously reported in the literature as CAIs, were investigated. Enzyme inhibition assays on physiologically relevant human CA I, II, IX and XII isoforms revealed a number of potent CAIs, showing promising selectivity profiles towards the transmembrane tumor-associated CA IX and XII enzymes. Computational studies were attained to clarify the structural determinants behind the activities and selectivity profiles of the novel inhibitors.
+</p>
+</abstract>
+<abstract abstract-type="graphical">
+<title>Graphical Abstract</title>
+<p>
+<fig id="UF0001" orientation="portrait" position="anchor">
+<graphic content-type="color" xlink:href="IENZ_A_1666836_UF0001_C"/>
+</fig>
+</p>
+</abstract>
+<kwd-group kwd-group-type="author">
+<title>Keywords</title>
+<kwd>Carbonic anhydrase inhibitors</kwd>
+<kwd>benzimidazole-sulfonamides</kwd>
+<kwd>reduced flexibility approach</kwd>
+<kwd>isoform-selective inhibitors</kwd>
+<kwd>molecular docking</kwd>
+</kwd-group>
+<funding-group>
+<award-group>
+<funding-source>
+<named-content content-type="funder-name">University of Pisa</named-content>
+<named-content content-type="funderidentifier">10.13039/501100007514</named-content>
+</funding-source>
+<award-id>PRA_2018_20</award-id>
+</award-group>
+<award-group>
+<funding-source>
+<named-content content-type="funder-name">University of Salerno</named-content>
+<named-content content-type="funderidentifier">10.13039/501100007065</named-content>
+</funding-source>
+<award-id>FARB 2017 and 2018</award-id>
+</award-group>
+<award-group>
+<funding-source>
+<named-content content-type="funder-name">University of Campania Luigi Vanvitelli</named-content>
+</funding-source>
+</award-group>
+<award-group>
+<funding-source>
+<named-content content-type="funder-name">Regione Campania</named-content>
+<named-content content-type="funderidentifier">10.13039/501100003852</named-content>
+</funding-source>
+</award-group>
+<award-group>
+<funding-source>
+<named-content content-type="funder-name">MIUR-PRIN 2015</named-content>
+<named-content content-type="funderidentifier">10.13039/501100003407</named-content>
+</funding-source>
+<award-id>2015FCHJ8E_003</award-id>
+</award-group>
+<funding-statement>
+This work was supported by the University of Pisa [PRA Project, PRA_2018_20]; University of Salerno (FARB 2017 and 2018); University of Campania Luigi Vanvitelli (Valere Plus Project); Regione Campania (iCURE project); and MIUR-PRIN 2015 [Grant 2015FCHJ8E_003].
+</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="5"/>
+<table-count count="1"/>
+<page-count count="14"/>
+<word-count count="9354"/>
+</counts>
+</article-meta>
+</front>
+<body>
+<sec id="s0001">
+<title>Introduction</title>
+<p>
+Carbonic anhydrases (CA) are a family of ubiquitary zinc metalloenzymes that catalyze the reversible reaction of hydration of CO
+<sub>2</sub>
+to HCO
+<sub>3</sub>
+<sup>−</sup>
+ 
+<xref rid="CIT0001" ref-type="bibr">
+<sup>1</sup>
+</xref>
+. This simple transformation plays a physiological regulatory role in a number of processes associated with pH control, ion transport, fluid secretion and several biosynthetic pathways
+<xref rid="CIT0001" ref-type="bibr">
+<sup>1</sup>
+</xref>
+. Fifteen CA isoenzymes are encoded in humans and other primates, that differ for their subcellular localization, catalytic activity, and susceptibility to different classes of inhibitors
+<xref rid="CIT0001" ref-type="bibr">
+<sup>1</sup>
+</xref>
+. Specifically, cytosolic (CA I, CA II, CA III, CA VII, and CA XIII), membrane-bound (CA IV, CA IX, CA XII and CA XIV), mitochondrial (CA VA and CA VB), and secreted in saliva (CA VI) enzymes were characterized
+<xref rid="CIT0001" ref-type="bibr">
+<sup>1</sup>
+</xref>
+. Most of these CA isoforms represent interesting therapeutic targets, and their inhibition has been exploited clinically for many decades for a variety of applications in treating a multitude of diseases such as glaucoma, edema, epilepsy, obesity, neuropathic pain and other neurological disorders
+<xref rid="CIT0002" ref-type="bibr">
+<sup>2–4</sup>
+</xref>
+. More recently, hCA IX and XII have been implicated in tumor progression/metastasis, and their selective inhibition could represent an additional opportunity for drug intervention against hypoxic cancers
+<xref rid="CIT0005" ref-type="bibr">
+<sup>5</sup>
+</xref>
+.
+</p>
+<p>
+Sulfonamides and their bioisosteres (sulfamates, sulfamides) are known, powerful CA inhibitors (CAIs)
+<xref rid="CIT0006" ref-type="bibr">
+<sup>6</sup>
+</xref>
+. Acetazolamide
+<bold>1</bold>
+(AAZ), methazolamide
+<bold>2</bold>
+, ethoxzolamide
+<bold>3</bold>
+, brinzolamide
+<bold>4</bold>
+and dorzolamide
+<bold>5</bold>
+are among the CAIs used in medicine mainly as diuretics and antiglaucoma agents (
+<xref ref-type="fig" rid="F0005">Chart 1</xref>
+)
+<xref rid="CIT0006" ref-type="bibr">
+<sup>6</sup>
+</xref>
+.
+</p>
+<fig id="F0005" orientation="portrait" position="float">
+<label>Chart 1.</label>
+<caption>
+<p>Structures of clinically used CAIs.</p>
+</caption>
+<graphic content-type="black-white" xlink:href="IENZ_A_1666836_F0005_B"/>
+</fig>
+<p>
+Because of the ubiquity of CAs, the selectivity of the inhibitors for certain isoforms is a crucial issue to be reached in a drug development campaign in order to target a disease without relevant side effects
+<xref rid="CIT0007" ref-type="bibr">
+<sup>7</sup>
+</xref>
+. In this respect, expanding the chemical space by the exploration of novel scaffolds may aid the development of novel classes of CAIs featuring improved pharmacological properties in terms of inhibition potency and isoform-selectivity.
+</p>
+<p>
+Among the several sulfonamide CAIs described, Schiff bases and secondary amines incorporating aromatic/heterocyclic sulfonamide moieties in their structure (compounds of type
+<bold>I</bold>
+in
+<xref ref-type="fig" rid="F0001">Figure 1</xref>
+) have been extensively investigated in recent years
+<xref rid="CIT0008" ref-type="bibr">
+<sup>8–11</sup>
+</xref>
+. Comparing the activity of imines and their secondary amine counterparts, it is evident that the molecular flexibility markedly affects, positively or negatively, both activity and selectivity
+<xref rid="CIT0008" ref-type="bibr">
+<sup>8–11</sup>
+</xref>
+.
+</p>
+<fig id="F0001" orientation="portrait" position="float">
+<label>Figure 1.</label>
+<caption>
+<p>Flowchart of our frozen analog approach.</p>
+</caption>
+<graphic content-type="color" xlink:href="IENZ_A_1666836_F0001_C"/>
+</fig>
+<p>
+Prompted by these outcomes and exploiting our experience in the application of the frozen analog approach
+<xref rid="CIT0012" ref-type="bibr">
+<sup>12</sup>
+</xref>
+<sup>,</sup>
+<xref rid="CIT0013" ref-type="bibr">
+<sup>13</sup>
+</xref>
+, we decided to further reduce the flexibility of the Schiff bases constraining the N=C imine bond into a ring (
+<bold>II</bold>
+,
+<xref ref-type="fig" rid="F0001">Figure 1</xref>
+). As a rigidifying building block, we decided to introduce the benzimidazole (
+<bold>III</bold>
+,
+<xref ref-type="fig" rid="F0001">Figure 1</xref>
+), a privileged structure extensively used in medicinal chemistry, which has been only scarcely explored for its potential in the development of CAIs
+<xref rid="CIT0014" ref-type="bibr">
+<sup>14</sup>
+</xref>
+. As substituent in the position 2 of benzimidazole core, we selected phenols and benzoic acid derivatives. In fact, different studies showed that these scaffolds are effective CAIs, giving interactions with the enzyme that may not involve a direct interaction with the active site zing ion
+<xref rid="CIT0015" ref-type="bibr">
+<sup>15–17</sup>
+</xref>
+. Herein, we report the synthesis of 2-substituted-benzimidazole-6-sulfonamides
+<bold>6–18</bold>
+and the related carboxamide
+<bold>19</bold>
+and their inhibitory activity toward four physiologically relevant enzymes, the cytosolic isoforms hCA I and II as well as the transmembrane tumor-associated ones hCA IX and XII.
+</p>
+</sec>
+<sec id="s0002">
+<title>Materials and methods</title>
+<sec id="s0003">
+<title>Chemistry</title>
+<p>
+All chemicals were purchased from Sigma Aldrich Srl (Milan, Italy) or from Fluorochem Ltd. (Hadfield, UK) and were of the highest purity. All solvents were reagent grade and, when necessary, were purified and dried by standard methods. All reactions requiring anhydrous conditions were conducted under a positive atmosphere of nitrogen in oven-dried glassware. Standard syringe techniques were used for anhydrous addition of liquids. Reactions were routinely monitored by TLC performed on aluminum-backed silica gel plates (Merck DC, Alufolien Kieselgel 60 F
+<sub>254</sub>
+) with spots visualized by UV light (λ = 254, 365 nm) or using a KMnO
+<sub>4</sub>
+alkaline solution. Solvents were removed using a rotary evaporator operating at a reduced pressure of ∼10 Torr. Organic solutions were dried over anhydrous Na
+<sub>2</sub>
+SO
+<sub>4</sub>
+. Chromatographic purification was done on an automated flash-chromatography system (IsoleraTM Dalton 2000, Biotage) using cartridges packed with KP-SIL, 60 Å (40–63 µm particle size). All microwave assisted reactions were conducted in a CEM Discover
+<sup>®</sup>
+SP microwave synthesizer equipped with a vertically focused IR temperature sensor. Analytical high performance liquid chromatography (HPLC) was performed on a Shimadzu SPD 20 A UV/VIS detector (λ = 220 and 254 nm) using C-18 column Phenomenex Synergi Fusion - RP 80 A (75 × 4.60 mm; 4 µm) at 25 °C using a mobile phase A (water + 0.1% TFA) and B (ACN + 0.1% TFA) at a flow rate of 1 ml/min.
+<sup>1</sup>
+H spectra were recorded at 400 MHz on a Bruker Ascend 400 spectrometer while
+<sup>13</sup>
+C NMR spectra were obtained by distortionless enhancement by polarization transfer quaternary (DEPTQ) spectroscopy on the same spectrometer. Chemical shifts are reported in
+<italic>δ</italic>
+(ppm) relative to the internal reference tetramethylsilane (TMS). Due to the existence of tautomers, some
+<sup>1</sup>
+H and
+<sup>13</sup>
+C NMR signals could not be detected for some of the prepared benzimidazoles so only the distinct signals are reported. Low resolution mass spectra were recorded on a Finnigan LCQ DECA TermoQuest mass spectrometer in electrospray positive and negative ionization modes (ESI-MS). High resolution mass spectra were recorded on a Bruker solariX MRMS in electrospray positive ionization modes (ESI-FTMS). All tested compounds possessed a purity of at least 95% established by HPLC unless otherwise noted. Acids
+<bold>27</bold>
+and
+<bold>28a</bold>
+were commercially available, acid
+<bold>28b</bold>
+was obtained by previously reported procedure (see
+<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1080/14756366.2019.1666836">Supplementary Data</ext-link>
+).
+</p>
+<sec id="s0004">
+<title>
+2-(4-Hydroxyphenyl)-1H-benzo[d]imidazole-6-sulfonamide (6)
+</title>
+<p>
+<italic>N</italic>
+-(tert-butyl)-2-(4-hydroxyphenyl)-1
+<italic>H</italic>
+-benzo[
+<italic>d</italic>
+]imidazole-6-sulfonamide
+<bold>26a</bold>
+(174 mg, 0.504 mmol) was dissolved in 2 ml of a solution DCM/TFA (1:1) and the mixture was stirred for 18 h. The solvent was evaporated, and the resulting solid was crystallized with ethanol to give the title compound as a brown solid (110 mg, 75%).
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+10.12 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 8.03 (d,
+<italic>J</italic>
+ = 8.3 Hz, 2H), 7.99 (s, 1H), 7.72–7.64 (m, 2H), 7.28 (s, 2H, exchangeable with D
+<sub>2</sub>
+O), 6.95 (d,
+<italic>J =</italic>
+ 8.3 Hz, 2H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+159.92, 154.19, 137.88, 128.67, 119.73, 115.85. HRMS (ESI): m/z [M + H]
+<sup>+</sup>
+calcd for C
+<sub>13</sub>
+H
+<sub>11</sub>
+N
+<sub>3</sub>
+O
+<sub>3</sub>
+S + H
+<sup>+</sup>
+, 290.05939; found, 290.05938.
+</p>
+</sec>
+<sec id="s0005">
+<title>
+2-(4-Hydroxybenzyl)-1H-benzo[d]imidazole-6-sulfonamide (7)
+</title>
+<p>
+Compound
+<bold>7</bold>
+was obtained as a white solid (47 mg, 75%) by reaction of
+<bold>31</bold>
+(74 mg, 0.206 mmol) following the procedure described for
+<bold>6</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+9.42 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 8.04 (s, 1H), 7.79–7.73 (m, 2H), 7.39 (s, 2H, exchangeable with D
+<sub>2</sub>
+O), 7.16 (d,
+<italic>J =</italic>
+ 8.0 Hz, 2H), 6.75 (d,
+<italic>J =</italic>
+ 7.8 Hz, 2H), 4.26 (s, 2H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+156.71, 156.58, 139.31, 130.02, 125.27, 120.94, 115.54, 114.50, 112.54, 32.95. HRMS (ESI): m/z [M + H]
+<sup>+</sup>
+calcd for C
+<sub>14</sub>
+H
+<sub>13</sub>
+N
+<sub>3</sub>
+O
+<sub>3</sub>
+S + H
+<sup>+</sup>
+, 304.07504; found, 304.07503.
+</p>
+</sec>
+<sec id="s0006">
+<title>
+2-(4-Hydroxyphenethyl)-1H-benzo[d]imidazole-6-sulfonamide (8)
+</title>
+<p>
+Compound
+<bold>30a</bold>
+(245 mg, 0.626 mmol) was dissolved in 80 ml of toluene,
+<italic>p</italic>
+-toluensulfonic acid (59 mg, 0.313 mmol) was added and the resulting mixture was heated at reflux for 6 h. Solvent was evaporated and the crude residue was taken up with a saturated solution of NaHCO
+<sub>3</sub>
+(30 ml). The aqueous phase was extracted with EtOAc (3 × 20 ml) and the collected organic phases were washed with saturated solution of NaHCO
+<sub>3</sub>
+(3 × 20 ml), brine (20 ml), anhydrified over Na
+<sub>2</sub>
+SO
+<sub>4</sub>
+, filtered and concentrated under reduced pressure. The title compound was obtained after crystallization with ethanol as a light brown solid (130 mg, 65%).
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+9.15 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 7.93 (s, 1H), 7.63–7.58 (m, 2H), 7.21 (s, 2H, exchangeable with D
+<sub>2</sub>
+O), 7.01 (d,
+<italic>J =</italic>
+ 8.1 Hz, 2H), 6.64 (d,
+<italic>J =</italic>
+ 8.1 Hz, 2H), 3.09 (t,
+<italic>J =</italic>
+ 7.5 Hz, 2H), 2.99 (t,
+<italic>J =</italic>
+ 7.5 Hz, 2H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+155.56, 137.19, 130.80, 129.05, 119.01, 115.09, 32.44, 30.88. HRMS (ESI): m/z [M + H]
+<sup>+</sup>
+calcd for C
+<sub>15</sub>
+H
+<sub>15</sub>
+N
+<sub>3</sub>
+O
+<sub>3</sub>
+S + H
+<sup>+</sup>
+, 318.09069; found, 318.09066
+</p>
+</sec>
+<sec id="s0007">
+<title>2-Phenyl-1H-benzo[d]imidazole-6-sulfonamide (9)</title>
+<p>
+Compound
+<bold>9</bold>
+was obtained as a light brown solid (49 mg, 75%) by reaction of
+<bold>26b</bold>
+(80 mg, 0.24 mmol) following the procedure described for
+<bold>6</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.25–8.16 (m, 2H), 8.09 (d,
+<italic>J =</italic>
+ 1.8 Hz, 1H), 7.82 (d,
+<italic>J =</italic>
+ 8.7 Hz, 1H), 7.77 (dd,
+<italic>J =</italic>
+ 8.5, 1.8 Hz, 1H), 7.68–7.59 (m, 3H), 7.37 (s, 2H, exchangeable with D
+<sub>2</sub>
+O).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+153.36, 138.92, 131.25, 129.22, 128.00, 127.07, 120.64. HRMS (ESI): m/z [M + H]
+<sup>+</sup>
+calcd for C
+<sub>13</sub>
+H
+<sub>11</sub>
+N
+<sub>3</sub>
+O
+<sub>2</sub>
+S + H
+<sup>+</sup>
+, 274.06447; found, 274.06445.
+</p>
+</sec>
+<sec id="s0008">
+<title>
+Methyl 4-(6-sulfamoyl-1H-benzo[d]imidazol-2-yl)benzoate (10)
+</title>
+<p>
+Compound
+<bold>10</bold>
+was obtained as a light brown solid (49 mg, 70%) by reaction of
+<bold>26c</bold>
+(82 mg, 0.212 mmol) following the procedure described for
+<bold>6</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+) 8.38–8.32 (m, 2H), 8.20–8.13 (m, 2H, 1H exchangeable with D
+<sub>2</sub>
+O), 8.00–7.85 (m, 1H), 7.78–7.68 (m, 1H), 7.33 (m, 2H, 1H exchangeable with D
+<sub>2</sub>
+O), 3.91 (s, 3H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+165.71, 152.86, 152.43, 145.64, 142.87, 138.78, 138.31, 137.06, 134.23, 133.61, 130.84, 129.87, 126.96, 120.73, 119.74, 119.35, 117.09, 111.97, 109.84, 52.33. HRMS (ESI):
+<italic>m/z</italic>
+[M + H]
+<sup>+</sup>
+calcd for C
+<sub>15</sub>
+H
+<sub>13</sub>
+N
+<sub>3</sub>
+O
+<sub>4</sub>
+S + H
+<sup>+</sup>
+, 332.06995; found, 332.06993.
+</p>
+</sec>
+<sec id="s0009">
+<title>
+4-(6-Sulfamoyl-1H-benzo[d]imidazol-2-yl)benzoic acid (11)
+</title>
+<p>
+To a stirred solution of compound
+<bold>10</bold>
+(250 mg, 0.645 mmol) in 1.5 ml of THF was added a water solution (1.5 ml) of LiOH (62 mg, 2.58 mmol). The reaction mixture was stirred at room temperature for 3 h and then concentrated under vacuum. The aqueous phase was washed with CHCl
+<sub>3</sub>
+then acidified with 3N HCl until a white precipitate formed. After filtration, the title compound was obtained as white solid (200 mg, 83%).
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.32 (d,
+<italic>J =</italic>
+ 8.2 Hz, 2H), 8.16–8.11 (m, 3H), 7.84–7.68 (m, 2H), 7.32 (s, 2H, exchangeable with D
+<sub>2</sub>
+O).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+166.76, 133.24, 132.14, 129.99, 126.83. HRMS (ESI):
+<italic>m/z</italic>
+[M + H]
+<sup>+</sup>
+calcd for C
+<sub>14</sub>
+H
+<sub>11</sub>
+N
+<sub>3</sub>
+O
+<sub>4</sub>
+S + H
+<sup>+</sup>
+, 318.05430; found, 318.05429.
+</p>
+</sec>
+<sec id="s0010">
+<title>
+2-(3,4-Dihydroxyphenyl)-1H-benzo[d]imidazole-6-sulfonamide (12)
+</title>
+<p>
+Compound
+<bold>12</bold>
+was obtained as a light brown solid (105 mg, 73%) by reaction of
+<bold>26d</bold>
+(170 mg, 0.470 mmol) following the procedure described for
+<bold>6</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+9.54 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 9.31 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 8.02, 7.90 (2 s, 1H), 7.73–7.55 (m, 3H), 7.48 (dd,
+<italic>J =</italic>
+ 8.4, 1.7 Hz, 1H), 7.31–7.17 (m, 2H, exchangeable with D
+<sub>2</sub>
+O), 6.89 (d,
+<italic>J =</italic>
+ 8.5 Hz, 1H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+148.09, 145.63, 143.10, 137.50, 120.73, 119.53, 119.16, 118.58, 118.18, 116.13, 115.80, 114.26, 110.98, 109.09. HRMS (ESI):
+<italic>m/z</italic>
+[M + H]
+<sup>+</sup>
+calcd for C
+<sub>13</sub>
+H
+<sub>11</sub>
+N
+<sub>3</sub>
+O
+<sub>4</sub>
+S + H
+<sup>+</sup>
+, 306.05430; found, 306.05431.
+</p>
+</sec>
+<sec id="s0011">
+<title>
+Methyl 2-hydroxy-5-(6-sulfamoyl-1H-benzo[d]imidazol-2-yl)benzoate (13)
+</title>
+<p>
+Compound
+<bold>13</bold>
+was obtained as a light brown solid (38 mg, 75%) by reaction of
+<bold>26e</bold>
+(60 mg, 0.149 mmol) following the procedure described for
+<bold>6</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+10.94 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 8.65 (d,
+<italic>J =</italic>
+ 2.3 Hz, 1H), 8.32 (dd,
+<italic>J =</italic>
+ 8.8, 2.2 Hz, 1H), 8.04 (s, 1H), 7.80–7.70 (m, 2H), 7.35 (s, 2H, exchangeable with D
+<sub>2</sub>
+O), 7.23 (dd,
+<italic>J =</italic>
+ 8.8, 2.0 Hz, 1H), 3.97 (s, 3H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+168.12, 161.55, 152.68, 138.60, 133.57, 129.30, 120.36, 118.50, 114.47, 52.64. HRMS (ESI):
+<italic>m/z</italic>
+[M + H]
+<sup>+</sup>
+calcd for C
+<sub>15</sub>
+H
+<sub>13</sub>
+N
+<sub>3</sub>
+O
+<sub>5</sub>
+S + H
+<sup>+</sup>
+, 348.06487; found, 348.06486.
+</p>
+</sec>
+<sec id="s0012">
+<title>
+2-hydroxy-5-(6-sulfamoyl-1H-benzo[d]imidazol-2-yl)benzoic acid (14)
+</title>
+<p>
+Compound
+<bold>14</bold>
+was obtained as white solid (120 mg, 83%) by reaction of
+<bold>13</bold>
+(150 mg, 0.43 mmol) following the procedure described for
+<bold>11</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.68 (d,
+<italic>J =</italic>
+ 2.4 Hz, 1H), 8.32 (dd,
+<italic>J =</italic>
+ 8.7, 2.5 Hz, 1H), 8.02 (s, 1H), 7.75–7.67 (m, 2H), 7.30 (s, 2H, exchangeable with D
+<sub>2</sub>
+O), 7.17 (dd,
+<italic>J =</italic>
+ 8.8, 2.2 Hz, 1H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+171.28, 163.06, 153.18, 138.07, 133.57, 129.08, 119.88, 118.11, 114.04. HRMS (ESI):
+<italic>m/z</italic>
+[M + H]
+<sup>+</sup>
+calcd for C
+<sub>14</sub>
+H
+<sub>11</sub>
+N
+<sub>3</sub>
+O
+<sub>5</sub>
+S + H
+<sup>+</sup>
+, 334.04922; found, 334,04922.
+</p>
+</sec>
+<sec id="s0013">
+<title>
+Methyl 5-(6-(N-ethylsulfamoyl)-1H-benzo[d]imidazol-2-yl)-2-hydroxybenzoate (15)
+</title>
+<p>
+Compound
+<bold>15</bold>
+was obtained as a light brown solid (235 mg, 71%) by reaction of
+<bold>20b</bold>
+(188 mg, 0.88 mmol) and methyl 5-formylsalicylate (160 mg, 0.88 mmol) following the procedure described for
+<bold>6</bold>
+.
+</p>
+<p>
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+10.85 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 8.65 (d,
+<italic>J =</italic>
+ 2.4 Hz, 1H), 8.32 (dd,
+<italic>J =</italic>
+ 8.7, 2.4 Hz, 1H), 7.99–7.96 (m, 1H), 7.79–7.68 (m, 1H), 7.68–7.59 (m, 1H), 7.47 (t,
+<italic>J =</italic>
+ 5.7 Hz, 1H, exchangeable with D
+<sub>2</sub>
+O), 7.20 (d,
+<italic>J =</italic>
+ 8.7 Hz, 1H), 3.97 (s, 3H), 2.83 – 2.72 (m, 2H), 0.96 (t,
+<italic>J =</italic>
+ 7.2 Hz, 3H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+168.31, 161.28, 153.22, 133.98, 133.47, 128.91, 120.80, 120.49, 118.38, 114.19, 52.62, 37.55, 14.65. HRMS (ESI):
+<italic>m/z</italic>
+[M + H]
+<sup>+</sup>
+calcd for C
+<sub>17</sub>
+H
+<sub>17</sub>
+N
+<sub>3</sub>
+O
+<sub>5</sub>
+S + H
+<sup>+</sup>
+, 376.09617; found, 376.09620.
+</p>
+</sec>
+<sec id="s0014">
+<title>
+5-(6-(N-ethylsulfamoyl)-1H-benzo[d]imidazol-2-yl)-2-hydroxybenzoic acid (16)
+</title>
+<p>
+Compound
+<bold>16</bold>
+was obtained as a white solid (128 mg, 89%) by reaction of
+<bold>15</bold>
+(150 mg, 0.40 mmol) following the procedure described for
+<bold>11</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+) 8.71 (d,
+<italic>J =</italic>
+ 2.3 Hz, 1H), 8.36 (dd,
+<italic>J =</italic>
+ 8.8, 2.3 Hz, 1H), 8.01 (s, 1H), 7.79 (d,
+<italic>J =</italic>
+ 8.5 Hz, 1H), 7.69 (dd,
+<italic>J =</italic>
+ 8.5, 1.8 Hz, 1H), 7.55 (t,
+<italic>J =</italic>
+ 5.9 Hz, 1H, exchangeable with D
+<sub>2</sub>
+O), 7.21 (d,
+<italic>J =</italic>
+ 8.8 Hz, 1H), 2.85–2.72 (m, 2H), 0.97 (t,
+<italic>J =</italic>
+ 7.3 Hz, 3H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+171.17, 163.22, 152.94, 134.66, 133.87, 129.51, 121.09, 118.27, 114.01, 37.56, 14.66. HRMS (ESI):
+<italic>m/z</italic>
+[M + H]
+<sup>+</sup>
+calcd for C
+<sub>16</sub>
+H
+<sub>15</sub>
+N
+<sub>3</sub>
+O
+<sub>5</sub>
+S + H
+<sup>+</sup>
+, 362.08052; found, 362.08061.
+</p>
+</sec>
+<sec id="s0015">
+<title>
+Methyl 2-hydroxy-5-(2-(6-sulfamoyl-1H-benzo[d]imidazol-2-yl)ethyl)benzoate (17)
+</title>
+<p>
+Compound
+<bold>17</bold>
+was obtained as a white solid (285 mg, 60%) by reaction of
+<bold>30b</bold>
+(570 mg, 1.27 mmol) following the procedure described for
+<bold>8</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+10.32 (s, 1H, exchangeable with D
+<sub>2</sub>
+O) , 7.98, 7.87 (2 s, 1H), 7.68–7.54 (m, 3H), 7.39 (dd,
+<italic>J =</italic>
+ 8.5, 2.4 Hz, 1H), 7.25–7.19 (m, 2H, exchangeable with D
+<sub>2</sub>
+O), 6.89 (d,
+<italic>J =</italic>
+ 8.4 Hz, 1H), 3.85 (s, 3H), 3.15–3.04 (m, 4H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+169.13, 158.41, 157.48, 156.87, 145.32, 142.42, 137.19, 136.26, 135.75, 131.61, 129.27, 119.29, 118.73, 118.11, 117.36, 116.10, 112.64, 110.93, 109.07, 52.34, 32.08, 30.52. HRMS (ESI):
+<italic>m/z</italic>
+[M + H]
+<sup>+</sup>
+calcd for C
+<sub>17</sub>
+H
+<sub>17</sub>
+N
+<sub>3</sub>
+O
+<sub>5</sub>
+S + H
+<sup>+</sup>
+, 376.09617; found, 376.09613.
+</p>
+</sec>
+<sec id="s0016">
+<title>
+2-Hydroxy-5-(2-(6-sulfamoyl-1H-benzo[d]imidazol-2-yl)ethyl)benzoic acid (18)
+</title>
+<p>
+Compound
+<bold>18</bold>
+was obtained as a white solid (135 mg, 93%) by reaction of
+<bold>17</bold>
+(150 mg, 0.400 mmol) following the procedure described for
+<bold>11</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.14 (s, 1H), 7.91–7.89 (m, 2H), 7.70 (d,
+<italic>J =</italic>
+ 2.4 Hz, 1H), 7.51 (s, 2H, exchangeable with D
+<sub>2</sub>
+O), 7.47–7.37 (m, 1H), 6.89 (d,
+<italic>J =</italic>
+ 8.5 Hz, 1H), 3.39 (t,
+<italic>J =</italic>
+ 7.8 Hz, 2H), 3.18 (t,
+<italic>J =</italic>
+ 7.8 Hz, 2H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+171.64, 159.74, 156.30, 140.72, 135.63, 129.98, 129.65, 122.28, 117.32, 114.47, 112.82, 112.00, 31.19, 28.83.HRMS (ESI):
+<italic>m/z</italic>
+[M + H]
+<sup>+</sup>
+calcd for C
+<sub>16</sub>
+H
+<sub>15</sub>
+N
+<sub>3</sub>
+O
+<sub>5</sub>
+S + H
+<sup>+</sup>
+, 362.08052; found, 362.08052.
+</p>
+</sec>
+<sec id="s0017">
+<title>
+5-(6-Carbamoyl-1H-benzo[d]imidazol-2-yl)-2-hydroxybenzoic acid (19)
+</title>
+<p>
+Compound
+<bold>35</bold>
+(150 mg, 0.408 mmol) was dissolved in 2 ml of a solution DCM/TFA (1:1) and the mixture was stirred for 24 h. The solvent was evaporated, and the resulting solid was taken up with 2 ml of THF. To the resulting mixture, a water solution (2 ml) of LiOH (62 mg, 2.58 mmol) was added, and the reaction mixture was stirred at room temperature for 4 h. The reaction was concentrated under vacuum, the aqueous phase was washed with CHCl
+<sub>3</sub>
+then acidified with 3N HCl until a white precipitate formed that was recovered by filtration. Compound
+<bold>19</bold>
+was obtained as white solid (110 mg, 91%) after recrystallization from ethanol
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.72 (d,
+<italic>J =</italic>
+ 2.4 Hz, 1H), 8.36–8.26 (m, 1H), 8.17 (s, 1H), 8.09 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 7.88 (d,
+<italic>J =</italic>
+ 8.4 Hz, 1H), 7.71–7.65 (m, 1H), 7.38 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 7.19 (d,
+<italic>J =</italic>
+ 8.7 Hz, 1H).
+<sup>13</sup>
+C NMR (100 MHz, DMSO)
+<italic>δ</italic>
+171.54, 168.31, 164.41, 152.09, 134.20, 130.25, 130.08, 123.63, 118.84, 115.01. HRMS (ESI):
+<italic>m/z</italic>
+[M + H]
+<sup>+</sup>
+calcd for C
+<sub>15</sub>
+H
+<sub>11</sub>
+N
+<sub>3</sub>
+O
+<sub>4</sub>
++ H
+<sup>+</sup>
+, 298.08223; found, 298.08230.
+</p>
+</sec>
+<sec id="s0018">
+<title>3,4-Diamino-N-(tert-butyl)benzenesulfonamide (20a)</title>
+<p>
+To a stirred suspension of
+<bold>24a</bold>
+(1.65 g, 6.04 mmol) in 250 ml of MeOH, ammonium formate (7.61 g, 120.74 mmol) and palladium on carbon 10% wt. (160 mg) were added. The resulting mixture was heated at reflux for 4 h. After cooling, the mixture was filtered, and the solvent evaporated under reduced pressure. The crude material was taken up with 100 ml of water and extracted with EtOAc (3 × 60 ml). The combined organic phases were washed with brine, dried over Na
+<sub>2</sub>
+SO
+<sub>4</sub>
+, filtered and evaporated. The product, obtained as a light brown solid (1.30 g, 88%), was used for the next step without further purification.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+6.96 (d,
+<italic>J =</italic>
+ 2.1 Hz, 1H), 6.90–6.84 (m, 2H, 1H exchangeable with D
+<sub>2</sub>
+O), 6.53 (d,
+<italic>J =</italic>
+ 8.2 Hz, 1H), 5.13 (brs, 2H, exchangeable with D
+<sub>2</sub>
+O), 4.79 (brs, 2H, exchangeable with D
+<sub>2</sub>
+O), 1.08 (s, 9H). ESI
+<italic>m/z</italic>
+: 244 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0019">
+<title>3,4-Diamino-N-ethylbenzenesulfonamide (20b)</title>
+<p>
+Compound
+<bold>20b</bold>
+was obtained as a light brown solid (910 mg, 94%) by reaction of
+<bold>24b</bold>
+(1.10 g, 4.48 mmol) following the procedure described for
+<bold>20a</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+6.94–6.88 (m, 2H, 1H exchangeable with D
+<sub>2</sub>
+O), 6.81 (dd,
+<italic>J =</italic>
+ 8.0, 2.1 Hz, 1H), 6.53 (d,
+<italic>J =</italic>
+ 8.0 Hz, 1H), 5.18 (brs, 2H, exchangeable with D
+<sub>2</sub>
+O), 4.82 (brs, 2H, exchangeable with D
+<sub>2</sub>
+O), 2.75–2.62 (m, 2H), 0.94 (t,
+<italic>J =</italic>
+ 7.2 Hz, 3H). ESI
+<italic>m/z</italic>
+: 216 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0020">
+<title>Ethyl 2-((2-nitrophenyl)amino)-2-oxoacetate (22)</title>
+<p>
+To a solution of 2-nitroaniline (2.00 g, 14.48 mmol) in Et
+<sub>2</sub>
+O (100 ml), ethyl chlorooxoacetate (2.17 g, 1.78 ml, 15.93 mmol) was added portionwise with continuous stirring. Once the addition was complete, the resulting yellow suspension was stirred for 18 h at room temperature and then concentrated under vacuo. The crude residue was dissolved in EtOAc (100 ml), washed with saturated NaHCO
+<sub>3</sub>
+(3 × 30 ml) and with brine (30 ml). The organic phase was dried over anhydrous Na
+<sub>2</sub>
+SO
+<sub>4</sub>
+, and evaporated to dryness, giving the desired product as a yellow solid (3.38 g, 98%).
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+11.38 (s, 1H), 8.17–8.05 (m, 2H), 7.85–7.76 (m, 1H), 7.52–7.41 (m, 1H), 4.34 (q,
+<italic>J =</italic>
+ 7.0 Hz, 2H), 1.33 (t,
+<italic>J =</italic>
+ 7.0 Hz, 3H). ESI
+<italic>m/z</italic>
+: 239 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0021">
+<title>4-Amino-3-nitrobenzenesulfonyl chloride (23)</title>
+<p>
+A solution of ethyl 2-(2-nitrophenylamino)-2-oxoacetate
+<bold>22</bold>
+(2.00 g, 8.40 mmol) in 4.5 ml of chlorosulfonic acid was heated at 80 °C for 3 h. The red mixture was poured slowly into ice − water (150 ml) and stirred for 30 min. The product was extracted from the aqueous solution using Et
+<sub>2</sub>
+O (3 × 30 ml). The combined organic phases were washed with brine (10 ml), dried (Na
+<sub>2</sub>
+SO
+<sub>4</sub>
+), filtered, and concentrated
+<italic>in vacuo</italic>
+to give the title compound as a brown solid which was immediately used for the next reaction without purification.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.16 (d,
+<italic>J =</italic>
+ 2.0 Hz, 1H), 7.56 (dd,
+<italic>J =</italic>
+ 8.8, 2.0 Hz, 1H), 6.96 (d,
+<italic>J =</italic>
+ 8.8 Hz, 1H).
+</p>
+</sec>
+<sec id="s0022">
+<title>
+4-Amino-N-(tert-butyl)-3-nitrobenzenesulfonamide (24a)
+</title>
+<p>
+To a stirred solution at 0 °C of crude
+<bold>23</bold>
+(1.04 g, 4.39 mmol) in dry THF (25 ml) was added dropwise, under nitrogen atmosphere,
+<italic>tert</italic>
+-butylamine (1.85 ml, 17.56 mmol). The reaction was allowed to reach room temperature and was stirred for 18 h. The solvent was removed at reduced pressure and the residue was taken up with 50 ml of water and extracted with EtOAc (3 × 20 ml). The combined organic phases were washed with brine, dried over Na
+<sub>2</sub>
+SO
+<sub>4</sub>
+, filtered and evaporated under reduced pressure. Purification by silica gel chromatography (DCM/MeOH) yield pure
+<bold>24a</bold>
+(0.96 g, 80%) as a light yellow solid.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.38 (d,
+<italic>J =</italic>
+ 2.2 Hz, 1H), 7.95 (s, 2H, exchangeable with D
+<sub>2</sub>
+O), 7.70 (dd,
+<italic>J =</italic>
+ 9.0, 2.2 Hz, 1H), 7.44 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 7.11 (d,
+<italic>J =</italic>
+ 9.0 Hz, 1H), 1.10 (s, 9H). ESI
+<italic>m/z</italic>
+: 274 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0023">
+<title>4-Amino-N-ethyl-3-nitrobenzenesulfonamide (24b)</title>
+<p>
+Compound
+<bold>24b</bold>
+was obtained as a yellow solid (840 mg, 78%) by reaction of
+<bold>23</bold>
+(1.04 g, 4.39 mmol) with a 2 M THF solution of ethylamine (8.78 ml, 17.56 mmol) following the procedure described for
+<bold>24a</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.36 (d, J = 1.6 Hz, 1H), 8.01 (s, 2H, exchangeable with D
+<sub>2</sub>
+O), 7.69 (dd, J = 9.0, 1.6 Hz, 1H), 7.54–7.44 (m, 1H, exchangeable with D
+<sub>2</sub>
+O), 7.15 (d, J = 9.0 Hz, 1H), 2.82 – 2.72 (m, 2H), 0.99 (t, J = 7.2 Hz, 3H). ESI
+<italic>m/z</italic>
+: 246 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0024">
+<title>
+N-(tert-butyl)-2-(4-hydroxyphenyl)-1H-benzo[d]imidazole-6-sulfonamide (26a)
+</title>
+<p>
+To a stirred solution of
+<bold>20a</bold>
+(150 mg, 0.62 mmol) in dry DMF (7 ml), 4-hydroxybenzaldehyde (75 mg, 0.61 mmol) and Na
+<sub>2</sub>
+S
+<sub>2</sub>
+O
+<sub>5</sub>
+(0.165 g, 0.793 mmol) were added. The resulting mixture was stirred at 80 °C for 18 h. After cooling at room temperature, water was added. The brown precipitate formed was recovered by filtration and was washed several times with water and 1N HCl. After recrystallization from EtOH, compound
+<bold>26a</bold>
+was obtained as light brown solid (160 mg, 72%).
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+10.07 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 8.03 (d,
+<italic>J =</italic>
+ 8.5 Hz, 2H), 8.01–7.96 (m, 1H), 7.69–7.61 (m, 2H), 7.43 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 6.94 (d,
+<italic>J =</italic>
+ 8.5 Hz, 2H), 1.09 (s, 9H).ESI
+<italic>m/z</italic>
+: 346 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0025">
+<title>
+N-(tert-butyl)-2-phenyl-1H-benzo[d]imidazole-6-sulfonamide (26b)
+</title>
+<p>
+Compound
+<bold>26b</bold>
+was obtained as a light brown solid (204 mg, 65%) by reaction of
+<bold>20a</bold>
+(233 mg, 0.954 mmol) and benzaldehyde (97 µL, 0.954 mmol) following the procedure described for
+<bold>26a</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.23–8.15 (m, 2H), 8.11–8.04 (m, 1H), 7.85–7.72 (m, 2H), 7.68–7.58 (m, 3H), 7.54 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 1.09 (s, 9H).ESI
+<italic>m/z</italic>
+: 330 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0026">
+<title>
+Methyl 4-(6-(N-(tert-butyl)sulfamoyl)-1H-benzo[d]imidazol-2-yl)benzoate (26c)
+</title>
+<p>
+Compound
+<bold>26c</bold>
+was obtained as a light brown solid (190 mg, 83%) by reaction of
+<bold>20a</bold>
+(144 mg, 0.590 mmol) and methyl 4-formylbenzoate (97 mg, 0.590 mmol) following the procedure described for
+<bold>26a</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.35 (d,
+<italic>J =</italic>
+ 8.0 Hz, 2H), 8.17 (d,
+<italic>J =</italic>
+ 8.0 Hz, 2H), 8.09 (s, 1H), 7.83–7.70 (m, 2H), 7.51 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 3.91 (s, 3H), 1.10 (s, 9H). ESI
+<italic>m/z</italic>
+: 388 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0027">
+<title>
+N-(tert-butyl)-2-(3,4-dihydroxyphenyl)-1H-benzo[d]imidazole-6-sulfonamide (26d)
+</title>
+<p>
+Compound
+<bold>26d</bold>
+was obtained as a light brown solid (290 mg, 65%) by reaction of
+<bold>20a</bold>
+(300 mg, 1.23 mmol) and 3,4-dihydroxybenzaldehyde (170 mg, 1.23 mmol) following the procedure described for
+<bold>26a</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+9.42 (brs, 2H, exchangeable with D
+<sub>2</sub>
+O), 8.02, 7.90 (2 s, 1H), 7.73–7.58 (m, 3H), 7.49 (dd,
+<italic>J =</italic>
+ 8.2, 2.1 Hz, 1H), 7.42 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 6.90 (d,
+<italic>J =</italic>
+ 8.3 Hz, 1H), 1.09 (s, 9H).ESI
+<italic>m/z</italic>
+: 362 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0028">
+<title>
+Methyl 5-(6-(N-(tert-butyl)sulfamoyl)-1H-benzo[d]imidazol-2-yl)-2-hydroxybenzoate (26e)
+</title>
+<p>
+Compound
+<bold>26e</bold>
+was obtained as a light brown solid (222 mg, 71%) by reaction of
+<bold>20a</bold>
+(188 mg, 0.773 mmol) and methyl 5-formylsalicylate (139 mg, 0.773 mmol) following the procedure described for
+<bold>26a</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.65 (d,
+<italic>J =</italic>
+ 2.3 Hz, 1H), 8.32 (dd,
+<italic>J =</italic>
+ 8.7, 2.3 Hz, 1H), 8.01 (s, 1H), 7.76–7.64 (m, 2H), 7.46 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 7.19 (d,
+<italic>J =</italic>
+ 8.7 Hz, 1H), 3.97 (s, 3H), 1.09 (s, 9H). ESI
+<italic>m/z</italic>
+: 404 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0029">
+<title>
+N-(2-amino-4-(N-(tert-butyl)sulfamoyl)phenyl)-2-(4-hydroxyphenyl)acetamide and N-(2-amino-5-(N-(tert-butyl)sulfamoyl)phenyl)-2-(4-hydroxyphenyl)acetamide (29)
+</title>
+<p>
+To a stirred solution of
+<bold>20a</bold>
+(354 mg, 1.45 mmol) and 4-hydroxyphenylacetic acid
+<bold>27</bold>
+(200 mg, 1.31 mmol) in dry DMF (26 ml) were added, EDC hydrochloride (427 mg, 2.23 mmol), HOBt (341 mg, 2.23 mmol) and 4-methylmorpholine (4.84 ml, 4.45 mmol). The reaction was stirred at room temperature for 18 h. Water (80 ml) was added the resulting mixture was extracted with EtOAc (3 × 40 ml). The combined organic phases were washed with brine (3 × 50 ml), dried over Na
+<sub>2</sub>
+SO
+<sub>4</sub>
+, filtered and evaporated under reduced pressure. Purification by silica gel chromatography (DCM/MeOH) yield an isomeric mixture as a white solid (0.360 g, 73%) that was used for the next step without separation. ESI
+<italic>m/z</italic>
+: 378 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0030">
+<title>
+N-(2-amino-4-(N-(tert-butyl)sulfamoyl)phenyl)-3-(4-hydroxyphenyl)propanamide and N-(2-amino-5-(N-(tert-butyl)sulfamoyl)phenyl)-3-(4-hydroxyphenyl)propanamide (30a)
+</title>
+<p>
+Compounds
+<bold>30a</bold>
+was obtained as a light yellow solid (300 mg, 64%) by reaction of
+<bold>20a</bold>
+(323 mg, 1.33 mmol) with 3-(4-hydroxyphenyl)propanoic acid
+<bold>28a</bold>
+(200 mg, 1.2 mmol) following the procedure described for
+<bold>29</bold>
+. ESI
+<italic>m/z</italic>
+: 392 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0031">
+<title>
+Methyl 5-(3-((2-amino-4-(N-(tert-butyl)sulfamoyl)phenyl)amino)-3-oxopropyl)-2-hydroxybenzoate and methyl 5-(3-((2-amino-5-(N-(tert-butyl)sulfamoyl)phenyl)amino)-3-oxopropyl)-2-hydroxybenzoate (30b)
+</title>
+<p>
+Compounds
+<bold>30b</bold>
+was obtained as a light yellow solid (90 mg, 90%) by reaction of
+<bold>20a</bold>
+(60 mg, 0.245 mmol) with 3-(4-hydroxy-3-(methoxycarbonyl)phenyl)propanoic acid
+<bold>28b</bold>
+(50 mg, 0.223 mmol) following the procedure described for
+<bold>29</bold>
+. ESI
+<italic>m/z</italic>
+: 450 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0032">
+<title>
+N-(tert-butyl)-2-(4-hydroxybenzyl)-1H-benzo[d]imidazole-6-sulfonamide (31)
+</title>
+<p>
+In a 10 ml CEM pressure vessel equipped with a stirrer bar, compounds
+<bold>29</bold>
+(50 mg, 0.132 mmol) were dissolved in 1.3 ml of acetic acid. The microwave vial was sealed and heated in a CEM Discover microwave synthesizer to 80 °C for 30 min. After cooling to room temperature, the reaction mixture was taken up with solution of NaHCO
+<sub>3</sub>
+(60 ml) and the aqueous phase was extracted with EtOAc (3 × 20 ml). The collected organic phases were washed with water (3 × 20 ml), NaHCO
+<sub>3</sub>
+solution (3 × 20 ml), brine (20 ml), dried over Na
+<sub>2</sub>
+SO
+<sub>4</sub>
+and filtered. The solvent was removed under reduced pressure and the resulting crude material was purified by silica gel chromatography (DCM/EtOAc) to give compound
+<bold>31</bold>
+a light brown solid (35 mg, 74%).
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+9.31 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 7.93 (s, 1H), 7.64–7.54 (m, 2H), 7.39 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 7.14 (d,
+<italic>J =</italic>
+ 8.0 Hz, 2H), 6.71 (d,
+<italic>J =</italic>
+ 8.0 Hz, 2H), 4.09 (s, 2H), 1.06 (s, 9H). ESI
+<italic>m/z</italic>
+: 360 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0033">
+<title>N-(tert-butyl)-3,4-dinitrobenzamide (33)</title>
+<p>
+A solution of 3,4-dinitrobenzoic acid
+<bold>32</bold>
+(1.00 g, 4.71 mmol) in thionyl chloride (15 ml) was refluxed for 2 h under a nitrogen atmosphere. After the solution was cooled at room temperature, the excess thionyl chloride was removed at reduced pressure and the crude material dried under vacuum. To the residue, dissolved in dry THF (20 ml) and cooled to 0 °C, was added dropwise a mixture of
+<italic>tert</italic>
+-butylamine (525 µL, 5.00 mmol) and triethylamine (695 µL, 5.00 mmol) in dry THF (5 ml). The mixture was stirred at room temperature for 18 h, filtered, and evaporated. The crude residue was dissolved in DCM (20 ml), washed with 1N HCl, saturated NaHCO
+<sub>3</sub>
+, and water, dried, and concentrated in vacuum. Recrystallization from EtOH yielded compound
+<bold>33</bold>
+(1.05 g, 84%) as a light yellow solid.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+8.57 (s, 1H), 8.35–8.29 (m, 2H), 1.40 (s, 9H). ESI
+<italic>m/z</italic>
+: 268 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0034">
+<title>3,4-Diamino-N-(tert-butyl)benzamide (34)</title>
+<p>
+Compound
+<bold>34</bold>
+was obtained as a light brown solid (729 mg, 94%) by reaction of
+<bold>33</bold>
+(1.00 g, 3.74 mmol) following the procedure described for
+<bold>20a</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+7.05 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 6.98 (d,
+<italic>J =</italic>
+ 2.0 Hz, 1H), 6.90 (dd,
+<italic>J =</italic>
+ 8.1, 2.1 Hz, 1H), 6.45 (d,
+<italic>J =</italic>
+ 8.0 Hz, 1H), 4.86 (s, 2H, exchangeable with D
+<sub>2</sub>
+O), 4.48 (s, 2H, exchangeable with D
+<sub>2</sub>
+O), 1.33 (s, 9H). ESI
+<italic>m/z</italic>
+: 208 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+<sec id="s0035">
+<title>
+Methyl 5-(6-(tert-butylcarbamoyl)-1H-benzo[d]imidazol-2-yl)-2-hydroxybenzoate (35)
+</title>
+<p>
+Compound
+<bold>35</bold>
+was obtained as a light brown solid (304 mg, 72%) by reaction of
+<bold>34</bold>
+(240 mg, 1.15 mmol) and
+<bold>25e</bold>
+(208 mg, 1.15 mmol) following the procedure described for
+<bold>6</bold>
+.
+<sup>1</sup>
+H NMR (400 MHz, DMSO-d
+<sub>6</sub>
+)
+<italic>δ</italic>
+11.04 (s, 1H, exchangeable with D
+<sub>2</sub>
+O), 8.66 (d,
+<italic>J =</italic>
+ 2.2 Hz, 1H), 8.30 (dd,
+<italic>J =</italic>
+ 8.8, 2.4 Hz, 1H), 8.09 (s, 1H), 7.90–7.78 (m, 2H, 1H exchangeable with D
+<sub>2</sub>
+O), 7.68 (d,
+<italic>J =</italic>
+ 8.4 Hz, 1H), 7.26 (d,
+<italic>J =</italic>
+ 8.7 Hz, 1H), 3.97 (s, 3H), 1.42 (s, 9H). ESI
+<italic>m/z</italic>
+: 368 [M + H]
+<sup>+</sup>
+.
+</p>
+</sec>
+</sec>
+<sec id="s0036">
+<title>Enzyme activity assays</title>
+<p>
+An Applied Photophysics stopped-flow instrument has been used for assaying the CA-catalysed CO
+<sub>2</sub>
+hydration activity
+<xref rid="CIT0018" ref-type="bibr">
+<sup>18</sup>
+</xref>
+. Phenol red (at a concentration of 0.2 mM) has been used as indicator, working at the absorbance maximum of 557 nm, with 20 mM Hepes (pH 7.5) as buffer, and 20 mM Na
+<sub>2</sub>
+SO
+<sub>4</sub>
+(for maintaining constant the ionic strength), following the initial rates of the CA-catalysed CO
+<sub>2</sub>
+hydration reaction for a period of 10–100 s. CO
+<sub>2</sub>
+concentrations ranged from 1.7 to 17 mM for the determining inhibition constants. For each inhibitor, at least six traces of the initial 5–10% of the reaction have been used for measuring the initial velocity. Uncatalyzed rates were determined in the same manner and subtracted from the total observed rates. Stock solutions of inhibitor (0.1 mM) were prepared in buffer with a maximum 3% DMSO, and dilutions up to 0.01 nM were done with the assay buffer. Inhibitor and enzyme solutions were preincubated for 15 min at room temperature prior to assay, in order to allow for the formation of the E–I complex. The inhibition constants were obtained by nonlinear least-squares methods using PRISM 3 and the Cheng-Prusoff equation, as reported earlier, and represent the mean from at least three different determinations
+<xref rid="CIT0019" ref-type="bibr">
+<sup>19–26</sup>
+</xref>
+. All CA isoforms were recombinant ones obtained in-house as reported earlier
+<xref rid="CIT0027" ref-type="bibr">
+<sup>27–29</sup>
+</xref>
+.
+</p>
+</sec>
+<sec id="s0037">
+<title>Molecular modeling methods</title>
+<p>
+The latest version of the AD4 docking software (version 4.2)
+<xref rid="CIT0030" ref-type="bibr">
+<sup>30</sup>
+</xref>
+together with its GUI AutoDockTools (ADT) and the AutoDock4(Zn) force field
+<xref rid="CIT0031" ref-type="bibr">
+<sup>31</sup>
+</xref>
+, were employed. The hCA IX X-ray structure used for the experiment had the PDB code 5FL4
+<xref rid="CIT0032" ref-type="bibr">
+<sup>32</sup>
+</xref>
+. The protein structure was prepared for the docking using the Protein Preparation Wizard of the Maestro suite
+<xref rid="CIT0033" ref-type="bibr">
+<sup>33</sup>
+</xref>
+that adds bond orders, adds hydrogen atoms, deletes water molecules and produces the appropriate protonation states. The co-crystal ligand of 5FL4 was separated from the cognate protein. The 2 D Sketcher tool of Maestro was used to build compounds
+<bold>13</bold>
+,
+<bold>14</bold>
+and
+<bold>17</bold>
+. For the three ligands, the protonation and tautomeric state, as well as their geometry, were optimized through LigPrep, part of the same suite. Through Maestro, the X-ray structures of hCA I (PDB 6F3B)
+<xref rid="CIT0034" ref-type="bibr">
+<sup>34</sup>
+</xref>
+, hCA II (PDB 3K34)
+<xref rid="CIT0035" ref-type="bibr">
+<sup>35</sup>
+</xref>
+, and hCA XII (PDB 5MSA)
+<xref rid="CIT0036" ref-type="bibr">
+<sup>36</sup>
+</xref>
+, were downloaded and superimposed on the structure of hCA IX. The ligands were translated in the AD4 specific file format (PDBQT) using the python scripts prepare_ligand4.py and prepare_receptor4.py, part of ADT, applying the standard settings. Following the AutoDock4(Zn) force field protocol
+<xref rid="CIT0037" ref-type="bibr">
+<sup>37</sup>
+</xref>
+, to add the tetrahedral zinc pseudo atoms to the receptor PDBQT the script zinc_pseudo.py, part of the material provided with the force field, was employed. The docking area was centered on the active site. The zinc-specific non bonded pairwise potentials were included in the creation of the grid parameter file. A set of grids of 60 Å × 40 Å × 50 Å with 0.375 Å spacing was calculated considering the docking area for all the ligands atom types employing AutoGrid4. For every ligand, 200 independent docking simulations were achieved. Each docking calculation comprised 20 million energy evaluations employing the Lamarckian genetic algorithm local search (GALS) method. This latter assesses a population of viable docking solutions and propagates the best individuals from each generation into the following generation of feasible solutions. A low-frequency local search according to the method of Solis and Wets was applied to every docking attempt to guarantee that the final solution represented a local minimum. All dockings were performed with a population size of 250, and 300 iterations of Solis and Wets local search were applied with a probability of 0.06. A rate of mutation of 0.02 and a crossover rate of 0.8 were used to produce new docking attempts for following generations, and the best individual from each generation was propagated over the following generation. The docking results from every (200) independent docking calculation were clustered based on the of root-mean-square deviation (rmsd) (solutions differing by less than 2.0 Å) between the Cartesian coordinates of the atoms and were ranked on the basis of free energy of binding (ΔGAD4).
+</p>
+</sec>
+</sec>
+<sec id="s0038">
+<title>Results and discussion</title>
+<sec id="s0039">
+<title>Chemistry</title>
+<p>
+The primary (
+<bold>6–14</bold>
+and
+<bold>17–18</bold>
+) and the
+<italic>N</italic>
+-ethyl-2-substituted-1
+<italic>H</italic>
+-benzo[
+<italic>d</italic>
+]imidazole-6-sulfonamides (
+<bold>15</bold>
+and
+<bold>16</bold>
+) were synthesized starting from 3,4-diaminobenzenesulfonamides
+<bold>20a</bold>
+and
+<bold>20b</bold>
+, respectively, obtained following the procedure outlined in
+<xref ref-type="scheme" rid="SCH0001">Scheme 1</xref>
+.
+</p>
+<fig id="SCH0001" orientation="portrait" position="float">
+<label>Scheme 1.</label>
+<caption>
+<p>
+(a) Ethyl chlorooxoacetate, Et
+<sub>2</sub>
+O, r.t. 18 h (98%); (b) ClSO
+<sub>3</sub>
+H, 80 °C, 3 h (77%); c)
+<italic>tert</italic>
+-butylamine or 2M THF solution of ethylamine, THF, 0 °C to r.t., 18 h (80%); (d) ammonium formate, Pd/C 10%, MeOH, reflux, 4 h (88–94%).
+</p>
+</caption>
+<graphic content-type="black-white" xlink:href="IENZ_A_1666836_SCH0001_B"/>
+</fig>
+<p>
+The amino group of 2-nitroaniline
+<bold>21</bold>
+was protected by acylation with ethyl chlorooxoacetate in diethyl ether. Reaction of the resulting ethyl 2-(2-nitrophenylamino)-2-oxoacetate
+<bold>22</bold>
+with chlorosulfonic acid at 80 °C, followed by aqueous workup, yielded the unprotected sulfonyl chloride derivative
+<bold>23</bold>
+, which reacted with
+<italic>tert-</italic>
+butyl- or ethyl-amine to afford the
+<italic>N</italic>
+-substituted-4-amino-3-nitrobenzenesulfonamides
+<bold>24a</bold>
+and
+<bold>24b</bold>
+, respectively. Catalytic hydrogenation with ammonium formate and palladium catalyst converted the nitro derivatives into the corresponding amino derivatives
+<bold>20a</bold>
+and
+<bold>20b</bold>
+.
+</p>
+<p>
+The synthetic route to 2-aryl-1
+<italic>H</italic>
+-benzo[
+<italic>d</italic>
+]imidazole-6-sulfonamides
+<bold>6–14</bold>
+is outlined in
+<xref ref-type="scheme" rid="SCH0002">Scheme 2</xref>
+. Condensation of 3,4-diamino-
+<italic>N</italic>
+-(
+<italic>tert</italic>
+-butyl)benzenesulfonamide
+<bold>20a</bold>
+with aldehydes
+<bold>25a-e</bold>
+in the presence of NaHSO
+<sub>3</sub>
+in dry DMF at 80 °C gave the 2-aryl-
+<italic>N</italic>
+-(tert-butyl)-1
+<italic>H</italic>
+-benzo[
+<italic>d</italic>
+]imidazole-6-sulfonamides
+<bold>26a-e</bold>
+in good yields (65–83%)
+<xref rid="CIT0038" ref-type="bibr">
+<sup>38</sup>
+</xref>
+. Deprotection with trifluoracetic acid at room temperature furnished the primary sulfonamides
+<bold>6</bold>
+,
+<bold>9</bold>
+,
+<bold>10</bold>
+,
+<bold>12</bold>
+and
+<bold>13</bold>
+. Finally, the carboxylic acid derivatives
+<bold>11</bold>
+and
+<bold>14</bold>
+were obtained by deprotecting the methyl esters
+<bold>10</bold>
+and
+<bold>13</bold>
+, respectively, with lithium hydroxide.
+</p>
+<fig id="SCH0002" orientation="portrait" position="float">
+<label>Scheme 2.</label>
+<caption>
+<p>
+(a) NaHSO
+<sub>3</sub>
+, dry DMF, 80 °C, 18 h (65%–83%); (b) DCM/TFA (1:1), r.t., 18–24 h (70–75%); (c) LiOH, THF/H
+<sub>2</sub>
+O (1:1) r.t, 3 h (83–93%); (d) EDC hydrochloride, HOBt, NMM, dry DMF, r.t., 18 h (64–90%); (e)
+<italic>p</italic>
+-toluenesulfonic acid, toluene, reflux, 6 h (60–65%); (f) MW, AcOH, 80 °C, 30 min (74%).
+</p>
+</caption>
+<graphic content-type="black-white" xlink:href="IENZ_A_1666836_SCH0002_B"/>
+</fig>
+<p>
+Coupling reaction of benzenesulfonamide
+<bold>20a</bold>
+with 2-(4-hydroxyphenyl)acetic acid
+<bold>27</bold>
+or 3-arylpropanoic acids
+<bold>28a</bold>
+and
+<bold>28b</bold>
+, in the presence of the peptide coupling reagents hydroxybenzotriazole (HOBt) and 1-ethyl-3–(3-dimethylaminopropyl)carbodiimide hydrochloride (EDC) and
+<italic>N</italic>
+-methylmorpholine in dry DMF, furnished the amides
+<bold>29</bold>
+,
+<bold>30a</bold>
+and
+<bold>30b</bold>
+as regioisomeric mixtures, which were purified without separation of regioisomers. Benzimidazoles derivatives
+<bold>8</bold>
+and
+<bold>17</bold>
+were straightforwardly obtained by
+<italic>p</italic>
+-toluenesulfonic acid-mediated cyclization and deprotection of the corresponding 2-amido anilines
+<bold>30a</bold>
+and
+<bold>30b</bold>
+in refluxing toluene. The carboxylic acid
+<bold>18</bold>
+was obtained by deprotecting the methyl ester
+<bold>17</bold>
+with lithium hydroxide. Our attempts to cyclize compound
+<bold>29</bold>
+using the same reaction conditions were not successful. On the other hand, benzimidazole
+<bold>31</bold>
+was obtained in good yield (74%) by using acetic acid under microwave irradiation. Finally, deprotection with trifluoracetic acid at room temperature furnished the primary sulfonamide
+<bold>7</bold>
+.
+</p>
+<p>
+<italic>N</italic>
+-ethyl-2-aryl-1
+<italic>H</italic>
+-benzo[
+<italic>d]</italic>
+imidazole-6-sulfonamides
+<bold>15</bold>
+and
+<bold>16</bold>
+were obtained starting from 3,4-diamino-
+<italic>N</italic>
+-ethylbenzenesulfonamide
+<bold>20b</bold>
+and aldehyde
+<bold>25e</bold>
+following the same synthetic strategy used for the preparation of the primary sulfonamide analogs
+<bold>13</bold>
+and
+<bold>14</bold>
+(
+<xref ref-type="scheme" rid="SCH0003">Scheme 3</xref>
+).
+</p>
+<fig id="SCH0003" orientation="portrait" position="float">
+<label>Scheme 3.</label>
+<caption>
+<p>
+(a)
+<bold>25e</bold>
+, NaHSO
+<sub>3</sub>
+, dry DMF, 80 °C, 18 h (71%); (b) LiOH, THF/H
+<sub>2</sub>
+O (1:1) r.t, 3 h (89%).
+</p>
+</caption>
+<graphic content-type="black-white" xlink:href="IENZ_A_1666836_SCH0003_B"/>
+</fig>
+<p>
+Finally, 2–(4-hydroxy-3-carboxy)-phenyl-1
+<italic>H</italic>
+-benzo[
+<italic>d</italic>
+]imidazole-6-carboxamide
+<bold>19</bold>
+was straightforwardly synthesized as described in
+<xref ref-type="scheme" rid="SCH0004">Scheme 4</xref>
+. After activation of the commercially available 3,4-dinitrobenzoic acid
+<bold>32</bold>
+with thionyl chloride, coupling with
+<italic>tert</italic>
+-butyl amine yielded 3,4-dinitrobenzamide
+<bold>33</bold>
+which was reduced by catalytic hydrogenation with ammonium formate and palladium catalyst to the key intermediate
+<bold>34</bold>
+. Condensation with aldehyde
+<bold>25e</bold>
+in the presence of NaHSO
+<sub>3</sub>
+gave the benzimidazole derivative
+<bold>35</bold>
+. Amide deprotection with trifluoracetic acid and hydrolysis of the methyl ester with LiOH gave the desired compound
+<bold>19</bold>
+.
+</p>
+<fig id="SCH0004" orientation="portrait" position="float">
+<label>Scheme 4.</label>
+<caption>
+<p>
+(a) SOCl
+<sub>2</sub>
+, reflux, 2 h, then
+<italic>tert</italic>
+-butylamine, NEt
+<sub>3</sub>
+, THF, 0 °C to r.t., 18 h (84%); (b) ammonium formate, Pd/C 10%, MeOH, reflux, 2 h (94%); (c)
+<bold>25e</bold>
+, NaHSO
+<sub>3</sub>
+, dry DMF, 80 °C, 18 h (72%); (d) DCM/TFA (1:1), r.t. 24 h, then LiOH, THF/H
+<sub>2</sub>
+O (1:1) r.t.,4 h (91%).
+</p>
+</caption>
+<graphic content-type="black-white" xlink:href="IENZ_A_1666836_SCH0004_B"/>
+</fig>
+</sec>
+<sec id="s0040">
+<title>
+CA inhibition assays and structure-activity relationship (SAR) considerations
+</title>
+<p>
+<xref rid="t0001" ref-type="table">Table 1</xref>
+lists the enzyme inhibitory activities of the newly synthesized compounds
+<bold>6–19</bold>
+against the human (h) CA I, II, IX and XII isoforms, assessed by a stopped-flow CO
+<sub>2</sub>
+hydrase assay [19]. AAZ
+<bold>1</bold>
+was used as the standard drug in the assay
+<xref rid="CIT0018" ref-type="bibr">
+<sup>18</sup>
+</xref>
+. Selectivity ratios (SR) for inhibiting the tumor-associated transmembrane isoforms (hCA IX and XII) over the physiologically dominant cytosolic one (hCA II) are also reported for the most active compounds.
+</p>
+<table-wrap id="t0001" orientation="portrait" position="float">
+<label>Table 1.</label>
+<caption>
+<p>
+Inhibition data of human CA I, II, IX, and XII isoforms with compounds 6–19 and the standard sulfonamide inhibitor AAZ (1) by a stopped-flow CO
+<sub>2</sub>
+hydrase assay.
+</p>
+</caption>
+<!-- OASIS TABLE HERE -->
+<table frame="hsides" rules="groups">
+<colgroup>
+<col width="1*"/>
+<col width="1*"/>
+<col width="1*"/>
+<col width="1*"/>
+<col width="1*"/>
+<col width="1*"/>
+<col width="1*"/>
+<col width="1*"/>
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2" align="left">Compound</th>
+<th align="center"> </th>
+<th colspan="6" align="center">
+K
+<sub>i</sub>
+(nM)
+<xref ref-type="table-fn" rid="TF1">
+<sup>a</sup>
+</xref>
+<hr/>
+</th>
+</tr>
+<tr>
+<th align="center"> </th>
+<th align="center">hCA I</th>
+<th align="center">hCA II</th>
+<th align="center">hCA IX</th>
+<th align="center">hCA XII</th>
+<th align="center">
+SR
+<xref ref-type="table-fn" rid="TF2">
+<sup>b</sup>
+</xref>
+<break/>
+IX/II
+</th>
+<th align="center">
+SR
+<xref ref-type="table-fn" rid="TF2">
+<sup>b</sup>
+</xref>
+<break/>
+XII/II
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr>
+<td align="left">
+<bold>1 (AAZ)</bold>
+</td>
+<td> </td>
+<td align="char" char=".">250</td>
+<td align="char" char=".">12</td>
+<td align="char" char=".">25</td>
+<td align="char" char=".">5.7</td>
+<td align="char" char=".">0.48</td>
+<td align="char" char=".">2.1</td>
+</tr>
+<tr>
+<td align="left">
+<bold>6</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0001.gif"/>
+</td>
+<td align="char" char=".">237.9</td>
+<td align="char" char=".">101.2</td>
+<td align="char" char=".">17.4</td>
+<td align="char" char=".">44.1</td>
+<td align="char" char=".">5.8</td>
+<td align="char" char=".">2.3</td>
+</tr>
+<tr>
+<td align="left">
+<bold>7</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0002.gif"/>
+</td>
+<td align="char" char=".">442.1</td>
+<td align="char" char=".">91.9</td>
+<td align="char" char=".">73.9</td>
+<td align="char" char=".">63.8</td>
+<td align="char" char=".">1.2</td>
+<td align="char" char=".">1.4</td>
+</tr>
+<tr>
+<td align="left">
+<bold>8</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0003.gif"/>
+</td>
+<td align="char" char=".">213.6</td>
+<td align="char" char=".">47.8</td>
+<td align="char" char=".">14.4</td>
+<td align="char" char=".">9.8</td>
+<td align="char" char=".">3.3</td>
+<td align="char" char=".">4.9</td>
+</tr>
+<tr>
+<td align="left">
+<bold>9</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0004.gif"/>
+</td>
+<td align="char" char=".">92.8</td>
+<td align="char" char=".">104.1</td>
+<td align="char" char=".">47.6</td>
+<td align="char" char=".">78.9</td>
+<td align="char" char=".">2.2</td>
+<td align="char" char=".">1.3</td>
+</tr>
+<tr>
+<td align="left">
+<bold>10</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0005.gif"/>
+</td>
+<td align="char" char=".">208.2</td>
+<td align="char" char=".">185.4</td>
+<td align="char" char=".">29.6</td>
+<td align="char" char=".">72.2</td>
+<td align="char" char=".">6.3</td>
+<td align="char" char=".">2.6</td>
+</tr>
+<tr>
+<td align="left">
+<bold>11</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0006.gif"/>
+</td>
+<td align="char" char=".">97.6</td>
+<td align="char" char=".">133.2</td>
+<td align="char" char=".">64.3</td>
+<td align="char" char=".">57.0</td>
+<td align="char" char=".">2.1</td>
+<td align="char" char=".">2.3</td>
+</tr>
+<tr>
+<td align="left">
+<bold>12</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0007.gif"/>
+</td>
+<td align="char" char=".">169.3</td>
+<td align="char" char=".">79.0</td>
+<td align="char" char=".">41.6</td>
+<td align="char" char=".">8.5</td>
+<td align="char" char=".">1.9</td>
+<td align="char" char=".">5.8</td>
+</tr>
+<tr>
+<td align="left">
+<bold>13</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0008.gif"/>
+</td>
+<td align="char" char=".">125.5</td>
+<td align="char" char=".">50.8</td>
+<td align="char" char=".">2.2</td>
+<td align="char" char=".">22.3</td>
+<td align="char" char=".">23.1</td>
+<td align="char" char=".">2.3</td>
+</tr>
+<tr>
+<td align="left">
+<bold>14</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0009.gif"/>
+</td>
+<td align="char" char=".">95.6</td>
+<td align="char" char=".">68.6</td>
+<td align="char" char=".">34.2</td>
+<td align="char" char=".">3.8</td>
+<td align="char" char=".">2.0</td>
+<td align="char" char=".">18.1</td>
+</tr>
+<tr>
+<td align="left">
+<bold>15</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0010.gif"/>
+</td>
+<td align="char" char=".">>10000</td>
+<td align="char" char=".">8921.1</td>
+<td align="char" char=".">390.5</td>
+<td align="char" char=".">813.1</td>
+<td align="center">–</td>
+<td align="center">–</td>
+</tr>
+<tr>
+<td align="left">
+<bold>16</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0011.gif"/>
+</td>
+<td align="char" char=".">>10000</td>
+<td align="char" char=".">7582.9</td>
+<td align="char" char=".">665.1</td>
+<td align="char" char=".">464.2</td>
+<td align="center">–</td>
+<td align="center">–</td>
+</tr>
+<tr>
+<td align="left">
+<bold>17</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0012.gif"/>
+</td>
+<td align="char" char=".">427.3</td>
+<td align="char" char=".">52.7</td>
+<td align="char" char=".">5.9</td>
+<td align="char" char=".">7.9</td>
+<td align="char" char=".">8.9</td>
+<td align="char" char=".">6.7</td>
+</tr>
+<tr>
+<td align="left">
+<bold>18</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0013.gif"/>
+</td>
+<td align="char" char=".">441.4</td>
+<td align="char" char=".">24.8</td>
+<td align="char" char=".">7.6</td>
+<td align="char" char=".">4.2</td>
+<td align="char" char=".">3.3</td>
+<td align="char" char=".">5.9</td>
+</tr>
+<tr>
+<td align="left">
+<bold>19</bold>
+</td>
+<td>
+<inline-graphic xlink:href="IENZ_A_1666836_ILG0014.gif"/>
+</td>
+<td align="char" char=".">>10000</td>
+<td align="char" char=".">>10000</td>
+<td align="char" char=".">>10000</td>
+<td align="char" char=".">>10000</td>
+<td align="center">–</td>
+<td align="center">–</td>
+</tr>
+</tbody>
+</table>
+<table-wrap-foot>
+<fn id="TF1">
+<label>a</label>
+<p>
+Mean from 3 different assays, by a stopped-flow technique (errors were in the range of ± 5–10% of the reported values).
+</p>
+</fn>
+<fn id="TF2">
+<label>b</label>
+<p>SR: Selectivity Ratio.</p>
+</fn>
+</table-wrap-foot>
+</table-wrap>
+<p>
+First, as putative leads for the development of selective CAIs, we synthesized compound
+<bold>6</bold>
+and its homologs with a methyl or ethyl linker between the benzimidazole and the phenol moieties (compounds
+<bold>7</bold>
+and
+<bold>8</bold>
+in
+<xref rid="t0001" ref-type="table">Table 1</xref>
+). They all resulted in medium-potency inhibition of the slow cytosolic isoform hCA I, with K
+<sub>i</sub>
+values ranging from 213.6 nM to 442.1 nM. The 4′-hydroxybenzyl derivative
+<bold>7</bold>
+showed good inhibition activity for hCA II, IX, and XII but was not selective (K
+<sub>i</sub>
+91.9 nM for hCA II, 73.9 nM for hCA IX, 63.8 nM for hCA XII). On the other hand, the 4′-hydroxyphenyl (
+<bold>6</bold>
+) and 4′-hydroxyphenylethyl (
+<bold>8</bold>
+) analogs were effective inhibitors of hCA IX and XII, respectively, with K
+<sub>i</sub>
+s in the low nanomolar range (
+<bold>6</bold>
+, K
+<sub>i</sub>
+17.4 nM for hCA IX, 44.1 nM for hCA XII;
+<bold>8</bold>
+, K
+<sub>i</sub>
+14.4 nM for hCA IX, 9.8 nM for hCA XII) basically comparable to those of the reference
+<xref rid="CIT0001" ref-type="bibr">1</xref>
+(K
+<sub>i</sub>
+25 nM for hCA IX, 5.7 nM for hCA XII), and interesting selectivity ratio (SR)
+<italic>vs</italic>
+hCA II.
+</p>
+<p>
+Based on these data, compound
+<bold>7</bold>
+was not further investigated, and a structure-activity relationship (SAR) study was undertaken on
+<bold>6</bold>
+. In particular, different substitution patterns on the pendant 2-phenyl ring at 5-position of benzimidazole were investigated (compounds
+<bold>9–17</bold>
+). Deletion of the 4′-hydroxy substituent (
+<bold>9</bold>
+), as well as its replacement with methoxycarbonyl (
+<bold>10</bold>
+) or carboxy (
+<bold>11</bold>
+) groups, produces good but unselective inhibitors; in fact, a modest gain (
+<bold>9</bold>
+,
+<bold>11</bold>
+) or a subsistence (
+<bold>10</bold>
+) in activity toward the isoform I and a general decrease in inhibitory potency for hCA II, IX, and XII with respect to the lead
+<bold>6</bold>
+were observed, suggesting a precise role played by the hydroxy group in the interaction with the enzyme. This is confirmed by the inhibitory activities showed by compounds
+<bold>12–14</bold>
+, where the introduction of an
+<italic>o</italic>
+-substituent to the
+<italic>p</italic>
+-hydroxy group on the 2-phenyl ring resulted in a moderate increase in activity toward the two cytosolic CA evaluated, and a more considerable improvement for the isoform XII, with compound
+<bold>14</bold>
+being the most potent hCA XII inhibitor (K
+<sub>i</sub>
+for hCA XII 3.8 nM), showing also a good SR with respect to hCA II (SR 18.1).
+</p>
+<p>
+Specifically, the introduction of a second polar group (OH or COOH) at the
+<italic>ortho</italic>
+position to the phenol ring positively affected the interaction with isoform XII (compounds
+<bold>12</bold>
+and
+<bold>14</bold>
+), while the presence of the methoxycarbonyl group (compound
+<bold>13</bold>
+) resulted in a minor increase in hCA XII inhibition with respect to parent compound
+<bold>6</bold>
+.
+</p>
+<p>
+Concerning the IX isoform, an exactly opposite trend can be observed for compounds
+<bold>12–14</bold>
+. Decoration of the 2-phenyl moiety with a 4′-hydroxy and 3′-methoxycarbonyl groups gives a highly effective hCA IX inhibitor (
+<bold>13</bold>
+), which shows low nanomolar K
+<sub>i</sub>
+(2.2 nM), with a relevant gain in activity compared to the reference 1 (K
+<sub>i</sub>
+25 nM), and good SR vs hCA II. Differently, compounds
+<bold>12</bold>
+and
+<bold>14</bold>
+, featuring 3′,4′-dihydroxy and 3′-carboxy-4′-hydroxy substituents, although being rather effective hCA IX inhibitors (K
+<sub>i</sub>
+for hCA IX 41.6 nM and 34.2 nM for
+<bold>12</bold>
+and
+<bold>14</bold>
+, respectively), show a slight decrease in activity with respect to reference compound
+<bold>6</bold>
+(K
+<sub>i</sub>
+for hCA IX 17.4 nM).
+</p>
+<p>
+These data suggested the
+<italic>ortho</italic>
+-carboxy phenol ring of compound
+<bold>14</bold>
+and the
+<italic>ortho</italic>
+-carboxymethyl phenol ring of compound
+<bold>13</bold>
+as proper scaffolds for activity and selectivity for hCA XII and hCA IX, respectively. For these derivatives, further SARs were investigated.
+</p>
+<p>
+First, we explored structural modifications of the 5-sulfonamide moiety, including the insertion of a small alkyl group at the nitrogen atom to produce secondary sulfonamides (compounds
+<bold>15</bold>
+and
+<bold>16</bold>
+), and replacement of the sulfonamide with a carboxamide (
+<bold>19</bold>
+). The obtained compounds proved to be scarcely active or completely inactive inhibitors of all the CA isoforms tested (K
+<sub>i</sub>
+s varying from 390.5 nM to micromolar values), strongly supporting the crucial role played by the primary sulfonamide group in the interaction with the enzyme.
+</p>
+<p>
+Finally, we explored the effect of the combination of the ethyl linker between the benzimidazole and the 2-substituted phenol moieties (compounds
+<bold>17</bold>
+and
+<bold>18</bold>
+in
+<xref rid="t0001" ref-type="table">Table 1</xref>
+). The potency for the isoform hCA I decreased, while hCA II was slightly more (
+<bold>18</bold>
+) or equally inhibited (
+<bold>17</bold>
+) with respect to related compounds
+<bold>14</bold>
+and
+<bold>13</bold>
+, respectively. Both
+<bold>17</bold>
+and
+<bold>18</bold>
+derivatives resulted to be potent hCA IX and hCA XII inhibitors, showing low nanomolar K
+<sub>i</sub>
+values (
+<bold>17</bold>
+, K
+<sub>i</sub>
+for hCA IX 5.9 nM, K
+<sub>i</sub>
+for hCA XII 7.9 nM;
+<bold>18</bold>
+, K
+<sub>i</sub>
+for hCA IX 7.6 nM, K
+<sub>i</sub>
+for hCA XII 4.2 nM). However, the presence of the ethylene linker between the benzimidazole scaffold and the side phenyl ring abolished the selectivity for hCA IX and XII isoforms, that was observed for compounds
+<bold>13</bold>
+and
+<bold>14</bold>
+, respectively.
+</p>
+<p>
+Noteworthy, compounds
+<bold>17</bold>
+and
+<bold>18</bold>
+are better inhibitors than the phenol derivative
+<bold>8</bold>
+, proving the role of the
+<italic>ortho</italic>
+-carboxymethyl phenol and the
+<italic>ortho</italic>
+-carboxy phenol rings as proper scaffolds in the development of potent and selective hCA IX and hCA XII inhibitors.
+</p>
+</sec>
+<sec id="s0041">
+<title>Molecular docking studies</title>
+<p>
+To clarify the reasons for the activities displayed by the newly designed compounds, molecular docking studies were attained. Docking calculations were performed using a protocol already successfully applied in our previous work on CA inhibitors
+<xref rid="CIT0039" ref-type="bibr">
+<sup>39</sup>
+</xref>
+. Namely, AutoDock4.2 (AD4)
+<xref rid="CIT0030" ref-type="bibr">
+<sup>30</sup>
+</xref>
+<sup>,</sup>
+<xref rid="CIT0037" ref-type="bibr">
+<sup>37</sup>
+</xref>
+was employed together with the AutoDock4(Zn) forcefield
+<xref rid="CIT0031" ref-type="bibr">
+<sup>31</sup>
+</xref>
+, which was specifically designed to accurately predict the binding interactions of ligands docking to zinc metalloproteins.
+</p>
+<p>
+Ligands
+<bold>13</bold>
+,
+<bold>14</bold>
+and
+<bold>17</bold>
+were selected for the in silico experiments as representative of the whole set. These compounds were first docked in the active site of hCA IX. For the latter, a high-resolution X-ray crystal structure bound to a small molecule inhibitor (PDB code 5FL4)
+<xref rid="CIT0032" ref-type="bibr">
+<sup>32</sup>
+</xref>
+was chosen. According to our theoretical model (
+<xref ref-type="fig" rid="F0002 F0003 F0004">Figures 2(A), 3(A) and 4(A)</xref>
+), in the three inspected ligands, the negative nitrogen of the sulfonamide group chelates the zinc ion of the active site. The sulfonamide also engages an H-bond with the backbone of T200. Furthermore, the benzimidazole nitrogen is in a potential H-bond accepting position with Q92 side chain. The benzimidazole core also engages in contacts with the V121, L199, and T201 sidechains (
+<xref ref-type="fig" rid="F0002">Figure 2(A)</xref>
+,
+<xref ref-type="fig" rid="F0003">Figure 3(A)</xref>
+and
+<xref ref-type="fig" rid="F0004">Figure 4(A)</xref>
+). Notably, it would appear that the pendant 2-phenyl ring, in the three ligands, points towards what has been defined as a “selectivity hot spot” in CAs
+<xref rid="CIT0040" ref-type="bibr">
+<sup>40</sup>
+</xref>
+(
+<xref ref-type="fig" rid="F0002 F0003 F0004">Figures 2(A), 3(A) and 4(A)</xref>
+): a high-variability region in CAs binding site, that can be exploited for the rational design of selective compounds among different CAs. Here, ligand
+<bold>13</bold>
+phenyl ring and its 3′-methoxycarbonyl moiety are able to establish favorable contacts with the lipophilic sidechains of L91 and V130 (
+<xref ref-type="fig" rid="F0002">Figure 2(A))</xref>
+. On the other hand, the 4′-hydroxy group is pointing outside of the binding site, probably establishing a network of stabilizing H-bonding interactions with the solvent water molecules (
+<xref ref-type="fig" rid="F0002">Figure 2(A))</xref>
+. It can be argued that this accounts for the higher potency displayed by compounds featuring the 4′-hydroxy group. The same holds true for compound
+<bold>14</bold>
+. As for ligand
+<bold>17</bold>
+, while the benzimidazole core binding mode is conserved, the ethyl linker engenders greater flexibility which allows the side phenyl ring to expand further into the hotspot gorge. This allows enhancing the positive contacts with L91 and V130. Moreover, an additional H-bond between the 3′-methoxycarbonyl group and Q71 is formed (
+<xref ref-type="fig" rid="F0004">Figure 4(A))</xref>
+.
+</p>
+<fig id="F0002" orientation="portrait" position="float">
+<label>Figure 2.</label>
+<caption>
+<p>
+(a)
+<bold>13</bold>
+/hCA IX (PDB 5FL4) theoretical complex as calculated by docking simulations. The protein is shown as cyan ribbons and sticks while the ligand as salmon sticks. Critical residues are labeled. H-bonds are depicted as red dashed lines while coordination bonds as green dashed lines. (b)
+<bold>13</bold>
+hCA IX theoretical binding pose within the hCA XII (PDB 5MSA) X-ray structure
+<xref rid="CIT0029" ref-type="bibr">
+<sup>29</sup>
+</xref>
+. The protein is shown as light blue ribbons and sticks while the ligand as salmon sticks. Critical residues are labeled. H-bonds are depicted as red dashed lines while coordination bonds as green dashed lines. (c)
+<bold>13</bold>
+hCA IX theoretical binding pose within the hCA I (PDB 6F3B) structure. The protein is shown as green ribbons and its molecular surface in transparent gray. The ligand is represented as salmon sticks. (d)
+<bold>13</bold>
+hCA IX theoretical binding pose within the hCA II (PDB 3K34) structure. The protein is shown as pink ribbons and its molecular surface in transparent gray. The ligand is represented as salmon sticks. The images were rendered using the UCSF Chimera software
+<xref rid="CIT0030" ref-type="bibr">
+<sup>30</sup>
+</xref>
+.
+</p>
+</caption>
+<graphic content-type="color" xlink:href="IENZ_A_1666836_F0002_C"/>
+</fig>
+<fig id="F0003" orientation="portrait" position="float">
+<label>Figure 3.</label>
+<caption>
+<p>
+(a)
+<bold>14</bold>
+/hCA IX (PDB 5FL4) theoretical complex as calculated by docking simulations. The protein is shown as cyan ribbons and sticks while the ligand as orange sticks. Critical residues are labeled. H-bonds are depicted as red dashed lines while coordination bonds as green dashed lines. (b)
+<bold>14</bold>
+hCA IX theoretical binding pose within the hCA XII (PDB 5MSA) X-ray structure. The protein is shown as light blue ribbons and sticks while the ligand as orange sticks. Critical residues are labeled. H-bonds are depicted as red dashed lines while coordination bonds as green dashed lines. (c)
+<bold>14</bold>
+hCA IX theoretical binding pose within the hCA I (PDB 6F3B) X-ray structure. The protein is shown as green ribbons and its molecular surface as transparent gray. The ligand is shown as orange sticks. (d)
+<bold>14</bold>
+hCA IX docked binding pose within the hCA II (PDB 3K34) structure. The protein is shown as pink ribbons and its molecular surface in transparent gray. The ligand is depicted as orange sticks. The images were rendered using the UCSF Chimera software
+<xref rid="CIT0030" ref-type="bibr">
+<sup>30</sup>
+</xref>
+.
+</p>
+</caption>
+<graphic content-type="color" xlink:href="IENZ_A_1666836_F0003_C"/>
+</fig>
+<fig id="F0004" orientation="portrait" position="float">
+<label>Figure 4.</label>
+<caption>
+<p>
+(a)
+<bold>17</bold>
+/hCA IX (PDB 5FL4) theoretical complex as calculated by docking simulations. The protein is shown as cyan ribbons and sticks while the ligand as yellow sticks. Critical residues are labeled. H-bonds are depicted as red dashed lines while coordination bonds as green dashed lines. (b)
+<bold>17</bold>
+hCA IX theoretical binding pose within the hCA XII (PDB 5MSA) X-ray structure. The protein is shown as light blue ribbons and sticks while the ligand as yellow sticks. Critical residues are labeled. H-bonds are depicted as red dashed lines while coordination bonds as green dashed lines. (c)
+<bold>17</bold>
+hCA IX theoretical binding pose within the hCA I (PDB 6F3B) X-ray structure. The protein is shown as green ribbons and its molecular surface as transparent gray. The ligand is shown as yellow sticks. (d)
+<bold>17</bold>
+hCA IX docked binding pose within the hCA II (PDB 3K34) structure. The protein is shown as pink ribbons and its molecular surface in transparent gray. The ligand is depicted as yellow sticks. The images were rendered using the UCSF Chimera software
+<xref rid="CIT0030" ref-type="bibr">
+<sup>30</sup>
+</xref>
+.
+</p>
+</caption>
+<graphic content-type="color" xlink:href="IENZ_A_1666836_F0004_C"/>
+</fig>
+<p>
+With the aim of rationalizing the selectivity of the compounds, the crystal structures of hCA I (PDB 6F3B)
+<xref rid="CIT0034" ref-type="bibr">
+<sup>34</sup>
+</xref>
+, hCA II (PDB 3K34)
+<xref rid="CIT0035" ref-type="bibr">
+<sup>35</sup>
+</xref>
+, and hCA XII (PDB 5MSA)
+<xref rid="CIT0036" ref-type="bibr">
+<sup>36</sup>
+</xref>
+were downloaded and their binding sites analyzed. To ascertain how the predicted docked poses of ligands
+<bold>13</bold>
+,
+<bold>14</bold>
+and
+<bold>17</bold>
+in the hCA IX active site would fit in the other CAs, the 3 D structures of the enzymes were superimposed. This analysis revealed that the recognition pattern achieved for hCA IX, conducive of potent enzyme inhibition, is unlikely to be confirmed for hCA I and hCA II due to major steric clashes (
+<xref ref-type="fig" rid="F0002">Figures 2(C,D)</xref>
+,
+<xref ref-type="fig" rid="F0003">3(C,D)</xref>
+, and
+<xref ref-type="fig" rid="F0004">4(C,D)</xref>
+). Indeed, their binding sites in the hot spot region feature bulky substituents that would unfavorably affect the binding mode of the compounds, especially in the case of ligand
+<bold>17 (</bold>
+<xref ref-type="fig" rid="F0004">Figure 4(C,D)</xref>
+).
+</p>
+<p>
+Conversely, hCA XII and hCA IX binding sites share a higher degree of homology. As such, the binding poses found for
+<bold>13</bold>
+,
+<bold>14</bold>
+and
+<bold>17</bold>
+in hCA IX also fit in hCA XII (
+<xref ref-type="fig" rid="F0002">Figures 2(B)</xref>
+and
+<xref ref-type="fig" rid="F0003">3(B))</xref>
+. Still, few key differences in the hot spot region can be found. Specifically, some hydrophobic residues in hCA IX are replaced by polar ones (L91, L123, V130 in CA IX become T88, Y121, S130 in hCA XII, respectively). Importantly, in hCA XII the positive K69 takes the place of Q71 in hCA IX. It is possible to infer that the more hydrophilic and positively charged binding site of hCA XII provides a better fit for compounds with a 3′-carboxyl group on the pendant 2-phenyl ring (see compound
+<bold>14</bold>
+,
+<xref ref-type="fig" rid="F0003">Figure 3(B))</xref>
+. Instead, compounds bearing the 3′-methoxycarbonyl moiety can interact more favorably with the lipophilic and neutral hot spot region of hCA IX. Purportedly, the presence of the ethyl linker grants the possibility for the ligand to maximize the favorable interactions in hCA IX and hCA XII, with both substitution patterns on the 2-phenyl ring, the 3′-carboxyl (
+<bold>18</bold>
+) or the 3′-methoxycarbonyl (
+<bold>17</bold>
+) moiety. On the other hand, the same ethyl linker, by enhancing the ligand flexibility, should also allow for a better fit into the hCA I and hCA II isoform structures, thereby negatively impacting on the ligand selectivity profile (
+<xref ref-type="fig" rid="F0002 F0003 F0004">Figures 2, 3 and 4</xref>
+).
+</p>
+</sec>
+</sec>
+<sec id="s0042">
+<title>Conclusions</title>
+<p>
+Several Schiff bases and secondary amines incorporating aromatic sulfonamide moieties in their structure has been extensively studied as CAIs. Starting from these classes of compounds and according to the frozen analog approach, we designed a series of derivatives featuring the 2-substituted-benzimidazole-6-sulfonamide scaffold, a chemical template only scarcely exploited in the CAIs’ medicinal chemistry field. A library of 14 derivatives was synthesized and tested for their enzyme inhibitory activity against the physiologically relevant human CA I, II, IX, and XII isoforms. Computational studies were attained to rationalize the SAR in terms of inhibitory activity and selectivity profile.
+</p>
+<p>
+Of note, the identification of a number of newly synthesized derivatives featuring high potency against the hCA IX and or XII isoforms, combined with promising selectivity profiles. These findings could result interesting for the development of novel anticancer agents with limited side effects. Indeed, hCA IX and XII enzymes have recently emerged as excellent targets for the design of novel therapeutic strategies for cancer, due to their involvement in the tumor cells survival as well as in insurgence of resistance to classical anticancer protocols. Extensive SAR analysis and cellular studies are ongoing to increase the knowledge within this series of CAIs inhibitors.
+</p>
+</sec>
+<sec sec-type="supplementary-material">
+<title>Supplementary Material</title>
+<supplementary-material content-type="local-data" id="SM9509">
+<caption>
+<title>Supplemental Material</title>
+</caption>
+<media mimetype="application" mime-subtype="pdf" xlink:href="IENZ_A_1666836_SM9509.pdf" orientation="portrait" id="d37e336" position="anchor"/>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<sec id="s0043">
+<title>Disclosure statement</title>
+<p>
+No potential conflict of interest was reported by the authors.
+</p>
+</sec>
+<sec id="s0044">
+<title>Author contributions</title>
+<p>
+The manuscript was written through the contributions of all authors. All authors have given approval to the final version of the manuscript.
+</p>
+</sec>
+<ref-list>
+<title>References</title>
+<ref id="CIT0001">
+<label>1</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+</person-group>
+<article-title>Structure and function of carbonic anhydrases</article-title>
+.
+<source>Biochem J</source>
+<year>2016</year>
+;
+<volume>473</volume>
+:
+<fpage>2023</fpage>
+–
+<lpage>32</lpage>
+.
+<pub-id pub-id-type="pmid">27407171</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0002">
+<label>2</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+</person-group>
+<article-title>
+Carbonic anhydrases: novel therapeutic applications for inhibitors and activators
+</article-title>
+.
+<source>Nat Rev Drug Discov</source>
+<year>2008</year>
+;
+<volume>7</volume>
+:
+<fpage>168</fpage>
+–
+<lpage>81</lpage>
+.
+<pub-id pub-id-type="pmid">18167490</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0003">
+<label>3</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Scozzafava</surname>
+<given-names>A</given-names>
+</name>
+</person-group>
+<article-title>
+Carbonic anhydrases as targets for medicinal chemistry
+</article-title>
+.
+<source>Bioorg Med Chem</source>
+<year>2007</year>
+;
+<volume>15</volume>
+:
+<fpage>4336</fpage>
+–
+<lpage>50</lpage>
+.
+<pub-id pub-id-type="pmid">17475500</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0004">
+<label>4</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+</person-group>
+<article-title>Carbonic anhydrases as drug targets-an overview</article-title>
+.
+<source>Curr Top Med Chem</source>
+<year>2007</year>
+;
+<volume>7</volume>
+:
+<fpage>825</fpage>
+–
+<lpage>33</lpage>
+.
+<pub-id pub-id-type="pmid">17504127</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0005">
+<label>5</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+</person-group>
+<article-title>
+Carbonic anhydrase inhibitors as emerging agents for the treatment and imaging of hypoxic tumors
+</article-title>
+.
+<source>Expert Opin Investig Drugs</source>
+<year>2018</year>
+;
+<volume>27</volume>
+:
+<fpage>963</fpage>
+–
+<lpage>70</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0006">
+<label>6</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Carta</surname>
+<given-names>F</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Scozzafava</surname>
+<given-names>A</given-names>
+</name>
+</person-group>
+<article-title>
+Sulfonamides and their isosters as carbonic anhydrase inhibitors
+</article-title>
+.
+<source>Future Med Chem</source>
+<year>2014</year>
+;
+<volume>6</volume>
+:
+<fpage>1149</fpage>
+–
+<lpage>65</lpage>
+.
+<pub-id pub-id-type="pmid">25078135</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0007">
+<label>7</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+</person-group>
+<article-title>
+How many carbonic anhydrase inhibition mechanisms exist?
+</article-title>
+<source>J Enzyme Inhib Med Chem</source>
+<year>2016</year>
+;
+<volume>31</volume>
+:
+<fpage>345</fpage>
+–
+<lpage>60</lpage>
+.
+<pub-id pub-id-type="pmid">26619898</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0008">
+<label>8</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Durgun</surname>
+<given-names>M</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Turkmen</surname>
+<given-names>H</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ceruso</surname>
+<given-names>M</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+</person-group>
+<article-title>
+Synthesis of 4-sulfamoylphenyl-benzylamine derivatives with inhibitory activity against human carbonic anhydrase isoforms i, ii, ix and xii
+</article-title>
+.
+<source>Bioorganic Med Chem</source>
+<year>2016</year>
+;
+<volume>24</volume>
+:
+<fpage>982</fpage>
+–
+<lpage>8</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0009">
+<label>9</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Ceruso</surname>
+<given-names>M</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Carta</surname>
+<given-names>F</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Osman</surname>
+<given-names>SM</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Inhibition studies of bacterial, fungal and protozoan β-class carbonic anhydrases with schiff bases incorporating sulfonamide moieties
+</article-title>
+.
+<source>Bioorganic Med Chem</source>
+<year>2015</year>
+;
+<volume>23</volume>
+:
+<fpage>4181</fpage>
+–
+<lpage>7</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0010">
+<label>10</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Nasr</surname>
+<given-names>G</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Cristian</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Barboiu</surname>
+<given-names>M</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Carbonic anhydrase inhibitors. Inhibition of human cytosolic isoforms i and ii with (reduced) Schiff’s bases incorporating sulfonamide, carboxylate and carboxymethyl moieties
+</article-title>
+.
+<source>Bioorganic Med Chem</source>
+<year>2014</year>
+;
+<volume>22</volume>
+:
+<fpage>2867</fpage>
+–
+<lpage>74</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0011">
+<label>11</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Clare</surname>
+<given-names>BW</given-names>
+</name>
+</person-group>
+<article-title>
+Carbonic anhydrase inhibitors – part 47: quantum chemical quantitative structure-activity relationships for a group of sulfanilamide Schiff base inhibitors of carbonic anhydrase
+</article-title>
+.
+<source>Europ J Med Chem</source>
+<year>1998</year>
+;
+<volume>33</volume>
+:
+<fpage>489</fpage>
+–
+<lpage>500</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0012">
+<label>12</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Castellano</surname>
+<given-names>S</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Kuck</surname>
+<given-names>D</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Viviano</surname>
+<given-names>M</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Synthesis and biochemical evaluation of δ2-isoxazoline derivatives as DNA methyltransferase 1 inhibitors
+</article-title>
+.
+<source>J Med Chem</source>
+<year>2011</year>
+;
+<volume>54</volume>
+:
+<fpage>7663</fpage>
+–
+<lpage>77</lpage>
+.
+<pub-id pub-id-type="pmid">21958292</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0013">
+<label>13</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Castellano</surname>
+<given-names>S</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Kuck</surname>
+<given-names>D</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Sala</surname>
+<given-names>M</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Constrained analogues of procaine as novel small molecule inhibitors of DNA methyltransferase-1
+</article-title>
+.
+<source>J Med Chem</source>
+<year>2008</year>
+;
+<volume>51</volume>
+:
+<fpage>2321</fpage>
+–
+<lpage>5</lpage>
+.
+<pub-id pub-id-type="pmid">18345608</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0014">
+<label>14</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Crocetti</surname>
+<given-names>L</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Maresca</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Temperini</surname>
+<given-names>C</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+A thiabendazole sulfonamide shows potent inhibitory activity against mammalian and nematode α-carbonic anhydrases
+</article-title>
+.
+<source>Bioorg Med Chem Lett</source>
+<year>2009</year>
+;
+<volume>19</volume>
+:
+<fpage>1371</fpage>
+–
+<lpage>5</lpage>
+.
+<pub-id pub-id-type="pmid">19186056</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0015">
+<label>15</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Karioti</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Carta</surname>
+<given-names>F</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+</person-group>
+<article-title>
+Phenols and polyphenols as carbonic anhydrase inhibitors
+</article-title>
+.
+<source>Molecules</source>
+<year>2016</year>
+;
+<volume>21</volume>
+:
+<fpage>1649</fpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0016">
+<label>16</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Durdagi</surname>
+<given-names>S</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Şentürk</surname>
+<given-names>M</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ekinci</surname>
+<given-names>D</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Kinetic and docking studies of phenol-based inhibitors of carbonic anhydrase isoforms i, ii, ix and xii evidence a new binding mode within the enzyme active site
+</article-title>
+.
+<source>Bioorg Med Chem</source>
+<year>2011</year>
+;
+<volume>19</volume>
+:
+<fpage>1381</fpage>
+–
+<lpage>9</lpage>
+.
+<pub-id pub-id-type="pmid">21282059</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0017">
+<label>17</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Davis</surname>
+<given-names>RA</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hofmann</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Osman</surname>
+<given-names>A</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Natural product-based phenols as novel probes for mycobacterial and fungal carbonic anhydrases
+</article-title>
+.
+<source>J Med Chem</source>
+<year>2011</year>
+;
+<volume>54</volume>
+:
+<fpage>1682</fpage>
+–
+<lpage>92</lpage>
+.
+<pub-id pub-id-type="pmid">21332115</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0018">
+<label>18</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Khalifah</surname>
+<given-names>RG</given-names>
+</name>
+</person-group>
+<article-title>
+The carbon dioxide hydration activity of carbonic anhydrase. I. Stop-flow kinetic studies on the native human isoenzymes b and c
+</article-title>
+.
+<source>J Biol Chem</source>
+<year>1971</year>
+;
+<volume>246</volume>
+:
+<fpage>2561</fpage>
+–
+<lpage>73</lpage>
+.
+<pub-id pub-id-type="pmid">4994926</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0019">
+<label>19</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+</person-group>
+<article-title>
+Carbon- versus sulphur-based zinc binding groups for carbonic anhydrase inhibitors?
+</article-title>
+<source>J Enzyme Inhib Med Chem</source>
+<year>2018</year>
+;
+<volume>33</volume>
+:
+<fpage>485</fpage>
+–
+<lpage>95</lpage>
+.
+<pub-id pub-id-type="pmid">29390912</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0020">
+<label>20</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Alterio</surname>
+<given-names>V</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Esposito</surname>
+<given-names>D</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Monti</surname>
+<given-names>SM</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Crystal structure of the human carbonic anhydrase ii adduct with 1-(4-sulfamoylphenyl-ethyl)-2,4,6-triphenylpyridinium perchlorate, a membrane-impermeant, isoform selective inhibitor
+</article-title>
+.
+<source>J Enzyme Inhib Med Chem</source>
+<year>2018</year>
+;
+<volume>33</volume>
+:
+<fpage>151</fpage>
+–
+<lpage>7</lpage>
+.
+<pub-id pub-id-type="pmid">29199489</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0021">
+<label>21</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Abdoli</surname>
+<given-names>M</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Angeli</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Bozdag</surname>
+<given-names>M</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Synthesis and carbonic anhydrase i, ii, vii, and ix inhibition studies with a series of benzo[d]thiazole-5- and 6-sulfonamides
+</article-title>
+.
+<source>J Enzyme Inhib Med Chem</source>
+<year>2017</year>
+;
+<volume>32</volume>
+:
+<fpage>1071</fpage>
+–
+<lpage>8</lpage>
+.
+<pub-id pub-id-type="pmid">28753093</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0022">
+<label>22</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Kohler</surname>
+<given-names>K</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hillebrecht</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Schulze Wischeler</surname>
+<given-names>J</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Saccharin inhibits carbonic anhydrases: possible explanation for its unpleasant metallic aftertaste
+</article-title>
+.
+<source>Angew Chem Int Ed Engl</source>
+<year>2007</year>
+;
+<volume>46</volume>
+:
+<fpage>7697</fpage>
+–
+<lpage>9</lpage>
+.
+<pub-id pub-id-type="pmid">17705204</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0023">
+<label>23</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Winum</surname>
+<given-names>JY</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Temperini</surname>
+<given-names>C</given-names>
+</name>
+,
+<name name-style="western">
+<surname>El Cheikh</surname>
+<given-names>K</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Carbonic anhydrase inhibitors: clash with ala65 as a means for designing inhibitors with low affinity for the ubiquitous isozyme ii, exemplified by the crystal structure of the topiramate sulfamide analogue
+</article-title>
+.
+<source>J Med Chem</source>
+<year>2006</year>
+;
+<volume>49</volume>
+:
+<fpage>7024</fpage>
+–
+<lpage>31</lpage>
+.
+<pub-id pub-id-type="pmid">17125255</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0024">
+<label>24</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Pastorekova</surname>
+<given-names>S</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Casini</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Scozzafava</surname>
+<given-names>A</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Carbonic anhydrase inhibitors: the first selective, membrane-impermeant inhibitors targeting the tumor-associated isozyme ix
+</article-title>
+.
+<source>Bioorg Med Chem Lett</source>
+<year>2004</year>
+;
+<volume>14</volume>
+:
+<fpage>869</fpage>
+–
+<lpage>73</lpage>
+.
+<pub-id pub-id-type="pmid">15012984</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0025">
+<label>25</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Scozzafava</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Menabuoni</surname>
+<given-names>L</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Mincione</surname>
+<given-names>F</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Carbonic anhydrase inhibitors. Synthesis of water-soluble, topically effective, intraocular pressure-lowering aromatic/heterocyclic sulfonamides containing cationic or anionic moieties: is the tail more important than the ring?
+</article-title>
+<source>J Med Chem</source>
+<year>1999</year>
+;
+<volume>42</volume>
+:
+<fpage>2641</fpage>
+–
+<lpage>50</lpage>
+.
+<pub-id pub-id-type="pmid">10411484</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0026">
+<label>26</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Borras</surname>
+<given-names>J</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Scozzafava</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Menabuoni</surname>
+<given-names>L</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Carbonic anhydrase inhibitors: synthesis of water-soluble, topically effective intraocular pressure lowering aromatic/heterocyclic sulfonamides containing 8-quinoline-sulfonyl moieties: is the tail more important than the ring?
+</article-title>
+<source>Bioorg Med Chem</source>
+<year>1999</year>
+;
+<volume>7</volume>
+:
+<fpage>2397</fpage>
+–
+<lpage>406</lpage>
+.
+<pub-id pub-id-type="pmid">10632049</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0027">
+<label>27</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Pustenko</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Stepanovs</surname>
+<given-names>D</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Zalubovskis</surname>
+<given-names>R</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+3h-1,2-benzoxathiepine 2,2-dioxides: a new class of isoform-selective carbonic anhydrase inhibitors
+</article-title>
+.
+<source>J Enzyme Inhib Med Chem</source>
+<year>2017</year>
+;
+<volume>32</volume>
+:
+<fpage>767</fpage>
+–
+<lpage>75</lpage>
+.
+<pub-id pub-id-type="pmid">28537099</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0028">
+<label>28</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Tars</surname>
+<given-names>K</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Vullo</surname>
+<given-names>D</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Kazaks</surname>
+<given-names>A</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Sulfocoumarins (1,2-benzoxathiine-2,2-dioxides): a class of potent and isoform-selective inhibitors of tumor-associated carbonic anhydrases
+</article-title>
+.
+<source>J Med Chem</source>
+<year>2013</year>
+;
+<volume>56</volume>
+:
+<fpage>293</fpage>
+–
+<lpage>300</lpage>
+.
+<pub-id pub-id-type="pmid">23241068</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0029">
+<label>29</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Briganti</surname>
+<given-names>F</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Pierattelli</surname>
+<given-names>R</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Scozzafava</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Supuran</surname>
+<given-names>CT</given-names>
+</name>
+</person-group>
+<article-title>
+Carbonic anhydrase inhibitors. Part 37. Novel classes of isozyme i and ii inhibitors and their mechanism of action. Kinetic and spectroscopic investigations on native and cobalt-substituted enzymes
+</article-title>
+.
+<source>European J Med Chem</source>
+<year>1996</year>
+;
+<volume>31</volume>
+:
+<fpage>1001</fpage>
+–
+<lpage>10</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0030">
+<label>30</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Morris</surname>
+<given-names>GM</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Huey</surname>
+<given-names>R</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Lindstrom</surname>
+<given-names>W</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Autodock4 and autodocktools4: automated docking with selective receptor flexibility
+</article-title>
+.
+<source>J Comput Chem</source>
+<year>2009</year>
+;
+<volume>30</volume>
+:
+<fpage>2785</fpage>
+–
+<lpage>91</lpage>
+.
+<pub-id pub-id-type="pmid">19399780</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0031">
+<label>31</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Santos-Martins</surname>
+<given-names>D</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Forli</surname>
+<given-names>S</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ramos</surname>
+<given-names>MJ</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Olson</surname>
+<given-names>AJ</given-names>
+</name>
+</person-group>
+<article-title>
+AutoDock4(Zn): an improved AutoDock force field for small-molecule docking to zinc metalloproteins
+</article-title>
+.
+<source>J Chem Inf Model</source>
+<year>2014</year>
+;
+<volume>54</volume>
+:
+<fpage>2371</fpage>
+–
+<lpage>9</lpage>
+.
+<pub-id pub-id-type="pmid">24931227</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0032">
+<label>32</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Leitans</surname>
+<given-names>J</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Kazaks</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Balode</surname>
+<given-names>A</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Efficient expression and crystallization system of cancer-associated carbonic anhydrase isoform ix
+</article-title>
+.
+<source>J Med Chem</source>
+<year>2015</year>
+;
+<volume>58</volume>
+:
+<fpage>9004</fpage>
+–
+<lpage>9</lpage>
+.
+<pub-id pub-id-type="pmid">26522624</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0033">
+<label>33</label>
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<collab>Schrödinger</collab>
+</person-group>
+, Release 2018-3: Maestro, Schrödinger, (
+<year>2018</year>
+).
+</mixed-citation>
+</ref>
+<ref id="CIT0034">
+<label>34</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Bozdag</surname>
+<given-names>M</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Carta</surname>
+<given-names>F</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Ceruso</surname>
+<given-names>M</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Discovery of 4-hydroxy-3-(3-(phenylureido)benzenesulfonamides as slc-0111 analogues for the treatment of hypoxic tumors overexpressing carbonic anhydrase ix
+</article-title>
+.
+<source>J Med Chem</source>
+<year>2018</year>
+;
+<volume>61</volume>
+:
+<fpage>6328</fpage>
+–
+<lpage>38</lpage>
+.
+<pub-id pub-id-type="pmid">29962205</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0035">
+<label>35</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Behnke</surname>
+<given-names>CA</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Le Trong</surname>
+<given-names>I</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Godden</surname>
+<given-names>JW</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>Atomic resolution studies of carbonic anhydrase ii</article-title>
+.
+<source>Acta Crystallographica Section D</source>
+<year>2010</year>
+;
+<volume>66</volume>
+:
+<fpage>616</fpage>
+–
+<lpage>27</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0036">
+<label>36</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Smirnov</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Manakova</surname>
+<given-names>E</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Grazulis</surname>
+<given-names>S</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+5MSA Crystal structure of human carbonic anhydrase isozyme XII with 2,3,5,6-Tetrafluoro-4-(propylthio)benzenesulfonamide, Protein Data Bank
+</article-title>
+.
+<source>RCSB</source>
+<year>2018</year>
+; DOI:
+<pub-id pub-id-type="doi">10.2210/pdb5MSA/pdb</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0037">
+<label>37</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Cosconati</surname>
+<given-names>S</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Forli</surname>
+<given-names>S</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Perryman</surname>
+<given-names>AL</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Virtual screening with autodock: theory and practice
+</article-title>
+.
+<source>Exp Opin Drug Disc</source>
+<year>2010</year>
+;
+<volume>5</volume>
+:
+<fpage>597</fpage>
+–
+<lpage>607</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0038">
+<label>38</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Arienti</surname>
+<given-names>KL</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Brunmark</surname>
+<given-names>A</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Axe</surname>
+<given-names>FU</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Checkpoint kinase inhibitors: SAR and radioprotective properties of a series of 2-arylbenzimidazoles
+</article-title>
+.
+<source>J Med Chem</source>
+<year>2005</year>
+;
+<volume>48</volume>
+:
+<fpage>1873</fpage>
+–
+<lpage>85</lpage>
+.
+<pub-id pub-id-type="pmid">15771432</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0039">
+<label>39</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Salerno</surname>
+<given-names>S</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Barresi</surname>
+<given-names>E</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Amendola</surname>
+<given-names>G</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+4-substituted benzenesulfonamides incorporating bi/tricyclic moieties act as potent and isoform-selective carbonic anhydrase ii/ix inhibitors
+</article-title>
+.
+<source>J Med Chem</source>
+<year>2018</year>
+;
+<volume>61</volume>
+:
+<fpage>5765</fpage>
+–
+<lpage>70</lpage>
+.
+<pub-id pub-id-type="pmid">29912561</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0040">
+<label>40</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Alterio</surname>
+<given-names>V</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hilvo</surname>
+<given-names>M</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Di Fiore</surname>
+<given-names>A</given-names>
+</name>
+,
+<etal>et al.</etal>
+</person-group>
+<article-title>
+Crystal structure of the catalytic domain of the tumor-associated human carbonic anhydrase ix
+</article-title>
+.
+<source>Proc Natl Acad Sci USA</source>
+<year>2009</year>
+;
+<volume>106</volume>
+:
+<fpage>16233</fpage>
+–
+<lpage>8</lpage>
+.
+<pub-id pub-id-type="pmid">19805286</pub-id>
+</mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

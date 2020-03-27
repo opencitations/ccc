@@ -1,0 +1,677 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.2 20190208//EN" "JATS-archivearticle1-mathml3.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables v1.0 20120330//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing-oasis-article1.dtd?><?SourceDTD.Version 1.0?><?ConverterInfo.XSLTName jpoasis-nisons2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">J Enzyme Inhib Med Chem</journal-id><journal-id journal-id-type="iso-abbrev">J Enzyme Inhib Med Chem</journal-id><journal-id journal-id-type="publisher-id">IENZ</journal-id><journal-id journal-id-type="publisher-id">ienz20</journal-id><journal-title-group><journal-title>Journal of Enzyme Inhibition and Medicinal Chemistry</journal-title></journal-title-group><issn pub-type="ppub">1475-6366</issn><issn pub-type="epub">1475-6374</issn><publisher><publisher-name>Taylor &#x00026; Francis</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">6853232</article-id><article-id pub-id-type="pmid">31707866</article-id><article-id pub-id-type="doi">10.1080/14756366.2019.1680658</article-id><article-id pub-id-type="publisher-id">1680658</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Paper</subject></subj-group></article-categories><title-group><article-title>Discovery and evaluation of novel synthetic
+5-alkyl-4-oxo-4,5-dihydro-[1,2,4]triazolo[4,3-a]quinoxaline-1-carbox-amide derivatives as
+anti-inflammatory agents</article-title><alt-title alt-title-type="running-authors">Q-K Shen et al.</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Shen</surname><given-names>Qing-Kun</given-names></name><xref ref-type="aff" rid="AF0001">
+<sup>a</sup>
+</xref><xref ref-type="author-notes" rid="FN0001"/></contrib><contrib contrib-type="author"><name><surname>Gong</surname><given-names>Guo-Hua</given-names></name><xref ref-type="aff" rid="AF0002">
+<sup>b</sup>
+</xref><xref ref-type="aff" rid="AF0003">
+<sup>c</sup>
+</xref><xref ref-type="author-notes" rid="FN0001"/></contrib><contrib contrib-type="author"><name><surname>Li</surname><given-names>Gao-</given-names></name><xref ref-type="aff" rid="AF0001">
+<sup>a</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Jin</surname><given-names>Mei-</given-names></name><xref ref-type="aff" rid="AF0004">
+<sup>d</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Cao</surname><given-names>Li-Hua</given-names></name><xref ref-type="aff" rid="AF0005">
+<sup>e</sup>
+</xref><xref ref-type="corresp" rid="AN0001"/><xref ref-type="author-notes" rid="FN0002"/></contrib><contrib contrib-type="author"><name><surname>Quan</surname><given-names>Zhe-Shan</given-names></name><xref ref-type="aff" rid="AF0001">
+<sup>a</sup>
+</xref><xref ref-type="corresp" rid="AN0002"/><xref ref-type="author-notes" rid="FN0002"/></contrib><aff id="AF0001"><label>a</label><institution>Key Laboratory of Natural Resources and
+Functional Molecules of the Changbai Mountain, Affiliated Ministry of Education, College
+of Pharmacy, Yanbian University</institution>, Yanji, <country>China</country>; </aff><aff id="AF0002"><label>b</label><institution>Inner Mongolia Autonomous Region Key
+Laboratory of Mongolian Medicine Pharmacology for Cardio-Cerebral Vascular
+System</institution>, Tongliao, <country>China</country>; </aff><aff id="AF0003"><label>c</label><institution>Affiliated Hospital of Inner Mongolia
+University for Nationalities</institution>, Tongliao, <country>China</country>; </aff><aff id="AF0004"><label>d</label><institution>Department of Central Laboratory, Yanbian
+University Hospital</institution>, Yanji, <country>China</country>; </aff><aff id="AF0005"><label>e</label><institution>College of Medical, Yanbian
+University</institution>, Yanji, <country>China</country></aff></contrib-group><author-notes><fn id="AUFN1"><p>Supplemental data for this article can be accessed <underline><ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1080/14756366.2019.1680658">here</ext-link></underline>.</p></fn><fn id="FN0001"><p>*Qing-Kun Shen and Guo-Hua Gong contributed equally to this work.</p></fn><fn id="FN0002"><p><sup>&#x02021;</sup>Li-Hua Cao and Zhe-Shan Quan are equal correspondence authors. </p></fn><corresp id="AN0001"><bold>CONTACT</bold> L.H. Cao <email>lhcao@ybu.edu.cn</email><institution>College of Medical, Yanbian University</institution>, Yanji, Jilin 133002,
+<country>China</country>; </corresp><corresp id="AN0002">Z. S. Quan <email>zsquan@ybu.edu.cn</email><institution>Key Laboratory of Natural Resources and Functional Molecules of the Changbai
+Mountain, Affiliated Ministry of Education, College of Pharmacy, Yanbian
+University</institution>, Yanji, Jilin 133002, <country>China</country></corresp></author-notes><pub-date pub-type="collection"><year>2020</year></pub-date><pub-date pub-type="epub"><day>11</day><month>11</month><year>2019</year></pub-date><volume>35</volume><issue>1</issue><fpage seq="9">85</fpage><lpage>95</lpage><history><date date-type="received"><day>22</day><month>4</month><year>2019</year></date><date date-type="rev-recd"><day>23</day><month>9</month><year>2019</year></date><date date-type="accepted"><day>09</day><month>10</month><year>2019</year></date></history><permissions><copyright-statement>&#x000a9; 2019 The Author(s). Published by Informa UK Limited, trading as
+Taylor &#x00026; Francis Group.</copyright-statement><copyright-year>2019</copyright-year><copyright-holder>The Author(s)</copyright-holder><license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an Open Access article distributed under the terms of the Creative
+Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>), which permits unrestricted
+use, distribution, and reproduction in any medium, provided the original work is
+properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:href="IENZ_35_1680658.pdf"/><abstract><title>Abstract</title><p>To develop novel anti-inflammatory agents, a series of 5-alkyl-4-oxo-4,5-dihydro-[1, 2,
+4]triazolo[4,3-a]quinoxaline-1-carboxamide derivatives were designed, synthesised, and
+evaluated for anti-inflammatory effects using RAW264.7 cells. Structures of the
+synthesised compounds were determined using <sup>1</sup>H NMR, <sup>13&#x02009;</sup>C NMR, and
+HRMS. All the compounds were screened for anti-inflammatory activity based on their
+inhibitory effects against LPS-induced NO release. Among them,
+5-(3,4,5-trimethoxybenzyl)-4-oxo-4,5-dihydro-[1, 2,
+4]triazolo[4,3-a]quinoxaline-1-carboxamide (<bold>6p</bold>) showed the highest
+anti-inflammatory activity and inhibited NO release more potently than the lead compound
+<bold>D1</bold>. Further studies revealed that compound <bold>6p</bold> reduced the
+levels of NO, TNF-&#x003b1;, and IL-6, and that its anti-inflammatory activity involves the
+inhibition of COX-2 and iNOS and downregulation of the mitogen-activated protein kinases
+(MAPK) signal pathway. Notably, compound <bold>6p</bold> displayed more prominent
+anti-inflammatory activity than <bold>D1</bold> and the positive control ibuprofen in the
+<italic>in vivo</italic> acute inflammatory model. Overall, these findings indicate that
+compound <bold>6p</bold> is a therapeutic candidate for the treatment of inflammation.</p></abstract><kwd-group kwd-group-type="author"><title>Keywords</title><kwd>Synthesis</kwd><kwd>anti-inflammatory activity</kwd><kwd>NO</kwd><kwd>MAPKs</kwd></kwd-group><funding-group><award-group><funding-source><named-content content-type="funder-name">National Natural Science Foundation of
+China</named-content><named-content content-type="funderidentifier">10.13039/501100001809</named-content></funding-source><award-id>21662036</award-id><award-id>81660837</award-id><award-id>81760627</award-id><award-id>81660579</award-id></award-group><award-group><funding-source><named-content content-type="funder-name">Science and Technology Planning Projects from
+the Education Commission of Jilin Province of China</named-content></funding-source><award-id>JJKH20191136KJ</award-id></award-group><funding-statement>This work was supported by the National Natural Science Foundation of
+China (No. 21662036, 81660837, 81760627, 81660579) and Science and Technology Planning
+Projects from the Education Commission of Jilin Province of China
+(JJKH20191136KJ).</funding-statement></funding-group><counts><fig-count count="5"/><table-count count="2"/><page-count count="11"/><word-count count="7405"/></counts></article-meta></front><body><sec id="s0001"><label>1.</label><title>Introduction</title><p>Inflammation is a protective host immune response to noxious stimuli, injury, or
+infection<xref rid="CIT0001" ref-type="bibr"><sup>1</sup></xref>. Long-term chronic
+inflammation, however, can cause increased vascular permeability, fibrosis, and tissue
+damage and can lead to the development of metabolic disorders such as rheumatoid arthritis,
+atherosclerosis, and even cancer<xref rid="CIT0002" ref-type="bibr"><sup>2</sup></xref><sup>,</sup><xref rid="CIT0003" ref-type="bibr"><sup>3</sup></xref>.
+It is well known that the use of chemical drugs to inhibit inflammation is an effective way
+to alleviate the symptoms of inflammation-related diseases<xref rid="CIT0004" ref-type="bibr"><sup>4</sup></xref><sup>,</sup><xref rid="CIT0005" ref-type="bibr"><sup>5</sup></xref>. Nonsteroidal anti-inflammatory drugs (NSAIDs) are still widely
+used in clinical applications today. However, they usually cause unexpected side effects,
+such as peptic ulcers, bleeding, mucosal lesions, and nephrotoxicity<xref rid="CIT0006" ref-type="bibr"><sup>6</sup></xref><sup>,</sup><xref rid="CIT0007" ref-type="bibr"><sup>7</sup></xref>. It is, therefore, better to find novel anti-inflammatory compounds
+with fewer adverse reactions.</p><p>As a congenital immune cell, macrophages play an important role in the occurrence and
+development of inflammation. During inflammation, macrophages overexpress bioactive
+inflammatory mediators such as nitric oxide (NO), interleukin 6 (IL-6), and tumour necrosis
+factor-alpha (TNF-&#x003b1;)<xref rid="CIT0008" ref-type="bibr"><sup>8</sup></xref>. Furthermore,
+the accumulation of these inflammatory mediators can cause cell and tissue damage and
+eventually chronic inflammation<xref rid="CIT0009" ref-type="bibr"><sup>9</sup></xref>. The
+inhibition of cytokine release from activated macrophages is, therefore, an important mode
+of action of anti-inflammatory drugs. The mitogen-activated protein kinases (MAPKs) are a
+family of signal transduction proteins that include extracellular signal-regulated kinase
+(ERK), c-Jun N-terminal kinases (JNK), and the p38 isoform (p38), which are involved in the
+classical pathways that modulate immune-mediated inflammatory responses through the
+corresponding signalling cascades<xref rid="CIT0010" ref-type="bibr"><sup>10</sup></xref><sup>,</sup><xref rid="CIT0011" ref-type="bibr"><sup>11</sup></xref>.
+Activated MAPKs modify the phosphorylation of the threonine/tyrosine motifs, accelerating
+iNOS, COX-2, and pro-inflammatory cytokine expression (including NO, TNF-&#x003b1;, and IL-6) in the
+activated macrophages<xref rid="CIT0012" ref-type="bibr"><sup>12&#x02013;14</sup></xref>. Thus, the pharmacological interference or inhibition of the MAPK
+signalling pathway can effectively alleviate the occurrence and development of inflammation.
+Development of anti-inflammatory agents that target the MAPK pathway might be an attractive
+therapeutic approach.</p><p>In previous studies, we presented many different derivative series with significant
+anti-inflammatory activities in an <italic>in vivo</italic> xylene-induced ear-oedema
+model<xref rid="CIT0015" ref-type="bibr"><sup>15&#x02013;18</sup></xref>.
+A series of 6-substituted-[1, 2, 4]triazolo[3,4-a]phthalazine-3-carboxamide derivatives
+(<bold>D</bold>) were found to be especially effective anti-inflammatory agents <italic>in
+vitro</italic> and <italic>in vivo</italic><xref rid="CIT0018" ref-type="bibr"><sup>18</sup></xref>. Among them, compounds <bold>A1</bold><xref rid="CIT0015" ref-type="bibr"><sup>15</sup></xref>, <bold>B1</bold><xref rid="CIT0016" ref-type="bibr"><sup>16</sup></xref>, <bold>C1</bold><xref rid="CIT0017" ref-type="bibr"><sup>17</sup></xref>, and <bold>D1</bold><xref rid="CIT0018" ref-type="bibr"><sup>18</sup></xref> were shown to be the most active derivatives in each series, and
+their structures are shown in <xref ref-type="fig" rid="F0001">Figure 1</xref>. Structure
+analysis of these derivatives revealed the following: (a) a tricyclic skeleton that contains
+a triazole ring; and (b) a triazole, 3-amino triazole, or 3-amido triazole that was assumed
+to be the main pharmacological moiety conferring the anti-inflammatory effect. In addition,
+functional group transitions and flipping are classic and effective strategies for the
+rational optimisation of lead compounds<xref rid="CIT0019" ref-type="bibr"><sup>19</sup></xref>.</p><fig id="F0001" orientation="portrait" position="float"><label>Figure 1.</label><caption><p>Design of target compounds <bold>6a&#x02013;6t</bold>.</p></caption><graphic content-type="color" xlink:href="IENZ_A_1680658_F0001_C"/></fig><p>As part of our continuous efforts to develop better novel anti-inflammatory agents and
+based on the above observations, a series of 5-alkyl-4-oxo-4,5-dihydro-[1, 2,
+4]triazolo[4,3-a]quinoxaline-1-carboxamide derivatives (<bold>6a&#x02013;6t</bold>) were designed
+and synthesised using the lead compound <bold>D</bold> and the design principles of skeleton
+migration and functional group flipping. Moreover, the anti-inflammatory effects of these
+target compounds were evaluated in RAW264.7 cells following lipopolysaccharide (LPS)-induced
+NO production. Further, the most potent compound, <bold>6p</bold>, with a
+3,4,5-trimethoxybenzyl moiety, was subjected to preliminary studies to determine the
+mechanisms of action underlying its anti-inflammatory activity by western blotting. Finally,
+we confirmed the anti-inflammatory effects <italic>in vivo</italic> by using the carrageenan
+method.</p></sec><sec id="s0002"><label>2.</label><title>Materials and methods</title><sec id="s0003"><label>2.1.</label><title>Chemistry</title><p>All chemicals were purchased from commercial source and used without further purification
+unless otherwise stated. The reactions were monitored by TLC using Merck Kieselgel 60&#x02009;F
+254 plates and visualised under UV light at 254&#x02009;nm. Column chromatography was generally
+performed on silica gel (200 mesh size).<sup>1</sup>H-NMR and <sup>13</sup>C-NMR spectra
+were measured on an AV-300 (Bruker BioSpin, Switzerland) and all chemical shifts were
+given in ppm relative to tetramethylsilane (TMS). High-resolution mass spectra (HRMS) were
+measured with an Thermo Scientific LTQ Orbitrap XL in ESI mode (<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1080/14756366.2019.1680658">Supplementary material</ext-link>).</p></sec><sec id="s0004"><label>2.2.</label><title>Procedure for the synthesis of compound 2</title><p>A mixture of benzene-1,2-diamine (<bold>1</bold>) (10.0&#x02009;g, 92&#x02009;mmol), oxalic acid
+(12.50&#x02009;g, 139&#x02009;mmol), and 30.00&#x02009;ml 10% HCl in 30&#x02009;ml H<sub>2</sub>O was stirred at 100&#x02009;&#x000b0;C
+for 2&#x02009;h. The mixture was cooled and then filtered to obtain
+1,4-dihydroquinoxaline-2,3-dione (<bold>2</bold>) as a white solid. Yield: 93%, m.p.
+&#x0003e;300&#x02009;&#x000b0;C. <sup>1</sup>H-NMR (DMSO-d<sub>6</sub>, 300&#x02009;MHz) <italic>&#x003b4;</italic>: 7.06&#x02013;7.15
+(m, 4H, Ar-H), 11.92 (s, 2H, &#x02013;CONH&#x02013;).</p></sec><sec id="s0005"><label>2.3.</label><title>Procedure for the synthesis of compound 3</title><p>A solution of compound 2 (5.0&#x02009;g, 46&#x02009;mmol) in hydrazine hydrate (100&#x02009;ml) was stirred at
+100&#x02009;&#x000b0;C for 2&#x02009;h. The mixture was cooled and then filtered to obtain
+3-hydrazinylquinoxalin-2(1<italic>H</italic>)-one (<bold>3</bold>) as a yellow solid.
+Yield: 84%, m.p. &#x0003e;300&#x02009;&#x000b0;C. <sup>1</sup>H-NMR (DMSO-d<sub>6</sub>, 300&#x02009;MHz)
+<italic>&#x003b4;</italic>: 4.52 (s, 2H, NH<sub>2</sub>), 7.11&#x02013;7.37 (m, 4H, Ar-H), 8.37 (s, 1H,
+&#x02013;NH&#x02013;), 12.07 (s, 1H, &#x02013;CONH&#x02013;).</p></sec><sec id="s0006"><label>2.4.</label><title>Procedure for the synthesis of compound 4</title><p>To a suspension of compound <bold>3</bold> (1.3&#x02009;g, 5&#x02009;mmol) in diethyl oxalate (15&#x02009;ml) was
+stirred at reflux for 3&#x02009;h. The solvent was removed under reduced pressure to give light
+yellow oil. The crude residue was purified by silica gel column chromatography (EtOAc) and
+recrystallized from petroleum ether to give compound <bold>4</bold>, yield: 34%.</p></sec><sec id="s0007"><label>2.5.</label><title>General procedure for the synthesis of compound (5a&#x02013;5t)</title><p>A mixture of compound <bold>4</bold> (0.52&#x02009;g, 2&#x02009;mmol), K<sub>2</sub>CO<sub>3</sub>
+(0.28&#x02009;g, 2&#x02009;mmol) and all kinds of halogenated alkanes (2.4&#x02009;mmol) in DMF (25&#x02009;ml) was
+stirred at 50&#x02009;&#x000b0;C for 3&#x02013;5&#x02009;h monitored by TLC and then concentrated under reduced pressure.
+The residue was added water (50.0&#x02009;ml) and extracted with dichloromethane. The organic
+layer was washed with saturated NaCl and dried over anhydrous
+Na<sub>2</sub>SO<sub>4</sub>. Then it can be purified by chromatography on silica eluting
+with a gradient of methanol/dichloromethane (1:50) to obtain the compounds
+<bold>5a&#x02013;5t</bold> as white solids.</p><sec id="s0008"><label>2.5.1.</label><title>Ethyl 5-benzyl-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-carboxylate
+(5g)</title><p>Yield: 58.9%, m.p. 157&#x02013;159&#x02009;&#x000b0;C. <sup>1</sup>H-NMR (CDCl<sub>3</sub>, 300&#x02009;MHz)
+<italic>&#x003b4;</italic>: 1.57 (t, 3H, <italic>J</italic>&#x02009;=&#x02009;7.1&#x02009;Hz, &#x02013;CH<sub>3</sub>), 4.67
+(q, 2H, <italic>J</italic>&#x02009;=&#x02009;7.1&#x02009;Hz, &#x02013;O&#x02013;CH<sub>2</sub>&#x02013;C), 5.63 (s, 2H,
+&#x02013;CH<sub>2</sub>&#x02013;), 7.32&#x02013;7.46 (m, 8H, Ar-H), 8.61 (d, 1H, <italic>J</italic>&#x02009;=&#x02009;8.3&#x02009;Hz,
+Ar-H).</p></sec></sec><sec id="s0009"><label>2.6</label><title>General procedure for the synthesis of compound (6a&#x02013;6t)</title><p>To a stirred solution of compound <bold>5a&#x02013;5t</bold> (2 mm0l) in MeOH (10&#x02009;ml) and
+ammonium hydroxide (10&#x02009;ml) was added. The reaction mixture was stirred at room temperature
+for 2&#x02009;h. The mixture was filtered and then washed with MeOH to give crude product. The
+resulting solid residue was purified by silica column chromatography
+(CH<sub>2</sub>Cl<sub>2</sub>/MeOH, 30:1) to give compounds <bold>6a&#x02013;6t</bold> as pale
+white solids.</p><sec id="s0010"><label>2.6.1.</label><title>5-butyl-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-carboxamide
+(6a)</title><p>Yield: 46.4%, m.p. 262&#x02013;264&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3314, 3180, 1693 (C=O), 1665
+(C=O). <sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 0.95 (t,
+<italic>J</italic>&#x02009;=&#x02009;7.2&#x02009;Hz, 3H, &#x02013;CH<sub>3</sub>), 1.40&#x02013;1.47 (m, 2H,
+&#x02013;CH<sub>2</sub>&#x02013;), 1.61&#x02013;1.71 (m, 2H, &#x02013;CH<sub>2</sub>&#x02013;), 4.29 (t,
+<italic>J</italic>&#x02009;=&#x02009;7.3&#x02009;Hz, 2H, &#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.41 (t,
+<italic>J</italic>&#x02009;=&#x02009;7.8&#x02009;Hz, 1H, Ar-H), 7.60 (t, <italic>J</italic>&#x02009;=&#x02009;7.8&#x02009;Hz, 1H, Ar-H),
+7.70 (d, <italic>J</italic>&#x02009;=&#x02009;8.4&#x02009;Hz, 1H, Ar-H), 8.47 (d, <italic>J</italic>&#x02009;=&#x02009;8.4&#x02009;Hz,
+1H, Ar-H), 8.49, 8.88 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C-NMR (75&#x02009;MHz,
+DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 14.20, 19.98, 29.28, 41.79, 117.10, 119.38,
+121.13, 123.74, 129.09, 129.95, 144.31, 146.44, 151.81, 160.53. ESI-HRMS calculated for
+C<sub>14</sub>H<sub>16</sub>N<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 286.1299; found: 286.1302.</p></sec><sec id="s0011"><label>2.6.2.</label><title>5-pentyl-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-carboxamide
+(6b)</title><p>Yield: 56.7%, m.p. 232&#x02013;234&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3354, 3162, 1680 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 0.88 (t,
+<italic>J</italic>&#x02009;=&#x02009;6.5&#x02009;Hz, 3H, &#x02013;CH<sub>3</sub>), 1.38 (s, 4H,
+&#x02013;(CH<sub>2</sub>)<sub>2</sub>&#x02013;), 1.68 (s, 2H, &#x02013;CH<sub>2</sub>&#x02013;), 4.28 (t,
+<italic>J</italic>&#x02009;=&#x02009;6.2&#x02009;Hz, 2H, &#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.40 (t,
+<italic>J</italic>&#x02009;=&#x02009;7.8&#x02009;Hz, 1H, Ar-H), 7.60 (t, <italic>J</italic>&#x02009;=&#x02009;7.8&#x02009;Hz, 1H, Ar-H),
+7.70 (d, <italic>J</italic>&#x02009;=&#x02009;8.4&#x02009;Hz, 1H, Ar-H), 8.47 (d, <italic>J</italic>&#x02009;=&#x02009;8.4&#x02009;Hz,
+1H, Ar-H), 8.49, 8.88 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C NMR (75&#x02009;MHz,
+DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 14.35, 22.39, 26.88, 28.81, 42.00, 117.09,
+119.39, 121.13, 123.75, 129.11, 129.96, 144.32, 146.45, 151.81, 160.53. ESI-HRMS
+calculated for C<sub>15</sub>H<sub>18</sub>N<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 300.1455; found: 300.1458.</p></sec><sec id="s0012"><label>2.6.3.</label><title>5-hexyl-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-carboxamide
+(6c)</title><p>Yield: 36.4%, m.p. 239&#x02013;241&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3360, 3169, 1725 (C=O), 1683
+(C=O). <sup>1</sup>H-NMR (DMSO-d<sub>6</sub>, 300&#x02009;MHz) <italic>&#x003b4;</italic>: 0.88 (t, 3H,
+<italic>J</italic>&#x02009;=&#x02009;6.3&#x02009;Hz, &#x02013;CH<sub>3</sub>) 1.30&#x02013;1.42 (m, 6H,
+&#x02013;(CH<sub>2</sub>)<sub>3</sub>&#x02013;), 1.61&#x02013;1.72 (m, 2H, &#x02013;CH<sub>2</sub>&#x02013;), 4.27 (t, 2H,
+<italic>J</italic>&#x02009;=&#x02009;7.5&#x02009;Hz, &#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.40 (t,
+<italic>J</italic>&#x02009;=&#x02009;7.8&#x02009;Hz, 1H, Ar-H), 7.59 (t, <italic>J</italic>&#x02009;=&#x02009;7.8&#x02009;Hz, 1H, Ar-H),
+7.71 (d, <italic>J</italic>&#x02009;=&#x02009;8.4&#x02009;Hz, 1H, Ar-H), 8.46 (d, 1H,
+<italic>J</italic>&#x02009;=&#x02009;8.4&#x02009;Hz, Ar-H), 8.50, 8.89 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C
+NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 14.35, 22.49, 26.33, 27.14, 31.44,
+42.04, 117.03, 119.39, 121.11, 123.71, 129.08, 129.92, 144.29, 146.46, 151.77, 160.50.
+ESI-HRMS calculated for
+C<sub>16</sub>H<sub>20</sub>N<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 314.1612; found: 314.1161.</p></sec><sec id="s0013"><label>2.6.4.</label><title>5-heptyl-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-carboxamide
+(6d)</title><p>Yield: 32.2%, m.p. 231&#x02013;233&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3349, 3156, 1682 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 0.85 (s, 3H,
+<italic>J</italic>&#x02009;=&#x02009;6.3&#x02009;Hz, &#x02013;CH<sub>3</sub>), 1.26&#x02013;1.38 (m, 8H,
+&#x02013;(CH<sub>2</sub>)<sub>4</sub>&#x02013;), 1.67 (s, 2H, &#x02013;CH<sub>2</sub>&#x02013;), 4.27 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.39&#x02013;7.70 (m, 3H, Ar-H), 8.46 (s, 1H, Ar-H), 8.49, 8.89 (s, 2H,
+&#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C-NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>:
+14.41, 22.51, 26.64, 27.19, 28.92, 31.68, 42.03, 117.06, 119.39, 121.10, 123.72, 129.08,
+129.92, 144.31, 146.45, 151.78, 160.51. ESI-HRMS calculated for
+C<sub>17</sub>H<sub>22</sub>N<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 328.1768; found: 328.1765.</p></sec><sec id="s0014"><label>2.6.5.</label><title>5-octyl-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-carboxamide
+(6e)</title><p>Yield: 30.1%, m.p. 230&#x02013;232&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3351, 3156, 1682 (C=O),
+1673(C=O). <sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 0.85 (s,
+3H, <italic>J</italic>&#x02009;=&#x02009;6.3&#x02009;Hz, &#x02013;CH<sub>3</sub>), 1.24 (s, 8H,
+&#x02013;(CH<sub>2</sub>)<sub>4</sub>&#x02013;), 1.40 (s, 2H, &#x02013;CH<sub>2</sub>&#x02013;), 1.58&#x02013;1.74 (m, 2H,
+&#x02013;CH<sub>2</sub>&#x02013;) 4.27 (t, 2H, <italic>J</italic>&#x02009;=&#x02009;6.6&#x02009;Hz, &#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.39
+(t, 1H, <italic>J</italic>&#x02009;=&#x02009;7.6&#x02009;Hz, Ar-H), 7.58 (t, 1H, <italic>J</italic>&#x02009;=&#x02009;7.6&#x02009;Hz,
+Ar-H), 7.69 (d, 1H, <italic>J</italic>&#x02009;=&#x02009;8.2&#x02009;Hz, Ar-H), 8.47 (t, 1H,
+<italic>J</italic>&#x02009;=&#x02009;8.2&#x02009;Hz, Ar-H), 8.49, 8.89 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C
+NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 14.40, 22.54, 26.67, 27.17, 29.09,
+29.21, 31.69, 42.03, 117.07, 119.40, 121.12, 123.72, 129.09, 129.93, 144.31, 146.45,
+151.78, 160.51. ESI-HRMS calculated for
+C<sub>18</sub>H<sub>24</sub>N<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 342.1925; found: 342.1922.</p></sec><sec id="s0015"><label>2.6.6.</label><title>5-nonyl-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-carboxamide
+(6f)</title><p>Yield: 30.1%, m.p. 236&#x02013;238&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3353, 3155, 1682 (C=O),
+1671(C=O). <sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 0.84 (m,
+3H, <italic>J</italic>&#x02009;=&#x02009;6.3&#x02009;Hz, &#x02013;CH<sub>3</sub>), 1.24&#x02013;1.40 (m, 12H,
+&#x02013;(CH<sub>2</sub>)<sub>6</sub>&#x02013;), 1.58&#x02013;1.74 (m, 2H, &#x02013;CH<sub>2</sub>&#x02013;), 4.26 (t, 2H,
+<italic>J</italic>&#x02009;=&#x02009;6.8&#x02009;Hz, &#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.39 (t, 1H,
+<italic>J</italic>&#x02009;=&#x02009;7.6&#x02009;Hz, Ar-H), 7.58 (t, 1H, <italic>J</italic>&#x02009;=&#x02009;7.6&#x02009;Hz, Ar-H),
+7.69 (d, 1H, <italic>J</italic>&#x02009;=&#x02009;8.2&#x02009;Hz, Ar-H), 8.47 (t, 1H,
+<italic>J</italic>&#x02009;=&#x02009;8.2&#x02009;Hz, Ar-H), 8.49, 8.89 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C
+NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 14.41, 22.55, 26.66, 27.17, 29.11,
+29.26, 29.36, 31.74, 42.02, 117.07, 119.40, 121.12, 123.72, 129.08, 129.93, 144.31,
+146.45, 151.78, 160.51. ESI-HRMS calculated for
+C<sub>19</sub>H<sub>26</sub>N<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 356.2081; found: 356.2078.</p></sec><sec id="s0016"><label>2.6.7.</label><title>5-benzyl-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-carboxamide
+(6g)</title><p>Yield: 35.8%, m.p. 268&#x02013;270&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3345, 3157, 1682 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 5.57 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.36&#x02013;7.45 (m, 8H, Ar-H), 8.52 (s, 2H, Ar-H, &#x02013;NH), 8.92 (s, 1H,
+&#x02013;NH). <sup>13&#x02009;</sup>C NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 45.42,
+117.56, 119.35, 121.38, 123.96, 127.06 (2&#x02009;C), 127.77, 128.85, 129.12 (2&#x02009;C), 130.10,
+136.07, 144.59, 146.60, 152.54, 160.53. ESI-HRMS calculated for
+C<sub>17</sub>H<sub>14</sub>N<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 320.1142; found: 320.1140.</p></sec><sec id="s0017"><label>2.6.8.</label><title>5-(2-fluorobenzyl)-4-oxo-4,5-dihydro-[1, 2,
+4]triazolo[4,3-a]quinoxaline-1-carboxamide (6h)</title><p>Yield: 28.2%, m.p. 273&#x02013;275&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3340, 3165, 1685 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 5.56 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.08&#x02013;7.50 (m, 7H, Ar-H), 8.54 (m, 2H, Ar-H, &#x02013;NH), 8.95 (s, 1H,
+&#x02013;NH). <sup>13&#x02009;</sup>C NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 44.05, 115.90
+(d, <italic>J</italic>&#x02009;=&#x02009;20.8&#x02009;Hz), 117.11, 119.42, 121.45, 122.81 (d,
+<italic>J</italic>&#x02009;=&#x02009;14.0&#x02009;Hz), 124.09, 125.10 (d, <italic>J</italic>&#x02009;=&#x02009;2.5&#x02009;Hz), 128.60
+(d, <italic>J</italic>&#x02009;=&#x02009;3.5&#x02009;Hz), 129.01, 129.88 (d, <italic>J</italic>&#x02009;=&#x02009;7.5&#x02009;Hz),
+130.08, 144.58, 146.60, 152.50, 160.33 (d, <italic>J</italic>&#x02009;=&#x02009;242.9&#x02009;Hz), 160.50.
+ESI-HRMS calculated for
+C<sub>17</sub>H<sub>13</sub>FN<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 338.1048; found: 338.1044.</p></sec><sec id="s0018"><label>2.6.9.</label><title>5&#x02013;(3-fluorobenzyl)-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-
+carboxamide (6i)</title><p>Yield: 32.4%, m.p. 276&#x02013;278&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3342, 3155, 1685 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 5.57 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.10 (t, <italic>J</italic>&#x02009;=&#x02009;8.0&#x02009;Hz, 1H, Ar-H), 7.25 (t,
+<italic>J</italic>&#x02009;=&#x02009;7.1&#x02009;Hz, 2H, Ar-H), 7.35&#x02013;7.49 (m, 4H, Ar-H), 8.51 (s, 1H, Ar-H),
+8.54, 8.93 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C-NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>)
+<italic>&#x003b4;</italic>: 45.09, 114.17 (d, <italic>J</italic>&#x02009;=&#x02009;38.6&#x02009;Hz), 114.46 (d,
+<italic>J</italic>&#x02009;=&#x02009;37.3&#x02009;Hz), 117.37, 119.38, 121.53, 123.15, 123.97, 128.84, 130.10,
+131.1 (d, <italic>J</italic>&#x02009;=&#x02009;8.2&#x02009;Hz), 139.12 (d, <italic>J</italic>&#x02009;=&#x02009;7.2&#x02009;Hz), 144.76,
+146.55, 152.65, 160.54, 162.93 (d, <italic>J</italic>&#x02009;=&#x02009;242.1&#x02009;Hz). ESI-HRMS calculated
+for C<sub>17</sub>H<sub>13</sub>FN<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 338.1048; found: 338.1047.</p></sec><sec id="s0019"><label>2.6.10.</label><title>5-(4-fluorobenzyl)-4-oxo-4,5-dihydro-[1, 2,
+4]triazolo[4,3-a]quinoxaline-1-carboxamide (6j)</title><p>Yield: 25.7%, m.p. 274&#x02013;276&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3342, 1685 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 5.54 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.16 (t, <italic>J</italic>&#x02009;=&#x02009;8.8&#x02009;Hz, 2H, Ar-H), 7.35-8.46 (m,
+5H, Ar-H), 8.50 (s, 1H, Ar-H), 8.52, 8.91 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C-NMR
+(75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 44.79, 115.88 (d,
+<italic>J</italic>&#x02009;=&#x02009;21.4&#x02009;Hz, 2&#x02009;C), 117.46, 119.37, 121.44, 123.97, 128.86, 129.27 (d,
+<italic>J</italic>&#x02009;=&#x02009;8.1&#x02009;Hz, 2&#x02009;C), 130.04, 132.24 (d, <italic>J</italic>&#x02009;=&#x02009;2.7&#x02009;Hz),
+144.64, 146.57, 152.57, 160.52. 161.87 (d, <italic>J</italic>&#x02009;=&#x02009;241.7&#x02009;Hz), ESI-HRMS
+calculated for C<sub>17</sub>H<sub>13</sub>FN<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 338.1048; found: 338.1045.</p></sec><sec id="s0020"><label>2.6.11.</label><title>5-(2-chlorobenzyl)-4-oxo-4,5-dihydro-[1, 2,
+4]triazolo[4,3-a]quinoxaline-1-carboxamide (6k)</title><p>Yield: 31.6%, m.p. 278&#x02013;280&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3334, 3164, 1685 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 5.51 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.14&#x02013;7.23 (m, 3H, Ar-H), 7.32&#x02013;7.51 (m, 3H, Ar-H), 7.59 (d,
+<italic>J</italic>&#x02009;=&#x02009;7.9, 1H, Ar-H), 8.53 (s, 1H, Ar-H), 8.56, 8.95 (s, 2H,
+&#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C-NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>:
+44.24, 117.11, 119.45, 121.55, 124.11, 127.81, 127.94, 129.07, 129.58, 130.00, 130.16,
+132.09, 132.81, 144.70, 146.60, 152.53, 160.51. ESI-HRMS calculated for
+C<sub>17</sub>H<sub>13</sub>ClN<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 354.0752; found: 354.0749.</p></sec><sec id="s0021"><label>2.6.12.</label><title>5-(3-chlorobenzyl)-4-oxo-4,5-dihydro-[1, 2,
+4]triazolo[4,3-a]quinoxaline-1-carboxamide (6&#x02009;l)</title><p>Yield: 25.8%, m.p. 269&#x02013;271&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3338, 3158, 1685 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 5.56 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.36&#x02013;7.51 (m, 7H, Ar-H), 8.52 (s, 1H, Ar-H), 8.54, 8.92 (s, 2H,
+&#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C-NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>:
+45.07, 117.36, 119.38, 121.55, 123.98, 125.82, 126.94, 127.80, 128.87, 130.14, 130.93,
+133.91, 138.77, 146.54, 152.69, 160.53. ESI-HRMS calculated for
+C<sub>17</sub>H<sub>13</sub>ClN<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 354.0752; found: 354.0748.</p></sec><sec id="s0022"><label>2.6.13.</label><title>5-(4-chlorobenzyl)-4-oxo-4,5-dihydro-[1, 2,
+4]triazolo[4,3-a]quinoxaline-1-carboxamide (6m)</title><p>Yield: 20.3%, m.p. 282&#x02013;284&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3334, 3158, 1685 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 5.55 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.40 (s, 7H, Ar-H), 8.52 (s, 2H, Ar-H, &#x02013;NH), 8.93 (s, 1H, &#x02013;NH).
+<sup>13&#x02009;</sup>C-NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 44.88, 117.43,
+119.38, 121.44, 124.01, 128.88, 129.03 (2&#x02009;C), 129.10 (2&#x02009;C), 130.02, 132.38, 135.17,
+144.64, 146.57, 152.57, 160.52. ESI-HRMS calculated for
+C<sub>17</sub>H<sub>13</sub>ClN<sub>5</sub>O<sub>2</sub><sup>+</sup>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 354.0752; found: 354.0750.</p></sec><sec id="s0023"><label>2.6.14.</label><title>5-(3-methoxybenzyl)-4-oxo-4,5-dihydro-[1, 2,
+4]triazolo[4,3-a]quinoxaline-1-carboxamide (6n)</title><p>Yield: 38.3%, m.p. 266&#x02013;268&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3314, 3191, 1691 (C=O),
+1668(C=O). <sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 3.72 (s,
+3H, &#x02013;O&#x02013;CH<sub>3</sub>), 5.52 (s, 2H, &#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 6.82&#x02013;6.97 (m, 3H, Ar-H), 7.23
+(t, <italic>J</italic>&#x02009;=&#x02009;8.8&#x02009;Hz, 1H, Ar-H), 7.35-7.47 (m, 3H, Ar-H), 8.50 (s, 1H, Ar-H),
+8.52, 8.91 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C-NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>)
+<italic>&#x003b4;</italic>: 45.43, 55.51, 112.87, 113.16, 117.56, 119.03, 119.30, 121.39,
+123.94, 128.84, 130.18, 130.26, 137.71, 144.62, 146.58, 152.55, 160.02, 160.53. ESI-HRMS
+calculated for C<sub>18</sub>H<sub>16</sub>N<sub>5</sub>O<sub>3</sub>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 350.1248; found: 350.1249.</p></sec><sec id="s0024"><label>2.6.15.</label><title>5-(4-methoxybenzyl)-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-
+carboamide (6o)</title><p>Yield: 42.5%, m.p. 264&#x02013;266&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3340, 1682 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 3.71 (s, 3H,
+&#x02013;O&#x02013;CH<sub>3</sub>), 5.49 (s, 2H, &#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 6.89 (s, 2H, Ar-H), 7.33&#x02013;7.48
+(m, 5H, Ar-H), 8.51 (s, 2H, Ar-H, &#x02013;NH), 8.91 (s, 1H, &#x02013;NH). <sup>13&#x02009;</sup>C NMR (75&#x02009;MHz,
+DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 44.85, 55.51, 114.51 (2&#x02009;C), 117.60, 119.33,
+121.33, 123.91, 127.86, 128.55 (2&#x02009;C), 128.82, 130.04, 144.55, 146.59, 152.49, 158.96,
+160.53. ESI-HRMS calculated for C<sub>18</sub>H<sub>16</sub>N<sub>5</sub>O<sub>3</sub>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 350.1248; found: 350.1251.</p></sec><sec id="s0025"><label>2.6.16.</label><title>5-(3,4,5-trimethoxybenzyl)-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxali-
+ne-1-carboxamide (6p)</title><p>Yield: 50.6%, m.p. 286&#x02013;288&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3317, 1688 (C=O), 1665(C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 3.62 (s, 3H,
+&#x02013;O&#x02013;CH<sub>3</sub>), 3.71 (s, 6H, &#x02013;O&#x02013;CH<sub>3</sub>), 5.46 (s, 2H, &#x02013;N&#x02013;CH<sub>2</sub>&#x02013;),
+6.73 (s, 2H, Ar-H), 7.39&#x02013;8.50 (m, 3H, Ar-H), 8.52 (s, 1H, Ar-H), 8.54, 8.92 (s, 2H,
+&#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>:
+45.96, 56.49 (2&#x02009;C), 60.44, 104.79 (2&#x02009;C), 117.57, 119.28, 121.40, 123.90, 128.84, 130.39,
+131.91, 137.16, 144.77, 146.57, 152.69, 153.61 (2&#x02009;C), 160.55. ESI-HRMS calculated for
+C<sub>20</sub>H<sub>20</sub>N<sub>5</sub>O<sub>5</sub> ([M&#x02009;+&#x02009;H]<sup>+</sup>):
+410.1459; found: 410.1461.</p></sec><sec id="s0026"><label>2.6.17.</label><title>5-(2,4-dichlorobenzyl)-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-
+1-carboxamide (6q)</title><p>Yield: 26.3%, m.p. 266&#x02013;268&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3342, 3160, 1682 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 5.47 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.21&#x02013;7.27 (m, 3H, Ar-H), 7.40&#x02013;7.48 (m, 2H, Ar-H), 7.77 (s, 1H,
+Ar-H), 8.53 (s, 1H, Ar-H), 8.56, 8.96 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C-NMR
+(75&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 44.01, 117.06, 119.46, 121.59, 124.15,
+127.98, 129.08, 129.29, 129.50, 130.09, 132.17, 133.13, 133.26, 144.73, 146.59, 152.55,
+160.49. ESI-HRMS calculated for
+C<sub>17</sub>H<sub>12</sub>Cl<sub>2</sub>N<sub>5</sub>O<sub>2</sub>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 388.0363; found: 388.0367.</p></sec><sec id="s0027"><label>2.6.18.</label><title>5-(3-(Trifluoromethyl)benzyl)-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinox-
+aline-1-carboxamide (6r)</title><p>Yield: 36.7%, m.p. 262&#x02013;264&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3331, 3165, 1685 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 5.65 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.35&#x02013;7.50 (m, 3H, Ar-H), 7.56 (d, <italic>J</italic>&#x02009;=&#x02009;7.6&#x02009;Hz,
+1H, Ar-H), 7.66 (t, <italic>J</italic>&#x02009;=&#x02009;7.0&#x02009;Hz, 2H, Ar-H), 7.85 (s, 1H, Ar-H), 8.52 (s,
+1H, Ar-H), 8.55, 8.93 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C-NMR (75&#x02009;MHz,
+DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 45.28, 117.29, 119.42, 121.55, 122.82, 124.01,
+124.14, 124.57 (d, <italic>J</italic>&#x02009;=&#x02009;4.4&#x02009;Hz), 128.03 (d,
+<italic>J</italic>&#x02009;=&#x02009;240.5&#x02009;Hz), 128.89, 129.84 (d, <italic>J</italic>&#x02009;=&#x02009;31.7&#x02009;Hz), 130.14
+(d, <italic>J</italic>&#x02009;=&#x02009;6.1&#x02009;Hz), 131.14, 137.76, 144.81, 146.56, 152.76, 160.54.
+ESI-HRMS calculated for
+C<sub>18</sub>H<sub>13</sub>F<sub>3</sub>N<sub>5</sub>O<sub>2</sub>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 388.1016; found: 388.1018.</p></sec><sec id="s0028"><label>2.6.19.</label><title>5-(4-nitrobenzyl)-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-carb-
+oxamide (6&#x02009;s)</title><p>Yield: 25.1%, m.p. 273&#x02013;275&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3465, 3311, 1674 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 5.70 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.36&#x02013;7.48 (m, 3H, Ar-H), 7.68 (d, <italic>J</italic>&#x02009;=&#x02009;8.4&#x02009;Hz,
+2H, Ar-H), 8.18 (d, <italic>J</italic>&#x02009;=&#x02009;8.5&#x02009;Hz, 2H, Ar-H), 8.52 (s, 1H, Ar-H), 8.55,
+8.96 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C-NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>)
+<italic>&#x003b4;</italic>: 45.27, 117.29, 119.47, 121.54, 124.15, 128.37 (3&#x02009;C), 128.94 (2&#x02009;C),
+130.02, 144.18, 144.71, 146.60, 147.28, 152.65, 160.50. ESI-HRMS calculated for
+C<sub>17</sub>H<sub>13</sub>N<sub>6</sub>O<sub>4</sub> ([M&#x02009;+&#x02009;H]<sup>+</sup>):
+365.0993; found: 365.0996.</p></sec><sec id="s0029"><label>2.6.20.</label><title>5-(4-cyanobenzyl)-4-oxo-4,5-dihydro-[1, 2,
+4]triazolo[4,3-a]quinoxaline-1-carboxamide (6t)</title><p>Yield: 23.6%, m.p. 298&#x02013;300&#x02009;&#x000b0;C. IR (KBr) cm<sup>&#x02212;1</sup>: 3440, 3194, 1680 (C=O).
+<sup>1</sup>H-NMR (300&#x02009;MHz, DMSO-d<sub>6</sub>) <italic>&#x003b4;</italic>: 5.65 (s, 2H,
+&#x02013;N&#x02013;CH<sub>2</sub>&#x02013;), 7.38&#x02013;7.46 (m, 3H, Ar-H), 7.60 (d, <italic>J</italic>&#x02009;=&#x02009;7. 3&#x02009;Hz,
+2H, Ar-H), 7.82 (d, <italic>J</italic>&#x02009;=&#x02009;7.3&#x02009;Hz, 2H, Ar-H), 8.52 (s, 1H, Ar-H), 8.54,
+8.94 (s, 2H, &#x02013;NH<sub>2</sub>). <sup>13&#x02009;</sup>C-NMR (75&#x02009;MHz, DMSO-d<sub>6</sub>)
+<italic>&#x003b4;</italic>: 45.38, 110.60, 117.28, 119.19, 119.45, 121.55, 124.07, 128.10
+(2&#x02009;C), 128.91, 130.05, 132.99 (2&#x02009;C), 142.05, 144.74, 146.58, 152.66, 160.51. ESI-HRMS
+calculated for C<sub>18</sub>H<sub>13</sub>N<sub>6</sub>O<sub>2</sub>
+([M&#x02009;+&#x02009;H]<sup>+</sup>): 345.1095; found: 345.1097.</p></sec></sec><sec id="s0030"><label>2.7.</label><title>Cell culture and sample treatment</title><p>The RAW 264.7 mouse macrophage cell line was obtained from the China Cell Line Bank
+(Beijing, China). Cells were cultured in complete medium (DMEM supplemented with 10%
+heat-inactivated FBS, 3&#x02009;mM glutamine and antibiotics (100&#x02009;U/mL penicillin and 100&#x02009;U/mL
+streptomycin)) at 37&#x02009;&#x000b0;C in a humidified incubator containing 5% CO<sub>2</sub> and 95%
+air. Cells were treated with various concentrations of synthesised compounds for 30&#x02009;min
+followed by stimulation with LPS (1&#x02009;&#x000b5;g/L).</p></sec><sec id="s0031"><label>2.8.</label><title>MTT assay for cell viability</title><p>Cell viability studies induced by synthesised compounds were evaluated by
+3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide (MTT) assay. RAW264.7
+macrophages were seeded in 96-well plates at a density of 5&#x02009;&#x000d7;&#x02009;10<sup>5</sup> cells/mL in
+complete medium and incubated for 24&#x02009;h (100&#x02009;&#x000b5;L/well). Then the cells were treated with
+different concentrations of synthesised compounds for 24&#x02009;h. 150&#x02009;&#x000b5;L MTT (5&#x02009;g/L in PBS) was
+added to each well and the cells were further incubated for 4&#x02009;h. The supernatant was
+removed and the cells were lysed with 150&#x02009;&#x000b5;L/well DMSO. The optical density was measured
+at 570&#x02009;nm on a microplate reader (Thermo Scientific, MA, USA).</p></sec><sec id="s0032"><label>2.9.</label><title>Assay for NO production</title><p>Nitrite, a stable product of nitric oxide, was used to assess NO production. To study the
+effects of the isolated compounds on NO production, RAW264.7 cells were plated at
+1&#x02009;&#x000d7;&#x02009;10<sup>5</sup> cells/well in a 96-well microplate and incubated overnight. The cells
+were pre-treated with various concentrations of the test compounds (3, 7.5, 10, 15, 30 or
+100&#x02009;&#x000b5;M) and further co-cultured with 1&#x02009;&#x000b5;g/mL LPS for 24&#x02009;h. Un-pre-treated and
+un-stimulated RAW 264.7 cells were conducted as the blank control group. At different time
+points, the supernatant (50&#x02009;&#x000b5;L) was assayed with NO assay kit. The culture supernatant
+(50&#x02009;&#x000b5;L) was mixed with an equal volume of the Griess reagent (1% sulphanilamide, 0.1%
+N-[1-naphthy] ethylenediamine dihydrochloride) and NO production were determined at 540&#x02009;nm
+with an ELISAplate reader.</p></sec><sec id="s0033"><label>2.10.</label><title>Cytokine production assay</title><p>RAW264.7 cells were seeded at 3&#x02009;&#x000d7;&#x02009;10<sup>5</sup> cells/well in a 48-well microplate and
+incubated overnight.The cells were pre-treated with the different concentrations of the
+test compunds (3, 7.5, 10 or 30&#x02009;&#x000b5;M) for 30&#x02009;min before the stimulation with LPS (1&#x02009;&#x000b5;g/mL).
+According to the protocol of the manufacturer, supernatants were harvested at the 24th
+hour for the assay of TNF-&#x003b1; or IL-6 with ELISA kits (BD Biosciences, San Diego, CA, USA).
+Briefly, 100&#x02009;&#x000b5;L of biotinylated antibody reagent and the culture supernatants were added
+to anti-mouse TNF-&#x003b1; or IL-6 precoated 96-well plates, and the plates were incubated for
+2&#x02009;h at RT. The plate was washed with a washing buffer and subsequently incubated with
+100&#x02009;&#x000b5;L of the streptavidin-HRP solution for 1&#x02009;h at RT. The plate was washed, and incubated
+with 100&#x02009;&#x000b5;L of TMB substrate solution for 30&#x02009;min at RT in the dark. The reaction was
+stopped by adding 50&#x02009;&#x000b5;L of stop solution, and then the absorbance was measured at 450&#x02009;nm
+by a plate reader. A standard curve was produced for each assay plate using serially
+diluted recombinant IL-6.</p></sec><sec id="s0034"><label>2.11.</label><title>Western blot analysis</title><p>RAW 264.7 cells (5&#x02009;&#x000d7;&#x02009;10<sup>5</sup> cells/well) plated onto 6-well plates were incubated
+for 24&#x02009;h and treated with 7.5, 15.0 or 30.0&#x02009;&#x000b5;M of compound <bold>6p</bold> for 30&#x02009;min and
+then stimulated with 1&#x02009;&#x000b5;g/L of LPS for 24&#x02009;h. The cells were collected and washed three
+times with ice-cold PBS. The cells were treated with a cell lysis buffer [50&#x02009;mM Tris (pH
+7.6), 150&#x02009;mM NaCl, 5&#x02009;mM EDTA (pH 8.0), 0.6% NP-40, 1&#x02009;mM Na<sub>3</sub>VO<sub>4</sub>,
+20&#x02009;mM &#x003b2;-glycerophosphate, 1&#x02009;mM phenylmethylsulfonyl fluoride, 2&#x02009;mM p-nitrophenyl
+phosphate, and 1:25 Complete Mini Protease Inhibitor cocktail (Boehringer,
+Mannheim,Germany)] and kept on ice for 30&#x02009;min. The cell lysates were centrifuged (12,000&#x02009;g
+at 4&#x02009;&#x000b0;C) for 5&#x02009;min to obtain a cytosolic fraction. The protein concentration was
+determined by BCA protein assay kit (Beyotime, Haimen, China). Aliquots of the lysates
+were separated on 10% sodium dodecyl sulphate (SDS)-polyacrylamide gel electrophoresis
+(PAGE) and then electro blotted onto a polyvinylidene difluoride (PVDF) membrane. The
+blots were blocked with 5% (w/v) non-fat dry milk for 2&#x02009;h at 37&#x02009;&#x000b0;C, followed by incubation
+with specific primary antibody at 4&#x02009;&#x000b0;C overnight. Blots were washed with Tween
+20/Tris-buffered saline [TTBS, 20&#x02009;mM Tris&#x02013;HCl buffer, pH 7.6, containing 137&#x02009;mM NaCl and
+0.05% (vol/vol) Tween 20] and incubated with a peroxidase-conjugated secondary antibody
+for 1&#x02009;h. Blots were again washed with TTBS and the immune active proteins were detected
+using ECL plus (Thermo, USA). All Western blot analyses were carried out at least three
+times. Results are expressed as the relative ratio of the specific band compared with the
+internal reference.</p></sec><sec id="s0035"><label>2.12.</label><title>In vivo anti-inflammatory activities determination</title><p>The animal procedures were in strict accordance with the National Institutes of Healthy
+Guidelines for the Care and Use of Laboratory Animals (NIH Publication No. 85-23, revised
+1996) and were approved by the Institutional Animal Care and Utilisation Committee of
+Yanbian University. Male albino rats weighing 280&#x02013;300 gwere obtained from Animal
+Department of Yanbian University . They were kept in the animal house under standard
+condition of light and temperature with free access to food and water. The animals were
+randomly divided into five groups (control, <bold>D1</bold>, <bold>6p</bold>, ibuprofen
+and celecoxib group) The groups with <bold>D1</bold>, <bold>6p</bold>, ibuprofen and
+celecoxib were administered oral administration (p.o.) 25&#x02009;mg/kg in a vehicle of 0.5%
+methylcellulose, respectively. The negative control group was treated with the same
+vehicle (0.5% methylcellulose). A solution of carrageenan (0.1&#x02009;ml, 1.0% w/v in 0.9% of
+normal saline) was injected into the subplanter region of the left hind paw under light
+ether anaesthesia 1&#x02009;h after oral administration (p.o.) of the test compound (at a dose
+level of 25&#x02009;mg/kg body weight). The paw volume was measured at hourly interval for 5&#x02009;h (0,
+1, 3 and 5&#x02009;h) and the percent inhibition of oedema was calculated using formula:
+<disp-formula id="M0001"><alternatives><graphic xlink:href="IENZ_A_1680658_M0001.jpg" position="float" orientation="portrait"/><mml:math id="d1e2282"><mml:mi>%</mml:mi><mml:mtext>Inhibition</mml:mtext><mml:mo>=</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mtext>Vt</mml:mtext><mml:mo>&#x02212;</mml:mo><mml:mtext>Vo</mml:mtext></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mtext>control</mml:mtext><mml:mo>&#x02212;</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mtext>Vt</mml:mtext><mml:mo>&#x02212;</mml:mo><mml:mtext>Vo</mml:mtext></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mtext>tested</mml:mtext><mml:mi>&#x000a0;</mml:mi><mml:mtext>compound</mml:mtext><mml:mo>&#x02003;</mml:mo><mml:mo>/</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mtext>Vt</mml:mtext><mml:mo>&#x02212;</mml:mo><mml:mtext>Vo</mml:mtext></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mtext>control</mml:mtext><mml:mo>&#x000d7;</mml:mo><mml:mn>100</mml:mn></mml:math></alternatives></disp-formula>
+where,<list list-type="simple"><list-item><p>Vo&#x02009;=&#x02009;volume of oedema at zero time interval.</p></list-item><list-item><p>Vt&#x02009;=&#x02009;volume of oedema at specific time interval.</p></list-item></list></p></sec><sec id="s0036"><label>2.13.</label><title>Ulcerogenic effect</title><p>The lead compound <bold>D1</bold> and the newly synthesised compound <bold>6p</bold> were
+subjected to <italic>in vivo</italic> testing to measure their ulcerogenic effect in
+comparison to celecoxib and ibuprofen. Male albino rats (220&#x02013;250&#x02009;g) divided into 5 groups
+(control, <bold>D1</bold>, <bold>6p</bold>, ibuprofen and celecoxib group) of five rats
+each. The groups with <bold>D1</bold>, <bold>6p</bold>, ibuprofen, and celecoxib were
+administered oral administration (p.o.) 25&#x02009;mg/kg in a vehicle of 0.5% methylcellulose,
+respectively. The negative control group was treated with the same vehicle (0.5%
+methylcellulose). All groups were orally administered once a day for three consecutive
+days. Animals were sacrificed by diethyl ether 6&#x02009;h after the last dose and the stomach was
+removed. An opening at the greater curvature was made and the stomach was cleaned by
+washing with cold saline and inspected with a three-time magnifying lens for any evidence
+of hyperaemia, haemorrhage, definite haemorrhagic erosion, or ulcer. An arbitrary scale
+was used to calculate the ulcer index which indicates the severity of the stomach lesions
+The % ulceration for each group was calculated as follows: % Ulceration&#x02009;=&#x02009;Number of
+animals bearing ulcer in a group/Total number of animals in the same group &#x000d7;100.</p></sec></sec><sec id="s0037"><label>3.</label><title>Results and discussion</title><sec id="s0038"><label>3.1.</label><title>Chemistry</title><p>The steps involved in the preparation of the target compounds <bold>6a&#x02013;6t</bold> are
+outlined in <xref ref-type="scheme" rid="SCH0001">Scheme 1</xref>. The starting material,
+<italic>o</italic>-phenylenediamine (<bold>1</bold>), was reacted with oxalic acid in
+10% hydrochloric acid to obtain
+quinoxaline-2,3(1<italic>H</italic>,4<italic>H</italic>)-dione (<bold>2</bold>) (a white
+needle solid). Unlike in the previous synthesis method<xref rid="CIT0020" ref-type="bibr"><sup>20</sup></xref>, diethyl oxalate was replaced with hydrochloric acid solution in
+oxalic acid, and the white needle-like solid was directly precipitated after the reaction,
+which not only shortened the reaction time but also made the post-treatment easier.
+Compound <bold>2</bold> was then reacted with hydrazine hydrate to obtain compound
+<bold>3</bold> (3-hydrazinylquinoxalin-2(1<italic>H</italic>)-one) with only one
+carbonyl group substituted<xref rid="CIT0021" ref-type="bibr"><sup>21</sup></xref>, and
+compound <bold>4</bold> was prepared by cyclizing compound <bold>3</bold> with diethyl
+oxalate. Finally, compound <bold>4</bold> was reacted with appropriate brominated alkanes
+and substituted with chlorobenzyl in the presence of K<sub>2</sub>CO<sub>3</sub> to yield
+compounds <bold>5a&#x02013;5t,</bold> which were reacted further with
+NH<sub>3</sub>&#x000b7;H<sub>2</sub>O in methanol to obtain the target compounds
+<bold>6a&#x02013;6t</bold><xref rid="CIT0018" ref-type="bibr"><sup>18</sup></xref>. The
+synthesised compounds were analysed by <sup>1</sup>H-NMR, <sup>13&#x02009;</sup>C-NMR, and
+HRMS.</p><fig id="SCH0001" orientation="portrait" position="float"><label>Scheme 1.</label><caption><p>Reagents and conditions: (a) oxalic acid, HCl/H<sub>2</sub>O, 100&#x02009;&#x000b0;C, 2&#x02009;h; (b)
+Hydrazine hydrate, 100&#x02009;&#x000b0;C, 2&#x02009;h; (c) Diethyl oxalate, reflux, 3&#x02009;h; (d) RX,
+K<sub>2</sub>CO<sub>3</sub>, DMF, 60&#x02009;&#x000b0;C, 3&#x02009;h; (e) NH<sub>3</sub>&#x000b7;H<sub>2</sub>O,
+methanol, r.t., 2&#x02009;h.</p></caption><graphic content-type="black-white" xlink:href="IENZ_A_1680658_SCH0001_B"/></fig></sec><sec id="s0039"><label>3.2.</label><title>Cytotoxicity of the target compounds 6a&#x02013;<italic>6t</italic></title><p>To investigate whether the anti-inflammatory activities of the target compounds
+<bold>6a&#x02013;6t</bold> were related to cell viability, their cytotoxic effects were
+evaluated by MTT assay in RAW264.7 cells<xref rid="CIT0022" ref-type="bibr"><sup>22</sup></xref>. As shown in <xref rid="t0001" ref-type="table">Table 1</xref>,
+except for compounds <bold>6i</bold> and <bold>6j</bold>, the other compounds at
+concentrations of 10 or 30&#x02009;&#x000b5;M showed no obvious cytotoxic effects in RAW264.7 cells, and
+the relative cell viabilities of the treated cells were more than 80%. Thus, 10&#x02009;&#x000b5;M
+concentration was chosen for subsequent experiments.</p><table-wrap id="t0001" orientation="portrait" position="float"><label>Table 1.</label><caption><p>Effect of compounds <bold>6a&#x02013;6t</bold> on the viability of RAW264.7 cells.</p></caption><!--OASIS TABLE HERE--><table frame="hsides" rules="groups"><colgroup><col width="1*"/><col width="1*"/><col width="1*"/><col width="1*"/></colgroup><thead><tr><th rowspan="2" align="left">Compound</th><th rowspan="2" align="center">R</th><th colspan="2" align="center">Cell viability
+(%)<hr/></th></tr><tr><th align="center">30&#x02009;&#x003bc;M</th><th align="center">10&#x02009;&#x003bc;M</th></tr></thead><tbody valign="top"><tr><td align="left">blank</td><td align="center">&#x02013;</td><td align="char" char=".">100</td><td align="center">100</td></tr><tr><td align="left">LPS</td><td align="center">&#x02013;</td><td align="char" char=".">98.60&#x02009;&#x000b1;&#x02009;2.12<xref ref-type="table-fn" rid="TF1"><sup>a</sup></xref></td><td align="center">NT<xref ref-type="table-fn" rid="TF2"><sup>b</sup></xref></td></tr><tr><td align="left"><bold>D1</bold></td><td align="center">&#x02013;</td><td align="char" char=".">96.30&#x02009;&#x000b1;&#x02009;1.72</td><td align="center">NT</td></tr><tr><td align="left"><bold>6a</bold></td><td align="center"><italic>n</italic>-C<sub>4</sub>H<sub>9</sub></td><td align="char" char=".">92.33&#x02009;&#x000b1;&#x02009;1.53</td><td align="center">NT</td></tr><tr><td align="left"><bold>6b</bold></td><td align="center"><italic>n</italic>-C<sub>5</sub>H<sub>11</sub></td><td align="char" char=".">97.95&#x02009;&#x000b1;&#x02009;1.1</td><td align="center">NT</td></tr><tr><td align="left"><bold>6c</bold></td><td align="center"><italic>n</italic>-C<sub>6</sub>H<sub>13</sub></td><td align="char" char=".">99.11&#x02009;&#x000b1;&#x02009;0.69</td><td align="center">NT</td></tr><tr><td align="left"><bold>6d</bold></td><td align="center"><italic>n</italic>-C<sub>7</sub>H<sub>15</sub></td><td align="char" char=".">81.00&#x02009;&#x000b1;&#x02009;1.10</td><td align="center">NT</td></tr><tr><td align="left"><bold>6e</bold></td><td align="center"><italic>n</italic>-C<sub>8</sub>H<sub>17</sub></td><td align="char" char=".">99.51&#x02009;&#x000b1;&#x02009;2.30</td><td align="center">NT</td></tr><tr><td align="left"><bold>6f</bold></td><td align="center"><italic>n</italic>-C<sub>9</sub>H<sub>19</sub></td><td align="char" char=".">60.00&#x02009;&#x000b1;&#x02009;3.40</td><td align="center">99.15&#x02009;&#x000b1;&#x02009;1.65</td></tr><tr><td align="left"><bold>6g</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>5</sub></td><td align="char" char=".">85.02&#x02009;&#x000b1;&#x02009;1.00</td><td align="center">NT</td></tr><tr><td align="left"><bold>6h</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>(<italic>o</italic>-F)</td><td align="char" char=".">66.67&#x02009;&#x000b1;&#x02009;1.33</td><td align="center">98.49&#x02009;&#x000b1;&#x02009;1.76</td></tr><tr><td align="left"><bold>6i</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>(<italic>m</italic>-F)</td><td align="char" char=".">59.33&#x02009;&#x000b1;&#x02009;2.52</td><td align="center">99.46&#x02009;&#x000b1;&#x02009;4.17</td></tr><tr><td align="left"><bold>6j</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>(<italic>p</italic>-F)</td><td align="char" char=".">48.00&#x02009;&#x000b1;&#x02009;3.00</td><td align="center">73.45&#x02009;&#x000b1;&#x02009;2.27</td></tr><tr><td align="left"><bold>6k</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>(<italic>o</italic>-Cl)</td><td align="char" char=".">46.33&#x02009;&#x000b1;&#x02009;2.89</td><td align="center">74.56&#x02009;&#x000b1;&#x02009;1.38</td></tr><tr><td align="left"><bold>6l</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>(<italic>m</italic>-Cl)</td><td align="char" char=".">51.67&#x02009;&#x000b1;&#x02009;2.12</td><td align="center">87.92&#x02009;&#x000b1;&#x02009;5.18</td></tr><tr><td align="left"><bold>6m</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>(<italic>p</italic>-Cl)</td><td align="char" char=".">44.67&#x02009;&#x000b1;&#x02009;3.06</td><td align="center">82.18&#x02009;&#x000b1;&#x02009;1.74</td></tr><tr><td align="left"><bold>6n</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>(<italic>m</italic>-OCH<sub>3</sub>)</td><td align="char" char=".">93.33&#x02009;&#x000b1;&#x02009;0.58</td><td align="center">NT</td></tr><tr><td align="left"><bold>6o</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>(<italic>p</italic>-OCH<sub>3</sub>)</td><td align="char" char=".">80.12&#x02009;&#x000b1;&#x02009;1.00</td><td align="center">NT</td></tr><tr><td align="left"><bold>6p</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>2</sub>(<italic>3</italic>,<italic>4</italic>,<italic>5</italic>-(OCH<sub>3</sub>)<sub>3</sub>)</td><td align="char" char=".">83.67&#x02009;&#x000b1;&#x02009;1.53</td><td align="center">NT</td></tr><tr><td align="left"><bold>6q</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>3</sub>(<italic>2</italic>,<italic>4</italic>-Cl<sub>2</sub>)</td><td align="char" char=".">56.67&#x02009;&#x000b1;&#x02009;1.34</td><td align="center">84.69&#x02009;&#x000b1;&#x02009;6.49</td></tr><tr><td align="left"><bold>6r</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>(<italic>m</italic>-CF<sub>3</sub>)</td><td align="char" char=".">99.30&#x02009;&#x000b1;&#x02009;0.60</td><td align="center">NT</td></tr><tr><td align="left"><bold>6s</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>(<italic>p</italic>-NO<sub>2</sub>)</td><td align="char" char=".">80.10&#x02009;&#x000b1;&#x02009;1.34</td><td align="center">NT</td></tr><tr><td align="left"><bold>6t</bold></td><td align="center">&#x02013;CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>(<italic>p</italic>-CN)</td><td align="char" char=".">90.33&#x02009;&#x000b1;&#x02009;1.21</td><td align="center">NT</td></tr></tbody></table><table-wrap-foot><fn id="TF1"><label>a</label><p>LPS (1&#x02009;&#x003bc;g/mL).</p></fn><fn id="TF2"><label>b</label><p>No tested.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s0040"><label>3.3.</label><title>Inhibition of NO production in (LPS)-stimulated RAW264.7 cells and SAR
+studies</title><p>High levels of NO are produced in response to LPS (1&#x02009;&#x000b5;g/mL) in the activated RAW264.7
+macrophages<xref rid="CIT0023" ref-type="bibr"><sup>23</sup></xref>. Therefore, NO
+inhibitors have been identified as good options for the treatment of inflammatory
+diseases<xref rid="CIT0024" ref-type="bibr"><sup>24</sup></xref>. The anti-inflammatory
+activities of the target compounds <bold>6a&#x02013;6t</bold> were tested based on their ability
+to inhibit LPS-induced NO production in RAW264.7 macrophages. As shown in <xref ref-type="fig" rid="F0001">Figure 1(A)</xref>, LPS treatment caused a significant
+increase in NO release compared to that in untreated controls, which was inhibited after
+treatment with the synthetic derivatives in RAW264.7 cells. Among them, compounds
+<bold>6b</bold>, <bold>6d</bold>, <bold>6e</bold>, <bold>6f</bold>, <bold>6i</bold>,
+<bold>6j</bold>, <bold>6n</bold>, <bold>6o</bold>, <bold>6p</bold>, <bold>6r,</bold> and
+<bold>6s</bold> exhibited similar or better NO inhibitory activity than the lead
+compound <bold>D1</bold>. Compound <bold>6p</bold> (10&#x02009;&#x000b5;M) exhibited the most potent
+inhibitory activity (38.82%) and was more potent than <bold>D1</bold> (a 10.31%
+inhibition). When the concentration of compound <bold>6p</bold> was reduced to 3&#x02009;&#x000b5;M, it
+was still able to significantly inhibit NO production (<italic>p</italic>&#x02009;&#x0003c;&#x02009;.001)
+(<xref ref-type="fig" rid="F0002">Figure 2(A))</xref>.</p><fig id="F0002" orientation="portrait" position="float"><label>Figure 2.</label><caption><p>RAW264.7 cells were pre-cultured for 24&#x02009;h, the cells were then treated with the
+indicated concentrations of compounds for 30&#x02009;min, and then exposed to 1&#x02009;&#x003bc;g/mL LPS for
+24&#x02009;h. The levels of NO in the culture medium were measured with NO assay kit. (A)
+Cells were treated with 10&#x02009;&#x003bc;M compounds. Cells were pre-treated with different
+concentrations of compound <bold>6p</bold>. NO, TNF-&#x003b1; and IL-6 levels in the medium
+were determined with an ELISA kit. (B, C and D). ### <italic>p</italic>&#x02009;&#x0003c;&#x02009;.01, vs.
+Control. *<italic>p</italic>&#x02009;&#x0003c;&#x02009;.05, **<italic>p</italic>&#x02009;&#x0003c;&#x02009;.01,
+***<italic>p</italic>&#x02009;&#x0003c;&#x02009;.001 vs. LPS alone.</p></caption><graphic content-type="black-white" xlink:href="IENZ_A_1680658_F0002_B"/></fig><p>The following structure-activity relationships (SAR) of the synthetic compounds were
+determined: the length of the alkyl chain appeared to have a direct impact on the
+anti-inflammatory activity of the 5-alkyl derivatives <bold>6a&#x02013;6f</bold>. As the alkyl
+chain length of the derivatives <bold>6a&#x02013;6e</bold> increased, their anti-inflammatory
+activities increased, with compound <bold>6e</bold> (n-octyl substitution) being the most
+active. When the length of the linear alkyl group reached 9 carbon atoms (compound
+<bold>6f</bold>), the anti-inflammatory activity began to decrease. We hypothesised that
+the n-octyl-substituted compound, <bold>6e,</bold> has the most favourable exponential
+partition coefficient and easily passes through the cell membrane. For the
+benzyloxy-substituted derivatives <bold>6g&#x02013;6t</bold>, the type and position of the
+substituent on the benzene ring had a significant effect on anti-inflammatory activity.
+The activity order was
+<italic>3,4,5</italic>-OCH<sub>3</sub>&#x0003e;<italic>m</italic>-OCH<sub>3</sub>&#x0003e;<italic>p</italic>-OCH<sub>3</sub>&#x0003e;<italic>m</italic>-F&#x0003e;<italic>p</italic>-F&#x0003e;<italic>m</italic>-CF<sub>3</sub>&#x0003e;<italic>p</italic>-NO<sub>2</sub>&#x0003e;<italic>p</italic>-CN,
+indicating that the electron-donating group exerts a greater effect than the
+electron-withdrawing group in increasing the anti-inflammatory activities of these
+derivatives.</p></sec><sec id="s0041"><label>3.4.</label><title><italic>Compound 6p inhibited IL-6 and TNF-</italic>&#x003b1; <italic>production in RAW264.7
+cells</italic></title><p>Based on the initial screening results of these synthetic derivatives, compound
+<bold>6p</bold> was chosen for further assessment of its anti-inflammatory activity in
+LPS-induced macrophages. It is well known that the pro-inflammatory mediators IL-6 and
+TNF-&#x003b1; play important roles in the development of inflammation-related diseases<xref rid="CIT0025" ref-type="bibr"><sup>25</sup></xref>. To measure the effects of compound
+<bold>6p</bold> on LPS-induced IL-6 and TNF-&#x003b1; production, RAW264.7 cells were cultured
+with LPS (1&#x02009;&#x000b5;g/mL) in the presence of compound <bold>6p</bold> for 24&#x02009;h, and the levels of
+IL-6 and TNF-&#x003b1; in the supernatant were determined by ELISA. As shown in <xref ref-type="fig" rid="F0002">Figure 2(B,C)</xref>, LPS stimulation significantly elevated
+the production of TNF-&#x003b1; and IL-6. After treatment with compound <bold>6p,</bold> the
+LPS-induced increase in IL-6 and TNF-&#x003b1; levels was inhibited in a concentration-dependent
+manner. Even at low concentrations (3&#x02009;&#x000b5;M), <bold>6p</bold> significantly inhibited the
+production of these two inflammatory factors (<italic>p</italic>&#x02009;&#x0003c;&#x02009;.001).</p></sec><sec id="s0042"><label>3.5.</label><title>Compound 6p inhibited the expression of iNOS and COX-2</title><p>The pro-inflammatory mediator NO plays an important role in inflammation-related diseases
+and its production is closely related to the modulation of iNOS and COX-2 expression<xref rid="CIT0002" ref-type="bibr"><sup>2</sup></xref>. Our results show that compound
+<bold>6p</bold> can significantly inhibit the production of NO. To establish whether
+this inhibitory effect was associated with the reduced expression of iNOS and COX-2 in
+LPS-induced RAW 264.7 cells, the levels of these proteins were measured by western
+blotting after exposure to LPS for 24&#x02009;h in the presence or absence of compound
+<bold>6p</bold> (7.5, 15, and 30&#x02009;&#x000b5;M). Celecoxib (7.5&#x02009;&#x000b5;M) was used as a positive control.
+As shown in <xref ref-type="fig" rid="F0003">Figure 3</xref>, LPS (1&#x02009;&#x000b5;g/mL) stimulation
+markedly increased COX-2 and iNOS protein expression and compound <bold>6p</bold>
+inhibited this response (<italic>p</italic>&#x02009;&#x0003c;&#x02009;.001) by 53.44% (COX-2) at 15&#x02009;&#x000b5;M and
+39.89% (iNOS) at 30&#x02009;&#x000b5;M, respectively. Moreover, compound <bold>6p</bold> inhibited iNOS
+protein expression in LPS-induced cells in a dose-dependent manner. These results suggest
+that <bold>6p</bold> exerts its anti-inflammatory activity through inhibiting the
+expression of iNOS, and COX-2 by LPS in macrophages.</p><fig id="F0003" orientation="portrait" position="float"><label>Figure 3.</label><caption><p>Compound <bold>6p</bold> inhibited LPS-induced inflammatory response in RAW 264.7
+cells. Cells were pre-treated with different concentrations of <bold>6p</bold>
+(7.5&#x02013;30&#x02009;&#x000b5;M) and Celecoxib (7.5&#x02009;&#x000b5;M) for 24&#x02009;h. iNOS, COX-2 and GAPDH proteins expression
+were detected by Western blot analysis. Total cellular proteins were prepared and
+analysed by Western blotting. Results are the mean&#x02009;&#x000b1;&#x02009;SD, <italic>n</italic>&#x02009;=&#x02009;3. ###
+<italic>p</italic>&#x02009;&#x0003c;&#x02009;.001, vs. Control. *<italic>p</italic>&#x02009;&#x0003c;&#x02009;.05,
+**<italic>p</italic>&#x02009;&#x0003c;&#x02009;.01, ***<italic>p</italic>&#x02009;&#x0003c;&#x02009;.001 vs. LPS alone.</p></caption><graphic content-type="black-white" xlink:href="IENZ_A_1680658_F0003_B"/></fig></sec><sec id="s0043"><label>3.6.</label><title>Compound 6p inhibited MAPK signalling activation</title><p>As upstream proteins, phosphorylation of the MAPK family of proteins is closely related
+to and plays an important role in the expression of iNOS and COX-2, and the release of
+inflammatory factors in LPS-induced inflammatory responses<xref rid="CIT0013" ref-type="bibr"><sup>13</sup></xref><sup>,</sup><xref rid="CIT0014" ref-type="bibr"><sup>14</sup></xref>. To find the molecular target of compound <bold>6p</bold>
+further upstream of the MAPK signalling pathway, the effects of compound <bold>6p</bold>
+on the LPS-induced phosphorylation of ERK, JNK, and p38 MAPKs in RAW 264.7 cells were
+assessed by western blotting. Celecoxib (7.5&#x02009;&#x000b5;M) was used as positive control. As expected
+(<xref ref-type="fig" rid="F0004">Figure 4</xref>), phosphorylation of p38, JNK, and ERK
+increased after LPS stimulation. Compound <bold>6p</bold> markedly diminished the
+phosphorylation of JNK (<italic>p</italic>&#x02009;&#x0003c;&#x02009;.001), ERK (<italic>p</italic>&#x02009;&#x0003c;&#x02009;.001)
+and p38 (<italic>p</italic>&#x02009;&#x0003c;&#x02009;.01) MAPKs at 30&#x02009;&#x000b5;M (<xref ref-type="fig" rid="F0004">Figure 4(A&#x02013;C)</xref>). Furthermore, compound <bold>6p</bold> (7.5, 15, and 30&#x02009;&#x000b5;M)
+inhibited the LPS-induced phosphorylation of JNK and ERK in a concentration-dependent
+manner. These results suggest that the anti-inflammatory effect of compound
+<bold>6p</bold> might be associated with the inhibitory effects on the MAPK signalling
+pathways.</p><fig id="F0004" orientation="portrait" position="float"><label>Figure 4.</label><caption><p>Compound <bold>6p</bold> inhibited LPS-induced inflammatory response in RAW 264.7
+cells. Cells were pre-treated with different concentrations of <bold>6p</bold>
+(7.5&#x02013;30&#x02009;&#x000b5;M) and Celecoxib (7.5&#x02009;&#x000b5;M) for 24&#x02009;h. The levels of p-p38/P38, p-ERK/ERK,
+p-JNK/JNK and GAPDH proteins, and their phosphorylated forms were analysed using
+Western blotting. Total cellular proteins were prepared and analysed by Western
+blotting. Results are the mean&#x02009;&#x000b1;&#x02009;SD, <italic>n</italic>&#x02009;=&#x02009;3. ###
+<italic>p</italic>&#x02009;&#x0003c;&#x02009;.001, vs. Control. *<italic>p</italic>&#x02009;&#x0003c;&#x02009;.05,
+**<italic>p</italic>&#x02009;&#x0003c;&#x02009;.01, ***<italic>p</italic>&#x02009;&#x0003c;&#x02009;.001 vs. LPS alone.</p></caption><graphic content-type="black-white" xlink:href="IENZ_A_1680658_F0004_B"/></fig></sec><sec id="s0044"><label>3.7.</label><title>In vivo anti-inflammatory activity</title><p>To evaluate the anti-inflammatory activity of compound <bold>6p</bold>
+<italic>in vivo</italic>, a carrageenan-induced mouse paw oedema model was used<xref rid="CIT0010" ref-type="bibr"><sup>10</sup></xref><sup>,</sup><xref rid="CIT0026" ref-type="bibr"><sup>26</sup></xref>. Each test compound (lead compound <bold>D1,
+6p,</bold> and the positive controls ibuprofen and celecoxib) was administered orally at
+a dose of 25&#x02009;mg/kg body weight prior to the induction of inflammation by carrageenan
+(0.1&#x02009;ml) injection. The paw volume was measured over 5&#x02009;h (at 0, 1, 3, and 5&#x02009;h) and the
+percent inhibition of oedema was calculated (<xref rid="t0002" ref-type="table">Table
+2</xref>). Inhibition of paw swelling was the highest in mice 3&#x02009;h after carrageenan
+administration by all the tested compounds. It is noteworthy that compound <bold>6p</bold>
+displayed anti-inflammatory effects (50.83%) that were significantly greater than those of
+the lead compound <bold>D1</bold> (42.81%, <italic>p</italic>&#x02009;&#x0003c;&#x02009;.01) and ibuprofen
+(39.30%, <italic>p</italic>&#x02009;&#x0003c;&#x02009;.01), but slightly lesser than those of celecoxib
+(58.34%, <italic>p</italic>&#x02009;&#x0003c;&#x02009;.05) (<xref ref-type="fig" rid="F0005">Figure
+5</xref>).</p><fig id="F0005" orientation="portrait" position="float"><label>Figure 5.</label><caption><p>The inhibited paw swelling actives of lead compound <bold>D1</bold>, <bold>6p</bold>
+and positive control drugs (25&#x02009;mg/kg) in a carrageenan-induced mouse paw oedema model
+after 3&#x02009;h of oral administration. **<italic>p</italic>&#x02009;&#x0003c;&#x02009;.01, vs. <bold>D1</bold>;
+##<italic>p</italic>&#x02009;&#x0003c;&#x02009;.01, vs. Ibuprofen; $ <italic>p</italic>&#x02009;&#x0003c;&#x02009;.05, vs.
+Celecoxib.</p></caption><graphic content-type="color" xlink:href="IENZ_A_1680658_F0005_C"/></fig><table-wrap id="t0002" orientation="portrait" position="float"><label>Table 2.</label><caption><p>The anti-inflammatory activity and ulcerogenic activity <italic>in vivo</italic>.</p></caption><!--OASIS TABLE HERE--><table frame="hsides" rules="groups"><colgroup><col width="1*"/><col width="1*"/><col width="1*"/><col width="1*"/><col width="1*"/></colgroup><thead><tr><th rowspan="2" align="left">Compounds</th><th colspan="3" align="center">% of oedema
+inhibition (% mean&#x02009;&#x000b1;&#x02009;SD)<xref ref-type="table-fn" rid="TF3"><sup>a</sup></xref><hr/></th><th rowspan="2" align="center">% ulceration</th></tr><tr><th align="center">1&#x02009;h</th><th align="center">3&#x02009;h</th><th align="center">5&#x02009;h</th></tr></thead><tbody valign="top"><tr><td align="left"><bold>D1</bold></td><td align="char" char=".">38.26&#x02009;&#x000b1;&#x02009;2.82</td><td align="char" char=".">42.81&#x02009;&#x000b1;&#x02009;2.11</td><td align="char" char=".">28.71&#x02009;&#x000b1;&#x02009;2.92</td><td>20</td></tr><tr><td align="left"><bold>6p</bold></td><td align="char" char=".">37.01&#x02009;&#x000b1;&#x02009;8.45</td><td align="char" char=".">50.83&#x02009;&#x000b1;&#x02009;3.47</td><td align="char" char=".">38.24&#x02009;&#x000b1;&#x02009;6.04</td><td>20</td></tr><tr><td align="left"><bold>Ibuprofen</bold></td><td align="char" char=".">31.92&#x02009;&#x000b1;&#x02009;5.76</td><td align="char" char=".">39.30&#x02009;&#x000b1;&#x02009;4.86</td><td align="char" char=".">25.29&#x02009;&#x000b1;&#x02009;3.43</td><td>100</td></tr><tr><td align="left"><bold>Celecoxib</bold></td><td align="char" char=".">48.09&#x02009;&#x000b1;&#x02009;5.33</td><td align="char" char=".">58.34&#x02009;&#x000b1;&#x02009;4.08</td><td align="char" char=".">41.92&#x02009;&#x000b1;&#x02009;2.05</td><td>0</td></tr></tbody></table><table-wrap-foot><fn id="TF3"><label>a</label><p>Values are expressed as the mean&#x02009;&#x000b1;&#x02009;S.D (<italic>n</italic>&#x02009;=&#x02009;4).</p></fn><fn id="TF4"><p>Control: 0.5% sodium CMC solution in distilled water (25&#x02009;ml/kg,
+<italic>p.o.</italic>).</p></fn><fn id="TF5"><p>Compounds and positive drugs were administered at a dose of 25&#x02009;mg/kg,
+<italic>p.o</italic>. in 0.5% sodium CMC solution.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s0045"><label>3.8.</label><title>Ulcerogenic effect</title><p>In order to evaluate the damage of the synthesised compound to the gastric mucosa, acute
+ulcerogenic studies were carried out for the most biologically active synthesised compound
+<bold>6p</bold>, lead compound <bold>D1</bold>, ibuprofen and celecoxib as standard was
+evaluated using the reference reported procedure<xref rid="CIT0027" ref-type="bibr"><sup>27</sup></xref>. Results are presented in <xref rid="t0002" ref-type="table">Table 2</xref> as % ulceration. The ulceration effect of compound <bold>6p</bold> was
+stronger than the selective COX-2 inhibitor celecoxib (no ulceration), which was weaker
+than the non-selective COX-2 inhibitor ibuprofen that showed 100% ulceration.</p></sec></sec><sec id="s0046"><label>4.</label><title>Conclusions</title><p>In summary, we designed, synthesised, and characterised a series of
+5-alkyl-4-oxo-4,5-dihydro-[1, 2, 4]triazolo[4,3-a]quinoxaline-1-carboxamide derivatives
+using by <sup>1</sup>H-NMR, <sup>13&#x02009;</sup>C-NMR and HRMS. All the tested compounds inhibited
+LPS-induced NO production in RAW264.7 macrophages. Among them, compound <bold>6p</bold>
+exhibited the most significant activity and was more potent than the lead compound
+<bold>D1</bold>. Investigation of the mechanisms underlying the anti-inflammatory activity
+of compound <bold>6p</bold> showed that it inhibits the expression of iNOS and COX-2 and the
+production of NO, TNF-&#x003b1;, and IL-6 by suppressing the LPS-induced MAPK signalling
+pathway.</p><p>Furthermore, compound <bold>6p</bold> displayed more prominent anti-inflammatory activity
+and weaker ulceration than the positive control ibuprofen in the <italic>in vivo</italic>
+acute inflammatory model. These findings indicate that compound <bold>6p</bold> could serve
+as a promising anti-inflammatory agent and warrants further studies.</p></sec><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material content-type="local-data" id="SM1222"><caption><title>Supplemental Material</title></caption><media mimetype="application" mime-subtype="pdf" xlink:href="IENZ_A_1680658_SM1222.pdf" orientation="portrait" id="d37e214" position="anchor"/></supplementary-material></sec></body>
+<back><sec id="s0047"><title>Disclosure statement</title><p>The authors declare no conflict of interest.</p></sec>
+<ref-list><title>References</title><ref id="CIT0001"><label>1</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Ferrero</surname><given-names>LM</given-names></name>, <name name-style="western"><surname>Nielsen</surname><given-names>OH</given-names></name>, <name name-style="western"><surname>Andersen</surname><given-names>PS</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Chronic inflammation: importance of NOD2 and NALP3 in interleukin-1beta
+generation</article-title>. <source>Clin Exp Immunol</source>
+<year>2007</year>;<volume>147</volume>:<fpage>227</fpage>&#x02013;<lpage>35</lpage>.<pub-id pub-id-type="pmid">17223962</pub-id></mixed-citation></ref><ref id="CIT0002"><label>2</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Sun</surname><given-names>L-D</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Dai</surname><given-names>F</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Development and mechanism investigation of a new piperlongumine derivative
+as a potent anti-inflammatory agent</article-title>. <source>Biochem Pharmacol</source>
+<year>2015</year>;<volume>95</volume>:<fpage>156</fpage>&#x02013;<lpage>69</lpage>.<pub-id pub-id-type="pmid">25850000</pub-id></mixed-citation></ref><ref id="CIT0003"><label>3</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Duque</surname><given-names>AG</given-names></name>,
+<name name-style="western"><surname>Descoteaux</surname><given-names>A</given-names></name></person-group>
+<article-title>Macrophage
+cytokines: involvement in immunity and infectious diseases</article-title>.
+<source>Front Immunol</source>
+<year>2014</year>;<volume>5</volume>:<fpage>491</fpage>.<pub-id pub-id-type="pmid">25339958</pub-id></mixed-citation></ref><ref id="CIT0004"><label>4</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Bremner</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Heinrich</surname><given-names>M</given-names></name></person-group>
+<article-title>Natural
+products as targeted modulators of the nuclear factor-&#x003ba;B pathway</article-title>.
+<source>J Pharm Pharmacol</source>
+<year>2002</year>;<volume>54</volume>:<fpage>453</fpage>&#x02013;<lpage>72</lpage>.<pub-id pub-id-type="pmid">11999122</pub-id></mixed-citation></ref><ref id="CIT0005"><label>5</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Grivennikov</surname><given-names>SI</given-names></name>, <name name-style="western"><surname>Greten</surname><given-names>FR</given-names></name>, <name name-style="western"><surname>Karin</surname><given-names>M</given-names></name></person-group>
+<article-title>Immunity,
+inflammation, and cancer</article-title>. <source>Cell</source>
+<year>2010</year>;<volume>140</volume>:<fpage>883</fpage>&#x02013;<lpage>99</lpage>.<pub-id pub-id-type="pmid">20303878</pub-id></mixed-citation></ref><ref id="CIT0006"><label>6</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Kumar</surname><given-names>RS</given-names></name>,
+<name name-style="western"><surname>Antonisamy</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Almansour</surname><given-names>AI</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Functionalized spirooxindole-indolizine hybrids: stereoselective green
+synthesis and evaluation of anti-inflammatory effect involving TNF-&#x003b1; and nitrite
+inhibition</article-title>. <source>Eur J Med Chem</source>
+<year>2018</year>;<volume>152</volume>:<fpage>417</fpage>&#x02013;<lpage>23</lpage>.<pub-id pub-id-type="pmid">29751235</pub-id></mixed-citation></ref><ref id="CIT0007"><label>7</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Wang</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>YL</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>XX</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Synthesis of new ent-labdane diterpene derivatives from andrographolide and
+evaluation of their anti-inflammatory activities</article-title>. <source>Eur J Med
+Chem</source>
+<year>2019</year>;<volume>162</volume>:<fpage>70</fpage>&#x02013;<lpage>9</lpage>.<pub-id pub-id-type="pmid">30419492</pub-id></mixed-citation></ref><ref id="CIT0008"><label>8</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Xie</surname><given-names>CF</given-names></name>, <name name-style="western"><surname>Li</surname><given-names>XT</given-names></name>, <name name-style="western"><surname>Zhu</surname><given-names>ZY</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Magnesium isoglycyrrhi- zinate suppresses LPS-induced inflammation and
+oxidative stress through inhibit- ing NF-&#x003ba;B and MAPKpathways in RAW264.7
+cells</article-title>. <source>Bioorg Med Chem</source>
+<year>2019</year>;<volume>27</volume>:<fpage>516</fpage>&#x02013;<lpage>24</lpage>.<pub-id pub-id-type="pmid">30617018</pub-id></mixed-citation></ref><ref id="CIT0009"><label>9</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Ye</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Ye</surname><given-names>CQ</given-names></name>, <name name-style="western"><surname>Huang</surname><given-names>YY</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Ginkgo biloba sarcotesta polysaccharide inhibits inflammatory responses
+through suppressing both NF-&#x003ba;B and MAPK signaling pathway</article-title>. <source>J Sci
+Food Agric</source>
+<year>2019</year>;<volume>99</volume>:<fpage>2329</fpage>&#x02013;<lpage>39</lpage>.<pub-id pub-id-type="pmid">30338529</pub-id></mixed-citation></ref><ref id="CIT0010"><label>10</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Chen</surname><given-names>LZ</given-names></name>, <name name-style="western"><surname>Sun</surname><given-names>WW</given-names></name>, <name name-style="western"><surname>Bo</surname><given-names>L</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>New arylpyrazoline-coumarins: synthesis and anti-inflammatory
+activity</article-title>. <source>Eur J Med Chem</source>
+<year>2017</year>;<volume>138</volume>:<fpage>170</fpage>&#x02013;<lpage>81</lpage>.<pub-id pub-id-type="pmid">28667873</pub-id></mixed-citation></ref><ref id="CIT0011"><label>11</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Somakala</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Amir</surname><given-names>M</given-names></name></person-group>
+<article-title>Synthesis,
+characterization and pharmacological evaluation of pyrazolyl urea derivatives as
+potential anti-inflammatory agents</article-title>. <source>Acta Pharm Sin B</source>
+<year>2017</year>;<volume>7</volume>:<fpage>230</fpage>&#x02013;<lpage>40</lpage>.<pub-id pub-id-type="pmid">28303231</pub-id></mixed-citation></ref><ref id="CIT0012"><label>12</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Liu</surname><given-names>SY</given-names></name>, <name name-style="western"><surname>Xu</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Luo</surname><given-names>XL</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>(7<italic>R</italic>, 8<italic>S</italic>)-dehydrodiconiferyl alcohol
+suppresses lipopolysaccharide-induced inflammatory responses in BV2 microglia by
+inhibiting MAPK signaling</article-title>. <source>Neurochem Res</source>
+<year>2016</year>;<volume>41</volume>:<fpage>1570</fpage>&#x02013;<lpage>7</lpage>.<pub-id pub-id-type="pmid">26961887</pub-id></mixed-citation></ref><ref id="CIT0013"><label>13</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Tang</surname><given-names>ML</given-names></name>, <name name-style="western"><surname>Zhong</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Liu</surname><given-names>ZY</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Discovery of novel sesquistilbene indanone analogues as potent
+antiinflammatory agents</article-title>. <source>Eur J Med Chem</source>
+<year>2016</year>;<volume>113</volume>:<fpage>63</fpage>&#x02013;<lpage>74</lpage>.<pub-id pub-id-type="pmid">26922229</pub-id></mixed-citation></ref><ref id="CIT0014"><label>14</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Pearson</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Robinson</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Gibson</surname><given-names>TB</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Mitogen-activated protein (MAP) kinase pathways: regulation and
+physiological functions</article-title>. <source>Endocr Rev</source>
+<year>2001</year>;<volume>22</volume>:<fpage>153</fpage>&#x02013;<lpage>83</lpage>.<pub-id pub-id-type="pmid">11294822</pub-id></mixed-citation></ref><ref id="CIT0015"><label>15</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Pan</surname><given-names>FJ</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>SB</given-names></name>, <name name-style="western"><surname>Liu</surname><given-names>DA</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Synthesis of
+4-phenylthieno[2,3-e][1,2,4]triazolo[4,3-a]pyrimidine-5(4<italic>H</italic>)-one
+derivatives and evaluation of their anti-inflammatory activity</article-title>.
+<source>Lett Drug Des Discov</source>
+<year>2015</year>;<volume>13</volume>:<fpage>141</fpage>&#x02013;<lpage>8</lpage>.</mixed-citation></ref><ref id="CIT0016"><label>16</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Sun</surname><given-names>XY</given-names></name>, <name name-style="western"><surname>Wei</surname><given-names>CX</given-names></name>, <name name-style="western"><surname>Chai</surname><given-names>KY</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Synthesis and anti-inflammatory activity evaluation of novel
+7-alkoxy-1-amino-4,5-dihydro[1,2,4]triazole[4,3-a]quinolines</article-title>.
+<source>Arch Pharm Chem Life Sci</source>
+<year>2008</year>;<volume>341</volume>:<fpage>288</fpage>&#x02013;<lpage>93</lpage>.</mixed-citation></ref><ref id="CIT0017"><label>17</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Sun</surname><given-names>XY</given-names></name>, <name name-style="western"><surname>Hu</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Deng</surname><given-names>XQ</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Synthesis and anti-inflammatory activity evaluation of some novel 6-alkoxy
+(phenoxy)-[1,2,4]triazolo[3,4-a]phthalazine-3-amine derivatives</article-title>.
+<source>Eur J Med Chem</source>
+<year>2010</year>;<volume>45</volume>:<fpage>4807</fpage>&#x02013;<lpage>12</lpage>.<pub-id pub-id-type="pmid">20813431</pub-id></mixed-citation></ref><ref id="CIT0018"><label>18</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Liu</surname><given-names>DC</given-names></name>, <name name-style="western"><surname>Gong</surname><given-names>GH</given-names></name>, <name name-style="western"><surname>Wei</surname><given-names>CX</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Synthesis and anti-inflammatory activity evaluation of a novel series of
+6-phenoxy-[1,2,4]triazolo[3,4-a]phthalazine-3-carboxamide derivatives</article-title>.
+<source>Bioorg Med Chem Lett</source>
+<year>2016</year>;<volume>26</volume>:<fpage>1576</fpage>&#x02013;<lpage>9</lpage>.<pub-id pub-id-type="pmid">26876930</pub-id></mixed-citation></ref><ref id="CIT0019"><label>19</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>B&#x000f6;s</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Jenck</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Martin</surname><given-names>JR</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Novel agonists of 5HT2C receptors. Synthesis and biological evaluation of
+substituted 2-(Indol-1-yl)-1-methylethylamines and 2-(Indeno[1,2-b]pyrrol-
+1-yl)-1-methylethylamines. Improved therapeutics for obsessive compulsive
+disorder</article-title>. <source>J Med Chem</source>
+<year>1997</year>;<volume>40</volume>:<fpage>2762</fpage>&#x02013;<lpage>9</lpage>.<pub-id pub-id-type="pmid">9276022</pub-id></mixed-citation></ref><ref id="CIT0020"><label>20</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Wang</surname><given-names>LM</given-names></name>, <name name-style="western"><surname>Liu</surname><given-names>JJ</given-names></name>, <name name-style="western"><surname>Tian</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Qian</surname><given-names>CT</given-names></name></person-group>
+<article-title>Ytterbium
+triflate-catalyzed heterocyclization of 1,2-phenylenediamines and alkyl oxalates under
+solvent-free conditions via Phillips reaction: a facile synthesis of
+quinoxaline-2,3-diones derivatives</article-title>. <source>Synthetic Commun</source>
+<year>2004</year>;<volume>34</volume>:<fpage>1349</fpage>&#x02013;<lpage>57</lpage>.</mixed-citation></ref><ref id="CIT0021"><label>21</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Pulin</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Shreedhar</surname><given-names>D</given-names></name></person-group>
+<article-title>Antimicrobial studies of Co (II), Ni (II), Cu (II) and Zn (II) complexes
+derived from Schiff bases of 3-formyl quinoline and
+3-hydrazinoquinoxalin-2(1<italic>H</italic>) one</article-title>. <source>Rasayan J
+Chem</source>
+<year>2012</year>;<volume>5</volume>:<fpage>234</fpage>&#x02013;<lpage>8</lpage>.</mixed-citation></ref><ref id="CIT0022"><label>22</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Yeom</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Kim</surname><given-names>JH</given-names></name>, <name name-style="western"><surname>Min</surname><given-names>JH</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Xanthii fructus inhibits inflammatory responses in LPS-stimulated RAW 264.7
+macrophages through suppressing NF-&#x003ba;B and JNK/p38 MAPK</article-title>. <source>J
+Ethnopharmacol</source>
+<year>2015</year>;<volume>176</volume>:<fpage>394</fpage>&#x02013;<lpage>401</lpage>.<pub-id pub-id-type="pmid">26560439</pub-id></mixed-citation></ref><ref id="CIT0023"><label>23</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Aktan</surname><given-names>F</given-names></name></person-group>
+<article-title>iNOS-mediated nitric oxide production and its regulation</article-title>.
+<source>Life Sci</source>
+<year>2004</year>;<volume>75</volume>:<fpage>639</fpage>&#x02013;<lpage>53</lpage>.<pub-id pub-id-type="pmid">15172174</pub-id></mixed-citation></ref><ref id="CIT0024"><label>24</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Li</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Yang</surname><given-names>YA</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>IZ</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>18 a-Glycyrrhetinic acid monoglucuronide as an anti-inflammatory agent
+through suppression of the NF-&#x003ba;B and MAPK signaling pathway</article-title>. <source>Med
+Chem Commun</source>
+<year>2017</year>;<volume>8</volume>:<fpage>1498</fpage>&#x02013;<lpage>504</lpage>.</mixed-citation></ref><ref id="CIT0025"><label>25</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Sogo</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Terahara</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Hisanaga</surname><given-names>A</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Anti-inflammatory activity and molecular mechanism of delphinidin
+3-sambubioside, a Hibiscus anthocyanin</article-title>. <source>Biofactors</source>
+<year>2015</year>;<volume>41</volume>:<fpage>58</fpage>&#x02013;<lpage>65</lpage>.<pub-id pub-id-type="pmid">25728636</pub-id></mixed-citation></ref><ref id="CIT0026"><label>26</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Tageldin</surname><given-names>GN</given-names></name>, <name name-style="western"><surname>Fahmy</surname><given-names>SW</given-names></name>, <name name-style="western"><surname>Ashour</surname><given-names>HM</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Design, synthesis and evaluation of some pyrazolo[3,4-d]pyrimidines as
+anti-inflammatory agents</article-title>. <source>Bioorg Chem</source>
+<year>2018</year>;<volume>78</volume>:<fpage>358</fpage>&#x02013;<lpage>71</lpage>.<pub-id pub-id-type="pmid">29627656</pub-id></mixed-citation></ref><ref id="CIT0027"><label>27</label><mixed-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Murahari</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Mahajan</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Neeladri</surname><given-names>S</given-names></name>, <etal>et&#x000a0;al.</etal></person-group>
+<article-title>Ligand based design and synthesis of pyrazole based derivatives as
+selective COX-2 inhibitors</article-title>. <source>Bioorg Chem</source>
+<year>2019</year>;<volume>86</volume>:<fpage>583</fpage>&#x02013;<lpage>97</lpage>.<pub-id pub-id-type="pmid">30782576</pub-id></mixed-citation></ref></ref-list></back></article>

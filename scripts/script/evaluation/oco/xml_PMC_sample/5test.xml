@@ -1,0 +1,4716 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+<?properties open_access?>
+<?DTDIdentifier.IdentifierValue
+-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.0 20120330//EN
+?>
+<?DTDIdentifier.IdentifierType public?>
+<?SourceDTD.DTDName JATS-journalpublishing1.dtd?>
+<?SourceDTD.Version 1.0?>
+<?ConverterInfo.XSLTName jp2nlmx2.xsl?>
+<?ConverterInfo.Version 1?>
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">J Glob Health</journal-id>
+<journal-id journal-id-type="iso-abbrev">J Glob Health</journal-id>
+<journal-id journal-id-type="publisher-id">JGH</journal-id>
+<journal-title-group>
+<journal-title>Journal of Global Health</journal-title>
+</journal-title-group>
+<issn pub-type="ppub">2047-2978</issn>
+<issn pub-type="epub">2047-2986</issn>
+<publisher>
+<publisher-name>Edinburgh University Global Health Society</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="pmcid">6790232</article-id>
+<article-id pub-id-type="publisher-id">jogh-09-020419</article-id>
+<article-id pub-id-type="doi">10.7189/jogh.09.020419</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Articles</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>
+Awareness challenges of mental health disorder and dementia facing stigmatisation and discrimination: a systematic literature review from Sub-Sahara Africa
+</article-title>
+<alt-title alt-title-type="running-head">
+Spittel et al. Mental health disorders and stigmatisation in Sub-Saharan Africa
+</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name>
+<surname>Spittel</surname>
+<given-names>Susanne</given-names>
+</name>
+<xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref>
+<xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Maier</surname>
+<given-names>André</given-names>
+</name>
+<xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Kraus</surname>
+<given-names>Elke</given-names>
+</name>
+<xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref>
+</contrib>
+<aff id="aff1">
+<label>1</label>
+Charité – Universitätsmedizin Berlin, corporate member of Freie Universität Berlin, Humboldt-Universität zu Berlin, and Berlin Institute of Health, Department of Neurology, Berlin, Germany
+</aff>
+<aff id="aff2">
+<label>2</label>
+University of Bremen, Health Science Bremen – Institute for Public Health and Nursing Research (IPP), Bremen, Germany
+</aff>
+<aff id="aff3">
+<label>3</label>
+Alice Salomon University of Applied Sciences Berlin, Berlin, Germany
+</aff>
+</contrib-group>
+<author-notes>
+<corresp id="cor1">
+<bold>Correspondence to:</bold>
+ Susanne Spittel, M.Sc Lychener Strasse 52 10437 Berlin Germany 
+<email xlink:href="s.spittel@gmail.com">s.spittel@gmail.com</email>
+</corresp>
+</author-notes>
+<pub-date date-type="pub" publication-format="print">
+<month>12</month>
+<year>2019</year>
+</pub-date>
+<pub-date date-type="pub" publication-format="electronic">
+<day>07</day>
+<month>10</month>
+<year>2019</year>
+</pub-date>
+<volume>9</volume>
+<issue>2</issue>
+<elocation-id>020419</elocation-id>
+<permissions>
+<copyright-statement>
+Copyright © 2019 by the Journal of Global Health. All rights reserved.
+</copyright-statement>
+<copyright-year>2019</copyright-year>
+<license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/">
+<license-p>
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+</license-p>
+</license>
+</permissions>
+<abstract>
+<sec>
+<title>Background</title>
+<p>
+Mental health disorders (MHD) are leading causes of disabilities. Awareness of MHD in Sub-Saharan Africa (SSA) is crucial to both health care professionals and general community if those affected by MHD are to be allowed to live in dignity and be socially included, rather than being treated as outcasts or witches, as is presently the case. Therefore, this review aims to map and summarise the extent to which awareness of MHD and dementia in SSA challenges stigmatisation issues.
+</p>
+</sec>
+<sec>
+<title>Methods</title>
+<p>
+A systematic review was conducted using electronic databases (PubMed, CINAHL, PsycINFO). A content analysis of selected studies was performed. Findings on awareness challenges and stigmatisation were identified and categorised.
+</p>
+</sec>
+<sec>
+<title>Results</title>
+<p>
+A total of 230 publications were screened, 25 were selected for this review. The results demonstrate strong supernatural beliefs influencing peoples’ perceptions of diseases. These perceptions promote stigmatising attitudes towards people with MHD and dementia. The education level correlated with stigmatising attitudes, whereby higher educated people were less likely to distance themselves socially from people with MHD and from people living with dementia (PwD). Astonishingly, even people educated in health issues (eg, nurses, medical practitioners) tended to have strong beliefs in supernatural causations of diseases, like witchcraft, and hold negative attitudes towards MHD and PwD.
+</p>
+</sec>
+<sec>
+<title>Conclusions</title>
+<p>
+This review provides some evidence on the influence of traditional beliefs on MHDs in SSA. Those beliefs are powerful and exist in all segments in SSA-communities, promoting superstitious perceptions on diseases and stigmatisation. Awareness and education campaigns on MHD are absolutely mandatory to reduce stigmatisation.
+</p>
+</sec>
+</abstract>
+<counts>
+<fig-count count="2"/>
+<table-count count="4"/>
+<equation-count count="0"/>
+<ref-count count="52"/>
+<page-count count="11"/>
+</counts>
+</article-meta>
+</front>
+<body>
+<p>
+Mental health disorders (MHD) are among the leading causes of disability and are more prevalent among the younger population (0-59 years), whereas chronic diseases such as dementias are more prevalent in older populations (60+ years) [
+<xref rid="R1" ref-type="bibr">1</xref>
+]. About 1 in 10 persons live with MHD (PwMHD), whilst the provision of mental health care is lacking [
+<xref rid="R2" ref-type="bibr">2</xref>
+]. According to the World Bank (2016), 84% of the world
+<bold>’</bold>
+s population lives in low and middle income countries (LAMIC), 14% in Sub-Saharan African countries (SSA). In many LAMIC, particular in Africa, policies and legislation rarely exist to establish essential mental health services [
+<xref rid="R3" ref-type="bibr">3</xref>
+,
+<xref rid="R4" ref-type="bibr">4</xref>
+]. Data from Africa show highest scores in illiteracy and lowest scores in expenditure on mental health, mental health resources, and lowest disability-adjusted life years by neuropsychiatric conditions [
+<xref rid="R3" ref-type="bibr">3</xref>
+]. Besides, SSA counts a high prevalence of infectious diseases, which impacts the prevalence of probable common MHD (eg, HIV-related dementia) [
+<xref rid="R5" ref-type="bibr">5</xref>
+-
+<xref rid="R8" ref-type="bibr">8</xref>
+]. For instance, estimated HIV-related dementia incidence cases in studied populations with HIV/AIDS varies up to 36% [
+<xref rid="R9" ref-type="bibr">9</xref>
+]. Moreover, the number of people living with dementia (PwD) is increasing – especially in LAMIC as numbers rise more prominently compared to the developed world [
+<xref rid="R10" ref-type="bibr">10</xref>
+,
+<xref rid="R11" ref-type="bibr">11</xref>
+]. By 2050 the number of PwD will more than triple in LAMIC [
+<xref rid="R11" ref-type="bibr">11</xref>
+], caused by infectious diseases like tuberculosis or HIV, but also by a growing middle class population of Africa with an improved sustainable livelihood that allows them to seek better health care, which in turn is likely to contribute to life expectancy, morbidity and mortality rates [
+<xref rid="R8" ref-type="bibr">8</xref>
+,
+<xref rid="R12" ref-type="bibr">12</xref>
+]. However, most of these conditions are insufficiently diagnosed and remain untreated [
+<xref rid="R13" ref-type="bibr">13</xref>
+,
+<xref rid="R14" ref-type="bibr">14</xref>
+]. Furthermore, PwMHD often experience stigmatisation; even their families, and friends as well as health care providers experience the impact of public stigma [
+<xref rid="R15" ref-type="bibr">15</xref>
+]. Perceiving stigma is strongly associated with MHD and occurs more frequently in developing countries [
+<xref rid="R16" ref-type="bibr">16</xref>
+]. Worldwide, people from various cultures hold different traditional beliefs, which can be powerful in healing people on the one hand, but on the other hand, strong beliefs can also affect attitudes towards PwMHD, even amongst people that have received medical education [
+<xref rid="R17" ref-type="bibr">17</xref>
+]. Supernatural attitudes to an illness exist especially in societies where traditions dominate society [
+<xref rid="R18" ref-type="bibr">18</xref>
+]. In most SSA-cultures, people strongly believe in supernatural powers [
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R20" ref-type="bibr">20</xref>
+]. As long as there is no awareness and “name” for diseases (eg, for dementia), people’s behaviour – especially if people are seen as acting “strange” – can be misinterpreted and lead to accusation and exclusion [
+<xref rid="R21" ref-type="bibr">21</xref>
+].
+</p>
+<sec disp-level="2">
+<title>Objective</title>
+<p>
+This review aims to identify awareness and knowledge as well as attitudes (eg, beliefs, feelings, and behaviours) around MHD and dementia in SSA that reveal stigmatisation. Hypothetically, it is assumed that supernatural traditional beliefs challenge perceptions and concepts on MHD and dementia and result in stigmatisation of people living with such diseases in SSA. The review targets peoples’ awareness and knowledge of MHD and dementia, their attitudes towards PwMHD and PwD, as well as the stigmatisation grounded in supernatural beliefs.
+</p>
+</sec>
+<sec sec-type="methods">
+<title>METHODS</title>
+<sec>
+<title>Data sources and search strategy</title>
+<p>
+A systematic literature review was conducted using online databases in accordance with the PRISMA statement [
+<xref rid="R22" ref-type="bibr">22</xref>
+]. Different search strategies were performed systematically to identify published studies reporting on awareness and knowledge around MHD and dementia in SSA that reveals stigmatisation. The following electronic databases were used: PubMed
+<sup>®</sup>
+including MEDLINE
+<sup>®</sup>
+, CINAHL and PsycINFO
+<sup>®</sup>
+. Key words included ‘mental health’, ‘dementia’ or ‘Alzheimer*’, and ‘education’ or ‘awareness’, and ‘stigma*’ or ‘witch*’, and ‘Africa’. Within the databases, key words were searched in combination. Title and abstract of articles were screened for relevance based on inclusion criteria. Reference lists were hand checked to identify supplementary studies, and a “grey” literature search was conducted. Additionally, articles, books, chapters, reports, non-empirical studies, and commentaries were used for a more in-depth understanding.
+</p>
+</sec>
+<sec>
+<title>Study selection</title>
+<p>
+For review inclusion, studies based on following criteria were selected. Studies were required to (a) focus on MHD or dementia, especially focussing on diseases which can cause abnormal “strange” behaviour in the affected persons; (b) address awareness or education, and (c) report on stigmatisation on those diseases. Because of differences on cultural values and beliefs between Northern Africa (Arabic culture) and SSA (Gupta, Hanges a Dorfman, 2002), articles were required (d) to relate to SSA. Studies published in English or German (e) were included. There was no time limitation for inclusion.
+</p>
+</sec>
+<sec>
+<title>Outcomes of interest</title>
+<p>
+Primary outcome of interest was an influencing factor on the awareness and concepts on MHD and dementia. Traditional beliefs in Sub-Sahara Africa such as witchcraft were considered as influencing factors. Additionally, stigmatisation issues concerning MHD and dementia and its grounding in supernatural beliefs were of interest.
+</p>
+</sec>
+<sec>
+<title>Data extraction and quality assessment</title>
+<p>
+In a first step data were extracted by country where results were conducted, method of the study, participants and sample size, and the objective of the study. In a second step data were extracted reporting on concepts on MHD and dementia, attitudes towards, and stigmatisation of people living with MHD and dementia. Extracted data were classified separately for health care professionals (HCP; eg, nurses, caregivers, medical practitioners, care-providers), and general community members (GCM; eg, community members, children, and clergy). Full texts of selected studies were checked for representation of sampling, quality of methods applied, and reporting strategy.
+</p>
+</sec>
+</sec>
+<sec sec-type="results">
+<title>Results</title>
+<sec>
+<title>Systematic review</title>
+<p>
+In total 230 potentially relevant publications were identified via systematic search in the electronic databases: PubMed (182 references), PsycINFO (8 references), CINAHL (40 references). After removing duplications, papers were screened based on title and abstract. 55 relevant publications were selected for further examination. In the final selection, 25 articles met all relevant inclusion criteria and were involved (
+<xref ref-type="fig" rid="F1">
+<bold>Figure 1</bold>
+</xref>
+).
+</p>
+<fig id="F1" fig-type="figure" orientation="portrait" position="float">
+<label>Figure 1</label>
+<caption>
+<p>
+Flow-chart of search strategy used to identify the studies relevant for the review. MHD – mental health disorders, SSA – Sub-Saharan Africa.
+</p>
+</caption>
+<graphic xlink:href="jogh-09-020419-F1"/>
+</fig>
+</sec>
+<sec>
+<title>Study characteristics</title>
+<p>
+Most studies focussed on awareness challenges on MHD in general (n = 21), four studies investigated dementia. Reviewed studies originated from
+<italic>Nigeria</italic>
+(n = 10),
+<italic>Ghana</italic>
+(n = 2),
+<italic>Republic of Congo</italic>
+(n = 1),
+<italic>Uganda</italic>
+(n = 2),
+<italic>Ethiopia</italic>
+(n = 2),
+<italic>Tanzania</italic>
+(n = 1),
+<italic>Zambia</italic>
+(n = 1),
+<italic>Zimbabwe</italic>
+(n = 1),
+<italic>South Sudan</italic>
+(n = 1), and
+<italic>South Africa</italic>
+(n = 4).
+</p>
+<p>
+Methodologies included studies applying a quantitative approach by retrieving questionnaires (n = 13) or a qualitative design by conducting interviews or focus group discussions (n = 10). Two studies combined quantitative and qualitative methods. Main results were categorised according to the following themes: (I) concepts, and knowledge on MHD and dementia, (II) perceptions on witchcraft, (III) attitudes towards PwMHD and PwD, and (VI) stigmatisation of PwMHD and PwD. Characteristics of the reviewed studies are summarised in
+<xref rid="T1" ref-type="table">
+<bold>Table 1</bold>
+</xref>
+.
+</p>
+<table-wrap id="T1" orientation="portrait" position="float">
+<label>Table 1</label>
+<caption>
+<p>Characteristics of included studies</p>
+</caption>
+<table frame="hsides" rules="groups">
+<col width="35" span="1"/>
+<col width="106" span="1"/>
+<col width="70" span="1"/>
+<col width="99" span="1"/>
+<col width="134" span="1"/>
+<col width="262" span="1"/>
+<thead>
+<tr>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">No.</th>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Author, year</th>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Country</th>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Method</th>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Participants, sample size</th>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Aim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+1
+<hr/>
+</td>
+<td rowspan="2" valign="top" align="left" colspan="1">
+Adebiyi et al., 2016 [
+<xref rid="R23" ref-type="bibr">23</xref>
+]
+<hr/>
+</td>
+<td rowspan="2" valign="top" align="left" colspan="1">
+Nigeria
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+FGD
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 6
+<hr/>
+</td>
+<td rowspan="2" valign="top" align="left" colspan="1">
+Exploration of attitudes towards PwD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+<hr/>
+</td>
+<td valign="top" colspan="1" align="left" rowspan="1">
+Questionnaire-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 313
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+2
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Adewuya, Oguntade, 2007 [
+<xref rid="R19" ref-type="bibr">19</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Nigeria
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Questionnaire-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Medical doctors, n = 312
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Evaluation of attitudes towards PwMHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+3
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Adewuya, Makanjoula, 2008a [
+<xref rid="R24" ref-type="bibr">24</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Nigeria
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Questionnaire-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 2078
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Evaluation of beliefs causing MHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+4
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Adewuya, Makanjoula, 2008b [
+<xref rid="R25" ref-type="bibr">25</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Nigeria
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Questionnaire-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 2078
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Assessing attitudes towards PwMHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+5
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Audu et al., 2013 [
+<xref rid="R26" ref-type="bibr">26</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Nigeria
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Questionnaire-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 325
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Examination of stigmatisation of PwMHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+6
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Ayazi et al., 2014 [
+<xref rid="R27" ref-type="bibr">27</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+South Sudan
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Cross-sectional-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 1200
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Investigation of attitudes towards PwMHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+7
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Barke et al., 2011 [
+<xref rid="R28" ref-type="bibr">28</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Ghana
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Questionnaire-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 508
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Measuring attitudes towards PwMHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+8
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Dogra et al., 2012 [
+<xref rid="R29" ref-type="bibr">29</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Nigeria
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Cross-sectional-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Schoolchildren, n = 164
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Assessing views and knowledge about MHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+9
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Egbe et al., 2014 [
+<xref rid="R30" ref-type="bibr">30</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+South Africa
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Interviews, FGD
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+HCP, n = 32, Healthcare users, n = 45
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Exploration of psychiatric stigma in order to inform interventions.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+10
+<hr/>
+</td>
+<td rowspan="2" valign="top" align="left" colspan="1">
+Faure-Delage et al., 2012 [
+<xref rid="R31" ref-type="bibr">31</xref>
+]
+<hr/>
+</td>
+<td rowspan="2" valign="top" align="left" colspan="1">
+Congo
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Questionnaire-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+PwD, PwMHD, n = 117, Relatives, n = 123
+<hr/>
+</td>
+<td rowspan="2" valign="top" align="left" colspan="1">
+Exploring people’s perception about dementia.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+<hr/>
+</td>
+<td valign="top" colspan="1" align="left" rowspan="1">
+Interviews
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+HCP, n = 33
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+11
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Girma et al., 2013 [
+<xref rid="R32" ref-type="bibr">32</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Ethiopia
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Cross-sectional-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 845
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Measurement of public stigma against PwMHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+12
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Girma et al., 2014 [
+<xref rid="R33" ref-type="bibr">33</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Ethiopia
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Cross-sectional-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 845
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Investigation of the degree of family stigma.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+13
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Gureje et al., 2005 [
+<xref rid="R34" ref-type="bibr">34</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Nigeria
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Questionnaire-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 2040
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Determination of knowledge and attitudes of MHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+14
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Gureje et al., 2006 [
+<xref rid="R35" ref-type="bibr">35</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Nigeria
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Questionnaire-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 2040
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Examination of causation and attitudes.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+15
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Igbinomwanhia et al., 2013 [
+<xref rid="R36" ref-type="bibr">36</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Nigeria
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Cross-sectional-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Clergy, n = 107
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Determination of attitudes towards PwMHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+16
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Kabir et al., 2004 [
+<xref rid="R37" ref-type="bibr">37</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Nigeria
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Questionnaire-survey
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+GCM, n = 250
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Examination of knowledge and attitudes of MHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+17
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Kapungwe et al., 2010 [
+<xref rid="R6" ref-type="bibr">6</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Zambia
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Interviews, FGD
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Stakeholders, n = 56
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Exploration of causes of MI to address stigmatisation against PwMHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+18
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Mavundla et al., 2009 [
+<xref rid="R20" ref-type="bibr">20</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+South Africa
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Interviews
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Informal caregivers, n = 8
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Exploration of experiences of informal family caregivers of PwMHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+19
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Mkhonto, Hanssen, 2017 [
+<xref rid="R38" ref-type="bibr">38</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+South Africa
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Interviews
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Relatives, nurses, n = 8
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Exploration of the link between culture and dementia care.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+20
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Mohamed-Kaloo, Laher, 2014 [
+<xref rid="R39" ref-type="bibr">39</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+South Africa
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Interviews
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+General practitioners, n = 10
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Investigation of perceptions on MHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+21
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Mushi et al., 2014 [
+<xref rid="R40" ref-type="bibr">40</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Tanzania
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Interviews
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+PWD n = 25, PWDs’ caregivers, n = 16
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Exploration of socio-cultural beliefs on dementia.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+22
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Ofori-Atta et al., 2010 [
+<xref rid="R41" ref-type="bibr">41</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Ghana
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Interviews, FGD
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Stakeholders, n = 88
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Exploration of causes of MHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+23
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Patel et al., 1995 [
+<xref rid="R42" ref-type="bibr">42</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Zimbabwe
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+FGD
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+HCP, n = 76
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Generation of concepts of MHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+24
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Quinn, Knifton, 2014 [
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Uganda
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Interviews, FGD
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Stakeholders, n = 18
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Understanding beliefs and stigma associated with MHD.
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">25</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Ssebunnya et al., 2011 [
+<xref rid="R44" ref-type="bibr">44</xref>
+]
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">Uganda</td>
+<td valign="top" align="left" rowspan="1" colspan="1">Interviews, FGD</td>
+<td valign="top" align="left" rowspan="1" colspan="1">Stakeholders, n = 68</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Exploration of perceptions on the mental health care system.
+</td>
+</tr>
+</tbody>
+</table>
+<table-wrap-foot>
+<p>
+FGD – focus group discussion, MHD – mental health disorders, PwMHD – people living with mental health disorders, PwD – people living with dementia
+</p>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec>
+<title>Concepts and knowledge on MHD and dementia</title>
+<p>
+The review reveals that people in SSA hold different explanations on the causation of MHD and dementia. Explanations derive from biological, psychological, and spiritual concepts, or other explanations, classified and summarised in
+<xref rid="T2" ref-type="table">
+<bold>Table 2</bold>
+</xref>
+.
+</p>
+<table-wrap id="T2" orientation="portrait" position="float">
+<label>Table 2</label>
+<caption>
+<p>Classification of concepts on MHD and dementia</p>
+</caption>
+<table frame="hsides" rules="groups">
+<col width="141" span="1"/>
+<col width="148" span="1"/>
+<col width="106" span="1"/>
+<col width="99" span="1"/>
+<col width="212" span="1"/>
+<thead>
+<tr>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Category</th>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Concept on MHD</th>
+<th valign="top" align="center" scope="col" rowspan="1" colspan="1">GCM in %</th>
+<th valign="top" align="center" scope="col" rowspan="1" colspan="1">HCP in %</th>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Representative studies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3" valign="top" align="left" scope="row" colspan="1">
+Biological explanations
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Brain illness*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 0.9-38.0*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+81.8*
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R26" ref-type="bibr">26</xref>
+,
+<xref rid="R31" ref-type="bibr">31</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Brain infection
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 25.0-30.4†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+49.4
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R31" ref-type="bibr">31</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Heredity
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 10.3-38.3
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+32.7
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R24" ref-type="bibr">24</xref>
+,
+<xref rid="R25" ref-type="bibr">25</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td rowspan="3" valign="top" align="left" scope="row" colspan="1">
+Psychosocial factors
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Stress*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 6.7-80.8†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+58.3 †
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R24" ref-type="bibr">24</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R31" ref-type="bibr">31</xref>
+,
+<xref rid="R32" ref-type="bibr">32</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R37" ref-type="bibr">37</xref>
+,
+<xref rid="R39" ref-type="bibr">39</xref>
+,
+<xref rid="R40" ref-type="bibr">40</xref>
+,
+<xref rid="R42" ref-type="bibr">42</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Personal failure
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 10.2-61.2
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+20.2 †
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R24" ref-type="bibr">24</xref>
+,
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Drug, alcohol misuse
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 9.5-80.8†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+67.9 †
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R24" ref-type="bibr">24</xref>
+,
+<xref rid="R26" ref-type="bibr">26</xref>
+,
+<xref rid="R32" ref-type="bibr">32</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+,
+<xref rid="R37" ref-type="bibr">37</xref>
+,
+<xref rid="R42" ref-type="bibr">42</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+Supernatural explanations
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Witchcraft, evil spirit*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 19.9-65.5†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+53.8 †
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R24" ref-type="bibr">24</xref>
+-
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+-
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R37" ref-type="bibr">37</xref>
+-
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Punishment by God*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 9.3-50.1†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+6.4 †
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R24" ref-type="bibr">24</xref>
+-
+<xref rid="R26" ref-type="bibr">26</xref>
+,
+<xref rid="R31" ref-type="bibr">31</xref>
+,
+<xref rid="R32" ref-type="bibr">32</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R37" ref-type="bibr">37</xref>
+,
+<xref rid="R40" ref-type="bibr">40</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td rowspan="4" valign="top" align="left" scope="row" colspan="1">Other explanations</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Madness*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R23" ref-type="bibr">23</xref>
+,
+<xref rid="R41" ref-type="bibr">41</xref>
+-
+<xref rid="R44" ref-type="bibr">44</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Normal part of ageing*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 18.2-71.9†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R23" ref-type="bibr">23</xref>
+,
+<xref rid="R31" ref-type="bibr">31</xref>
+,
+<xref rid="R40" ref-type="bibr">40</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Contagious disease*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+13.2*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R31" ref-type="bibr">31</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">“Whites peoples disease”*</td>
+<td valign="top" align="center" rowspan="1" colspan="1">n/a</td>
+<td valign="top" align="center" rowspan="1" colspan="1">†</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R38" ref-type="bibr">38</xref>
+]
+</td>
+</tr>
+</tbody>
+</table>
+<table-wrap-foot>
+<p>
+MHD – mental health disorders, GCM – general community members, HCP – health care professionals (eg, medical practitioners, nurses, caregivers), R – Range, n/a – not applicable
+</p>
+<p>*Addressed by dementia studies.</p>
+<p>†Qualitative results involved.</p>
+</table-wrap-foot>
+</table-wrap>
+<p>
+Biological explanations are used least often to describe MHD’s or dementia’s causation. In terms of MHD, HCP are more likely to use biological explanations compared to GCM [
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R24" ref-type="bibr">24</xref>
+]. Also, PwD themselves or their relatives and caregivers, mostly tended to lack knowledge of dementia [
+<xref rid="R31" ref-type="bibr">31</xref>
+,
+<xref rid="R40" ref-type="bibr">40</xref>
+].
+</p>
+<p>
+Psychosocial explanations are considered to be more prominent causes. Especially misuse of drugs and alcohol are most frequently seen to cause MHD (up to 80%); followed by stress (up to 81%) or the burden of poverty (53%) [
+<xref rid="R24" ref-type="bibr">24</xref>
+,
+<xref rid="R32" ref-type="bibr">32</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+].
+</p>
+<p>
+Furthermore, misconceptions exist very frequently in the way that MHD or dementia are not perceived as diseases but as madness, a source of witchcraft or sorcery (up to 66%). Those supernatural explanations are predominantly considered to cause MHD and dementia occurring in all segments of communities, including PwMHD itself and HCPs [
+<xref rid="R34" ref-type="bibr">34</xref>
+]. Especially people lacking knowledge of the disease aetiology, witchcraft was identified as the cause [
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R41" ref-type="bibr">41</xref>
+]. The behaviour of PwD is perceived as strange, abnormal, and dangerous which makes people think about witchcraft [
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R38" ref-type="bibr">38</xref>
+]. For instance, Zambian interviewees acknowledged: “
+<italic>
+This is a mad person [...]”; “People still think that mental illness is caused by evil spirits. […];”
+</italic>
+or that PwMHD are bewitched [
+<xref rid="R6" ref-type="bibr">6</xref>
+]. In Ghana, it is common that people tend to understand MHD as the “work of witches’:
+<italic>
+“People don’t really understand the causes, so they attribute it to witches […]”; “People see madness, epilepsy and witchcraft as all the same. They see mental illness as the doing of witches and their curses”
+</italic>
+[
+<xref rid="R41" ref-type="bibr">41</xref>
+]. Likewise, informal caregivers from South Africa, who do not understand the illness of their relatives, believed their disease was caused by the environment or witchcraft [
+<xref rid="R20" ref-type="bibr">20</xref>
+]. Moreover, high numbers of medical doctors (in Nigeria over 50%) saw spiritual explanations as the aetiology of MHD [
+<xref rid="R19" ref-type="bibr">19</xref>
+].
+</p>
+</sec>
+<sec>
+<title>Belief in witchcraft</title>
+<p>
+Spiritual beliefs, like ‘witchcraft’, ‘Satanism’, ‘evil spirits’ or ‘punishment from God’ were found to be very strong and leading to misunderstanding the aetiology of MHD or dementia in the following countries:
+<italic>Nigeria</italic>
+[
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R24" ref-type="bibr">24</xref>
+,
+<xref rid="R26" ref-type="bibr">26</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R37" ref-type="bibr">37</xref>
+],
+<italic>Ghana</italic>
+[
+<xref rid="R41" ref-type="bibr">41</xref>
+],
+<italic>South Africa</italic>
+[
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+],
+<italic>Uganda</italic>
+[
+<xref rid="R43" ref-type="bibr">43</xref>
+],
+<italic>Tanzania</italic>
+[
+<xref rid="R40" ref-type="bibr">40</xref>
+],
+<italic>Zambia</italic>
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+],
+<italic>Zimbabwe</italic>
+[
+<xref rid="R42" ref-type="bibr">42</xref>
+],
+<italic>South Sudan</italic>
+[
+<xref rid="R27" ref-type="bibr">27</xref>
+], and
+<italic>Ethiopia</italic>
+[
+<xref rid="R32" ref-type="bibr">32</xref>
+]. Those spiritual beliefs, seen as causing diseases, are also associated with negative attitudes towards PwMHD and higher stigmatisation. They can prevent people from seeking professional help, can impact concepts of caregiving, and lead to marginalisation of PwMHD [
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R25" ref-type="bibr">25</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+].
+</p>
+</sec>
+<sec>
+<title>Attitudes towards PwMHD and PwD</title>
+<p>
+Negative attitudes and stigmatisation against PwMHD are found to be widespread in these countries:
+<italic>Nigeria</italic>
+[
+<xref rid="R23" ref-type="bibr">23</xref>
+],
+<italic>Ghana</italic>
+[
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R41" ref-type="bibr">41</xref>
+],
+<italic>Republic of Congo</italic>
+[
+<xref rid="R31" ref-type="bibr">31</xref>
+],
+<italic>Tanzania</italic>
+[
+<xref rid="R40" ref-type="bibr">40</xref>
+],
+<italic>South Sudan</italic>
+[
+<xref rid="R27" ref-type="bibr">27</xref>
+],
+<italic>Uganda</italic>
+[
+<xref rid="R43" ref-type="bibr">43</xref>
+,
+<xref rid="R44" ref-type="bibr">44</xref>
+],
+<italic>Ethiopia</italic>
+[
+<xref rid="R33" ref-type="bibr">33</xref>
+],
+<italic>Zambia</italic>
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+],
+<italic>Zimbabwe</italic>
+[
+<xref rid="R42" ref-type="bibr">42</xref>
+], and
+<italic>South Africa</italic>
+[
+<xref rid="R38" ref-type="bibr">38</xref>
+]. Negative attitudes are held by different groups in society – most evident among GCM, but also within families, among HCP and health care users, as well as within the government level or among policy makers [
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R23" ref-type="bibr">23</xref>
+,
+<xref rid="R24" ref-type="bibr">24</xref>
+,
+<xref rid="R26" ref-type="bibr">26</xref>
+-
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+,
+<xref rid="R35" ref-type="bibr">35</xref>
+,
+<xref rid="R37" ref-type="bibr">37</xref>
+,
+<xref rid="R41" ref-type="bibr">41</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]. Also, even if people were friends with PwMHD, they hold negative attitudes towards them, which was found in
+<italic>South Africa</italic>
+and
+<italic>Zambia</italic>
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+]. The finding that negative attitude towards PwMHD are not limited to adults was established in a Nigerian schoolchildren survey [
+<xref rid="R29" ref-type="bibr">29</xref>
+].
+</p>
+<p>
+Generally, PwMHD or PwD are perceived to be dangerous or aggressive, to be a burden to society as well as a public nuisance. Among both GCM and HCP, perceived dangerousness or aggressiveness are two of the main prejudiced perceptions held towards PwMHD, as the majority of reviewed studies indicate (
+<xref rid="T3" ref-type="table">
+<bold>Table 3</bold>
+</xref>
+).
+</p>
+<table-wrap id="T3" orientation="portrait" position="float">
+<label>Table 3</label>
+<caption>
+<p>Attitudes and prejudices towards PwMHD and PwD</p>
+</caption>
+<table frame="hsides" rules="groups">
+<col width="290" span="1"/>
+<col width="106" span="1"/>
+<col width="99" span="1"/>
+<col width="212" span="1"/>
+<thead>
+<tr>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Attitudes and prejudices*</th>
+<th valign="top" align="center" scope="col" rowspan="1" colspan="1">GCM in %</th>
+<th valign="top" align="center" scope="col" rowspan="1" colspan="1">HCP in %</th>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Representative studies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+Are dangerous
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 57.9-96.7‡
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+70.5‡
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R25" ref-type="bibr">25</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+,
+<xref rid="R45" ref-type="bibr">45</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+Show a violent/aggressive behaviour
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 21.8-96.7‡
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 51.0-53.8‡
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R26" ref-type="bibr">26</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R32" ref-type="bibr">32</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R35" ref-type="bibr">35</xref>
+,
+<xref rid="R37" ref-type="bibr">37</xref>
+,
+<xref rid="R42" ref-type="bibr">42</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+Are frightening or scary†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 23.3-86.4‡
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 26.9-37.5‡
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R26" ref-type="bibr">26</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R32" ref-type="bibr">32</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+-
+<xref rid="R38" ref-type="bibr">38</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+Making others ashamed†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 11.3-86.1‡
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+26.9‡
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R23" ref-type="bibr">23</xref>
+,
+<xref rid="R25" ref-type="bibr">25</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+-
+<xref rid="R35" ref-type="bibr">35</xref>
+,
+<xref rid="R39" ref-type="bibr">39</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+Are a burden to individuals, families, and communities†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 37.3-56.3‡
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+‡
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R31" ref-type="bibr">31</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+,
+<xref rid="R40" ref-type="bibr">40</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+Are different; behave strange†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 33.4-79.7‡
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+‡
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R31" ref-type="bibr">31</xref>
+,
+<xref rid="R32" ref-type="bibr">32</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+,
+<xref rid="R38" ref-type="bibr">38</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+Are a public nuisance
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 15.0-97.8
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+n/a
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R26" ref-type="bibr">26</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R35" ref-type="bibr">35</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">Are unpredictable or lacking self-control</td>
+<td valign="top" align="center" rowspan="1" colspan="1">57.9</td>
+<td valign="top" align="center" rowspan="1" colspan="1">R: 59.0-85.9</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+]
+</td>
+</tr>
+</tbody>
+</table>
+<table-wrap-foot>
+<p>
+PwMHD – people living with mental health disorders, PwD – people living with dementia, GCM – general community members, HCP – health care professionals (eg, medical practitioners, nurses, caregivers), R – range, n/a – not applicable
+</p>
+<p>
+*Attitudes are listed in order of the relevance mentioned in the papers reviewed.
+</p>
+<p>†Addressed by dementia studies.</p>
+<p>‡Results from qualitative studies involved.</p>
+</table-wrap-foot>
+</table-wrap>
+<p>
+Such negative perceptions can arise from fear, focusing on the hardship of caregiving or lacking interest, motivation, and knowledge around MHD [
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R44" ref-type="bibr">44</xref>
+]. A South African study disclosed that GCM and family members are afraid of the PwD and that even nurses hold such attitudes until they started working with them [
+<xref rid="R38" ref-type="bibr">38</xref>
+]. This not only leads to misinterpretation of behaviours shown by PwMHD or PwD but also often relates to higher levels of stigmatising attitudes [
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R25" ref-type="bibr">25</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R37" ref-type="bibr">37</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+].
+</p>
+<p>
+Stigmatising attitudes can also concern the family of or people caring for PwMHD, professional health care providers, or whole mental health institutions [
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R25" ref-type="bibr">25</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+,
+<xref rid="R44" ref-type="bibr">44</xref>
+]. The education level correlates with stigmatising attitudes, whilst people with higher education tend to keep less social distance towards PwMHD, or their relatives [
+<xref rid="R26" ref-type="bibr">26</xref>
+,
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+]. People with less knowledge show higher social distance [
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R35" ref-type="bibr">35</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+,
+<xref rid="R39" ref-type="bibr">39</xref>
+,
+<xref rid="R44" ref-type="bibr">44</xref>
+,
+<xref rid="R46" ref-type="bibr">46</xref>
+]. Those attitudes and perceptions, especially being afraid of having conversations with PwMHD or believing that the presence of PwMHD might pose a risk to unaffected people, is observed to strengthen social isolation [
+<xref rid="R25" ref-type="bibr">25</xref>
+,
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+].
+</p>
+</sec>
+<sec>
+<title>Stigmatisation of PwMHD and PwD</title>
+<p>
+In particular, social distance and exclusion of the PwMHD from the community (eg, keeping the ill person behind locked doors) is mainly addressed by the reviewed studies [
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R32" ref-type="bibr">32</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+,
+<xref rid="R39" ref-type="bibr">39</xref>
+-
+<xref rid="R44" ref-type="bibr">44</xref>
+]. Both GCM and HCP would feel disturbed about sharing a room or their house with PwMHD or living next door to someone who is mentally ill, or even having PwMHD living in residential neighbourhoods (
+<xref rid="T4" ref-type="table">
+<bold>Table 4</bold>
+</xref>
+). A Zimbabwean study revealed that PwD are locked away as long as family members are reluctant to disclose the status of their relatives [
+<xref rid="R40" ref-type="bibr">40</xref>
+]. Even within families, relatives exclude their ill family members, for example, as these have to eat separately or are forced to live on the street [
+<xref rid="R43" ref-type="bibr">43</xref>
+]. It is frequently found that PwMHD are unable to lead normal lives because of social isolation [
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R42" ref-type="bibr">42</xref>
+]. Zambian stakeholders disclosed that PwMHD live in misery and loneliness without hope while community members bully and throw stones at them [
+<xref rid="R6" ref-type="bibr">6</xref>
+]. A Ghanaian study describes that especially women experience widespread physical abuse as communities force persons suspected of using witchcraft to move to designated areas called ‘witch-camps’ where these women undergo ‘cleansing’ rituals to rid them of witchcraft. They may also be expelled by the community, or even chased away by people intending to kill them [
+<xref rid="R41" ref-type="bibr">41</xref>
+]. In addition, the reviewed studies reveal stigmatisation through maltreatment (eg, being beaten by family members, or tied to a tree), and the point to influences on the health situation of PwMHD (eg, obtain service in a delay or being ignored by health care providers), as well as that PwMHD usually experience job disadvantages (
+<xref rid="T4" ref-type="table">
+<bold>Table 4</bold>
+</xref>
+).
+</p>
+<table-wrap id="T4" orientation="portrait" position="float">
+<label>Table 4</label>
+<caption>
+<p>Perceived stigma of PwMHD and PwD</p>
+</caption>
+<table frame="hsides" rules="groups">
+<col width="85" span="1"/>
+<col width="205" span="1"/>
+<col width="106" span="1"/>
+<col width="106" span="1"/>
+<col width="205" span="1"/>
+<thead>
+<tr>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Category</th>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Perceived stigma</th>
+<th valign="top" align="center" scope="col" rowspan="1" colspan="1">GCM in %</th>
+<th valign="top" align="center" scope="col" rowspan="1" colspan="1">HCP in %</th>
+<th valign="top" align="left" scope="col" rowspan="1" colspan="1">Representative studies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2" valign="top" align="left" scope="row" colspan="1">
+Social isolation/distance
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Avoid contact /the person
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 23.3-86.4
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+n/a
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R25" ref-type="bibr">25</xref>
+-
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+,
+<xref rid="R37" ref-type="bibr">37</xref>
+,
+<xref rid="R45" ref-type="bibr">45</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Unwillingness of maintaining a friendship
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 51.4-83.1
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+n/a
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R25" ref-type="bibr">25</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Not marry*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 18.6-96.6†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+80.8†
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R23" ref-type="bibr">23</xref>
+,
+<xref rid="R25" ref-type="bibr">25</xref>
+-
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Not share room
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 47-84.5
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+64.1
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R25" ref-type="bibr">25</xref>
+-
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R35" ref-type="bibr">35</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Locked away / keep behind Locked doors*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 24.3-47.8†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+,
+<xref rid="R39" ref-type="bibr">39</xref>
+,
+<xref rid="R40" ref-type="bibr">40</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Isolation from the community*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 24.3-42.1†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R31" ref-type="bibr">31</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+,
+<xref rid="R38" ref-type="bibr">38</xref>
+,
+<xref rid="R39" ref-type="bibr">39</xref>
+,
+<xref rid="R41" ref-type="bibr">41</xref>
+-
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top" align="left" scope="row" colspan="1">
+Physical torture
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Throwing stones*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+n/a
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R38" ref-type="bibr">38</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Chained or tied them up
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+n/a
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Maltreatment or beaten*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+n/a
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R38" ref-type="bibr">38</xref>
+,
+<xref rid="R44" ref-type="bibr">44</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td rowspan="3" valign="top" align="left" scope="row" colspan="1">
+Mental torture/burden
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Living neglected, rejected, or blamed*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+65.5†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R23" ref-type="bibr">23</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+,
+<xref rid="R38" ref-type="bibr">38</xref>
+,
+<xref rid="R41" ref-type="bibr">41</xref>
+-
+<xref rid="R44" ref-type="bibr">44</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Being laughed at, or bullied*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+n/a
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R23" ref-type="bibr">23</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Being shunned*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+n/a
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R23" ref-type="bibr">23</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top" align="left" scope="row" colspan="1">
+Worsened health situation
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Ignored by health care staff
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Traditional healers instead of medical care*
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 18-34†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+n/a
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R37" ref-type="bibr">37</xref>
+-
+<xref rid="R40" ref-type="bibr">40</xref>
+,
+<xref rid="R42" ref-type="bibr">42</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Inadequate or delayed health
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Mental health service out of residential areas
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 39.8-69.1
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+n/a
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R36" ref-type="bibr">36</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top" align="left" scope="row" colspan="1">
+Job/education burden
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Work with a PwMHD
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 43.1-84.8†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+R: 32.1-39.7†
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R25" ref-type="bibr">25</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R42" ref-type="bibr">42</xref>
+,
+<xref rid="R44" ref-type="bibr">44</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="1" align="left" scope="row" rowspan="1">
+Getting no or filthy jobs
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+†
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1">
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+Schooling or studying with a PwMHD
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+70.2†
+<hr/>
+</td>
+<td valign="top" align="center" rowspan="1" colspan="1">
+n/a
+<hr/>
+</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]
+<hr/>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" scope="row" rowspan="1" colspan="1"/>
+<td valign="top" align="left" rowspan="1" colspan="1">Employers passing applications over</td>
+<td valign="top" align="center" rowspan="1" colspan="1">77.2</td>
+<td valign="top" align="center" rowspan="1" colspan="1">n/a</td>
+<td valign="top" align="left" rowspan="1" colspan="1">
+[
+<xref rid="R28" ref-type="bibr">28</xref>
+]
+</td>
+</tr>
+</tbody>
+</table>
+<table-wrap-foot>
+<p>
+PwMHD – people living with mental health disorders, PwD – people living with dementia, GCM – general community members, HCP – health care professionals (eg, medical practitioners, nurses, caregivers), R – range, n/a – not applicable
+</p>
+<p>*Addressed by dementia studies.</p>
+<p>†Qualitative results involved.</p>
+</table-wrap-foot>
+</table-wrap>
+<p>
+Moreover, the stigma can influence whole families, HCP, or whole mental-health care hospitals. Also, families or carers of PwMHD often feel lonely and experience social isolation. Because of their involvement in care, they are often blamed by community members, eg, cannot attend church sessions, funerals, or other important traditional functions [
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+,
+<xref rid="R42" ref-type="bibr">42</xref>
+]. Even a whole neighbourhood can be stigmatised if PwMHD live there [
+<xref rid="R6" ref-type="bibr">6</xref>
+]. On the other hand, caregivers have to cope with stress, burnout through physical aggression, and destructive behaviour from PwMHD or PwD [
+<xref rid="R31" ref-type="bibr">31</xref>
+,
+<xref rid="R40" ref-type="bibr">40</xref>
+]. Another major challenge in providing care are financial constraints, eg, having problems with maintaining employment [
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R42" ref-type="bibr">42</xref>
+].
+</p>
+</sec>
+<sec>
+<title>Relationship between findings</title>
+<p>
+The findings suggest that generally attitudes of people with poor knowledge, towards PwMHD were predominantly negative [
+<xref rid="R35" ref-type="bibr">35</xref>
+]. In addition, it was found that people assigning psychological causes to the medical conditions yield more positive attitudes towards PwMHD [
+<xref rid="R33" ref-type="bibr">33</xref>
+,
+<xref rid="R35" ref-type="bibr">35</xref>
+]. In contrast, people holding spiritual views of diseases’ causations show higher social distance towards PwMHD [
+<xref rid="R25" ref-type="bibr">25</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R43" ref-type="bibr">43</xref>
+]. It can be postulated that such negative attitudes may reflect a lack of understanding of clinical subtleties of MHD [
+<xref rid="R36" ref-type="bibr">36</xref>
+]. For example, an Ethiopian study revealed that people with awareness of diseases’ signs and symptoms have less stereotyped attitudes and prejudices towards PwMHD [
+<xref rid="R33" ref-type="bibr">33</xref>
+]. Fortunately, people who cared for PwMHD or PwD, or people with knowledge of diseases causation show less stigmatising attitudes as they started to understand the disease [
+<xref rid="R25" ref-type="bibr">25</xref>
+,
+<xref rid="R38" ref-type="bibr">38</xref>
+]. Interviewed caregivers of PwD from Tanzania stressed the need for improved knowledge of care and support for PwD because of carer burden [
+<xref rid="R40" ref-type="bibr">40</xref>
+].
+</p>
+</sec>
+</sec>
+<sec sec-type="discussion">
+<title>DISCUSSION</title>
+<p>
+This appears to be the first systematic review based on studies focusing on awareness challenges of MHD and dementia in SSA and the related stigmatisation issue. Based on the results of this review, there is evidence that supernatural beliefs influence awareness and knowledge on MHD and this results in the stigmatisation of people living with those conditions in SSA. The review furthermore highlights findings on people’s attitudes towards PwMHD and PwD, their awareness and knowledge of those conditions, and the issue of stigmatisation, grounded in supernatural beliefs.
+</p>
+<sec>
+<title>Discussion of essential key findings</title>
+<p>
+The 25 studies reviewed clearly show that people in SSA generally hold strong negative attitudes towards PwD [
+<xref rid="R23" ref-type="bibr">23</xref>
+,
+<xref rid="R40" ref-type="bibr">40</xref>
+,
+<xref rid="R47" ref-type="bibr">47</xref>
+] and PwMHD [
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+]. Negative attitudes are widespread in SSA as they occur in Western-Africa, Eastern-Africa, and Southern-Africa [
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R48" ref-type="bibr">48</xref>
+]. Those negative attitudes are held by GCM and also by HCP, and arise precisely because people hold misperceptions on MHD or dementia [
+<xref rid="R38" ref-type="bibr">38</xref>
+]. It became clear that supernatural beliefs (eg, witchcraft, sorcery, evil spirits) play an important role to explain behaviours of PwMHD or PwD living in SSA as they influence people’s concepts on causation of diseases. Such supernatural beliefs are still widespread and strong in SSA, eg, in West- and East-African Countries as well as in countries in Central- and Southern Africa [
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R19" ref-type="bibr">19</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+,
+<xref rid="R40" ref-type="bibr">40</xref>
+-
+<xref rid="R42" ref-type="bibr">42</xref>
+,
+<xref rid="R49" ref-type="bibr">49</xref>
+]. Based on these findings it can be concluded that people possessing those traditional beliefs appear to be influenced in their understanding of diseases, regardless of whether they live in SSA or in other parts of the world. On the positive side, higher level of education or experience with caring for people living with such conditions can be seen as indicators for biological models of causation, reducing supernatural explanations for such diseases [
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R38" ref-type="bibr">38</xref>
+,
+<xref rid="R41" ref-type="bibr">41</xref>
+]. Awareness of MHD and dementia could help to lessen stigmatisation and minimise exclusion of PwMHD, PwD, and those who care for them [
+<xref rid="R50" ref-type="bibr">50</xref>
+]. However, the review also shows that PwD themselves, their caregivers, and HCP relate dementia to curses or witchcraft [
+<xref rid="R20" ref-type="bibr">20</xref>
+,
+<xref rid="R38" ref-type="bibr">38</xref>
+,
+<xref rid="R40" ref-type="bibr">40</xref>
+,
+<xref rid="R42" ref-type="bibr">42</xref>
+]. Alarmingly, more than half of medical Nigerian practitioners see witchcraft as potentially causing MHD [
+<xref rid="R19" ref-type="bibr">19</xref>
+]. This high percentage underpins the strong influence of supernatural beliefs on causation of diseases. It could be found that those issues are also relevant for other diseases like epilepsy, what results from Eastern and Central African studies [
+<xref rid="R49" ref-type="bibr">49</xref>
+,
+<xref rid="R51" ref-type="bibr">51</xref>
+]. Likewise, future HCP like Ugandan medical students believed in supernatural causes (eg, witchcraft) of epilepsy [
+<xref rid="R49" ref-type="bibr">49</xref>
+].
+</p>
+<p>
+As long as HCP misinterpret the aetiology of MHD because of supernatural beliefs, hardship remains for PwMHD or PwD and their families to develop awareness and knowledge on their conditions. To this effect, awareness campaigns and mental health literacy programs are urgently needed [
+<xref rid="R28" ref-type="bibr">28</xref>
+,
+<xref rid="R30" ref-type="bibr">30</xref>
+,
+<xref rid="R39" ref-type="bibr">39</xref>
+,
+<xref rid="R40" ref-type="bibr">40</xref>
+]. Community awareness campaigns as well medical curricula need to deal with the impact of cultural beliefs [
+<xref rid="R19" ref-type="bibr">19</xref>
+].
+</p>
+<p>
+As seen in
+<xref ref-type="fig" rid="F2">
+<bold>Figure 2</bold>
+</xref>
+, it can be summarised that without such investigations – particularly in countries where awareness and knowledge on diseases lacks – supernatural beliefs will strengthen misperceptions about MHD and dementia. As long as people hold misperceptions of the causes of diseases, people will be less likely to obtain knowledge about diseases, or even to find the underlying cause of PwMHD’s or PwD’s behaviours. Those beliefs, as well as a lack of awareness and knowledge is likely to promote negative attitudes and stigmatisation. If a person experiences stigmatisation, like physical abuse, exclusion and loneliness [
+<xref rid="R6" ref-type="bibr">6</xref>
+,
+<xref rid="R41" ref-type="bibr">41</xref>
+], this can lead to anxiety, fear and stress for that person and can promote a higher risk for dementia [
+<xref rid="R52" ref-type="bibr">52</xref>
+]. A comparative analysis of anxiety, fear and stress caused by witchcraft and its effects promoting MHD or dementia, was not in the scope of this review. However, studies on this concern would be of interest in SSA. It is generally very important that research be conducted by local researchers that have a deep understanding of the beliefs around witchcraft, since they are more likely to identify relevant factors that influence both the cause and the dealing with dementia.
+</p>
+<fig id="F2" fig-type="figure" orientation="portrait" position="float">
+<label>Figure 2</label>
+<caption>
+<p>
+Summarisation of findings in circular flow of awareness challenges in Sub-Saharan Africa. MHD – mental health disorders, PwMHD – people living with mental health disorders.
+</p>
+</caption>
+<graphic xlink:href="jogh-09-020419-F2"/>
+</fig>
+<p>
+Without raising awareness of those who wrongly stigmatised or accused PwMHD or PwD, misperceptions and concepts are likely to prevail. Helping PwMHD and PwD to live safely and in dignity, communities and neighbourhoods, health care workers, and politicians need to be educated about disease symptoms to understand the behaviour of people living with such diseases. Greater awareness and understanding people’s behaviours could help change people’s attitudes in a positive way, eg, lessening fear of PwMHD or PwD. Perceived dangerousness has been found as the main negative perception people held towards MHD, and these perceptions are most likely to promote discrimination [
+<xref rid="R36" ref-type="bibr">36</xref>
+]. Curbing social isolation and understanding ‘strange’ and ‘abnormal’ behaviour against the background of health care science might counter false accusation. Awareness and education could prevent prejudice that base people’s behaviours on supernatural beliefs and instead enhance positive attitudes, as well as promote people’s health status, social acceptance, and social inclusion. It is very important and mandatory for GCM and HCP to understand the aetiology of such conditions and it is fundamental to treat PwMHD or PwD with respect so that they can live in dignity, even if they show a violent and dangerous behaviour. Awareness through education will help to interrupt the circular flow of stigmatisation.
+</p>
+</sec>
+<sec>
+<title>Limitations</title>
+<p>
+Since there is generally a lack of studies addressing awareness challenges of dementia and related stigmatisation issues in SSA, this review also included studies facing the review’s topic on MHD in general. Although there are similarities in the findings, the degree to which these results can be generalised is limited.
+</p>
+<p>
+Moreover, the review focused on certain regions in SSA. There is a shortage of studies conducted especially in different Central and Southern African Countries. In this context, studies conducted among African communities located outside SSA have not been included. Furthermore, the review was limited to inclusion of English and German studies. Studies from francophone African countries and published in French might have given further insight into the topic. Even though some studies showed differences of stigmatising attitudes among rural and urban residents, or among different income situations and gender on those differences has not been focussed on [
+<xref rid="R27" ref-type="bibr">27</xref>
+,
+<xref rid="R29" ref-type="bibr">29</xref>
+,
+<xref rid="R33" ref-type="bibr">33</xref>
+,
+<xref rid="R34" ref-type="bibr">34</xref>
+,
+<xref rid="R37" ref-type="bibr">37</xref>
+].
+</p>
+</sec>
+</sec>
+<sec sec-type="conclusions">
+<title>Conclusion</title>
+<p>
+It can be concluded that supernatural beliefs influence misperceptions of causes of dementia or other mental health disorders. Hence, such perceptions also influence people’s concepts on diseases. The misperceptions are likely promoting negative and stigmatising attitudes towards people living with such conditions. Such beliefs are powerful and exist in all segments in Sub-Saharan African communities. Surprisingly, although people with a professional health education background like nurses and medical practitioners also often believe in causes such as witchcraft for diseases. Education campaigns on dementia disease and mental health disorders are mandatory to create greater awareness and knowledge on such conditions and its causes. Due to the results, which show that traditional beliefs influence the knowledge about diseases, they should play a role in the explanation of disease causes. Those influences should be also addressed in medical health curricula. In order to reduce stigmatisation and discrimination caused by the belief in witchcraft or other supernatural powers, researchers need to focus on a wide range of measures including awareness raising, so that the underlying causes for these practices are addressed as well. Furthermore, laws on witchcraft, like the Witchcraft Suppression Acts of 1957 of the Parliament of South Africa, to provide for the suppression of the practice of witchcraft and similar practices (eg, prohibition of various activities related to witchcraft or witch-hunting; South African Law Reform Commission, 2014), should be enacted or reviewed and reformed all over Sub-Saharan Africa. Even though there are legislations to prohibit witchcraft, those legislations need to be known and respected by societies to reduce the fear of witchcraft and all its consequences.
+</p>
+</sec>
+</body>
+<back>
+<ack>
+<title>Acknowledgments</title>
+<p>
+The authors would like to express our appreciation that Alzheimer´s and Dementia Namibia and Alzheimer´s and Related Disorders Association of Ghana are significantly contributing to improving awareness of dementia in their countries. We acknowledge support from the German Research Foundation (DFG) and the Open Access Publication Funds of Charité – Universitätsmedizin Berlin.
+</p>
+</ack>
+<fn-group>
+<fn fn-type="financial-disclosure">
+<p>
+<bold>Funding:</bold>
+No funding supported this work.
+</p>
+</fn>
+<fn fn-type="other">
+<p>
+<bold>Authorship contributions:</bold>
+Concept and design of review: SS, EK and AM; Literature search, screening: SS; data extraction and quality assessment: SS and AM; All authors were involved in writing the manuscript and approved the final version.
+</p>
+</fn>
+<fn fn-type="COI-statement">
+<p>
+<bold>Competing interest:</bold>
+The authors completed the Unified Competing Interest form at
+<ext-link ext-link-type="uri" xlink:href="http://www.icmje.org/coi_disclosure.pdf">www.icmje.org/coi_disclosure.pdf</ext-link>
+(available upon request from the corresponding author), and declare no conflicts of interest.
+</p>
+</fn>
+</fn-group>
+<ref-list>
+<title>REFERENCES</title>
+<ref id="R1">
+<label>1</label>
+<mixed-citation publication-type="book">
+World Health Organization. The global burden of disease: 2004 update. Geneva: WHO;2008.
+</mixed-citation>
+</ref>
+<ref id="R2">
+<label>2</label>
+<mixed-citation publication-type="book">
+World Health Organization. Mental Health Gap Action Programme (mhGAP). Geneva: WHO; 2008.
+</mixed-citation>
+</ref>
+<ref id="R3">
+<label>3</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Jacob</surname>
+<given-names>KS</given-names>
+</name>
+<name>
+<surname>Sharan</surname>
+<given-names>P</given-names>
+</name>
+<name>
+<surname>Mirza</surname>
+<given-names>I</given-names>
+</name>
+<name>
+<surname>Garrido-Cumbrera</surname>
+<given-names>M</given-names>
+</name>
+<name>
+<surname>Seedat</surname>
+<given-names>S</given-names>
+</name>
+<name>
+<surname>Mari</surname>
+<given-names>JJ</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>
+Mental health systems in countries: where are we now?
+</article-title>
+<source>Lancet</source>
+.
+<year>2007</year>
+;
+<volume>370</volume>
+:
+<fpage>1061</fpage>
+-
+<lpage>77</lpage>
+.
+<pub-id pub-id-type="doi">10.1016/S0140-6736(07)61241-0</pub-id>
+<?supplied-pmid 17804052?>
+<pub-id pub-id-type="pmid">17804052</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R4">
+<label>4</label>
+<mixed-citation publication-type="book">
+World Health Organization. Mental Health Atlas. Geneva: WHO; 2005.
+</mixed-citation>
+</ref>
+<ref id="R5">
+<label>5</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Watkins</surname>
+<given-names>CC</given-names>
+</name>
+<name>
+<surname>Treisman</surname>
+<given-names>GJ</given-names>
+</name>
+</person-group>
+<article-title>
+Cognitive impairment in patients with AIDS - prevalence and severity.
+</article-title>
+<source>HIV AIDS (Auckl)</source>
+.
+<year>2015</year>
+;
+<volume>7</volume>
+:
+<fpage>35</fpage>
+-
+<lpage>47</lpage>
+.
+<pub-id pub-id-type="doi">10.2147/HIV.S39665</pub-id>
+<?supplied-pmid 25678819?>
+<pub-id pub-id-type="pmid">25678819</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R6">
+<label>6</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Kapungwe</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Cooper</surname>
+<given-names>S</given-names>
+</name>
+<name>
+<surname>Mwanza</surname>
+<given-names>J</given-names>
+</name>
+<name>
+<surname>Mwape</surname>
+<given-names>L</given-names>
+</name>
+<name>
+<surname>Sikwese</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Kakuma</surname>
+<given-names>R</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>
+Mental illness–stigma and discrimination in Zambia.
+</article-title>
+<source>Afr J Psychiatry (Johannesbo)</source>
+.
+<year>2010</year>
+;
+<volume>13</volume>
+:
+<fpage>192</fpage>
+-
+<lpage>203</lpage>
+.
+<?supplied-pmid 20957318?>
+<pub-id pub-id-type="pmid">20957318</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R7">
+<label>7</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Chibanda</surname>
+<given-names>D</given-names>
+</name>
+<name>
+<surname>Cowan</surname>
+<given-names>F</given-names>
+</name>
+<name>
+<surname>Gibson</surname>
+<given-names>L</given-names>
+</name>
+<name>
+<surname>Weiss</surname>
+<given-names>HA</given-names>
+</name>
+<name>
+<surname>Lund</surname>
+<given-names>C</given-names>
+</name>
+</person-group>
+<article-title>
+Prevalence and correlates of probable common mental disorders in a population with high prevalence of HIV in Zimbabwe.
+</article-title>
+<source>BMC Psychiatry</source>
+.
+<year>2016</year>
+;
+<volume>16</volume>
+:
+<fpage>55</fpage>
+.
+<pub-id pub-id-type="doi">10.1186/s12888-016-0764-2</pub-id>
+<?supplied-pmid 26926690?>
+<pub-id pub-id-type="pmid">26926690</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R8">
+<label>8</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Kwobah</surname>
+<given-names>E</given-names>
+</name>
+<name>
+<surname>Epstein</surname>
+<given-names>S</given-names>
+</name>
+<name>
+<surname>Mwangi</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Litzelman</surname>
+<given-names>D</given-names>
+</name>
+<name>
+<surname>Atwoli</surname>
+<given-names>L</given-names>
+</name>
+</person-group>
+<article-title>
+Prevalence of psychiatric morbidity in a community sample in Western Kenya.
+</article-title>
+<source>BMC Psychiatry</source>
+.
+<year>2017</year>
+;
+<volume>17</volume>
+:
+<fpage>30</fpage>
+.
+<pub-id pub-id-type="doi">10.1186/s12888-017-1202-9</pub-id>
+<?supplied-pmid 28100210?>
+<pub-id pub-id-type="pmid">28100210</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R9">
+<label>9</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Sevigny</surname>
+<given-names>JJ</given-names>
+</name>
+<name>
+<surname>Albert</surname>
+<given-names>SM</given-names>
+</name>
+<name>
+<surname>McDermott</surname>
+<given-names>MP</given-names>
+</name>
+<name>
+<surname>McArthur</surname>
+<given-names>JC</given-names>
+</name>
+<name>
+<surname>Sacktor</surname>
+<given-names>N</given-names>
+</name>
+<name>
+<surname>Conant</surname>
+<given-names>K</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>
+Evaluation of HIV RNA and markers of immune activation as predictors of HIV-associated dementia.
+</article-title>
+<source>Neurology</source>
+.
+<year>2004</year>
+;
+<volume>63</volume>
+:
+<fpage>2084</fpage>
+-
+<lpage>90</lpage>
+.
+<pub-id pub-id-type="doi">10.1212/01.WNL.0000145763.68284.15</pub-id>
+<?supplied-pmid 15596754?>
+<pub-id pub-id-type="pmid">15596754</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R10">
+<label>10</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Ferri</surname>
+<given-names>CP</given-names>
+</name>
+<name>
+<surname>Prince</surname>
+<given-names>M</given-names>
+</name>
+<name>
+<surname>Brayne</surname>
+<given-names>C</given-names>
+</name>
+<name>
+<surname>Brodaty</surname>
+<given-names>H</given-names>
+</name>
+<name>
+<surname>Fratiglioni</surname>
+<given-names>L</given-names>
+</name>
+<name>
+<surname>Ganguli</surname>
+<given-names>M</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>
+Global prevalence of dementia: a Delphi consensus study.
+</article-title>
+<source>Lancet</source>
+.
+<year>2005</year>
+;
+<volume>366</volume>
+:
+<fpage>2112</fpage>
+-
+<lpage>7</lpage>
+.
+<pub-id pub-id-type="doi">10.1016/S0140-6736(05)67889-0</pub-id>
+<?supplied-pmid 16360788?>
+<pub-id pub-id-type="pmid">16360788</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R11">
+<label>11</label>
+<mixed-citation publication-type="other">
+ADI. Women and Dementia. A global research review. London: Alzheimer’s Disease International (ADI). 2015.
+</mixed-citation>
+</ref>
+<ref id="R12">
+<label>12</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>George-Carey</surname>
+<given-names>R</given-names>
+</name>
+<name>
+<surname>Adeloye</surname>
+<given-names>D</given-names>
+</name>
+<name>
+<surname>Chan</surname>
+<given-names>KY</given-names>
+</name>
+<name>
+<surname>Paul</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Kolcic</surname>
+<given-names>I</given-names>
+</name>
+<name>
+<surname>Campbell</surname>
+<given-names>H</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>
+An estimate of the prevalence of dementia in Africa: A systematic analysis.
+</article-title>
+<source>J Glob Health</source>
+.
+<year>2012</year>
+;
+<volume>2</volume>
+:
+<elocation-id>020401</elocation-id>
+.
+<pub-id pub-id-type="doi">10.7189/jogh.02.020401</pub-id>
+<?supplied-pmid 23289076?>
+<pub-id pub-id-type="pmid">23289076</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R13">
+<label>13</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Spittel</surname>
+<given-names>S</given-names>
+</name>
+<name>
+<surname>Wolf-Ostermann</surname>
+<given-names>K</given-names>
+</name>
+</person-group>
+<article-title>
+Challenges in health care for people with dementia in Ghana.
+</article-title>
+<source>Alzheimers Dement</source>
+.
+<year>2013</year>
+;
+<volume>9</volume>
+:
+<fpage>488</fpage>
+<pub-id pub-id-type="doi">10.1016/j.jalz.2013.05.998</pub-id>
+<pub-id pub-id-type="pmid">23159046</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R14">
+<label>14</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Spittel</surname>
+<given-names>S</given-names>
+</name>
+<name>
+<surname>Kraus</surname>
+<given-names>E</given-names>
+</name>
+<name>
+<surname>Maier</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Wolf-Ostermann</surname>
+<given-names>K</given-names>
+</name>
+</person-group>
+<article-title>
+Healthcare challenges of older people with and without dementia in Ghana: An expolratory pilot study.
+</article-title>
+<source>
+International Journal on Ageing in Developing Countries.
+</source>
+<year>2018</year>
+;
+<volume>3</volume>
+:
+<fpage>116</fpage>
+-
+<lpage>31</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="R15">
+<label>15</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Corrigan</surname>
+<given-names>PWK</given-names>
+</name>
+</person-group>
+<article-title>
+Amy Kerr; Knudsen, Lissa. The stigma of mental illness: Explanatory models and methods for change.
+</article-title>
+<source>Appl Prev Psychol</source>
+.
+<year>2005</year>
+;
+<volume>11</volume>
+:
+<fpage>179</fpage>
+-
+<lpage>90</lpage>
+.
+<pub-id pub-id-type="doi">10.1016/j.appsy.2005.07.001</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R16">
+<label>16</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Alonso</surname>
+<given-names>J</given-names>
+</name>
+<name>
+<surname>Buron</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Bruffaerts</surname>
+<given-names>R</given-names>
+</name>
+<name>
+<surname>He</surname>
+<given-names>Y</given-names>
+</name>
+<name>
+<surname>Posada-Villa</surname>
+<given-names>J</given-names>
+</name>
+<name>
+<surname>Lepine</surname>
+<given-names>JP</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>
+Association of perceived stigma and mood and anxiety disorders: results from the World Mental Health Surveys.
+</article-title>
+<source>Acta Psychiatr Scand</source>
+.
+<year>2008</year>
+;
+<volume>118</volume>
+:
+<fpage>305</fpage>
+-
+<lpage>14</lpage>
+.
+<pub-id pub-id-type="doi">10.1111/j.1600-0447.2008.01241.x</pub-id>
+<?supplied-pmid 18754833?>
+<pub-id pub-id-type="pmid">18754833</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R17">
+<label>17</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Stefanovics</surname>
+<given-names>EA</given-names>
+</name>
+<name>
+<surname>He</surname>
+<given-names>H</given-names>
+</name>
+<name>
+<surname>Cavalcanti</surname>
+<given-names>M</given-names>
+</name>
+<name>
+<surname>Neto</surname>
+<given-names>H</given-names>
+</name>
+<name>
+<surname>Ofori-Atta</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Leddy</surname>
+<given-names>M</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>
+Witchcraft and Biopsychosocial Causes of Mental Illness: Attitudes and Beliefs About Mental Illness Among Health Professionals in Five Countries.
+</article-title>
+<source>J Nerv Ment Dis</source>
+.
+<year>2016</year>
+;
+<volume>204</volume>
+:
+<fpage>169</fpage>
+-
+<lpage>74</lpage>
+.
+<pub-id pub-id-type="doi">10.1097/NMD.0000000000000422</pub-id>
+<?supplied-pmid 26745309?>
+<pub-id pub-id-type="pmid">26745309</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R18">
+<label>18</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Fabrega</surname>
+<given-names>H</given-names>
+</name>
+</person-group>
+<article-title>Psychiatric Stigma in Non-Wester Societies.</article-title>
+<source>Compr Psychiatry</source>
+.
+<year>1991</year>
+;
+<volume>32</volume>
+:
+<fpage>534</fpage>
+-
+<lpage>51</lpage>
+.
+<pub-id pub-id-type="doi">10.1016/0010-440X(91)90033-9</pub-id>
+<?supplied-pmid 1778081?>
+<pub-id pub-id-type="pmid">1778081</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R19">
+<label>19</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Adewuya</surname>
+<given-names>AO</given-names>
+</name>
+</person-group>
+<article-title>
+Doctors’ attitude towards people with mental illness in Western Nigeria.
+</article-title>
+<source>Soc Psychiatry Psychiatr Epidemiol</source>
+.
+<year>2007</year>
+;
+<volume>42</volume>
+:
+<fpage>931</fpage>
+-
+<lpage>6</lpage>
+.
+<pub-id pub-id-type="doi">10.1007/s00127-007-0246-4</pub-id>
+<?supplied-pmid 17721670?>
+<pub-id pub-id-type="pmid">17721670</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R20">
+<label>20</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Mavundla</surname>
+<given-names>TR</given-names>
+</name>
+<name>
+<surname>Toth</surname>
+<given-names>F</given-names>
+</name>
+<name>
+<surname>Mphelane</surname>
+<given-names>ML</given-names>
+</name>
+</person-group>
+<article-title>
+Caregiver experience in mental illness: a perspective from a rural community in South Africa.
+</article-title>
+<source>Int J Ment Health Nurs</source>
+.
+<year>2009</year>
+;
+<volume>18</volume>
+:
+<fpage>357</fpage>
+-
+<lpage>67</lpage>
+.
+<pub-id pub-id-type="doi">10.1111/j.1447-0349.2009.00624.x</pub-id>
+<?supplied-pmid 19740145?>
+<pub-id pub-id-type="pmid">19740145</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R21">
+<label>21</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Ndamba-Bandzouzi</surname>
+<given-names>B</given-names>
+</name>
+<name>
+<surname>Nubukpo</surname>
+<given-names>P</given-names>
+</name>
+<name>
+<surname>Mouanga</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Mbelesso</surname>
+<given-names>P</given-names>
+</name>
+<name>
+<surname>Tognidé</surname>
+<given-names>M</given-names>
+</name>
+<name>
+<surname>Tabo</surname>
+<given-names>A</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>
+Violence and witchcraft accusations against older people in Central and Western Africa: Toward a new status for the older individuals?
+</article-title>
+<source>Int J Geriatr Psychiatry</source>
+.
+<year>2014</year>
+;
+<volume>29</volume>
+:
+<fpage>546</fpage>
+-
+<lpage>7</lpage>
+.
+<pub-id pub-id-type="doi">10.1002/gps.4069</pub-id>
+<?supplied-pmid 24706606?>
+<pub-id pub-id-type="pmid">24706606</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R22">
+<label>22</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Moher</surname>
+<given-names>D</given-names>
+</name>
+<name>
+<surname>Shamseer</surname>
+<given-names>L</given-names>
+</name>
+<name>
+<surname>Clarke</surname>
+<given-names>M</given-names>
+</name>
+<name>
+<surname>Ghersi</surname>
+<given-names>D</given-names>
+</name>
+<name>
+<surname>Liberati</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Petticrew</surname>
+<given-names>M</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>
+PRISMA-P Group. Preferred reporting items for systematic review and meta-analysis protocols (PRISMA-P) 2015 statement.
+</article-title>
+<source>Syst Rev</source>
+.
+<year>2015</year>
+;
+<volume>4</volume>
+:
+<fpage>1</fpage>
+-
+<lpage>9</lpage>
+.
+<pub-id pub-id-type="doi">10.1186/2046-4053-4-1</pub-id>
+<?supplied-pmid 25554246?>
+<pub-id pub-id-type="pmid">25554246</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R23">
+<label>23</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Adebiyi</surname>
+<given-names>AO</given-names>
+</name>
+<name>
+<surname>Fagbola</surname>
+<given-names>MA</given-names>
+</name>
+<name>
+<surname>Olakehinde</surname>
+<given-names>O</given-names>
+</name>
+<name>
+<surname>Ogunniyi</surname>
+<given-names>A</given-names>
+</name>
+</person-group>
+<article-title>
+Enacted and implied stigma for dementia in a community in south-west Nigeria.
+</article-title>
+<source>Psychogeriatrics</source>
+.
+<year>2016</year>
+;
+<volume>16</volume>
+:
+<fpage>268</fpage>
+-
+<lpage>73</lpage>
+.
+<pub-id pub-id-type="doi">10.1111/psyg.12156</pub-id>
+<?supplied-pmid 26551624?>
+<pub-id pub-id-type="pmid">26551624</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R24">
+<label>24</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Adewuya</surname>
+<given-names>AO</given-names>
+</name>
+<name>
+<surname>Makanjuola</surname>
+<given-names>RO</given-names>
+</name>
+</person-group>
+<article-title>
+Lay beliefs regarding causes of mental illness in Nigeria: pattern and correlates.
+</article-title>
+<source>Soc Psychiatry Psychiatr Epidemiol</source>
+.
+<year>2008</year>
+;
+<volume>43</volume>
+:
+<fpage>336</fpage>
+-
+<lpage>41</lpage>
+.
+<pub-id pub-id-type="doi">10.1007/s00127-007-0305-x</pub-id>
+<?supplied-pmid 18273532?>
+<pub-id pub-id-type="pmid">18273532</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R25">
+<label>25</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Adewuya</surname>
+<given-names>AO</given-names>
+</name>
+<name>
+<surname>Makanjuola</surname>
+<given-names>RO</given-names>
+</name>
+</person-group>
+<article-title>
+Social distance towards people with mental illness in southwestern Nigeria.
+</article-title>
+<source>Aust N Z J Psychiatry</source>
+.
+<year>2008</year>
+;
+<volume>42</volume>
+:
+<fpage>389</fpage>
+-
+<lpage>95</lpage>
+.
+<pub-id pub-id-type="doi">10.1080/00048670801961115</pub-id>
+<?supplied-pmid 18473257?>
+<pub-id pub-id-type="pmid">18473257</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R26">
+<label>26</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Audu</surname>
+<given-names>IA</given-names>
+</name>
+<name>
+<surname>Idris</surname>
+<given-names>SH</given-names>
+</name>
+<name>
+<surname>Olisah</surname>
+<given-names>VO</given-names>
+</name>
+<name>
+<surname>Sheikh</surname>
+<given-names>TL</given-names>
+</name>
+</person-group>
+<article-title>
+Stigmatization of people with mental illness among inhabitants of a rural community in northern Nigeria.
+</article-title>
+<source>Int J Soc Psychiatry</source>
+.
+<year>2013</year>
+;
+<volume>59</volume>
+:
+<fpage>55</fpage>
+-
+<lpage>60</lpage>
+.
+<pub-id pub-id-type="doi">10.1177/0020764011423180</pub-id>
+<?supplied-pmid 22131198?>
+<pub-id pub-id-type="pmid">22131198</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R27">
+<label>27</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Ayazi</surname>
+<given-names>T</given-names>
+</name>
+<name>
+<surname>Lien</surname>
+<given-names>L</given-names>
+</name>
+<name>
+<surname>Eide</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Shadar</surname>
+<given-names>EJ</given-names>
+</name>
+<name>
+<surname>Hauff</surname>
+<given-names>E</given-names>
+</name>
+</person-group>
+<article-title>
+Community attitudes and social distance towards the mentally ill in South Sudan: a survey from a post-conflict setting with no mental health services.
+</article-title>
+<source>Soc Psychiatry Psychiatr Epidemiol</source>
+.
+<year>2014</year>
+;
+<volume>49</volume>
+:
+<fpage>771</fpage>
+-
+<lpage>80</lpage>
+.
+<pub-id pub-id-type="doi">10.1007/s00127-013-0775-y</pub-id>
+<?supplied-pmid 24136000?>
+<pub-id pub-id-type="pmid">24136000</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R28">
+<label>28</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Barke</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Nyarko</surname>
+<given-names>S</given-names>
+</name>
+<name>
+<surname>Klecha</surname>
+<given-names>D</given-names>
+</name>
+</person-group>
+<article-title>
+The stigma of mental illness in Southern Ghana: attitudes of the urban population and patients’ views.
+</article-title>
+<source>Soc Psychiatry Psychiatr Epidemiol</source>
+.
+<year>2011</year>
+;
+<volume>46</volume>
+:
+<fpage>1191</fpage>
+-
+<lpage>202</lpage>
+.
+<pub-id pub-id-type="doi">10.1007/s00127-010-0290-3</pub-id>
+<?supplied-pmid 20872212?>
+<pub-id pub-id-type="pmid">20872212</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R29">
+<label>29</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Dogra</surname>
+<given-names>N</given-names>
+</name>
+<name>
+<surname>Omigbodun</surname>
+<given-names>O</given-names>
+</name>
+<name>
+<surname>Adedokun</surname>
+<given-names>T</given-names>
+</name>
+<name>
+<surname>Bella</surname>
+<given-names>T</given-names>
+</name>
+<name>
+<surname>Ronzoni</surname>
+<given-names>P</given-names>
+</name>
+<name>
+<surname>Adesokan</surname>
+<given-names>A</given-names>
+</name>
+</person-group>
+<article-title>
+Nigerian secondary school children’s knowledge of and attitudes to mental health and illness.
+</article-title>
+<source>Clin Child Psychol Psychiatry</source>
+.
+<year>2012</year>
+;
+<volume>17</volume>
+:
+<fpage>336</fpage>
+-
+<lpage>53</lpage>
+.
+<pub-id pub-id-type="doi">10.1177/1359104511410804</pub-id>
+<?supplied-pmid 21852317?>
+<pub-id pub-id-type="pmid">21852317</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R30">
+<label>30</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Egbe</surname>
+<given-names>CO</given-names>
+</name>
+<name>
+<surname>Brooke-Sumner</surname>
+<given-names>C</given-names>
+</name>
+<name>
+<surname>Kathree</surname>
+<given-names>T</given-names>
+</name>
+<name>
+<surname>Selohilwe</surname>
+<given-names>O</given-names>
+</name>
+<name>
+<surname>Thornicroft</surname>
+<given-names>G</given-names>
+</name>
+<name>
+<surname>Petersen</surname>
+<given-names>I</given-names>
+</name>
+</person-group>
+<article-title>
+Psychiatric stigma and discrimination in South Africa: perspectives from key stakeholders.
+</article-title>
+<source>BMC Psychiatry</source>
+.
+<year>2014</year>
+;
+<volume>14</volume>
+:
+<fpage>191</fpage>
+.
+<pub-id pub-id-type="doi">10.1186/1471-244X-14-191</pub-id>
+<?supplied-pmid 24996420?>
+<pub-id pub-id-type="pmid">24996420</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R31">
+<label>31</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Faure-Delage</surname>
+<given-names>AM</given-names>
+</name>
+</person-group>
+<article-title>
+Alain Maxime; M’belesso, Pascal; Tabo,André; Bandzouzi, Bébène; Dubreuil, Catherine-Marie; Preux P-MC, Jean-Pierre; Nubukpo, Philippe. Socio-Cultural Perceptions and Representations of Dementia in Brazzaville, Republic of Congo: The EDAC Survey.
+</article-title>
+<source>Dement Geriatr Cogn Disord Extra</source>
+.
+<year>2012</year>
+;
+<volume>2</volume>
+:
+<fpage>84</fpage>
+-
+<lpage>96</lpage>
+.
+<pub-id pub-id-type="doi">10.1159/000335626</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R32">
+<label>32</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Girma</surname>
+<given-names>E</given-names>
+</name>
+<name>
+<surname>Tesfaye</surname>
+<given-names>M</given-names>
+</name>
+<name>
+<surname>Froeschl</surname>
+<given-names>G</given-names>
+</name>
+<name>
+<surname>Moller-Leimkuhler</surname>
+<given-names>AM</given-names>
+</name>
+<name>
+<surname>Muller</surname>
+<given-names>N</given-names>
+</name>
+<name>
+<surname>Dehning</surname>
+<given-names>S</given-names>
+</name>
+</person-group>
+<article-title>
+Public stigma against people with mental illness in the Gilgel Gibe Field Research Center (GGFRC) in Southwest Ethiopia.
+</article-title>
+<source>PLoS One</source>
+.
+<year>2013</year>
+;
+<volume>8</volume>
+:
+<elocation-id>e82116</elocation-id>
+.
+<pub-id pub-id-type="doi">10.1371/journal.pone.0082116</pub-id>
+<?supplied-pmid 24324756?>
+<pub-id pub-id-type="pmid">24324756</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R33">
+<label>33</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Girma</surname>
+<given-names>E</given-names>
+</name>
+<name>
+<surname>Moller-Leimkuhler</surname>
+<given-names>AM</given-names>
+</name>
+<name>
+<surname>Muller</surname>
+<given-names>N</given-names>
+</name>
+<name>
+<surname>Dehning</surname>
+<given-names>S</given-names>
+</name>
+<name>
+<surname>Froeschl</surname>
+<given-names>G</given-names>
+</name>
+<name>
+<surname>Tesfaye</surname>
+<given-names>M</given-names>
+</name>
+</person-group>
+<article-title>
+Public stigma against family members of people with mental illness: findings from the Gilgel Gibe Field Research Center (GGFRC), Southwest Ethiopia.
+</article-title>
+<source>BMC Int Health Hum Rights</source>
+.
+<year>2014</year>
+;
+<volume>14</volume>
+:
+<fpage>2</fpage>
+.
+<pub-id pub-id-type="doi">10.1186/1472-698X-14-2</pub-id>
+<?supplied-pmid 24555444?>
+<pub-id pub-id-type="pmid">24555444</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R34">
+<label>34</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Gureje</surname>
+<given-names>O</given-names>
+</name>
+<name>
+<surname>Lasebikan</surname>
+<given-names>VO</given-names>
+</name>
+<name>
+<surname>Ephraim-Oluwanuga</surname>
+<given-names>O</given-names>
+</name>
+<name>
+<surname>Olley</surname>
+<given-names>BO</given-names>
+</name>
+<name>
+<surname>Kola</surname>
+<given-names>L</given-names>
+</name>
+</person-group>
+<article-title>
+Community study of knowledge of and attitude to mental illness in Nigeria.
+</article-title>
+<source>Br J Psychiatry</source>
+.
+<year>2005</year>
+;
+<volume>186</volume>
+:
+<fpage>436</fpage>
+-
+<lpage>41</lpage>
+.
+<pub-id pub-id-type="doi">10.1192/bjp.186.5.436</pub-id>
+<?supplied-pmid 15863750?>
+<pub-id pub-id-type="pmid">15863750</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R35">
+<label>35</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Gureje</surname>
+<given-names>O</given-names>
+</name>
+<name>
+<surname>Olley</surname>
+<given-names>BO</given-names>
+</name>
+<name>
+<surname>Olusola</surname>
+<given-names>EO</given-names>
+</name>
+<name>
+<surname>Kola</surname>
+<given-names>L</given-names>
+</name>
+</person-group>
+<article-title>
+Do beliefs about causation influence attitudes to mental illness?
+</article-title>
+<source>World Psychiatry</source>
+.
+<year>2006</year>
+;
+<volume>5</volume>
+:
+<fpage>104</fpage>
+-
+<lpage>7</lpage>
+.
+<?supplied-pmid 16946952?>
+<pub-id pub-id-type="pmid">16946952</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R36">
+<label>36</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Igbinomwanhia</surname>
+<given-names>NG</given-names>
+</name>
+<name>
+<surname>James</surname>
+<given-names>BO</given-names>
+</name>
+<name>
+<surname>Omoaregba</surname>
+<given-names>JO</given-names>
+</name>
+</person-group>
+<article-title>
+The attitudes of clergy in Benin City, Nigeria towards persons with mental illness.
+</article-title>
+<source>Afr J Psychiatry (Johannesbo)</source>
+.
+<year>2013</year>
+;
+<volume>16</volume>
+:
+<fpage>196</fpage>
+-
+<lpage>200</lpage>
+.
+<pub-id pub-id-type="doi">10.4314/ajpsy.v16i3.26</pub-id>
+<?supplied-pmid 23739822?>
+<pub-id pub-id-type="pmid">23739822</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R37">
+<label>37</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Kabir</surname>
+<given-names>M</given-names>
+</name>
+<name>
+<surname>Iliyasu</surname>
+<given-names>Z</given-names>
+</name>
+<name>
+<surname>Abubakar</surname>
+<given-names>IS</given-names>
+</name>
+<name>
+<surname>Aliyu</surname>
+<given-names>MH</given-names>
+</name>
+</person-group>
+<article-title>
+Perception and beliefs about mental illness among adults in Karfi village, northern Nigeria.
+</article-title>
+<source>BMC Int Health Hum Rights</source>
+.
+<year>2004</year>
+;
+<volume>4</volume>
+:
+<fpage>3</fpage>
+.
+<pub-id pub-id-type="doi">10.1186/1472-698X-4-3</pub-id>
+<?supplied-pmid 15320952?>
+<pub-id pub-id-type="pmid">15320952</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R38">
+<label>38</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Mkhonto</surname>
+<given-names>F</given-names>
+</name>
+<name>
+<surname>Hanssen</surname>
+<given-names>I</given-names>
+</name>
+</person-group>
+<article-title>
+When people with dementia are perceived as witches. Consequences for patients and nurse education in South Africa.
+</article-title>
+<source>J Clin Nurs</source>
+.
+<year>2018</year>
+;
+<volume>27</volume>
+:
+<fpage>e169</fpage>
+-
+<lpage>76</lpage>
+.
+<pub-id pub-id-type="doi">10.1111/jocn.13909</pub-id>
+<?supplied-pmid 28557051?>
+<pub-id pub-id-type="pmid">28557051</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R39">
+<label>39</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Mohamed-Kaloo</surname>
+<given-names>Z</given-names>
+</name>
+<name>
+<surname>Laher</surname>
+<given-names>S</given-names>
+</name>
+</person-group>
+<article-title>
+Perceptions of mental illness among Muslim general practitioners in South Africa.
+</article-title>
+<source>S Afr Med J</source>
+.
+<year>2014</year>
+;
+<volume>104</volume>
+:
+<fpage>350</fpage>
+-
+<lpage>2</lpage>
+.
+<pub-id pub-id-type="doi">10.7196/SAMJ.7863</pub-id>
+<?supplied-pmid 25212202?>
+<pub-id pub-id-type="pmid">25212202</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R40">
+<label>40</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Mushi</surname>
+<given-names>D</given-names>
+</name>
+<name>
+<surname>Rongai</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Paddick</surname>
+<given-names>SM</given-names>
+</name>
+<name>
+<surname>Dotchin</surname>
+<given-names>C</given-names>
+</name>
+<name>
+<surname>Mtuya</surname>
+<given-names>C</given-names>
+</name>
+<name>
+<surname>Walker</surname>
+<given-names>R</given-names>
+</name>
+</person-group>
+<article-title>
+Social representation and practices related to dementia in Hai District of Tanzania.
+</article-title>
+<source>BMC Public Health</source>
+.
+<year>2014</year>
+;
+<volume>14</volume>
+:
+<fpage>260</fpage>
+.
+<pub-id pub-id-type="doi">10.1186/1471-2458-14-260</pub-id>
+<?supplied-pmid 24642112?>
+<pub-id pub-id-type="pmid">24642112</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R41">
+<label>41</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Ofori-Atta</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Cooper</surname>
+<given-names>S</given-names>
+</name>
+<name>
+<surname>Akpalu</surname>
+<given-names>B</given-names>
+</name>
+<name>
+<surname>Osei</surname>
+<given-names>A</given-names>
+</name>
+<name>
+<surname>Doku</surname>
+<given-names>V</given-names>
+</name>
+<name>
+<surname>Lund</surname>
+<given-names>C</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>
+Common understandings of women’s mental illness in Ghana: results from a qualitative study.
+</article-title>
+<source>Int Rev Psychiatry</source>
+.
+<year>2010</year>
+;
+<volume>22</volume>
+:
+<fpage>589</fpage>
+-
+<lpage>98</lpage>
+.
+<pub-id pub-id-type="doi">10.3109/09540261.2010.536150</pub-id>
+<?supplied-pmid 21226647?>
+<pub-id pub-id-type="pmid">21226647</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R42">
+<label>42</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Patel</surname>
+<given-names>V</given-names>
+</name>
+<name>
+<surname>Butau</surname>
+<given-names>M</given-names>
+</name>
+</person-group>
+<article-title>
+Fuyane. Concepts of mental illness and medical pluralism in Harare.
+</article-title>
+<source>Psychol Med</source>
+.
+<year>1995</year>
+;
+<volume>25</volume>
+:
+<fpage>485</fpage>
+-
+<lpage>93</lpage>
+.
+<pub-id pub-id-type="doi">10.1017/S0033291700033407</pub-id>
+<?supplied-pmid 7480429?>
+<pub-id pub-id-type="pmid">7480429</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R43">
+<label>43</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Quinn</surname>
+<given-names>N</given-names>
+</name>
+<name>
+<surname>Knifton</surname>
+<given-names>L</given-names>
+</name>
+</person-group>
+<article-title>
+Beliefs, stigma and discrimination associated with mental health problems in Uganda: implications for theory and practice.
+</article-title>
+<source>Int J Soc Psychiatry</source>
+.
+<year>2014</year>
+;
+<volume>60</volume>
+:
+<fpage>554</fpage>
+-
+<lpage>61</lpage>
+.
+<pub-id pub-id-type="doi">10.1177/0020764013504559</pub-id>
+<?supplied-pmid 24097841?>
+<pub-id pub-id-type="pmid">24097841</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R44">
+<label>44</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Ssebunnya</surname>
+<given-names>J</given-names>
+</name>
+<name>
+<surname>Kigozi</surname>
+<given-names>F</given-names>
+</name>
+<name>
+<surname>Ndyanabangi</surname>
+<given-names>S</given-names>
+</name>
+<name>
+<surname>Cooper</surname>
+<given-names>S</given-names>
+</name>
+</person-group>
+<article-title>
+Stakeholders’ perceptions of the main challenges facing Uganda’s mental health care system: A qualitative analysis.
+</article-title>
+<source>Int J Cult Ment Health</source>
+.
+<year>2011</year>
+;
+<volume>4</volume>
+:
+<fpage>54</fpage>
+-
+<lpage>67</lpage>
+.
+<pub-id pub-id-type="doi">10.1080/17542863.2010.503047</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R45">
+<label>45</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Gureje</surname>
+<given-names>O</given-names>
+</name>
+<name>
+<surname>Lasebikan</surname>
+<given-names>VO</given-names>
+</name>
+</person-group>
+<article-title>
+Use of mental health services in a developing country. Results from the Nigerian survey of mental health and well-being.
+</article-title>
+<source>Soc Psychiatry Psychiatr Epidemiol</source>
+.
+<year>2006</year>
+;
+<volume>41</volume>
+:
+<fpage>44</fpage>
+-
+<lpage>9</lpage>
+.
+<pub-id pub-id-type="doi">10.1007/s00127-005-0001-7</pub-id>
+<?supplied-pmid 16341828?>
+<pub-id pub-id-type="pmid">16341828</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R46">
+<label>46</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Ronzoni</surname>
+<given-names>P</given-names>
+</name>
+<name>
+<surname>Dogra</surname>
+<given-names>N</given-names>
+</name>
+<name>
+<surname>Omigbodun</surname>
+<given-names>O</given-names>
+</name>
+<name>
+<surname>Bella</surname>
+<given-names>T</given-names>
+</name>
+<name>
+<surname>Atitola</surname>
+<given-names>O</given-names>
+</name>
+</person-group>
+<article-title>
+Stigmatization of mental illness among Nigerian schoolchildren.
+</article-title>
+<source>Int J Soc Psychiatry</source>
+.
+<year>2010</year>
+;
+<volume>56</volume>
+:
+<fpage>507</fpage>
+-
+<lpage>14</lpage>
+.
+<pub-id pub-id-type="doi">10.1177/0020764009341230</pub-id>
+<?supplied-pmid 19651693?>
+<pub-id pub-id-type="pmid">19651693</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R47">
+<label>47</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Mkhonto</surname>
+<given-names>F</given-names>
+</name>
+<name>
+<surname>Hanssen</surname>
+<given-names>FMI</given-names>
+</name>
+</person-group>
+<article-title>
+When people with dementia are perceived as witches. Consequences for patients and nurse education in South Africa.
+</article-title>
+<source>J Clin Nurs</source>
+.
+<year>2018</year>
+;
+<volume>27</volume>
+:
+<fpage>e169</fpage>
+-
+<lpage>76</lpage>
+.
+<pub-id pub-id-type="doi">10.1111/jocn.13909</pub-id>
+<?supplied-pmid 28557051?>
+<pub-id pub-id-type="pmid">28557051</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R48">
+<label>48</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Strümpher</surname>
+<given-names>J</given-names>
+</name>
+<name>
+<surname>van Rooyen</surname>
+<given-names>RM</given-names>
+</name>
+<name>
+<surname>Topper</surname>
+<given-names>K</given-names>
+</name>
+<name>
+<surname>Andersson</surname>
+<given-names>LMC</given-names>
+</name>
+<name>
+<surname>Schierenback</surname>
+<given-names>I</given-names>
+</name>
+</person-group>
+<article-title>
+Barriers to accessing mental health care in the Eastern Cape Province of South Africa.
+</article-title>
+<source>Afr J Nurs Midwifery</source>
+.
+<year>2014</year>
+;
+<volume>16</volume>
+:
+<fpage>45</fpage>
+-
+<lpage>59</lpage>
+.
+<pub-id pub-id-type="doi">10.25159/2520-5293/1487</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R49">
+<label>49</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Bigelow</surname>
+<given-names>J</given-names>
+</name>
+<name>
+<surname>Berrett</surname>
+<given-names>S</given-names>
+</name>
+<name>
+<surname>Kimuli</surname>
+<given-names>I</given-names>
+</name>
+<name>
+<surname>Katabira</surname>
+<given-names>E</given-names>
+</name>
+</person-group>
+<article-title>
+Perceptions of epilepsy among first-year medical students at Mulago Hospital in Kampala, Uganda.
+</article-title>
+<source>Epilepsy Behav</source>
+.
+<year>2015</year>
+;
+<volume>51</volume>
+:
+<fpage>28</fpage>
+-
+<lpage>32</lpage>
+.
+<pub-id pub-id-type="doi">10.1016/j.yebeh.2015.06.020</pub-id>
+<?supplied-pmid 26253598?>
+<pub-id pub-id-type="pmid">26253598</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R50">
+<label>50</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Prince</surname>
+<given-names>M</given-names>
+</name>
+<name>
+<surname>Acosta</surname>
+<given-names>D</given-names>
+</name>
+<name>
+<surname>Albanese</surname>
+<given-names>E</given-names>
+</name>
+<name>
+<surname>Arizaga</surname>
+<given-names>R</given-names>
+</name>
+<name>
+<surname>Ferri</surname>
+<given-names>CP</given-names>
+</name>
+<name>
+<surname>Guerra</surname>
+<given-names>M</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>
+Ageing and dementia in low and middle income countries - Using research to engage with public and policy makers.
+</article-title>
+<source>Int Rev Psychiatry</source>
+.
+<year>2008</year>
+;
+<volume>20</volume>
+:
+<fpage>332</fpage>
+-
+<lpage>43</lpage>
+.
+<pub-id pub-id-type="doi">10.1080/09540260802094712</pub-id>
+<?supplied-pmid 18925482?>
+<pub-id pub-id-type="pmid">18925482</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R51">
+<label>51</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Bain</surname>
+<given-names>LE</given-names>
+</name>
+<name>
+<surname>Awah</surname>
+<given-names>PK</given-names>
+</name>
+<name>
+<surname>Takougang</surname>
+<given-names>I</given-names>
+</name>
+<name>
+<surname>Sigal</surname>
+<given-names>Y</given-names>
+</name>
+<name>
+<surname>Ajime</surname>
+<given-names>TT</given-names>
+</name>
+</person-group>
+<article-title>
+Public awareness, knowledge and practice relating to epilepsy amongst adult residents in rural Cameroon–case study of the Fundong health district.
+</article-title>
+<source>Pan Afr Med J</source>
+.
+<year>2013</year>
+;
+<volume>14</volume>
+:
+<fpage>32</fpage>
+.
+<pub-id pub-id-type="doi">10.11604/pamj.2013.14.32.2284</pub-id>
+<?supplied-pmid 23503525?>
+<pub-id pub-id-type="pmid">23503525</pub-id>
+</mixed-citation>
+</ref>
+<ref id="R52">
+<label>52</label>
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Mah</surname>
+<given-names>L</given-names>
+</name>
+<name>
+<surname>Szabuniewiczb</surname>
+<given-names>C</given-names>
+</name>
+<name>
+<surname>Fioccoc</surname>
+<given-names>AJ</given-names>
+</name>
+</person-group>
+<article-title>Can anxiety damage the brain?</article-title>
+<source>Curr Opin Psychiatry</source>
+.
+<year>2016</year>
+;
+<volume>29</volume>
+:
+<fpage>56</fpage>
+-
+<lpage>63</lpage>
+.
+<pub-id pub-id-type="doi">10.1097/YCO.0000000000000223</pub-id>
+<?supplied-pmid 26651008?>
+<pub-id pub-id-type="pmid">26651008</pub-id>
+</mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

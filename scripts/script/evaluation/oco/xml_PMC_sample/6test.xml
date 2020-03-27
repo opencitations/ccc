@@ -1,0 +1,2800 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+<?properties open_access?>
+<?DTDIdentifier.IdentifierValue
+-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables v1.0 20120330//EN
+?>
+<?DTDIdentifier.IdentifierType public?>
+<?SourceDTD.DTDName JATS-journalpublishing-oasis-article1.dtd?>
+<?SourceDTD.Version 1.0?>
+<?ConverterInfo.XSLTName jpoasis-nisons2nlmx2.xsl?>
+<?ConverterInfo.Version 1?>
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">Int J Qual Stud Health Well-being</journal-id>
+<journal-id journal-id-type="iso-abbrev">Int J Qual Stud Health Well-being</journal-id>
+<journal-id journal-id-type="publisher-id">ZQHW</journal-id>
+<journal-id journal-id-type="publisher-id">zqhw20</journal-id>
+<journal-title-group>
+<journal-title>
+International Journal of Qualitative Studies on Health and Well-being
+</journal-title>
+</journal-title-group>
+<issn pub-type="ppub">1748-2623</issn>
+<issn pub-type="epub">1748-2631</issn>
+<publisher>
+<publisher-name>Taylor a Francis</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="pmcid">6713124</article-id>
+<article-id pub-id-type="pmid">31411129</article-id>
+<article-id pub-id-type="publisher-id">1651171</article-id>
+<article-id pub-id-type="doi">10.1080/17482631.2019.1651171</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Empirical Studies</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>Living with obesity — existential experiences</article-title>
+<alt-title alt-title-type="running-authors">V. UELAND ET AL.</alt-title>
+<alt-title alt-title-type="running-title">
+INTERNATIONAL JOURNAL OF QUALITATIVE STUDIES ON HEALTH AND WELL-BEING
+</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0001-5600-3348</contrib-id>
+<name>
+<surname>Ueland</surname>
+<given-names>Venke</given-names>
+</name>
+<xref ref-type="corresp" rid="AN0001"/>
+<xref rid="B0001"/>
+<xref ref-type="aff" rid="AFF0001">
+<sup>a</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-1785-4331</contrib-id>
+<name>
+<surname>Furnes</surname>
+<given-names>Bodil</given-names>
+</name>
+<xref rid="B0002"/>
+<xref ref-type="aff" rid="AFF0001">
+<sup>a</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0001-7357-7802</contrib-id>
+<name>
+<surname>Dysvik</surname>
+<given-names>Elin</given-names>
+</name>
+<xref rid="B0003"/>
+<xref ref-type="aff" rid="AFF0001">
+<sup>a</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-6657-1012</contrib-id>
+<name>
+<surname>Rørtveit</surname>
+<given-names>Kristine</given-names>
+</name>
+<xref rid="B0004"/>
+<xref ref-type="aff" rid="AFF0001">
+<sup>a</sup>
+</xref>
+<xref ref-type="aff" rid="AFF0002">
+<sup>b</sup>
+</xref>
+</contrib>
+<aff id="AFF0001">
+<label>a</label>
+<institution>
+Faculty of Health Sciences, University of Stavanger
+</institution>
+, Stavanger,
+<country>Norway</country>
+</aff>
+<aff id="AFF0002">
+<label>b</label>
+<institution>Research Department, Stavanger University Hospital</institution>
+, Stavanger,
+<country>Norway</country>
+</aff>
+</contrib-group>
+<author-notes>
+<corresp id="AN0001">
+CONTACT Venke Ueland
+<email xlink:href="venke.ueland@uis.no">venke.ueland@uis.no</email>
+<institution>
+Faculty of Health Sciences, University of Stavanger
+</institution>
+, Stavanger N-4036,
+<country>Norway</country>
+</corresp>
+</author-notes>
+<pub-date pub-type="collection">
+<year>2019</year>
+</pub-date>
+<pub-date pub-type="epub">
+<day>14</day>
+<month>8</month>
+<year>2019</year>
+</pub-date>
+<volume>14</volume>
+<issue>1</issue>
+<elocation-id>1651171</elocation-id>
+<history>
+<date date-type="accepted">
+<day>28</day>
+<month>7</month>
+<year>2019</year>
+</date>
+</history>
+<permissions>
+<copyright-statement>
+© 2019 The Author(s). Published by Informa UK Limited, trading as Taylor a Francis Group.
+</copyright-statement>
+<copyright-year>2019</copyright-year>
+<copyright-holder>The Author(s)</copyright-holder>
+<license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/">
+<license-p>
+This is an Open Access article distributed under the terms of the Creative Commons Attribution License (
+<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>
+), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="ZQHW_14_1651171.pdf"/>
+<abstract>
+<title>ABSTRACT</title>
+<p>
+<bold>Aims and objectives</bold>
+: The aim was to gain in-depth understanding about individuals’ existential experiences of living with obesity.
+</p>
+<p>
+<bold>Background</bold>
+: People living with obesity face great vulnerability and existential challenges. The different treatments offered do not seem to meet the individual needs of persons with obesity. A deeper understanding of existential experiences from an individual perspective is needed to individualize treatment.
+</p>
+<p>
+<bold>Design</bold>
+: An exploratory phenomenological–hermeneutical design was used to gain a greater understanding of the existential experiences involved in living with obesity.
+</p>
+<p>
+<bold>Methods</bold>
+: The participants represented a convenient sample. 18 qualitative interviews were conducted and subjected to phenomenological–hermeneutical analysis.
+</p>
+<p>
+<bold>Results</bold>
+: Four themes emerged:
+<italic>
+shaped by childhood; captured by food; depressed by the culture
+</italic>
+; and
+<italic>judged by oneself</italic>
+.
+</p>
+<p>
+<bold>Conclusions</bold>
+: The burden of being obese can be experienced as being
+<italic>objectified</italic>
+and
+<italic>alienated</italic>
+as a human being. We need to turn towards a life-world perspective, seeing
+<italic>each human being as a living body</italic>
+to overcome objectification and alienation, and then move them towards becoming subjects in their own lives,
+<italic>through giving space for self-love</italic>
+. Health care workers need to assist persons living with obesity to reduce objectification and alienation. It is important to develop intervention that has an individual, holistic approach.
+</p>
+</abstract>
+<kwd-group kwd-group-type="author">
+<title>KEYWORDS</title>
+<kwd>Obesity</kwd>
+<kwd>phenomenological hermeneutics</kwd>
+<kwd>lived experience</kwd>
+<kwd>Kierkegaard</kwd>
+<kwd>Merleau-Ponty</kwd>
+</kwd-group>
+<funding-group>
+<award-group>
+<funding-source>
+<named-content content-type="funder-name">not receive any specific grant</named-content>
+</funding-source>
+<award-id>FTUBIS 3700 a IN-10736</award-id>
+</award-group>
+<funding-statement>
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors grant number [FTUBIS 3700 a IN-10736].
+</funding-statement>
+</funding-group>
+<counts>
+<table-count count="2"/>
+<ref-count count="49"/>
+<page-count count="12"/>
+</counts>
+</article-meta>
+</front>
+<body>
+<sec sec-type="intro" id="S0001">
+<label>1.</label>
+<title>Introduction</title>
+<p>
+With a growing number of people living with obesity, health care has an obvious duty to be prepared to face their existential experiences. Despite the well-known health risks of obesity, the existential experiences of obese people are often overlooked by health workers (Overgaard,
+<xref rid="CIT0036">2002</xref>
+). The World Health Organization (
+<xref rid="CIT0048">2018</xref>
+) has stated that obesity is one of the most pressing contemporary health challenges. A global obesity “epidemic” is associated with major implications for both individuals and for society (Grønning, Scambler, a Tjora,
+<xref rid="CIT0014">2013</xref>
+; Hensrud a Klein,
+<xref rid="CIT0016">2006</xref>
+; World Health Organisation, 2018).
+</p>
+<p>
+Research indicates that obesity can reduce the quality of life, pose challenges to daily life, psychosocial well-being and self-esteem, and increase personal vulnerability (Christiansen, Borge, a Fagermoen,
+<xref rid="CIT0005">2012</xref>
+; Overgaard,
+<xref rid="CIT0036">2002</xref>
+). Individuals often report long and complex histories of weight gain in the development of obesity, related to family structures and early socialization experiences (Owen-Smith, Donovan, a Coast,
+<xref rid="CIT0037">2014</xref>
+). Moreover, people with obesity are often confronted by stereotypical characterizations and stigma distributed through socialization, health care, media and language disclosure (Grønning,
+<xref rid="CIT0013">2014</xref>
+; Pantenburg et al.,
+<xref rid="CIT0038">2012</xref>
+; Spahlholz, Baer, König, Riedel-Heller, a Luck-Sikorski,
+<xref rid="CIT0043">2016</xref>
+). Persons suffering from obesity deal with health and therapy choices, which raise a complex set of questions without easy answers (Grønning,
+<xref rid="CIT0013">2014</xref>
+). Health-care professionals seem to have adopted a reductionistic approach when caring for people with obesity. The body needs to have potential for improvement (Grønning et al.,
+<xref rid="CIT0014">2013</xref>
+). Available treatments such as surgery and lifestyle interventions make it difficult to find the optimum solution for the individual patient (Hofmann,
+<xref rid="CIT0018">2016</xref>
+). After different types of obesity treatment, affected individuals still state they are struggling with their notions of self-existence (Rørtveit, Furnes, Dysvik, a Ueland,
+<xref rid="CIT0040">2017</xref>
+). The current health services offered carry norms concerning the ideal body size and lifestyle, which tend to impose an objectifying and disciplinary control on the body (Jansen a Wehrle,
+<xref rid="CIT0019">2018</xref>
+; Knutsen, Terragni, a Foss,
+<xref rid="CIT0022">2011</xref>
+). Focusing on bodyweight and lifestyle change can be understood as a way of directing individuals towards what the culture sees as “normal” (Jansen a Wehrle,
+<xref rid="CIT0019">2018</xref>
+; Knutsen et al.,
+<xref rid="CIT0022">2011</xref>
+).
+</p>
+<p>
+Research has documented a wide range of contemporary perspectives connected to obesity (Curtis a Davis,
+<xref rid="CIT0008">2014</xref>
+; Duarte, Pinto-Gouveia, a Ferreira,
+<xref rid="CIT0009">2014</xref>
+; Hernandez-Hons a Woolley,
+<xref rid="CIT0017">2012</xref>
+). Research often has a diagnostic approach using defining terms such as “binge eating” or “food addiction” (Curtis a Davis,
+<xref rid="CIT0008">2014</xref>
+; Duarte et al.,
+<xref rid="CIT0009">2014</xref>
+). The concept of “food addiction” is increasingly employed in the academic literature, (Cullen et al.,
+<xref rid="CIT0007">2017</xref>
+).
+</p>
+</sec>
+<sec id="S0002">
+<label>2.</label>
+<title>Background</title>
+<p>
+People living with obesity have typically been through a set of initial weight loss attempts, followed by weight gain rebounds, stagnation and resignation. As such, living with obesity seems to result in emotional distress (Bombak a Monaghan,
+<xref rid="CIT0003">2017</xref>
+; Overgaard,
+<xref rid="CIT0036">2002</xref>
+; Owen-Smith et al.,
+<xref rid="CIT0037">2014</xref>
+). This emotional distress can be reinforced by physical illness and disability, which further hinder participation in social- and health-related activities, leading to further emotional distress and ongoing weight gain (Owen-Smith et al.,
+<xref rid="CIT0037">2014</xref>
+). Studies report that people living with obesity describe an increasing culture of blame, amplified by media and public health messages (Bombak a Monaghan,
+<xref rid="CIT0003">2017</xref>
+; Carryer,
+<xref rid="CIT0004">2001</xref>
+; Thomas, Hyde, Karunaratne, Herbert, a Komesaroff,
+<xref rid="CIT0045">2008</xref>
+). Given this struggle against weight gain and stigma, affected individuals also struggle with being perceived as obese and seeing themselves as obese (Christiansen et al.,
+<xref rid="CIT0005">2012</xref>
+). Seeing oneself as an obese person is a process that implies experiencing oneself as being significantly different from others (Christiansen et al.,
+<xref rid="CIT0005">2012</xref>
+). It is like living in a state of unease between hiding and showing one’s body, between being oneself and not being oneself (Overgaard,
+<xref rid="CIT0036">2002</xref>
+). From a phenomenological perspective, body weight must be understood as an integral part of subjective meaning-making. Bodily self-awareness is tacit and pre-reflective (Merleau-Ponty,
+<xref rid="CIT0029">2002</xref>
+; Rugseth a Standal,
+<xref rid="CIT0041">2015</xref>
+; Svenaeus,
+<xref rid="CIT0044">2011</xref>
+). Dismorphia may emerge when people experience bodily change as obesity, meaning that the seamless unity between body and world is disrupted (Leder,
+<xref rid="CIT0024">1990</xref>
+; Rugseth a Standal,
+<xref rid="CIT0041">2015</xref>
+; Zeiler,
+<xref rid="CIT0049">2010</xref>
+). In this situation the body stands out as an object and a person might experience their fat body as “another” (Murray,
+<xref rid="CIT0031">2007</xref>
+,
+<xref rid="CIT0032">2010</xref>
+). Experiences of bodily dismorphia can be triggered by the views of others (Leder,
+<xref rid="CIT0024">1990</xref>
+).
+</p>
+<p>
+It might be claimed that the experience of bodily largeness is a health-threatening experience created by rigid, social and medical requirements that one should inhabit particularly small and artificially restrained bodies. It is disturbing to note that suggested treatments, combined with prolonged stigmatisation, might prove far more detrimental to health than simply having a large body (Carryer,
+<xref rid="CIT0004">2001</xref>
+). In the end, feeling stigmatised is related to being different because of one’s body size, and consequently feeling not quite human (Merrill a Grassley,
+<xref rid="CIT0030">2008</xref>
+). The person desired “image” of oneself incorporates the body and make the disconnect to oneself. The body might be at the forefront of all experiences (Murray,
+<xref rid="CIT0032">2010</xref>
+). Depending on their bodily discomfort, individuals may experience disrupted intentionality and unhomeliness (Svenaeus,
+<xref rid="CIT0044">2011</xref>
+).
+</p>
+<p>
+Based on previous research, people living with obesity experience great vulnerability and existential challenges as human beings (Christiansen et al.,
+<xref rid="CIT0005">2012</xref>
+; Overgaard,
+<xref rid="CIT0036">2002</xref>
+). Despite increased attention in practice and research on how to reduce stigma and stereotypical thinking, research shows that obese people still feel that they are less than fully human (Merrill a Grassley,
+<xref rid="CIT0030">2008</xref>
+).
+</p>
+<p>
+The different treatments offered do not seem to meet the specific needs of persons living with obesity (Grønning,
+<xref rid="CIT0013">2014</xref>
+). There seems to be a neglect by health care of the lived embodiment. Medical science focuses on making bodies “normal”. The clinical view in medical discourse ignores tacit bodily knowledge (Murray,
+<xref rid="CIT0031">2007</xref>
+). Despite wide research on the topic of obesity, promoting health and well-being for affected individuals appears to be difficult (Christiansen et al.,
+<xref rid="CIT0005">2012</xref>
+; Thomas et al.,
+<xref rid="CIT0045">2008</xref>
+). Moreover, there seems to be a gap between existing literature on changing habits and achieving weight loss, and getting successful results. Earlier research highlighted the need for developing more in-depth understanding of existential and interpersonal dimensions of living with obesity (Overgaard,
+<xref rid="CIT0036">2002</xref>
+). To succeed in treatment, there is a need to understand the existential experiences of living with obesity, as a foundation for good practice (Overgaard,
+<xref rid="CIT0036">2002</xref>
+).
+</p>
+<p>
+For a human being, the lived body is the centre of orientation of themselves in the world. Therefore, we need competence regarding existential experiences. Consciousness about one’s lived body is essential to be able to think of oneself as an embodied unity (Jansen a Wehrle,
+<xref rid="CIT0019">2018</xref>
+; Murray,
+<xref rid="CIT0032">2010</xref>
+). Unity must be the primary approach for health care with a humanistic and holistic attitude (Knutsen et al.,
+<xref rid="CIT0022">2011</xref>
+; Natvik, Råheim, Andersen, a Moltu,
+<xref rid="CIT0033">2018</xref>
+; Zeiler,
+<xref rid="CIT0049">2010</xref>
+).
+</p>
+<p>
+It appears there are few studies exploring what it is like to live with obesity as an existential challenge. As far as we know, only a limited number of qualitative or phenomenological studies have examined this aspect (Carryer,
+<xref rid="CIT0004">2001</xref>
+; Christiansen et al.,
+<xref rid="CIT0005">2012</xref>
+; Merrill a Grassley,
+<xref rid="CIT0030">2008</xref>
+; Overgaard,
+<xref rid="CIT0036">2002</xref>
+; Owen-Smith et al.,
+<xref rid="CIT0037">2014</xref>
+). Based on the above considerations, we suggest that a deeper understanding of the existential experiences of obesity from an individual perspective is needed to provide more individualized treatment.
+</p>
+<p>
+This study aimed at gaining an in-depth understanding of the individual existential experiences of living with obesity. The research questions we formulated were as follows: How does the person living with obesity experience her/his own body? How does the person living with obesity experience (being) herself/himself? How does the person living with obesity experience her/his life?
+</p>
+</sec>
+<sec id="S0003">
+<label>3.</label>
+<title>Methods</title>
+<p>
+An exploratory phenomenological–hermeneutical design (Kvale a Brinkmann,
+<xref rid="CIT0023">2009</xref>
+) was chosen, using qualitative interviews, to explore and interpret the existential phenomena related to living with obesity. Such an approach is advisable when the field of research is complex, requiring in-depth understanding. Further, this approach is useful for exploring a field with a limited research background and may be a key to gaining an understanding of the human life-world (Kvale a Brinkmann,
+<xref rid="CIT0023">2009</xref>
+).
+</p>
+<sec id="S0003-S2001">
+<label>3.1.</label>
+<title>Data collection</title>
+<p>
+The participants represented a convenient sample. They participated in a program directed by the specialist health service in 2016 and were invited to participate by the program leader. The interviews were not related to the actual program. The inclusion criteria were a BMI of 30 or more and obvious motivation to participate in an individual in-depth interview. The qualitative interviews lasted from 30 to 90 minutes.
+</p>
+<p>
+The program leader informed 30 individuals about the research project and provided written information about the study. All those who decided to participate in the study made contact with the program leader. The first author then contacted the relevant participants and planned for an interview. Confidentiality was guaranteed and a written consent form was obtained prior to the interview. The participants gave their consent after receiving written information from the researcher. The project was approved by the Norwegian Ethical Committee (no. 2015/1720) and by the Norwegian Social Science Data Services. Participants were informed that they could withdraw from the study without giving any reason. Steps were taken to disguise the identity of the persons being interviewed. Participants had access to the support of professionals at the clinic if needed.
+</p>
+<p>
+The sample comprised interviews with 18 participants (15 women and three men), all with a BMI in the range of 30–45 (see
+<xref rid="T0001">Table I</xref>
+). The participants reflected on life and existential situation living with obesity.
+<disp-quote>
+<p>
+<italic>
+Please talk about how you experience living with obesity?
+</italic>
+Follow-up questions were aimed at uncovering thoughts and feelings in relation to their lives.
+</p>
+</disp-quote>
+<disp-quote>
+<p>
+What is essential for you in your situation? What is challenging in life situations when living with obesity?
+</p>
+</disp-quote>
+<table-wrap id="T0001" orientation="portrait" position="float">
+<object-id pub-id-type="doi">10.1080/17482631.2019.1651171-T0001</object-id>
+<label>Table I.</label>
+<caption>
+<p>Participants (N = 18) background information.</p>
+</caption>
+<!-- OASIS TABLE HERE -->
+<table frame="hsides" rules="groups">
+<colgroup>
+<col width="1*" align="left"/>
+<col width="1*" align="char" char="."/>
+<col width="1*" align="left"/>
+<col width="1*" align="left"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">Participants</th>
+<th align="center" char=".">Age</th>
+<th align="center">Occupation</th>
+<th align="center">Disorder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">33</td>
+<td align="left">-</td>
+<td align="left">Strain injuries</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">64</td>
+<td align="left">Retired</td>
+<td align="left">High blood pressure, strain injuries</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">50</td>
+<td align="left">On sick-leave</td>
+<td align="left">Low metabolism, strain injuries</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">44</td>
+<td align="left">Receiver of disability benefit</td>
+<td align="left">Low metabolism, strain injuries</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">45</td>
+<td align="left">Working</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">47</td>
+<td align="left">Working</td>
+<td align="left">Strain injuries</td>
+</tr>
+<tr>
+<td align="left">Male</td>
+<td align="char" char=".">71</td>
+<td align="left">Retired</td>
+<td align="left">Strain injuries, breathing problems</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">42</td>
+<td align="left">On sick-leave</td>
+<td align="left">High blood pressure, strain injuries</td>
+</tr>
+<tr>
+<td align="left">Male</td>
+<td align="char" char=".">57</td>
+<td align="left">Receiver of disability benefit</td>
+<td align="left">Strain injuries</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">31</td>
+<td align="left">Working</td>
+<td align="left">High blood pressure, strain injuries</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">49</td>
+<td align="left">Working</td>
+<td align="left">Strain injuries</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">50</td>
+<td align="left">On sick-leave</td>
+<td align="left">Strain injuries</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">58</td>
+<td align="left">Working</td>
+<td align="left">High blood pressure, strain injuries</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">63</td>
+<td align="left">Retired</td>
+<td align="left">High blood pressure, strain injuries, diabetes</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">51</td>
+<td align="left">Working</td>
+<td align="left">Low metabolism</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">24</td>
+<td align="left">Unemployed</td>
+<td align="left">Strain injuries</td>
+</tr>
+<tr>
+<td align="left">Male</td>
+<td align="char" char=".">46</td>
+<td align="left">Working</td>
+<td align="left">Depression, breathing problems</td>
+</tr>
+<tr>
+<td align="left">Female</td>
+<td align="char" char=".">51</td>
+<td align="left">Working</td>
+<td align="left">Low metabolism, bipolar disorder</td>
+</tr>
+</tbody>
+</table>
+</table-wrap>
+</p>
+<p>
+Central to the approach was openness towards the subjects’ experiences and descriptions of the research topic, with an attempt to disregard prior knowledge and search for descriptions of key importance. The in-depth interview focused on the person’s life story related to obesity and her/his existential situation. The researcher was careful not to violate the integrity and dignity of the participants. Data were audio recorded and transcribed verbatim by one of the researchers.
+</p>
+</sec>
+<sec id="S0003-S2002">
+<label>3.2.</label>
+<title>Data analysis</title>
+<p>
+Interpretation of texts was guided by Kvale and Brinkmann (
+<xref rid="CIT0023">2009</xref>
+) and analyses took place at three levels: self-understanding, common sense and theoretical understanding; see
+<xref rid="T0002">Table II</xref>
+. The primary author drafted the analysis. All editors were involved in discussions throughout the process of interpretation.
+<table-wrap id="T0002" orientation="portrait" position="float">
+<object-id pub-id-type="doi">10.1080/17482631.2019.1651171-T0002</object-id>
+<label>Table II.</label>
+<caption>
+<p>
+Examples of three contexts of interpretations—thematised findings.
+</p>
+</caption>
+<!-- OASIS TABLE HERE -->
+<table frame="hsides" rules="groups">
+<colgroup>
+<col width="1*" align="left"/>
+<col width="1*" align="left"/>
+<col width="1*" align="left"/>
+</colgroup>
+<thead>
+<tr>
+<th colspan="3" align="left">
+Three contexts of interpretations
+<hr/>
+</th>
+</tr>
+<tr>
+<th align="left">Self-understanding</th>
+<th align="center">Common sense</th>
+<th align="center">Critical common sense</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<italic>
+I feel a kind of hopelessness. Shame and despair are connected here. I think that it started when I was born, so it’s an extensive part of my personality
+</italic>
+.
+</td>
+<td align="left">
+<italic>Being shaped by childhood</italic>
+</td>
+<td rowspan="4" align="left">
+The person feels self-blame and self-rejection, which may feel like being
+<italic>objectified</italic>
+as a human being (Kierkegaard/Merleau Ponty). The person isolates herself/himself from relationships with others, which may feel like being
+<italic>alienated</italic>
+as a human being (Kierkegaard/Merleau Ponty).
+</td>
+</tr>
+<tr>
+<td align="left">
+<italic>
+The food has trapped me. It has made some deep traces. I don’t bother losing weight, I continue eating
+</italic>
+,
+</td>
+<td align="left">
+<italic>Being captured by food</italic>
+</td>
+</tr>
+<tr>
+<td align="left">
+<italic>
+I hear it every day. Every single day someone talks about overweight
+</italic>
+.
+</td>
+<td align="left">
+<italic>Being depressed by the culture</italic>
+</td>
+</tr>
+<tr>
+<td align="left">
+<italic>
+I see myself as terribly thick and chubby and as one who has failed.
+</italic>
+</td>
+<td align="left">
+<italic>Being judged by oneself</italic>
+</td>
+</tr>
+</tbody>
+</table>
+</table-wrap>
+</p>
+<p>
+The process between understanding and interpretation occurs as a hermeneutical movement between the particular, the universal and the whole part (Gadamer,
+<xref rid="CIT0011">2007</xref>
+). According to Gadamer’s philosophy, the interpreter cannot be fully aware of his/her own prejudices and pre-understanding. To interpret is to ask questions such as: “
+<italic>what is it like to live with obesity</italic>
+” and “
+<italic>
+how do people suffering from obesity experience life
+</italic>
+”.
+</p>
+<sec id="S0003-S2002-S3001">
+<label>3.2.1.</label>
+<title>Self-understanding</title>
+<p>
+The interpretation started by the authors reading through all the interview texts to grasp an intuitive first holistic understanding. Through these readings, fragments of something significant in relation to the lived experience of living with obesity emerged. The first stage of interpretation is to reveal the self-understanding of the participants. Units of meaning were collected, and small headings were inserted in parts of the texts. Units of meaning belonging together were examined and arranged under preliminary headings.
+</p>
+</sec>
+<sec id="S0003-S2002-S3002">
+<label>3.2.2.</label>
+<title>Common sense</title>
+<p>
+The second step refers to comprehension of the interview text within the context of a reasonable, universal understanding. New themes with a new level of abstraction came forth by reformulating the participant’s self-understanding. The units were systematized in closely connected topics, with the new level of abstraction giving the four themes presented in the Results section. To enhance the rigour of the interpretation process, all preliminary themes were discussed between the authors and reformulated until consensus was achieved. The first two levels of interpretation (self-understanding and common sense) are also presented in the Results section.
+</p>
+</sec>
+<sec id="S0003-S2002-S3003">
+<label>3.2.3.</label>
+<title>Theoretical understanding</title>
+<p>
+The first two levels provide an indication of relevant theory that might enrich the discussion (Kvale a Brinkmann,
+<xref rid="CIT0023">2009</xref>
+). The third level of interpretation is a theorization based on other research and relevant theories, which may illuminate and deepen the understanding of findings. Theoretical interpretations are helpful to achieve in-depth understanding. Theory serves to extend the sources of knowledge beyond the empirical data (Malterud, Siersma, a Guassora,
+<xref rid="CIT0027">2016</xref>
+). This level of interpretation is presented in the Discussion section.
+</p>
+</sec>
+</sec>
+</sec>
+<sec id="S0004">
+<label>4.</label>
+<title>Results</title>
+<p>
+Thematised results are:
+<italic>
+shaped by childhood, captured by food, depressed by the culture
+</italic>
+, and
+<italic>judged by oneself</italic>
+. These themes represented the participants’ descriptions of living with obesity. They described being deeply challenged by society, by memories from childhood; they felt captured in a deep furrow and by their own self-blame.
+</p>
+<sec id="S0004-S2001">
+<label>4.1.</label>
+<title>Shaped by childhood</title>
+<p>
+The participants described how their relationship with food had already been shaped in childhood. Several informants knew perfectly when their overweight problems started. Food and meals seem to have secondary functions such as restoring the atmosphere at home and compensating for lack of an intimate relationship.
+<disp-quote>
+<p>
+—That I know really well. It was at home when I was a child.
+</p>
+</disp-quote>
+</p>
+<p>
+Some of them pointed to a problematic relationship to meals and eating during childhood. They found that eating was controlled by the adults:
+<disp-quote>
+<p>
+—The portions we were given were too small and we were not allowed any food after 5 o’clock. When I went into the kitchen trying to sneak some food my mum would notice it and yell ‘No more food!’ After I moved out, I binged and puked for many years.
+</p>
+</disp-quote>
+</p>
+<p>
+Another form of disruption was associated with an atmosphere of conflict in relation to food and meals. This was described by one participant:
+<disp-quote>
+<p>
+—My mother ruined the pleasure of food when I was a child. She had such a crazy relationship with food. If anything bad happened, food would fix it!
+</p>
+</disp-quote>
+<disp-quote>
+<p>
+—There were recurrent conflicts around the table about the amount of food. I never got an easy relationship with eating. There was no self-regulation of meals.
+</p>
+</disp-quote>
+</p>
+<p>
+Several participants reflected on the link between their relationship to food as adults and the absence of intimacy in their childhood, the lack of approval and the experience of rejection. One of them recounted a hospital stay when she was little:
+<disp-quote>
+<p>
+—My parents were not allowed to be there. This has left a lasting impression. I have major issues with intimacy. Food has become a compensation for the lack of closeness.
+</p>
+</disp-quote>
+</p>
+<p>
+Some participants felt comforted by eating. When closeness to others was lacking, food provided some closeness to themselves, which gave a feeling of comfort. In this sense, food soothed pain, grief and loss, and concealed vulnerability. One interviewee dwelled on her childhood and adolescence. She believed that the pattern of overweight began in the early stages of infancy.
+<disp-quote>
+<p>
+—I feel a kind of hopelessness, where shame and despair are interconnected. I think it started when I was born, so it’s an extensive part of my personality. How am I supposed to change that? It’s a self-fulfilling prophecy.
+</p>
+</disp-quote>
+</p>
+<p>
+Participants described how food and meals came to be something profoundly personal; a sensitive area of what it meant to be human. Hunger and satiety seemed to be a personal part of life. Judging from the interviews, it appeared as if their childhood memories made it difficult to look for opportunities for change. The understanding of oneself and one’s eating pattern and overweight became self-fulfilling. This seemed to be challenging when distinguishing their own needs and asking:
+<italic>who am I</italic>
+, and
+<italic>what do I feel and need</italic>
+? Basic perceptions of hunger and satiety appeared to be disturbed or destroyed, and it became difficult to become self-consistent.
+</p>
+</sec>
+<sec id="S0004-S2002">
+<label>4.2.</label>
+<title>Captured by food</title>
+<p>
+Several participants described being trapped by food, reflecting on the difficult psychological issues related to this process. Their relationship with food had taken a major role in their life and the path to change seemed difficult:
+<disp-quote>
+<p>
+—The food has trapped me. The psychological part is the hardest. It has been a long process to acknowledge that it’s all in my head. It has made some deep marks. I don’t bother to lose weight, I continue eating. I’m living in a bubble and I can’t break out and turn the knowledge I have into action.
+</p>
+</disp-quote>
+</p>
+<p>
+The expressions “trapped” and “living in a bubble” expressed that the participants were unable to live the life they wanted. The traces being formed were restrictive to being able to live a free life instead of being controlled by food. Some were struggling to understand themselves in the light of a diagnosis of eating disorders and addiction. Others felt they did not fit into such descriptions:
+<disp-quote>
+<p>
+—First, I had an alcohol problem, then I think I traded the alcohol for food. There is something compulsive about my relationship with food. It’s pretty stupid, but I still end up taking another piece of that cake.
+</p>
+</disp-quote>
+<disp-quote>
+<p>
+—There’s something uncontrollable about taking that piece. I don’t see myself as someone with an eating disorder, more like someone who’s preoccupied with food in an unhealthy way. If I start counting calories, I quickly feel hostile about food. I think vulnerability and pattern are better words than addiction, and for me vulnerability is the most important.
+</p>
+</disp-quote>
+</p>
+<p>
+The reflections of the informants were coloured by a feeling of being “captured by food”, a variation to understanding themselves. Their obesity pointed at a psychological trap. The explanations they gave implied that living with obesity they were stuck in dimensions that prevented the changes they desperately wanted. However, terms such as “vulnerability” could open up the road ahead.
+</p>
+</sec>
+<sec id="S0004-S2003">
+<label>4.3.</label>
+<title>Depressed by the culture</title>
+<p>
+Several participants stated they were judged by the culture, not only for their bodies, but also because of the amount of what they ate. They perceive themselves as constantly observed and devalued by their acquaintances. The relationship they have with food has become visible:
+<disp-quote>
+<p>
+—At work they talk about food in every context. It’s completely twisted. Being fat, I know perfectly well what’s wrong. All this talk about food only increases my self-reproach.
+</p>
+</disp-quote>
+<disp-quote>
+<p>
+—I’m a member of many enjoyable women’s clubs. When food is served I need to be careful and help myself with moderation. But when food is put on the table … I tend to become nervous about eating too much, and then it becomes a self-prophecy. I imagine them saying: “But she’s so fat! Why does she take that piece of cake, shouldn’t she refrain from it?” The whole thing is so internalised. But who would give you permission, what is it that gives you this self-reproach, it has a lot to do with society, the focus on training and losing weight.
+</p>
+</disp-quote>
+</p>
+<p>
+The participants were stressed by the idea of being expected to fit in, and not exceed the norm. They reflected that society controls food and eating, and that it defines standards on how the body is supposed to look. Further, they suggested that the mirror put up in front of them by community and culture could be internalised easily, becoming the way in which they looked upon themselves and their body.
+<disp-quote>
+<p>
+—It tears at my self-esteem. The way others look at me. I compare myself with the rest of my family. They are of average weight and fine. I’m an outgoing personality, but I notice that I decline invitations when I’m at my worst. I don’t even have a dress. People don’t stop inviting me, but I choose to withdraw myself more often.
+</p>
+</disp-quote>
+</p>
+<p>
+Several participants emphasized being affected both directly and indirectly by public criticism of obesity. It impacted on how they lived their social lives, restricting their freedom and participation in social events. In this way, the voice of culture restricted their self-realization. To see oneself as different, being unable to reach the expectations and standards of the surrounding environment had consequences. It gave them a poor self-image and made them feel aggression towards themselves and others.
+<disp-quote>
+<p>
+—I hear it every day. Every single day someone talks about overweight. I’m going to a party on Saturday and I know someone is going to comment on it. I always feel like everyone pays attention to how much I eat.
+</p>
+</disp-quote>
+<disp-quote>
+<p>
+—It’s the same old story; big people are stupid, because grabbing an extra piece of cake is stupid. Sometimes I think, who cares, it’s not their business.
+</p>
+</disp-quote>
+</p>
+<p>
+Prejudgement took over and gave a feeling of self-hatred, shame and guilt, as they felt less worthy than others. This made it harder to shield themselves from the voice of culture because they are part of it. It meant that they internalized their feelings, which led to self-judgment.
+</p>
+<p>
+The participants’ statements show how deeply society affected them as human beings. They said they looked on themselves with the eyes of society, as if they had adopted the voice of society. They reflected on not being able to hide their body, as it related to the outside world and on being judged for being too big. As well, they reflected on being captured in society’s and culture’s prejudgement. The community’s relationship with food lay like an outer pressure, a grip around them.
+</p>
+</sec>
+<sec id="S0004-S2004">
+<label>4.4.</label>
+<title>Judged by oneself</title>
+<p>
+The participants discussed how their self-judgement was based on their recognition of their own body. For example, they said they would try to conceal their stomach in social settings and avoided pictures being taken of their whole body. They disowned their bodies, which had become bodily objects. The idea of appearing obese led to a patronizing feeling of self.
+<disp-quote>
+<p>
+—I see myself as terribly thick and chubby and as a failure even if I have not really failed at all.
+</p>
+</disp-quote>
+<disp-quote>
+<p>
+—I see it as a weakness. If I were strong enough, I would not be where I am.
+</p>
+</disp-quote>
+</p>
+<p>
+Participants described how such feelings and thoughts about themselves led to feelings of weakness and self-blame for being wrong. Several of them expressed that they longed for another life, as they missed the joy of life, and of having to struggle with self-blame and self-hatred.
+<disp-quote>
+<p>
+—When I over-eat I get immense self-contempt. At times I can sit up all night waiting to go to bed, just to be done with the day, I don’t feel depressed, more unmotivated for life.
+</p>
+</disp-quote>
+<disp-quote>
+<p>
+—The joy of life and pleasure of food are destroyed for me. I have sought help, I have tried to make it, but I’m stuck in that bubble. I have resources and I attend courses. I’m always trying. I hardly ever give up, but I think: Why can’t I live peacefully for the rest of my life, instead of stressing with this. I don’t know if I’ll be able to cope any longer.
+</p>
+</disp-quote>
+</p>
+<p>
+Caught in a conflict between losing weight and not being able to, carrying themselves and their weight, they felt persisting pressure. It was as if they had lost a part of themselves, the joy of life and the opportunities for self-expression. They saw no options for moving on. Some said that the lack of joy and enthusiasm had made them strangers to themselves, because of their lack of vitality. Several of them said they were close to giving up. Their experiences of guilt, shame, self-blame, anger and hopelessness were clearly communicated.
+</p>
+<p>
+Participants looked for ways out from their self-judgement and the tracks in which they were captured. They described how they worked with their thoughts and feelings, pondering on how they could in the best way possible move on.
+<disp-quote>
+<p>
+—The kids say I’ve become grumpy, angry and cranky, whereas I used to be so cheerful. Why can I not get this sorted out? I haven’t taken care of myself! I have been judging myself. If even my mother cannot give me recognition and empathy, how am I supposed to see myself in a positive light and acknowledge myself? Yes, the key is probably in acknowledging yourself, that makes sense.
+</p>
+</disp-quote>
+<disp-quote>
+<p>
+—I felt it when I was going to set goals, today I’m sitting here crying because I’m going to tell you what those goals are.
+</p>
+</disp-quote>
+</p>
+<p>
+The empirical findings underline that those who live with obesity creates a firm, hard and degrading tone towards themselves. When the interview centred on the participants, it touched something deep inside them. Their self-pity hit a sore spot. Being the centre in their own life, acknowledging themselves, seemed to touch the core of their vulnerability in being obese.
+</p>
+</sec>
+</sec>
+<sec id="S0005">
+<label>5.</label>
+<title>Theoretical interpretation and discussion</title>
+<p>
+The aim of this study was to gain an in-depth understanding about individuals’ existential experiences of living with obesity. From our interpretation of the concepts of
+<italic>
+being shaped by childhood, captured by food, depressed by the culture
+</italic>
+, and
+<italic>judged by oneself</italic>
+, we suggest that the burden of being obese is experienced as being
+<italic>objectified</italic>
+and
+<italic>alienated</italic>
+as a human being. In the following, the concepts of being “
+<italic>objectified</italic>
+and
+<italic>alienated</italic>
+” form the structure of the discussion. The overall interpretation makes use of Merleau-Ponty’s rigorous philosophy of the body and the philosophical thinking of Kierkegaard about what it means to be human and how to become one’s self.
+</p>
+<sec id="S0005-S2001">
+<label>5.1.</label>
+<title>To be objectified as a human being</title>
+<p>
+Our findings illuminate the idea of being objectified as a human being. Living with obesity leads to thoughts and feelings of
+<italic>being depressed by the culture</italic>
+. At an existential level, this can be understood as being exposed to outer and inner objectification (Malterud a Ulriksen,
+<xref rid="CIT0028">2010</xref>
+; Shaughnessy,
+<xref rid="CIT0042">2018</xref>
+). More commonly, outer objectification can be related to experiences of struggle with the cultural expectations of slimness, and of a person being scorned for their visible body. The inner objectification is subsequently an internalisation of stigmatisation.
+</p>
+<p>
+Being stigmatised gives one a feeling of being constantly observed, an awareness of not being seen as a subjective human, but as an object. Limiting social contact is a way of avoiding the risk of receiving remarks about body size for obese people. In line with French philosopher Merleau-Ponty, humans naturally experience themselves as both subjects and objects in their lives. He describes how a person’s embodiment may become broken when he/she experiences life-changing events, such as illness. Our findings suggest that living with obesity represents such brokenness. When persons have an increased awareness towards the failing obese body, the seamless unity between the body as both subject and object, might be disrupted (Merleau-Ponty,
+<xref rid="CIT0029">2002</xref>
+). The increased consciousness about ones obese body seems to make a split between the subjective and the objective body. The experiences of the lived body might change from “I am a body” to “I have a body” (Merleau-Ponty,
+<xref rid="CIT0029">2002</xref>
+). When immersed in an enlarged body, an immediate way of life can be lost. Merleau-Ponty (
+<xref rid="CIT0029">2002</xref>
+) stated: “In so far as I have a body, I may reduce [myself] to the status of an object beneath the gaze of another person, and no longer count as a person for him” (p193).
+</p>
+<p>
+From our study, we found that a person’s obesity tends to lead to inner objectification through self-judgement, which is illuminated by the theme
+<italic>being judged by oneself</italic>
+. Bodily self-judgement again leads to an urge to hide one’s body and oneself, to avoid being exposed. In other words, almost an alien’s perspective of one’s own body. Orbach (
+<xref rid="CIT0035">2011</xref>
+) claimed that in today’s society, the body often appears as an object, and not something we
+<italic>are</italic>
+. Moreover, commercialisation of the body exposes everybody to basic shame and despair of oneself (Orbach,
+<xref rid="CIT0035">2011</xref>
+). Orbach (
+<xref rid="CIT0035">2011</xref>
+) underlined that something outside us highlights the body as an object. This view of one’s body affects our identity and becomes part of who we are.
+</p>
+<p>
+Our study clearly shows that becoming the subject in one’s own life, can be a struggle. The relation the person has with oneself seems to be the primary challenges. Rugseth and Standal (
+<xref rid="CIT0041">2015</xref>
+) sites from an article of Murray: “… my fatness emerges as a barrier between myself, and my body, between myself and others, rather than being the ‘very horizon’ that brings me into being” (Rugseth a Standal,
+<xref rid="CIT0041">2015</xref>
+, p. 8)
+</p>
+<p>
+Kierkegaard state that despair is a form of misrelating to one self. The individual begins to regard him or herself as something different, something that does not necessary fit into the given cultural settings (Nielsen,
+<xref rid="CIT0034">2018</xref>
+).
+</p>
+<p>
+The findings show that obese people can’t go about their life hindered by their large body. It is about the self-relation of the person, more than about not being able to participate in daily life activities living a “normal life”. Kierkegaard (
+<xref rid="CIT0021">1849</xref>
+) claims that it is challenging for human beings to become themselves. This is probably what is experienced by persons living with obesity; they have a limited opportunity to live out their potential for life.
+</p>
+<p>
+Several studies confirm the cultural pressure that exists towards persons living with obesity (Overgaard,
+<xref rid="CIT0036">2002</xref>
+; Owen-Smith et al.,
+<xref rid="CIT0037">2014</xref>
+; Thomas et al.,
+<xref rid="CIT0045">2008</xref>
+). The stigma of body size is an attribute that distinguishes its bearer as being different from what society defines as “normal” (Grønning et al.,
+<xref rid="CIT0014">2013</xref>
+). An inner process towards objectivising can occur when the participants look upon their body merely as a failure and a burdensome physical object needing improvement. This internal process creates a distance to the body, and further a distance to one self as a unity (Merleau-Ponty,
+<xref rid="CIT0029">2002</xref>
+).
+</p>
+<p>
+Our findings suggest that the participants have been caught in a vicious circle of food, eating and inability to lose weight. To possess knowledge and self-awareness, without being able to create the desired change, leads to self-blame, which further makes them objectivised; this leads to
+<italic>judging oneself</italic>
+. It appears that the body needs to be disciplined to an excessive extent as it becomes a potential for improvement (Grønning et al.,
+<xref rid="CIT0014">2013</xref>
+). When the body rejects being controlled, shame and blame can occur (Grønning et al.,
+<xref rid="CIT0014">2013</xref>
+). This is in accordance with the idea that the body has become a dynamic site of aspiration in its own right, constantly working on the site (Grønning et al.,
+<xref rid="CIT0014">2013</xref>
+). Multiple failing weight control strategies can lead to obese people assigning personal self-blame (Malterud a Ulriksen,
+<xref rid="CIT0028">2010</xref>
+). Struggling with weight loss can expand the distance from one’s own body and suppress the self, one might be struggling with being one self. According to Kierkegaard, conforming to a representative, cultural ideal is to loose one self (Nielsen,
+<xref rid="CIT0034">2018</xref>
+). Further, he states that becoming oneself always begins through knowing and accepting oneself in the present (Batchelor,
+<xref rid="CIT0002">2006</xref>
+; Kierkegaard,
+<xref rid="CIT0021">1849</xref>
+). Gaete and Fuchs (
+<xref rid="CIT0012">2016</xref>
+) claimed that the public health service seems to enhance such objectification of the person’s body. Health services focusing, for example, on lifestyle-changing programs might increase attempts to control the obese body, but this can also lead to an increased objectification of the body (Grønning et al.,
+<xref rid="CIT0014">2013</xref>
+). Gaete and Fuchs (
+<xref rid="CIT0012">2016</xref>
+) confirmed that it appears to be difficult for people struggling with weight problems to stay in a subject position, as their lived body is in a vulnerable and unbearable state. Therefore, it must be an important therapeutic goal to look behind the symptoms if possible, to make a shift of rigid objectification of one’s own body towards a subject position (Gaete a Fuchs,
+<xref rid="CIT0012">2016</xref>
+).
+</p>
+<p>
+As described here, a person living with obesity experiences being
+<italic>captured by food</italic>
+, which feels like being trapped in a deep space or living in a bubble. Using terms such as “addiction” or “diagnosis” is neither helpful nor adequate to describe what they experience, and such diagnoses are in some cases problematic. The diagnosis might be felt to be too dominant, and might in itself become an explanation that prevents change. The terms “addiction” and “eating disorder” are diagnostic and typically used to objectify the condition. For some, this may be a help to understand themselves, whereas others do not need diagnostic terms. We believe it would be better to reflect on vulnerability and eating patterns to break the negative pathway. This indicates that the use of a diagnosis disturbs a potential success route to weight loss. It can also objectivise and suppress the individual.
+</p>
+<p>
+Conflicts and longing for enjoyment of food came to light in the theme
+<italic>being captured by food</italic>
+, and show how powerful the unfortunate relationship with food can be. Meals are a sort of relief and purification after disturbance, and eating carries repercussions after an adverse incident. A fundamental, natural and effortless relationship with food and meals is disrupted by such childhood experiences. “Living one’s body” (Merleau-Ponty,
+<xref rid="CIT0029">2002</xref>
+) might be equivalent to living one’s life eating, in some way living a life through meals and food. As described here, the meal loses its intrinsic value, becoming something that cannot be enjoyed, rather than something that is necessary and nice.
+</p>
+</sec>
+<sec id="S0005-S2002">
+<label>5.2.</label>
+<title>To be alienated as a human being</title>
+<p>
+<italic>
+Being shaped by childhood, captured by food, depressed by the culture
+</italic>
+, and
+<italic>judged by oneself</italic>
+, point to a feeling of being in a hostile or indifferent state of mind towards oneself (Merrill a Grassley,
+<xref rid="CIT0030">2008</xref>
+). The awareness of not being regarded as a person can create alienation from oneself (Barber,
+<xref rid="CIT0001">2016</xref>
+). As well, the experiences from one’s own
+<italic>childhood, food, culture</italic>
+and
+<italic>oneself</italic>
+can create a distance to one’s own body and lead to an objectivised way of being. Merleau-Ponty (
+<xref rid="CIT0029">2002</xref>
+) postulated that humans both
+<italic>have</italic>
+a body and
+<italic>are</italic>
+a body, they are
+<italic>living one’s body</italic>
+. As such, we experience existence through the body. The experience of oneself, one’s body and one’s presence in the world precedes reflections and is the basis for experiencing the life-world (Merleau-Ponty,
+<xref rid="CIT0029">2002</xref>
+). Being alienated from both society and oneself appears like an existential homelessness, as not living in one’s own body fully.
+</p>
+<p>
+To be a human being in becoming towards wholeness, is to make space for oneself and what is given by life, according to Kierkegaard. This is to be transparent towards one self and choosing oneself (Cruysberghs,
+<xref rid="CIT0006">2010</xref>
+). Our study shows that the body seems to be separated from one’s self and seems to becomes an attachment to one’s self. Self-deception hinder the person from being a healthy unity. Self-knowledge includes a painful process of understanding oneself and facing the ambivalence to one self (Welz,
+<xref rid="CIT0046">2011a</xref>
+). The despair on the other hand might be not to be willing to be oneself, and then hiding oneself (Welz,
+<xref rid="CIT0046">2011a</xref>
+). “One does not want to be who one is, while one at same time cannot get rid of oneself” (Welz,
+<xref rid="CIT0046">2011a</xref>
+, p. 179).
+</p>
+<p>
+Kierkegaard believes that owning one’s own heart, one’s brokenness, is only possible when resting transparently in the power that established it (Cruysberghs,
+<xref rid="CIT0006">2010</xref>
+; Kierkegaard,
+<xref rid="CIT0021">1849</xref>
+). Standing before the second person (God) is what brings this home (Lippitt,
+<xref rid="CIT0026">2017</xref>
+).
+</p>
+<p>
+Past experiences are part of the lived body in time and space (Merleau-Ponty,
+<xref rid="CIT0029">2002</xref>
+). The findings in our study,
+<italic>being shaped by childhood</italic>
+, disclose a self-understanding of how the obesity is strongly related to the person’s history. Early childhood experiences and challenging events in life lie under the surface. Thus, causes of obesity are related to early childhood, such as loss of significant persons, divorce or illness. Stories from childhood about eating and meals as a scene of struggle are highlighted as reasons for the current relationship to food. It seems as if seeing one’s own obesity in relation to memories holds the person trapped in hopelessness and self-blame. By linking one’s own obesity to past experiences, the state of obesity becomes fundamental, seemingly impossible to change, and make oneself alienated. It appears as a self-fulfilling prophecy. This is in accordance with other studies that examined weight-related challenges dating back to adolescence (Malterud a Ulriksen,
+<xref rid="CIT0028">2010</xref>
+; Ritten a LaManna,
+<xref rid="CIT0039">2017</xref>
+). Hofmann (
+<xref rid="CIT0018">2016</xref>
+) found that food and eating are phenomena with strong cultural bearings and that they are profoundly private. By relating to a fixed past, humans can feel they are victims of circumstances. Being in control of the circumstances may limit their freedom through disownment of their lived body (Barber,
+<xref rid="CIT0001">2016</xref>
+).
+</p>
+<p>
+Deprivation of liberty was evident in our study as a sense of being alienated from fully living one’s life. The theme
+<italic>judging oneself</italic>
+is related to feelings of shame about the body: labelling one’s own body as terrible, thick, chubby and ugly and feeling one’s obesity as a weakness. Because of shame about one’s body image, obese individuals may perceive themselves as unattractive, defective and rejectable. Thus, the body seems to be in a state of constant embarrassment, a negative place of disappointment.
+</p>
+<p>
+Fuchs (
+<xref rid="CIT0010">2002</xref>
+) think with Merleau-Ponty and make a difference about the corporal body and the lived body. Lived body, is my embodied being-in- the- world. The corporal body are often looked upon as a mere result of objectifying reflection of the body, as a foreign body. The body can be an obstacle for living one’s life and limit the access to the world. The corporal body is thrown back on itself, connected with alienation, disappointment, embarrassment (Fuchs,
+<xref rid="CIT0010">2002</xref>
+).
+</p>
+<p>
+Fuchs states: ‘in the experiences of heaviness … the lived body—loses its “taken for granted” … and becomes the sluggish, obstinate or fragile body which I have” … “than the body loses its prereflective … and the spontaneous bodily expressions are disturbed, blocked, or objectified by an inversion of our attention upon ourself” (Fuchs,
+<xref rid="CIT0010">2002</xref>
+, p. 224, 225).
+</p>
+<p>
+Welz (
+<xref rid="CIT0047">2011b</xref>
+) pointed to shame processes such as struggling with questions of who one is, who one wants to become, and how one wishes to be seen. Experiences of shame can shrink the life-world and challenge one’s worth as a human (Merleau-Ponty,
+<xref rid="CIT0029">2002</xref>
+; Welz,
+<xref rid="CIT0047">2011b</xref>
+).
+</p>
+<p>
+Studies on eating disorders highlight the tendency towards self-criticism and attacks on the self, as maladaptive ways of dealing with a body image of shame (Malterud a Ulriksen,
+<xref rid="CIT0028">2010</xref>
+). Our findings about being
+<italic>captured by food, depressed by the culture</italic>
+, and
+<italic>judged by oneself</italic>
+indicate a tendency for the respondents to doubt and blame themselves for their own weakness. When one’s own body lets one down, somehow betraying oneself, the opportunity to find personal space, care for, and love oneself seems to be lost. That is experienced as being alienated as a human being, and may lead to loss of oneself. Kierkegaard (
+<xref rid="CIT0020">1847</xref>
+) pointed towards human beings struggling with love and self hate which point towards alienation of oneself (Kierkegaard,
+<xref rid="CIT0020">1847</xref>
+). Lacking the abilities for warmth, kindness, self-compassion and love of self can pose challenges for persons living with problematic weight (Duarte et al.,
+<xref rid="CIT0009">2014</xref>
+). Being depressed by the culture and judged by oneself may be synonymous with what Kierkegaard describes as an experience of self-rejection (Lippitt,
+<xref rid="CIT0025">2013</xref>
+). Alienation might be when love of self is weak and completely owning one’s place can be challenging. Experiencing brokenness in life, such as obesity, can release a struggle for self-preservation. Kierkegaard claims that despair can be the road to deeper reflection and to let go of established understanding of oneself (Kierkegaard,
+<xref rid="CIT0021">1849</xref>
+). Kierkegaard (
+<xref rid="CIT0021">1849</xref>
+) suggested that love of self is a duty, and claimed that when one abandons the truth of the past, one may gain the freedom to live one’s life and break free from isolation. Struggling for self-love might be to open an interpersonal space and reduce self-devaluation, through reflection without judging oneself (Fuchs,
+<xref rid="CIT0010">2002</xref>
+; Gustin,
+<xref rid="CIT0015">2017</xref>
+). This seems to provide an opportunity for expanding the space for oneself, and for recognizing the worth of the self, which only love of self can give birth to (Lippitt,
+<xref rid="CIT0025">2013</xref>
+).
+</p>
+</sec>
+</sec>
+<sec id="S0006">
+<label>6.</label>
+<title>Conclusion</title>
+<p>
+Our findings have demonstrated the relationship between brokenness and “closing down” one’s life-world. Participants experienced living with obesity as an objectification and alienation from themselves and the world. Our findings suggest that traditional health services can lead to increased objectification. Health personnel need to turn towards a life-world perspective. Reducing objectification and alienation might be conducive to achieving more effective treatment. The possibility of obtaining weight loss and a more enjoyable life might be achieved when the person suffering from obesity overcomes objectification and moves towards becoming a subject in her/his own life, through love of themselves.
+</p>
+<sec id="S0006-S2001">
+<label>6.1.</label>
+<title>Implications for practice</title>
+<p>
+We suggest that a deeper understanding of the existential experiences from an individual perspective is required to improve treatment. Obviously, the different treatments available for obese people in health care require a more holistic approach. Our findings might fill a gap caused by lack of in-depth understanding of objectification and alienation. When health care can accommodate the individual’s existential experiences, they can be empowered and find their own way. Persons need help to become aware of their own objectification of their body and the resulting alienation. First, they need to accept themselves as a whole “lived body”, to think of themselves as an embodied entity (Murray,
+<xref rid="CIT0032">2010</xref>
+). To enable them to accept themselves as subjects, we suggest that one-to-one counselling is needed, where they can share the existential experiences of suffering from obesity. Through such reflections, they might be helped to become closer to their own body.
+</p>
+<p>
+A phenomenological understanding of these existential experiences can inform professionals who deal with health issues related to persons with obesity. Health care workers, together with affected individuals, need to reflect on the existential experiences of living with obesity. Instead of meeting persons through diagnostic and classification labels, it is appropriate to rethink narrow definitions and seek instead to meet the person’s unique experiences, focusing on the person’s life-world. Our findings suggest that when persons living with obesity are liberated from objectification and alienation they are better prepared for working towards effective weight loss. In-depth knowledge from the sufferer’s perspective, might better guide health care workers on how to meet the person struggling with obesity, so that they can feel more human and achieve health.
+</p>
+</sec>
+<sec id="S0006-S2002">
+<label>6.2.</label>
+<title>Methodological considerations</title>
+<p>
+The evaluations were based on criteria such as credibility, coherence and universality (Kvale a Brinkmann,
+<xref rid="CIT0023">2009</xref>
+). It is a strength of the study that there is a relatively large number of participants (18), and we consider that we have received rich data. The researcher established a good dialogue with the participants and obtained rich descriptions, with both variances and deviances addressing the research question. The power of the information seems to be strong, so the number of participants might be more than sufficiently large and variable to achieve the aim of the study (Malterud et al.,
+<xref rid="CIT0027">2016</xref>
+). Universality was achieved through the study purpose, which was to arrive at a deeper and new understanding of the topic.
+</p>
+<p>
+It is important to recognize the limitations of the study. We are aware that a convenient sample necessary will not give the richest information sources, although the participants were available regard to the themes, excess, location, time and willingness. Another limitation may be that the data could be influenced by the participant’s involvement at the time they were participating in rehabilitation, when they might focus on what they wanted to change in life. In our view, there are no general “lived experiences” of living with obesity, although there might be some common themes. Nevertheless, using multiple participants, we found a good deal of consensus as to how the person living with obesity experiences life.
+</p>
+<p>
+As this was an explorative study, we did not aim for complete descriptions of all aspects of living with obesity, but we believe we have contributed substantially to in-depth knowledge about a challenging health problem (Malterud et al.,
+<xref rid="CIT0027">2016</xref>
+).
+</p>
+</sec>
+</sec>
+</body>
+<back>
+<bio id="B0001">
+<p>
+<bold>
+<italic>Venke Ueland</italic>
+</bold>
+is a PhD from Department of Caring Science Åbo Akademi University, Vasa/Associated professor at Faculty of Health Sciences, University of Stavanger, Norway. Her research topics includes: the Life Phenomenon longing, existential experiences related to obesity and cancer treatment care.
+</p>
+</bio>
+<bio id="B0002">
+<p>
+<bold>
+<italic>Bodil Furnes</italic>
+</bold>
+is professor in Nursing Science at University of Stavanger, Norway. Her research topics includes: therapeutic writing in bereavement care, therapeutic writing in pain management, existential experiences related to obesity and cancer treatment care.
+</p>
+</bio>
+<bio id="B0003">
+<p>
+<bold>
+<italic>Elin Dysvik</italic>
+</bold>
+is professor emerita in Nursing Science at University of Stavanger, Norway. She is a clinical specialist in Anesthetic nursing and Operation room nursing. Her research topics includes: chronic pain management, quality of life, cognitive therapy, therapeutic writing and existential experiences related to obesity and cancer treatment care.
+</p>
+</bio>
+<bio id="B0004">
+<p>
+<bold>
+<italic>Kristine Rørtveit</italic>
+</bold>
+is a PhD in Leadership from University of Stavanger/Associate Professor in the University of Stavanger/Clinical Specialist in Mental Health Nursing. She works as a group-therapist in an outpatient ward at the Stavanger District Psychiatric Center and Senior Counsellor at the Research Department–both in Stavanger University Hospital. Her research topics includes: eating difficulties and existential experiences related to obesity.
+</p>
+</bio>
+<sec>
+<title>Acknowledgments</title>
+<p>
+The authors would like to thank the director of the rehabilitation clinic for helping with recruiting participants to the study and facilitations for interview.
+</p>
+</sec>
+<sec id="S0007">
+<title>Disclosure statement</title>
+<p>
+No potential conflict of interest was reported by the authors.
+</p>
+</sec>
+<sec id="S0008">
+<title>Author contributions</title>
+<p>
+VU, BF, ED and KR planned the study design; VU was responsible for drafting the manuscript; and all authors contributed to the writing process.
+</p>
+</sec>
+<ref-list>
+<title>References</title>
+<ref id="CIT0001">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Barber</surname>
+<given-names>S. W.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+).
+<source>
+<italic>
+Being large: An interpretive phenomenological enquiry into the lived world of problematic weight
+</italic>
+</source>
+.
+<publisher-loc>Middlese</publisher-loc>
+:
+<publisher-name>New School of Psychotherapy and Counselling</publisher-name>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0002">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Batchelor</surname>
+<given-names>D.</given-names>
+</name>
+</person-group>
+(
+<year>2006</year>
+).
+<article-title>Becoming what you want to be</article-title>
+.
+<source>
+<italic>London Review of Education</italic>
+</source>
+,
+<volume>4</volume>
+(
+<issue>3</issue>
+),
+<fpage>225</fpage>
+–
+<lpage>11</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0003">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Bombak</surname>
+<given-names>A.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Monaghan</surname>
+<given-names>L.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+).
+<article-title>
+Obesity, bodily change and health identities: A qualitative study of Canadian women
+</article-title>
+.
+<source>
+<italic>Sociology of Health a Illness</italic>
+</source>
+,
+<volume>39</volume>
+,
+<fpage>923</fpage>
+–
+<lpage>940</lpage>
+.
+<pub-id pub-id-type="pmid">28012200</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0004">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Carryer</surname>
+<given-names>J.</given-names>
+</name>
+</person-group>
+(
+<year>2001</year>
+).
+<article-title>
+Embodied largeness: A significant women’s health issue
+</article-title>
+.
+<source>
+<italic>Nursing Inquiry</italic>
+</source>
+,
+<volume>8</volume>
+,
+<fpage>90</fpage>
+–
+<lpage>97</lpage>
+.
+<pub-id pub-id-type="pmid">11882207</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0005">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Christiansen</surname>
+<given-names>B.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Borge</surname>
+<given-names>L.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Fagermoen</surname>
+<given-names>M.</given-names>
+</name>
+</person-group>
+(
+<year>2012</year>
+).
+<article-title>
+Understanding everyday life of morbidly obese adults-habits and body image
+</article-title>
+.
+<source>
+<italic>
+International Journal of Qualitative Studies on Health and Well-Being
+</italic>
+</source>
+,
+<volume>7</volume>
+,
+<page-range>17255</page-range>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0006">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Cruysberghs</surname>
+<given-names>P.</given-names>
+</name>
+</person-group>
+(
+<year>2010</year>
+).
+<chapter-title>Transparency to oneself and to god</chapter-title>
+In
+<person-group person-group-type="editor">
+<name name-style="western">
+<surname>Garff</surname>
+<given-names>J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Rocca</surname>
+<given-names>E.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Søltoft</surname>
+<given-names>P.</given-names>
+</name>
+</person-group>
+(Eds.),
+<source>
+<italic>
+At vaere sig selv naervaerende: Festskrift til Niels Joergen Cappelhoern
+</italic>
+</source>
+(pp.
+<fpage>127</fpage>
+–
+<lpage>141</lpage>
+).
+<publisher-loc>København</publisher-loc>
+:
+<publisher-name>Kristeligt Dagblads Forlag</publisher-name>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0007">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Cullen</surname>
+<given-names>A. J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Barnett</surname>
+<given-names>A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Komesaroff</surname>
+<given-names>P. A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Brown</surname>
+<given-names>W.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>O’Brien</surname>
+<given-names>K. S.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hall</surname>
+<given-names>W.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Carter</surname>
+<given-names>A.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+).
+<article-title>
+A qualitative study of overweight and obese Australians’ views of food addiction
+</article-title>
+.
+<source>
+<italic>Appetite</italic>
+</source>
+,
+<volume>115</volume>
+,
+<fpage>62</fpage>
+–
+<lpage>70</lpage>
+.
+<pub-id pub-id-type="pmid">28192219</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0008">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Curtis</surname>
+<given-names>C.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Davis</surname>
+<given-names>C.</given-names>
+</name>
+</person-group>
+(
+<year>2014</year>
+).
+<article-title>
+A qualitative study of binge eating and obesity from an addiction perspective
+</article-title>
+.
+<source>
+<italic>Eating Disorders</italic>
+</source>
+,
+<volume>22</volume>
+(
+<issue>1</issue>
+),
+<fpage>19</fpage>
+–
+<lpage>32</lpage>
+.
+<pub-id pub-id-type="pmid">24365525</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0009">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Duarte</surname>
+<given-names>C.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Pinto-Gouveia</surname>
+<given-names>J.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Ferreira</surname>
+<given-names>C.</given-names>
+</name>
+</person-group>
+(
+<year>2014</year>
+).
+<article-title>
+Escaping from body image shame and harsh self-criticism: Exploration of underlying mechanisms of binge eating
+</article-title>
+.
+<source>
+<italic>Eating Behaviors</italic>
+</source>
+,
+<volume>15</volume>
+(
+<issue>4</issue>
+),
+<fpage>638</fpage>
+–
+<lpage>643</lpage>
+.
+<pub-id pub-id-type="pmid">25248129</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0010">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Fuchs</surname>
+<given-names>T.</given-names>
+</name>
+</person-group>
+(
+<year>2002</year>
+).
+<article-title>
+The phenomenology of shame, guilt and the body in body dysmorphic disorder and depression
+</article-title>
+.
+<source>
+<italic>Journal of Phenomenological Psychology</italic>
+</source>
+,
+<volume>33</volume>
+(
+<issue>2</issue>
+),
+<fpage>223</fpage>
+–
+<lpage>243</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0011">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Gadamer</surname>
+<given-names>H.-G.</given-names>
+</name>
+</person-group>
+(
+<year>2007</year>
+).
+<source>
+<italic>Sannhed og metode</italic>
+</source>
+<comment>[Truth and method]</comment>
+<publisher-loc>Århus</publisher-loc>
+:
+<publisher-name>Academica</publisher-name>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0012">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Gaete</surname>
+<given-names>M. I.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Fuchs</surname>
+<given-names>T.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+).
+<article-title>
+From body image to emotional bodily experience in eating disorders
+</article-title>
+.
+<source>
+<italic>Journal of Phenomenological Psychology</italic>
+</source>
+,
+<volume>47</volume>
+(
+<issue>1</issue>
+),
+<fpage>17</fpage>
+–
+<lpage>40</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0013">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Grønning</surname>
+<given-names>I.</given-names>
+</name>
+</person-group>
+(
+<year>2014</year>
+).
+<article-title>
+Fedmefortellinger: Om vektnedgang og biografiske opprykk [Fat stories: About weight reduction and biographical promotions]
+</article-title>
+.
+<source>
+<italic>Sosiologisk Tidsskrift</italic>
+</source>
+,
+<volume>22</volume>
+,
+<fpage>227</fpage>
+–
+<lpage>248</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0014">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Grønning</surname>
+<given-names>I.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Scambler</surname>
+<given-names>G.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Tjora</surname>
+<given-names>A.</given-names>
+</name>
+</person-group>
+(
+<year>2013</year>
+).
+<article-title>
+From fatness to badness: The modern morality of obesity
+</article-title>
+.
+<source>
+<italic>Health</italic>
+</source>
+,
+<volume>17</volume>
+(
+<issue>3</issue>
+),
+<fpage>266</fpage>
+–
+<lpage>283</lpage>
+.
+<pub-id pub-id-type="pmid">22801877</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0015">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Gustin</surname>
+<given-names>L. W.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+).
+<article-title>
+Compassion for self and others as key aspects of well-being in changing times
+</article-title>
+.
+<source>
+<italic>Scandinavian Journal of Caring Sciences</italic>
+</source>
+,
+<volume>31</volume>
+(
+<issue>3</issue>
+),
+<fpage>427</fpage>
+–
+<lpage>433</lpage>
+.
+<pub-id pub-id-type="pmid">28984002</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0016">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Hensrud</surname>
+<given-names>D. D.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Klein</surname>
+<given-names>S.</given-names>
+</name>
+</person-group>
+(
+<year>2006</year>
+).
+<article-title>
+Extreme obesity: A new medical crisis in the United States
+</article-title>
+.
+<source>
+<italic>Mayo Clinic Proceedings</italic>
+</source>
+,
+<volume>81</volume>
+(
+<issue>10</issue>
+),
+<fpage>S5</fpage>
+–
+<lpage>S10</lpage>
+.
+<pub-id pub-id-type="pmid">17036573</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0017">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Hernandez-Hons</surname>
+<given-names>A.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Woolley</surname>
+<given-names>S. R.</given-names>
+</name>
+</person-group>
+(
+<year>2012</year>
+).
+<article-title>
+Women’s experiences with emotional eating and related attachment and sociocultural processes
+</article-title>
+.
+<source>
+<italic>Journal of Marital and Family Therapy</italic>
+</source>
+,
+<volume>38</volume>
+(
+<issue>4</issue>
+),
+<fpage>589</fpage>
+–
+<lpage>603</lpage>
+.
+<pub-id pub-id-type="pmid">23066747</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0018">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Hofmann</surname>
+<given-names>B.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+).
+<article-title>
+Obesity as a socially defined disease: Philosophical considerations and implications for policy and care
+</article-title>
+.
+<source>
+<italic>Health Care Analysis</italic>
+</source>
+,
+<volume>24</volume>
+(
+<issue>1</issue>
+),
+<fpage>86</fpage>
+–
+<lpage>100</lpage>
+.
+<pub-id pub-id-type="pmid">25822670</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0019">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Jansen</surname>
+<given-names>J.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Wehrle</surname>
+<given-names>M.</given-names>
+</name>
+</person-group>
+(
+<year>2018</year>
+).
+<chapter-title>
+The normal body: Female bodies in changing contexts of normalization and optimization
+</chapter-title>
+In
+<source>
+<italic>New feminist perspectives on embodiment</italic>
+</source>
+(pp.
+<fpage>37</fpage>
+–
+<lpage>55</lpage>
+).
+<publisher-loc>Cham</publisher-loc>
+:
+<publisher-name>Springer International Publishing</publisher-name>
+. doi:
+<pub-id pub-id-type="doi">10.1007/978-3-319-72353-2_3</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0020">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Kierkegaard</surname>
+<given-names>S.</given-names>
+</name>
+</person-group>
+(
+<year>1847</year>
+).
+<source>
+<italic>Kjerlighedens gjerninger</italic>
+</source>
+<comment>[Works of Love]</comment>
+<publisher-loc>Copenhagen, Denmark</publisher-loc>
+:
+<publisher-name>Gyldendal</publisher-name>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0021">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Kierkegaard</surname>
+<given-names>S.</given-names>
+</name>
+</person-group>
+(
+<year>1849</year>
+).
+<source>
+<italic>Sygdommen til døden. Af anti-climacus</italic>
+</source>
+<comment>[Sickness into death]</comment>
+<publisher-loc>Copenhagen, Denmark</publisher-loc>
+:
+<publisher-name>Reitzel Forlag</publisher-name>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0022">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Knutsen</surname>
+<given-names>I. R.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Terragni</surname>
+<given-names>L.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Foss</surname>
+<given-names>C.</given-names>
+</name>
+</person-group>
+(
+<year>2011</year>
+).
+<article-title>
+Morbidly obese patients and lifestyle change: Constructing ethical selves
+</article-title>
+.
+<source>
+<italic>Nursing Inquiry</italic>
+</source>
+,
+<volume>18</volume>
+(
+<issue>4</issue>
+),
+<fpage>348</fpage>
+–
+<lpage>358</lpage>
+.
+<pub-id pub-id-type="pmid">22050620</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0023">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Kvale</surname>
+<given-names>S.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Brinkmann</surname>
+<given-names>S.</given-names>
+</name>
+</person-group>
+(
+<year>2009</year>
+).
+<source>
+<italic>Det kvalitative forskningsintervju</italic>
+</source>
+<comment>[The qualitative research interview]</comment>
+<publisher-loc>Copenhagen, Denmark</publisher-loc>
+:
+<publisher-name>Gyldendal</publisher-name>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0024">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Leder</surname>
+<given-names>D.</given-names>
+</name>
+</person-group>
+(
+<year>1990</year>
+).
+<source>
+<italic>The absent body</italic>
+</source>
+.
+<publisher-name>University of Chicago Press</publisher-name>
+<comment>Retrieved from</comment>
+<ext-link ext-link-type="uri" xlink:href="https://books.google.no/books?hl=no‎aid=659HT5iaLdsCaoi=fndapg=PR9adq=Leder+1990aots=Z12_TMCwWbasig=PK_otvk26FBdKLiySpOpx1xsZPkaredir_esc=y#v=onepageaq=Leder1990af=false">
+https://books.google.no/books?hl=no‎aid=659HT5iaLdsCaoi=fndapg=PR9adq=Leder+1990aots=Z12_TMCwWbasig=PK_otvk26FBdKLiySpOpx1xsZPkaredir_esc=y#v=onepageaq=Leder1990af=false
+</ext-link>
+</mixed-citation>
+</ref>
+<ref id="CIT0025">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Lippitt</surname>
+<given-names>J.</given-names>
+</name>
+</person-group>
+(
+<year>2013</year>
+).
+<source>
+<italic>Kierkegaard and the problem of self-love</italic>
+</source>
+.
+<publisher-loc>Cambridge</publisher-loc>
+:
+<publisher-name>Cambridge University Press</publisher-name>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0026">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Lippitt</surname>
+<given-names>J.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+).
+<chapter-title>Self-knowledge in Kierkegaard</chapter-title>
+In
+<source>
+<italic>Self-knowledge</italic>
+</source>
+(pp.
+<fpage>205</fpage>
+–
+<lpage>222</lpage>
+).
+<publisher-name>Oxford University Press</publisher-name>
+. doi:
+<pub-id pub-id-type="doi">10.1093/acprof:oso/9780190226411.003.0014</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0027">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Malterud</surname>
+<given-names>K.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Siersma</surname>
+<given-names>V. D.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Guassora</surname>
+<given-names>A. D.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+).
+<article-title>Sample size in qualitative interview studies</article-title>
+.
+<source>
+<italic>Qualitative Health Research</italic>
+</source>
+,
+<volume>26</volume>
+(
+<issue>13</issue>
+),
+<fpage>1753</fpage>
+–
+<lpage>1760</lpage>
+.
+<pub-id pub-id-type="pmid">26613970</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0028">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Malterud</surname>
+<given-names>K.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Ulriksen</surname>
+<given-names>K.</given-names>
+</name>
+</person-group>
+(
+<year>2010</year>
+).
+<article-title>
+“Norwegians fear fatness more than anything else” – A qualitative study of normative newspaper messages on obesity and health
+</article-title>
+.
+<source>
+<italic>Patient Education and Counseling</italic>
+</source>
+,
+<volume>81</volume>
+(
+<issue>1</issue>
+),
+<fpage>47</fpage>
+–
+<lpage>52</lpage>
+.
+<pub-id pub-id-type="pmid">19945812</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0029">
+<mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Merleau-Ponty</surname>
+<given-names>M.</given-names>
+</name>
+</person-group>
+(
+<year>2002</year>
+).
+<source>
+<italic>Phenomenology of perception</italic>
+</source>
+.
+<publisher-loc>London</publisher-loc>
+:
+<publisher-name>Routledge</publisher-name>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0030">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Merrill</surname>
+<given-names>E.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Grassley</surname>
+<given-names>J.</given-names>
+</name>
+</person-group>
+(
+<year>2008</year>
+).
+<article-title>
+Women’s stories of their experiences as overweight patients
+</article-title>
+.
+<source>
+<italic>Journal of Advanced Nursing</italic>
+</source>
+,
+<volume>64</volume>
+(
+<issue>2</issue>
+),
+<fpage>139</fpage>
+–
+<lpage>146</lpage>
+.
+<pub-id pub-id-type="pmid">18764854</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0031">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Murray</surname>
+<given-names>S.</given-names>
+</name>
+</person-group>
+(
+<year>2007</year>
+).
+<article-title>
+To cite this article: Samantha Murray (2007) corporeal knowledges and deviant bodies: Perceiving the fat body
+</article-title>
+.
+<source>
+<italic>Social Semiotics</italic>
+</source>
+,
+<volume>17</volume>
+(
+<issue>3</issue>
+),
+<fpage>361</fpage>
+–
+<lpage>373</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0032">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Murray</surname>
+<given-names>S.</given-names>
+</name>
+</person-group>
+(
+<year>2010</year>
+).
+<article-title>Doing politics or selling out? Living the fat body</article-title>
+.
+<source>
+<italic>Women’s Studies</italic>
+</source>
+. doi:
+<pub-id pub-id-type="doi">10.1080/00497870590964165</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0033">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Natvik</surname>
+<given-names>E.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Råheim</surname>
+<given-names>M.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Andersen</surname>
+<given-names>J. R.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Moltu</surname>
+<given-names>C.</given-names>
+</name>
+</person-group>
+(
+<year>2018</year>
+).
+<article-title>
+Living a successful weight loss after severe obesity
+</article-title>
+.
+<source>
+<italic>
+International Journal of Qualitative Studies on Health and Well-Being
+</italic>
+</source>
+,
+<volume>13</volume>
+(
+<issue>1</issue>
+),
+<fpage>1487762</fpage>
+.
+<pub-id pub-id-type="pmid">29947301</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0034">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Nielsen</surname>
+<given-names>K.</given-names>
+</name>
+</person-group>
+(
+<year>2018</year>
+).
+<article-title>Kierkegaard and the modern search for self</article-title>
+.
+<source>
+<italic>Theory a Psychology</italic>
+</source>
+,
+<volume>28</volume>
+(
+<issue>1</issue>
+),
+<fpage>65</fpage>
+–
+<lpage>83</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0035">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Orbach</surname>
+<given-names>S.</given-names>
+</name>
+</person-group>
+(
+<year>2011</year>
+).
+<article-title>Losing bodies</article-title>
+.
+<source>
+<italic>Social Research</italic>
+</source>
+,
+<volume>78</volume>
+,
+<fpage>387</fpage>
+–
+<lpage>394</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0036">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Overgaard</surname>
+<given-names>D.</given-names>
+</name>
+</person-group>
+(
+<year>2002</year>
+).
+<article-title>
+Being obese is paradoxical living – An exploratory study of five persons lived experiences of being overweight
+</article-title>
+.
+<source>
+<italic>Journal of Nursing Theory</italic>
+</source>
+,
+<volume>11</volume>
+,
+<fpage>3</fpage>
+–
+<lpage>12</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0037">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Owen-Smith</surname>
+<given-names>A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Donovan</surname>
+<given-names>J.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Coast</surname>
+<given-names>J.</given-names>
+</name>
+</person-group>
+(
+<year>2014</year>
+).
+<article-title>Vicious circles</article-title>
+.
+<source>
+<italic>Qualitative Health Research</italic>
+</source>
+,
+<volume>24</volume>
+(
+<issue>9</issue>
+),
+<fpage>1212</fpage>
+–
+<lpage>1220</lpage>
+.
+<pub-id pub-id-type="pmid">25079501</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0038">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Pantenburg</surname>
+<given-names>B.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Sikorski</surname>
+<given-names>C.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Luppa</surname>
+<given-names>M.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Schomerus</surname>
+<given-names>G.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>König</surname>
+<given-names>-H.-H.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Werner</surname>
+<given-names>P.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Riedel-Heller</surname>
+<given-names>S. G.</given-names>
+</name>
+</person-group>
+(
+<year>2012</year>
+).
+<article-title>
+Medical students’ attitudes towards overweight and obesity
+</article-title>
+.
+<source>
+<italic>PloS One</italic>
+</source>
+,
+<volume>7</volume>
+(
+<issue>11</issue>
+),
+<fpage>e48113</fpage>
+.
+<pub-id pub-id-type="pmid">23144850</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0039">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Ritten</surname>
+<given-names>A.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>LaManna</surname>
+<given-names>J.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+).
+<article-title>
+Unmet needs in obesity management: From guidelines to clinic
+</article-title>
+.
+<source>
+<italic>
+Journal of the American Association of Nurse Practitioners
+</italic>
+</source>
+,
+<volume>29</volume>
+(
+<issue>S1</issue>
+),
+<fpage>S30</fpage>
+–
+<lpage>S42</lpage>
+.
+<pub-id pub-id-type="pmid">29024554</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0040">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Rørtveit</surname>
+<given-names>K.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Furnes</surname>
+<given-names>B.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Dysvik</surname>
+<given-names>E.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Ueland</surname>
+<given-names>V.</given-names>
+</name>
+</person-group>
+(
+<year>2017</year>
+).
+<article-title>
+Struggle for a meaningful life after obesity treatment—A qualitative systematic literature review
+</article-title>
+.
+<source>
+<italic>Open Journal of Nursing</italic>
+</source>
+,
+<volume>7</volume>
+(
+<issue>12</issue>
+),
+<fpage>1474</fpage>
+–
+<lpage>1492</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0041">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Rugseth</surname>
+<given-names>G.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Standal</surname>
+<given-names>Ø.</given-names>
+</name>
+</person-group>
+(
+<year>2015</year>
+).
+<article-title>
+“My body can do magical things” the movement experiences of a man categorized as obese –A phenomenological study
+</article-title>
+.
+<source>
+<italic>Phenomenology a Practice</italic>
+</source>
+,
+<volume>9</volume>
+(
+<issue>1</issue>
+),
+<fpage>5</fpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0042">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Shaughnessy</surname>
+<given-names>M. J.</given-names>
+</name>
+</person-group>
+(
+<year>2018</year>
+).
+<article-title>Integrative literature review on shame</article-title>
+.
+<source>
+<italic>Nursing Science Quarterly</italic>
+</source>
+,
+<volume>31</volume>
+(
+<issue>1</issue>
+),
+<fpage>86</fpage>
+–
+<lpage>94</lpage>
+.
+<pub-id pub-id-type="pmid">29235948</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0043">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Spahlholz</surname>
+<given-names>J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Baer</surname>
+<given-names>N.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>König</surname>
+<given-names>-H.-H.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Riedel-Heller</surname>
+<given-names>S. G.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Luck-Sikorski</surname>
+<given-names>C.</given-names>
+</name>
+</person-group>
+(
+<year>2016</year>
+).
+<article-title>
+Obesity and discrimination - a systematic review and meta-analysis of observational studies
+</article-title>
+.
+<source>
+<italic>Obesity Reviews</italic>
+</source>
+,
+<volume>17</volume>
+(
+<issue>1</issue>
+),
+<fpage>43</fpage>
+–
+<lpage>55</lpage>
+.
+<pub-id pub-id-type="pmid">26596238</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0044">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Svenaeus</surname>
+<given-names>F.</given-names>
+</name>
+</person-group>
+(
+<year>2011</year>
+).
+<article-title>
+Illness as unhomelike being-in-the-world: Heidegger and the phenomenology of medicine
+</article-title>
+.
+<source>
+<italic>Medicine</italic>
+,
+<italic>Health Care and Philosophy</italic>
+</source>
+,
+<volume>14</volume>
+,
+<fpage>333</fpage>
+–
+<lpage>343</lpage>
+.
+</mixed-citation>
+</ref>
+<ref id="CIT0045">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Thomas</surname>
+<given-names>S. L.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Hyde</surname>
+<given-names>J.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Karunaratne</surname>
+<given-names>A.</given-names>
+</name>
+,
+<name name-style="western">
+<surname>Herbert</surname>
+<given-names>D.</given-names>
+</name>
+, a
+<name name-style="western">
+<surname>Komesaroff</surname>
+<given-names>P. A.</given-names>
+</name>
+</person-group>
+(
+<year>2008</year>
+).
+<article-title>
+Being ‘fat’ in today’s world: A qualitative study of the lived experiences of people with obesity in Australia
+</article-title>
+.
+<source>
+<italic>Health Expectations</italic>
+</source>
+,
+<volume>11</volume>
+(
+<issue>4</issue>
+),
+<fpage>321</fpage>
+–
+<lpage>330</lpage>
+.
+<pub-id pub-id-type="pmid">18684133</pub-id>
+</mixed-citation>
+</ref>
+<ref id="CIT0046">
+<mixed-citation publication-type="data">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Welz</surname>
+<given-names>C.</given-names>
+</name>
+</person-group>
+(
+<year>2011a</year>
+).
+<article-title>
+Puzzles of self-deception and problems of orientation: Kierkegaard and the current debate in the philosophy of psychology
+</article-title>
+.
+<comment>Retrieved from</comment>
+<ext-link ext-link-type="uri" xlink:href="https://philpapers.org/rec/WELPOS">https://philpapers.org/rec/WELPOS</ext-link>
+</mixed-citation>
+</ref>
+<ref id="CIT0047">
+<mixed-citation publication-type="data">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Welz</surname>
+<given-names>C.</given-names>
+</name>
+</person-group>
+(
+<year>2011b</year>
+).
+<article-title>Shame and the hiding self</article-title>
+.
+<comment>Retrieved from</comment>
+<ext-link ext-link-type="uri" xlink:href="https://www.passionsincontext.de/uploads/media/04_Welz.pdf">
+https://www.passionsincontext.de/uploads/media/04_Welz.pdf
+</ext-link>
+</mixed-citation>
+</ref>
+<ref id="CIT0048">
+<mixed-citation publication-type="web">
+<person-group person-group-type="author">
+<collab>World Health Organisation</collab>
+</person-group>
+(
+<year>2018</year>
+).
+<article-title>Obesity and overweight</article-title>
+.
+<comment>Retrieved</comment>
+<month>4</month>
+<day>30</day>
+,
+<year>2018</year>
+Retrived
+<comment>from</comment>
+<ext-link ext-link-type="uri" xlink:href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight">
+https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
+</ext-link>
+</mixed-citation>
+</ref>
+<ref id="CIT0049">
+<mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western">
+<surname>Zeiler</surname>
+<given-names>K.</given-names>
+</name>
+</person-group>
+(
+<year>2010</year>
+).
+<article-title>
+A phenomenological analysis of bodily self-awareness in the experience of pain and pleasure: On dys-appearance and eu-appearance
+</article-title>
+.
+<source>
+<italic>Medicine, Health Care and Philosophy</italic>
+</source>
+,
+<volume>13</volume>
+(
+<issue>4</issue>
+),
+<fpage>333</fpage>
+–
+<lpage>342</lpage>
+.
+</mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

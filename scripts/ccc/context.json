@@ -112,7 +112,7 @@
     "modification": "prov:Modify",
 
     "annotation_body": { "@id": "oa:hasBody", "@type": "@vocab" },
-    "annotation": { "@id": "oa:hasTarget", "@type": "@vocab" },
+    "annotation": { "@id": "oco:hasAnnotation", "@type": "@vocab" },
     "attributed_to": { "@id": "prov:wasAttributedTo", "@type": "@vocab" },
     "citation": { "@id": "cito:cites", "@type": "@vocab" },
     "citation_characterisation": { "@id": "cito:hasCitationCharacterisation", "@type": "@vocab" },

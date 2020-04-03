@@ -17,7 +17,7 @@
 __author__ = 'essepuntato'
 
 # Configuration for local test
-debug = False
+debug = True
 base_dir = "/srv/index/ccc/ref/"
 share_dir = "/srv/share/ccc/ref/"
 reference_dir = share_dir + "todo/"

@@ -424,8 +424,8 @@ class GraphEntity(object):
     def has_next_de(self, de_res): # new
         self.g.add((self.res, GraphEntity.has_next, URIRef(str(de_res))))
 
-    def has_context(self, de_res):
-        self.g.add((URIRef(str(de_res)), GraphEntity.is_context_of, self.res))
+    def is_context_of_rp_or_pl(self, de_res):
+        self.g.add(( self.res , GraphEntity.is_context_of, URIRef(str(de_res)) ))
 
     # /END Composite Attributes
 

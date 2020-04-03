@@ -1486,7 +1486,7 @@ class Jats2OC(object):
 	def create_context(graph, citing_entity, cur_rp_or_pl, xpath_string, de_resources, containers_title, resp_agent=None, source_provider=None, source=None):
 		cur_sent = Jats2OC.de_finder(graph, citing_entity, xpath_string, de_resources, containers_title, resp_agent, source_provider, source)
 		if cur_sent != None:
-			cur_rp_or_pl.has_context(cur_sent)
+			cur_sent.is_context_of_rp_or_pl(cur_rp_or_pl)
 
 
 	@staticmethod

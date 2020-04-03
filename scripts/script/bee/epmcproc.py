@@ -174,8 +174,11 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
     @staticmethod
     def normalise_doi(doi_string, include_prefix=False): # taken from https://github.com/opencitations/index/blob/master/identifier/doimanager.py
         if doi_string is not None:
-            doi_string = re.sub("\0+", "", re.sub("\s+", "", unquote(doi_string[doi_string.index("10."):])))
-            return doi_string.lower().strip()
+            try:
+                doi_string = re.sub("\0+", "", re.sub("\s+", "", unquote(doi_string[doi_string.index("10."):])))
+                return doi_string.lower().strip()
+            except:
+                return None
         return None
         #return doi_string.lower().strip() if doi_string is not None else None
 

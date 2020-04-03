@@ -68,7 +68,7 @@ try:
                                                      context_map={context_path: context_file_path},
                                                      dir_split=dir_split_number,
                                                      n_file_item=items_per_file,
-                                                     nq=True)
+                                                     nq=False)
 
                                 if do_parallel:
                                     base_share_dir = sharing_dir + sep + real_dir + \

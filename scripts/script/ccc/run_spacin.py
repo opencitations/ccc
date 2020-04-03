@@ -62,7 +62,7 @@ try:
                                                     dir_split=dir_split_number,
                                                     n_file_item=items_per_file,
                                                     default_dir=default_dir,
-                                                    nt=True)
+                                                    nt=False)
 
                                 prov_storer = Storer(prov,
                                                      context_map={context_path: context_file_path},

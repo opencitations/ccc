@@ -1412,11 +1412,13 @@ class Jats2OC(object):
 					rp_total_occurrence = str(be_ids_counter[pl_entry[0]["xref_id"]])
 					rp_entity = Jats2OC.process_pointer(pl_entry[0], rp_num, rp_total_occurrence, citing_entity, cited_entities_xmlid_be, graph, de_resources, resp_agent, source_provider, source)
 
-			for cited_entity, xmlid, be in cited_entities_xmlid_be:
-				gen_an = graph.add_an(resp_agent, source_provider, source)
+			set_cited_be = list(set([(cited_entity, be) for cited_entity, xmlid, be in cited_entities_xmlid_be]))
+			for cited_entity, be in set_cited_be:
 				gen_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, source_agent=source_provider, source=source)
 				gen_ci._create_citation(citing_entity, cited_entity)
-				gen_an._create_annotation(gen_ci, be_res=be)
+				gen_an = graph.add_an(resp_agent, source_provider, source)
+				gen_an._create_body_annotation(gen_ci)
+				be._create_annotation(gen_an)
 
 			siblings = Jats2OC.create_following_sibling(reference_pointer_list, de_resources)
 
@@ -1454,7 +1456,9 @@ class Jats2OC(object):
 				cur_an = graph.add_an(resp_agent, source_provider, source)
 				cur_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, rp_num, source_provider, source)
 				cur_ci._create_citation(citing_entity, cited_entity)
-				cur_an._create_annotation(cur_ci, rp_res=cur_rp)
+				cur_an._create_body_annotation(cur_ci)
+				cur_rp._create_annotation(cur_an)
+				#be.g._create_annotation(cur_an)
 
 		return cur_rp
 

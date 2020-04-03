@@ -449,11 +449,10 @@ class GraphEntity(object):
         create_type(self.g, self.res, res_type)
 
     # new
-    def _create_annotation(self, ci_res, be_res=None, rp_res=None):
-        if be_res:
-            self.g.add(( URIRef(str(be_res)), GraphEntity.has_annotation, self.res))
-        if rp_res:
-            self.g.add(( URIRef(str(rp_res)), GraphEntity.has_annotation, self.res))
+    def _create_annotation(self, an_res):
+        self.g.add(( self.res , GraphEntity.has_annotation, URIRef(str(an_res)) ))
+
+    def _create_body_annotation(self, ci_res):
         self.g.add(( self.res, GraphEntity.has_body, URIRef(str(ci_res))))
 
     def _create_citation(self, citing_res, cited_res):

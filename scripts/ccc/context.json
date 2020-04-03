@@ -3,12 +3,12 @@
 
     "gocc": "https://w3id.org/oc/ccc/",
     "gprov": "https://w3id.org/oc/ccc/prov/",
+    "gan": "https://w3id.org/oc/ccc/an/",
     "gar": "https://w3id.org/oc/ccc/ar/",
     "gbe": "https://w3id.org/oc/ccc/be/",
     "gbr": "https://w3id.org/oc/ccc/br/",
     "gca": "https://w3id.org/oc/ccc/ca/",
     "gci": "https://w3id.org/oc/ccc/ci/",
-    "gcp": "https://w3id.org/oc/ccc/ci/",
     "gcr": "https://w3id.org/oc/ccc/cr/",
     "gde": "https://w3id.org/oc/ccc/de/",
     "gdi": "https://w3id.org/oc/ccc/di/",

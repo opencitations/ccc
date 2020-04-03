@@ -14,9 +14,9 @@
 # SOFTWARE.
 
 CUR_DIR="${pwd}"
-cd /srv/
+cd /srv/dev/ccc/scripts
 
-python -m script.support.stopper -t /srv/share/ref/ --add
+python -m script.support.stopper -t /srv/share/ccc/ref/todo/ --add
 # This will stop both the SPACIN and BEE processes gently,
 # when they finish their last (current) iteration
 

@@ -16,7 +16,7 @@
 
 CUR_DIR="${pwd}"
 
-cd /srv/script/sh
+cd /srv/dev/ccc/scripts/script/sh
 ./spacin-run.sh
 if [ "$?" = "0" ]; then
     date >> spacin_log.txt

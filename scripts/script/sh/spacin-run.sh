@@ -13,12 +13,12 @@
 # ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
 # SOFTWARE.
 
-myv=`ps -ef | grep "[p]ython -m script.spacin.run"`
+myv=`ps -ef | grep "[p]ython -m script.ccc.run_spacin"`
 
 if [[ -z "$myv" ]]; then
     CUR_DIR="${pwd}"
-    cd /srv
-    nohup python -m script.spacin.run &
+    cd /srv/dev/ccc/scripts
+    nohup python -m script.ccc.run_spacin &
     cd $CUR_DIR
     exit 0
 fi

@@ -15,7 +15,7 @@
 
 CUR_DIR="${pwd}"
 
-cd /srv/script/sh
+cd /srv/dev/ccc/scripts/script/sh
 ./bee-run.sh
 if [ "$?" = "0" ]; then
     date >> bee_log.txt

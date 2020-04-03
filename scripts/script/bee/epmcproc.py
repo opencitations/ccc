@@ -177,9 +177,7 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
             try:
                 doi_string = re.sub("\0+", "", re.sub("\s+", "", unquote(doi_string[doi_string.index("10."):])))
                 return doi_string.lower().strip()
-            except:
-                print(doi_string)
-                exit(-1)
+            except ValueError:
                 return None
         return None
         #return doi_string.lower().strip() if doi_string is not None else None

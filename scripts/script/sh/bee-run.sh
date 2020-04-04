@@ -18,7 +18,7 @@ myv=`ps -ef | grep "[p]ython -m script.ccc.run_bee"`
 if [[ -z "$myv" ]]; then
     CUR_DIR="${pwd}"
     cd /srv/dev/ccc/scripts
-    nohup python -m script.ccc.run_bee &
+    nohup python -m script.ccc.run_bee > bee.out &
     cd $CUR_DIR
     exit 0
 fi

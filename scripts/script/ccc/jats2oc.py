@@ -1407,11 +1407,15 @@ class Jats2OC(object):
 					rp_total_occurrence = str(be_ids_counter[pl_entry[0]["xref_id"]])
 					rp_entity = Jats2OC.process_pointer(pl_entry[0], rp_num, rp_total_occurrence, citing_entity, cited_entities_xmlid_be, graph, de_resources, resp_agent, source_provider, source)
 
+			parsed_cited = []
 			for cited_entity, xmlid, be in cited_entities_xmlid_be:
-				gen_an = graph.add_an(resp_agent, source_provider, source)
-				gen_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, source_agent=source_provider, source=source)
-				gen_ci._create_citation(citing_entity, cited_entity)
-				gen_an._create_annotation(gen_ci, be_res=be)
+				if cited_entity not in parsed_cited:
+					gen_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, rp_num=None, source_agent=source_provider, source=source)
+					gen_ci._create_citation(citing_entity, cited_entity)
+					gen_an = graph.add_an(resp_agent, source_provider, source)
+					gen_an._create_body_annotation(gen_ci)
+					be._create_annotation(gen_an)
+					parsed_cited.append(cited_entity)
 
 			siblings = Jats2OC.create_following_sibling(reference_pointer_list, de_resources)
 
@@ -1449,7 +1453,9 @@ class Jats2OC(object):
 				cur_an = graph.add_an(resp_agent, source_provider, source)
 				cur_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, rp_num, source_provider, source)
 				cur_ci._create_citation(citing_entity, cited_entity)
-				cur_an._create_annotation(cur_ci, rp_res=cur_rp)
+				cur_an._create_body_annotation(cur_ci)
+				cur_rp._create_annotation(cur_an)
+
 
 		return cur_rp
 
@@ -1477,7 +1483,7 @@ class Jats2OC(object):
 	def create_context(graph, citing_entity, cur_rp_or_pl, xpath_string, de_resources, containers_title, resp_agent=None, source_provider=None, source=None):
 		cur_sent = Jats2OC.de_finder(graph, citing_entity, xpath_string, de_resources, containers_title, resp_agent, source_provider, source)
 		if cur_sent != None:
-			cur_rp_or_pl.has_context(cur_sent)
+			cur_sent.is_context_of_rp_or_pl(cur_rp_or_pl)
 
 
 	@staticmethod

@@ -413,14 +413,11 @@ class Jats2OC(object):
 					for elem in elems_path if "rp_xpath" in rp.keys() \
 					and rp["rp_xpath"] == elem and rp["rp_string"].isdigit()]
 				if len(range_values) == 2:
-					print("range 2")
 					range_values.sort()
 					n_rpn = rp_dicts[0]["n_rp"]
-					print("n_rpn",n_rpn, rp_dicts[0]["xref_id"])
 					for intermediate in range(int(range_values[0])+1,int(range_values[1]) ):
 						n_rpn += 1
 						xref_id = Jats2OC.find_xmlid(str(intermediate),root)
-						print("xref_id:",xref_id)
 						rp = rp_dicts[0]["xml_element"]
 						context_xpath = rp_dicts[0]["context_xpath"]
 						containers_title = rp_dicts[0]["containers_title"]
@@ -428,11 +425,10 @@ class Jats2OC(object):
 						if xref_id is not None:
 							rp_dict_i = Jats2OC.rp_dict(None , n_rpn , xref_id , None , None , None , None, context_xpath, containers_title)
 							rp_dicts.append(rp_dict_i)
-							print("rp_dict_i",rp_dict_i)
 
 				rp_dicts = sorted(rp_dicts, key=lambda rp: int(rp["n_rp"]))
 				rp_dicts = Jats2OC.add_pl_info(rp_dicts, root) if len(rp_dicts) > 1 else rp_dicts
-				print("rp_dicts",rp_dicts)
+
 				metadata.append(rp_dicts)
 				for rp in rp_dicts:
 					if rp in rp_list:
@@ -576,18 +572,14 @@ class Jats2OC(object):
 	def add_group_type(rp_groups):
 		""" returns the list w/ the type of group of xref and strings"""
 		for group in rp_groups:
-			print("group",group)
 			if Jats2OC.is_list(group) == True:
 				group.append('list')
 			elif Jats2OC.is_sequence(group) == True:
 				group.append('sequence')
-				print("seq")
 			elif Jats2OC.is_mixed(group) == True:
 				group.append('mixed')
-				print("mixed")
 			else:
 				group.append('singleton')
-				print("sing")
 		return rp_groups
 
 	# sentence methods
@@ -756,14 +748,12 @@ class Jats2OC(object):
 
 					# first rp after .
 					if Jats2OC.first_rp(i, previous) == True :
-						print("-first")
 						full_string_b = "".join(Jats2OC.get_text_before(elem))
 						first_rp_in_list = elem
 
 					# middle rp after . or last rp after .
 					elif Jats2OC.middle_rp(i,previous,next_el,one_after_next) == True \
 						or Jats2OC.last_rp(i, previous, next_el) == True:
-						print("-midlleorlast")
 						first_rp_in_list = next((el for el in rp_and_tails[i:] \
 							if isinstance(el,str)== False \
 							and isinstance(rp_and_tails[rp_and_tails.index(el)+1],str) \
@@ -772,7 +762,6 @@ class Jats2OC(object):
 						full_string_b = "".join(Jats2OC.get_text_before(first_rp_in_list)) if first_rp_in_list \
 							else "".join(Jats2OC.get_text_before(elem))
 					else: # any case that I didn't think of yet
-						print("-what")
 						full_string_b = "".join(Jats2OC.get_text_before(elem))
 						first_rp_in_list = None
 

@@ -413,20 +413,26 @@ class Jats2OC(object):
 					for elem in elems_path if "rp_xpath" in rp.keys() \
 					and rp["rp_xpath"] == elem and rp["rp_string"].isdigit()]
 				if len(range_values) == 2:
+					print("range 2")
 					range_values.sort()
 					n_rpn = rp_dicts[0]["n_rp"]
+					print("n_rpn",n_rpn, rp_dicts[0]["xref_id"])
 					for intermediate in range(int(range_values[0])+1,int(range_values[1]) ):
-						n_rpn += 1 # TODO change
+						n_rpn += 1
 						xref_id = Jats2OC.find_xmlid(str(intermediate),root)
+						print("xref_id:",xref_id)
 						rp = rp_dicts[0]["xml_element"]
 						context_xpath = rp_dicts[0]["context_xpath"]
 						containers_title = rp_dicts[0]["containers_title"]
-						rp_dict_i = Jats2OC.rp_dict(None , n_rpn , xref_id , None , None , None , None, context_xpath, containers_title)
-						if xref_id is not None:
-							rp_dicts.append(rp_dict_i)
-						rp_dicts = sorted(rp_dicts, key=lambda rp: int(rp["n_rp"]))
-						rp_dicts = Jats2OC.add_pl_info(rp_dicts, root) if len(rp_dicts) > 1 else rp_dicts
 
+						if xref_id is not None:
+							rp_dict_i = Jats2OC.rp_dict(None , n_rpn , xref_id , None , None , None , None, context_xpath, containers_title)
+							rp_dicts.append(rp_dict_i)
+							print("rp_dict_i",rp_dict_i)
+
+				rp_dicts = sorted(rp_dicts, key=lambda rp: int(rp["n_rp"]))
+				rp_dicts = Jats2OC.add_pl_info(rp_dicts, root) if len(rp_dicts) > 1 else rp_dicts
+				print("rp_dicts",rp_dicts)
 				metadata.append(rp_dicts)
 				for rp in rp_dicts:
 					if rp in rp_list:
@@ -570,14 +576,18 @@ class Jats2OC(object):
 	def add_group_type(rp_groups):
 		""" returns the list w/ the type of group of xref and strings"""
 		for group in rp_groups:
+			print("group",group)
 			if Jats2OC.is_list(group) == True:
 				group.append('list')
 			elif Jats2OC.is_sequence(group) == True:
 				group.append('sequence')
+				print("seq")
 			elif Jats2OC.is_mixed(group) == True:
 				group.append('mixed')
+				print("mixed")
 			else:
 				group.append('singleton')
+				print("sing")
 		return rp_groups
 
 	# sentence methods
@@ -608,16 +618,16 @@ class Jats2OC(object):
 
 		if Jats2OC.belongs_to_previous_sentence(root, elem_par, string_before, string_after) == True:
 			start_sent, str_before, str_after = Jats2OC.get_sentence(root, elem_par, sentence_splitter, True)
-
 		else:
 			start_sent, str_before, str_after = Jats2OC.get_sentence(root, elem_par, sentence_splitter, False)
-			if start_sent is None and str_before is None and str_after is None:
-				str_before = sentence_splitter.tokenize( string_before+elem_value )[-1]
-				start_sent = int([start for start, end in sentence_splitter.span_tokenize( string_before+elem_value )][-1] )+1 \
-					if len(Jats2OC.remove_spaces(string_before+elem_value)) != 0 else 1
-				str_after = sentence_splitter.tokenize( string_after )[0] \
-					if len(string_after) > 0 and string_after.isspace() == False \
-					else ''
+
+		if start_sent is None and str_before is None and str_after is None:
+			str_before = sentence_splitter.tokenize( string_before+elem_value )[-1]
+			start_sent = int([start for start, end in sentence_splitter.span_tokenize( string_before+elem_value )][-1] )+1 \
+				if len(Jats2OC.remove_spaces(string_before+elem_value)) != 0 else 1
+			str_after = sentence_splitter.tokenize( string_after )[0] \
+				if len(string_after) > 0 and string_after.isspace() == False \
+				else ''
 
 		len_sent = len(str_before+str_after) if str_after is not None else len(str_before)
 		sent_xpath_function = 'substring(string('+ET.ElementTree(root).getpath(elem_par.getparent())+'),'+str(start_sent)+','+str(len_sent)+')'
@@ -744,21 +754,16 @@ class Jats2OC(object):
 					next_el = rp_and_tails[i-1] if len(rp_and_tails[:i+1]) >= 2 else None
 					one_after_next = rp_and_tails[i-2] if len(rp_and_tails[:i+1]) >= 3 else None
 
-					# str_after and start_sent
-					# full_string_b: string until the first rp after .
-					# complete_b: string until the rp at hand
-					# rp_after_period_before: the first rp after period in prior sentences if exists
-					#	if the rp at hand is in a list after period, look for the next
-
 					# first rp after .
 					if Jats2OC.first_rp(i, previous) == True :
+						print("-first")
 						full_string_b = "".join(Jats2OC.get_text_before(elem))
 						first_rp_in_list = elem
 
 					# middle rp after . or last rp after .
 					elif Jats2OC.middle_rp(i,previous,next_el,one_after_next) == True \
 						or Jats2OC.last_rp(i, previous, next_el) == True:
-
+						print("-midlleorlast")
 						first_rp_in_list = next((el for el in rp_and_tails[i:] \
 							if isinstance(el,str)== False \
 							and isinstance(rp_and_tails[rp_and_tails.index(el)+1],str) \
@@ -767,6 +772,7 @@ class Jats2OC(object):
 						full_string_b = "".join(Jats2OC.get_text_before(first_rp_in_list)) if first_rp_in_list \
 							else "".join(Jats2OC.get_text_before(elem))
 					else: # any case that I didn't think of yet
+						print("-what")
 						full_string_b = "".join(Jats2OC.get_text_before(elem))
 						first_rp_in_list = None
 
@@ -1182,9 +1188,9 @@ class Jats2OC(object):
 	@staticmethod
 	def add_pl_info(rp_d, root):
 		"""add xpath and string of a list of xref in a dictionary"""
-		rp_d = [i for i in rp_d if "xml_element" in i.keys()]
-		first_el = rp_d[0]["xml_element"] if "xml_element" in rp_d[0].keys() else None
-		last_el = rp_d[-1]["xml_element"] if isinstance(rp_d[-1]["xml_element"],str) == False else rp_d[-2]["xml_element"]
+		rp_d_range = [i for i in rp_d if "xml_element" in i.keys()]
+		first_el = rp_d_range[0]["xml_element"] if "xml_element" in rp_d_range[0].keys() else None
+		last_el = rp_d_range[-1]["xml_element"] if isinstance(rp_d_range[-1]["xml_element"],str) == False else rp_d_range[-2]["xml_element"]
 		for rp in rp_d:
 			if "pl_xpath" not in rp.keys():
 				str_before = "".join(Jats2OC.get_text_before(first_el)).replace("\n"," ")
@@ -1412,13 +1418,11 @@ class Jats2OC(object):
 					rp_total_occurrence = str(be_ids_counter[pl_entry[0]["xref_id"]])
 					rp_entity = Jats2OC.process_pointer(pl_entry[0], rp_num, rp_total_occurrence, citing_entity, cited_entities_xmlid_be, graph, de_resources, resp_agent, source_provider, source)
 
-			set_cited_be = list(set([(cited_entity, be) for cited_entity, xmlid, be in cited_entities_xmlid_be]))
-			for cited_entity, be in set_cited_be:
+			for cited_entity, xmlid, be in cited_entities_xmlid_be:
+				gen_an = graph.add_an(resp_agent, source_provider, source)
 				gen_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, source_agent=source_provider, source=source)
 				gen_ci._create_citation(citing_entity, cited_entity)
-				gen_an = graph.add_an(resp_agent, source_provider, source)
-				gen_an._create_body_annotation(gen_ci)
-				be._create_annotation(gen_an)
+				gen_an._create_annotation(gen_ci, be_res=be)
 
 			siblings = Jats2OC.create_following_sibling(reference_pointer_list, de_resources)
 
@@ -1456,9 +1460,7 @@ class Jats2OC(object):
 				cur_an = graph.add_an(resp_agent, source_provider, source)
 				cur_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, rp_num, source_provider, source)
 				cur_ci._create_citation(citing_entity, cited_entity)
-				cur_an._create_body_annotation(cur_ci)
-				cur_rp._create_annotation(cur_an)
-				#be.g._create_annotation(cur_an)
+				cur_an._create_annotation(cur_ci, rp_res=cur_rp)
 
 		return cur_rp
 
@@ -1486,7 +1488,7 @@ class Jats2OC(object):
 	def create_context(graph, citing_entity, cur_rp_or_pl, xpath_string, de_resources, containers_title, resp_agent=None, source_provider=None, source=None):
 		cur_sent = Jats2OC.de_finder(graph, citing_entity, xpath_string, de_resources, containers_title, resp_agent, source_provider, source)
 		if cur_sent != None:
-			cur_sent.is_context_of_rp_or_pl(cur_rp_or_pl)
+			cur_rp_or_pl.has_context(cur_sent)
 
 
 	@staticmethod

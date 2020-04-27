@@ -535,7 +535,6 @@ class GraphSet(object):
             return self.res_to_entity[res]
 
     # Add resources related to bibliographic entities
-    # TODO add_an , add_ci
     def add_an(self, resp_agent, source_agent=None, source=None, res=None): # new
         return self._add(self.g_an, GraphEntity.note, res, resp_agent,
                         source_agent, source, self.an_info_path, "an")

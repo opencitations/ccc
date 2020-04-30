@@ -183,7 +183,7 @@ class CrossrefProcessor(FormatProcessor):
             self.reperr.new_article()
             cur_res = None
 
-            provided_url = None
+            provided_url , extracted_url = None , None
             entry = dg(full_entry, ["bibentry"])
             # originally set false to speed up the ccc corpus creation, put back now
             # if self.intext_refs:
@@ -201,10 +201,11 @@ class CrossrefProcessor(FormatProcessor):
             # 'http://pub.stat.ee/px/web.2001/dialog/statfile1.asp. Accessed on 2009'
             if provided_url is not None:
                 provided_url = FormatProcessor.extract_url(provided_url)
+            if provided_url is None:
+                extracted_url = FormatProcessor.extract_url(entry)
 
             extracted_doi = FormatProcessor.extract_doi(entry)
             extracted_doi_used = False
-            extracted_url = FormatProcessor.extract_url(entry)
 
             if provided_doi is not None:
                 cur_res = self.process_doi(provided_doi, self.curator, self.source_provider)
@@ -276,7 +277,7 @@ class CrossrefProcessor(FormatProcessor):
                     self.__add_doi(cur_res, extracted_doi, self.name)
 
                 # Add any URL extracted from the entry if it is not already included
-                if self.get_bib_entry_url:
+                if self.get_bib_entry_url == True and extracted_url is not None:
                     self.__add_url(cur_res, extracted_url)
 
                 result += [cur_res]

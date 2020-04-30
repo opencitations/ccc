@@ -183,6 +183,7 @@ class CrossrefProcessor(FormatProcessor):
             self.reperr.new_article()
             cur_res = None
 
+            provided_url = None
             entry = dg(full_entry, ["bibentry"])
             # originally set false to speed up the ccc corpus creation, put back now
             # if self.intext_refs:

@@ -38,8 +38,8 @@ The fields returned by this operation are the following:
 * *issue*: the number of the issue in which the specified bibliographic resource has been published;
 * *page*: the starting and ending pages of the specified bibliographic resource in the context of the venue where it has been published;
 * *doi*: the DOI of the citing bibliographic resource;
-* *occ_reference*: the semicolon-separated CCC local identifiers of all the bibliograhic resources cited by the specified bibliographic resource;
-* *doi_reference*: the semicolon-separated DOIs of all the cited bibliograhic resources that have such identifier associated;
+* *occ_reference*: the semicolon-separated CCC local identifiers of all the bibliographic resources cited by the specified bibliographic resource;
+* *doi_reference*: the semicolon-separated DOIs of all the cited bibliographic resources that have such identifier associated;
 * *citation_count*: the number of citations received by the specified bibliographic resource.
 #call /metadata/10.1016/j.ejmech.2010.06.013__10.1080/14756366.2020.1740695
 #field_type str(ccc_id) str(author) datetime(year) str(title) str(source_title) str(volume) str(issue) str(page) str(doi) str(occ_reference) str(doi_reference) int(citation_count)
@@ -766,8 +766,7 @@ SELECT DISTINCT ?cocited_doi ?cocited_ccc_id (GROUP_CONCAT(DISTINCT ?citing_doi;
 
   VALUES ?doi { "[[doi]]" }
 
-  ?article a fabio:Expression ;
-           datacite:hasIdentifier [
+  ?article datacite:hasIdentifier [
           		datacite:usesIdentifierScheme datacite:doi ;
           		literal:hasLiteralValue ?doi ] ;
   			^cito:hasCitedEntity/^oa:hasBody/^oco:hasAnnotation ?rp .

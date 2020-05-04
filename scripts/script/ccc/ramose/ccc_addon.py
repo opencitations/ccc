@@ -22,6 +22,63 @@ import re
 def lower(s):
     return s.lower(),
 
+def expand_query(type):
+    if type == "list":
+        pattern = """
+            ?rp ^co:element ?pl .
+            ?pl co:element ?cocited_rp ;
+              ^c4o:isContextOf ?sent .
+            ?sent ^frbr:part+ ?citing_article .
+
+            OPTIONAL {
+                ?sent ^frbr:part+ ?section .
+                ?section a doco:Section;
+                    ^frbr:part ?citing_article ;
+                    dcterms:title ?section_title .
+            }
+            """
+    elif type == "sentence":
+        pattern = """
+            ?rp ^co:element/^c4o:isContextOf|^c4o:isContextOf ?sent .
+            ?sent c4o:isContextOf/co:element|c4o:isContextOf ?cocited_rp ;
+                ^frbr:part+ ?citing_article .
+
+            OPTIONAL {
+                ?sent ^frbr:part+ ?section .
+                ?section a doco:Section;
+                    ^frbr:part ?citing_article ;
+                    dcterms:title ?section_title .
+            }
+            """
+    elif type == "paragraph":
+        pattern = """
+            ?rp ^co:element/^c4o:isContextOf/^frbr:part|^c4o:isContextOf/^frbr:part ?paragraph .
+            ?paragraph a doco:Paragraph;
+                frbr:part/c4o:isContextOf/co:element|frbr:part/c4o:isContextOf ?cocited_rp ;
+                ^frbr:part+ ?citing_article .
+
+            OPTIONAL {
+                ?paragraph ^frbr:part+ ?section .
+                ?section a doco:Section;
+                    ^frbr:part ?citing_article ;
+                    dcterms:title ?section_title .
+            }
+            """
+    elif type == "section":
+        pattern = """
+            ?rp ^co:element/^c4o:isContextOf/^frbr:part/^frbr:part|^c4o:isContextOf/^frbr:part/^frbr:part ?section .
+            ?section a doco:Section;
+                frbr:part+/c4o:isContextOf/co:element|frbr:part+/c4o:isContextOf ?cocited_rp ;
+                ^frbr:part ?citing_article .
+
+            OPTIONAL {
+              ?section dcterms:title ?section_title .
+            }
+            """
+    else:
+        pattern = type
+    return pattern,
+
 
 def split_dois(s):
     return "\"%s\"" % "\" \"".join(s.split("__")),

@@ -2,15 +2,15 @@
 #type api
 #base http://localhost:8080
 #title REST API of the Open Biomedical Citations in Context Corpus (CCC)
-#description This document describe the REST API for accessing the data stored in the [Open Biomedical Citations in Context Corpus](https://w3id.org/oc/ccc) hosted by [OpenCitations](http://opencitations.net). All the operations described in this document return either a JSON document (default) or a CSV document according to the mimetype specified in the `Accept` header of the request.
+#description This document describes the REST API of the [Open Biomedical Citations in Context Corpus](https://w3id.org/oc/ccc) hosted by [OpenCitations](http://opencitations.net). All the operations described in this document return either a JSON document (default) or a CSV document according to the mimetype specified in the `Accept` header of the request.
 
-Be aware that the definition of OCI has been extended in CCC in order to address also the number of times a cited entity is mentioned in the citing entity in the form of a in-text reference pointer (e.g. `[1]`,`(Daquino et al. 2020)`). OCI usually appears in the form `<citing_id>-<cited_id>`. In CCC it appears in the form `<citing_id>-<cited_id>/<nth-occurrence>`, where: `<citing_id>` is the local identifier assigned to the citing resource in the CCC, `<cited_id>` is the local identifier assigned to the cited resource in CCC, and `<nth-occurrence>` corresponds to the nth occurrence of a in-text reference denoting the cited bibliographic entity.
+The definition of the [Open Citation Identifier (OCI)](https://doi.org/10.6084/m9.figshare.5844972) has been extended in CCC in order to address in-text references, that is, the number of times a cited entity is mentioned in the text of the citing entity in the form of a in-text reference pointer (e.g. `[1]`,`(Daquino et al. 2020)`). OCI usually appears in the form `<citing_id>-<cited_id>`, where: `<citing_id>` is the local identifier assigned to the citing resource in CCC, and `<cited_id>` is the local identifier assigned to the cited resource in CCC. In CCC, OCI is used as usual to identify citations among bibliographic entities as deduced from the list of references that appears in the citing article. In addition, in CCC an OCI can *also* appear in the form `<citing_id>-<cited_id>/<nth-occurrence>`, where `<nth-occurrence>` corresponds to the nth occurrence of an in-text reference pointer denoting the cited bibliographic entity. For instance `0701-0709/1` identifies the `1`st in-text reference appearing in (the text of) the citing article `0701` that is related to the cited article `0709`.
 
-Moreover, we introduced the in-text reference pointer identifier [InTrePID](https://doi.org/10.6084/m9.figshare.11674032). It is based on the OCI identifier, and appears in the form `<citing_id>-<cited_id>/<nth-occurrence>-<total-count>`, describing the nth-occurrence of a pointer denoting a bibliographic reference over the total number of pointers denoting the same bibliographic reference (e.g. `1-9`). InTrePID is dereferencable and the [InTrePID resolution service](http://opencitations.net/intrepid) allows one to retrieve bibliographic and citation data of the citation context from a given InTrePID.
+Moreover, CCC introduces the usage of [In-Text Reference Pointer IDentifier (InTRePID)](https://doi.org/10.6084/m9.figshare.11674032) for identifying in-text reference pointers. It is based on OCI, and it appears in the form `<citing_id>-<cited_id>/<nth-occurrence>-<total-count>`, where `<total-count>` corresponds to the total number of in-text reference pointers related to the same citation. For instance, `0701-0709/1-2` and `0701-0709/2-2` respectively represent the first and the second in-text reference pointer that appear in the citing article `0701` that are related to the cited article `0709`. InTrePIDs are dereferencable and the [InTrePID resolution service](http://opencitations.net/intrepid) allows one to retrieve the citation context  of a given InTrePID (such as identifiers of sentences, paragraphs, and sections where an in-text reference pointer appears).
 
-The context of in-text references (e.g. the full-text of sentences, paragraphs, sections) can be retrieved by querying [Europe PubMedCentral API](https://europepmc.org/RestfulWebService) using the PMID of the citing article.
+CCC is based on the Open Access subset of XML articles served by Europe PubMed Central. The full-text of articles including in-text reference pointers can be retrieved by querying [Europe PubMed Central API](https://europepmc.org/RestfulWebService) using the DOI of the article.
 
-If you would like to suggest an additional operation to be included in this API, please use the [CCC issue tracker](https://github.com/opencitations/ccc/issues) available on GitHub.
+If you would like to suggest additional operations, please use the [CCC issue tracker](https://github.com/opencitations/ccc/issues) available on GitHub to propose changes.
 #version 1.0.0
 #license This document is licensed with a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/legalcode), while the REST API itself has been created using [RAMOSE](https://github.com/opencitations/ramose), the *Restful API Manager Over SPARQL Endpoints*, which is licensed with an [ISC license](https://opensource.org/licenses/ISC).
 #contacts [marilena.daquino@opencitations.net](mailto:marilena.daquino@opencitations.net)
@@ -190,6 +190,466 @@ WHERE {
 	}
 }
 LIMIT 10000
+
+#url /references/{doi}
+#type operation
+#doi str(10\..+)
+#preprocess encode(doi)
+#method get
+#description This operation retrieves citation data of all the bibliographic resources *cited by the bibliographic entity identified by the input DOI*, as they appear in the reference list.
+
+The fields returned by this operation (for each reference) are the following:
+
+* *citing_pmid*: the PubMed ID of the citing entity;
+* *citing_doi*: the DOI of the citing entity;
+* *cited_pmid*: the PubMed ID of the cited entity;
+* *cited_doi*: the DOI of the cited entity;
+* *oci*: the Open Citation Identifier (OCI) of the citation at hand;
+* *ccc_oci*: the list of Open Citation Identifiers for each in-text reference pointer relevant to the citation at hand;
+* *intrepids*: the list of In-Text Reference Identifiers of all the in-text references denoting the bibliographic reference at hand;
+* *reference*: the text of the bibliographic reference entry
+#call /references/10.1080/14756366.2020.1740695
+#output_json [
+    {
+        "citing_pmid": "32183576",
+        "citing_doi": "10.1080/14756366.2020.1740695",
+        "cited_pmid": "27025563",
+        "cited_doi": "10.1016/j.bmc.2016.03.032",
+        "oci": "0701-070140",
+        "ccc_oci": "0701-070140/1; 0701-070140/2; 0701-070140/3",
+        "intrepids": "0701-070140/1-3; 0701-070140/2-3; 0701-070140/3-3",
+        "reference": "(a) Abdel-Sayed, MA, Bayomi, SM, El-Sherbeny, MA, et al. Synthesis, anti-inflammatory, analgesic, COX-1/2 inhibition activities and molecular docking study of pyrazoline derivatives. Bioorg Med Chem 2016; 24: 2032â€“42. PMID: 27025563"
+    },
+    {
+        "citing_pmid": "32183576",
+        "citing_doi": "10.1080/14756366.2020.1740695",
+        "cited_pmid": "27318118",
+        "cited_doi": "10.1016/j.ejmech.2016.05.066",
+        "oci": "0701-070142",
+        "ccc_oci": "0701-070142/1; 0701-070142/2; 0701-070142/3",
+        "intrepids": "0701-070142/1-3; 0701-070142/2-3; 0701-070142/3-3",
+        "reference": "(a) Abdel-Aziz, AAM, Abou-Zeid, LA, ElTahir, KEH, et al. Synthesis, anti-inflammatory, analgesic, COX-1/2 inhibitory activities and molecular docking studies of substituted 2-mercapto-4(3H)-quinazolinones. Eur J Med Chem 2016; 121: 410â€“21. PMID: 27318118"
+    },
+    {
+        "citing_pmid": "32183576",
+        "citing_doi": "10.1080/14756366.2020.1740695",
+        "cited_pmid": "18644347",
+        "cited_doi": "10.1016/j.bcp.2008.06.015",
+        "oci": "0701-070144",
+        "ccc_oci": "0701-070144/1; 0701-070144/2",
+        "intrepids": "0701-070144/1-2; 0701-070144/2-2",
+        "reference": "Funakoshi-Tago, M, Shimizu, T, Tago, K, et al. Celecoxib potently inhibits TNFÎ±-induced nuclear translocation and activation of NF-ÎºB. Biochem Pharmacol 2008; 76: 662â€“71. PMID: 18644347"
+    }
+]
+
+#field_type str(citing_pmid) str(citing_doi) str(cited_pmid) str(cited_doi) str(oci) str(ccc_oci) str(intrepids) str(reference)
+#sparql PREFIX biro: <http://purl.org/spar/biro/>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX c4o: <http://purl.org/spar/c4o/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX pro: <http://purl.org/spar/pro/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX oco: <https://w3id.org/oc/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+
+SELECT DISTINCT ?citing_pmid ?citing_doi ?cited_pmid ?cited_doi ?oci (GROUP_CONCAT(?ccc_oci_sing; separator="; ") as ?ccc_oci)  (GROUP_CONCAT(?intrepid; separator="; ") as ?intrepids) ?reference {
+
+    VALUES ?citing_doi { "[[doi]]" }
+	  ?article a fabio:Expression ;
+          		datacite:hasIdentifier [
+          			datacite:usesIdentifierScheme datacite:doi ;
+          			literal:hasLiteralValue ?citing_doi ] .
+
+  	?citation cito:hasCitingEntity ?article ;
+              cito:hasCitedEntity ?cited_br ;
+              ^oa:hasBody/^oco:hasAnnotation ?be .
+
+    ?be biro:references ?cited_br ; c4o:hasContent ?reference .
+
+    BIND (STRAFTER(str(?citation), "https://w3id.org/oc/ccc/ci/") as ?oci)
+
+    OPTIONAL {
+    ?article
+		datacite:hasIdentifier [
+			datacite:usesIdentifierScheme datacite:pmid ;
+			literal:hasLiteralValue ?citing_pmid ] .
+      }
+
+    OPTIONAL {
+      ?cited_br
+      datacite:hasIdentifier [
+        datacite:usesIdentifierScheme datacite:doi ;
+            literal:hasLiteralValue ?cited_doi ] .
+    }
+
+    OPTIONAL {
+      ?cited_br
+      datacite:hasIdentifier [
+        datacite:usesIdentifierScheme datacite:pmid ;
+            literal:hasLiteralValue ?cited_pmid ] .
+    }
+
+  	OPTIONAL {
+        ?be ^c4o:denotes ?rp .
+        ?rp datacite:hasIdentifier [
+          datacite:usesIdentifierScheme datacite:intrepid ;
+              literal:hasLiteralValue ?intrepid ] .
+
+        ?rp oco:hasAnnotation /oa:hasBody ?rp_citation .
+        BIND (STRAFTER(str(?rp_citation), "https://w3id.org/oc/ccc/ci/") as ?ccc_oci_sing)
+      }
+}
+
+GROUP BY ?reference ?intrepids ?oci ?ccc_oci ?citing_pmid ?citing_doi ?cited_pmid ?cited_doi
+
+LIMIT 10000
+
+#url /citations/{doi}
+#type operation
+#doi str(10\..+)
+#preprocess lower(doi)
+#method get
+#description This operation retrieves citation data for all the works *citing the bibliographic entity identified by the input DOI*.
+
+The fields returned by this operation (for each citing entity) are the following:
+
+* *oci*: the Open Citation Identifier (OCI) of the citation under consideration;
+* *citing*: the DOI of the citing entity;
+* *cited*: the input DOI of the cited entity;
+* *creation*: the creation date or year of the citation according to the [ISO date format](https://en.wikipedia.org/wiki/ISO_8601) `YYYY-MM-DD` or `YYYY`, which corresponds to the publication date of the citing entity;
+* *journal_sc*: it records whether the citation is a journal self-citations (i.e. both the citing and the cited entity are published in the same journal);
+* *author_sc*: it records whether the citation is an author self-citation (i.e. the citing and the cited entities have at least one author in common).
+#call /citations/10.1016/j.ejmech.2010.06.013
+#output_json [
+    {
+        "oci": "0701-0709",
+        "citing": "10.1080/14756366.2020.1740695",
+        "cited": "10.1016/j.ejmech.2010.06.013",
+        "creation": "2020",
+        "journal_sc": "no",
+        "author_sc": "yes"
+    },
+    {
+        "oci": "0701858-0709",
+        "citing": "10.1080/14756366.2020.1742117",
+        "cited": "10.1016/j.ejmech.2010.06.013",
+        "creation": "2020",
+        "journal_sc": "no",
+        "author_sc": "yes"
+    }
+]
+#field_type str(oci) str(citing) str(cited) str(creation) duration(timespan) str(?journal_sc) str(?author_sc)
+#sparql PREFIX biro: <http://purl.org/spar/biro/>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX co: <http://purl.org/co/>
+PREFIX c4o: <http://purl.org/spar/c4o/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX doco: <http://purl.org/spar/doco/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX pro: <http://purl.org/spar/pro/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX oco: <https://w3id.org/oc/ontology/>
+PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+prefix bds: <http://www.bigdata.com/rdf/search#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?oci ?citing ?cited ?creation (IF(bound(?jsc), "yes", "no") as ?journal_sc) (IF(bound(?asc), "yes", "no") as ?author_sc)
+WHERE {
+  ?cited bds:search "[[doi]]" ;
+         bds:matchExact "true" .
+  ?doi literal:hasLiteralValue ?cited ; datacite:usesIdentifierScheme datacite:doi .
+  ?cited_article datacite:hasIdentifier ?doi ; ^cito:hasCitedEntity ?citation ;prism:publicationDate ?cited_creation .
+  ?citation cito:hasCitingEntity ?citing_article ; ^oa:hasBody/^oco:hasAnnotation/biro:references ?cited_br.
+
+  ?citing_article datacite:hasIdentifier [
+          			datacite:usesIdentifierScheme datacite:doi ;
+          			literal:hasLiteralValue ?citing ] ;
+                  prism:publicationDate ?creation .
+
+  OPTIONAL{
+    ?cited_article frbr:partOf+ ?journal . ?citing_article frbr:partOf+ ?journal .
+    ?journal a fabio:Journal .
+    BIND("yes" as ?jsc)
+  }
+
+  OPTIONAL{
+    ?cited_article pro:isDocumentContextFor [
+    	pro:withRole pro:author ;
+    	pro:isHeldBy ?author ] .
+
+    ?citing_article pro:isDocumentContextFor [
+    	pro:withRole pro:author ;
+    	pro:isHeldBy ?author ] .
+    BIND("yes" as ?asc)
+  }
+
+  BIND (STRAFTER(str(?citation), "https://w3id.org/oc/ccc/ci/") as ?oci)
+}
+LIMIT 10000
+
+#url /citation/{oci}
+#type operation
+#oci str([0-9]+-[0-9]+[\/[0-9]+]?)
+#method get
+#postprocess
+#description This operation retrieves the citation metadata for the citation identified by the input Open Citation Identifier (OCI). OCI may appear in both of the forms above described, namely: `<citing_id>-<cited_id>` and `<citing_id>-<cited_id>/<nth-occurrence>`.
+
+It is worth mentioning that, in this REST operation, the prefix "oci:" **should not** be specified, and only the dash-separated numbers of the OCI should be provided, as shown in the example below.
+
+The fields returned by this operation are:
+
+* *oci*: the Open Citation Identifier (OCI) of the citation under consideration;
+* *citing*: the DOI of the citing entity;
+* *cited*: the DOI of the cited entity;
+* *creation*: the creation date of the citation according to the [ISO date format](https://en.wikipedia.org/wiki/ISO_8601) `YYYY-MM-DD`, which corresponds to the publication date of the citing entity;
+* *journal_sc*: it records whether the citation is a journal self-citations (i.e. the citing and the cited entities are published in the same journal);
+* *author_sc*: it records whether the citation is an author self-citation (i.e. the citing and the cited entities have at least one author in common).
+
+#call /citation/0701-0709
+#output_json [
+    {
+        "oci": "0701-0709",
+        "citing": "10.1080/14756366.2020.1740695",
+        "cited": "10.1016/j.ejmech.2010.06.013",
+        "creation": "2020",
+        "journal_sc": "no",
+        "author_sc": "yes"
+    }
+]
+#field_type str(oci) str(citing) str(cited) str(creation) str(?journal_sc) str(?author_sc)
+#sparql PREFIX biro: <http://purl.org/spar/biro/>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX co: <http://purl.org/co/>
+PREFIX c4o: <http://purl.org/spar/c4o/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX doco: <http://purl.org/spar/doco/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX pro: <http://purl.org/spar/pro/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX oco: <https://w3id.org/oc/ontology/>
+PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+prefix bds: <http://www.bigdata.com/rdf/search#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?oci ?citing ?cited ?creation (IF(bound(?jsc), "yes", "no") as ?journal_sc) (IF(bound(?asc), "yes", "no") as ?author_sc)
+WHERE {
+      BIND(<https://w3id.org/oc/ccc/ci/[[oci]]> as ?oci_iri) .
+  		BIND(STRAFTER(str(?oci_iri), "/ci/") AS ?oci) .
+        ?oci_iri
+            cito:hasCitingEntity ?citing_article ;
+            cito:hasCitedEntity ?cited_article .
+
+            OPTIONAL{
+              ?cited_article frbr:partOf+ ?journal . ?citing_article frbr:partOf+ ?journal .
+              ?journal a fabio:Journal .
+              BIND("yes" as ?jsc)
+            }
+
+            ?citing_article datacite:hasIdentifier [
+                    			datacite:usesIdentifierScheme datacite:doi ;
+                    			literal:hasLiteralValue ?citing ] ;
+                            prism:publicationDate ?creation .
+
+            OPTIONAL {
+              ?cited_article datacite:hasIdentifier [
+                          datacite:usesIdentifierScheme datacite:doi ;
+                          literal:hasLiteralValue ?cited ] .
+            }
+
+            OPTIONAL{
+              ?cited_article pro:isDocumentContextFor [
+              	pro:withRole pro:author ;
+              	pro:isHeldBy ?author ] .
+
+              ?citing_article pro:isDocumentContextFor [
+              	pro:withRole pro:author ;
+              	pro:isHeldBy ?author ] .
+              BIND("yes" as ?asc)
+            }
+
+}
+LIMIT 10000
+
+#url /intext_citation/{intrepid}
+#type operation
+#intrepid str([0-9]+-[0-9]+\/[0-9]+-[0-9]+)
+#method get
+#description This operation retrieves information related to an in-text reference pointer identified by the input InTRePID.
+
+The fields returned by this operation are the following:
+* *intext_reference*: the string identifying the in-text reference, e.g. `[1]` ;
+* *citing_doi*: the DOI of the citing entity;
+* *cited_doi*: the DOI of the cited entity;
+* *source*: the EPMC API call to retrieve the XML source document where the in-text reference pointer was extracted;
+* *in_list*: whether the in-text reference pointer is part of a group of pointers (e.g. a list);
+* *xpath_intext_reference*: the XPath of the in-text reference with respect to the XML source document;
+* *xpath_container*: the XPath of the first element containing the in-text reference with respect to the XML source document;
+* *section_title*: the title of the section where the in-text reference pointer appears;
+#call /intext_citation/0701-0709/2-2
+#output_json [
+    {
+        "intext_reference": "2â€“4",
+        "citing_doi": "10.1080/14756366.2020.1740695",
+        "cited_doi": "10.1016/j.ejmech.2010.06.013",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/32183576/fullTextXML",
+        "in_list": "yes",
+        "xpath_intext_reference": "/article/body/sec[1]/p[3]/xref[13]",
+        "xpath_container": "/article/body/sec[1]/p[3]",
+        "section_title": "Introduction"
+    }
+]
+#field_type str(intext_reference) str(citing_doi) str(cited_doi) str(source) str(in_list) str(xpath_intext_reference) str(xpath_container) str(section_title)
+
+#sparql PREFIX biro: <http://purl.org/spar/biro/>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX co: <http://purl.org/co/>
+PREFIX c4o: <http://purl.org/spar/c4o/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX doco: <http://purl.org/spar/doco/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX pro: <http://purl.org/spar/pro/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX oco: <https://w3id.org/oc/ontology/>
+PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+prefix bds: <http://www.bigdata.com/rdf/search#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?intext_reference ?citing_doi ?cited_doi ?source (IF(bound(?list), "yes", "no") as ?in_list) ?xpath_intext_reference ?xpath_container ?section_title  {
+
+  ?intrepid bds:search "[[intrepid]]" ;
+         bds:matchExact "true" .
+  ?intrepid_uri literal:hasLiteralValue ?intrepid ; datacite:usesIdentifierScheme datacite:intrepid .
+
+  ?rp datacite:hasIdentifier ?intrepid_uri ;
+      c4o:hasContent ?intext_reference ;
+      datacite:hasIdentifier [
+		datacite:usesIdentifierScheme datacite:local-resource-identifier-scheme ;
+        literal:hasLiteralValue ?xpath_intext_reference ] ;
+      oco:hasAnnotation / oa:hasBody ?citation ;
+      ^co:element/^c4o:isContextOf/^frbr:part|^c4o:isContextOf/^frbr:part ?paragraph .
+
+  ?paragraph datacite:hasIdentifier [
+		datacite:usesIdentifierScheme datacite:local-resource-identifier-scheme ;
+        literal:hasLiteralValue ?xpath_container ] ;
+        ^frbr:part+ ?section .
+  ?section a doco:Section ;
+        ^frbr:part ?citing_article ;
+
+  OPTIONAL {
+  	?section dcterms:title ?section_title .
+  }
+
+  ?citation cito:hasCitingEntity ?citing_article ;
+            cito:hasCitedEntity ?cited_article .
+
+  ?citing_article datacite:hasIdentifier [
+		datacite:usesIdentifierScheme datacite:doi ;
+        literal:hasLiteralValue ?citing_doi ] .
+
+  OPTIONAL {
+    ?citing_article datacite:hasIdentifier [
+		datacite:usesIdentifierScheme datacite:pmid ;
+        literal:hasLiteralValue ?pmid ] .
+    BIND(CONCAT("https://www.ebi.ac.uk/europepmc/webservices/rest/",?pmid, "/fullTextXML") as ?source)
+  }
+
+  OPTIONAL {
+    ?cited_article datacite:hasIdentifier [
+      datacite:usesIdentifierScheme datacite:doi ;
+      literal:hasLiteralValue ?cited_doi ] .
+  }
+
+  OPTIONAL {
+  	?rp ^co:element ?pl .
+    BIND("yes" as ?list)
+  }
+
+}
+
+#url /citation-count/{doi}
+#type operation
+#doi str(10\..+)
+#preprocess lower(doi)
+#method get
+#description This operation retrieves the number of incoming citations to the bibliographic entity identified by the input DOI.
+
+The fields returned by this operation (for each reference) are the following:
+
+* *count*: the number of incoming citations to the input bibliographic entity.
+#call /citation-count/10.1016/j.ejmech.2010.06.013
+#field_type int(count)
+#output_json [
+    {
+        "count": "2"
+    }
+]
+#sparql PREFIX biro: <http://purl.org/spar/biro/>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX oco: <https://w3id.org/oc/ontology/>
+prefix bds: <http://www.bigdata.com/rdf/search#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT  (count(DISTINCT ?citing_article) as ?count)
+WHERE {
+  ?cited bds:search "[[doi]]" ;
+         bds:matchExact "true" .
+  ?doi literal:hasLiteralValue ?cited ; datacite:usesIdentifierScheme datacite:doi .
+  ?cited_article datacite:hasIdentifier ?doi ; ^cito:hasCitedEntity ?citation .
+  ?citation cito:hasCitingEntity ?citing_article ; ^oa:hasBody/^oco:hasAnnotation/biro:references ?cited_br.
+}
+
+#url /intext-citation-count/{doi}
+#type operation
+#doi str(10\..+)
+#preprocess lower(doi)
+#method get
+#description This operation retrieves the number of in-text references denoting the bibliographic entity identified by the input DOI.
+
+For instance, consider an input article that is cited by 2 articles: in the first article there is one in-text reference pointer related to the input article; in the second article, there are two in-text reference pointers related to the input article. The operation will return 3.
+
+The fields returned by this operation (for each reference) are the following:
+
+* *count*: the number of incoming citations to the input bibliographic entity.
+#call /intext-citation-count/10.1016/j.ejmech.2010.06.013
+#field_type int(count)
+#output_json [
+    {
+        "count": "3"
+    }
+]
+#sparql PREFIX biro: <http://purl.org/spar/biro/>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX c4o: <http://purl.org/spar/c4o/>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX oco: <https://w3id.org/oc/ontology/>
+prefix bds: <http://www.bigdata.com/rdf/search#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT  (count(DISTINCT ?rp) as ?count)
+WHERE {
+  ?cited bds:search "[[doi]]" ;
+         bds:matchExact "true" .
+  ?doi literal:hasLiteralValue ?cited ; datacite:usesIdentifierScheme datacite:doi .
+  ?cited_article datacite:hasIdentifier ?doi ; ^biro:references/^c4o:denotes ?rp .
+}
 
 #url /coauthorship/{dois}
 #type operation
@@ -445,446 +905,54 @@ SELECT ?author1 ?author2 (count(?author1) as ?coauthorship_count) WHERE {
 GROUP BY ?author1 ?author2
 LIMIT 10000
 
-#url /references/{doi}
-#type operation
-#doi str(10\..+)
-#preprocess encode(doi)
-#method get
-#description This operation retrieves citation data of all the bibliographic resources cited by the bibliographic entity identified by the input DOI, as they appear in the reference list.
-
-The fields returned by this operation (for each reference) are the following:
-
-* *citing_pmid*: the PubMed ID of the citing entity;
-* *citing_doi*: the DOI of the citing entity;
-* *cited_pmid*: the PubMed ID of the cited entity;
-* *cited_doi*: the DOI of the cited entity;
-* *oci*: the Open Citation Identifier (OCI) of the citation at hand;
-* *ccc_oci*: the list of Open Citation Identifiers for each in-text reference pointer relevant to the citation at hand;
-* *intrepids*: the list of In-Text Reference Identifiers of all the in-text references denoting the bibliographic reference at hand;
-* *reference*: the text of the bibliographic reference entry
-#call /references/10.1080/14756366.2020.1740695
-#output_json [
-    {
-        "citing_pmid": "32183576",
-        "citing_doi": "10.1080/14756366.2020.1740695",
-        "cited_pmid": "27025563",
-        "cited_doi": "10.1016/j.bmc.2016.03.032",
-        "oci": "0701-070140",
-        "ccc_oci": "0701-070140/1; 0701-070140/2; 0701-070140/3",
-        "intrepids": "0701-070140/1-3; 0701-070140/2-3; 0701-070140/3-3",
-        "reference": "(a) Abdel-Sayed, MA, Bayomi, SM, El-Sherbeny, MA, et al. Synthesis, anti-inflammatory, analgesic, COX-1/2 inhibition activities and molecular docking study of pyrazoline derivatives. Bioorg Med Chem 2016; 24: 2032â€“42. PMID: 27025563"
-    },
-    {
-        "citing_pmid": "32183576",
-        "citing_doi": "10.1080/14756366.2020.1740695",
-        "cited_pmid": "27318118",
-        "cited_doi": "10.1016/j.ejmech.2016.05.066",
-        "oci": "0701-070142",
-        "ccc_oci": "0701-070142/1; 0701-070142/2; 0701-070142/3",
-        "intrepids": "0701-070142/1-3; 0701-070142/2-3; 0701-070142/3-3",
-        "reference": "(a) Abdel-Aziz, AAM, Abou-Zeid, LA, ElTahir, KEH, et al. Synthesis, anti-inflammatory, analgesic, COX-1/2 inhibitory activities and molecular docking studies of substituted 2-mercapto-4(3H)-quinazolinones. Eur J Med Chem 2016; 121: 410â€“21. PMID: 27318118"
-    },
-    {
-        "citing_pmid": "32183576",
-        "citing_doi": "10.1080/14756366.2020.1740695",
-        "cited_pmid": "18644347",
-        "cited_doi": "10.1016/j.bcp.2008.06.015",
-        "oci": "0701-070144",
-        "ccc_oci": "0701-070144/1; 0701-070144/2",
-        "intrepids": "0701-070144/1-2; 0701-070144/2-2",
-        "reference": "Funakoshi-Tago, M, Shimizu, T, Tago, K, et al. Celecoxib potently inhibits TNFÎ±-induced nuclear translocation and activation of NF-ÎºB. Biochem Pharmacol 2008; 76: 662â€“71. PMID: 18644347"
-    }
-]
-
-#field_type str(citing_pmid) str(citing_doi) str(cited_pmid) str(cited_doi) str(oci) str(ccc_oci) str(intrepids) str(reference)
-#sparql PREFIX biro: <http://purl.org/spar/biro/>
-PREFIX cito: <http://purl.org/spar/cito/>
-PREFIX c4o: <http://purl.org/spar/c4o/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX fabio: <http://purl.org/spar/fabio/>
-PREFIX frbr: <http://purl.org/vocab/frbr/core#>
-PREFIX datacite: <http://purl.org/spar/datacite/>
-PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
-PREFIX pro: <http://purl.org/spar/pro/>
-PREFIX oa: <http://www.w3.org/ns/oa#>
-PREFIX oco: <https://w3id.org/oc/ontology/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
-
-SELECT DISTINCT ?citing_pmid ?citing_doi ?cited_pmid ?cited_doi ?oci (GROUP_CONCAT(?ccc_oci_sing; separator="; ") as ?ccc_oci)  (GROUP_CONCAT(?intrepid; separator="; ") as ?intrepids) ?reference {
-
-    VALUES ?citing_doi { "[[doi]]" }
-	  ?article a fabio:Expression ;
-          		datacite:hasIdentifier [
-          			datacite:usesIdentifierScheme datacite:doi ;
-          			literal:hasLiteralValue ?citing_doi ] .
-
-  	?citation cito:hasCitingEntity ?article ;
-              cito:hasCitedEntity ?cited_br ;
-              ^oa:hasBody/^oco:hasAnnotation ?be .
-
-    ?be biro:references ?cited_br ; c4o:hasContent ?reference .
-
-    BIND (STRAFTER(str(?citation), "https://w3id.org/oc/ccc/ci/") as ?oci)
-
-    OPTIONAL {
-    ?article
-		datacite:hasIdentifier [
-			datacite:usesIdentifierScheme datacite:pmid ;
-			literal:hasLiteralValue ?citing_pmid ] .
-      }
-
-    OPTIONAL {
-      ?cited_br
-      datacite:hasIdentifier [
-        datacite:usesIdentifierScheme datacite:doi ;
-            literal:hasLiteralValue ?cited_doi ] .
-    }
-
-    OPTIONAL {
-      ?cited_br
-      datacite:hasIdentifier [
-        datacite:usesIdentifierScheme datacite:pmid ;
-            literal:hasLiteralValue ?cited_pmid ] .
-    }
-
-  	OPTIONAL {
-        ?be ^c4o:denotes ?rp .
-        ?rp datacite:hasIdentifier [
-          datacite:usesIdentifierScheme datacite:intrepid ;
-              literal:hasLiteralValue ?intrepid ] .
-
-        ?rp oco:hasAnnotation /oa:hasBody ?rp_citation .
-        BIND (STRAFTER(str(?rp_citation), "https://w3id.org/oc/ccc/ci/") as ?ccc_oci_sing)
-      }
-}
-
-GROUP BY ?reference ?intrepids ?oci ?ccc_oci ?citing_pmid ?citing_doi ?cited_pmid ?cited_doi
-
-LIMIT 10000
-
 #url /cocited/list/{doi}
 #type operation
 #doi str(10\..+)
 #preprocess lower(doi)
 #method get
-#description This operation retrieves bibliographic resources that cite the bibliographic entity identified by the input DOI along with other co-cited bibliographic entities that appear in the same in-text reference pointer lists (e.g. `[1,4,7]`).
+#description This operation retrieves bibliographic resources that are cited together with the bibliographic entity identified by the input DOI. Co-cited entities appear in the same group of in-text reference pointers, i.e. a list (e.g. `[1,4,7]`).
 
-For each article that cites the bibliographic resource at hand, the PMID of the citing article is provided. The PMID can be used to retrieve the Open Access XML document associated to the article by means of [Europe PubMedCentral API](https://europepmc.org/RestfulWebService).
+For each co-citation, the DOI of the citing articles is also provided, which can be used to retrieve the Open Access XML document by means of [Europe PubMedCentral API](https://europepmc.org/RestfulWebService).
 
-The fields returned by this operation (for each co-cited resource) are the following:
+The fields returned by this operation (for each co-citation) are the following:
 
-* *cocited_doi*: the DOI of the co-cited entities;
-* *cocited_ccc_id*: the CCC local identifier of the co-cited entities (e.g. "br/0709");
-* *citing_dois*: the semi-colon separated DOIs of the bibliographic entities that cite the bibliographic entities at hand;
-* *citing_pmids*: the semi-colon separated PMIDs of the bibliographic entities that cite the bibliographic entities at hand;
-* *citing_ccc_ids*: the semi-colon separated CCC local identifiers of the bibliographic entities that cite the bibliographic entities at hand;
+* *doi*: the DOI of the co-cited entity;
+* *ccc_id*: the CCC local identifier of the co-cited entity (e.g. "br/0709");
+* *in_articles_doi*: the semi-colon separated DOIs of the bibliographic entities that cite the bibliographic entities at hand;
 #call /cocited/list/10.1016/j.ejmech.2010.06.013
 #output_json [
     {
-        "cocited_doi": "10.1126/science.1126758",
-        "cocited_ccc_id": "br/0705",
-        "citing_dois": "10.1080/14756366.2020.1740695",
-        "citing_pmids": "32183576",
-        "citing_ccc_ids": "br/0701"
+        "doi": "10.1126/science.1126758",
+        "ccc_id": "br/0705",
+        "in_articles_doi": "10.1080/14756366.2020.1740695"
     },
     {
-        "cocited_doi": "10.1016/j.ejmech.2014.04.029",
-        "cocited_ccc_id": "br/07013",
-        "citing_dois": "10.1080/14756366.2020.1740695; 10.1080/14756366.2020.1742117",
-        "citing_pmids": "32183576; 32189526",
-        "citing_ccc_ids": "br/0701; br/0701858"
+        "doi": "10.1016/j.ejmech.2014.04.029",
+        "ccc_id": "br/07013",
+        "in_articles_doi": "10.1080/14756366.2020.1740695; 10.1080/14756366.2020.1742117"
     },
     {
-        "cocited_doi": "10.1016/j.ejmech.2016.02.002",
-        "cocited_ccc_id": "br/07015",
-        "citing_dois": "10.1080/14756366.2020.1740695; 10.1080/14756366.2020.1742117",
-        "citing_pmids": "32183576; 32189526",
-        "citing_ccc_ids": "br/0701; br/0701858"
+        "doi": "10.1016/j.ejmech.2016.02.002",
+        "ccc_id": "br/07015",
+        "in_articles_doi": "10.1080/14756366.2020.1740695; 10.1080/14756366.2020.1742117"
     },
     {
-        "cocited_doi": "10.1016/j.ejmech.2006.12.003",
-        "cocited_ccc_id": "br/07017",
-        "citing_dois": "10.1080/14756366.2020.1740695",
-        "citing_pmids": "32183576",
-        "citing_ccc_ids": "br/0701"
+        "doi": "10.1016/j.ejmech.2006.12.003",
+        "ccc_id": "br/07017",
+        "in_articles_doi": "10.1080/14756366.2020.1740695"
     },
     {
-        "cocited_doi": "10.1016/j.ejmech.2010.02.038",
-        "cocited_ccc_id": "br/07020",
-        "citing_dois": "10.1080/14756366.2020.1740695",
-        "citing_pmids": "32183576",
-        "citing_ccc_ids": "br/0701"
+        "doi": "10.1016/j.ejmech.2010.02.038",
+        "ccc_id": "br/07020",
+        "in_articles_doi": "10.1080/14756366.2020.1740695"
     }
 ]
-#field_type str(cocited_doi) str(cocited_ccc_id) str(citing_dois) str(citing_pmids) str(citing_ccc_ids)
+#field_type str(doi) str(ccc_id) str(in_articles_doi)
 #sparql PREFIX biro: <http://purl.org/spar/biro/>
 PREFIX cito: <http://purl.org/spar/cito/>
 PREFIX co: <http://purl.org/co/>
 PREFIX c4o: <http://purl.org/spar/c4o/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX fabio: <http://purl.org/spar/fabio/>
-PREFIX frbr: <http://purl.org/vocab/frbr/core#>
-PREFIX datacite: <http://purl.org/spar/datacite/>
-PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
-PREFIX pro: <http://purl.org/spar/pro/>
-PREFIX oa: <http://www.w3.org/ns/oa#>
-PREFIX oco: <https://w3id.org/oc/ontology/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
-
-SELECT DISTINCT ?cocited_doi ?cocited_ccc_id (GROUP_CONCAT(DISTINCT ?citing_doi; separator="; ") as ?citing_dois) (GROUP_CONCAT(DISTINCT ?citing_pmid; separator="; ") as ?citing_pmids) (GROUP_CONCAT(DISTINCT ?citing_ccc_id; separator="; ") as ?citing_ccc_ids)  {
-
-  VALUES ?doi { "10.1016/j.ejmech.2010.06.013" }
-
-  ?article a fabio:Expression ;
-           datacite:hasIdentifier [
-          		datacite:usesIdentifierScheme datacite:doi ;
-          		literal:hasLiteralValue ?doi ] ;
-  			^cito:hasCitedEntity/^oa:hasBody/^oco:hasAnnotation ?rp .
-
-  ?rp a c4o:InTextReferencePointer ;
-        ^co:element ?pl .
-
-  ?pl co:element ?cocited_rp ;
-      ^c4o:isContextOf ?sent .
-
-  ?citing_article a fabio:Expression ;
-                    frbr:part+ ?sent .
-
-  FILTER (?cocited_rp != ?rp)
-
-  ?cocited_rp c4o:denotes/biro:references ?cocited_article .
-
-  BIND (STRAFTER(str(?cocited_article), "https://w3id.org/oc/ccc/") as ?cocited_ccc_id)
-  BIND (STRAFTER(str(?citing_article), "https://w3id.org/oc/ccc/") as ?citing_ccc_id)
-
-  OPTIONAL {
-  	?citing_article a fabio:Expression ;
-           datacite:hasIdentifier [
-          		datacite:usesIdentifierScheme datacite:doi ;
-          		literal:hasLiteralValue ?citing_doi ] .
-  }
-
-  OPTIONAL {
-  	?citing_article a fabio:Expression ;
-           datacite:hasIdentifier [
-          		datacite:usesIdentifierScheme datacite:pmid ;
-          		literal:hasLiteralValue ?citing_pmid ] .
-  }
-
-  OPTIONAL {
-  	?cocited_article a fabio:Expression ;
-           datacite:hasIdentifier [
-          		datacite:usesIdentifierScheme datacite:doi ;
-          		literal:hasLiteralValue ?cocited_doi ] .
-  }
-
-}
-
-GROUP BY ?cocited_ccc_id ?cocited_doi ?citing_ccc_ids ?citing_dois ?citing_pmids
-LIMIT 10000
-
-#url /cocited/sentence/{doi}
-#type operation
-#doi str(10\..+)
-#preprocess lower(doi)
-#method get
-#description This operation retrieves bibliographic resources that cite the bibliographic entity identified by the input DOI along with other co-cited bibliographic entities that appear in the same sentence (including also table cells, figure captions, footnotes).
-
-For each article that cites the bibliographic resource at hand, the PMID of the citing article is provided. The PMID can be used to retrieve the Open Access XML document associated to the article by means of [Europe PubMedCentral API](https://europepmc.org/RestfulWebService).
-
-The fields returned by this operation (for each co-cited resource) are the following:
-
-* *cocited_doi*: the DOI of the co-cited entities;
-* *cocited_ccc_id*: the CCC local identifier of the co-cited entities (e.g. "br/0709");
-* *citing_dois*: the semi-colon separated DOIs of the bibliographic entities that cite the bibliographic entities at hand;
-* *citing_pmids*: the semi-colon separated PMIDs of the bibliographic entities that cite the bibliographic entities at hand;
-* *citing_ccc_ids*: the semi-colon separated CCC local identifiers of the bibliographic entities that cite the bibliographic entities at hand;
-#call /cocited/sentence/10.1016/j.ejmech.2010.06.013
-#output_json [
-    {
-        "cocited_doi": "10.1016/j.ejmech.2010.02.038",
-        "cocited_ccc_id": "br/07020",
-        "citing_dois": "10.1080/14756366.2020.1740695",
-        "citing_pmids": "32183576",
-        "citing_ccc_ids": "br/0701"
-    },
-    {
-        "cocited_doi": "10.1080/14756366.2018.1434519",
-        "cocited_ccc_id": "br/07027",
-        "citing_dois": "10.1080/14756366.2020.1740695",
-        "citing_pmids": "32183576",
-        "citing_ccc_ids": "br/0701"
-    },
-    {
-        "cocited_doi": "10.1080/14756366.2019.1612889",
-        "cocited_ccc_id": "br/070122",
-        "citing_dois": "10.1080/14756366.2020.1740695",
-        "citing_pmids": "32183576",
-        "citing_ccc_ids": "br/0701"
-    },
-    {
-        "cocited_doi": "10.1126/science.1126758",
-        "cocited_ccc_id": "br/0705",
-        "citing_dois": "10.1080/14756366.2020.1740695",
-        "citing_pmids": "32183576",
-        "citing_ccc_ids": "br/0701"
-    },
-    {
-        "cocited_doi": "10.1016/j.ejmech.2014.04.029",
-        "cocited_ccc_id": "br/07013",
-        "citing_dois": "10.1080/14756366.2020.1740695; 10.1080/14756366.2020.1742117",
-        "citing_pmids": "32183576; 32189526",
-        "citing_ccc_ids": "br/0701; br/0701858"
-    },
-    {
-        "cocited_doi": "10.1016/j.ejmech.2016.02.002",
-        "cocited_ccc_id": "br/07015",
-        "citing_dois": "10.1080/14756366.2020.1740695; 10.1080/14756366.2020.1742117",
-        "citing_pmids": "32183576; 32189526",
-        "citing_ccc_ids": "br/0701; br/0701858"
-    }
-]
-#field_type str(cocited_doi) str(cocited_ccc_id) str(citing_dois) str(citing_pmids) str(citing_ccc_ids)
-#sparql PREFIX biro: <http://purl.org/spar/biro/>
-PREFIX cito: <http://purl.org/spar/cito/>
-PREFIX co: <http://purl.org/co/>
-PREFIX c4o: <http://purl.org/spar/c4o/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX fabio: <http://purl.org/spar/fabio/>
-PREFIX frbr: <http://purl.org/vocab/frbr/core#>
-PREFIX datacite: <http://purl.org/spar/datacite/>
-PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
-PREFIX pro: <http://purl.org/spar/pro/>
-PREFIX oa: <http://www.w3.org/ns/oa#>
-PREFIX oco: <https://w3id.org/oc/ontology/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
-
-SELECT DISTINCT ?cocited_doi ?cocited_ccc_id (GROUP_CONCAT(DISTINCT ?citing_doi; separator="; ") as ?citing_dois) (GROUP_CONCAT(DISTINCT ?citing_pmid; separator="; ") as ?citing_pmids) (GROUP_CONCAT(DISTINCT ?citing_ccc_id; separator="; ") as ?citing_ccc_ids)  {
-
-  VALUES ?doi { "[[doi]]" }
-
-  ?article datacite:hasIdentifier [
-          		datacite:usesIdentifierScheme datacite:doi ;
-          		literal:hasLiteralValue ?doi ] ;
-  			^cito:hasCitedEntity/^oa:hasBody/^oco:hasAnnotation ?rp .
-
-  ?rp a c4o:InTextReferencePointer ;
-        ^co:element/^c4o:isContextOf|^c4o:isContextOf ?sent .
-
-  ?sent c4o:isContextOf/co:element|c4o:isContextOf ?cocited_rp .
-
-  ?citing_article a fabio:Expression ;
-                    frbr:part+ ?sent .
-
-  FILTER (?cocited_rp != ?rp)
-
-  ?cocited_rp c4o:denotes/biro:references ?cocited_article .
-
-  BIND (STRAFTER(str(?cocited_article), "https://w3id.org/oc/ccc/") as ?cocited_ccc_id)
-  BIND (STRAFTER(str(?citing_article), "https://w3id.org/oc/ccc/") as ?citing_ccc_id)
-
-  OPTIONAL {
-  	?citing_article a fabio:Expression ;
-           datacite:hasIdentifier [
-          		datacite:usesIdentifierScheme datacite:doi ;
-          		literal:hasLiteralValue ?citing_doi ] .
-  }
-
-  OPTIONAL {
-  	?citing_article a fabio:Expression ;
-           datacite:hasIdentifier [
-          		datacite:usesIdentifierScheme datacite:pmid ;
-          		literal:hasLiteralValue ?citing_pmid ] .
-  }
-
-  OPTIONAL {
-  	?cocited_article a fabio:Expression ;
-           datacite:hasIdentifier [
-          		datacite:usesIdentifierScheme datacite:doi ;
-          		literal:hasLiteralValue ?cocited_doi ] .
-  }
-
-}
-
-GROUP BY ?cocited_ccc_id ?cocited_doi ?citing_ccc_ids ?citing_dois ?citing_pmids
-LIMIT 10000
-
-#url /cocited/paragraph/{doi}
-#type operation
-#doi str(10\..+)
-#preprocess lower(doi)
-#method get
-#description This operation retrieves bibliographic resources that cite the bibliographic entity identified by the input DOI along with other co-cited bibliographic entities that appear in the same paragraph.
-
-For each article that cites the bibliographic resource at hand, the PMID of the citing article is provided. The PMID can be used to retrieve the Open Access XML document associated to the article by means of [Europe PubMedCentral API](https://europepmc.org/RestfulWebService).
-
-The fields returned by this operation (for each co-cited resource) are the following:
-
-* *cocited_doi*: the DOI of the co-cited entities;
-* *cocited_ccc_id*: the CCC local identifier of the co-cited entities (e.g. "br/0709");
-* *citing_dois*: the semi-colon separated DOIs of the bibliographic entities that cite the bibliographic entities at hand;
-* *citing_pmids*: the semi-colon separated PMIDs of the bibliographic entities that cite the bibliographic entities at hand;
-* *citing_ccc_ids*: the semi-colon separated CCC local identifiers of the bibliographic entities that cite the bibliographic entities at hand;
-#call /cocited/paragraph/10.1016/j.ejmech.2010.06.013
-#output_json [
-    {
-        "cocited_doi": "",
-        "cocited_ccc_id": "br/0701886",
-        "citing_dois": "10.1080/14756366.2020.1742117",
-        "citing_pmids": "32189526",
-        "citing_ccc_ids": "br/0701858"
-    },
-    {
-        "cocited_doi": "",
-        "cocited_ccc_id": "br/0701936",
-        "citing_dois": "10.1080/14756366.2020.1742117",
-        "citing_pmids": "32189526",
-        "citing_ccc_ids": "br/0701858"
-    },
-    {
-        "cocited_doi": "10.1007/s00044-012-0280-y",
-        "cocited_ccc_id": "br/0701931",
-        "citing_dois": "10.1080/14756366.2020.1742117",
-        "citing_pmids": "32189526",
-        "citing_ccc_ids": "br/0701858"
-    },
-    {
-        "cocited_doi": "10.1016/j.ejmech.2006.12.003",
-        "cocited_ccc_id": "br/07017",
-        "citing_dois": "10.1080/14756366.2020.1740695",
-        "citing_pmids": "32183576",
-        "citing_ccc_ids": "br/0701"
-    },
-    {
-        "cocited_doi": "10.1016/j.ejmech.2008.09.015",
-        "cocited_ccc_id": "br/0701924",
-        "citing_dois": "10.1080/14756366.2020.1742117",
-        "citing_pmids": "32189526",
-        "citing_ccc_ids": "br/0701858"
-    },
-    {
-        "cocited_doi": "10.1016/j.ejmech.2010.02.038",
-        "cocited_ccc_id": "br/07020",
-        "citing_dois": "10.1080/14756366.2020.1740695",
-        "citing_pmids": "32183576",
-        "citing_ccc_ids": "br/0701"
-    },
-    {
-        "cocited_doi": "10.1016/j.ejmech.2014.04.029",
-        "cocited_ccc_id": "br/07013",
-        "citing_dois": "10.1080/14756366.2020.1740695; 10.1080/14756366.2020.1742117",
-        "citing_pmids": "32183576; 32189526",
-        "citing_ccc_ids": "br/0701; br/0701858"
-    }
-]
-#field_type str(cocited_doi) str(cocited_ccc_id) str(citing_dois) str(citing_pmids) str(citing_ccc_ids)
-#sparql PREFIX biro: <http://purl.org/spar/biro/>
-PREFIX cito: <http://purl.org/spar/cito/>
-PREFIX co: <http://purl.org/co/>
-PREFIX c4o: <http://purl.org/spar/c4o/>
 PREFIX doco: <http://purl.org/spar/doco/>
 PREFIX fabio: <http://purl.org/spar/fabio/>
 PREFIX frbr: <http://purl.org/vocab/frbr/core#>
@@ -893,34 +961,31 @@ PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
 PREFIX pro: <http://purl.org/spar/pro/>
 PREFIX oa: <http://www.w3.org/ns/oa#>
 PREFIX oco: <https://w3id.org/oc/ontology/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+prefix bds: <http://www.bigdata.com/rdf/search#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?cocited_doi ?cocited_ccc_id (GROUP_CONCAT(DISTINCT ?citing_doi; separator="; ") as ?citing_dois) (GROUP_CONCAT(DISTINCT ?citing_pmid; separator="; ") as ?citing_pmids) (GROUP_CONCAT(DISTINCT ?citing_ccc_id; separator="; ") as ?citing_ccc_ids)  {
+SELECT DISTINCT ?doi ?ccc_id (GROUP_CONCAT(DISTINCT ?citing_doi; separator="; ") as ?in_articles_doi) {
 
-  VALUES ?doi { "10.1016/j.ejmech.2010.06.013" }
+  ?cited bds:search "[[doi]]" ;
+         bds:matchExact "true" .
+  ?cited_doi literal:hasLiteralValue ?cited ; datacite:usesIdentifierScheme datacite:doi .
+  ?article datacite:hasIdentifier ?cited_doi .
 
-  ?article a fabio:Expression ;
-           datacite:hasIdentifier [
-          		datacite:usesIdentifierScheme datacite:doi ;
-          		literal:hasLiteralValue ?doi ] ;
-  			^cito:hasCitedEntity/^oa:hasBody/^oco:hasAnnotation ?rp .
+  ?article ^cito:hasCitedEntity/^oa:hasBody/^oco:hasAnnotation ?rp .
 
   ?rp a c4o:InTextReferencePointer ;
-        ^co:element/^c4o:isContextOf/^frbr:part|^c4o:isContextOf/^frbr:part ?paragraph .
-
-  ?paragraph a doco:Paragraph;
-               frbr:part/c4o:isContextOf/co:element|frbr:part/c4o:isContextOf ?cocited_rp .
-
-  ?citing_article a fabio:Expression ;
-                    frbr:part+ ?paragraph .
+        ^co:element ?pl .
+  ?pl co:element ?cocited_rp ;
+        ^c4o:isContextOf ?sent .
+  ?sent ^frbr:part+ ?citing_article .
+  ?citing_article a fabio:Expression .
 
   FILTER (?cocited_rp != ?rp)
 
   ?cocited_rp c4o:denotes/biro:references ?cocited_article .
 
-  BIND (STRAFTER(str(?cocited_article), "https://w3id.org/oc/ccc/") as ?cocited_ccc_id)
-  BIND (STRAFTER(str(?citing_article), "https://w3id.org/oc/ccc/") as ?citing_ccc_id)
+  BIND (STRAFTER(str(?cocited_article), "https://w3id.org/oc/ccc/") as ?ccc_id)
 
   OPTIONAL {
   	?citing_article a fabio:Expression ;
@@ -930,21 +995,373 @@ SELECT DISTINCT ?cocited_doi ?cocited_ccc_id (GROUP_CONCAT(DISTINCT ?citing_doi;
   }
 
   OPTIONAL {
+  	?cocited_article a fabio:Expression ;
+           datacite:hasIdentifier [
+          		datacite:usesIdentifierScheme datacite:doi ;
+          		literal:hasLiteralValue ?doi ] .
+  }
+
+}
+
+GROUP BY ?ccc_id ?doi ?in_articles_doi
+LIMIT 10000
+
+#url /cocited/sentence/{doi}
+#type operation
+#doi str(10\..+)
+#preprocess lower(doi)
+#method get
+#description This operation retrieves bibliographic resources that are cited together with the bibliographic entity identified by the input DOI. Co-cited entities appear in the same sentence.
+
+For each co-citation, the DOI of the citing articles is also provided, which can be used to retrieve the Open Access XML document by means of [Europe PubMedCentral API](https://europepmc.org/RestfulWebService).
+
+The fields returned by this operation (for each co-citation) are the following:
+
+* *doi*: the DOI of the co-cited entity;
+* *ccc_id*: the CCC local identifier of the co-cited entity (e.g. "br/0709");
+* *in_articles_doi*: the semi-colon separated DOIs of the bibliographic entities that cite the bibliographic entities at hand;
+#call /cocited/sentence/10.1016/j.ejmech.2010.06.013
+#output_json [
+      {
+          "doi": "10.1016/j.ejmech.2010.02.038",
+          "ccc_id": "br/07020",
+          "in_articles_doi": "10.1080/14756366.2020.1740695"
+      },
+      {
+          "doi": "10.1080/14756366.2018.1434519",
+          "ccc_id": "br/07027",
+          "in_articles_doi": "10.1080/14756366.2020.1740695"
+      },
+      {
+          "doi": "10.1080/14756366.2019.1612889",
+          "ccc_id": "br/070122",
+          "in_articles_doi": "10.1080/14756366.2020.1740695"
+      },
+      {
+          "doi": "10.1126/science.1126758",
+          "ccc_id": "br/0705",
+          "in_articles_doi": "10.1080/14756366.2020.1740695"
+      },
+      {
+          "doi": "10.1016/j.ejmech.2014.04.029",
+          "ccc_id": "br/07013",
+          "in_articles_doi": "10.1080/14756366.2020.1740695; 10.1080/14756366.2020.1742117"
+      },
+      {
+          "doi": "10.1016/j.ejmech.2016.02.002",
+          "ccc_id": "br/07015",
+          "in_articles_doi": "10.1080/14756366.2020.1740695; 10.1080/14756366.2020.1742117"
+      },
+      {
+          "doi": "10.1016/j.ejmech.2006.12.003",
+          "ccc_id": "br/07017",
+          "in_articles_doi": "10.1080/14756366.2020.1740695"
+      }
+]
+#field_type str(doi) str(ccc_id) str(in_articles_doi)
+#sparql PREFIX biro: <http://purl.org/spar/biro/>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX co: <http://purl.org/co/>
+PREFIX c4o: <http://purl.org/spar/c4o/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX doco: <http://purl.org/spar/doco/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX pro: <http://purl.org/spar/pro/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX oco: <https://w3id.org/oc/ontology/>
+PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+prefix bds: <http://www.bigdata.com/rdf/search#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?doi ?ccc_id (GROUP_CONCAT(DISTINCT ?citing_doi; separator="; ") as ?in_articles_doi) {
+
+  ?cited bds:search "[[doi]]" ;
+         bds:matchExact "true" .
+  ?cited_doi literal:hasLiteralValue ?cited ; datacite:usesIdentifierScheme datacite:doi .
+  ?article datacite:hasIdentifier ?cited_doi .
+
+  ?article ^cito:hasCitedEntity/^oa:hasBody/^oco:hasAnnotation ?rp .
+
+  ?rp a c4o:InTextReferencePointer ;
+      ^co:element/^c4o:isContextOf|^c4o:isContextOf ?sent .
+  ?sent c4o:isContextOf/co:element|c4o:isContextOf ?cocited_rp ;
+      ^frbr:part+ ?citing_article .
+  ?citing_article a fabio:Expression .
+
+  FILTER (?cocited_rp != ?rp)
+
+  ?cocited_rp c4o:denotes/biro:references ?cocited_article .
+
+  BIND (STRAFTER(str(?cocited_article), "https://w3id.org/oc/ccc/") as ?ccc_id)
+
+  OPTIONAL {
   	?citing_article a fabio:Expression ;
            datacite:hasIdentifier [
-          		datacite:usesIdentifierScheme datacite:pmid ;
-          		literal:hasLiteralValue ?citing_pmid ] .
+          		datacite:usesIdentifierScheme datacite:doi ;
+          		literal:hasLiteralValue ?citing_doi ] .
   }
 
   OPTIONAL {
   	?cocited_article a fabio:Expression ;
            datacite:hasIdentifier [
           		datacite:usesIdentifierScheme datacite:doi ;
-          		literal:hasLiteralValue ?cocited_doi ] .
+          		literal:hasLiteralValue ?doi ] .
   }
 
 }
 
-GROUP BY ?cocited_ccc_id ?cocited_doi ?citing_ccc_ids ?citing_dois ?citing_pmids
-ORDER BY ?cocited_doi
+GROUP BY ?ccc_id ?doi ?in_articles_doi
+LIMIT 10000
+
+#url /cocited/paragraph/{doi}
+#type operation
+#doi str(10\..+)
+#preprocess lower(doi)
+#method get
+#description This operation retrieves bibliographic resources that are cited together with the bibliographic entity identified by the input DOI. Co-cited entities appear in the same paragraph.
+
+For each co-citation, the DOI of the citing articles is also provided, which can be used to retrieve the Open Access XML document by means of [Europe PubMedCentral API](https://europepmc.org/RestfulWebService).
+
+The fields returned by this operation (for each co-citation) are the following:
+
+* *doi*: the DOI of the co-cited entity;
+* *ccc_id*: the CCC local identifier of the co-cited entity (e.g. "br/0709");
+* *in_articles_doi*: the semi-colon separated DOIs of the bibliographic entities that cite the bibliographic entities at hand;
+#call /cocited/paragraph/10.1016/j.ejmech.2010.06.013
+#output_json [
+      {
+          "doi": "10.1016/j.bmcl.2012.01.036",
+          "ccc_id": "br/0701903",
+          "in_articles_doi": "10.1080/14756366.2020.1742117"
+      },
+      {
+          "doi": "10.1016/j.bmc.2015.11.034",
+          "ccc_id": "br/0701906",
+          "in_articles_doi": "10.1080/14756366.2020.1742117"
+      },
+      {
+          "doi": "10.1016/j.bioorg.2018.11.033",
+          "ccc_id": "br/070137",
+          "in_articles_doi": "10.1080/14756366.2020.1742117"
+      },
+      {
+          "doi": "10.1016/j.bioorg.2018.10.037",
+          "ccc_id": "br/0701908",
+          "in_articles_doi": "10.1080/14756366.2020.1742117"
+      },
+      {
+          "doi": "10.1016/j.bioorg.2019.03.052",
+          "ccc_id": "br/0701910",
+          "in_articles_doi": "10.1080/14756366.2020.1742117"
+      },
+      {
+          "doi": "10.1016/j.bioorg.2019.103225",
+          "ccc_id": "br/0701912",
+          "in_articles_doi": "10.1080/14756366.2020.1742117"
+      },
+      {
+          "doi": "10.1016/j.ejmech.2019.111573",
+          "ccc_id": "br/0701914",
+          "in_articles_doi": "10.1080/14756366.2020.1742117"
+      },
+      {
+          "doi": "10.1016/j.ejmech.2016.03.011",
+          "ccc_id": "br/0701916",
+          "in_articles_doi": "10.1080/14756366.2020.1742117"
+      },
+      {
+          "doi": "10.3109/14756366.2015.1069288",
+          "ccc_id": "br/07031",
+          "in_articles_doi": "10.1080/14756366.2020.1742117; 10.1080/14756366.2020.1740695"
+      },
+      {
+          "doi": "10.1016/j.bmcl.2013.02.107",
+          "ccc_id": "br/070158",
+          "in_articles_doi": "10.1080/14756366.2020.1742117"
+      }
+]
+#field_type str(doi) str(ccc_id) str(in_articles_doi)
+#sparql PREFIX biro: <http://purl.org/spar/biro/>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX co: <http://purl.org/co/>
+PREFIX c4o: <http://purl.org/spar/c4o/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX doco: <http://purl.org/spar/doco/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX pro: <http://purl.org/spar/pro/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX oco: <https://w3id.org/oc/ontology/>
+PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+prefix bds: <http://www.bigdata.com/rdf/search#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?doi ?ccc_id (GROUP_CONCAT(DISTINCT ?citing_doi; separator="; ") as ?in_articles_doi) {
+
+  ?cited bds:search "[[doi]]" ;
+         bds:matchExact "true" .
+  ?cited_doi literal:hasLiteralValue ?cited ; datacite:usesIdentifierScheme datacite:doi .
+  ?article datacite:hasIdentifier ?cited_doi .
+
+  ?article ^cito:hasCitedEntity/^oa:hasBody/^oco:hasAnnotation ?rp .
+
+  ?rp a c4o:InTextReferencePointer ;
+      ^co:element/^c4o:isContextOf/^frbr:part|^c4o:isContextOf/^frbr:part ?paragraph .
+  ?paragraph a doco:Paragraph;
+      frbr:part/c4o:isContextOf/co:element|frbr:part/c4o:isContextOf ?cocited_rp ;
+      ^frbr:part+ ?citing_article .
+  ?citing_article a fabio:Expression .
+
+  FILTER (?cocited_rp != ?rp)
+
+  ?cocited_rp c4o:denotes/biro:references ?cocited_article .
+
+  BIND (STRAFTER(str(?cocited_article), "https://w3id.org/oc/ccc/") as ?ccc_id)
+
+  OPTIONAL {
+  	?citing_article a fabio:Expression ;
+           datacite:hasIdentifier [
+          		datacite:usesIdentifierScheme datacite:doi ;
+          		literal:hasLiteralValue ?citing_doi ] .
+  }
+
+  OPTIONAL {
+  	?cocited_article a fabio:Expression ;
+           datacite:hasIdentifier [
+          		datacite:usesIdentifierScheme datacite:doi ;
+          		literal:hasLiteralValue ?doi ] .
+  }
+
+}
+
+GROUP BY ?ccc_id ?doi ?in_articles_doi
+LIMIT 10000
+
+#url /cocited/section/{doi}
+#type operation
+#doi str(10\..+)
+#preprocess lower(doi)
+#method get
+#description This operation retrieves bibliographic resources that are cited together with the bibliographic entity identified by the input DOI. Co-cited entities appear in the same section. Sections here addressed include only those that are not subsections of any other section.
+
+For each co-citation, the DOI of the citing articles is also provided, which can be used to retrieve the Open Access XML document by means of [Europe PubMedCentral API](https://europepmc.org/RestfulWebService).
+
+The fields returned by this operation (for each co-citation) are the following:
+
+* *doi*: the DOI of the co-cited entity;
+* *ccc_id*: the CCC local identifier of the co-cited entity (e.g. "br/0709");
+* *in_articles_doi*: the semi-colon separated DOIs of the bibliographic entities that cite the bibliographic entities at hand;
+* *section_titles*: the semi-colon separated titles of sections where the co-cited entities appear. In case of multiple sections with the same title only one is recorded;
+#call /cocited/section/10.1016/j.ejmech.2010.06.013
+#output_json [
+      {
+        "doi": "10.1016/j.bmcl.2012.01.036",
+        "ccc_id": "br/0701903",
+        "in_articles_doi": "10.1080/14756366.2020.1742117",
+        "section_titles": "Introduction"
+      },
+      {
+        "doi": "10.1016/j.bioorg.2018.11.033",
+        "ccc_id": "br/070137",
+        "in_articles_doi": "10.1080/14756366.2020.1742117",
+        "section_titles": "Introduction"
+      },
+      {
+        "doi": "10.1016/j.bioorg.2019.03.052",
+        "ccc_id": "br/0701910",
+        "in_articles_doi": "10.1080/14756366.2020.1742117",
+        "section_titles": "Introduction"
+      },
+      {
+        "doi": "10.1016/j.bioorg.2019.103225",
+        "ccc_id": "br/0701912",
+        "in_articles_doi": "10.1080/14756366.2020.1742117",
+        "section_titles": "Introduction"
+      },
+      {
+        "doi": "10.1016/j.ejmech.2019.111573",
+        "ccc_id": "br/0701914",
+        "in_articles_doi": "10.1080/14756366.2020.1742117",
+        "section_titles": "Introduction"
+      },
+      {
+        "doi": "10.1016/j.ejmech.2016.03.011",
+        "ccc_id": "br/0701916",
+        "in_articles_doi": "10.1080/14756366.2020.1742117",
+        "section_titles": "Introduction"
+      },
+      {
+        "doi": "10.3109/14756366.2015.1069288",
+        "ccc_id": "br/07031",
+        "in_articles_doi": "10.1080/14756366.2020.1742117; 10.1080/14756366.2020.1740695",
+        "section_titles": "Introduction"
+      }
+]
+#field_type str(doi) str(ccc_id) str(in_articles_doi) str(section_titles)
+#sparql PREFIX biro: <http://purl.org/spar/biro/>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX co: <http://purl.org/co/>
+PREFIX c4o: <http://purl.org/spar/c4o/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX doco: <http://purl.org/spar/doco/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX pro: <http://purl.org/spar/pro/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX oco: <https://w3id.org/oc/ontology/>
+PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+prefix bds: <http://www.bigdata.com/rdf/search#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?doi ?ccc_id (GROUP_CONCAT(DISTINCT ?citing_doi; separator="; ") as ?in_articles_doi) (GROUP_CONCAT(DISTINCT ?section_title; separator="; ") as ?section_titles) {
+
+  ?cited bds:search "[[doi]]" ;
+         bds:matchExact "true" .
+  ?cited_doi literal:hasLiteralValue ?cited ; datacite:usesIdentifierScheme datacite:doi .
+  ?article datacite:hasIdentifier ?cited_doi .
+
+  ?article ^cito:hasCitedEntity/^oa:hasBody/^oco:hasAnnotation ?rp .
+
+  ?rp a c4o:InTextReferencePointer ;
+      ^co:element/^c4o:isContextOf/^frbr:part/^frbr:part|^c4o:isContextOf/^frbr:part/^frbr:part ?section .
+  ?section a doco:Section;
+      frbr:part+/c4o:isContextOf/co:element|frbr:part+/c4o:isContextOf ?cocited_rp ;
+      ^frbr:part ?citing_article .
+
+  ?citing_article a fabio:Expression .
+
+  OPTIONAL {
+    ?section dcterms:title ?section_title .
+  }
+
+  FILTER (?cocited_rp != ?rp)
+
+  ?cocited_rp c4o:denotes/biro:references ?cocited_article .
+
+  BIND (STRAFTER(str(?cocited_article), "https://w3id.org/oc/ccc/") as ?ccc_id)
+
+  OPTIONAL {
+  	?citing_article a fabio:Expression ;
+           datacite:hasIdentifier [
+          		datacite:usesIdentifierScheme datacite:doi ;
+          		literal:hasLiteralValue ?citing_doi ] .
+  }
+
+  OPTIONAL {
+  	?cocited_article a fabio:Expression ;
+           datacite:hasIdentifier [
+          		datacite:usesIdentifierScheme datacite:doi ;
+          		literal:hasLiteralValue ?doi ] .
+  }
+
+}
+
+GROUP BY ?ccc_id ?doi ?in_articles_doi ?section_titles
 LIMIT 10000

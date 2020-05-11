@@ -200,49 +200,37 @@ LIMIT 10000
 
 The fields returned by this operation (for each reference) are the following:
 
-* *citing_pmid*: the PubMed ID of the citing entity;
 * *citing_doi*: the DOI of the citing entity;
-* *cited_pmid*: the PubMed ID of the cited entity;
 * *cited_doi*: the DOI of the cited entity;
 * *oci*: the Open Citation Identifier (OCI) of the citation at hand;
-* *ccc_oci*: the list of Open Citation Identifiers for each in-text reference pointer relevant to the citation at hand;
 * *intrepids*: the list of In-Text Reference Identifiers of all the in-text references denoting the bibliographic reference at hand;
 * *reference*: the text of the bibliographic reference entry
 #call /references/10.1080/14756366.2020.1740695
 #output_json [
     {
-        "citing_pmid": "32183576",
         "citing_doi": "10.1080/14756366.2020.1740695",
-        "cited_pmid": "27025563",
         "cited_doi": "10.1016/j.bmc.2016.03.032",
         "oci": "0701-070140",
-        "ccc_oci": "0701-070140/1; 0701-070140/2; 0701-070140/3",
         "intrepids": "0701-070140/1-3; 0701-070140/2-3; 0701-070140/3-3",
-        "reference": "(a) Abdel-Sayed, MA, Bayomi, SM, El-Sherbeny, MA, et al. Synthesis, anti-inflammatory, analgesic, COX-1/2 inhibition activities and molecular docking study of pyrazoline derivatives. Bioorg Med Chem 2016; 24: 2032â€“42. PMID: 27025563"
+        "reference": "(a) Abdel-Sayed, MA, Bayomi, SM, El-Sherbeny, MA, et al. Synthesis, anti-inflammatory, analgesic, COX-1/2 inhibition activities and molecular docking study of pyrazoline derivatives. Bioorg Med Chem 2016; 24: 2032-42. PMID: 27025563"
     },
     {
-        "citing_pmid": "32183576",
         "citing_doi": "10.1080/14756366.2020.1740695",
-        "cited_pmid": "27318118",
         "cited_doi": "10.1016/j.ejmech.2016.05.066",
         "oci": "0701-070142",
-        "ccc_oci": "0701-070142/1; 0701-070142/2; 0701-070142/3",
         "intrepids": "0701-070142/1-3; 0701-070142/2-3; 0701-070142/3-3",
-        "reference": "(a) Abdel-Aziz, AAM, Abou-Zeid, LA, ElTahir, KEH, et al. Synthesis, anti-inflammatory, analgesic, COX-1/2 inhibitory activities and molecular docking studies of substituted 2-mercapto-4(3H)-quinazolinones. Eur J Med Chem 2016; 121: 410â€“21. PMID: 27318118"
+        "reference": "(a) Abdel-Aziz, AAM, Abou-Zeid, LA, ElTahir, KEH, et al. Synthesis, anti-inflammatory, analgesic, COX-1/2 inhibitory activities and molecular docking studies of substituted 2-mercapto-4(3H)-quinazolinones. Eur J Med Chem 2016; 121: 410-21. PMID: 27318118"
     },
     {
-        "citing_pmid": "32183576",
         "citing_doi": "10.1080/14756366.2020.1740695",
-        "cited_pmid": "18644347",
         "cited_doi": "10.1016/j.bcp.2008.06.015",
         "oci": "0701-070144",
-        "ccc_oci": "0701-070144/1; 0701-070144/2",
         "intrepids": "0701-070144/1-2; 0701-070144/2-2",
-        "reference": "Funakoshi-Tago, M, Shimizu, T, Tago, K, et al. Celecoxib potently inhibits TNFÎ±-induced nuclear translocation and activation of NF-ÎºB. Biochem Pharmacol 2008; 76: 662â€“71. PMID: 18644347"
+        "reference": "Funakoshi-Tago, M, Shimizu, T, Tago, K, et al. Celecoxib potently inhibits TNFÎ±-induced nuclear translocation and activation of NF-ÎºB. Biochem Pharmacol 2008; 76: 662-71. PMID: 18644347"
     }
 ]
 
-#field_type str(citing_pmid) str(citing_doi) str(cited_pmid) str(cited_doi) str(oci) str(ccc_oci) str(intrepids) str(reference)
+#field_type str(citing_doi) str(cited_doi) str(oci) str(intrepids) str(reference)
 #sparql PREFIX biro: <http://purl.org/spar/biro/>
 PREFIX cito: <http://purl.org/spar/cito/>
 PREFIX c4o: <http://purl.org/spar/c4o/>
@@ -257,7 +245,7 @@ PREFIX oco: <https://w3id.org/oc/ontology/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
 
-SELECT DISTINCT ?citing_pmid ?citing_doi ?cited_pmid ?cited_doi ?oci (GROUP_CONCAT(?ccc_oci_sing; separator="; ") as ?ccc_oci)  (GROUP_CONCAT(?intrepid; separator="; ") as ?intrepids) ?reference {
+SELECT DISTINCT ?citing_doi ?cited_doi ?oci (GROUP_CONCAT(?intrepid; separator="; ") as ?intrepids) ?reference {
 
     VALUES ?citing_doi { "[[doi]]" }
 	  ?article a fabio:Expression ;
@@ -274,24 +262,10 @@ SELECT DISTINCT ?citing_pmid ?citing_doi ?cited_pmid ?cited_doi ?oci (GROUP_CONC
     BIND (STRAFTER(str(?citation), "https://w3id.org/oc/ccc/ci/") as ?oci)
 
     OPTIONAL {
-    ?article
-		datacite:hasIdentifier [
-			datacite:usesIdentifierScheme datacite:pmid ;
-			literal:hasLiteralValue ?citing_pmid ] .
-      }
-
-    OPTIONAL {
       ?cited_br
       datacite:hasIdentifier [
         datacite:usesIdentifierScheme datacite:doi ;
             literal:hasLiteralValue ?cited_doi ] .
-    }
-
-    OPTIONAL {
-      ?cited_br
-      datacite:hasIdentifier [
-        datacite:usesIdentifierScheme datacite:pmid ;
-            literal:hasLiteralValue ?cited_pmid ] .
     }
 
   	OPTIONAL {
@@ -301,11 +275,10 @@ SELECT DISTINCT ?citing_pmid ?citing_doi ?cited_pmid ?cited_doi ?oci (GROUP_CONC
               literal:hasLiteralValue ?intrepid ] .
 
         ?rp oco:hasAnnotation /oa:hasBody ?rp_citation .
-        BIND (STRAFTER(str(?rp_citation), "https://w3id.org/oc/ccc/ci/") as ?ccc_oci_sing)
       }
 }
 
-GROUP BY ?reference ?intrepids ?oci ?ccc_oci ?citing_pmid ?citing_doi ?cited_pmid ?cited_doi
+GROUP BY ?reference ?intrepids ?oci ?citing_doi ?cited_doi
 
 LIMIT 10000
 
@@ -343,7 +316,7 @@ The fields returned by this operation (for each citing entity) are the following
         "author_sc": "yes"
     }
 ]
-#field_type str(oci) str(citing) str(cited) str(creation) duration(timespan) str(?journal_sc) str(?author_sc)
+#field_type str(oci) str(citing) str(cited) dateTime(creation) str(?journal_sc) str(?author_sc)
 #sparql PREFIX biro: <http://purl.org/spar/biro/>
 PREFIX cito: <http://purl.org/spar/cito/>
 PREFIX co: <http://purl.org/co/>
@@ -480,13 +453,14 @@ WHERE {
 }
 LIMIT 10000
 
-#url /intext_citation/{intrepid}
+#url /intext-citation/{intrepid}
 #type operation
 #intrepid str([0-9]+-[0-9]+\/[0-9]+-[0-9]+)
 #method get
 #description This operation retrieves information related to an in-text reference pointer identified by the input InTRePID.
 
 The fields returned by this operation are the following:
+
 * *intext_reference*: the string identifying the in-text reference, e.g. `[1]` ;
 * *citing_doi*: the DOI of the citing entity;
 * *cited_doi*: the DOI of the cited entity;
@@ -495,10 +469,10 @@ The fields returned by this operation are the following:
 * *xpath_intext_reference*: the XPath of the in-text reference with respect to the XML source document;
 * *xpath_container*: the XPath of the first element containing the in-text reference with respect to the XML source document;
 * *section_title*: the title of the section where the in-text reference pointer appears;
-#call /intext_citation/0701-0709/2-2
+#call /intext-citation/0701-0709/2-2
 #output_json [
     {
-        "intext_reference": "2â€“4",
+        "intext_reference": "2-4",
         "citing_doi": "10.1080/14756366.2020.1740695",
         "cited_doi": "10.1016/j.ejmech.2010.06.013",
         "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/32183576/fullTextXML",
@@ -625,7 +599,7 @@ For instance, consider an input article that is cited by 2 articles: in the firs
 
 The fields returned by this operation (for each reference) are the following:
 
-* *count*: the number of incoming citations to the input bibliographic entity.
+* *count*: the number of in-text reference pointers denoting the input bibliographic entity.
 #call /intext-citation-count/10.1016/j.ejmech.2010.06.013
 #field_type int(count)
 #output_json [
@@ -657,7 +631,7 @@ WHERE {
 #preprocess lower(dois) --> split_dois(dois)
 #postprocess remove_duplicates()
 #method get
-#description This operation allows one to get co-authorship matrix of all the articles specified in input by means of their DOIs.
+#description This operation allows one to get a co-authorship matrix of all the articles specified in input by means of their DOIs.
 
 It is possible to specify one or more DOIs as input of this operation. In this case, the DOI should be separated with a double underscore ("\_\_") – e.g. "10.1016/j.ejmech.2010.06.013\_\_10.1080/14756366.2020.1740695\_\_...".
 

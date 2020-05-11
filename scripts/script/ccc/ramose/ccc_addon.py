@@ -52,7 +52,7 @@ def expand_query(type):
             """
     elif type == "paragraph":
         pattern = """
-            ?rp ^co:element/^c4o:isContextOf/^frbr:part|^c4o:isContextOf/^frbr:part ?paragraph .
+            ?rp (^co:element)?/^c4o:isContextOf/^frbr:part ?paragraph .
             ?paragraph a doco:Paragraph;
                 frbr:part/c4o:isContextOf/co:element|frbr:part/c4o:isContextOf ?cocited_rp ;
                 ^frbr:part+ ?citing_article .
@@ -88,7 +88,7 @@ def remove_duplicates(res):
     res_dict = {}
 
     for row in res[1:]:
-        t1, v1 = row[0]  # name of author 1
+        t1, v1 = row[0]  # name of author 1: t1 - type, v1 - value
         t2, v2 = row[1]  # name of author 2
         t3, v3 = row[2]  # co-authorship count
 

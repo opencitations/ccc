@@ -686,7 +686,6 @@ The operations that this API implements are:
             if match("^%s$" % pat, cur_u):
                 result = pat
                 break
-
         return result
 
     @staticmethod
@@ -904,11 +903,11 @@ The operations that this API implements are:
         result = op_url
 
         if "preprocess" in op_item:
+
             for pre in [sub("\s+", "", i) for i in op_item["preprocess"].split(" --> ")]:
                 match_url = op_item["url"]
                 func_name = sub("^([^\(\)]+)\(.+$", "\\1", pre).strip()
                 params_name = sub("^.+\(([^\(\)]+)\).*", "\\1", pre).split(",")
-
                 param_list = []
                 for param_name in params_name:
                     if param_name in op_item:
@@ -917,7 +916,6 @@ The operations that this API implements are:
                         reg_ex = ".+"
 
                     match_url = match_url.replace("{%s}" % param_name, "(%s)" % reg_ex)
-
                 # Get only the groups that are not overlapping with others
                 param_list = ()
                 search_groups = search(match_url, result)
@@ -929,6 +927,10 @@ The operations that this API implements are:
                 # run function
                 func = getattr(self.addon, func_name)
                 res = func(*param_list)
+                print("match_url",match_url)
+                print("func",func)
+                print("param_list",param_list)
+                print("res",res)
                 # substitute res to the part considered in the url
                 for idx in range(len(param_list)):
                     result = result.replace(param_list[idx], res[idx])
@@ -1122,13 +1124,14 @@ The operations that this API implements are:
             if str_method in m:
                 try:
                     op_url = self.preprocess(op_url, i)
-
+                    print("\nop_url\n",op_url)
                     query = i["sparql"]
                     par = findall("{([^{}]+)}", i["url"])
                     par_man = match(op, op_url).groups()
                     for idx in range(len(par)):
                         try:
                             par_type = i[par[idx]].split("(")[0]
+                            print("i[par[idx]]",i[par[idx]], par_type)
                             if par_type == "str":
                                 par_value = par_man[idx]
                             else:
@@ -1136,7 +1139,7 @@ The operations that this API implements are:
                         except KeyError:
                             par_value = par_man[idx]
                         query = query.replace("[[%s]]" % par[idx], str(par_value))
-
+                        #print("\nquery\n",query)
                     if self.sparql_http_method == "get":
                         r = get(self.tp + "?query=" + quote(query), headers={"Accept": "text/csv"})
                     else:
@@ -1247,7 +1250,7 @@ if __name__ == "__main__":
                 format = request.args.get('format')
                 content_type = "text/csv" if format is not None and "csv" in format else "application/json"
                 status, res, c_type = am.exec_op(cur_call+'?'+unquote(request.query_string.decode('utf8')), content_type=content_type)
-
+                print(status, res, c_type)
                 if status == 200:
                     response = make_response(res, status)
                     response.headers.set('Content-Type', c_type)

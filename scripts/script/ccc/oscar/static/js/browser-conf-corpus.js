@@ -101,7 +101,6 @@ var browser_conf = {
                 {"fields": ["author"], "concat_style":{"author": "inline"}}
             ],
             "details": [
-
               {"fields": ["journal"], "classes":["journal-data"]},
               {"fields": ["journal_data"], "classes":["journal-data"]},
               {"fields": ["FREE-TEXT","year"], "values":[". ", null] }
@@ -164,10 +163,101 @@ var browser_conf = {
           "ext_data": {
             //"crossref4doi": {"name": call_crossref, "param": {"fields":["id_lit","FREE-TEXT"],"values":[null,1]}}
           }
-  }
+  },
+    "author": {
+          "rule": "ra\/.*",
+          "query": [`
+            SELECT ?orcid ?author_iri ?short_iri ?author ?short_type (COUNT(distinct ?doc) AS ?num_docs) (COUNT(distinct ?cites) AS ?out_cits) (COUNT(distinct ?cited_by) AS ?in_cits_docs) (COUNT(?cited_by) AS ?in_cits_tot) WHERE {
+    	         BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?author_iri) .
+               BIND(REPLACE(STR(?author_iri), 'https://w3id.org/oc/ccc/', '', 'i') as ?short_iri) .
+               ?author_iri foaf:familyName ?fname .
+    	         ?author_iri foaf:givenName ?name .
+    	         BIND(CONCAT(STR(?name),' ', STR(?fname)) as ?author) .
+    	         OPTIONAL {?role pro:isHeldBy ?author_iri ; pro:withRole ?aut_role.
+                        ?doc pro:isDocumentContextFor ?role.
+                        BIND(REPLACE(STR(?aut_role), 'http://purl.org/spar/pro/', '', 'i') as ?short_type) .
+                        OPTIONAL {?doc cito:cites ?cites .}
+                        OPTIONAL {?cited_by cito:cites ?doc .}
+                  }
+
+               OPTIONAL {
+      	          ?author_iri datacite:hasIdentifier [
+      		            datacite:usesIdentifierScheme datacite:orcid ;
+  			              literal:hasLiteralValue ?orcid
+                  ]
+    	         }
+             } GROUP BY ?orcid ?author_iri ?short_iri ?author ?short_type ?num_docs ?out_cits ?in_cits_docs
+             `
+          ],
+          "links": {
+            //"author": {"field":"author_iri"},
+            "title": {"field":"doc"},
+            "orcid": {"field":"orcid","prefix":"https://orcid.org/"}
+          },
+          "group_by": {"keys":["author"], "concats":["doc","title","year"]},
+
+          "contents": {
+            "extra": {
+                "browser_view_switch":{
+                    "labels":["ldd","Browser"],
+                    "values":["short_iri","short_iri"],
+                    "regex":["w3id.org\/oc\/ccc\/ra\/.*","w3id.org\/oc\/browser\/ccc\/ra\/.*"],
+                    "query":[["PREFIX pro:<http://purl.org/spar/pro/> SELECT ?role WHERE {?role pro:isHeldBy <https://w3id.org/oc/ccc[[VAR]]>. ?role pro:withRole pro:author . }"],["SELECT ?role WHERE {BIND(<https://w3id.org/oc/ccc[[VAR]]> as ?role)}"]],
+                    "links":["https://w3id.org/oc/ccc[[VAR]]","https://w3id.org/oc/browser/ccc[[VAR]]"]
+                }
+            },
+            "header": [
+              {"classes":["20px"]},
+              {"fields": ["short_type"], "concat_style":{"short_type": "last"} , "classes":["doc-type"]},
+              {"fields": ["FREE-TEXT","short_iri"], "values":["Corpus ID: ", null] , "classes":["identifiers author_ids"]},
+              {"fields": ["FREE-TEXT","orcid"], "values": ["ORCID: ",null], "classes":["identifiers author_ids"]},
+              {"classes":["20px"]},
+              {"fields": ["author"], "classes":["header-title wrapline"]}
+            ],
+            "details": [
+
+
+            ],
+            "metrics": [
+                {"classes":["5px"]},
+                {"fields": ["FREE-TEXT"], "values": ["Metrics"], "classes": ["metrics-title"]},
+                {"classes":["25px"]},
+                {"fields": ["FREE-TEXT","num_docs","FREE-TEXT"], "values": ["Author of ",null," documents"], "classes": ["metric-entry","imp-value"]},
+                {"classes":["10px"]},
+                //{"fields": ["FREE-TEXT","in_cits_tot","FREE-TEXT"], "values": ["Cited ",null," number of times"], "classes": ["metric-entry","imp-value","metric-entry"]},
+                {"fields": ["FREE-TEXT","in_cits_docs","FREE-TEXT"], "values": ["Cited by ",null," different documents"], "classes": ["metric-entry","imp-value","metric-entry"]}
+                //{"classes":["5px"]}
+                //{"fields": ["FREE-TEXT","in_cits_docs","FREE-TEXT"], "values": ["\xa0\xa0\xa0 by ",null," different documents"], "classes": ["metric-entry","imp-value","metric-entry"]}
+            ],
+            "oscar_conf": {
+                "progress_loader":{
+                          "visible": false,
+                          "spinner": false,
+                          "title":"Loading the list of Documents ...",
+                          //"subtitle":"Be patient - this might take several seconds!"
+                          //"abort":{"title":"Abort", "href_link":""}
+                        }
+            },
+            "oscar": [
+              {
+                "query_text": "author_iri",
+                "rule": "author_works",
+                "label":"Author's documents",
+                "config_mod" : [
+      							{"key":"categories.[[name,document]].fields.[[title,Year]]" ,"value":"REMOVE_ENTRY"},
+      							{"key":"page_limit_def" ,"value":20},
+      							{"key":"categories.[[name,document]].fields.[[title,Year]].sort.default" ,"value":{"order": "desc"}},
+                    {"key":"progress_loader.visible" ,"value":false},
+                    {"key":"timeout.text" ,"value":""}
+      					]
+              }
+            ]
+          }
+        }
+      }
 }
 
-}
+
 
 //"FUNC" {"name": call_crossref, "param":{"fields":[],"vlaues":[]}}
 function call_crossref(str_doi, field){

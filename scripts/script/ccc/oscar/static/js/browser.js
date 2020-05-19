@@ -181,7 +181,7 @@ var browser = (function () {
 	    				}
 			   });
 			 }
-			
+
 		}
 
 		function build_extra_sec(data_obj, category){
@@ -1893,6 +1893,7 @@ var b_htmldom = (function () {
 			}
 		}
 	}
+
 
 
 	return {

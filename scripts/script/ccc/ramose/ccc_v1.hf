@@ -501,19 +501,24 @@ PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
 prefix bds: <http://www.bigdata.com/rdf/search#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?intext_reference ?citing_doi ?cited_doi ?source (IF(bound(?list), "yes", "no") as ?in_list) ?xpath_intext_reference ?xpath_container ?section_title  {
+SELECT DISTINCT ?intext_reference ?citing_doi ?cited_doi ?source (IF(bound(?list), ?xpath_pl, "no") as ?in_list) ?xpath_intext_reference ?xpath_container ?section_title  {
 
   ?intrepid bds:search "[[intrepid]]" ;
          bds:matchExact "true" .
   ?intrepid_uri literal:hasLiteralValue ?intrepid ; datacite:usesIdentifierScheme datacite:intrepid .
 
   ?rp datacite:hasIdentifier ?intrepid_uri ;
-      c4o:hasContent ?intext_reference ;
-      datacite:hasIdentifier [
-		datacite:usesIdentifierScheme datacite:local-resource-identifier-scheme ;
-        literal:hasLiteralValue ?xpath_intext_reference ] ;
       oco:hasAnnotation / oa:hasBody ?citation ;
-      ^co:element/^c4o:isContextOf/^frbr:part|^c4o:isContextOf/^frbr:part ?paragraph .
+      ^co:element/^c4o:isContextOf|^c4o:isContextOf ?paragraph .
+  # paragraph is actually the sentence 
+  # ^co:element/^c4o:isContextOf/^frbr:part|^c4o:isContextOf/^frbr:part ?paragraph
+  OPTIONAL {
+
+  ?rp datacite:hasIdentifier [
+    datacite:usesIdentifierScheme datacite:local-resource-identifier-scheme ;
+        literal:hasLiteralValue ?xpath_intext_reference ] ;
+    c4o:hasContent ?intext_reference .
+  }
 
   ?paragraph datacite:hasIdentifier [
 		datacite:usesIdentifierScheme datacite:local-resource-identifier-scheme ;
@@ -548,7 +553,10 @@ SELECT DISTINCT ?intext_reference ?citing_doi ?cited_doi ?source (IF(bound(?list
 
   OPTIONAL {
   	?rp ^co:element ?pl .
-    BIND("yes" as ?list)
+    ?pl datacite:hasIdentifier [
+  		datacite:usesIdentifierScheme datacite:local-resource-identifier-scheme ;
+          literal:hasLiteralValue ?xpath_pl ]
+    BIND(?xpath_pl as ?list)
   }
 
 }

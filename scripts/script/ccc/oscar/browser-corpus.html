@@ -42,7 +42,8 @@
 
     <script type="text/javascript" src="static/js/browser-conf-corpus.js"></script>
     <script type="text/javascript" src="static/js/browser.js"></script>
-    <script type="text/javascript" src ="static/js/epmc.js"  ></script>
+    <script type="text/javascript" src ="static/js/jquery.mark.min.js"></script>
+    <script type="text/javascript" src ="static/js/epmc.js"></script>
     <script>
 
       var resource_iri = null;
@@ -50,14 +51,43 @@
       var groups = myRegexp.exec(String(window.location.href));
       if (groups.length > 1) {resource_iri = groups[1];}
       browser.do_sparql_query(resource_iri);
-      var cited = window.location.href.substring(window.location.href.lastIndexOf('/') - 2);
-      //console.log(cited);
-      $("a.res-val-link").each(
-          function() {
-            console.log(cited);
-          }
-      );
-    </script>
 
+      // CCC call EPMC
+      $(document).on("click", "td[field='mentions']>a", function(event) {
+
+          event.preventDefault();
+
+          var pointers = $(this).attr('href');
+          var td = $(this).parent();
+          // toggle sentences
+          if ( $(td).next("td").length != 0) {
+              $(td).next("td").toggle();
+          } else {
+            var new_td = expand_context(td,pointers)[0]
+              , rp_content = expand_context(td,pointers)[1];
+            // append sentences
+            $(td).parent().append(new_td);
+            // highlight pointer in sentence
+            // $(new_td).hover(function() {
+            //   $('.sentence').each(function () {
+            //     var rp = rp_content[$(this).text()];
+            //     var options = {"separateWordSearch": false}
+            //     $(this).mark(rp, options);
+            //    });
+            // });
+
+            $(new_td).each(function(){
+                $(this).hover(function(){
+                  $(this).children('.sentence').each(function () {
+                      var rp = rp_content[$(this).text()];
+                      var options = {"separateWordSearch": false}
+                      $(this).mark(rp, options);
+                   });
+                });
+            });
+          }
+
+      });
+    </script>
   </body>
 </html>

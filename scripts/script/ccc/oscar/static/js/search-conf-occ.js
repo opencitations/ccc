@@ -92,10 +92,6 @@ var search_conf = {
                bds:matchExact "true" .
         ?orcid_iri literal:hasLiteralValue ?orcid ; datacite:usesIdentifierScheme datacite:orcid .
         ?author_iri datacite:hasIdentifier ?orcid_iri .`
-              //"{",
-              //"?lit bds:search ?orcid_txt . ?lit bds:matchAllTerms 'true' . ?lit bds:relevance ?score . ?lit bds:maxRank '1' .",
-              //"?author_iri datacite:hasIdentifier/literal:hasLiteralValue '[[VAR]]' .",
-              //"}"
       ]
     },
     {
@@ -265,7 +261,7 @@ var search_conf = {
       "label": "Document with in-text references",
       "macro_query": [
         `
-        SELECT DISTINCT ?iri ?short_iri ?short_iri_id ?browser_iri ?short_type ?title ?doi ?subtitle ?year ?journal ?journal_data ?author ?author_browser_iri (count(?next) as ?tot) (count(DISTINCT ?rp) as ?mentions) (group_concat(distinct ?rp; separator="; ") as ?pointers)
+        SELECT DISTINCT ?iri ?short_iri ?short_iri_id ?browser_iri ?short_type ?title ?doi ?subtitle ?year ?journal ?journal_data ?author ?author_browser_iri (count(?next) as ?tot) (count(DISTINCT ?rp) as ?mentions) (group_concat(distinct ?rp; separator=";") as ?pointers)
         WHERE{
 
               [[RULE]]
@@ -288,7 +284,10 @@ var search_conf = {
 
                     ?citation cito:hasCitedEntity ?cited_iri ; cito:hasCitingEntity ?iri ;^oa:hasBody ?be_annotation .
                     ?be oco:hasAnnotation ?be_annotation .
-                    ?rp c4o:denotes ?be .
+                    ?pointer c4o:denotes ?be ; datacite:hasIdentifier [
+                      datacite:usesIdentifierScheme datacite:intrepid ;
+                      literal:hasLiteralValue ?rp
+                      ] .
                   }
 
 

@@ -284,6 +284,8 @@ body.lucinda-cover{
 
 a:hover { color: var(--main-bg-color);}
 
+
+
 .browser-header-tab tbody tr , .browser-details-tab tr {display: inline-block;}
 .browser-header-tab tbody tr:nth-of-type(2),
 .browser-header-tab tbody tr:nth-of-type(3),
@@ -293,6 +295,8 @@ a:hover { color: var(--main-bg-color);}
 .browser-header-tab tbody tr:nth-of-type(3) td elem,
 .browser-header-tab tbody tr:nth-of-type(4) td elem,
 .browser-details-tab tbody tr td elem {font-family: "Karla", sans-serif; }
+
+.browser-header-tab tbody tr:nth-of-type(6) {display: block !important;}
 /* authors */
 .browser-header-tab tbody tr:nth-of-type(9) {padding-top: 20px;} /* authors */
 
@@ -301,6 +305,7 @@ a:hover { color: var(--main-bg-color);}
   padding: 5px !important;
   border-radius: 5%;
   font-size: 1.2rem;
+  color:white !important;
 }
 
 .doc-type a {color:white !important;}

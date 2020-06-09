@@ -67,14 +67,6 @@
               , rp_content = expand_context(td,pointers)[1];
             // append sentences
             $(td).parent().append(new_td);
-            // highlight pointer in sentence
-            // $(new_td).hover(function() {
-            //   $('.sentence').each(function () {
-            //     var rp = rp_content[$(this).text()];
-            //     var options = {"separateWordSearch": false}
-            //     $(this).mark(rp, options);
-            //    });
-            // });
 
             $(new_td).each(function(){
                 $(this).hover(function(){
@@ -88,6 +80,8 @@
           }
 
       });
+
+
     </script>
   </body>
 </html>

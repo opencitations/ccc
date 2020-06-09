@@ -19,20 +19,32 @@ var search_conf = {
   ],
 
 "rules":  [
+  {
+    "name":"doi",
+    "label": "With a specific DOI",
+    "placeholder": "DOI e.g. 10.1080/14756366.2020.1740695",
+    "advanced": true,
+    "freetext": true,
+    "heuristics": [["lower_case"]],
+    "category": "document",
+    "regex":"(10.\\d{4,9}\/[-._;()/:A-Za-z0-9][^\\s]+)",
+    "query": [`
+            ?doi bds:search "[[VAR]]" ;
+                   bds:matchExact "true" .
+            ?doi_iri literal:hasLiteralValue ?doi ; datacite:usesIdentifierScheme datacite:doi .
+            ?iri datacite:hasIdentifier ?doi_iri .`
+    ]
+  },
     {
-      "name":"doi",
-      "label": "With a specific DOI",
-      "placeholder": "DOI e.g. 10.1080/14756366.2020.1740695",
-      "advanced": true,
+      "name":"br_resource",
+      "label": "Bibiographic resource Corpus ID (e.g. br/0701)",
       "freetext": true,
-      "heuristics": [["lower_case"]],
       "category": "document",
-      "regex":"(10.\\d{4,9}\/[-._;()/:A-Za-z0-9][^\\s]+)",
-      "query": [`
-              ?input_doi bds:search "[[VAR]]" ;
-                     bds:matchExact "true" .
-              ?doi literal:hasLiteralValue ?input_doi ; datacite:usesIdentifierScheme datacite:doi .
-              ?iri datacite:hasIdentifier ?doi .`
+      "regex":"(br\/\\d{1,})",
+      "query": [
+            "{",
+            "BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?iri) . ",
+            "}"
       ]
     },
     {
@@ -81,7 +93,7 @@ var search_conf = {
     },
     {
       "name":"orcid",
-      "label": "With a specific ORCID",
+      "label": "ORCID",
       "placeholder": "ORCID e.g. 0000-0001-5506-523X",
       "advanced": true,
       "freetext": true,
@@ -96,7 +108,7 @@ var search_conf = {
     },
     {
       "name":"author_lname",
-      "label": "With a specific last name",
+      "label": "Last name",
       "placeholder": "Free-text e.g. Peroni",
       "advanced": true,
       "heuristics": [["lower_case","capitalize_1st_letter"]],
@@ -110,7 +122,7 @@ var search_conf = {
     },
     {
       "name":"author_fname",
-      "label": "With a specific first name",
+      "label": "First name",
       "placeholder": "Free-text e.g. Silvio",
       "advanced": true,
       "heuristics": [["lower_case","capitalize_1st_letter"]],
@@ -124,7 +136,7 @@ var search_conf = {
     },
     {
       "name":"author_works",
-      "label": "Author resource link (https://w3id.or/...)",
+      "label": "Author Corpus ID (https://w3id.org/...)",
       "category": "document",
       "regex": "(https:\/\/w3id\\.org\/oc\/ccc\/ra\/\\d{1,})",
       "query": [
@@ -136,7 +148,7 @@ var search_conf = {
     },
     {
       "name":"ra_resource",
-      "label": "Author resource Id (ra/)",
+      "label": "Author resource Id (e.g. ra/0701)",
       "freetext": true,
       "category": "author",
       "regex":"(ra\/\\d{1,})",
@@ -148,7 +160,7 @@ var search_conf = {
     },
     {
       "name":"author_text",
-      "label": "Having an author (last name)",
+      "label": "Last name",
       "placeholder": "Free-text e.g. Shotton",
       "advanced": true,
       "freetext": true,
@@ -192,73 +204,10 @@ var search_conf = {
   ],
 
 "categories": [
-    {
-      "name": "document",
-      "label": "Document",
-      "macro_query": [
-        `
-        SELECT DISTINCT ?iri ?short_iri ?short_iri_id ?browser_iri ?short_type ?title ?doi ?subtitle ?year ?journal ?journal_data ?author ?author_browser_iri (COUNT(distinct ?cited_by) AS ?in_cits) (count(?next) as ?tot)
-        WHERE{
 
-              [[RULE]]
-
-              ?iri rdf:type ?type ; dcterms:title ?title .
-
-                   OPTIONAL {?iri fabio:hasSubtitle ?subtitle .}
-                   OPTIONAL {?iri prism:publicationDate ?year .}
-                   OPTIONAL {
-                       ?iri datacite:hasIdentifier [
-                       datacite:usesIdentifierScheme datacite:doi ;
-                       literal:hasLiteralValue ?doi
-                       ] .
-                   }
-                   OPTIONAL {?cited_by cito:cites ?iri .}
-                   OPTIONAL {
-                     ?iri frbr:partOf+ ?journal_iri .
-                     ?journal_iri a fabio:Journal ; dcterms:title ?journal .
-                     OPTIONAL {
-                      ?journal_volume_iri a fabio:JournalVolume ; frbr:partOf+ ?journal_iri ; fabio:hasSequenceIdentifier ?volume .
-                      ?iri frbr:embodiment ?manifestation .
-                      ?manifestation prism:startingPage ?start ; prism:endingPage ?end .
-                      BIND(CONCAT(', ', ?volume,': ',?start,'-',?end) as ?journal_data)
-                     }
-                   }
-                   BIND(REPLACE(STR(?iri), 'https://w3id.org/oc/ccc/', '', 'i') as ?short_iri) .
-                   BIND(REPLACE(STR(?iri), 'https://w3id.org/oc/ccc/br/', '', 'i') as ?short_iri_id) .
-                   BIND(REPLACE(STR(?iri), '/ccc/', '/browser/ccc/', 'i') as ?browser_iri) .
-                   BIND(REPLACE(STR(?type), 'http://purl.org/spar/fabio/', '', 'i') as ?short_type) .
-
-                 #list of the doc authors
-
-
-                 ?iri pro:isDocumentContextFor ?role .
-                 ?role pro:withRole pro:author ; pro:isHeldBy [
-                     foaf:familyName ?f_name ;
-                                  foaf:givenName ?g_name
-                   ] .
-                   ?role pro:isHeldBy ?author_iri .
-                   OPTIONAL {?role oco:hasNext* ?next .}
-                   BIND(REPLACE(STR(?author_iri), '/ccc/', '/browser/ccc/', 'i') as ?author_browser_iri) .
-                   BIND(CONCAT(?g_name,' ',?f_name) as ?author) .
-
-               }
-            GROUP BY ?iri ?doi ?short_iri ?short_iri_id ?browser_iri ?title ?subtitle ?year ?journal ?journal_data ?short_type ?author ?author_browser_iri ORDER BY DESC(?tot)`
-      ],
-      "fields": [
-        {"iskey": true, "value":"short_iri", "label":{"field":"short_iri_id"}, "title": "Corpus ID","column_width":"30%","type": "text", "sort":{"value": "short_iri.label", "type":"int"}, "link":{"field":"browser_iri","prefix":""}},
-        {"value":"doi", "title": "DOI","column_width":"30%","type": "text", "sort":{"value": "doi", "type":"text"}, "link":{"field":"doi","prefix":"http://dx.doi.org/"}},
-        {"value":"title", "title": "Title","column_width":"30%","type": "text", "sort":{"value": "title", "type":"text"}, "link":{"field":"browser_iri","prefix":""}},
-        {"value":"author", "label":{"field":"author_lbl"}, "title": "Authors", "column_width":"30%","type": "text", "sort":{"value": "author", "type":"text"}, "filter":{"type_sort": "text", "min": 10000, "sort": "label", "order": "asc"}, "link":{"field":"author_browser_iri","prefix":""}},
-        {"value":"journal", "title": "Journal", "column_width":"30%","type": "text", "sort":{"value": "journal", "type":"text"}},
-        {"value":"journal_data", "title": "Journal data", "column_width":"30%","type": "text"},
-        {"value":"year", "title": "Year", "column_width":"30%","type": "int", "filter":{"type_sort": "int", "min": 10000, "sort": "value", "order": "desc"}, "sort":{"value": "year", "type":"int"} },
-        {"value":"in_cits", "title": "Cited by", "column_width":"30%","type": "int", "sort":{"value": "in_cits", "type":"int"}}
-        ],
-      "group_by": {"keys":["iri"], "concats":["author"]}
-    },
     {
       "name": "document_intext",
-      "label": "Document with in-text references",
+      "label": "",
       "macro_query": [
         `
         SELECT DISTINCT ?iri ?short_iri ?short_iri_id ?browser_iri ?short_type ?title ?doi ?subtitle ?year ?journal ?journal_data ?author ?author_browser_iri (count(?next) as ?tot) (count(DISTINCT ?rp) as ?mentions) (group_concat(distinct ?rp; separator=";") as ?pointers)
@@ -332,6 +281,70 @@ var search_conf = {
         {"value":"year", "title": "Year", "column_width":"30%","type": "int", "filter":{"type_sort": "int", "min": 10000, "sort": "value", "order": "desc"}, "sort":{"value": "year", "type":"int"} },
         {"value":"in_cits", "title": "Cited by", "column_width":"30%","type": "int", "sort":{"value": "in_cits", "type":"int"}},
         {"value":"mentions", "label":{"field":"mentions"}, "title": "Excerpts", "column_width":"30%","type": "int","link":{"field":"pointers","prefix":""}}
+        ],
+      "group_by": {"keys":["iri"], "concats":["author"]}
+    },
+    {
+      "name": "document",
+      "label": "Document",
+      "macro_query": [
+        `
+        SELECT DISTINCT ?iri ?short_iri ?short_iri_id ?browser_iri ?short_type ?title ?doi ?subtitle ?year ?journal ?journal_data ?author ?author_browser_iri (COUNT(distinct ?cited_by) AS ?in_cits) (count(?next) as ?tot)
+        WHERE{
+
+              [[RULE]]
+
+              ?iri rdf:type ?type ; dcterms:title ?title .
+
+                   OPTIONAL {?iri fabio:hasSubtitle ?subtitle .}
+                   OPTIONAL {?iri prism:publicationDate ?year .}
+                   OPTIONAL {
+                       ?iri datacite:hasIdentifier [
+                       datacite:usesIdentifierScheme datacite:doi ;
+                       literal:hasLiteralValue ?doi
+                       ] .
+                   }
+                   OPTIONAL {?cited_by cito:cites ?iri .}
+                   OPTIONAL {
+                     ?iri frbr:partOf+ ?journal_iri .
+                     ?journal_iri a fabio:Journal ; dcterms:title ?journal .
+                     OPTIONAL {
+                      ?journal_volume_iri a fabio:JournalVolume ; frbr:partOf+ ?journal_iri ; fabio:hasSequenceIdentifier ?volume .
+                      ?iri frbr:embodiment ?manifestation .
+                      ?manifestation prism:startingPage ?start ; prism:endingPage ?end .
+                      BIND(CONCAT(', ', ?volume,': ',?start,'-',?end) as ?journal_data)
+                     }
+                   }
+                   BIND(REPLACE(STR(?iri), 'https://w3id.org/oc/ccc/', '', 'i') as ?short_iri) .
+                   BIND(REPLACE(STR(?iri), 'https://w3id.org/oc/ccc/br/', '', 'i') as ?short_iri_id) .
+                   BIND(REPLACE(STR(?iri), '/ccc/', '/browser/ccc/', 'i') as ?browser_iri) .
+                   BIND(REPLACE(STR(?type), 'http://purl.org/spar/fabio/', '', 'i') as ?short_type) .
+
+                 #list of the doc authors
+
+
+                 ?iri pro:isDocumentContextFor ?role .
+                 ?role pro:withRole pro:author ; pro:isHeldBy [
+                     foaf:familyName ?f_name ;
+                                  foaf:givenName ?g_name
+                   ] .
+                   ?role pro:isHeldBy ?author_iri .
+                   OPTIONAL {?role oco:hasNext* ?next .}
+                   BIND(REPLACE(STR(?author_iri), '/ccc/', '/browser/ccc/', 'i') as ?author_browser_iri) .
+                   BIND(CONCAT(?g_name,' ',?f_name) as ?author) .
+
+               }
+            GROUP BY ?iri ?doi ?short_iri ?short_iri_id ?browser_iri ?title ?subtitle ?year ?journal ?journal_data ?short_type ?author ?author_browser_iri ORDER BY DESC(?tot)`
+      ],
+      "fields": [
+        {"iskey": true, "value":"short_iri", "label":{"field":"short_iri_id"}, "title": "Corpus ID","column_width":"30%","type": "text", "sort":{"value": "short_iri.label", "type":"int"}, "link":{"field":"browser_iri","prefix":""}},
+        {"value":"doi", "title": "DOI","column_width":"30%","type": "text", "sort":{"value": "doi", "type":"text"}, "link":{"field":"doi","prefix":"http://dx.doi.org/"}},
+        {"value":"title", "title": "Title","column_width":"30%","type": "text", "sort":{"value": "title", "type":"text"}, "link":{"field":"browser_iri","prefix":""}},
+        {"value":"author", "label":{"field":"author_lbl"}, "title": "Authors", "column_width":"30%","type": "text", "sort":{"value": "author", "type":"text"}, "filter":{"type_sort": "text", "min": 10000, "sort": "label", "order": "asc"}, "link":{"field":"author_browser_iri","prefix":""}},
+        {"value":"journal", "title": "Journal", "column_width":"30%","type": "text", "sort":{"value": "journal", "type":"text"}},
+        {"value":"journal_data", "title": "Journal data", "column_width":"30%","type": "text"},
+        {"value":"year", "title": "Year", "column_width":"30%","type": "int", "filter":{"type_sort": "int", "min": 10000, "sort": "value", "order": "desc"}, "sort":{"value": "year", "type":"int"} },
+        {"value":"in_cits", "title": "Cited by", "column_width":"30%","type": "int", "sort":{"value": "in_cits", "type":"int"}}
         ],
       "group_by": {"keys":["iri"], "concats":["author"]}
     },

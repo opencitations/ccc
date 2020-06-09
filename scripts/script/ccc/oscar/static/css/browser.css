@@ -44,7 +44,7 @@ body.lucinda-cover{
   background-color: rgba(243, 230, 255,0.17);
   display:inline;
   float:right;
-  width: 28%;
+  width: 20%;
   min-height: 200px;
   border-left: solid;
   border-color: #f2f2f2;
@@ -127,7 +127,7 @@ body.lucinda-cover{
 }
 
 .browser-metrics-tab {
-  margin-left:10px;
+  margin-left:20px;
   table-layout: auto;
   border-collapse: collapse;
   text-align:left;
@@ -284,28 +284,46 @@ body.lucinda-cover{
 
 a:hover { color: var(--main-bg-color);}
 
+.browser-header-tab tbody tr , .browser-details-tab tr {display: inline-block; padding: 5px 0px 0px 0px;}
 
-
-.browser-header-tab tbody tr , .browser-details-tab tr {display: inline-block;}
 .browser-header-tab tbody tr:nth-of-type(2),
 .browser-header-tab tbody tr:nth-of-type(3),
-.browser-header-tab tbody tr:nth-of-type(4) {padding: 0px 20px 10px 0px;}
+.browser-header-tab tbody tr:nth-of-type(4),
+.browser-header-tab tbody tr:nth-of-type(5), {margin: 0px 20px 10px 10px;}
 /* ids and other info */
 .browser-header-tab tbody tr:nth-of-type(2) td elem,
 .browser-header-tab tbody tr:nth-of-type(3) td elem,
 .browser-header-tab tbody tr:nth-of-type(4) td elem,
-.browser-details-tab tbody tr td elem {font-family: "Karla", sans-serif; }
+.browser-header-tab tbody tr:nth-of-type(5) td elem,
+.browser-details-tab tbody tr td elem, .cited, .refs, .num_docs {font-family: "Karla", sans-serif; }
 
-.browser-header-tab tbody tr:nth-of-type(6) {display: block !important;}
+/* doi */
+.doi_before a:not(:empty)::before {content: "DOI: "; padding-left: 10px;}
+/* issn */
+.issn_before:not(:empty)::before {content: "ISSN: "; padding-left: 10px;}
+/* orcid */
+.orcid_before:not(:empty)::before {content: "ORCID: "; padding-left: 10px;}
+/* oci */
+.oci_before:not(:empty)::before {content: "OCI: "; padding-left: 10px;}
+
+/* title */
+.browser-header-tab tbody tr:nth-of-type(7) {display: block !important;}
 /* authors */
-.browser-header-tab tbody tr:nth-of-type(9) {padding-top: 20px;} /* authors */
+.browser-header-tab tbody tr:nth-of-type(10) {padding-top: 1px;} /* authors */
+/* year */
+.journal-data-separator:not(:empty)::before {content: ". ";}
 
+/* box citations */
+.cited::before {content: "Citations: ";}
+.refs::before {content: "References: ";}
+.num_docs::before {content: "Documents: ";}
 .doc-type {
   background-color: var(--main-bg-color) ;
   padding: 5px !important;
   border-radius: 5%;
   font-size: 1.2rem;
   color:white !important;
+  margin-right: 10px;
 }
 
 .doc-type a {color:white !important;}

@@ -6,7 +6,6 @@ function expand_context(td,pointers) {
 
   $.each(pointers_list, function( index, intrepid ) {
     var query_ramose =  String(ramose_api)+ intrepid;
-
     //call ramose to retrieve data of indtrepids
     $.ajax({
           dataType: "json",

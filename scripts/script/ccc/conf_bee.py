@@ -19,10 +19,12 @@ rp_child = '/child::*[1]'
 citing_doi = './/article-id[@pub-id-type="doi"]'
 
 # XML elements mapped to the OC model
+abstract_tag = 'abstract'
 section_tag = 'sec'
 caption_tag = 'caption'
 title_tag = 'title'
 table_tag = 'table'
+tablewrap_tag = 'table-wrap'
 notes_tag = 'notes'
 footnote_tag = 'fn'
 paragraph_tag = 'p'

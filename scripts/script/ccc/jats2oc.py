@@ -34,17 +34,25 @@ class Jats2OC(object):
 	def __init__(self, xml_doc): # xml_doc is root
 		self.root = xml_doc
 		self.xmlp = ET.XMLParser(encoding="utf-8")
-		#self.tree = ET.parse(xml_doc, self.xmlp) # uncomment for test_bee.py
-		#self.root = self.tree.getroot() # uncomment for test_bee.py
+		self.tree = ET.parse(xml_doc, self.xmlp) # uncomment for test_bee.py
+		self.root = self.tree.getroot() # uncomment for test_bee.py
 		self.et = ET.ElementTree(self.root)
 
 
 	def extract_intext_refs(self):
-		"""process a XML file (xml_doc) and return a list of lists of dictionaries (self.metadata).
-		Each list when is a list of references, dictionaries include metadata of in-text references"""
+		"""process a JATS/XML file (xml_doc) and return a list of lists of dictionaries (self.metadata).
+		Each list is a list of in-text references, and dictionaries include metadata of a single in-text reference"""
 		self.metadata = []
-		# extracts all the xref without grouping them or extracting lists inside xref
+		# extracts all the xref without grouping them or extracting lists inside a single xref
 		rp_list = Jats2OC.preprocess_xref(self.root, self.et)
+
+		# mapping elements in sequences for context sequence
+		section_mapping = Jats2OC.mapping_element(self.root, conf.section_tag, self.et)
+		paragraph_mapping = Jats2OC.mapping_element(self.root, conf.paragraph_tag, self.et)
+		footnote_mapping = Jats2OC.mapping_element(self.root, conf.footnote_tag, self.et)
+		table_mapping = Jats2OC.mapping_element(self.root, conf.tablewrap_tag, self.et)
+		caption_mapping = Jats2OC.mapping_element(self.root, conf.caption_tag, self.et)
+		sentences_mapping = Jats2OC.mapping_sentences(self.root, self.et)
 
 		# 1. group rp in pl when these are in a parent element
 		parent_pl_set = list({ (rp["xml_element"].getparent(), self.et.getpath(rp["xml_element"].getparent()) ) \
@@ -59,7 +67,7 @@ class Jats2OC(object):
 											containers_title, parent_el, rp_list)
 			self.metadata.append(parent_el_list)
 
-		# 2. group lists/sequences already found (inside the same xref)
+		# 2. group lists/sequences that are inside the same xref element
 		pl_set = {rp["pl_xpath"] for rp in rp_list if "pl_xpath" in rp.keys()}
 		pl_dict = {pl : [rp for rp in rp_list if "pl_xpath" in rp.keys() and rp["pl_xpath"] == pl] \
 					for pl in pl_set}
@@ -69,7 +77,7 @@ class Jats2OC(object):
 						or ("pl_xpath" in rp.keys() and rp["pl_xpath"] != pl)]
 
 
-		# 3. extract lists/sequences for xref that are in the same sentence and are grouped in separators
+		# 3. extract lists/sequences of xref that are in the same sentence and are grouped in text separators
 		sentences_set = {rp["context_xpath"] for rp in rp_list}
 		sentences_dict = {sent : [rp for rp in rp_list if rp["context_xpath"] == sent] \
 							for sent in sentences_set}
@@ -107,8 +115,8 @@ class Jats2OC(object):
 							sup_sep = '/following-sibling::sup[1]/text()'
 							context.append(Jats2OC.clean_list( self.root.xpath('/'+xref+' | /'+xref+sup_sep)))
 						else:
-							# force end of list when there is an in-list separator followed by text > 5 characters
-							# in squared brackets tail < 5
+							# force end of list
+							# xref tail < 5 chars if in squared brackets
 							if xref_elem.tail is not None and len(xref_elem.tail) < 5 \
 								and end_separator[0][0] is not None \
 								and end_separator[0][0] != conf.list_separators[2][1]:
@@ -122,7 +130,7 @@ class Jats2OC(object):
 								context.append(Jats2OC.clean_list(self.root.xpath('/'+xref)))
 								context.append(Jats2OC.clean_list(self.root.xpath('/'+xref+conf.rp_tail)))
 
-							# no separators tail > 5 force end of the list
+							# no separators, tail > 5 chars, force end of the list
 							elif xref_elem.tail is not None and len(xref_elem.tail) >= 5 \
 								and end_separator[0][0] is not None \
 								and end_separator[0][0] not in (item[0] for item in conf.list_separators):
@@ -156,7 +164,7 @@ class Jats2OC(object):
 					Jats2OC.add_rp_and_pl_in_sentence(self.root, self.et, self.metadata,
 						rp_groups_and_types, rp_list, end_separator)
 
-				else: # no separator or weird separators : ideally never goes here
+				else: # no separator or weird separators : ideally, it never goes here
 					groups = Jats2OC.handle_no_separators(self.root, xref_in_sent)[0]
 					lonely = Jats2OC.handle_no_separators(self.root, xref_in_sent)[1]
 					if len(groups) != 0:
@@ -188,12 +196,107 @@ class Jats2OC(object):
 				rp.pop("n_rp", None)
 				rp.pop("xml_element", None)
 
+		# add context_sequence
+		self.metadata = Jats2OC.add_context_sequence(self.root, self.metadata,
+			section_mapping, paragraph_mapping, footnote_mapping,
+			table_mapping,caption_mapping,sentences_mapping)
 		return self.metadata
 
 
 	#########################
 	#### METHODS FOR XML ####
 	#########################
+	@staticmethod
+	def mapping_element(root, el_name, et):
+		""" parse the xml and return a dictionary of elements, including sequence num and xpath """
+		elem_dict = {}
+		counter = 0
+		el_path = "//"+conf.section_tag+"[not(ancestor::"+conf.section_tag+") and not(ancestor::"+conf.abstract_tag+")]"\
+					if el_name == conf.section_tag \
+					else "//"+conf.paragraph_tag+"[ not(ancestor::"+conf.caption_tag+") and not(ancestor::"+conf.tablewrap_tag+") and not(ancestor::"+conf.footnote_tag+") and not(ancestor::"+conf.abstract_tag+")]"\
+					if el_name == conf.paragraph_tag \
+					else '//'+el_name+"[not(ancestor::"+conf.abstract_tag+")]"
+
+		for elem in root.xpath(el_path):
+			counter += 1
+			elem_dict[counter] = et.getpath(elem)
+
+		return elem_dict
+
+	@staticmethod
+	def mapping_sentences(root, et):
+		""" parse the xml and return a dictionary of sentences, including sequence num, text, and xpath """
+		sentences_seq = []
+		with open(conf.abbreviations_list_path, 'r') as f:
+			abbreviations_list = [line.strip() for line in f.readlines() if not len(line) == 0]
+		punkt_param = PunktParameters()
+		punkt_param.abbrev_types = set(abbreviations_list)
+		custom_vars = CustomLanguageVars() # does not work
+		sentence_splitter = PunktSentenceTokenizer(train_text=punkt_param,lang_vars=custom_vars)
+
+		# parse body first
+		counter = 0
+		for elem in root.xpath('//body/*'):
+			parent_path = et.getpath(elem)
+			elem_text = ET.tostring(elem, method="text", encoding='unicode', with_tail=False)
+			sentences = sentence_splitter.tokenize( elem_text )
+			for sentence in sentences:
+				counter += 1
+				sentence_dict = {}
+				sentence_dict["parent_xpath"] = parent_path
+				sentence_dict["sent_number"] = counter
+				sentence_dict["sent_text"] = sentence
+				sentences_seq.append(sentence_dict)
+
+		# parse back
+		counter_back = len(sentences_seq)
+		for elem in root.xpath('//back/*'):
+			if ET.iselement(elem) and elem.tag != 'ref-list' and elem.tag != 'fn-group':
+				parent_path = et.getpath(elem)
+				elem_text = ET.tostring(elem, method="text", encoding='unicode', with_tail=False)
+				sentences = sentence_splitter.tokenize( elem_text )
+				for sentence in sentences:
+					counter_back += 1
+					sentence_dict = {}
+					sentence_dict["parent_xpath"] = parent_path
+					sentence_dict["sent_number"] = counter_back
+					sentence_dict["sent_text"] = sentence
+					sentences_seq.append(sentence_dict)
+		return sentences_seq
+
+	@staticmethod
+	def add_context_sequence(root, metadata,
+		section_mapping, paragraph_mapping, footnote_mapping,
+		table_mapping,caption_mapping,sentences_mapping):
+		for group in self.metadata:
+			for rp in group:
+				# get context_xpath
+				context_xpath = rp["context_xpath"]
+				context_text = root.xpath(context_xpath)[0]
+				context_parent_xpath = Jats2OC.parent_xpath_string(context_xpath)
+				# initialise variables
+				elem_type, elem_num, par_num , sec_num, sec_title = None , None , None , None , None
+				# check if in sentence
+				# TODO in_sentence
+				if Jats2OC.in_sentence(context_parent_xpath):
+					for sent_dict in sentences_mapping:
+						if context_parent_xpath in sent_dict["parent_xpath"]:
+							score = fuzz.partial_ratio(sent_dict["sent_text"],context_text)
+					# find paragraph and section
+				else:
+					# if not check if in footnote/table/caption
+
+				# create k:v
+				# add to metadata
+		return metadata
+
+	@staticmethod
+	def parent_xpath_string(context_xpath):
+		s = context_xpath
+		start = "substring(string("
+		end = "),"
+		parent_path = s[s.find(start)+len(start):s.rfind(end)]
+		return parent_path
 
 	@staticmethod
 	def preprocess_xref(root, et):

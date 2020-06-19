@@ -15,7 +15,7 @@
 # SOFTWARE.
 
 import script.ccc.conf_bee as conf
-import uuid , itertools , os , re , string
+import uuid , itertools , os , re , string , operator
 from lxml import etree as ET
 from itertools import groupby
 from collections import defaultdict, Counter
@@ -53,7 +53,6 @@ class Jats2OC(object):
 		table_mapping = Jats2OC.mapping_element(self.root, conf.tablewrap_tag, self.et)
 		caption_mapping = Jats2OC.mapping_element(self.root, conf.caption_tag, self.et)
 		sentences_mapping = Jats2OC.mapping_sentences(self.root, self.et)
-
 		# 1. group rp in pl when these are in a parent element
 		parent_pl_set = list({ (rp["xml_element"].getparent(), self.et.getpath(rp["xml_element"].getparent()) ) \
 			for rp in rp_list if rp["xml_element"].getparent().tag not in conf.parent_elements_names})
@@ -268,27 +267,72 @@ class Jats2OC(object):
 	def add_context_sequence(root, metadata,
 		section_mapping, paragraph_mapping, footnote_mapping,
 		table_mapping,caption_mapping,sentences_mapping):
-		for group in self.metadata:
-			for rp in group:
-				# get context_xpath
-				context_xpath = rp["context_xpath"]
-				context_text = root.xpath(context_xpath)[0]
-				context_parent_xpath = Jats2OC.parent_xpath_string(context_xpath)
-				# initialise variables
-				elem_type, elem_num, par_num , sec_num, sec_title = None , None , None , None , None
-				# check if in sentence
-				# TODO in_sentence
-				if Jats2OC.in_sentence(context_parent_xpath):
-					for sent_dict in sentences_mapping:
-						if context_parent_xpath in sent_dict["parent_xpath"]:
-							score = fuzz.partial_ratio(sent_dict["sent_text"],context_text)
-					# find paragraph and section
-				else:
-					# if not check if in footnote/table/caption
+		for group in metadata:
+			new_rp_dict = {}
+			# get context_xpath
+			context_xpath = group[0]["context_xpath"]
+			local_context_xpath = group[0]["context_xpath"].replace('/article','/')
+			context_text = root.xpath(local_context_xpath)
+			context_parent_xpath = Jats2OC.parent_xpath_string(context_xpath)
+			# initialise variables
+			elem_type, elem_num, par_num , sec_num, sec_title = None , None , None , None , None
 
-				# create k:v
-				# add to metadata
+			# check if in sentence
+			if Jats2OC.in_sentence(context_parent_xpath) is True:
+				elem_type = "Sentence"
+				# find best match
+				scores = {}
+				for sent_dict in sentences_mapping:
+					if sent_dict["parent_xpath"] in context_parent_xpath:
+						score = fuzz.partial_ratio(sent_dict["sent_text"],context_text)
+						if score >= 70:
+							scores[sent_dict["sent_number"]] = score
+				elem_num = max(scores.items(), key=operator.itemgetter(1))[0] if len(scores) >= 1 else ''
+			else:
+				# if in footnote/table/caption
+				elem_type , lookup_mapping = Jats2OC.get_context_type(context_parent_xpath, footnote_mapping,
+				table_mapping,caption_mapping)
+				elem_num = next((k for k, v in lookup_mapping.items() if v in context_parent_xpath), '')
+			# find paragraph and section
+			par_xpath = Jats2OC.find_parent_in_xpath(context_parent_xpath, conf.paragraph_tag)
+			sec_xpath = Jats2OC.find_parent_in_xpath(context_parent_xpath, conf.section_tag)
+			par_num = next((k for k, v in paragraph_mapping.items() if v == par_xpath), '')
+			sec_num = next((k for k, v in section_mapping.items() if v == sec_xpath), '')
+			# create dictionary
+			new_rp_dict["type"] = elem_type
+			new_rp_dict["num"] = elem_num
+			new_rp_dict["paragraph"] = par_num
+			new_rp_dict["section"] = sec_num
+
+			# add to metadata
+			for rp in group:
+				rp["context_sequence"] = new_rp_dict
 		return metadata
+
+	@staticmethod
+	def get_context_type(xpath, footnote_mapping, table_mapping,caption_mapping):
+		if conf.tablewrap_tag in xpath:
+			return "Table",table_mapping
+		if conf.caption_tag in xpath:
+			return "Caption",caption_mapping
+		if conf.footnote_tag in xpath:
+			return "Footnote", footnote_mapping
+
+	@staticmethod
+	def find_parent_in_xpath(xpath, elem_type):
+		if elem_type == conf.paragraph_tag:
+			# find the last paragraph in the path
+			p_index = xpath.rfind('/'+elem_type) if '/'+elem_type in xpath else -1
+		else:
+			# find the first elem in the path
+			p_index = xpath.index('/'+elem_type) if '/'+elem_type in xpath else -1
+
+		if '/' not in xpath[p_index+1:]:
+			parent_xpath = xpath
+		else:
+			last_index = xpath[p_index+1:].index('/')
+			parent_xpath= xpath[:p_index+1+last_index]
+		return parent_xpath
 
 	@staticmethod
 	def parent_xpath_string(context_xpath):
@@ -297,6 +341,10 @@ class Jats2OC(object):
 		end = "),"
 		parent_path = s[s.find(start)+len(start):s.rfind(end)]
 		return parent_path
+
+	@staticmethod
+	def in_sentence(xpath):
+		return True if (conf.tablewrap_tag not in xpath and conf.footnote_tag not in xpath and conf.caption_tag not in xpath) else False
 
 	@staticmethod
 	def preprocess_xref(root, et):
@@ -1533,7 +1581,7 @@ class Jats2OC(object):
 		if "pl_xpath" in pl_entry[0]:
 			pl_xpath = Jats2OC.add_xpath(graph, cur_pl, pl_entry[0]["pl_xpath"], resp_agent, source_provider, source)
 		if "context_xpath" in pl_entry[0]:
-			context = Jats2OC.create_context(graph, citing_entity, cur_pl, pl_entry[0]["context_xpath"], de_resources, containers_title, resp_agent)
+			context = Jats2OC.create_context(graph, citing_entity, cur_pl, pl_entry[0]["context_xpath"], pl_entry[0]["context_sequence"], de_resources, containers_title, resp_agent)
 		return cur_pl
 
 
@@ -1548,7 +1596,7 @@ class Jats2OC(object):
 			cur_rp.create_content(dict_pointer["rp_string"])
 		if in_list==False:
 			if "context_xpath" in dict_pointer:
-				context = Jats2OC.create_context(graph, citing_entity, cur_rp, dict_pointer["context_xpath"], de_resources, containers_title, resp_agent, source_provider, source)
+				context = Jats2OC.create_context(graph, citing_entity, cur_rp, dict_pointer["context_xpath"], dict_pointer["context_sequence"], de_resources, containers_title, resp_agent, source_provider, source)
 		for cited_entity, xmlid, be in cited_entities_xmlid_be:
 			if dict_pointer["xref_id"] == xmlid:
 				cur_rp.denotes_be(be)
@@ -1583,10 +1631,12 @@ class Jats2OC(object):
 
 
 	@staticmethod
-	def create_context(graph, citing_entity, cur_rp_or_pl, xpath_string, de_resources, containers_title, resp_agent=None, source_provider=None, source=None):
+	def create_context(graph, citing_entity, cur_rp_or_pl, xpath_string, context_sequence, de_resources, containers_title, resp_agent=None, source_provider=None, source=None):
 		cur_sent = Jats2OC.de_finder(graph, citing_entity, xpath_string, de_resources, containers_title, resp_agent, source_provider, source)
 		if cur_sent != None:
 			cur_sent.is_context_of_rp_or_pl(cur_rp_or_pl)
+			if context_sequence["type"] == "Sentence" and isinstance(context_sequence["num"], int):
+				cur_sent.create_number(str(context_sequence["num"]))
 
 
 	@staticmethod

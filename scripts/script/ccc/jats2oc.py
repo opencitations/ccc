@@ -27,6 +27,7 @@ from script.ocdm.graphlib import *
 from script.ocdm.conf import context_path as context_path
 
 from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
 
 
 class Jats2OC(object):
@@ -34,8 +35,8 @@ class Jats2OC(object):
 	def __init__(self, xml_doc): # xml_doc is root
 		self.root = xml_doc
 		self.xmlp = ET.XMLParser(encoding="utf-8")
-		self.tree = ET.parse(xml_doc, self.xmlp) # uncomment for test_bee.py
-		self.root = self.tree.getroot() # uncomment for test_bee.py
+		#self.tree = ET.parse(xml_doc, self.xmlp) # uncomment for test_bee.py
+		#self.root = self.tree.getroot() # uncomment for test_bee.py
 		self.et = ET.ElementTree(self.root)
 
 
@@ -233,11 +234,15 @@ class Jats2OC(object):
 		custom_vars = CustomLanguageVars() # does not work
 		sentence_splitter = PunktSentenceTokenizer(train_text=punkt_param,lang_vars=custom_vars)
 
-		# parse body first
 		counter = 0
+		for front in root.xpath("//front|//front/*"):
+			front.getparent().remove(front)
+
+		# parse body first
 		for elem in root.xpath('//body/*'):
 			parent_path = et.getpath(elem)
-			elem_text = ET.tostring(elem, method="text", encoding='unicode', with_tail=False)
+			#elem_text = ET.tostring(elem, method="text", encoding='unicode', with_tail=True)
+			elem_text = " ".join(elem.xpath("//text()"))
 			sentences = sentence_splitter.tokenize( elem_text )
 			for sentence in sentences:
 				counter += 1
@@ -250,17 +255,18 @@ class Jats2OC(object):
 		# parse back
 		counter_back = len(sentences_seq)
 		for elem in root.xpath('//back/*'):
-			if ET.iselement(elem) and elem.tag != 'ref-list' and elem.tag != 'fn-group':
-				parent_path = et.getpath(elem)
-				elem_text = ET.tostring(elem, method="text", encoding='unicode', with_tail=False)
-				sentences = sentence_splitter.tokenize( elem_text )
-				for sentence in sentences:
-					counter_back += 1
-					sentence_dict = {}
-					sentence_dict["parent_xpath"] = parent_path
-					sentence_dict["sent_number"] = counter_back
-					sentence_dict["sent_text"] = sentence
-					sentences_seq.append(sentence_dict)
+			parent_path = et.getpath(elem)
+			#elem_text = ET.tostring(elem, method="text", encoding='unicode', with_tail=False)
+			elem_text = " ".join(elem.xpath("//text()"))
+			sentences = sentence_splitter.tokenize( elem_text )
+			for sentence in sentences:
+				counter_back += 1
+				sentence_dict = {}
+				sentence_dict["parent_xpath"] = parent_path
+				sentence_dict["sent_number"] = counter_back
+				sentence_dict["sent_text"] = sentence
+				sentences_seq.append(sentence_dict)
+
 		return sentences_seq
 
 	@staticmethod
@@ -285,9 +291,14 @@ class Jats2OC(object):
 				for sent_dict in sentences_mapping:
 					if sent_dict["parent_xpath"] in context_parent_xpath:
 						score = fuzz.partial_ratio(sent_dict["sent_text"],context_text)
-						if score >= 70:
+						if score >= 80:
 							scores[sent_dict["sent_number"]] = score
 				elem_num = max(scores.items(), key=operator.itemgetter(1))[0] if len(scores) >= 1 else ''
+				# list_sents = [sent_dict["sent_text"] for sent_dict in sentences_mapping if sent_dict["parent_xpath"] in context_parent_xpath ]
+				# sent_matched = process.extractOne(context_text,list_sents, scorer=fuzz.partial_ratio)[0]
+				#
+				# elem_num = [sent_dict["sent_number"] if sent_dict["sent_text"] == sent_matched else '' for sent_dict in sentences_mapping][0] if sent_matched is not None else ''
+				# print(context_xpath, sent_matched, elem_num)
 			else:
 				# if in footnote/table/caption
 				elem_type , lookup_mapping = Jats2OC.get_context_type(context_parent_xpath, footnote_mapping,
@@ -1632,15 +1643,14 @@ class Jats2OC(object):
 
 	@staticmethod
 	def create_context(graph, citing_entity, cur_rp_or_pl, xpath_string, context_sequence, de_resources, containers_title, resp_agent=None, source_provider=None, source=None):
-		cur_sent = Jats2OC.de_finder(graph, citing_entity, xpath_string, de_resources, containers_title, resp_agent, source_provider, source)
+		cur_sent = Jats2OC.de_finder(graph, citing_entity, xpath_string, context_sequence, de_resources, containers_title, resp_agent, source_provider, source)
 		if cur_sent != None:
 			cur_sent.is_context_of_rp_or_pl(cur_rp_or_pl)
-			if context_sequence["type"] == "Sentence" and isinstance(context_sequence["num"], int):
-				cur_sent.create_number(str(context_sequence["num"]))
+
 
 
 	@staticmethod
-	def de_finder(graph, citing_entity, xpath_string, de_resources, containers_title, resp_agent, source_provider=None, source=None):
+	def de_finder(graph, citing_entity, xpath_string, context_sequence, de_resources, containers_title, resp_agent, source_provider=None, source=None):
 		cur_de = [de_uri for de_path, de_uri in de_resources if xpath_string == de_path]
 		if len(cur_de) == 0: # new de
 			de_res = graph.add_de(resp_agent, source_provider, source)
@@ -1649,12 +1659,39 @@ class Jats2OC(object):
 				de_res.create_text_chunk()
 			elif 'substring(string(' in xpath_string and conf.table_tag not in xpath_string:
 				de_res.create_sentence()
+				if context_sequence["type"] == "Sentence" and isinstance(context_sequence["num"], int):
+					de_res.create_number(str(context_sequence["num"]))
 			else:
 				de_res.create_discourse_element(Jats2OC.elem_to_type(xpath_string))
+				# add sequence number
+				last_el = xpath_string[xpath_string.rfind('/'):]
+				base = xpath_string[:xpath_string.rfind('/')]
+				# if is a paragraph
+				if last_el.startswith('/'+conf.paragraph_tag) \
+					and isinstance(context_sequence["paragraph"], int):
+					de_res.create_number(str(context_sequence["paragraph"]))
+				# if is the first section
+				if last_el.startswith('/'+conf.section_tag) \
+					and conf.section_tag not in base \
+					and isinstance(context_sequence["section"], int):
+					de_res.create_number(str(context_sequence["section"]))
+				# if is table, caption, footnote
+				if last_el.startswith('/'+conf.table_tag) \
+					and context_sequence["type"] == "Table" \
+					and isinstance(context_sequence["num"], int):
+					de_res.create_number(str(context_sequence["num"]))
+				if last_el.startswith('/'+conf.caption_tag) \
+					and context_sequence["type"] == "Caption" \
+					and isinstance(context_sequence["num"], int):
+					de_res.create_number(str(context_sequence["num"]))
+				if last_el.startswith('/'+conf.footnote_tag) \
+					and context_sequence["type"] == "Footnote" \
+					and isinstance(context_sequence["num"], int):
+					de_res.create_number(str(context_sequence["num"]))
 			de_xpath = Jats2OC.add_xpath(graph, de_res, xpath_string, resp_agent, source_provider, source)
 			if xpath_string+'/title' in containers_title:
 				de_res.create_title(containers_title[xpath_string+'/title'])
-			hierarchy = Jats2OC.create_hierarchy(graph, citing_entity, de_res, Jats2OC.get_subxpath_from(xpath_string), de_resources, containers_title, resp_agent, source_provider, source)
+			hierarchy = Jats2OC.create_hierarchy(graph, citing_entity, de_res, Jats2OC.get_subxpath_from(xpath_string), context_sequence, de_resources, containers_title, resp_agent, source_provider, source)
 		else:
 			de_res = cur_de[0]
 
@@ -1690,12 +1727,12 @@ class Jats2OC(object):
 
 
 	@staticmethod
-	def create_hierarchy(graph, citing_entity, de_res, xpath_string, de_resources, containers_title, resp_agent=None, source_provider=None, source=None):
+	def create_hierarchy(graph, citing_entity, de_res, xpath_string, context_sequence, de_resources, containers_title, resp_agent=None, source_provider=None, source=None):
 		if Jats2OC.is_path(xpath_string) and xpath_string != '/':
-			cur_el = Jats2OC.de_finder(graph, citing_entity, xpath_string, de_resources,containers_title, resp_agent, source_provider, source)
+			cur_el = Jats2OC.de_finder(graph, citing_entity, xpath_string, context_sequence, de_resources,containers_title, resp_agent, source_provider, source)
 			if cur_el != None:
 				de_res.contained_in_discourse_element(cur_el)
-				hierarchy = Jats2OC.create_hierarchy(graph, citing_entity, cur_el, Jats2OC.get_subxpath_from(xpath_string), de_resources, containers_title, resp_agent, source_provider, source)
+				hierarchy = Jats2OC.create_hierarchy(graph, citing_entity, cur_el, Jats2OC.get_subxpath_from(xpath_string), context_sequence, de_resources, containers_title, resp_agent, source_provider, source)
 				if xpath_string.count('/') == 3: # e.g. "/article/body/sec"
 					citing_entity.contains_discourse_element(cur_el)
 

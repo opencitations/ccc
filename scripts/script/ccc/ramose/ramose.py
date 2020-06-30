@@ -96,39 +96,59 @@ class APIManager(object):
         """This method returns the title string defined in the API specification."""
         return self.conf_json[0]["title"]
 
+    def __sidebar(self):
+        """This method builds the sidebar of the API documentation"""
+        result = ""
+
+        i = self.conf_json[0]
+        result += """
+
+        <h4>%s</h4>
+        <ul id="sidebar_menu" class="sidebar_menu">
+            <li><a class="btn active" href="#description">DESCRIPTION</a></li>
+            <li><a class="btn" href="#parameters">PARAMETERS</a></li>
+            <li><a class="btn" href="#operations">OPERATIONS</a>
+                <ul class="sidebar_submenu">%s</ul>
+            </li>
+            <li><a class="btn active" href="/">DASHBOARD</a></li>
+        </ul>
+        """ % \
+                    (i["title"], "".join(["<li><a class='btn' href='#%s'>%s</a></li>" % (op["url"], op["url"])
+                             for op in self.conf_json[1:]]))
+        return result
+
     def __header(self):
         """This method builds the header of the API documentation"""
         result = ""
 
         i = self.conf_json[0]
-        result += """# %s
-**Version:** %s
-<br />
-**API URL:** [%s](%s)
-<br />
-**Contact:** %s
-<br />
-**License:** %s
+        result += """
+<a id='toc'></a>
+# %s
 
-## <a id="toc"></a>Table of content
+**Version:** %s <br/>
+**API URL:** <a href="%s">%s</a><br/>
+**Contact:** %s<br/>
+**License:** %s<br/>
 
-1. [Description](#description)
-2. [Parameters](#parameters)
-3. [Operations](#operations)<ul>%s</ul>
 
-## <a id="description"></a>1. Description [back to toc](#toc)
+
+## <a id="description"></a>Description [back to top](#toc)
 
 %s
 
 %s""" % \
-                  (i["title"], i["version"], i["base"] + i["url"], i["base"] + i["url"], i["contacts"], i["license"],
-                   "".join(["<li>[%s](#%s): %s</li>" % (op["url"], op["url"], op["description"].split("\n")[0])
-                            for op in self.conf_json[1:]]),
+                  (i["title"], i["version"], i["base"] + i["url"], i["base"] + i["url"],  i["contacts"], i["license"],
+
                    i["description"], self.__parameters())
+                   # (i["title"], i["version"], i["base"] + i["url"], i["base"] + i["url"], i["contacts"], i["contacts"], i["license"],
+                   #  "".join(["<li>[%s](#%s): %s</li>" % (op["url"], op["url"], op["description"].split("\n")[0])
+                   #           for op in self.conf_json[1:]]),
+                   #  i["description"], self.__parameters())
         return markdown(result)
 
     def __parameters(self):
-        result = """## <a id="parameters"></a>2. Parameters [back to toc](#toc)
+        result = """## <a id="parameters"></a>Parameters [back to top](#toc)
 
 Parameters can be used to filter and control the results returned by the API. They are passed as normal HTTP parameters in the URL of the call. They are:
 
@@ -149,7 +169,7 @@ Example: `<api_operation_url>?exclude=doi&filter=date:>2015&sort=desc(date)`."""
 
     def __operations(self):
         """This method returns the description of all the operations defined in the API."""
-        result = """## 3. Operations [back to toc](#toc)
+        result = """## Operations [back to top](#toc)
 The operations that this API implements are:
 """
         ops = "\n"
@@ -169,17 +189,17 @@ The operations that this API implements are:
 
 %s
 
-<p><strong>Accepted HTTP method(s):</strong> %s</p>
-<p class="params"><strong>Parameter(s):</strong></p><ul><li>%s</li></ul>
-<p><strong>Result fields:</strong> %s</p>
-<p><strong>Example:</strong> <a target="_blank" href="%s">%s</a></p>
-<p class="ex"><strong>Exemplar output (in JSON)</strong></p>
+<p class="attr"><strong>Accepted HTTP method(s)</strong> <span class="attr_val method">%s</span></p>
+<p class="attr params"><strong>Parameter(s)</strong> <span class="attr_val">%s</span></p>
+<p class="attr"><strong>Result fields type</strong><span class="attr_val">%s</span></p>
+<p class="attr"><strong>Example</strong><span class="attr_val"><a target="_blank" href="%s">%s</a></span></p>
+<p class="ex attr"><strong>Exemplar output (in JSON)</strong></p>
 <pre><code>%s</code></pre></div>""" % (op["url"], op["url"], markdown(op["description"]),
                                        ", ".join(split("\s+", op["method"].strip())), "</li><li>".join(params),
                                        ", ".join(["%s <em>(%s)</em>" % (f, t) for t, f in
                                                   findall(FIELD_TYPE_RE, op["field_type"])]),
                                        self.website + self.base_url + op["call"], op["call"], op["output_json"])
-
+        # TODO multiple params: change the listing above
         return markdown(result) + ops
 
     def __footer(self):
@@ -189,104 +209,239 @@ The operations that this API implements are:
 
     def __css(self):
         return """
-        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+        @media screen and (max-width: 800px) {
+              aside { display: none; }
+              main, #operations, footer, .dashboard {margin-left: 15% !important;}
+              #operations > ul:nth-of-type(1) li { display:block !important; max-width: 100% !important; }
+              h3 a[href] {display:block !important; float: none !important; font-size: 0.5em !important;}
+              a {overflow: hidden;
+              text-overflow: ellipsis;}
+            }
+
         * {
-            font-family: Karla, Geneva, sans-serif;
+            font-family: 'Roboto', Geneva, sans-serif;
         }
 
         body {
-          margin: 7% 15%;
+          margin: 3% 15% 7% 0px;
           line-height: 1.5em;
-          font-size : 1.2em;
+          letter-spacing: 0.02em;
+          font-size : 1em;
+          font-weight:300;
+          color: #303030;
+          text-align: justify;
+          background-color: #edf0f2;
+        }
+
+        aside {
+            height : 100%;
+            width: 20%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            /*background-color: #404040;*/
+            overflow-x: hidden;
+        }
+        p strong {
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+        aside h4 {
+            padding: 20px 9%;
+            margin: 0px !important;
+            color: #9931FC;
+            text-align: left !important;
+        }
+
+        .sidebar_menu , .sidebar_submenu {
+            list-style-type: none;
+            padding-left:0px !important;
+            margin-top: 10px;
+        }
+
+        .sidebar_menu > li {
+            padding: 2% 0px;
+            border-bottom : solid 0.7px grey;
+        }
+
+        .sidebar_menu a {
+            padding: 1% 9%;
+            background-image: none !important;
+            color: grey;
+        }
+
+        .sidebar_menu a:hover {
+            border-left: solid 5px rgba(154, 49, 252,.5);
+            font-weight: 400;
+        }
+
+        .sidebar_submenu > li {
+            padding-left:0px !important;
+            background-color:#edf0f2;
+            font-size: 0.8em;
+        }
+
+        main , #operations , footer, .dashboard {
+            margin-left: 33%;
+        }
+
+        main h1+p , .info_api{
+            border-left: solid 5px rgba(154, 49, 252,.5);
+            padding-left: 3%;
+            font-size: 0.9em;
+            line-height: 1.4em;
+        }
+
+        #operations h3 {
+            color: #9931FC;
+            margin-bottom: 0px;
+            padding: 10px;
+        }
+
+        #operations > ul:nth-of-type(1) {
+            padding-left: 0px !important;
+            text-align: center;
+        }
+
+        #operations > ul:nth-of-type(1) li {
+            text-align: left;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 35%;
+            height: 200px;
+            padding:4%;
+            margin: 1% 2% 1% 0px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 30px 0px rgba(133,66,189,0.1);
+            vertical-align:top;
         }
 
         #operations > div {
-            border: 1px solid black;
-            border-radius: 15px;
             margin-top: 20px;
-            margin-left: 1%;
+            padding: 2%;
+            border-radius: 18px;
+            box-shadow: 0px 10px 30px 0px rgba(133,66,189,0.1);
         }
 
         #operations > div > * {
-            padding-left: 2%;
+            padding: 0px 2%;
         }
 
-        #operations > div ul, #operations > div ol {
-            padding-left: 7% ;
+        #operations > div ul, .params+ul{
+            list-style-type: none;
+            font-size: 0.85em;
+        }
+        #operations > div ul:nth-of-type(1) li, .params+ul li {
+            margin: 10px 0px;
+        }
+
+        #operations > div ul:nth-of-type(1) li em, .params+ul li em {
+            font-style: normal;
+            font-weight: 400;
+            color: #9931FC;
+            border-left: solid 2px #9931FC;
+            padding:5px;
+        }
+
+        .attr {
+            border-top: solid 1px rgba(133,66,189,0.1);
+            padding: 2% !important;
+            display:block;
+            vertical-align: top;
+            font-size: 0.8em;
+            text-align: left;
+        }
+
+        .attr strong {
+            width: 30%;
+            color: grey;
+            font-weight: 400;
+            font-style: normal;
+            display:inline-block;
+            vertical-align: top;
+        }
+
+        .attr_val {
+            max-width: 50%;
+            display:inline-table;
+            height: 100%;
+            vertical-align: top;
+        }
+
+        .method {
+            text-transform: uppercase;
         }
 
         .params {
             margin-bottom: 0;
         }
 
-        .params + ul {
-            margin-top: 0;
-        }
-
-        #operations h3 {
-            background-color: rgba(47, 34, 222,.5);
-            color: white;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            border-radius: 14px 14px 0 0;
-            padding: 10px;
-        }
-
         pre {
-            background-color: rgba(47, 34, 222,.1);
+            background-color: #f0f0f5;
             padding: 10px;
             margin-top: 0;
             margin-bottom: 0;
             border-radius: 0 0 14px 14px;
-            font-family: "Lucida Console", Monaco, monospace;
-            overflow-x: scroll;
-            font-size: 80%;
+            font-family: monospace !important;
+            overflow: scroll;
             line-height: 1.2em;
+            height: 250px;
+        }
+
+        pre code {
+            font-family: monospace !important;
         }
 
         p.ex {
-            background-color: rgba(47, 34, 222,.1);
+            background-color: #f0f0f5;
             margin-bottom: 0px;
             padding-top: 5px;
             padding-bottom: 5px;
-            border-top: 1px solid #246375;
-            border-bottom: 1px solid #246375;
         }
 
-        header > h2:first-of-type {
+        h2:first-of-type {
             margin-bottom: 15px;
         }
 
-        header > ol:first-of-type {
+        ol:first-of-type {
             margin-top: 0;
         }
 
         :not(pre) > code {
-            background-color: #fcf5f9;
-            color: #fc3f9e;
+            background-color:  #f0f0f5;
+            color: #8585ad;
             padding: 0 2px 0 2px;
             border-radius: 3px;
+            font-family : monospace;
+            font-size: 1.2em !important;
         }
 
-        *:not(div) > p {
+        /**:not(div) > p {
             margin-left: 1.2%;
-        }
+        }*/
 
+        h1 {font-size: 2.5em;}
+        h1, h2 {
+            text-transform: uppercase;
+        }
 
         h1, h2, h3, h4, h5, h6 {
-            font-weight: 700;
             line-height: 1.2em;
             padding-top:1em;
+            text-align: left !important;
+            font-weight:400;
         }
 
         h2 ~ h2, section > h2 {
-            border-top: 1px solid #246375;
+
             padding-top: 5px;
-            padding-left: 1%;
             margin-top: 40px;
         }
 
-        h2 a[href] {
+        h2 a[href], h3 a[href] {
             background-image: none;
             text-transform:uppercase;
             padding: 1px 3px 1px 3px;
@@ -296,8 +451,14 @@ The operations that this API implements are:
             top: -3px;
         }
 
-        h2 a[href]::before {
-            content: " \u2191 ";
+        h2 a[href]::before , h3 a[href]::before {
+            content: " \u2191";
+            width: 20px;
+            height: 20px;
+            display:inline-block;
+            color: #9931FC;
+            text-align:center;
+            margin-right: 10px;
         }
 
         /*h3 a[href] {
@@ -306,7 +467,7 @@ The operations that this API implements are:
             text-transform:uppercase;
             padding: 1px 3px 1px 3px;
             font-size: 8pt !important;
-            border: 1px solid #246375;
+            border: 1px solid #9931FC;
             float: right;
             position:relative;
             top: -11px;
@@ -321,7 +482,6 @@ The operations that this API implements are:
 
         a {
             color : black;
-            font-weight: 700;
             text-decoration: none;
             background-image: -webkit-gradient(linear,left top, left bottom,color-stop(50%, transparent),color-stop(0, rgba(154, 49, 252,.5)));
             background-image: linear-gradient(180deg,transparent 50%,rgba(154, 49, 252,.5) 0);
@@ -358,7 +518,6 @@ The operations that this API implements are:
         .api_calls:hover {
           overflow-y: scroll;
         }
-
 
         .api_calls p {
           padding: 0.2em 1em;
@@ -451,20 +610,29 @@ The operations that this API implements are:
         api_logs_list = ''.join(["<p>"+self.clean_log(l) +"</p>" for l in clean_list if self.clean_log(l) !=''])
 
         html = """
-        <div class="info_api">
-            <p><strong>API</strong>: %s<br/>
-            <strong>API Documentation</strong>: <a href="%s">%s</a><br/>
-            <strong>Endpoint</strong>: <a href="%s">%s</a><br/>
+        <p></p>
+        <aside>
+            <h4>%s</h4>
+            <ul id="sidebar_menu" class="sidebar_menu">
+                <li><a class="btn active" href="%s">Documentation</a></li>
+                <li><a class="btn" href="%s">SPARQL endpoint</a></li>
+            </ul>
+        </aside>
+        <header class="dashboard">
+            <h1>%s</h1>
+            <div class="info_api">
+                <strong>API Documentation</strong>: <a href="%s">%s</a><br/>
+                <strong>SPARQL Endpoint</strong>: <a href="%s">%s</a><br/>
+            </div>
+        </header>
 
-        </div>
-
-        <h2>Last API calls</h2>
-        <div class="api_calls">
+        <h2 class="dashboard">Last API calls</h2>
+        <div class="api_calls dashboard">
 
             %s
         </div>
 
-        """ % (self.__title(), self.base_url,self.base_url, self.tp, self.tp, api_logs_list)
+        """ % ( self.__title(), self.base_url, self.tp, self.__title(), self.base_url,self.base_url, self.tp, self.tp, api_logs_list)
         return html
 
     def get_htmldoc(self, css_path=None):
@@ -479,11 +647,12 @@ The operations that this API implements are:
         %s
     </head>
     <body>
-        <header>%s</header>
+        <aside>%s</aside>
+        <main>%s</main>
         <section id="operations">%s</section>
         <footer>%s</footer>
     </body>
-</html>""" % (self.__title(), self.__css(), self.__css_path(css_path), self.__header(), self.__operations(), self.__footer())
+</html>""" % (self.__title(), self.__css(), self.__css_path(css_path), self.__sidebar(), self.__header(), self.__operations(), self.__footer())
 
     def get_htmlindex(self,css_path=None):
         """This method generates the HTML documentation of RAMOSE as described in the ramose.html document"""
@@ -499,7 +668,6 @@ The operations that this API implements are:
               %s
             </head>
             <body>
-                <h1>Restful API Manager Over SPARQL Endpoints (RAMOSE)</h1>
                 %s
                 <footer>%s</footer>
             </body>
@@ -518,7 +686,6 @@ The operations that this API implements are:
         date = s[s.find("[")+1:s.find("]")]
         method = s.split('"')[1::2][0].split()[0]
         cur_call = s.split('"')[1::2][0].split()[1].strip()
-        print(cur_call)
         status = sub(r"\D+", "", s.split('"',2)[2])
         if cur_call != self.base_url+'/':
             full_str = "<span class='group_log'><span class='status_log code_"+status+"'>"+status+"</span>"+"<span class='date_log'>"+date+"</span></span>"+"<span class='group_log'><span class='call_log'><a href='"+cur_call+"' target='_blank'>"+cur_call+"</a></span>"+"<span class='method_log'>"+method+"</span></span>"
@@ -927,10 +1094,7 @@ The operations that this API implements are:
                 # run function
                 func = getattr(self.addon, func_name)
                 res = func(*param_list)
-                print("match_url",match_url)
-                print("func",func)
-                print("param_list",param_list)
-                print("res",res)
+
                 # substitute res to the part considered in the url
                 for idx in range(len(param_list)):
                     result = result.replace(param_list[idx], res[idx])
@@ -1124,14 +1288,12 @@ The operations that this API implements are:
             if str_method in m:
                 try:
                     op_url = self.preprocess(op_url, i)
-                    print("\nop_url\n",op_url)
                     query = i["sparql"]
                     par = findall("{([^{}]+)}", i["url"])
                     par_man = match(op, op_url).groups()
                     for idx in range(len(par)):
                         try:
                             par_type = i[par[idx]].split("(")[0]
-                            print("i[par[idx]]",i[par[idx]], par_type)
                             if par_type == "str":
                                 par_value = par_man[idx]
                             else:
@@ -1139,7 +1301,7 @@ The operations that this API implements are:
                         except KeyError:
                             par_value = par_man[idx]
                         query = query.replace("[[%s]]" % par[idx], str(par_value))
-                        #print("\nquery\n",query)
+                        
                     if self.sparql_http_method == "get":
                         r = get(self.tp + "?query=" + quote(query), headers={"Accept": "text/csv"})
                     else:

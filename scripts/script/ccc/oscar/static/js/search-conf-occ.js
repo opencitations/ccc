@@ -245,9 +245,9 @@ var search_conf = {
         WHERE{
 
               [[RULE]]
-
               ?iri rdf:type ?type .
               OPTIONAL {?iri dcterms:title ?title .}
+              BIND(COALESCE(?title, "No title available") as ?title).
 
                    OPTIONAL {?iri fabio:hasSubtitle ?subtitle .}
                    OPTIONAL {?iri prism:publicationDate ?year .}
@@ -262,7 +262,6 @@ var search_conf = {
                   # in-text references
 
                   OPTIONAL {
-
                     ?citation cito:hasCitedEntity ?cited_iri ; cito:hasCitingEntity ?iri ;^oa:hasBody ?be_annotation .
                     ?be oco:hasAnnotation ?be_annotation .
                     ?pointer c4o:denotes ?be ; datacite:hasIdentifier [
@@ -270,7 +269,6 @@ var search_conf = {
                       literal:hasLiteralValue ?rp
                       ] .
                   }
-
 
                    OPTIONAL {
                      ?iri frbr:partOf+ ?journal_iri .
@@ -290,13 +288,15 @@ var search_conf = {
                  #list of the doc authors
 
 
-                 ?iri pro:isDocumentContextFor ?role .
-                 ?role pro:withRole pro:author ; pro:isHeldBy [
-                     foaf:familyName ?f_name ;
-                                  foaf:givenName ?g_name
-                   ] .
-                   ?role pro:isHeldBy ?author_iri .
-                   OPTIONAL {?role oco:hasNext* ?next .}
+                 OPTIONAL {
+                   ?iri pro:isDocumentContextFor ?role .
+                   ?role pro:withRole pro:author ; pro:isHeldBy [
+                       foaf:familyName ?f_name ;
+                                    foaf:givenName ?g_name
+                     ] .
+                     ?role pro:isHeldBy ?author_iri .
+                     OPTIONAL {?role oco:hasNext* ?next .}
+                 }
                    BIND(REPLACE(STR(?author_iri), '/ccc/', '/browser/ccc/', 'i') as ?author_browser_iri) .
                    BIND(CONCAT(?g_name,' ',?f_name) as ?author) .
 

@@ -67,7 +67,7 @@ var browser_conf = {
             "journal_data": {"field":"j_vol_br_iri","prefix":""}
           },
           "group_by": {"keys":["title"], "concats":["author","s_type"]},
-          "none_values": { "author": "no authors available", "title": "", "id_lit":"", "id_issn":"","year":"", "journal":"", "journal_data":""},
+          "none_values": { "author": "", "title": "", "id_lit":"", "id_issn":"","year":"", "journal":"", "journal_data":""},
 
           "text_mapping": {
               "s_type":[

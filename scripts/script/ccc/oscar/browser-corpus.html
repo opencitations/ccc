@@ -14,7 +14,7 @@
     <!--<link href="https://opencitations.github.io/oscar/static/css/search.css" rel="stylesheet">-->
     <link href="static/css/search.css" rel="stylesheet">
     <link href="static/css/browser.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
 
   </head>
 
@@ -51,12 +51,9 @@
       var groups = myRegexp.exec(String(window.location.href));
       if (groups.length > 1) {resource_iri = groups[1];}
       browser.do_sparql_query(resource_iri);
-
       // CCC call EPMC
       $(document).on("click", "td[field='mentions']>a", function(event) {
-
           event.preventDefault();
-
           var pointers = $(this).attr('href');
           var td = $(this).parent();
           // toggle sentences

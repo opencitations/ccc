@@ -720,6 +720,7 @@ var browser = (function () {
 
 				for (var i = 0; i < oscar_content.length; i++) {
 					var oscar_entry = oscar_content[i];
+					console.log(oscar_entry);
 					var query = one_result[oscar_entry.query_text].value;
 					var rule = oscar_entry["rule"];
 					var oscar_key = 'search?text='+query+'&rule='+rule;
@@ -820,6 +821,8 @@ var browser = (function () {
 						// load new oscar data
 						search.change_search_data(oscar_data[oscar_key].data, check_and_update = false);
 						search.do_sparql_query(oscar_key, true ,[], true, callbk_func_key);
+						var oops = "<div class='no_results'><img src='static/img/poor.png'/><p>ooops, there is no metadata available</p></div>"
+			      $('#search_results').append(oops);
 				}else {
 					if (oscar_data[oscar_key]['results']) {
 							//in case the table data has not been yet initialized

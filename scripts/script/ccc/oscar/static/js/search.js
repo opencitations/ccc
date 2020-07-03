@@ -429,7 +429,7 @@ var search = (function () {
 			$.ajax({
 						dataType: "json",
 						url: query_contact_tp,
-						type: 'GET',
+						type: 'POST',
 						async: async_call,
 						timeout: util.get_obj_key_val(search_conf_json,"timeout.value"),
 						error: function(jqXHR, textStatus, errorThrown) {
@@ -2451,8 +2451,8 @@ var htmldom = (function () {
 			}
 
 			var str_html =
-			"<div class='rows-per-page'> Number of rows per page: "+"<select class='form-control input custom' onchange='search.update_page_limit(this.options[selectedIndex].text)'' id='sel1'> </div>"+
-				options_html+"</select>";
+			"<div class='rows-per-page'>"+"<select class='form-control input custom' onchange='search.update_page_limit(this.options[selectedIndex].text)'' id='sel1'> </div>"+
+				options_html+"<option disabled selected value>RESULTS PER PAGE</option></select>";
 
 			rowsxpage_container.innerHTML = str_html;
 			return str_html;
@@ -2488,8 +2488,8 @@ var htmldom = (function () {
 			options_html= options_html + str_option;
 
 			var str_html =
-				"<div class='sort-results'>Sort: <select class='form-control input custom' onchange='search.check_sort_opt(this.options[selectedIndex])' id='sort_box_input'></div>"+
-				options_html+"</select>";
+				"<div class='sort-results'><select class='form-control input custom' onchange='search.check_sort_opt(this.options[selectedIndex])' id='sort_box_input'></div>"+
+				options_html+"<option disabled selected value>SORT BY</option></select>";
 
 			sort_container.innerHTML = str_html;
 			return str_html;
@@ -2569,8 +2569,8 @@ var htmldom = (function () {
 									"</div>"+
 									"<div class='adv-search-footer'>"+
 										"<div class='input-group-btn'>"+
-											"<button class='btn btn-default theme-color' id='advsearch_btn'> <span class='search-btn-text'>"+adv_btn_title+"</span><i class='glyphicon glyphicon-search large-icon'></i></button>"+
-											"<button type='button' class='btn btn-default theme-color' id='add_rule_btn'> <span class='add-btn-text'> Add Rule </span><i class='glyphicon glyphicon-plus normal-icon'></i></button>"+
+											"<button class='btn btn-default theme-color' id='advsearch_btn'> <span class='search-btn-text'>"+adv_btn_title+"</span></button>"+
+											"<button type='button' class='btn btn-default theme-color' id='add_rule_btn'> <span class='add-btn-text'> Add rule</span></button>"+
 										"</div>"+
 									"</div>"+
 								"</form>"+
@@ -2622,7 +2622,7 @@ var htmldom = (function () {
 					'</label>'+
 				'</div>'+
 				'<div class="adv btn remove">'+
-				'<button entryid="'+id_rows+'" class="btn btn-default theme-color" id="remove_rule_btn" onclick="htmldom.remove_adv_rule('+id_rows+')" class="remove-rule-btn">Remove <i class="glyphicon glyphicon-minus normal-icon"></i> </button>'+
+				'<button entryid="'+id_rows+'" class="btn btn-default theme-color" id="remove_rule_btn" onclick="htmldom.remove_adv_rule('+id_rows+')" class="remove-rule-btn">Remove rule</button>'+
 				'</div>'+
 			'</fieldset>'+
 			_build_rule_entry(id_rows, arr_rules, adv_cat_selected)+
@@ -2919,7 +2919,7 @@ var htmldom = (function () {
 
 						//i will build the nav index for the pages
 						new_footer_tab = _table_footer(false, __init_prev_next_btn());
-					}else {
+					} else {
 						//i have no results
 						new_footer_tab = _table_footer(true, "No results were found");
 					}

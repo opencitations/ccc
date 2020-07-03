@@ -1,21 +1,28 @@
 body {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  /* font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; */
+  font-family: "Karla", Geneva, sans-serif;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  text-align: left !important;
+  background-color: #edf0f2;
+}
+
+.__lucinda__ ,.__oscar__ {
   padding-right: 5%;
   padding-left: 5%;
-  text-align: center;
 }
 
 .site-wrapper-inner {
   vertical-align: middle;
 }
 
-
 body.lucinda-cover{
   width:90%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: "Karla",Geneva, sans-serif;
+  /* font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; */
 }
 
 #browser {
@@ -25,29 +32,21 @@ body.lucinda-cover{
   min-height: 200px;
   float:left;
   display: inline-block;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   max-width: 70%;
+  margin-top: 20px;
+  color: #77909c;
+  padding: 30px;
 }
 
 #browser_header{
-  border-color: #f2f2f2;
+  /* border-color: #f2f2f2;
   border-width: 3px;
   border-style: solid;
   padding-bottom: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 10px; */
   border-left:none;
   border-top:none;
   border-right:none;
-}
-
-.browser-metrics{
-  background-color: rgba(243, 230, 255,0.17);
-  display:inline;
-  float:right;
-  width: 20%;
-  min-height: 200px;
-  border-left: solid;
-  border-color: #f2f2f2;
 }
 
 #browser_view div{
@@ -88,7 +87,6 @@ body.lucinda-cover{
 
 .browser-header-tab {
   table-layout: auto;
-  margin-top: 20px;
   border-collapse: collapse;
   border-color: #f2f2f2;
   text-align:left;
@@ -104,7 +102,6 @@ body.lucinda-cover{
 .browser-header-tab tr th {
   font-size: 230%;
 }
-
 
 .browser-details-tab {
   table-layout: auto;
@@ -126,13 +123,33 @@ body.lucinda-cover{
   font-size: 100%;
 }
 
+.browser-metrics{
+  /* background-color: rgba(243, 230, 255,0.17); */
+  display:inline;
+  float:right;
+  width: 20%;
+  min-height: 200px;
+  margin-top: 55px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+  box-shadow: 0px 10px 30px 3px rgba(133,66,189,0.1);
+  color: #9931FC;
+  border-radius: 18px;
+  background-color: white;
+  /* border-left: solid;
+  border-color: #f2f2f2; */
+}
+
 .browser-metrics-tab {
-  margin-left:20px;
+  word-wrap:break-word;
+  width: 100%;
+  /* margin-left:20px;
   table-layout: auto;
   border-collapse: collapse;
   text-align:left;
   word-wrap:break-word;
-  border: none !important;
+  border: none !important; */
 }
 .browser-metrics-tab tr td {
   font-size: 120%;
@@ -140,7 +157,6 @@ body.lucinda-cover{
 .browser-metrics-tab tr th {
   font-size: 160%;
 }
-
 
 /*customize dynamic elems added*/
 .imp-value{
@@ -153,15 +169,25 @@ body.lucinda-cover{
 }
 
 .header-title{
-  font-size: 150%;
+  font-size: 190%;
+  font-weight: 700;
+  color:#293439;
 }
 
 .metrics-title{
   font-size: 145%;
 }
 
+.__oscar__ {
+  background-color: white;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  box-shadow: 0px 10px 30px 3px rgba(133,66,189,0.1);
+}
+
 #oscar_nav {
   margin-top:3%;
+  padding-left: 30px;
 }
 #oscar_nav li a{font-size:150%;}
 #oscar_nav li {margin-right: 20px;}
@@ -175,6 +201,7 @@ body.lucinda-cover{
 
 #loader_container{
   margin-top: 1.5%;
+  padding-top: 50px;
 }
 .oscarLoader{
  color: grey;
@@ -185,15 +212,18 @@ body.lucinda-cover{
 /*modify search css*/
 #search{
   padding-top: 2%;
+  padding-left: 30px;
 }
 #search_results{
   width:100%;
+  min-height: 500px;
 }
 .table.tab-footer tr{
   text-align:center;
 }
 #rows_per_page{
   margin-left:0%;
+  margin-right: 10px;
 }
 :root {
   --main-bg-color: #336699;
@@ -280,11 +310,11 @@ body.lucinda-cover{
   --hover_color: #2D22DE;
   --alert_color: #990000;
 }
-.browser-header-tab a , .browser-details-tab a {color:grey;}
+.browser-header-tab a , .browser-details-tab a {color:#77909c; text-decoration: underline;}
 
-a:hover { color: var(--main-bg-color);}
+a:hover { color: var(--main-bg-color); text-decoration: none;}
 
-.browser-header-tab tbody tr , .browser-details-tab tr {display: inline-block; padding: 5px 0px 0px 0px;}
+.browser-header-tab tbody tr , .browser-details-tab tr {display: inline-block; padding: 5px 0px 0px 0px; vertical-align: top;}
 
 .browser-header-tab tbody tr:nth-of-type(2),
 .browser-header-tab tbody tr:nth-of-type(3),
@@ -298,25 +328,70 @@ a:hover { color: var(--main-bg-color);}
 .browser-details-tab tbody tr td elem, .cited, .refs, .num_docs {font-family: "Karla", sans-serif; }
 
 /* doi */
-.doi_before a:not(:empty)::before {content: "DOI: "; padding-left: 10px;}
+.doi_before a:not(:empty)::before {content: "DOI: "; padding-left: 10px; }
 /* issn */
 .issn_before:not(:empty)::before {content: "ISSN: "; padding-left: 10px;}
 /* orcid */
 .orcid_before:not(:empty)::before {content: "ORCID: "; padding-left: 10px;}
 /* oci */
 .oci_before:not(:empty)::before {content: "OCI: "; padding-left: 10px;}
+/* intrepid */
+.intrepid_before:not(:empty)::before {content: "INTREPID: "; padding-left: 10px;}
+/* source xml */
+.source_before:not(:empty)::before {content: "EPMC (XML): "; padding-left: 10px;}
 
+/*in article */
+
+.info_box a:not(:empty)::before {font-size: 0.8em; display: block; padding-bottom: 5px; color: #77909c !important;}
+.info_box a:not(:empty)::before:hover {color: #77909c !important; }
+.in_article a:not(:empty)::before {content: "IN ARTICLE "; }
+.in_section a:not(:empty)::before {content: "IN SECTION "; }
+.in_paragraph a:not(:empty)::before {content: "IN PARAGRAPH "; }
+.in_section:has(a:empty) {display: none !important;}
+.info_box a:not(:empty) {
+  text-decoration: none !important;
+  margin-top: 10px;
+  display: block !important;
+  display: -webkit-box;
+  background-color: white !important;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 250px;
+  margin-right: 20px;
+  white-space: nowrap;
+  -webkit-line-clamp: 4 !important;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0px 10px 30px 3px rgba(133,66,189,0.1);
+
+}
+.citing_article a:not(:empty)::before {content: "CITING "; }
+.cited_article a:not(:empty)::before {content: "CITED ";}
+.citing_article a, .cited_article a {white-space: normal !important;}
 /* title */
-.browser-header-tab tbody tr:nth-of-type(7) {display: block !important;}
+.browser-header-tab tbody tr:nth-of-type(7) {display: block !important; }
 /* authors */
-.browser-header-tab tbody tr:nth-of-type(10) {padding-top: 1px;} /* authors */
+/* .browser-header-tab tbody tr:nth-of-type(10) {padding-top: 1px;} authors */
 /* year */
 .journal-data-separator:not(:empty)::before {content: ". ";}
 
+.cited, .refs, .num_docs, .intext_refs {
+  font-size:170%;
+}
+
+.cited::before, .refs::before ,.num_docs::before, .intext_refs::before {
+  color: #77909c; display: block;
+  font-size: 60%;
+}
 /* box citations */
-.cited::before {content: "Citations: ";}
-.refs::before {content: "References: ";}
-.num_docs::before {content: "Documents: ";}
+.cited::before {content: "CITATIONS "; }
+.refs::before {content: "REFERENCES "; }
+.num_docs::before {content: "DOCUMENTS "; }
+.intext_refs::before {content: "IN-TEXT REFERENCES";}
+
+/*   */
+
 .doc-type {
   background-color: var(--main-bg-color) ;
   padding: 5px !important;
@@ -327,3 +402,13 @@ a:hover { color: var(--main-bg-color);}
 }
 
 .doc-type a {color:white !important;}
+
+.no_results * {display: inline-block;}
+.no_results { margin-top: 4%; text-align: center; font-family: 'Karla', sans-serif;}
+.no_results img {height: 150px; width: auto; }
+.no_results p {margin:1%; font-size: 180%; width:25%; font-weight: 700; padding-left: 3%;text-align: left;}
+
+select:focus {
+  border-color: rgba(133,66,189,0.1);
+  box-shadow: 0px 10px 30px 3px rgba(133,66,189,0.1);
+}

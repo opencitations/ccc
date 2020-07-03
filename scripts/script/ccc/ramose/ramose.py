@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Copyright (c) 2018, Silvio Peroni <essepuntato@gmail.com>
+# Copyright (c) 2020
+# Silvio Peroni <essepuntato@gmail.com>
+# Marilena Daquino <marilena.daquino2@unibo.it>
 #
 # Permission to use, copy, modify, and/or distribute this software for any purpose
 # with or without fee is hereby granted, provided that the above copyright notice
@@ -204,7 +206,7 @@ The operations that this API implements are:
 
     def __footer(self):
         """This method returns the footer of the API documentation."""
-        result = """This API and the related documentation has been created with <a href="https://github.com/opencitations/ramose" target="_blank">RAMOSE</a>, the *Restful API Manager Over SPARQL Endpoints*, developed by <a href="http://orcid.org/0000-0003-0530-4305" target="_blank">Silvio Peroni</a>."""
+        result = """This API and the related documentation has been created with <a href="https://github.com/opencitations/ramose" target="_blank">RAMOSE</a>, the *Restful API Manager Over SPARQL Endpoints*, developed by <a href="http://orcid.org/0000-0003-0530-4305" target="_blank">Silvio Peroni</a> and <a href="https://marilenadaquino.github.io">Marilena Daquino</a>."""
         return markdown(result)
 
     def __css(self):
@@ -1301,7 +1303,7 @@ The operations that this API implements are:
                         except KeyError:
                             par_value = par_man[idx]
                         query = query.replace("[[%s]]" % par[idx], str(par_value))
-                        
+
                     if self.sparql_http_method == "get":
                         r = get(self.tp + "?query=" + quote(query), headers={"Accept": "text/csv"})
                     else:

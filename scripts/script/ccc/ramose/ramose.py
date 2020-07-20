@@ -35,7 +35,8 @@ from isodate import parse_duration
 from argparse import ArgumentParser
 from os.path import abspath, dirname, basename
 from os import sep , getcwd
-
+import pprint
+pp = pprint.PrettyPrinter(indent=1)
 
 FIELD_TYPE_RE = "([^\(\s]+)\(([^\)]+)\)"
 PARAM_NAME = "{([^{}\(\)]+)}"
@@ -94,15 +95,15 @@ class APIManager(object):
     # Hash format: END
 
     # HTML documentation: START
-    def __title(self):
+    def __title(self, conf):
         """This method returns the title string defined in the API specification."""
-        return self.conf_json[0]["title"]
+        return conf["conf_json"][0]["title"]
 
-    def __sidebar(self):
+    def __sidebar(self, conf):
         """This method builds the sidebar of the API documentation"""
         result = ""
 
-        i = self.conf_json[0]
+        i = conf["conf_json"][0]
         result += """
 
         <h4>%s</h4>
@@ -116,14 +117,14 @@ class APIManager(object):
         </ul>
         """ % \
                     (i["title"], "".join(["<li><a class='btn' href='#%s'>%s</a></li>" % (op["url"], op["url"])
-                             for op in self.conf_json[1:]]))
+                             for op in conf["conf_json"][1:]]))
         return result
 
-    def __header(self):
+    def __header(self, conf):
         """This method builds the header of the API documentation"""
         result = ""
 
-        i = self.conf_json[0]
+        i = conf["conf_json"][0]
         result += """
 <a id='toc'></a>
 # %s
@@ -169,14 +170,14 @@ It is possible to specify one or more filtering operation of the same kind (e.g.
 Example: `<api_operation_url>?exclude=doi&filter=date:>2015&sort=desc(date)`."""
         return markdown(result)
 
-    def __operations(self):
+    def __operations(self, conf):
         """This method returns the description of all the operations defined in the API."""
         result = """## Operations [back to top](#toc)
 The operations that this API implements are:
 """
         ops = "\n"
 
-        for op in self.conf_json[1:]:
+        for op in conf["conf_json"][1:]:
             params = []
             for p in findall(PARAM_NAME, op["url"]):
                 p_type = "str"
@@ -200,7 +201,7 @@ The operations that this API implements are:
                                        ", ".join(split("\s+", op["method"].strip())), "</li><li>".join(params),
                                        ", ".join(["%s <em>(%s)</em>" % (f, t) for t, f in
                                                   findall(FIELD_TYPE_RE, op["field_type"])]),
-                                       self.website + self.base_url + op["call"], op["call"], op["output_json"])
+                                       conf["website"] + conf["base_url"] + op["call"], op["call"], op["output_json"])
         # TODO multiple params: change the listing above
         return markdown(result) + ops
 
@@ -211,18 +212,18 @@ The operations that this API implements are:
 
     def __css(self):
         return """
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-        @media screen and (max-width: 800px) {
+        @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400&display=swap');
+        @media screen and (max-width: 850px) {
               aside { display: none; }
-              main, #operations, footer, .dashboard {margin-left: 15% !important;}
+              main, #operations, .dashboard, body>footer {margin-left: 15% !important;}
               #operations > ul:nth-of-type(1) li { display:block !important; max-width: 100% !important; }
               h3 a[href] {display:block !important; float: none !important; font-size: 0.5em !important;}
-              a {overflow: hidden;
-              text-overflow: ellipsis;}
+              a {overflow: hidden; text-overflow: ellipsis;}
+              .info_api, .api_calls {display: block !important; max-width: 100% !important;}
             }
 
         * {
-            font-family: 'Roboto', Geneva, sans-serif;
+            font-family: 'Karla', Geneva, sans-serif;
         }
 
         body {
@@ -245,6 +246,8 @@ The operations that this API implements are:
             left: 0;
             /*background-color: #404040;*/
             overflow-x: hidden;
+            background-color: white;
+            box-shadow:0px 10px 30px 0px rgba(133,66,189,0.1);
         }
         p strong {
             text-transform: uppercase;
@@ -261,17 +264,19 @@ The operations that this API implements are:
             list-style-type: none;
             padding-left:0px !important;
             margin-top: 10px;
+
         }
 
         .sidebar_menu > li {
             padding: 2% 0px;
-            border-bottom : solid 0.7px grey;
+            border-top : solid 0.7px grey;
         }
 
         .sidebar_menu a {
             padding: 1% 9%;
             background-image: none !important;
             color: grey;
+            display: block;
         }
 
         .sidebar_menu a:hover {
@@ -285,16 +290,18 @@ The operations that this API implements are:
             font-size: 0.8em;
         }
 
-        main , #operations , footer, .dashboard {
+        main , #operations , .dashboard, body>footer {
             margin-left: 33%;
         }
-
+        .dashboard {text-align: center;}
         main h1+p , .info_api{
-            border-left: solid 5px rgba(154, 49, 252,.5);
+
             padding-left: 3%;
             font-size: 0.9em;
             line-height: 1.4em;
         }
+
+        main h1+p {border-left: solid 5px rgba(154, 49, 252,.5);}
 
         #operations h3 {
             color: #9931FC;
@@ -308,6 +315,7 @@ The operations that this API implements are:
         }
 
         #operations > ul:nth-of-type(1) li {
+            background-color: white;
             text-align: left;
             display: inline-block;
             overflow: hidden;
@@ -322,6 +330,7 @@ The operations that this API implements are:
         }
 
         #operations > div {
+            background-color: white;
             margin-top: 20px;
             padding: 2%;
             border-radius: 18px;
@@ -508,52 +517,67 @@ The operations that this API implements are:
             color: grey;
             font-size: 9pt;
         }
+        /* dashboard */
+
+        .info_api {
+            max-width: 35%;
+            border-radius: 15px;
+            text-align: left;
+            vertical-align: top;
+            background-color: #9931FC;
+            color: white;
+        }
+
+        .info_api, .api_calls {
+            display: inline-block;
+            text-align: left;
+            height: 200px;
+            padding:4%;
+            margin: 1% 2% 1% 0px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 30px 0px rgba(133,66,189,0.1);
+            vertical-align:top;
+        }
 
         .api_calls {
-            height : 20em;
+            max-width: 40%;
+            background-color: white;
             scroll-behavior: smooth;
             overflow: auto;
             overflow-y: scroll;
             scrollbar-color: #9931FC rgb(154, 49, 252);
+            border-radius: 10px;
         }
+        .api_calls div {padding-bottom:2%;}
 
         .api_calls:hover {
           overflow-y: scroll;
         }
-
-        .api_calls p {
-          padding: 0.2em 1em;
-        }
-
-        .api_calls p:nth-child(odd) {
-          background-color: 	#F8F8F8;
-        }
-
-        .api_calls p {
-          padding-right: 1em;
+        .api_calls h4, .info_api h2 {padding-top: 0px !important; margin-top: 0px !important;}
+        .api_calls div p {
+          padding: 0.2em 0.5em;
+          border-top: solid 1px #F8F8F8;
+          }
         }
 
         .date_log , .method_log {
-          clear:left;
-          display: block;
           color: grey;
           font-size: 0.8em;
-        }
 
-        .date_log {
-          margin-left: 2.2em;
         }
+        .method_log {margin-left: 15px;}
+        .date_log {display:inline-grid;}
 
         .group_log:nth-child(odd) {
-          width: 20%;
-          display: inline-block;
+          margin-right:5px;
+          font-size: 0.9em;
         }
 
         .group_log:nth-child(even) {
-          width: 75%;
-          display: inline-block;
+          display: inline-grid;
+          vertical-align: top;
         }
-
+        .status_log {padding-right:15px;}
         .status_log::before {
           content: '';
            display: inline-block;
@@ -601,44 +625,59 @@ The operations that this API implements are:
 
     def __parse_logger_ramose(self):
         """This method reads logging info stored into a local file, so as to be browsed in the dashboard.
-        Returns: the list of URL of current working APIs, basic logging info """
+        Returns: the html including the list of URLs of current working APIs and basic logging info """
+        # TODO conf
+
         with open("ramose.log") as l_f:
             logs = ''.join(l_f.readlines())
         rev_list = set()
         rev_list_add = rev_list.add
         rev_list = [x for x in list(reversed(logs.splitlines())) if not (x in rev_list or rev_list_add(x))]
-        clean_list = [l for l in rev_list if self.base_url in l and "debug" not in l]
-
-        api_logs_list = ''.join(["<p>"+self.clean_log(l) +"</p>" for l in clean_list if self.clean_log(l) !=''])
 
         html = """
         <p></p>
         <aside>
-            <h4>%s</h4>
-            <ul id="sidebar_menu" class="sidebar_menu">
-                <li><a class="btn active" href="%s">Documentation</a></li>
-                <li><a class="btn" href="%s">SPARQL endpoint</a></li>
+            <h4>RAMOSE API DASHBOARD</h4>
+            <ul id="sidebar_menu" class="sidebar_menu">"""
+
+        for api_url, api_dict in self.all_conf.items():
+            html +="""
+                    <li><a class="btn active" href="%s">%s</a></li>
+                """ % (api_url, api_dict["conf_json"][0]["title"])
+
+        html += """
             </ul>
         </aside>
         <header class="dashboard">
-            <h1>%s</h1>
-            <div class="info_api">
-                <strong>API Documentation</strong>: <a href="%s">%s</a><br/>
-                <strong>SPARQL Endpoint</strong>: <a href="%s">%s</a><br/>
-            </div>
-        </header>
+            <h1>API MONITORING</h1>"""
 
-        <h2 class="dashboard">Last API calls</h2>
-        <div class="api_calls dashboard">
+        for api_url, api_dict in self.all_conf.items():
+            clean_list = [l for l in rev_list if api_url in l and "debug" not in l]
+            api_logs_list = ''.join(["<p>"+self.clean_log(l,api_url) +"</p>" for l in clean_list if self.clean_log(l,api_url) !=''])
+            api_title = api_dict["conf_json"][0]["title"]
+            html += """
+                <div class="info_api">
+                    <h2>%s</h2>
+                    <a id="view_doc" href="%s">VIEW DOCUMENTATION</a><br/>
+                    <a href="%s">GO TO SPARQL ENDPOINT</a><br/>
+                </div>
+                <div class="api_calls">
+                    <h4>Last calls</h4>
+                    <div>
+                        %s
+                    </div>
 
-            %s
-        </div>
-
-        """ % ( self.__title(), self.base_url, self.tp, self.__title(), self.base_url,self.base_url, self.tp, self.tp, api_logs_list)
+                </div>
+                """ % ( api_title,api_url, api_dict["tp"], api_logs_list)
         return html
 
-    def get_htmldoc(self, css_path=None):
+    def get_htmldoc(self, css_path=None, base_url=None):
         """This method generates the HTML documentation of an API described in an input Hash Format document."""
+        if base_url is None:
+            conf = self.all_conf[0]
+        else:
+            conf = self.all_conf['/'+base_url]
+
         return 200, """<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -654,7 +693,7 @@ The operations that this API implements are:
         <section id="operations">%s</section>
         <footer>%s</footer>
     </body>
-</html>""" % (self.__title(), self.__css(), self.__css_path(css_path), self.__sidebar(), self.__header(), self.__operations(), self.__footer())
+</html>""" % (self.__title(conf), self.__css(), self.__css_path(css_path), self.__sidebar(conf), self.__header(conf), self.__operations(conf), self.__footer())
 
     def get_htmlindex(self,css_path=None):
         """This method generates the HTML documentation of RAMOSE as described in the ramose.html document"""
@@ -677,20 +716,21 @@ The operations that this API implements are:
         """ % (self.__css(), self.__css_path(css_path), self.__parse_logger_ramose(), self.__footer())
 
     def store_htmldoc(self, file_path,css_path=None):
-        """This method stores the HTML documentation on an API in a file."""
+        """This method stores the HTML documentation of an API in a file."""
         html = self.get_htmldoc(css_path)
         with open(file_path, "w") as f:
             f.write(html)
 
-    def clean_log(self, l):
+    def clean_log(self, l, api_url):
         """This method parses logs lines into structured data"""
+
         s = l.split("- - ",1)[1]
         date = s[s.find("[")+1:s.find("]")]
         method = s.split('"')[1::2][0].split()[0]
         cur_call = s.split('"')[1::2][0].split()[1].strip()
         status = sub(r"\D+", "", s.split('"',2)[2])
-        if cur_call != self.base_url+'/':
-            full_str = "<span class='group_log'><span class='status_log code_"+status+"'>"+status+"</span>"+"<span class='date_log'>"+date+"</span></span>"+"<span class='group_log'><span class='call_log'><a href='"+cur_call+"' target='_blank'>"+cur_call+"</a></span>"+"<span class='method_log'>"+method+"</span></span>"
+        if cur_call != api_url+'/':
+            full_str = "<span class='group_log'><span class='status_log code_"+status+"'>"+status+"</span>"+"<span class='date_log'>"+date+"</span><span class='method_log'>"+method+"</span></span>"+"<span class='group_log'><span class='call_log'><a href='"+cur_call+"' target='_blank'>"+cur_call+"</a></span></span>"
         else:
             full_str = ''
         return full_str
@@ -720,25 +760,38 @@ The operations that this API implements are:
         In addition, it also defines additional structure, such as the functions to be used for interpreting the
         values returned by a SPARQL query, some operations that can be used for filtering the results, and the
         HTTP methods to call for making the request to the SPARQL endpoint specified in the configuration file."""
-        self.conf = OrderedDict()
-        self.tp = None
+        self.all_conf = OrderedDict()
+        self.base_url = []
         for conf_file in conf_files:
-            self.conf_json = APIManager.process_hashformat(conf_file)
-            self.base_url = None
-            for item in self.conf_json:
-                if self.base_url is None:
-                    self.base_url = item["url"]
-                    self.website = item["base"]
-                    self.tp = item["endpoint"]
+            conf = OrderedDict()
+            tp = None
+            conf_json = APIManager.process_hashformat(conf_file)
+            base_url = None
+            for item in conf_json:
+                if base_url is None:
+                    base_url = item["url"]
+                    self.base_url.append(item["url"])
+                    website = item["base"]
+                    tp = item["endpoint"]
                     if "addon" in item:
                         addon_abspath = abspath(dirname(conf_file) + sep + item["addon"])
                         path.append(dirname(addon_abspath))
-                        self.addon = import_module(basename(addon_abspath))
-                    self.sparql_http_method = "post"
+                        addon = import_module(basename(addon_abspath))
+                    sparql_http_method = "post"
                     if "method" in item:
-                        self.sparql_http_method = item["method"].strip().lower()
+                        sparql_http_method = item["method"].strip().lower()
                 else:
-                    self.conf[APIManager.nor_api_url(item, self.base_url)] = item
+                    conf[APIManager.nor_api_url(item, base_url)] = item
+
+            self.all_conf[base_url] = {
+                "conf": conf,
+                "tp": tp,
+                "conf_json": conf_json,
+                "base_url": base_url,
+                "website": website,
+                "addon": addon,
+                "sparql_http_method": sparql_http_method
+            }
 
         self.func = {
             "str": APIManager.str,
@@ -760,6 +813,8 @@ The operations that this API implements are:
             "post": post,
             "delete": delete
         }
+
+
     # Constructor: END
 
     # Data type: START
@@ -845,16 +900,18 @@ The operations that this API implements are:
         return "%s%s" % (b, result)
 
     def best_match(self, u):
-        """This method takes an URL of an API call in input and find the API operation URL that best match
-        with the API call, if any."""
+        """This method takes an URL of an API call in input and find the API operation URL and the related
+        configuration that best match with the API call, if any."""
         #u = u.decode('UTF8') if isinstance(u, (bytes, bytearray)) else u
         cur_u = sub("\?.*$", "", u)
-        result = None
-
-        for pat in self.conf:
-            if match("^%s$" % pat, cur_u):
-                result = pat
-                break
+        result = None, None
+        for base_url in self.all_conf:
+            if u.startswith(base_url):
+                conf = self.all_conf[base_url]
+                for pat in conf["conf"]:
+                    if match("^%s$" % pat, cur_u):
+                        result = conf, pat
+                        break
         return result
 
     @staticmethod
@@ -1056,11 +1113,11 @@ The operations that this API implements are:
     # Ancillary methods: END
 
     # Processing methods: START
-    def preprocess(self, op_url, op_item):
-        """This method takes the operation URL (e.g. "/api/v1/citations/10.1108/JD-12-2013-0166") and the item of
-        the API specification defining the behaviour of that operation, and preprocesses the URL according to the
-        functions specified in the '#preprocess' field (e.g. "#preprocess lower(doi)"), which is applied to the
-        specified parameters of the URL specified as input of the function in consideration (e.g.
+    def preprocess(self, par_dict, op_item, addon):
+        """This method takes the a dictionary of parameters with the current typed values associated to them and
+        the item of the API specification defining the behaviour of that operation, and preprocesses the parameters
+        according to the functions specified in the '#preprocess' field (e.g. "#preprocess lower(doi)"), which is
+        applied to the specified parameters as input of the function in consideration (e.g.
         "/api/v1/citations/10.1108/jd-12-2013-0166", converting the DOI in lowercase).
 
         It is possible to run multiple functions sequentially by concatenating them with "-->" in the API
@@ -1068,8 +1125,8 @@ The operations that this API implements are:
         of the function f_i+1.
 
         Finally, it is worth mentioning that all the functions specified in the "#preprocess" field must return
-        a tuple of strings defining how the particular value indicated by the URL parameter must be changed."""
-        result = op_url
+        a tuple of values defining how the particular value passed in the dictionary must be changed."""
+        result = par_dict
 
         if "preprocess" in op_item:
 
@@ -1077,33 +1134,22 @@ The operations that this API implements are:
                 match_url = op_item["url"]
                 func_name = sub("^([^\(\)]+)\(.+$", "\\1", pre).strip()
                 params_name = sub("^.+\(([^\(\)]+)\).*", "\\1", pre).split(",")
-                param_list = []
-                for param_name in params_name:
-                    if param_name in op_item:
-                        reg_ex = sub("^[^\(]+\((.+)\)", "\\1", op_item[param_name])
-                    else:
-                        reg_ex = ".+"
 
-                    match_url = match_url.replace("{%s}" % param_name, "(%s)" % reg_ex)
-                # Get only the groups that are not overlapping with others
                 param_list = ()
-                search_groups = search(match_url, result)
-                for i in range(1, len(search_groups.groups()) + 1):
-                    i_span = search_groups.span(i)
-                    if i_span != (-1, -1) and all(not APIManager.do_overlap(i_span, p) for p in param_list):
-                        param_list += (search_groups.group(i), )
+                for param_name in params_name:
+                    param_list += (result[param_name],)
 
                 # run function
-                func = getattr(self.addon, func_name)
+                func = getattr(addon, func_name)
                 res = func(*param_list)
 
-                # substitute res to the part considered in the url
-                for idx in range(len(param_list)):
-                    result = result.replace(param_list[idx], res[idx])
+                # substitute res to the current parameter in result
+                for idx in range(len(res)):
+                    result[params_name[idx]] = res[idx]
 
         return result
 
-    def postprocess(self, res, op_item):
+    def postprocess(self, res, op_item, addon):
         """This method takes the result table returned by running the SPARQL query in an API operation (specified
         as input) and change some of such results according to the functions specified in the '#postprocess'
         field (e.g. "#postprocess remove_date("2018")"). These functions can take parameters as input, while the first
@@ -1133,7 +1179,7 @@ The operations that this API implements are:
                 else:
                     params_values = next(reader(param_str.splitlines(), skipinitialspace=True))
 
-                func = getattr(self.addon, func_name)
+                func = getattr(addon, func_name)
                 func_params = (result,) + tuple(params_values)
                 result, do_type_fields = func(*func_params)
                 if do_type_fields:
@@ -1283,32 +1329,36 @@ The operations that this API implements are:
         url_parsed = urlsplit(op_complete_url)
         op_url = url_parsed.path
 
-        op = self.best_match(op_url)
+        conf, op = self.best_match(op_url)
         if op is not None:
-            i = self.conf[op]
+            i = conf["conf"][op]
             m = i["method"].split()
             if str_method in m:
                 try:
-                    op_url = self.preprocess(op_url, i)
-                    query = i["sparql"]
-                    par = findall("{([^{}]+)}", i["url"])
+                    par_dict = {}
                     par_man = match(op, op_url).groups()
-                    for idx in range(len(par)):
+                    for idx, par in enumerate(findall("{([^{}]+)}", i["url"])):
                         try:
-                            par_type = i[par[idx]].split("(")[0]
+                            par_type = i[par].split("(")[0]
                             if par_type == "str":
                                 par_value = par_man[idx]
                             else:
                                 par_value = self.func[par_type](par_man[idx])
                         except KeyError:
                             par_value = par_man[idx]
-                        query = query.replace("[[%s]]" % par[idx], str(par_value))
+                        par_dict[par] = par_value
 
-                    if self.sparql_http_method == "get":
-                        r = get(self.tp + "?query=" + quote(query), headers={"Accept": "text/csv"})
+                    self.preprocess(par_dict, i, conf["addon"])
+
+                    query = i["sparql"]
+                    for param in par_dict:
+                        query = query.replace("[[%s]]" % param, str(par_dict[param]))
+
+                    if conf["sparql_http_method"] == "get":
+                        r = get(conf["tp"] + "?query=" + quote(query), headers={"Accept": "text/csv"})
                     else:
-                        r = post(self.tp, data=query, headers={"Accept": "text/csv",
-                                                               "Content-Type": "application/sparql-query"})
+                        r = post(conf["tp"], data=query, headers={"Accept": "text/csv",
+                                                                  "Content-Type": "application/sparql-query"})
                     r.encoding = "utf-8"
                     sc = r.status_code
                     if sc == 200:
@@ -1316,7 +1366,7 @@ The operations that this API implements are:
                         # presence of strange characters (non-UTF8).
                         list_of_lines = [line.decode("utf-8") for line in r.text.encode("utf-8").splitlines()]
                         res = self.type_fields(list(reader(list_of_lines)), i)
-                        res = self.postprocess(res, i)
+                        res = self.postprocess(res, i, conf["addon"])
                         q_string = parse_qs(quote(url_parsed.query, safe="&="))
                         res = self.handling_params(q_string, res)
                         res = self.remove_types(res)
@@ -1355,8 +1405,8 @@ if __name__ == "__main__":
                                                          "Restful API interface, according to a particular "
                                                          "specification document, to interact with a SPARQL endpoint.")
 
-    arg_parser.add_argument("-s", "--spec", dest="spec", required=True,
-                            help="The file in hashformat containing the specification of the API.")
+    arg_parser.add_argument("-s", "--spec", dest="spec", required=True, nargs='+',
+                            help="The file(s) in hash format containing the specification of the API(s).")
     arg_parser.add_argument("-m", "--method", dest="method", default="get",
                             help="The method to use to make a request to the API.")
     arg_parser.add_argument("-c", "--call", dest="call",
@@ -1374,7 +1424,7 @@ if __name__ == "__main__":
                             help="The path of a .css file for styling the API documentation (to be specified either with '-w' or with '-d' and '-o' arguments).")
 
     args = arg_parser.parse_args()
-    am = APIManager([args.spec])
+    am = APIManager(args.spec)
     css_path = args.css if args.css else None
 
     if args.webserver:
@@ -1389,7 +1439,7 @@ if __name__ == "__main__":
             # web server
             host_name = args.webserver.rsplit(':', 1)[0] if ':' in args.webserver else '127.0.0.1'
             port = args.webserver.rsplit(':', 1)[1] if ':' in args.webserver else '8080'
-            api_url = am.conf_json[0]['url']
+
             app = Flask(__name__)
 
             # This is due to Flask routing rules that do not accept URLs without the starting slash
@@ -1397,47 +1447,54 @@ if __name__ == "__main__":
             if args.call:
                 args.call = args.call[1:]
 
+            # routing
             @app.route('/')
             def home():
                 index = am.get_htmlindex(css_path)
                 return index
 
-            @app.route(api_url)
-            @app.route(api_url+'/')
-            def doc():
-                status, res = am.get_htmldoc(css_path)[0] , am.get_htmldoc(css_path)[1]
-                return res , status
-
-            @app.route(api_url+'/<path:call>')
-            def ramose(call):
-                cur_call = api_url+'/'+call # put back that slash -- does not include parameters
-                format = request.args.get('format')
-                content_type = "text/csv" if format is not None and "csv" in format else "application/json"
-                status, res, c_type = am.exec_op(cur_call+'?'+unquote(request.query_string.decode('utf8')), content_type=content_type)
-                print(status, res, c_type)
-                if status == 200:
-                    response = make_response(res, status)
-                    response.headers.set('Content-Type', c_type)
-                else:
-                    # The API Manager returns a text/plain message when there is an error.
-                    # Now set to return the header requested by the user
-                    if content_type == "text/csv":
-                        si = StringIO()
-                        cw = writer(si)
-                        cw.writerows([["error","message"], [str(status),str(res)]])
-                        response = make_response(si.getvalue(), status)
-                        response.headers.set("Content-Disposition", "attachment", filename="error.csv")
+            @app.route('/<path:api_url>')
+            @app.route('/<path:api_url>/')
+            def doc(api_url):
+                """ APIs documentation page and operations """
+                res , status = am.get_htmlindex(css_path), 404
+                if any(api_u in '/'+api_url for api_u,api_dict in am.all_conf.items()):
+                    # documentation
+                    if any(api_u == '/'+api_url for api_u,api_dict in am.all_conf.items()):
+                        status, res = am.get_htmldoc(css_path, api_url)
+                        return res , status
+                    # api calls
                     else:
-                        m_res , m_res["error"] , m_res["message"] = {} , status, res
-                        mes = dumps(m_res)
-                        response = make_response(mes, status)
-                    response.headers.set('Content-Type', content_type) # overwrite text/plain
+                        cur_call = '/'+api_url
+                        format = request.args.get('format')
+                        content_type = "text/csv" if format is not None and "csv" in format else "application/json"
+                        status, res, c_type = am.exec_op(cur_call+'?'+unquote(request.query_string.decode('utf8')), content_type=content_type)
+                        print(status, res, c_type)
+                        if status == 200:
+                            response = make_response(res, status)
+                            response.headers.set('Content-Type', c_type)
+                        else:
+                            # The API Manager returns a text/plain message when there is an error.
+                            # Now set to return the header requested by the user
+                            if content_type == "text/csv":
+                                si = StringIO()
+                                cw = writer(si)
+                                cw.writerows([["error","message"], [str(status),str(res)]])
+                                response = make_response(si.getvalue(), status)
+                                response.headers.set("Content-Disposition", "attachment", filename="error.csv")
+                            else:
+                                m_res , m_res["error"] , m_res["message"] = {} , status, res
+                                mes = dumps(m_res)
+                                response = make_response(mes, status)
+                            response.headers.set('Content-Type', content_type) # overwrite text/plain
 
-                # allow CORS anyway
-                response.headers.set('Access-Control-Allow-Origin', '*')
-                response.headers.set('Access-Control-Allow-Credentials', 'true')
+                            # allow CORS anyway
+                        response.headers.set('Access-Control-Allow-Origin', '*')
+                        response.headers.set('Access-Control-Allow-Credentials', 'true')
 
-                return response
+                        return response
+                else:
+                    return res , status
 
             app.run(host=str(host_name), debug=True, port=str(port))
 
@@ -1451,7 +1508,6 @@ if __name__ == "__main__":
         if args.doc:
             res = am.get_htmldoc(css_path)
         else:
-            print(args.call)
             res = am.exec_op(args.call, args.method, args.format)
 
         if args.output is None:

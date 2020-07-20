@@ -34,12 +34,13 @@ be_tag = 'ref'
 front_tag = 'front'
 back_tag = 'back'
 
-parent_elements_names = [notes_tag, section_tag, caption_tag, title_tag, table_tag, footnote_tag, paragraph_tag, 'tr','td','th','bold','italic','attrib','underline']
+parent_elements_names = [notes_tag, section_tag, caption_tag, title_tag, table_tag, tablewrap_tag, footnote_tag, paragraph_tag, 'tr','td','th','bold','italic','attrib','underline']
 
 # mapping to OCDM (graphlib) bibliographic entities
 elem_mapping = [(caption_tag,GraphEntity.caption),\
 				(paragraph_tag,GraphEntity.paragraph),\
 				(table_tag,GraphEntity.table),\
+				(tablewrap_tag,GraphEntity.table),\
 				(footnote_tag,GraphEntity.footnote),\
 				(notes_tag,GraphEntity.footnote),\
 				(title_tag,GraphEntity.section_title),\

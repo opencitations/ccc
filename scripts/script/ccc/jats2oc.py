@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Copyright (c) 2016, MArilena Daquino <marilena.daquino2@unibo.it>
+# Copyright (c) 2020, Marilena Daquino <marilena.daquino2@unibo.it>
 #
 # Permission to use, copy, modify, and/or distribute this software for any purpose
 # with or without fee is hereby granted, provided that the above copyright notice
@@ -29,6 +29,7 @@ from script.ocdm.conf import context_path as context_path
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
+import copy
 
 class Jats2OC(object):
 
@@ -224,8 +225,9 @@ class Jats2OC(object):
 		return elem_dict
 
 	@staticmethod
-	def mapping_sentences(root, et):
+	def mapping_sentences(original_root, et):
 		""" parse the xml and return a dictionary of sentences, including sequence num, text, and xpath """
+		root = copy.deepcopy(root)
 		sentences_seq = []
 		with open(conf.abbreviations_list_path, 'r') as f:
 			abbreviations_list = [line.strip() for line in f.readlines() if not len(line) == 0]

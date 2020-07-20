@@ -970,9 +970,10 @@ SELECT DISTINCT ?citing_doi ?cited_doi ?oci ?intext_reference ?section_number ?s
 
 LIMIT 10000
 
-#url /in-sentence/{sentence_and_doi}
+#url /in-sentence/{sentence}/{doi}
 #type operation
-#sentence_and_doi str([0-9]+\/10\..+)
+#sentence str([0-9]+)
+#doi str(10\..+)
 #method get
 #description This operation retrieves all the in-text references that appear in the specified sentence of the bibliographic resource identified by DOI.
 
@@ -1039,9 +1040,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?citing_doi ?cited_doi ?oci ?intext_reference ?section_number ?section_title ?paragraph_number ?source (IF(bound(?list), "yes", "no") as ?in_list) ?xpath_intext_reference ?xpath_container  {
   hint:Query hint:optimizer "Runtime".
-  BIND(STRBEFORE(str("[[sentence_and_doi]]"), "/10.") AS ?sentence_number) .
-  BIND(LCASE( CONCAT(str("10."), STRAFTER(str("[[sentence_and_doi]]"), "/10.")) ) AS ?citing_doi)
-
+  #BIND(STRBEFORE(str("[[sentence_and_doi]]"), "/10.") AS ?sentence_number) .
+  #BIND(LCASE( CONCAT(str("10."), STRAFTER(str("[[sentence_and_doi]]"), "/10.")) ) AS ?citing_doi)
+  BIND("[[sentence]]" AS ?sentence_number) .
+  BIND("[[doi]]" AS ?citing_doi) .
   ?citing_doi_iri literal:hasLiteralValue ?citing_doi ;
                 datacite:usesIdentifierScheme datacite:doi ;
                 ^datacite:hasIdentifier ?citing_article .
@@ -1109,9 +1111,10 @@ SELECT DISTINCT ?citing_doi ?cited_doi ?oci ?intext_reference ?section_number ?s
 
 LIMIT 10000
 
-#url /in-paragraph/{paragraph_and_doi}
+#url /in-paragraph/{paragraph}/{doi}
 #type operation
-#paragraph_and_doi str([0-9]+\/10\..+)
+#paragraph str([0-9]+)
+#doi str(10\..+)
 #method get
 #description This operation retrieves all the in-text references that appear in the specified paragraph of the bibliographic resource identified by DOI.
 
@@ -1391,8 +1394,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?citing_doi ?cited_doi ?oci ?intext_reference ?section_number ?section_title ?source (IF(bound(?list), "yes", "no") as ?in_list) ?xpath_intext_reference ?xpath_container  {
   hint:Query hint:optimizer "Runtime".
-  BIND(LCASE( CONCAT(str("10."), STRAFTER(str("[[paragraph_and_doi]]"), "/10.")) ) AS ?citing_doi)
-  BIND(STRBEFORE(str("[[paragraph_and_doi]]"), "/10.") AS ?paragraph_number) .
+  #BIND(LCASE( CONCAT(str("10."), STRAFTER(str("[[paragraph_and_doi]]"), "/10.")) ) AS ?citing_doi)
+  #BIND(STRBEFORE(str("[[paragraph_and_doi]]"), "/10.") AS ?paragraph_number) .
+  BIND("[[paragraph]]" AS ?paragraph_number) .
+  BIND("[[doi]]" AS ?citing_doi) .
   ?citing_doi_iri literal:hasLiteralValue ?citing_doi ;
                 datacite:usesIdentifierScheme datacite:doi ;
                 ^datacite:hasIdentifier ?citing_article .
@@ -1456,9 +1461,10 @@ SELECT DISTINCT ?citing_doi ?cited_doi ?oci ?intext_reference ?section_number ?s
 
 LIMIT 10000
 
-#url /in-section/{section_and_doi}
+#url /in-section/{section}/{doi}
 #type operation
-#section_and_doi str([0-9]+\/10\..+)
+#section str([0-9]+)
+#doi str(10\..+)
 #method get
 #description This operation retrieves all the in-text references that appear in the specified section of the bibliographic resource identified by DOI.
 
@@ -2121,8 +2127,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?citing_doi ?cited_doi ?oci ?intext_reference ?section_number ?section_title ?source (IF(bound(?list), "yes", "no") as ?in_list) ?xpath_intext_reference ?xpath_container  {
   hint:Query hint:optimizer "Runtime".
-  BIND(LCASE( CONCAT(str("10."), STRAFTER(str("[[section_and_doi]]"), "/10.")) ) AS ?citing_doi)
-  BIND(STRBEFORE(str("[[section_and_doi]]"), "/10.") AS ?section_number) .
+  #BIND(LCASE( CONCAT(str("10."), STRAFTER(str("[[section_and_doi]]"), "/10.")) ) AS ?citing_doi)
+  #BIND(STRBEFORE(str("[[section_and_doi]]"), "/10.") AS ?section_number) .
+  BIND("[[section]]" AS ?section_number) .
+  BIND("[[doi]]" AS ?citing_doi) .
   ?citing_doi_iri literal:hasLiteralValue ?citing_doi ;
                 datacite:usesIdentifierScheme datacite:doi ;
                 ^datacite:hasIdentifier ?citing_article .

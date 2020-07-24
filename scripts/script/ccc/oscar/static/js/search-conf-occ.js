@@ -327,6 +327,7 @@ var search_conf = {
               [[RULE]]
                ?iri rdf:type ?type .
                OPTIONAL {?iri dcterms:title ?title . }
+               BIND(COALESCE(?title, "No title available") as ?title).
                OPTIONAL {?iri fabio:hasSubtitle ?subtitle .}
                OPTIONAL {?iri prism:publicationDate ?year .}
                OPTIONAL {
@@ -421,7 +422,7 @@ var search_conf = {
       "name": "intext_ref",
       "label": "",
       "macro_query": [
-        `SELECT DISTINCT ?my_iri ?rp_iri ?short_iri ?short_iri_id ?browser_iri ?short_type ?title ?intrepid ?be_text ?br_iri
+        `SELECT DISTINCT ?my_iri ?rp_iri ?short_iri ?short_iri_id ?browser_iri ?short_type ?title ?intrepid ?be_brw_iri ?be_text ?br_iri
         WHERE{
             [[RULE]]
              ?rp_iri rdf:type ?type ; datacite:hasIdentifier [
@@ -436,6 +437,7 @@ var search_conf = {
              BIND(REPLACE(STR(?rp_iri), 'https://w3id.org/oc/ccc/', '', 'i') as ?short_iri) .
              BIND(REPLACE(STR(?rp_iri), 'https://w3id.org/oc/ccc/rp/', '', 'i') as ?short_iri_id) .
              BIND(REPLACE(STR(?rp_iri), '/ccc/', '/browser/ccc/', 'i') as ?browser_iri) .
+             BIND(REPLACE(STR(?be), '/ccc/', '/browser/ccc/', 'i') as ?be_brw_iri) .
              # BIND(REPLACE(STR(?type), 'http://purl.org/spar/c4o/', '', 'i') as ?short_type) .
              BIND("In-text reference pointer" as ?short_type) .
            }`
@@ -445,7 +447,7 @@ var search_conf = {
         {"value":"intrepid", "title": "InTRePID","column_width":"30%","type": "text", "sort":{"value": "intrepid", "type":"text"}},
         {"value":"title", "title": "Title","column_width":"30%","type": "text", "sort":{"value": "title", "type":"text"}, "link":{"field":"browser_iri","prefix":""}},
         // {"value":"author", "label":{"field":"author_lbl"}, "title": "Authors", "column_width":"30%","type": "text", "sort":{"value": "author", "type":"text"}, "filter":{"type_sort": "text", "min": 10000, "sort": "label", "order": "asc"}, "link":{"field":"author_browser_iri","prefix":""}},
-        {"value":"be_text", "title": "Bib. Reference", "column_width":"30%","type": "text", "sort":{"value": "be_text", "type":"text"}, "link":{"field":"br_iri","prefix":""}},
+        {"value":"be_text", "title": "Bib. Reference", "column_width":"30%","type": "text", "sort":{"value": "be_text", "type":"text"}, "link":{"field":"be_brw_iri","prefix":""}},
         // {"value":"journal_data", "title": "Journal data", "column_width":"30%","type": "text"},
         // {"value":"year", "title": "Year", "column_width":"30%","type": "int", "filter":{"type_sort": "int", "min": 10000, "sort": "value", "order": "desc"}, "sort":{"value": "year", "type":"int"} },
         // {"value":"in_cits", "title": "Cited by", "column_width":"30%","type": "int", "sort":{"value": "in_cits", "type":"int"}},

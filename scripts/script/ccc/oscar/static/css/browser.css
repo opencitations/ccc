@@ -174,6 +174,10 @@ body.lucinda-cover{
   color:#293439;
 }
 
+.header-be::before {
+  content: "Bibliographic reference: "
+}
+
 .metrics-title{
   font-size: 145%;
 }
@@ -344,6 +348,8 @@ a:hover { color: var(--main-bg-color); text-decoration: none;}
 
 .info_box a:not(:empty)::before {font-size: 0.8em; display: block; padding-bottom: 5px; color: #77909c !important;}
 .info_box a:not(:empty)::before:hover {color: #77909c !important; }
+.in_list a:not(:empty)::before {content: "IN LIST "; }
+.in_sentence a:not(:empty)::before {content: "IN SENTENCE "; }
 .in_article a:not(:empty)::before {content: "IN ARTICLE "; }
 .in_section a:not(:empty)::before {content: "IN SECTION "; }
 .in_paragraph a:not(:empty)::before {content: "IN PARAGRAPH "; }
@@ -356,7 +362,6 @@ a:hover { color: var(--main-bg-color); text-decoration: none;}
   background-color: white !important;
   padding: 20px;
   border-radius: 5px;
-  max-width: 250px;
   margin-right: 20px;
   white-space: nowrap;
   -webkit-line-clamp: 4 !important;

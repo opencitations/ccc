@@ -1657,9 +1657,9 @@ class Jats2OC(object):
 		if len(cur_de) == 0: # new de
 			de_res = graph.add_de(resp_agent, source_provider, source)
 			de_resources.append((xpath_string, de_res))
-			if 'substring(string(' in xpath_string and conf.table_tag in xpath_string: # sentence or text chunk
+			if 'substring(string(' in xpath_string and conf.tablewrap_tag in xpath_string: # sentence or text chunk
 				de_res.create_text_chunk()
-			elif 'substring(string(' in xpath_string and conf.table_tag not in xpath_string:
+			elif 'substring(string(' in xpath_string and conf.tablewrap_tag not in xpath_string:
 				de_res.create_sentence()
 				if context_sequence["type"] == "Sentence" and isinstance(context_sequence["num"], int):
 					de_res.create_number(str(context_sequence["num"]))

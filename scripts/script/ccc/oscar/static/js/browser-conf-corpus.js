@@ -104,6 +104,7 @@ var browser_conf = {
               //{"fields": ["FREE-TEXT", "EXT_DATA"], "values": ["Publisher: ", "crossref4doi.message.publisher"]},
               ],
             "metrics": [
+              {"fields": ["FREE-TEXT"], "values": ["Metrics"], "classes": ["metrics-title"]},
               {"fields": ["in_cits"], "classes": ["cited"]},
               {"fields": ["out_cits"], "classes": ["refs"]}
             ],
@@ -213,6 +214,7 @@ var browser_conf = {
 
             ],
             "metrics": [
+                {"fields": ["FREE-TEXT"], "values": ["Metrics"], "classes": ["metrics-title"]},
                 {"fields": ["num_docs"], "classes": ["num_docs"]},
                 //{"fields": ["FREE-TEXT","in_cits_tot","FREE-TEXT"], "values": ["Cited ",null," number of times"], "classes": ["metric-entry","imp-value","metric-entry"]},
                 {"fields": ["in_cits_docs"], "classes": ["cited"]}
@@ -407,8 +409,8 @@ var browser_conf = {
                 {"fields": ["title"], "classes":["header-title"]},
                 {"classes":["20px"]},
                 {"classes":["1px"]},
-                {"fields": ["citing_title"], "classes":["info_box citing_article"]},
-                {"fields": ["cited_title"], "classes":["info_box cited_article"]}
+                {"fields": ["FREE-TEXT","citing_title"],"values":["CITING ", null], "classes":["citing_article"]},
+                {"fields": ["FREE-TEXT","cited_title"], "values":["CITED ", null], "classes":["cited_article"]}
             ],
             "details": [
               // {"fields": ["journal"], "classes":["journal-data"]},
@@ -441,7 +443,7 @@ var browser_conf = {
     "discourse_element": {
       "rule": "de\/.*",
       "query": [`
-          SELECT ?my_iri ?short_iri ?s_type ?seq_number ?title ?citing_br_iri ?short_citing_iri ?article_title ?parent_iri ?parent_title ?paragraph_iri ?paragraph_num ?source_xml ?source_xml_iri (COUNT(distinct ?rp) AS ?intext_refs)
+          SELECT ?my_iri ?short_iri ?s_type ?seq_number ?title ?citing_br_iri ?short_citing_iri ?article_title ?table_br_iri ?table_num ?parent_iri ?parent_title ?paragraph_iri ?paragraph_num ?source_xml ?source_xml_iri (COUNT(distinct ?rp) AS ?intext_refs)
           WHERE {
             BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?my_iri) .
             BIND('[[VAR]]' as ?short_iri) .
@@ -469,6 +471,11 @@ var browser_conf = {
               datacite:usesIdentifierScheme datacite:pmid ;
               literal:hasLiteralValue ?id_pmid ] .
             OPTIONAL {?citing_br_iri dcterms:title ?article_title .}
+            OPTIONAL {?my_iri ^frbr:part+ ?table_iri .
+              ?table_iri a doco:Table ; fabio:hasSequenceIdentifier ?table_num .
+              BIND(REPLACE(STR(?table_iri), 'https://w3id.org/oc/ccc/', '', 'i') as ?table_br_iri) .
+
+            }
             OPTIONAL {?my_iri ^frbr:part+ ?parent_iri .
               ?parent_iri a doco:Section ; dcterms:title ?parent_title .
             }
@@ -481,18 +488,19 @@ var browser_conf = {
             BIND(REPLACE(STR(?citing_br_iri), 'https://w3id.org/oc/ccc/', '', 'i') as ?short_citing_iri) .
             BIND(?id_pmid AS ?source_xml).
             BIND(CONCAT("https://www.ebi.ac.uk/europepmc/webservices/rest/", STR(?id_pmid), "/fullTextXML") as ?source_xml_iri) .
-          } GROUP BY ?my_iri ?short_iri ?s_type ?seq_number ?title ?citing_br_iri ?short_citing_iri ?article_title ?parent_iri ?parent_title ?paragraph_iri ?paragraph_num ?source_xml ?source_xml_iri
+          } GROUP BY ?my_iri ?short_iri ?s_type ?seq_number ?title ?citing_br_iri ?short_citing_iri ?article_title ?table_br_iri ?table_num ?parent_iri ?parent_title ?paragraph_iri ?paragraph_num ?source_xml ?source_xml_iri
         `],
       "links": {
         "source_xml": {"field":"source_xml_iri","prefix":""},
         "article_title": {"field":"citing_br_iri","prefix":""},
         "parent_title": {"field":"parent_iri","prefix":""},
-        "paragraph_num": {"field":"paragraph_iri","prefix":""}
+        "paragraph_num": {"field":"paragraph_iri","prefix":""},
+        "table_num": {"field":"table_br_iri","prefix":""}
       },
       "group_by": {
         "keys":["title"], "concats":["short_iri","s_type"]
       },
-      "none_values": {"source_xml": "", "seq_number": "unknown", "parent_iri":"","parent_title":"","paragraph_num":""},
+      "none_values": {"source_xml": "", "seq_number": "unknown", "parent_iri":"","parent_title":"","paragraph_num":"", "table_br_iri":"", "table_num":""},
       "text_mapping": {
           "s_type":[
               {"regex": /([a-z])([A-Z])/g, "value":"$1 $2"}
@@ -518,6 +526,7 @@ var browser_conf = {
             {"fields": ["title"], "classes":["header-title"]},
             {"classes":["20px"]},
             {"classes":["1px"]},
+            {"fields": ["table_num"], "classes":["info_box in_table"]},
             {"fields": ["paragraph_num"], "classes":["info_box in_paragraph"]},
             {"fields": ["parent_title"], "classes":["info_box in_section"]},
             {"fields": ["article_title"], "classes":["info_box in_article"]}
@@ -529,6 +538,7 @@ var browser_conf = {
           //{"fields": ["FREE-TEXT", "EXT_DATA"], "values": ["Publisher: ", "crossref4doi.message.publisher"]},
         ],
       "metrics": [
+        {"fields": ["FREE-TEXT"], "values": ["Includes"], "classes": ["metrics-title"]},
         {"fields": ["intext_refs"], "classes": ["intext_refs"]}
       ],
       "oscar_conf": {
@@ -640,9 +650,125 @@ var browser_conf = {
             {"classes":["20px"]},
             {"classes":["20px"]},
             {"fields": ["title"], "classes":["header-title"]},
-            {"classes":["20px"]},
-            {"fields": ["be_text"], "classes":["header-be"]},
             {"fields": ["pl_title"], "classes":["info_box in_list"]},
+            {"fields": ["footnote_num"], "classes":["info_box in_footnote"]},
+            {"fields": ["table_num"], "classes":["info_box in_table"]},
+            {"fields": ["caption_num"], "classes":["info_box in_caption"]},
+            {"fields": ["sentence_num"], "classes":["info_box in_sentence"]},
+            {"fields": ["paragraph_num"], "classes":["info_box in_paragraph"]},
+            {"fields": ["section_title"], "classes":["info_box in_section"]},
+            {"fields": ["be_text"], "classes":["info_box be_cited"]},
+            {"fields": ["article_title"], "classes":["info_box in_article"]}
+        ],
+        "details": [
+          // {"fields": ["journal"], "classes":["journal-data"]},
+          // {"fields": ["journal_data"], "classes":["journal-data"]},
+          // {"fields": ["year"], "classes":["journal-data-separator"] }
+          //{"fields": ["FREE-TEXT", "EXT_DATA"], "values": ["Publisher: ", "crossref4doi.message.publisher"]},
+        ],
+      "oscar_conf": {
+          "progress_loader":{
+                    "visible": false,
+                    "spinner": false,
+                    "title":"Loading the list of In-text references ..."
+                  }
+      },
+      "oscar": [
+        {
+          "query_text": "my_iri",
+          "rule": "cocited_list",
+          "label":"Co-cited in-text references",
+          "config_mod" : [
+              {"key":"page_limit_def" ,"value":30},
+              {"key":"categories.[[name,intext_ref]].fields.[[intrepid]].sort.default" ,"value":{"order": "desc"}},
+              {"key":"progress_loader.visible" ,"value":true},
+              {"key":"timeout.text" ,"value":""}
+          ]
+        }
+      ]
+      }
+    },
+    "pointer_list": {
+      "rule": "pl\/.*",
+      "query": [`
+          SELECT ?my_iri ?short_iri ?s_type ?source_xml ?title ?be_text ?be_br_iri ?pl_title ?pl_br_iri ?sentence_num ?sent_br_iri ?table_num ?table_br_iri ?caption_num ?caption_br_iri ?footnote_num ?footnote_br_iri ?paragraph_num ?paragraph_br_iri ?section_title ?section_br_iri ?article_title ?article_br_iri
+          WHERE {
+            BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?my_iri) .
+            BIND('[[VAR]]' as ?short_iri) .
+
+            BIND("In-text Reference Pointer List" AS ?s_type).
+            OPTIONAL {?my_iri c4o:hasContent ?pl_title .}
+            ?my_iri co:element ?rp_iri .
+            OPTIONAL {?my_iri ^c4o:isContextOf ?sentence .
+              ?sentence a doco:Sentence ; fabio:hasSequenceIdentifier ?sentence_num .
+              BIND(REPLACE(STR(?sentence),'/ccc/','/browser/ccc/','i') as ?sent_br_iri).}
+
+            OPTIONAL {?my_iri ^c4o:isContextOf+/^frbr:part+ ?parent .
+                ?parent a doco:Table ; fabio:hasSequenceIdentifier ?table_num .
+                BIND(REPLACE(STR(?parent),'/ccc/','/browser/ccc/','i') as ?table_br_iri).}
+            OPTIONAL {?my_iri ^c4o:isContextOf+/^frbr:part+ ?parent .
+                ?parent a doco:Footnote ; fabio:hasSequenceIdentifier ?footnote_num .
+                BIND(REPLACE(STR(?parent),'/ccc/','/browser/ccc/','i') as ?footnote_br_iri).}
+            OPTIONAL {?my_iri ^c4o:isContextOf+/^frbr:part+ ?parent .
+                ?parent a deo:Caption ; fabio:hasSequenceIdentifier ?caption_num .
+                BIND(REPLACE(STR(?parent),'/ccc/','/browser/ccc/','i') as ?caption_br_iri).}
+            OPTIONAL {?my_iri ^c4o:isContextOf+/^frbr:part+ ?parent .
+                ?parent a doco:Paragraph ; fabio:hasSequenceIdentifier ?paragraph_num .
+                BIND(REPLACE(STR(?parent),'/ccc/','/browser/ccc/','i') as ?paragraph_br_iri).}
+
+            OPTIONAL {?my_iri ^c4o:isContextOf+/^frbr:part+ ?parent_sec .
+                ?parent_sec a doco:Section ; fabio:hasSequenceIdentifier ?section_num .
+                OPTIONAL {?parent_sec dcterms:title ?section_title .} .
+                BIND(REPLACE(STR(?parent_sec),'/ccc/','/browser/ccc/','i') as ?section_br_iri).
+                }
+
+            ?my_iri ^c4o:isContextOf+/^frbr:part+ ?article .
+                ?article a fabio:Expression ; datacite:hasIdentifier [
+              datacite:usesIdentifierScheme datacite:pmid ;
+              literal:hasLiteralValue ?id_pmid ] .
+            BIND(CONCAT("https://www.ebi.ac.uk/europepmc/webservices/rest/", STR(?id_pmid), "/fullTextXML") as ?source_xml_iri) .
+            OPTIONAL {?article dcterms:title ?article_title .}
+            BIND(COALESCE(?article_title, "No title available") AS ?article_title) .
+            BIND(REPLACE(STR(?article),'/ccc/','/browser/ccc/','i') as ?article_br_iri).
+
+            BIND(COALESCE(?pl_title, "no text available") AS ?title) .
+
+          }
+        `],
+      "links": {
+        "sentence_num": {"field":"sent_br_iri","prefix":""},
+        "footnote_num": {"field":"footnote_br_iri","prefix":""},
+        "caption_num": {"field":"caption_br_iri","prefix":""},
+        "table_num": {"field":"table_br_iri","prefix":""},
+        "paragraph_num": {"field":"paragraph_br_iri","prefix":""},
+        "section_title": {"field":"section_br_iri","prefix":""},
+        "article_title": {"field":"article_br_iri","prefix":""}
+      },
+      "none_values": {"sentence_num":"","footnote_num":"","table_num":"","caption_num":"","paragraph_num":"","section_title":"No title", "article_title":"No title available","source_xml":"Not available"},
+      "text_mapping": {
+          "s_type":[
+              {"regex": /([a-z])([A-Z])/g, "value":"$1 $2"}
+          ]
+      },
+      "contents": {
+        "extra": {
+            "browser_view_switch":{
+              "labels":["Switch to metadata view","Switch to browser view"],
+              "values":["short_iri","short_iri"],
+              "regex":["rp\/.*","\/browser\/ccc\/rp\/.*"],
+              "query":[["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"],["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"]],
+              "links":["https://w3id.org/oc/ccc/[[VAR]]","https://w3id.org/oc/browser/ccc/[[VAR]]"]
+            }
+        },
+        "header": [
+            {"classes":["20px"]},
+            {"fields": ["s_type"], "concat_style":{"s_type": "last"} , "classes":["doc-type"]},
+            {"fields": ["FREE-TEXT","short_iri"], "values":["Corpus ID: ", null] , "classes":["identifiers"]},
+            {"fields": ["source_xml"], "classes":["identifiers source_before"] },
+            {"classes":["20px"]},
+            {"classes":["20px"]},
+            {"fields": ["title"], "classes":["header-title"]},
+            {"classes":["20px"]},
             {"fields": ["footnote_num"], "classes":["info_box in_footnote"]},
             {"fields": ["table_num"], "classes":["info_box in_table"]},
             {"fields": ["caption_num"], "classes":["info_box in_caption"]},
@@ -667,7 +793,7 @@ var browser_conf = {
       "oscar": [
         {
           "query_text": "my_iri",
-          "rule": "intext_refs_list",
+          "rule": "intext_refs_list_in_pl",
           "label":"In-text references",
           "config_mod" : [
               {"key":"page_limit_def" ,"value":30},
@@ -679,16 +805,6 @@ var browser_conf = {
       ]
       }
     }
-
-    // ,
-    // "citation": {
-    //       "rule": "",
-    //       "query": [``],
-    //       "links": {},
-    //       "group_by": {},
-    //       "none_values": {},
-    //       "contents": {}
-    // }
   }
 }
 

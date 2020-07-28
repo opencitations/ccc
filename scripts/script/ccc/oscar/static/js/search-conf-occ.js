@@ -66,6 +66,30 @@ var search_conf = {
           `
     ]
   },
+  {
+    "name":"intext_refs_list_in_pl",
+    "label": "List of in-text reference pointers in a list",
+    "category": "intext_ref",
+    "regex":"(https:\/\/w3id\\.org\/oc\/ccc\/pl\/.$)",
+    "query": [` <[[VAR]]> co:element ?rp_iri.`
+    ]
+  },
+  {
+    "name":"cocited_list",
+    "label": "List of in-text reference pointers co-cited in the same element",
+    "category": "intext_ref",
+    "regex":"(https:\/\/w3id\\.org\/oc\/ccc\/rp\/.$)",
+    "query": [`
+            OPTIONAL {<[[VAR]]> ^co:element ?pl_iri .
+              ?pl_iri co:element ?rp_iri_single .}
+            OPTIONAL {
+              <[[VAR]]> ^co:isContextOf ?sent_iri .
+              ?sent_iri co:isContextOf/co:element* ?rp_iri_others .}
+            BIND(COALESCE(?rp_iri_single, ?rp_iri_others) AS ?rp_iri).
+            FILTER(str(?rp_iri) != "[[VAR]]").
+          `
+    ]
+  },
     {
       "name":"br_resource",
       "label": "Bibiographic resource Corpus ID (e.g. br/0701)",

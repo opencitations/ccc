@@ -51,6 +51,7 @@
       var groups = myRegexp.exec(String(window.location.href));
       if (groups.length > 1) {resource_iri = groups[1];}
       browser.do_sparql_query(resource_iri);
+      // popup
       // CCC call EPMC
       $(document).on("click", "td[field='mentions']>a", function(event) {
           event.preventDefault();

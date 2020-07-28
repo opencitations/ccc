@@ -103,7 +103,7 @@
   color: black;
 }
 
-.ccc_cover ..results-tab {
+.ccc_cover .results-tab {
   border-radius: 20px;
   box-shadow: 0px 10px 30px 3px rgba(133,66,189,0.1);
 }
@@ -159,6 +159,7 @@ td[field='orcid'], td[field='num_docs'], td[field='citations'],
 td[field='year'], td[field='in_cits'], td[field='mentions'] {margin-right: -30px !important; font-family: 'Karla',Helvetica,Arial,sans-serif; color: #505050;}
 td[field='journal_data']:not(:empty) {margin-left: 6px !important;}
 /* main title */
+
 .results-tab tbody tr:nth-of-type(1) { display: none !important; }
 .results-tab tbody tr {border-top: 1px solid #ddd !important; padding-bottom: 1em;}
 .results-tab tbody tr:nth-child(2) { border-top: none !important; }
@@ -687,6 +688,7 @@ input[type=range]::-moz-range-track {
     display: table;
     width: 100%;
   }
+  
   .tab-nav-btn.next{float:right; margin-top: 10px; margin-right: 10px;}
   .tab-nav-btn.prev{float:left; margin-top: 10px; margin-left: 10px;}
 }

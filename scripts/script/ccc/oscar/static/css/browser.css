@@ -29,14 +29,15 @@ body.lucinda-cover{
   height:auto; overflow:auto
 }
 #browser_info{
-  min-height: 200px;
+  min-height: 250px;
+  max-width: 90%;
   float:left;
   display: inline-block;
-  max-width: 70%;
   margin-top: 20px;
   color: #77909c;
   padding: 30px;
 }
+
 
 #browser_header{
   /* border-color: #f2f2f2;
@@ -122,35 +123,39 @@ body.lucinda-cover{
   color: #9931FC;
   font-size: 100%;
 }
-
+#browser {display: inline-flex;}
+/* metrics box */
 .browser-metrics{
-  /* background-color: rgba(243, 230, 255,0.17); */
-  display:inline;
+  background-image: url('../img/metrics.png');
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  display:inline-table;
   float:right;
-  width: 20%;
-  min-height: 200px;
+  position: absolute;
+  right: 10px;
+  min-height: 150px;
+  min-width: 200px;
   margin-top: 55px;
   margin-right: 30px;
-  margin-bottom: 30px;
-  padding: 30px;
+  margin-bottom: 50px;
+  padding: 25px;
   box-shadow: 0px 10px 30px 3px rgba(133,66,189,0.1);
-  color: #9931FC;
+  color: #293439;
   border-radius: 18px;
-  background-color: white;
+  background-color: #E0C1FE;
+  max-width: 200px;
   /* border-left: solid;
   border-color: #f2f2f2; */
 }
 
 .browser-metrics-tab {
   word-wrap:break-word;
+margin-top: 50px;
   width: 100%;
-  /* margin-left:20px;
-  table-layout: auto;
-  border-collapse: collapse;
-  text-align:left;
-  word-wrap:break-word;
-  border: none !important; */
 }
+
+.browser-metrics-tab tbody {margin-top: 50px;}
+
 .browser-metrics-tab tr td {
   font-size: 120%;
 }
@@ -165,8 +170,7 @@ body.lucinda-cover{
 }
 
 .metric-entry{
-  font-size: 105%;
-}
+  font-size: 105%; }
 
 .header-title{
   font-size: 190%;
@@ -180,6 +184,7 @@ body.lucinda-cover{
 
 .metrics-title{
   font-size: 145%;
+  font-weight: 700;
 }
 
 .__oscar__ {
@@ -190,7 +195,7 @@ body.lucinda-cover{
 }
 
 #oscar_nav {
-  margin-top:3%;
+  margin-top:1%;
   padding-left: 30px;
 }
 #oscar_nav li a{font-size:150%;}
@@ -234,7 +239,6 @@ body.lucinda-cover{
   --hover_color: #19334d;
 }
 
-
 /*general fix*/
 .no_selection {
     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
@@ -242,7 +246,10 @@ body.lucinda-cover{
     -khtml-user-select: none; /* webkit (konqueror) browsers */
     -ms-user-select: none; /* IE10+ */
 }
-
+@media only screen and (max-width: 900px) {
+  .browser-metrics {position: relative;}
+  .results-tab tbody tr::before {display: none !important;}
+}
 @media only screen and (max-width: 1200px) {
   #browser {
     width: 100%;
@@ -260,19 +267,11 @@ body.lucinda-cover{
     font-size: 80%;
   }
   .browser-metrics{
-    margin-top: 3%;
     display:block;
     width: 100%;
-    background-color: white;
     border-left: none;
-    border-top: solid;
-    border-color: #f2f2f2;
   }
-  .browser-metrics-tab {
-    margin-left:0px;
-    table-layout: auto;
-    border-collapse: collapse;
-  }
+
   .browser-metrics-tab tr td {
     font-size: 100%;
   }
@@ -289,6 +288,7 @@ body.lucinda-cover{
   #oscar_nav li a{
     font-size:130%;
   }
+  .results-tab tbody tr::before {display: none;}
 }
 
 
@@ -346,54 +346,156 @@ a:hover { color: var(--main-bg-color); text-decoration: none;}
 
 /*in article */
 
-.info_box a:not(:empty)::before {font-size: 0.8em; display: block; padding-bottom: 5px; color: #77909c !important;}
-.info_box a:not(:empty)::before:hover {color: #77909c !important; }
-.in_list a:not(:empty)::before {content: "IN LIST "; }
-.in_sentence a:not(:empty)::before {content: "IN SENTENCE "; }
-.in_article a:not(:empty)::before {content: "IN ARTICLE "; }
-.in_section a:not(:empty)::before {content: "IN SECTION "; }
-.in_paragraph a:not(:empty)::before {content: "IN PARAGRAPH "; }
-.in_section:has(a:empty) {display: none !important;}
 .info_box a:not(:empty) {
   text-decoration: none !important;
-  margin-top: 10px;
   display: block !important;
   display: -webkit-box;
-  background-color: white !important;
-  padding: 20px;
-  border-radius: 5px;
-  margin-right: 20px;
-  white-space: nowrap;
-  -webkit-line-clamp: 4 !important;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  box-shadow: 0px 10px 30px 3px rgba(133,66,189,0.1);
-
+  padding: 0px 20px 20px 60px;
+  border-radius: 15px;
+  font-weight: 700;
+  max-width: 100%;
+  margin: 10px 10px 0px 0px;
+  color: #293439 !important;
 }
-.citing_article a:not(:empty)::before {content: "CITING "; }
-.cited_article a:not(:empty)::before {content: "CITED ";}
-.citing_article a, .cited_article a {white-space: normal !important;}
+
+.info_box a:not(:empty):hover {
+  color: var(--main-bg-color) !important;
+}
+.in_list a:not(:empty)::before{
+  background-image: url('../img/list.png');
+}
+.in_sentence a:not(:empty)::before{
+  background-image: url('../img/sentence.png');
+}
+.in_paragraph a:not(:empty)::before{
+  background-image: url('../img/paragraph.png');
+}
+
+.in_section a:not(:empty)::before{
+  background-image: url('../img/section.png');
+}
+
+.in_article a:not(:empty)::before{
+  background-image: url('../img/citing.png');
+}
+/* .be_cited a:not(:empty) {max-width: 50%;} */
+.be_cited a:not(:empty)::before{
+  /* border-top: solid 1px #77909c; */
+  background-image: url('../img/bibentry.png');
+}
+
+.in_caption a:not(:empty)::before{
+  background-image: url('../img/caption.png');
+}
+
+.in_table a:not(:empty)::before{
+  background-image: url('../img/table.png');
+}
+
+.in_footnote a:not(:empty)::before{
+  background-image: url('../img/footnote.png');
+}
+
+.info_box a:not(:empty)::before {
+  font-size: 0.8em;
+  background-repeat: no-repeat;
+  background-position: 15px 0px center;
+  background-size: 50px 50px;
+  display: block !important;
+  padding-bottom: 5px;
+  color: #77909c !important;
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  margin-inline-start: -65px;
+  padding-inline-start: 65px;
+  margin-block-end: -30px;
+  height: 55px;
+  font-weight: 400;
+}
+.info_box a:not(:empty)::before:hover {color: #77909c !important; }
+.in_list a:not(:empty)::before {content: "IN LIST "; }
+.in_table a:not(:empty)::before {content: "IN TABLE "; }
+.in_caption a:not(:empty)::before {content: "IN CAPTION "; }
+.in_footnote a:not(:empty)::before {content: "IN FOOTNOTE "; }
+.in_sentence a:not(:empty)::before {content: "IN SENTENCE "; }
+.in_article a:not(:empty)::before {content: "IN DOCUMENT "; }
+.in_section a:not(:empty)::before {content: "IN SECTION "; }
+.in_paragraph a:not(:empty)::before {content: "IN PARAGRAPH "; }
+.be_cited a:not(empty)::before {content: "REFERENCED BIBLIOGRAPHIC ENTRY " !important; }
+.in_section:has(a:empty), .in_table:has(a:empty),
+.in_sentence:has(a:empty), .in_paragraph:has(a:empty),
+.in_caption:has(a:empty), .in_footnote:has(a:empty) {display: none !important;}
+
+/* citing and cited articles */
+.citing_article:not(:empty), .cited_article:not(:empty) {
+  vertical-align: top;
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+
+
+td>.citing_article:before ,td>.cited_article:before {
+  content: '';
+  display: inline-flex;
+  border-radius: 7.5px; */
+  background-color: var(--main-bg-color);
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+td>.cited_article:before {
+  background-image: url('../img/quote.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 50px;
+}
+
+td>.citing_article:before {
+  background-image: url('../img/citing.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 50px;
+}
+
+td>.cited_article:before {margin-left: 2px;}
+
+.citing_article ~ elem a, .cited_article ~ elem a {
+  display: block;
+  margin-block-start: -60px;
+  margin-left: 76px;
+  font-size: 1.2em;
+  padding-bottom: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #293439;
+}
+
+.citing_article ~ elem a:hover, .cited_article ~ elem a:hover {
+  color: var(--main-bg-color);
+}
 /* title */
 .browser-header-tab tbody tr:nth-of-type(7) {display: block !important; }
+
 /* authors */
 /* .browser-header-tab tbody tr:nth-of-type(10) {padding-top: 1px;} authors */
 /* year */
 .journal-data-separator:not(:empty)::before {content: ". ";}
 
 .cited, .refs, .num_docs, .intext_refs {
-  font-size:170%;
+  font-size:80%;
 }
 
 .cited::before, .refs::before ,.num_docs::before, .intext_refs::before {
   color: #77909c; display: block;
-  font-size: 60%;
 }
 /* box citations */
-.cited::before {content: "CITATIONS "; }
-.refs::before {content: "REFERENCES "; }
-.num_docs::before {content: "DOCUMENTS "; }
-.intext_refs::before {content: "IN-TEXT REFERENCES";}
+.cited::after {content: " citations "; }
+.refs::after {content: " references "; }
+.num_docs::after {content: " documents "; }
+.intext_refs::after {content: " in-text references";}
 
 /*   */
 
@@ -407,7 +509,19 @@ a:hover { color: var(--main-bg-color); text-decoration: none;}
 }
 
 .doc-type a {color:white !important;}
-
+.results-tab tbody tr {padding-left: 50px;}
+.results-tab tbody tr::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 7.5px;
+  left:110px;
+  background-color: var(--main-bg-color);
+  vertical-align: bottom;
+  margin-top: 25px;
+}
 .no_results * {display: inline-block;}
 .no_results { margin-top: 4%; text-align: center; font-family: 'Karla', sans-serif;}
 .no_results img {height: 150px; width: auto; }

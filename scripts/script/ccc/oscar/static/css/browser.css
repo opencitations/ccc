@@ -30,12 +30,12 @@ body.lucinda-cover{
 }
 #browser_info{
   min-height: 250px;
-  max-width: 90%;
   float:left;
   display: inline-block;
   margin-top: 20px;
   color: #77909c;
   padding: 30px;
+  margin-right: 200px;
 }
 
 
@@ -248,6 +248,7 @@ margin-top: 50px;
 }
 @media only screen and (max-width: 900px) {
   .browser-metrics {position: relative;}
+  #browser_info {margin-right: 0px !important;}
   .results-tab tbody tr::before {display: none !important;}
 }
 @media only screen and (max-width: 1200px) {
@@ -378,6 +379,10 @@ a:hover { color: var(--main-bg-color); text-decoration: none;}
 .in_article a:not(:empty)::before{
   background-image: url('../img/citing.png');
 }
+
+.ref_article a:not(:empty)::before{
+  background-image: url('../img/quote.png');
+}
 /* .be_cited a:not(:empty) {max-width: 50%;} */
 .be_cited a:not(:empty)::before{
   /* border-top: solid 1px #77909c; */
@@ -420,6 +425,7 @@ a:hover { color: var(--main-bg-color); text-decoration: none;}
 .in_footnote a:not(:empty)::before {content: "IN FOOTNOTE "; }
 .in_sentence a:not(:empty)::before {content: "IN SENTENCE "; }
 .in_article a:not(:empty)::before {content: "IN DOCUMENT "; }
+.ref_article a:not(:empty)::before {content: "REFERENCES DOCUMENT "; }
 .in_section a:not(:empty)::before {content: "IN SECTION "; }
 .in_paragraph a:not(:empty)::before {content: "IN PARAGRAPH "; }
 .be_cited a:not(empty)::before {content: "REFERENCED BIBLIOGRAPHIC ENTRY " !important; }
@@ -509,6 +515,8 @@ td>.cited_article:before {margin-left: 2px;}
 }
 
 .doc-type a {color:white !important;}
+
+/* table results oscar */
 .results-tab tbody tr {padding-left: 50px;}
 .results-tab tbody tr::before {
   content: '';
@@ -522,6 +530,23 @@ td>.cited_article:before {margin-left: 2px;}
   vertical-align: bottom;
   margin-top: 25px;
 }
+
+.result-type-document tbody tr::before, .result-type-document_intext tbody tr::before {
+  background-image: url('../img/article.png');
+  background-repeat: no-repeat;
+  background-position: 15px 0px center;
+  background-size: 70px 70px;
+  background-color: transparent !important;
+}
+
+.result-type-intext_ref tbody tr::before {
+  background-image: url('../img/intext_ref.png');
+  background-repeat: no-repeat;
+  background-position: 15px 0px center;
+  background-size: 70px 70px;
+  background-color: transparent !important;
+}
+
 .no_results * {display: inline-block;}
 .no_results { margin-top: 4%; text-align: center; font-family: 'Karla', sans-serif;}
 .no_results img {height: 150px; width: auto; }

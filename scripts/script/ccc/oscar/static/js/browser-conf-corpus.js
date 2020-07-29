@@ -409,8 +409,8 @@ var browser_conf = {
                 {"fields": ["title"], "classes":["header-title"]},
                 {"classes":["20px"]},
                 {"classes":["1px"]},
-                {"fields": ["FREE-TEXT","citing_title"],"values":["CITING ", null], "classes":["citing_article"]},
-                {"fields": ["FREE-TEXT","cited_title"], "values":["CITED ", null], "classes":["cited_article"]}
+                {"fields": ["FREE-TEXT","citing_title"],"values":["CITING DOCUMENT", null], "classes":["citing_article"]},
+                {"fields": ["FREE-TEXT","cited_title"], "values":["CITED DOCUMENT", null], "classes":["cited_article"]}
             ],
             "details": [
               // {"fields": ["journal"], "classes":["journal-data"]},
@@ -626,7 +626,7 @@ var browser_conf = {
         "section_title": {"field":"section_br_iri","prefix":""},
         "article_title": {"field":"article_br_iri","prefix":""}
       },
-      "none_values": {"sentence_num":"","footnote_num":"","table_num":"","caption_num":"","paragraph_num":"","section_title":"No title", "article_title":"No title available"},
+      "none_values": {"pl_title":"","sentence_num":"","footnote_num":"","table_num":"","caption_num":"","paragraph_num":"","section_title":"No title", "article_title":"No title available"},
       "text_mapping": {
           "s_type":[
               {"regex": /([a-z])([A-Z])/g, "value":"$1 $2"}
@@ -691,7 +691,7 @@ var browser_conf = {
     "pointer_list": {
       "rule": "pl\/.*",
       "query": [`
-          SELECT ?my_iri ?short_iri ?s_type ?source_xml ?title ?be_text ?be_br_iri ?pl_title ?pl_br_iri ?sentence_num ?sent_br_iri ?table_num ?table_br_iri ?caption_num ?caption_br_iri ?footnote_num ?footnote_br_iri ?paragraph_num ?paragraph_br_iri ?section_title ?section_br_iri ?article_title ?article_br_iri
+          SELECT ?my_iri ?short_iri ?s_type ?source_xml ?source_xml_iri ?title ?be_text ?be_br_iri ?pl_title ?pl_br_iri ?sentence_num ?sent_br_iri ?table_num ?table_br_iri ?caption_num ?caption_br_iri ?footnote_num ?footnote_br_iri ?paragraph_num ?paragraph_br_iri ?section_title ?section_br_iri ?article_title ?article_br_iri
           WHERE {
             BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?my_iri) .
             BIND('[[VAR]]' as ?short_iri) .
@@ -725,8 +725,8 @@ var browser_conf = {
             ?my_iri ^c4o:isContextOf+/^frbr:part+ ?article .
                 ?article a fabio:Expression ; datacite:hasIdentifier [
               datacite:usesIdentifierScheme datacite:pmid ;
-              literal:hasLiteralValue ?id_pmid ] .
-            BIND(CONCAT("https://www.ebi.ac.uk/europepmc/webservices/rest/", STR(?id_pmid), "/fullTextXML") as ?source_xml_iri) .
+              literal:hasLiteralValue ?source_xml ] .
+            BIND(CONCAT("https://www.ebi.ac.uk/europepmc/webservices/rest/", STR(?source_xml), "/fullTextXML") as ?source_xml_iri) .
             OPTIONAL {?article dcterms:title ?article_title .}
             BIND(COALESCE(?article_title, "No title available") AS ?article_title) .
             BIND(REPLACE(STR(?article),'/ccc/','/browser/ccc/','i') as ?article_br_iri).
@@ -736,6 +736,7 @@ var browser_conf = {
           }
         `],
       "links": {
+        "source_xml": {"field":"source_xml_iri","prefix":""},
         "sentence_num": {"field":"sent_br_iri","prefix":""},
         "footnote_num": {"field":"footnote_br_iri","prefix":""},
         "caption_num": {"field":"caption_br_iri","prefix":""},
@@ -794,6 +795,175 @@ var browser_conf = {
         {
           "query_text": "my_iri",
           "rule": "intext_refs_list_in_pl",
+          "label":"In-text references",
+          "config_mod" : [
+              {"key":"page_limit_def" ,"value":30},
+              {"key":"categories.[[name,intext_ref]].fields.[[intrepid]].sort.default" ,"value":{"order": "desc"}},
+              {"key":"progress_loader.visible" ,"value":true},
+              {"key":"timeout.text" ,"value":""}
+          ]
+        }
+      ]
+      }
+    },
+    "bib_entry": {
+      "rule": "be\/.*",
+      "query": [`
+          SELECT ?my_iri ?short_iri ?s_type ?source_xml ?source_xml_iri ?title ?pl_title ?article_title ?article_br_iri ?cited_title ?cited_br_iri
+          WHERE {
+            BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?my_iri) .
+            BIND('[[VAR]]' as ?short_iri) .
+
+            BIND("Bibliographic Entry" AS ?s_type).
+            OPTIONAL {?my_iri c4o:hasContent ?pl_title .}
+
+            ?my_iri ^frbr:part+ ?article .
+                ?article a fabio:Expression ; datacite:hasIdentifier [
+              datacite:usesIdentifierScheme datacite:pmid ;
+              literal:hasLiteralValue ?source_xml ] .
+            ?my_iri biro:references ?cited_iri .
+            OPTIONAL {?cited_iri dcterms:title ?cited_title.}
+            BIND(CONCAT("https://www.ebi.ac.uk/europepmc/webservices/rest/", STR(?source_xml), "/fullTextXML") as ?source_xml_iri) .
+            OPTIONAL {?article dcterms:title ?article_title .}
+            BIND(COALESCE(?article_title, "No title available") AS ?article_title) .
+            BIND(COALESCE(?cited_title, "No title available") AS ?cited_title) .
+            BIND(REPLACE(STR(?article),'/ccc/','/browser/ccc/','i') as ?article_br_iri).
+            BIND(REPLACE(STR(?cited_iri),'/ccc/','/browser/ccc/','i') as ?cited_br_iri).
+
+            BIND(COALESCE(?pl_title, "no text available") AS ?title) .
+
+          }
+        `],
+      "links": {
+        "article_title": {"field":"article_br_iri","prefix":""},
+        "cited_title": {"field":"cited_br_iri","prefix":""},
+        "source_xml": {"field":"source_xml_iri","prefix":""}
+      },
+      "none_values": {"article_title":"No title available","source_xml":"Not available"},
+      "text_mapping": {
+          "s_type":[
+              {"regex": /([a-z])([A-Z])/g, "value":"$1 $2"}
+          ]
+      },
+      "contents": {
+        "extra": {
+            "browser_view_switch":{
+              "labels":["Switch to metadata view","Switch to browser view"],
+              "values":["short_iri","short_iri"],
+              "regex":["rp\/.*","\/browser\/ccc\/rp\/.*"],
+              "query":[["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"],["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"]],
+              "links":["https://w3id.org/oc/ccc/[[VAR]]","https://w3id.org/oc/browser/ccc/[[VAR]]"]
+            }
+        },
+        "header": [
+            {"classes":["20px"]},
+            {"fields": ["s_type"], "concat_style":{"s_type": "last"} , "classes":["doc-type"]},
+            {"fields": ["FREE-TEXT","short_iri"], "values":["Corpus ID: ", null] , "classes":["identifiers"]},
+            {"fields": ["source_xml"], "classes":["identifiers source_before"] },
+            {"classes":["20px"]},
+            {"classes":["20px"]},
+            {"fields": ["title"], "classes":["header-title"]},
+            {"classes":["20px"]},
+            {"fields": ["article_title"], "classes":["info_box in_article"]},
+            {"fields": ["cited_title"], "classes":["info_box ref_article"]}
+        ],
+        "details": [
+          // {"fields": ["journal"], "classes":["journal-data"]},
+          // {"fields": ["journal_data"], "classes":["journal-data"]},
+          // {"fields": ["year"], "classes":["journal-data-separator"] }
+          //{"fields": ["FREE-TEXT", "EXT_DATA"], "values": ["Publisher: ", "crossref4doi.message.publisher"]},
+        ],
+      "oscar_conf": {
+          "progress_loader":{
+                    "visible": false,
+                    "spinner": false,
+                    "title":"Loading the list of In-text references ..."
+                  }
+      },
+      "oscar": [
+        {
+          "query_text": "my_iri",
+          "rule": "intext_refs_list_for_be",
+          "label":"In-text references",
+          "config_mod" : [
+              {"key":"page_limit_def" ,"value":30},
+              {"key":"categories.[[name,intext_ref]].fields.[[intrepid]].sort.default" ,"value":{"order": "desc"}},
+              {"key":"progress_loader.visible" ,"value":true},
+              {"key":"timeout.text" ,"value":""}
+          ]
+        }
+      ]
+      }
+    },
+    "annotation": {
+      "rule": "an\/.*",
+      "query": [`
+          SELECT ?my_iri ?short_iri ?s_type ?source_xml ?source_xml_iri ?title ?pl_title ?article_title ?article_br_iri ?cited_title ?cited_br_iri
+          WHERE {
+            BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?my_iri) .
+            BIND('[[VAR]]' as ?short_iri) .
+
+            BIND("Annotation" AS ?s_type).
+            OPTIONAL {?my_iri c4o:hasContent ?pl_title .}
+
+            
+            BIND(REPLACE(STR(?article),'/ccc/','/browser/ccc/','i') as ?article_br_iri).
+            BIND(REPLACE(STR(?cited_iri),'/ccc/','/browser/ccc/','i') as ?cited_br_iri).
+
+            BIND(COALESCE(?pl_title, "no text available") AS ?title) .
+
+          }
+        `],
+      "links": {
+        "article_title": {"field":"article_br_iri","prefix":""},
+        "cited_title": {"field":"cited_br_iri","prefix":""},
+        "source_xml": {"field":"source_xml_iri","prefix":""}
+      },
+      "none_values": {"article_title":"No title available","source_xml":"Not available"},
+      "text_mapping": {
+          "s_type":[
+              {"regex": /([a-z])([A-Z])/g, "value":"$1 $2"}
+          ]
+      },
+      "contents": {
+        "extra": {
+            "browser_view_switch":{
+              "labels":["Switch to metadata view","Switch to browser view"],
+              "values":["short_iri","short_iri"],
+              "regex":["rp\/.*","\/browser\/ccc\/rp\/.*"],
+              "query":[["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"],["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"]],
+              "links":["https://w3id.org/oc/ccc/[[VAR]]","https://w3id.org/oc/browser/ccc/[[VAR]]"]
+            }
+        },
+        "header": [
+            {"classes":["20px"]},
+            {"fields": ["s_type"], "concat_style":{"s_type": "last"} , "classes":["doc-type"]},
+            {"fields": ["FREE-TEXT","short_iri"], "values":["Corpus ID: ", null] , "classes":["identifiers"]},
+            {"fields": ["source_xml"], "classes":["identifiers source_before"] },
+            {"classes":["20px"]},
+            {"classes":["20px"]},
+            {"fields": ["title"], "classes":["header-title"]},
+            {"classes":["20px"]},
+            {"fields": ["article_title"], "classes":["info_box in_article"]},
+            {"fields": ["cited_title"], "classes":["info_box ref_article"]}
+        ],
+        "details": [
+          // {"fields": ["journal"], "classes":["journal-data"]},
+          // {"fields": ["journal_data"], "classes":["journal-data"]},
+          // {"fields": ["year"], "classes":["journal-data-separator"] }
+          //{"fields": ["FREE-TEXT", "EXT_DATA"], "values": ["Publisher: ", "crossref4doi.message.publisher"]},
+        ],
+      "oscar_conf": {
+          "progress_loader":{
+                    "visible": false,
+                    "spinner": false,
+                    "title":"Loading the list of In-text references ..."
+                  }
+      },
+      "oscar": [
+        {
+          "query_text": "my_iri",
+          "rule": "intext_refs_list_for_be",
           "label":"In-text references",
           "config_mod" : [
               {"key":"page_limit_def" ,"value":30},

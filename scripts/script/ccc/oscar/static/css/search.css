@@ -109,7 +109,7 @@
 }
 .results-tab {
   table-layout: fixed;
-  width: 99%;
+  width: 90%;
   background-color: white;
   margin-left: 10px;
   text-align:left;
@@ -688,7 +688,7 @@ input[type=range]::-moz-range-track {
     display: table;
     width: 100%;
   }
-  
+
   .tab-nav-btn.next{float:right; margin-top: 10px; margin-right: 10px;}
   .tab-nav-btn.prev{float:left; margin-top: 10px; margin-left: 10px;}
 }

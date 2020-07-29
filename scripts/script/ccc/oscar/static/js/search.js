@@ -2895,7 +2895,7 @@ var htmldom = (function () {
 					var new_footer_tab = document.createElement("table");
 
 					new_tab_res.id = "tab_res";
-					new_tab_res.className = "table results-tab";
+
 
 					//create table header
 					var col = table_conf.view.data["head"]["vars"];
@@ -2905,6 +2905,7 @@ var htmldom = (function () {
 
 					tr.innerHTML = _table_res_header(col, category_fields).outerHTML;
 
+					new_tab_res.className = "table results-tab result-type-"+search_conf_json.categories[index_category]["name"];
 					//create tr of all the other results
 					var results = table_conf.view.data["results"]["bindings"];
 					if (results.length > 0) {

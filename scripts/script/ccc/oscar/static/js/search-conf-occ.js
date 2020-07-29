@@ -75,6 +75,14 @@ var search_conf = {
     ]
   },
   {
+    "name":"intext_refs_list_for_be",
+    "label": "List of in-text reference pointers referencing a bib entry",
+    "category": "intext_ref",
+    "regex":"(https:\/\/w3id\\.org\/oc\/ccc\/be\/.$)",
+    "query": [` <[[VAR]]> ^c4o:denotes ?rp_iri.`
+    ]
+  },
+  {
     "name":"cocited_list",
     "label": "List of in-text reference pointers co-cited in the same element",
     "category": "intext_ref",

@@ -337,9 +337,10 @@ a:hover { color: var(--main-bg-color); text-decoration: none;}
 /* issn */
 .issn_before:not(:empty)::before {content: "ISSN: "; padding-left: 10px;}
 /* orcid */
-.orcid_before:not(:empty)::before {content: "ORCID: "; padding-left: 10px;}
+.orcid_before a:not(:empty)::before {content: "ORCID: "; padding-left: 10px;}
 /* oci */
 .oci_before:not(:empty)::before {content: "OCI: "; padding-left: 10px;}
+.id_schema_before:not(:empty)::before {content: "ID SCHEMA: "; padding-left: 10px;}
 /* intrepid */
 .intrepid_before:not(:empty)::before {content: "INTREPID: "; padding-left: 10px;}
 /* source xml */
@@ -383,10 +384,20 @@ a:hover { color: var(--main-bg-color); text-decoration: none;}
 .ref_article a:not(:empty)::before{
   background-image: url('../img/quote.png');
 }
-/* .be_cited a:not(:empty) {max-width: 50%;} */
+
 .be_cited a:not(:empty)::before{
   /* border-top: solid 1px #77909c; */
   background-image: url('../img/bibentry.png');
+}
+
+.ref_be a:not(:empty)::before{
+  /* border-top: solid 1px #77909c; */
+  background-image: url('../img/bibentry.png');
+}
+
+.rp_annotation a:not(:empty)::before{
+  /* border-top: solid 1px #77909c; */
+  background-image: url('../img/intext_ref.png');
 }
 
 .in_caption a:not(:empty)::before{
@@ -399,6 +410,10 @@ a:hover { color: var(--main-bg-color); text-decoration: none;}
 
 .in_footnote a:not(:empty)::before{
   background-image: url('../img/footnote.png');
+}
+
+.identified_entity a:not(:empty)::before{
+  background-image: url('../img/id.png');
 }
 
 .info_box a:not(:empty)::before {
@@ -426,9 +441,12 @@ a:hover { color: var(--main-bg-color); text-decoration: none;}
 .in_sentence a:not(:empty)::before {content: "IN SENTENCE "; }
 .in_article a:not(:empty)::before {content: "IN DOCUMENT "; }
 .ref_article a:not(:empty)::before {content: "REFERENCES DOCUMENT "; }
+.identified_entity a:not(:empty)::before {content: "IDENTIFIES "; }
 .in_section a:not(:empty)::before {content: "IN SECTION "; }
 .in_paragraph a:not(:empty)::before {content: "IN PARAGRAPH "; }
 .be_cited a:not(empty)::before {content: "REFERENCED BIBLIOGRAPHIC ENTRY " !important; }
+.rp_annotation a:not(empty)::before {content: "TARGET IN-TEXT REFERENCE " !important; }
+.ref_be a:not(empty)::before {content: "TARGET BIBLIOGRAPHIC ENTRY " !important; }
 .in_section:has(a:empty), .in_table:has(a:empty),
 .in_sentence:has(a:empty), .in_paragraph:has(a:empty),
 .in_caption:has(a:empty), .in_footnote:has(a:empty) {display: none !important;}

@@ -16,6 +16,7 @@ var browser_conf = {
       {"prefix":"bds","iri":"http://www.bigdata.com/rdf/search#"},
       {"prefix":"fabio","iri":"http://purl.org/spar/fabio/"},
       {"prefix":"pro","iri":"http://purl.org/spar/pro/"},
+      {"prefix":"oa","iri":"http://www.w3.org/ns/oa#"},
       {"prefix":"oco","iri":"https://w3id.org/oc/ontology/"},
       {"prefix":"rdf","iri":"http://www.w3.org/1999/02/22-rdf-syntax-ns#"},
       {"prefix":"prism","iri":"http://prismstandard.org/namespaces/basic/2.0/"}
@@ -164,9 +165,12 @@ var browser_conf = {
             SELECT ?orcid ?author_iri ?short_iri ?author ?s_type (COUNT(distinct ?doc) AS ?num_docs) (COUNT(distinct ?cites) AS ?out_cits) (COUNT(distinct ?cited_by) AS ?in_cits_docs) (COUNT(?cited_by) AS ?in_cits_tot) WHERE {
     	         BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?author_iri) .
                BIND(REPLACE(STR(?author_iri), 'https://w3id.org/oc/ccc/', '', 'i') as ?short_iri) .
-               ?author_iri foaf:familyName ?fname .
-    	         ?author_iri foaf:givenName ?name .
-    	         BIND(CONCAT(STR(?name),' ', STR(?fname)) as ?author) .
+               OPTIONAL {?author_iri foaf:familyName ?fname .
+    	            ?author_iri foaf:givenName ?name .
+                  BIND(CONCAT(STR(?name),' ', STR(?fname)) as ?author_pers) .
+               }
+               OPTIONAL {?author_iri foaf:name ?author_org .}
+               BIND(COALESCE(?author_pers, ?author_org) AS ?author).
     	         OPTIONAL {?role pro:isHeldBy ?author_iri ; pro:withRole ?aut_role.
                         ?doc pro:isDocumentContextFor ?role.
                         BIND(REPLACE(STR(?aut_role), 'http://purl.org/spar/pro/', '', 'i') as ?s_type) .
@@ -189,7 +193,7 @@ var browser_conf = {
             "orcid": {"field":"orcid","prefix":"https://orcid.org/"}
           },
           "group_by": {"keys":["author"], "concats":["doc","title","year"]},
-
+          "none_values": {"orcid":"", "author": "", "title": ""},
           "contents": {
             "extra": {
                 "browser_view_switch":{
@@ -234,7 +238,7 @@ var browser_conf = {
               {
                 "query_text": "author_iri",
                 "rule": "author_works",
-                "label":"Author's documents",
+                "label":"Related documents",
                 "config_mod" : [
       							{"key":"categories.[[name,document]].fields.[[title,Year]]" ,"value":"REMOVE_ENTRY"},
       							{"key":"page_limit_def" ,"value":20},
@@ -252,6 +256,8 @@ var browser_conf = {
             SELECT ?role_iri ?short_iri ?s_type ?author ?author_br_iri ?title ?orcid ?doi ?doc_ref ?doc_br_iri ?year ?j_vol_br_iri ?j_br_iri ?journal ?journal_data
             WHERE {
                BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?role_iri) .
+               BIND('[[VAR]]' as ?short_iri) .
+               BIND("role" as ?s_type) .
                ?role_iri pro:isHeldBy ?author_iri ;
                      pro:withRole ?aut_role ;
                      ^pro:isDocumentContextFor ?doc ;
@@ -269,11 +275,13 @@ var browser_conf = {
                  }
                } .
 
-               BIND('[[VAR]]' as ?short_iri) .
-               BIND("role" as ?s_type) .
                BIND(REPLACE(STR(?aut_role), 'http://purl.org/spar/pro/', '', 'i') as ?r_type) .
-               ?author_iri foaf:familyName ?fname .
-    	         ?author_iri foaf:givenName ?name .
+               OPTIONAL {?author_iri foaf:familyName ?fname .
+    	            ?author_iri foaf:givenName ?name .
+                  BIND(CONCAT(STR(?name),' ', STR(?fname)) as ?author_pers) .
+               }
+               OPTIONAL {?author_iri foaf:name ?author_org .}
+               BIND(COALESCE(?author_pers, ?author_org, "No name available") AS ?author).
                OPTIONAL {
       	          ?author_iri datacite:hasIdentifier [
       		            datacite:usesIdentifierScheme datacite:orcid ;
@@ -302,7 +310,7 @@ var browser_conf = {
             "journal_data": {"field":"j_vol_br_iri","prefix":""}
           },
           "group_by": {"keys":["title"], "concats":["doc","title","year"]},
-          "none_values": {"title": "Author without name", "doi":"", "year":"", "journal":"", "journal_data":""},
+          "none_values": {"title": "", "doi":"", "year":"", "journal":"", "journal_data":"", "orcid":""},
           "contents": {
             "extra": {
                 "browser_view_switch":{
@@ -756,7 +764,7 @@ var browser_conf = {
             "browser_view_switch":{
               "labels":["Switch to metadata view","Switch to browser view"],
               "values":["short_iri","short_iri"],
-              "regex":["rp\/.*","\/browser\/ccc\/rp\/.*"],
+              "regex":["pl\/.*","\/browser\/ccc\/pl\/.*"],
               "query":[["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"],["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"]],
               "links":["https://w3id.org/oc/ccc/[[VAR]]","https://w3id.org/oc/browser/ccc/[[VAR]]"]
             }
@@ -850,7 +858,7 @@ var browser_conf = {
             "browser_view_switch":{
               "labels":["Switch to metadata view","Switch to browser view"],
               "values":["short_iri","short_iri"],
-              "regex":["rp\/.*","\/browser\/ccc\/rp\/.*"],
+              "regex":["be\/.*","\/browser\/ccc\/be\/.*"],
               "query":[["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"],["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"]],
               "links":["https://w3id.org/oc/ccc/[[VAR]]","https://w3id.org/oc/browser/ccc/[[VAR]]"]
             }
@@ -898,28 +906,46 @@ var browser_conf = {
     "annotation": {
       "rule": "an\/.*",
       "query": [`
-          SELECT ?my_iri ?short_iri ?s_type ?source_xml ?source_xml_iri ?title ?pl_title ?article_title ?article_br_iri ?cited_title ?cited_br_iri
+          SELECT ?my_iri ?short_iri ?s_type ?title
+          ?article_title ?article_br_iri
+          ?cited_article_title ?cited_article_br_iri
+          ?citation_title ?citation_br_iri
+          ?be_br_iri ?rp_br_iri ?be_title ?rp_title
           WHERE {
             BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?my_iri) .
             BIND('[[VAR]]' as ?short_iri) .
-
             BIND("Annotation" AS ?s_type).
-            OPTIONAL {?my_iri c4o:hasContent ?pl_title .}
+            ?my_iri oa:hasBody ?citation_iri ; ^oco:hasAnnotation ?be_or_rp_iri .
+            ?citation_iri cito:hasCitingEntity ?article_iri ; cito:hasCitedEntity ?cited_article_iri.
 
-            
-            BIND(REPLACE(STR(?article),'/ccc/','/browser/ccc/','i') as ?article_br_iri).
-            BIND(REPLACE(STR(?cited_iri),'/ccc/','/browser/ccc/','i') as ?cited_br_iri).
+            OPTIONAL {?article_iri dcterms:title ?article_title .}
+            OPTIONAL {?cited_article_iri dcterms:title ?cited_article_title .}
 
-            BIND(COALESCE(?pl_title, "no text available") AS ?title) .
+            OPTIONAL {?be_or_rp_iri a c4o:InTextReferencePointer .
+                OPTIONAL { ?be_or_rp_iri ^co:element*/c4o:hasContent ?rp_title .}
+                BIND(REPLACE(STR(?be_or_rp_iri),'/ccc/','/browser/ccc/','i') as ?rp_br_iri).
+            }
 
+            OPTIONAL {?be_or_rp_iri a biro:BibliographicReference .
+                OPTIONAL { ?be_or_rp_iri c4o:hasContent ?be_title .}
+                BIND(REPLACE(STR(?be_or_rp_iri),'/ccc/','/browser/ccc/','i') as ?be_br_iri).
+            }
+
+            BIND(REPLACE(STR(?article_iri),'/ccc/','/browser/ccc/','i') as ?article_br_iri).
+            BIND(REPLACE(STR(?cited_article_iri),'/ccc/','/browser/ccc/','i') as ?cited_article_br_iri).
+
+            BIND(REPLACE(STR(?citation_iri),'/ccc/','/browser/ccc/','i') as ?citation_br_iri).
+            BIND(REPLACE(STR(?citation_iri),'https://w3id.org/oc/ccc/ci/','','i') as ?cit_num).
+            BIND(CONCAT("Annotation on citation OCI: ", ?cit_num) AS ?title) .
           }
         `],
       "links": {
         "article_title": {"field":"article_br_iri","prefix":""},
-        "cited_title": {"field":"cited_br_iri","prefix":""},
-        "source_xml": {"field":"source_xml_iri","prefix":""}
+        "cited_article_title": {"field":"cited_article_br_iri","prefix":""},
+        "be_title": {"field":"be_br_iri","prefix":""},
+        "rp_title": {"field":"rp_br_iri","prefix":""}
       },
-      "none_values": {"article_title":"No title available","source_xml":"Not available"},
+      "none_values": {"rp_title": "", "be_title":"", "article_title":"No title available","cited_article_title":"No title available"},
       "text_mapping": {
           "s_type":[
               {"regex": /([a-z])([A-Z])/g, "value":"$1 $2"}
@@ -930,7 +956,7 @@ var browser_conf = {
             "browser_view_switch":{
               "labels":["Switch to metadata view","Switch to browser view"],
               "values":["short_iri","short_iri"],
-              "regex":["rp\/.*","\/browser\/ccc\/rp\/.*"],
+              "regex":["an\/.*","\/browser\/ccc\/an\/.*"],
               "query":[["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"],["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"]],
               "links":["https://w3id.org/oc/ccc/[[VAR]]","https://w3id.org/oc/browser/ccc/[[VAR]]"]
             }
@@ -939,40 +965,144 @@ var browser_conf = {
             {"classes":["20px"]},
             {"fields": ["s_type"], "concat_style":{"s_type": "last"} , "classes":["doc-type"]},
             {"fields": ["FREE-TEXT","short_iri"], "values":["Corpus ID: ", null] , "classes":["identifiers"]},
-            {"fields": ["source_xml"], "classes":["identifiers source_before"] },
+            {"classes":["20px"]},
             {"classes":["20px"]},
             {"classes":["20px"]},
             {"fields": ["title"], "classes":["header-title"]},
             {"classes":["20px"]},
+            {"fields": ["be_title"], "classes":["info_box ref_be"]},
+            {"fields": ["rp_title"], "classes":["info_box rp_annotation"]},
             {"fields": ["article_title"], "classes":["info_box in_article"]},
-            {"fields": ["cited_title"], "classes":["info_box ref_article"]}
+            {"fields": ["cited_article_title"], "classes":["info_box ref_article"]}
+
         ],
         "details": [
           // {"fields": ["journal"], "classes":["journal-data"]},
           // {"fields": ["journal_data"], "classes":["journal-data"]},
           // {"fields": ["year"], "classes":["journal-data-separator"] }
           //{"fields": ["FREE-TEXT", "EXT_DATA"], "values": ["Publisher: ", "crossref4doi.message.publisher"]},
-        ],
-      "oscar_conf": {
-          "progress_loader":{
-                    "visible": false,
-                    "spinner": false,
-                    "title":"Loading the list of In-text references ..."
-                  }
+        ]
+      }
+    },
+    "identifier": {
+      "rule": "id\/.*",
+      "query": [`
+          SELECT ?my_iri ?short_iri ?s_type ?id_type ?title ?entity_title ?entity_br_iri
+          WHERE {
+            BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?my_iri) .
+            BIND('[[VAR]]' as ?short_iri) .
+            BIND("Identifier" AS ?s_type).
+            OPTIONAL {?my_iri literal:hasLiteralValue ?id_title }.
+            ?my_iri datacite:usesIdentifierScheme ?id_type_uri ;
+              ^datacite:hasIdentifier ?entity_iri .
+            OPTIONAL {?entity_iri dcterms:title ?ent_title }.
+            OPTIONAL {?entity_iri ^co:element*/c4o:hasContent ?rp_or_pl_title }.
+            OPTIONAL {?entity_iri foaf:name ?org_title }.
+            OPTIONAL {?entity_iri foaf:familyName ?fname .
+               ?author_iri foaf:givenName ?name .
+               BIND(CONCAT(STR(?name),' ', STR(?fname)) as ?author_title) .
+            }
+            BIND(COALESCE(?ent_title, ?rp_or_pl_title, ?org_title, ?author_title, "No text available") AS ?entity_title).
+
+            BIND(REPLACE(STR(?entity_iri), '/ccc/', '/browser/ccc/', 'i') as ?entity_br_iri) .
+            BIND(COALESCE(?id_title, "No text available") AS ?id_title).
+            BIND(UCASE(STRAFTER(STR(?id_type_uri), "datacite/")) as ?id_type).
+            BIND(STR(?id_title) AS ?title).
+          }
+        `],
+      "links": {
+        "entity_title": {"field":"entity_br_iri","prefix":""}
       },
-      "oscar": [
-        {
-          "query_text": "my_iri",
-          "rule": "intext_refs_list_for_be",
-          "label":"In-text references",
-          "config_mod" : [
-              {"key":"page_limit_def" ,"value":30},
-              {"key":"categories.[[name,intext_ref]].fields.[[intrepid]].sort.default" ,"value":{"order": "desc"}},
-              {"key":"progress_loader.visible" ,"value":true},
-              {"key":"timeout.text" ,"value":""}
+      "none_values": {},
+      "text_mapping": {
+          "id_type":[
+              {"regex": /([a-z])([A-Z])/g, "value":"$1 $2"}
           ]
-        }
-      ]
+      },
+      "contents": {
+        "extra": {
+            "browser_view_switch":{
+              "labels":["Switch to metadata view","Switch to browser view"],
+              "values":["short_iri","short_iri"],
+              "regex":["id\/.*","\/browser\/ccc\/id\/.*"],
+              "query":[["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"],["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"]],
+              "links":["https://w3id.org/oc/ccc/[[VAR]]","https://w3id.org/oc/browser/ccc/[[VAR]]"]
+            }
+        },
+        "header": [
+            {"classes":["20px"]},
+            {"fields": ["s_type"], "concat_style":{"s_type": "last"} , "classes":["doc-type"]},
+            {"fields": ["FREE-TEXT","short_iri"], "values":["Corpus ID: ", null] , "classes":["identifiers"]},
+            {"classes":["20px"]},
+            {"classes":["20px"]},
+            {"fields": ["id_type"], "classes":["identifiers id_schema_before"]},
+            {"fields": ["title"], "classes":["header-title"]},
+            {"classes":["20px"]},
+            {"fields": ["entity_title"], "classes":["info_box identified_entity"]}
+
+        ],
+        "details": [
+          // {"fields": ["journal"], "classes":["journal-data"]},
+          // {"fields": ["journal_data"], "classes":["journal-data"]},
+          // {"fields": ["year"], "classes":["journal-data-separator"] }
+          //{"fields": ["FREE-TEXT", "EXT_DATA"], "values": ["Publisher: ", "crossref4doi.message.publisher"]},
+        ]
+      }
+    },
+    "resource_embodiment": {
+      "rule": "re\/.*",
+      "query": [`
+          SELECT ?my_iri ?short_iri ?s_type ?id_type ?title ?entity_title ?entity_br_iri ?journal_data
+          WHERE {
+            BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?my_iri) .
+            BIND('[[VAR]]' as ?short_iri) .
+            BIND("Resource embodiment" AS ?s_type).
+            ?my_iri ^frbr:embodiment ?article_iri ;
+              prism:startingPage ?start;prism:endingPage ?end.
+            BIND(CONCAT('pages ', ?start,'-',?end) as ?journal_data).
+            OPTIONAL {?article_iri dcterms:title ?article_title }.
+            BIND(COALESCE(?article_title, "No title available") AS ?entity_title).
+            BIND(REPLACE(STR(?article_iri),'/ccc/','/browser/ccc/','i') as ?entity_br_iri).
+            BIND(CONCAT("Edition of document '",?article_title,"'") AS ?title).
+          }
+        `],
+      "links": {
+        "entity_title": {"field":"entity_br_iri","prefix":""}
+      },
+      "none_values": {},
+      "text_mapping": {
+          "id_type":[
+              {"regex": /([a-z])([A-Z])/g, "value":"$1 $2"}
+          ]
+      },
+      "contents": {
+        "extra": {
+            "browser_view_switch":{
+              "labels":["Switch to metadata view","Switch to browser view"],
+              "values":["short_iri","short_iri"],
+              "regex":["re\/.*","\/browser\/ccc\/re\/.*"],
+              "query":[["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"],["SELECT ?resource WHERE {BIND(<https://w3id.org/oc/ccc/[[VAR]]> as ?resource)}"]],
+              "links":["https://w3id.org/oc/ccc/[[VAR]]","https://w3id.org/oc/browser/ccc/[[VAR]]"]
+            }
+        },
+        "header": [
+            {"classes":["20px"]},
+            {"fields": ["s_type"], "concat_style":{"s_type": "last"} , "classes":["doc-type"]},
+            {"fields": ["FREE-TEXT","short_iri"], "values":["Corpus ID: ", null] , "classes":["identifiers"]},
+            {"classes":["20px"]},
+            {"classes":["20px"]},
+            {"classes":["20px"]},
+            {"fields": ["title"], "classes":["header-title"]},
+            {"fields": ["journal_data"], "classes":["journal-data"]},
+            {"fields": ["entity_title"], "classes":["info_box identified_entity"]}
+
+        ],
+        "details": [
+          // {"fields": ["journal"], "classes":["journal-data"]},
+
+          // {"fields": ["year"], "classes":["journal-data-separator"] }
+          //{"fields": ["FREE-TEXT", "EXT_DATA"], "values": ["Publisher: ", "crossref4doi.message.publisher"]},
+        ]
       }
     }
   }

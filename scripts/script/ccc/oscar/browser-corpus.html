@@ -59,7 +59,7 @@
           var td = $(this).parent();
           // toggle sentences
           if ( $(td).next("td").length != 0) {
-              $(td).next("td").toggle();
+              $(td).next("td").toggle("slow");
           } else {
             var new_td = expand_context(td,pointers)[0]
               , rp_content = expand_context(td,pointers)[1];

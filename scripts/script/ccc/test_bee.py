@@ -8,7 +8,7 @@ from lxml import etree as ET
 
 # test
 pp = pprint.PrettyPrinter(indent=1)
-xml_doc = 'script/ccc/xml_PMC_sample/36test.xml'
+xml_doc = 'script/ccc/xml_PMC_sample/38test.xml'
 
 jats = jats2oc.Jats2OC(xml_doc)
 jats.extract_intext_refs()

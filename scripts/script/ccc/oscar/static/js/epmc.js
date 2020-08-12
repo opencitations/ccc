@@ -5,6 +5,7 @@ function expand_context(td,pointers) {
   var new_td = $("<td>", {"class": "sentences remove"});
 
   $.each(pointers_list, function( index, intrepid ) {
+    document.body.style.cursor = 'wait';
     var query_ramose =  String(ramose_api)+ intrepid;
     //call ramose to retrieve data of indtrepids
     $.ajax({

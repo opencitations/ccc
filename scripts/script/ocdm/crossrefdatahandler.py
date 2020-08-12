@@ -241,7 +241,8 @@ class CrossrefDataHandler(object):
             cur_member_url = json["member"]
             retrieved_agent = None
             if self.rf is not None:
-                retrieved_agent = self.rf.retrieve_from_url(cur_member_url)  # TODO: retrieve also by name and by list name
+                # TODO retrieve_from_fundref
+                retrieved_agent = self.rf.retrieve_from_url(cur_member_url) 
             if retrieved_agent is not None:
                 cur_agent = self.g_set.add_ra(
                     self.name, self.id, source, retrieved_agent)

@@ -54,7 +54,7 @@ class Jats2OC(object):
 		footnote_mapping = Jats2OC.mapping_element(self.root, conf.footnote_tag, self.et)
 		table_mapping = Jats2OC.mapping_element(self.root, conf.tablewrap_tag, self.et)
 		caption_mapping = Jats2OC.mapping_element(self.root, conf.caption_tag, self.et)
-		sentences_mapping = Jats2OC.mapping_sentences(self.root, self.et)
+		sentences_mapping = Jats2OC.mapping_sentences(self.root)
 		# 1. group rp in pl when these are in a parent element
 		parent_pl_set = list({ (rp["xml_element"].getparent(), self.et.getpath(rp["xml_element"].getparent()) ) \
 			for rp in rp_list if rp["xml_element"].getparent().tag not in conf.parent_elements_names})
@@ -225,9 +225,10 @@ class Jats2OC(object):
 		return elem_dict
 
 	@staticmethod
-	def mapping_sentences(original_root, et):
+	def mapping_sentences(original_root):
 		""" parse the xml and return a dictionary of sentences, including sequence num, text, and xpath """
-		root = copy.deepcopy(root)
+		root = copy.deepcopy(original_root)
+		et = ET.ElementTree(root)
 		sentences_seq = []
 		with open(conf.abbreviations_list_path, 'r') as f:
 			abbreviations_list = [line.strip() for line in f.readlines() if not len(line) == 0]

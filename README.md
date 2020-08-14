@@ -2,7 +2,7 @@
 
 Dependencies
 
- * install dependencies: NLTK, fuzzywuzzy, lxml
+ * install dependencies: rdflib, SPARQLWrapper, NLTK, fuzzywuzzy, lxml
  * Blazegraph.jar [Direct link to download](https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/blazegraph.jar)
 
 ### RUN BEE LOCALLY

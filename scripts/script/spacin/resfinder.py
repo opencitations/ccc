@@ -44,6 +44,8 @@ class ResourceFinder(object):
         else:
             self.ts = ConjunctiveGraph('SPARQLUpdateStore')
             self.ts.open((ts_url, ts_url))
+            self.ts.namespace_manager.store.nsBindings = {}
+
 
     def add_prov_triples_in_filesystem(self, res_iri, prov_entity_type=None):
         if self.base_dir is not None and self.base_iri is not None:

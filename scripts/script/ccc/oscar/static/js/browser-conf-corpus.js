@@ -105,7 +105,7 @@ var browser_conf = {
               //{"fields": ["FREE-TEXT", "EXT_DATA"], "values": ["Publisher: ", "crossref4doi.message.publisher"]},
               ],
             "metrics": [
-              {"fields": ["FREE-TEXT"], "values": ["Metrics"], "classes": ["metrics-title"]},
+              {"fields": ["FREE-TEXT"], "values": ["Summary"], "classes": ["metrics-title"]},
               {"fields": ["in_cits"], "classes": ["cited"]},
               {"fields": ["out_cits"], "classes": ["refs"]}
             ],
@@ -218,7 +218,7 @@ var browser_conf = {
 
             ],
             "metrics": [
-                {"fields": ["FREE-TEXT"], "values": ["Metrics"], "classes": ["metrics-title"]},
+                {"fields": ["FREE-TEXT"], "values": ["Summary"], "classes": ["metrics-title"]},
                 {"fields": ["num_docs"], "classes": ["num_docs"]},
                 //{"fields": ["FREE-TEXT","in_cits_tot","FREE-TEXT"], "values": ["Cited ",null," number of times"], "classes": ["metric-entry","imp-value","metric-entry"]},
                 {"fields": ["in_cits_docs"], "classes": ["cited"]}

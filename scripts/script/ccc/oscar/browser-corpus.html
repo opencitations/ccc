@@ -21,10 +21,18 @@
 <!-- BODY
 ================================================== -->
   <body>
-
-    <div class="__lucinda__" data-content="header details metrics"></div>
+    <div class="banner_oc">
+      <nav>
+        <ul>
+          <li data-html="true" data-toggle="tooltip" data-placement="right" id="home" title="homepage"><a href="http://opencitations.net/ccc"><img id="oc_logo" src="static/img/logo.png" alt="opencitations logo"/> </a> </li>
+          <li data-html="true" data-toggle="tooltip" data-placement="right" id="search_ccc" title="search"><a href="http://opencitations.net/ccc/search"><img id="search_link" src="static/img/search.png" alt="search in ccc corpus"/> </a> </li>
+          <li data-html="true" data-toggle="tooltip" data-placement="right" id="share" title="share"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><img src="static/img/twitter.svg" alt=""> </a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+          <li data-html="true" data-toggle="tooltip" data-placement="right" id="terms" title="Data held in the <a href='http://opencitations.net/ccc/'>CCC</a> are freely available under a <a href='https://creativecommons.org/publicdomain/zero/1.0/'>CC0 license</a>. The full-text of sentences is not stored, and it is available under publishers' licenses."><img src="static/img/security.png" alt="legal terms for data reuse"></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="__lucinda__ container" data-content="header details metrics"></div>
     <div class="cover __oscar__" data-type="free-text" data-view="rows_per_page sort_results" data-filter=""></div>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -51,7 +59,12 @@
       var groups = myRegexp.exec(String(window.location.href));
       if (groups.length > 1) {resource_iri = groups[1];}
       browser.do_sparql_query(resource_iri);
+
       // popup
+      $("#home").tooltip();
+      $("#terms").tooltip();
+      $("#search_ccc").tooltip();
+      $("#share").tooltip();
       // CCC call EPMC
       $(document).on("click", "td[field='mentions']>a", function(event) {
           event.preventDefault();

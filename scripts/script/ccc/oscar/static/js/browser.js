@@ -36,7 +36,7 @@ for (var i = 0; i < lucinda_doms.length; i++) {
 			var details_index = lucinda_doms[i]["data-content"].indexOf('details');
 
 			if ((header_index != -1) || (details_index != -1)){
-				str_html_inner = str_html_inner + '<div id="browser_info" class="browser-info">';
+				str_html_inner = str_html_inner + '<div id="browser_info" class="col-md-10 browser-info">';
 				if (header_index != -1){
 					str_html_inner = str_html_inner + '<div id="browser_header" class="browser-header"></div>';
 				}
@@ -48,14 +48,14 @@ for (var i = 0; i < lucinda_doms.length; i++) {
 
 			var metrics_index = lucinda_doms[i]["data-content"].indexOf('metrics');
 			if (metrics_index != 0){
-				str_html_inner = str_html_inner + '<div id="browser_metrics" class="browser-metrics"></div>';
+				str_html_inner = str_html_inner + '<div id="browser_metrics" class="col-md-2 browser-metrics"></div>';
 			}
 
 
 	}
 
 	//put it inside the page
-	lucinda_doms[i]['container'].innerHTML = '<div id="browser" class="browser">'+ str_html_inner + '</div>';
+	lucinda_doms[i]['container'].innerHTML = '<div id="browser" class="browser row">'+ str_html_inner + '</div>';
 
 }
 

@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 
+__author__ = 'Gabriele Pisciotta'
+
 class QueryInterface(ABC):
 
     @abstractmethod

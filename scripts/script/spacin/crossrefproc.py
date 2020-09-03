@@ -66,21 +66,31 @@ class CrossrefProcessor(FormatProcessor):
         return get_data(self.max_iteration, self.sec_to_wait, api_url + entity,
                         self.headers, self.timeout, self.repok, self.reperr)
 
-    def process_entry(self, entry):
+    # @param check: set it True in order to return the json (used in the test)
+    def process_entry(self, entry, check = False):
         entry_cleaned = FormatProcessor.clean_entry(entry)
         cur_json = self.get_crossref_item(
             self.__process_entity(entry_cleaned, self.crossref_api_search),fuzzy_match=entry_cleaned) # returns first if similarity score > 95.0
         if cur_json is not None:
-            return self.process_crossref_json(
-                cur_json, self.crossref_api_search + entry_cleaned,
-                self.name, self.id, self.source)
+                if check:
+                    return cur_json
+                else:
+                    return self.process_crossref_json(
+                        cur_json, self.crossref_api_search + entry_cleaned,
+                        self.name, self.id, self.source)
 
-    def process_doi(self, doi, doi_curator, doi_source_provider):
+
+    # @param check: set it True in order to return the json (used in the test)
+    def process_doi(self, doi, doi_curator, doi_source_provider, check=False):
+
         existing_res = self.rf.retrieve_from_doi(doi)
         if existing_res is None:
             cur_json = self.get_crossref_item(self.__process_entity(doi, self.crossref_api_works))
             if cur_json is not None:
-                return self.process_crossref_json(
+                if check:
+                    return cur_json
+                else:
+                    return self.process_crossref_json(
                     cur_json, self.crossref_api_works + encode_url(doi), doi_curator,
                     doi_source_provider, self.source)
         else:
@@ -237,6 +247,7 @@ class CrossrefProcessor(FormatProcessor):
                 if cur_res is None:
                     if self.get_bib_entry_doi and extracted_doi is not None:
                         extracted_doi_used = True
+
                         cur_res = self.process_doi(extracted_doi, self.name, self.source_provider)
                         if cur_res is not None:
                             self.repok.add_sentence(

@@ -5,7 +5,11 @@ __author__ = 'Gabriele Pisciotta'
 class QueryInterface(ABC):
 
     @abstractmethod
-    def get_data_crossref(self, entity):
+    def get_data_crossref_doi(self, entity):
+        raise NotImplementedError
+
+    @abstractmethod
+    def get_data_crossref_bibref(self, entity):
         raise NotImplementedError
 
     @abstractmethod

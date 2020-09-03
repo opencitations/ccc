@@ -1,0 +1,1232 @@
+{
+    "references": [
+        {
+            "bibentry": "Amoah, SK, Sandjo, LP, Kratz, JM, Biavatti, MW. 2016 Rosmarinic acid–pharmaceutical and clinical aspects. Planta Med. 82(05): 388–406. PMID: 26845712",
+            "process_entry": "True",
+            "doi": "10.1055/s-0035-1568274",
+            "pmid": "26845712",
+            "xmlid": "CIT0001"
+        },
+        {
+            "bibentry": "Arya, A, Sethy, NK, Singh, SK, Das, M, Bhargava, K. 2013 Cerium oxide nanoparticles protect rodent lungs from hypobaric hypoxia-induced oxidative stress and inflammation. Int J Nanomed. 8: 4507–4520.",
+            "process_entry": "True",
+            "xmlid": "CIT0002"
+        },
+        {
+            "bibentry": "Barry, PW, Pollard, AJ. 2003 Altitude illness. BMJ. 326(7395): 915–919. PMID: 12714473",
+            "process_entry": "True",
+            "doi": "10.1136/bmj.326.7395.915",
+            "pmid": "12714473",
+            "pmcid": "PMC1125825",
+            "xmlid": "CIT0003"
+        },
+        {
+            "bibentry": "Beall, CM, Cavalleri, GL, Deng, L, Elston, RC, Gao, Y, Knight, J, Li, C, Li, JC, Liang, Y, McCormack, M, et al. 2010 Natural selection on EPAS1 (HIF2) associated with low hemoglobin concentration in Tibetan highlanders. Proc Natl Acad Sci USA. 107(25): 11459–11464. PMID: 20534544",
+            "process_entry": "True",
+            "doi": "10.1073/pnas.1002443107",
+            "pmid": "20534544",
+            "pmcid": "PMC2895075",
+            "xmlid": "CIT0004"
+        },
+        {
+            "bibentry": "Bousquet, PA, Sandvik, JA, Arntzen, MØ, Jeppesen Edin, NF, Christoffersen, S, Krengel, U, Pettersen, EO, Thiede, B. 2015 Hypoxia strongly affects mitochondrial ribosomal proteins and translocases, as shown by quantitative proteomics of HeLa Cells. Int J Proteomics. 2015: 678527. PMID: 26421188",
+            "process_entry": "True",
+            "doi": "10.1155/2015/678527",
+            "pmid": "26421188",
+            "pmcid": "PMC4572459",
+            "xmlid": "CIT0005"
+        },
+        {
+            "bibentry": "Chen, T, Liu, W, Chao, X, Zhang, L, Qu, Y, Huo, J, Fei, Z. 2011 Salvianolic acid B attenuates brain damage and inflammation after traumatic brain injury in mice. Brain Res Bull. 84(2): 163–168. PMID: 21134421",
+            "process_entry": "True",
+            "doi": "10.1016/j.brainresbull.2010.11.015",
+            "pmid": "21134421",
+            "xmlid": "CIT0006"
+        },
+        {
+            "bibentry": "Dejonckheere, E, Vandenbroucke, RE, Libert, C. 2011 Matrix metalloproteinase8 has a central role in inflammatory disorders and cancer progression. Cytokine Growth Factor Rev. 22(2): 73–81. PMID: 21388856",
+            "process_entry": "True",
+            "doi": "10.1016/j.cytogfr.2011.02.002",
+            "pmid": "21388856",
+            "xmlid": "CIT0007"
+        },
+        {
+            "bibentry": "Dhapare, S, Sakagami, M. 2018 Salvianolic acid B as an anti-emphysema agent I: In vitro stimulation of lung cell proliferation and migration, and protection against lung cell death, and in vivo lung STAT3 activation and VEGF elevation. Pulm Pharmacol Ther. 53: 107–115. PMID: 30291890",
+            "process_entry": "True",
+            "doi": "10.1016/j.pupt.2018.10.001",
+            "pmid": "30291890",
+            "xmlid": "CIT0008"
+        },
+        {
+            "bibentry": "Dosek, A, Ohno, H, Acs, Z, Taylor, AW, Radak, Z. 2007 High altitude and oxidative stress. Respir Physiol Neurobiol. 158(2–3): 128–131. PMID: 17482529",
+            "process_entry": "True",
+            "doi": "10.1016/j.resp.2007.03.013",
+            "pmid": "17482529",
+            "xmlid": "CIT0009"
+        },
+        {
+            "bibentry": "Fei, YX, Wang, SQ, Yang, LJ, Qiu, YY, Li, YZ, Liu, WY, Xi, T, Fang, WR, Li, YM. 2017 Salvia miltiorrhiza Bunge (Danshen) extract attenuates permanent cerebral ischemia through inhibiting platelet activation in rats. J Ethnopharmacol. 207: 57–66. PMID: 28645780",
+            "process_entry": "True",
+            "doi": "10.1016/j.jep.2017.06.023",
+            "pmid": "28645780",
+            "xmlid": "CIT0010"
+        },
+        {
+            "bibentry": "Hackett, PH, Roach, RC. 2001 High-altitude illness. N Engl J Med. 345(2): 107–114. PMID: 11450659",
+            "process_entry": "True",
+            "doi": "10.1056/nejm200107123450206",
+            "pmid": "11450659",
+            "xmlid": "CIT0011"
+        },
+        {
+            "bibentry": "Hao, PP, Jiang, F, Chen, YG, Yang, J, Zhang, K, Zhang, MX, Zhang, C, Zhao, YX, Zhang, Y. 2015 Evidence for traditional Chinese medication to treat cardiovascular disease. Nat Rev Cardiol. 12(6): 374–374.",
+            "process_entry": "True",
+            "xmlid": "CIT0012"
+        },
+        {
+            "bibentry": "Jacobsen, D. 2008 Low oxygen pressure as a driving factor for the altitudinal decline in taxon richness of stream macroinvertebrates. Oecologia. 154(4): 795–807. PMID: 17960424",
+            "process_entry": "True",
+            "doi": "10.1007/s00442-007-0877-x",
+            "pmid": "17960424",
+            "xmlid": "CIT0013"
+        },
+        {
+            "bibentry": "Jayalakshmi, K, Sairam, M, Singh, SB, Sharma, SK, Ilavazhagan, G, Banerjee, PK. 2005 Neuroprotective effect of N-acetyl cysteine on hypoxia induced oxidative stress in primary hippocampal culture. Brain Res. 1046(1–2): 97–104. PMID: 15919066",
+            "process_entry": "True",
+            "doi": "10.1016/j.brainres.2005.03.054",
+            "pmid": "15919066",
+            "xmlid": "CIT0014"
+        },
+        {
+            "bibentry": "Kaur, S, Leszczynska, K, Abraham, S, Scarcia, M, Hiltbrunner, S, Marshall, CJ, Mavria, G, Bicknell, R, Heath, VL. 2011 RhoJ/TCL regulates endothelial motility and tube formation and modulates actomyosin contractility and focal adhesion numbers. Arterioscler Thromb Vasc Biol. 31(3): 657–664. PMID: 21148427",
+            "process_entry": "True",
+            "doi": "10.1161/atvbaha.110.216341",
+            "pmid": "21148427",
+            "xmlid": "CIT0015"
+        },
+        {
+            "bibentry": "Kim, C, Yang, H, Fukushima, Y, Saw, PE, Lee, J, Park, JS, Park, I, Jung, J, Kataoka, H, Lee, D, et al. 2014 Vascular RhoJ is an effective and selective target for tumor angiogenesis and vascular disruption. Cancer Cell. 25(1): 102–117. PMID: 24434213",
+            "process_entry": "True",
+            "doi": "10.1016/j.ccr.2013.12.010",
+            "pmid": "24434213",
+            "xmlid": "CIT0016"
+        },
+        {
+            "bibentry": "Jia, C, Han, S, Wei, L, Dang, X, Niu, Q, Chen, M, Cao, B, Liu, Y, Jiao, H. 2018 Protective effect of compound Danshen (Salvia miltiorrhiza) dripping pills alone and in combination with carbamazepine on kainic acid-induced temporal lobe epilepsy and cognitive impairment in rats. Pharm Biol. 56(1): 217–224. PMID: 29560767",
+            "process_entry": "True",
+            "doi": "10.1080/13880209.2018.1432665",
+            "pmid": "29560767",
+            "pmcid": "PMC6130614",
+            "xmlid": "CIT0017"
+        },
+        {
+            "bibentry": "Lanaspa, MA, Andres-Hernando, A, Orlicky, DJ, Cicerchi, C, Jang, C, Li, N, Milagres, T, Kuwabara, M, Wempe, MF, Rabinowitz, JD, et al. 2018 Ketohexokinase C blockade ameliorates fructose-induced metabolic dysfunction in fructose-sensitive mice. J Clin Invest. 128(6): 2226–2238. PMID: 29533924",
+            "process_entry": "True",
+            "doi": "10.1172/jci94427",
+            "pmid": "29533924",
+            "pmcid": "PMC5983342",
+            "xmlid": "CIT0018"
+        },
+        {
+            "bibentry": "Leon-Velarde, F, Maggiorini, M, Reeves, JT, Aldashev, A, Asmus, I, Bernardi, L, Ge, RL, Hackett, P, Kobayashi, T, Moore, LG, et al. 2005 Consensus statement on chronic and subacute high altitude diseases. High Alt Med Biol. 6(2): 147–157. PMID: 16060849",
+            "process_entry": "True",
+            "doi": "10.1089/ham.2005.6.147",
+            "pmid": "16060849",
+            "xmlid": "CIT0019"
+        },
+        {
+            "bibentry": "Liu, L, Chen, J, Sun, L, Xu, Y. 2018 RhoJ promotes hypoxia induced endothelial-to-mesenchymal transition by activating WDR5 expression. J Cell Biochem. 119(4): 3384–3393. PMID: 29130522",
+            "process_entry": "True",
+            "doi": "10.1002/jcb.26505",
+            "pmid": "29130522",
+            "xmlid": "CIT0020"
+        },
+        {
+            "bibentry": "Maiti, P, Singh, SB, Sharma, AK, Muthuraju, S, Banerjee, PK, Ilavazhagan, G. 2006 Hypobaric hypoxia induces oxidative stress in rat brain. Neurochem Int. 49(8): 709–716. PMID: 16911847",
+            "process_entry": "True",
+            "doi": "10.1016/j.neuint.2006.06.002",
+            "pmid": "16911847",
+            "xmlid": "CIT0021"
+        },
+        {
+            "bibentry": "Ngo, YL, Lau, CH, Chua, LS. 2018 Review on rosmarinic acid extraction, fractionation and its anti-diabetic potential. Food Chem Toxicol. 121: 687–700. PMID: 30273632",
+            "process_entry": "True",
+            "doi": "10.1016/j.fct.2018.09.064",
+            "pmid": "30273632",
+            "xmlid": "CIT0022"
+        },
+        {
+            "bibentry": "Olson, GE, Whitin, JC, Hill, KE, Winfrey, VP, Motley, AK, Austin, LM, Deal, J, Cohen, HJ, Burk, RF. 2010 Extracellular glutathione peroxidase (Gpx3) binds specifically to basement membranes of mouse renal cortex tubule cells. Am J Physiol Renal Physiol. 298(5): F1244–F1253. PMID: 20015939",
+            "process_entry": "True",
+            "doi": "10.1152/ajprenal.00662.2009",
+            "pmid": "20015939",
+            "pmcid": "PMC2867408",
+            "xmlid": "CIT0023"
+        },
+        {
+            "bibentry": "Pan, Y, Kong, LD. 2018 High fructose diet-induced metabolic syndrome: Pathophysiological mechanism and treatment by traditional Chinese medicine. Pharmacol Res. 130: 438–450. PMID: 29471102",
+            "process_entry": "True",
+            "doi": "10.1016/j.phrs.2018.02.020",
+            "pmid": "29471102",
+            "xmlid": "CIT0024"
+        },
+        {
+            "bibentry": "Pratali, L, Cavana, M, Sicari, R, Picano, E. 2010 Frequent subclinical high-altitude pulmonary edema detected by chest sonography as ultrasound lung comets in recreational climbers. Crit Care Med. 38: 1818–1823. PMID: 20562696",
+            "process_entry": "True",
+            "doi": "10.1097/ccm.0b013e3181e8ae0e",
+            "pmid": "20562696",
+            "xmlid": "CIT0025"
+        },
+        {
+            "bibentry": "Ramanathan, L, Gozal, D, Siegel, JM. 2005 Antioxidant response to chronic hypoxia in the rat cerebellum and pons. J Neurochem. 93(1): 47–52. PMID: 15773904",
+            "process_entry": "True",
+            "doi": "10.1111/j.1471-4159.2004.02988.x",
+            "pmid": "15773904",
+            "xmlid": "CIT0026"
+        },
+        {
+            "bibentry": "Ribon, A, Pialoux, V, Saugy, JJ, Rupp, T, Faiss, R, Debevec, T, Millet, GP. 2016 Exposure to hypobaric hypoxia results in higher oxidative stress compared to normobaric hypoxia. Respir Physiol Neurobiol. 223: 23–27. PMID: 26732282",
+            "process_entry": "True",
+            "doi": "10.1016/j.resp.2015.12.008",
+            "pmid": "26732282",
+            "xmlid": "CIT0027"
+        },
+        {
+            "bibentry": "Rosanna, DP, Salvatore, C. 2012 Reactive oxygen species, inflammation, and lung diseases. CPD. 18(26): 3889–3900.",
+            "process_entry": "True",
+            "xmlid": "CIT0028"
+        },
+        {
+            "bibentry": "Saari, H, Sorsa, T, Lindy, O, Suomalainen, K, Halinen, S, Konttinen, YT. 1992 Reactive oxygen species as regulators of human neutrophil and fibroblast interstitial collagenases. Int J Tissue React. 14(3): 113–120. PMID: 1446975",
+            "process_entry": "True",
+            "pmid": "1446975",
+            "xmlid": "CIT0029"
+        },
+        {
+            "bibentry": "Samuel, VT. 2011 Fructose induced lipogenesis: from sugar to fat to insulin resistance. Trends Endocrinol Metab. 22(2): 60–65. PMID: 21067942",
+            "process_entry": "True",
+            "doi": "10.1016/j.tem.2010.10.003",
+            "pmid": "21067942",
+            "xmlid": "CIT0030"
+        },
+        {
+            "bibentry": "Sha, W, Zhou, Y, Ling, ZQ, Xie, G, Pang, X, Wang, P, Gu, X. 2018 Antitumor properties of salvianolic acid B against triple-negative and hormone receptor-positive breast cancer cells via ceramide-mediated apoptosis. Oncotarget. 9(91): 36331–36343. PMID: 30555632",
+            "process_entry": "True",
+            "doi": "10.18632/oncotarget.26348",
+            "pmid": "30555632",
+            "pmcid": "PMC6284743",
+            "xmlid": "CIT0031"
+        },
+        {
+            "bibentry": "Soeda, A, Park, M, Lee, D, Mintz, A, Androutsellis-Theotokis, A, McKay, RD, Engh, J, Iwama, T, Kunisada, T, Kassam, AB, et al. 2009 Hypoxia promotes expansion of the CD133-positive glioma stem cells through activation of HIF-1alpha. Oncogene. 28(45): 3949–3959. PMID: 19718046",
+            "process_entry": "True",
+            "doi": "10.1038/onc.2009.252",
+            "pmid": "19718046",
+            "xmlid": "CIT0032"
+        },
+        {
+            "bibentry": "Sylvester, JT, Shimoda, LA, Aaronson, PI, Ward, JP. 2012 Hypoxic pulmonary vasoconstriction. Physiol Rev. 92(1): 367–520. PMID: 22298659",
+            "process_entry": "True",
+            "doi": "10.1152/physrev.00041.2010",
+            "pmid": "22298659",
+            "xmlid": "CIT0033"
+        },
+        {
+            "bibentry": "Tuder, RM, Petrache, I. 2012 Pathogenesis of chronic obstructive pulmonary disease. J Clin Invest. 122(8): 2749–2755. PMID: 22850885",
+            "process_entry": "True",
+            "doi": "10.1172/jci60324",
+            "pmid": "22850885",
+            "pmcid": "PMC3408733",
+            "xmlid": "CIT0034"
+        },
+        {
+            "bibentry": "Walker, RW, Goran, MI. 2015 Laboratory determined sugar content and composition of commercial infant formulas, baby foods and common grocery items targeted to children. Nutrients. 7(7): 5850–5867. PMID: 26193309",
+            "process_entry": "True",
+            "doi": "10.3390/nu7075254",
+            "pmid": "26193309",
+            "pmcid": "PMC4517031",
+            "xmlid": "CIT0035"
+        },
+        {
+            "bibentry": "Wang, H, Wang, S, Cui, D, Dong, S, Tuo, X, Liu, Z, Liu, Y. 2017 iTRAQ-based proteomic technology revealed protein perturbations in intestinal mucosa from manganese exposure in rat models. RSC Adv. 7(50): 31745–31758.",
+            "process_entry": "True",
+            "xmlid": "CIT0036"
+        },
+        {
+            "bibentry": "Wang, Z, Liu, F, Ye, S, Jiang, P, Yu, X, Xu, J, Du, X, Ma, L, Cao, H, Yuan, C, et al. 2019 Plasma proteome profiling of high-altitude polycythemia using TMT-based quantitative proteomics approach. J Proteomics. 194: 60–69. PMID: 30605725",
+            "process_entry": "True",
+            "doi": "10.1016/j.jprot.2018.12.031",
+            "pmid": "30605725",
+            "xmlid": "CIT0037"
+        },
+        {
+            "bibentry": "Wang, ZS, Luo, P, Dai, SH, Liu, ZB, Zheng, XR, Chen, T. 2013 Salvianolic acid B induces apoptosis in human glioma U87 cells through p38-mediated ROS generation. Cell Mol Neurobiol. 33(7): 921–928. PMID: 23842993",
+            "process_entry": "True",
+            "doi": "10.1007/s10571-013-9958-z",
+            "pmid": "23842993",
+            "xmlid": "CIT0038"
+        },
+        {
+            "bibentry": "Wilson, E, Leszczynska, K, Poulter, NS, Edelmann, F, Salisbury, VA, Noy, PJ, Bacon, A, Rappoport, JZ, Heath, JK, Bicknell, R, et al. 2014 RhoJ interacts with the GIT-PIX complex and regulates focal adhesion disassembly. J Cell Sci. 127(14): 3039–3051. PMID: 24928894",
+            "process_entry": "True",
+            "doi": "10.1242/jcs.140434",
+            "pmid": "24928894",
+            "pmcid": "PMC4106786",
+            "xmlid": "CIT0039"
+        },
+        {
+            "bibentry": "Winterbourn, CC. 2008 Reconciling the chemistry and biology of reactive oxygen species. Nat Chem Biol. 4(5): 278–286. PMID: 18421291",
+            "process_entry": "True",
+            "doi": "10.1038/nchembio.85",
+            "pmid": "18421291",
+            "xmlid": "CIT0040"
+        },
+        {
+            "bibentry": "Wiśniewski, JR, Zougman, A, Nagaraj, N, Mann, M. 2009 Universal sample preparation method for proteome analysis. Nat Methods. 6(5): 359–362. PMID: 19377485",
+            "process_entry": "True",
+            "doi": "10.1038/nmeth.1322",
+            "pmid": "19377485",
+            "xmlid": "CIT0041"
+        },
+        {
+            "bibentry": "Yang, R, Xie, T, Yang, H, Turner, S, Wu, G. 2018 Historical trends of organochlorine pesticides (OCPs) recorded in sediments across the Tibetan Plateau. Environ Geochem Health. 40(1): 303–312. PMID: 28097496",
+            "process_entry": "True",
+            "doi": "10.1007/s10653-017-9908-7",
+            "pmid": "28097496",
+            "xmlid": "CIT0042"
+        },
+        {
+            "bibentry": "Yu, J, Gao, H, Wu, C, Xu, QM, Lu, JJ, Chen, X. 2018 Diethyl blechnic, a novel natural product isolated from Salvia miltiorrhiza Bunge, inhibits doxorubicin-induced apoptosis by inhibiting ROS and activating JNK1/2. IJMS. 19(6): 1809.",
+            "process_entry": "True",
+            "xmlid": "CIT0043"
+        },
+        {
+            "bibentry": "Zhu, Y, Xu, H, Chen, H, Xie, J, Shi, M, Shen, B, Deng, X, Liu, C, Zhan, X, Peng, C. 2014 Proteomic analysis of solid pseudopapillary tumor of the pancreas reveals dysfunction of the endoplasmic reticulum protein processing pathway. Mol Cell Proteomics. 13(10): 2593–2603. PMID: 24997997",
+            "process_entry": "True",
+            "doi": "10.1074/mcp.m114.038786",
+            "pmid": "24997997",
+            "pmcid": "PMC4188989",
+            "xmlid": "CIT0044"
+        }
+    ],
+    "localid": "MED-32476549",
+    "doi": "10.1080/13880209.2020.1762668",
+    "pmid": "32476549",
+    "pmcid": "PMC7336993",
+    "curator": "BEE EuropeanPubMedCentralProcessor",
+    "source_provider": "Europe PubMed Central",
+    "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/32476549/fullTextXML",
+    "reference_pointers": [
+        [
+            {
+                "xref_id": "CIT0025",
+                "rp_string": "2010",
+                "rp_xpath": "/article/body/sec[1]/p[1]/xref[1]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[1]),1,106)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1,
+                    "paragraph": 1,
+                    "section": 1
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0042",
+                "rp_string": "2018",
+                "rp_xpath": "/article/body/sec[1]/p[1]/xref[2]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[1]),107,184)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 2,
+                    "paragraph": 1,
+                    "section": 1
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0003",
+                "rp_string": "2003",
+                "rp_xpath": "/article/body/sec[1]/p[1]/xref[3]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[1]),493,276)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[1]/p[1]),724,43)",
+                "pl_string": "(Barry and Pollard 2003; Beall et al. 2010)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 5,
+                    "paragraph": 1,
+                    "section": 1
+                }
+            },
+            {
+                "xref_id": "CIT0004",
+                "rp_string": "2010",
+                "rp_xpath": "/article/body/sec[1]/p[1]/xref[4]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[1]),493,276)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[1]/p[1]),724,43)",
+                "pl_string": "(Barry and Pollard 2003; Beall et al. 2010)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 5,
+                    "paragraph": 1,
+                    "section": 1
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0019",
+                "rp_string": "2005",
+                "rp_xpath": "/article/body/sec[1]/p[1]/xref[5]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[1]),769,165)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 6,
+                    "paragraph": 1,
+                    "section": 1
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0004",
+                "rp_string": "2010",
+                "rp_xpath": "/article/body/sec[1]/p[1]/xref[6]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[1]),934,251)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 7,
+                    "paragraph": 1,
+                    "section": 1
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0011",
+                "rp_string": "2001",
+                "rp_xpath": "/article/body/sec[1]/p[1]/xref[7]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[1]),934,251)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 7,
+                    "paragraph": 1,
+                    "section": 1
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0010",
+                "rp_string": "2017",
+                "rp_xpath": "/article/body/sec[1]/p[2]/xref[1]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[2]),123,352)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[1]/p[2]),440,33)",
+                "pl_string": "(Fei et al. 2017; Yu et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 11,
+                    "paragraph": 2,
+                    "section": 1
+                }
+            },
+            {
+                "xref_id": "CIT0043",
+                "rp_string": "2018",
+                "rp_xpath": "/article/body/sec[1]/p[2]/xref[2]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[2]),123,352)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[1]/p[2]),440,33)",
+                "pl_string": "(Fei et al. 2017; Yu et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 11,
+                    "paragraph": 2,
+                    "section": 1
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0012",
+                "rp_string": "2015",
+                "rp_xpath": "/article/body/sec[1]/p[2]/xref[3]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[2]),475,220)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[1]/p[2]),595,34)",
+                "pl_string": "(Hao et al. 2015; Jia et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 12,
+                    "paragraph": 2,
+                    "section": 1
+                }
+            },
+            {
+                "xref_id": "CIT0017",
+                "rp_string": "2018",
+                "rp_xpath": "/article/body/sec[1]/p[2]/xref[4]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[2]),475,220)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[1]/p[2]),595,34)",
+                "pl_string": "(Hao et al. 2015; Jia et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 12,
+                    "paragraph": 2,
+                    "section": 1
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0023",
+                "rp_string": "2010",
+                "rp_xpath": "/article/body/sec[1]/p[3]/xref[1]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[3]),109,118)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[1]/p[3]),187,38)",
+                "pl_string": "(Olson et al. 2010; Ribon et al. 2016)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 16,
+                    "paragraph": 3,
+                    "section": 1
+                }
+            },
+            {
+                "xref_id": "CIT0027",
+                "rp_string": "2016",
+                "rp_xpath": "/article/body/sec[1]/p[3]/xref[2]",
+                "context_xpath": "substring(string(/article/body/sec[1]/p[3]),109,118)",
+                "containers_title": {
+                    "/article/body/sec[1]/title": "Introduction"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[1]/p[3]),187,38)",
+                "pl_string": "(Olson et al. 2010; Ribon et al. 2016)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 16,
+                    "paragraph": 3,
+                    "section": 1
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0044",
+                "rp_string": "2014",
+                "rp_xpath": "/article/body/sec[2]/sec[4]/p/xref",
+                "context_xpath": "substring(string(/article/body/sec[2]/sec[4]/p),561,101)",
+                "containers_title": {
+                    "/article/body/sec[2]/title": "Materials and methods",
+                    "/article/body/sec[2]/sec[4]/title": "Protein extraction"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 368,
+                    "paragraph": 8,
+                    "section": 2
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0041",
+                "rp_string": "2009",
+                "rp_xpath": "/article/body/sec[3]/sec[1]/p/xref[1]",
+                "context_xpath": "substring(string(/article/body/sec[3]/sec[1]/p),1064,134)",
+                "containers_title": {
+                    "/article/body/sec[3]/title": "SDS-PAGE",
+                    "/article/body/sec[3]/sec[1]/title": "FASP enzymolysis"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[3]/sec[1]/p),1155,42)",
+                "pl_string": "(Wiśniewski et al. 2009; Wang et al. 2017)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 700,
+                    "paragraph": 10,
+                    "section": 3
+                }
+            },
+            {
+                "xref_id": "CIT0036",
+                "rp_string": "2017",
+                "rp_xpath": "/article/body/sec[3]/sec[1]/p/xref[2]",
+                "context_xpath": "substring(string(/article/body/sec[3]/sec[1]/p),1064,134)",
+                "containers_title": {
+                    "/article/body/sec[3]/title": "SDS-PAGE",
+                    "/article/body/sec[3]/sec[1]/title": "FASP enzymolysis"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[3]/sec[1]/p),1155,42)",
+                "pl_string": "(Wiśniewski et al. 2009; Wang et al. 2017)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 700,
+                    "paragraph": 10,
+                    "section": 3
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0036",
+                "rp_string": "2017",
+                "rp_xpath": "/article/body/sec[3]/sec[2]/p/xref[1]",
+                "context_xpath": "substring(string(/article/body/sec[3]/sec[2]/p),1017,225)",
+                "containers_title": {
+                    "/article/body/sec[3]/title": "SDS-PAGE",
+                    "/article/body/sec[3]/sec[2]/title": "TMT labelling, HPLC fractionation and LC − MS/MS"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[3]/sec[2]/p),1216,24)",
+                "pl_string": "(Wang et al. 2017; 2019)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 708,
+                    "paragraph": 11,
+                    "section": 3
+                }
+            },
+            {
+                "xref_id": "CIT0037",
+                "rp_string": "2019",
+                "rp_xpath": "/article/body/sec[3]/sec[2]/p/xref[2]",
+                "context_xpath": "substring(string(/article/body/sec[3]/sec[2]/p),1017,225)",
+                "containers_title": {
+                    "/article/body/sec[3]/title": "SDS-PAGE",
+                    "/article/body/sec[3]/sec[2]/title": "TMT labelling, HPLC fractionation and LC − MS/MS"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[3]/sec[2]/p),1216,24)",
+                "pl_string": "(Wang et al. 2017; 2019)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 708,
+                    "paragraph": 11,
+                    "section": 3
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0032",
+                "rp_string": "2009",
+                "rp_xpath": "/article/body/sec[5]/sec[1]/p/xref[4]",
+                "context_xpath": "substring(string(/article/body/sec[5]/sec[1]/p),757,113)",
+                "containers_title": {
+                    "/article/body/sec[5]/title": "Results",
+                    "/article/body/sec[5]/sec[1]/title": "The major components of SPM and its significant antihypoxia effects"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1382,
+                    "paragraph": 15,
+                    "section": 5
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0022",
+                "rp_string": "2018",
+                "rp_xpath": "/article/body/sec[6]/p[1]/xref[1]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[1]),105,195)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1768,
+                    "paragraph": 20,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0001",
+                "rp_string": "2016",
+                "rp_xpath": "/article/body/sec[6]/p[1]/xref[2]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[1]),105,195)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1768,
+                    "paragraph": 20,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0006",
+                "rp_string": "2011",
+                "rp_xpath": "/article/body/sec[6]/p[1]/xref[3]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[1]),300,294)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1769,
+                    "paragraph": 20,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0038",
+                "rp_string": "2013",
+                "rp_xpath": "/article/body/sec[6]/p[1]/xref[4]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[1]),300,294)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/p[1]),501,35)",
+                "pl_string": "(Wang et al. 2013; Sha et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1769,
+                    "paragraph": 20,
+                    "section": 6
+                }
+            },
+            {
+                "xref_id": "CIT0031",
+                "rp_string": "2018",
+                "rp_xpath": "/article/body/sec[6]/p[1]/xref[5]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[1]),300,294)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/p[1]),501,35)",
+                "pl_string": "(Wang et al. 2013; Sha et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1769,
+                    "paragraph": 20,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0008",
+                "rp_string": "2018",
+                "rp_xpath": "/article/body/sec[6]/p[1]/xref[6]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[1]),300,294)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1769,
+                    "paragraph": 20,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0013",
+                "rp_string": "2008",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[1]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),1,153)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1771,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0019",
+                "rp_string": "2005",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[2]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),154,126)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1772,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0010",
+                "rp_string": "2017",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[3]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),385,185)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/p[2]),535,33)",
+                "pl_string": "(Fei et al. 2017; Yu et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1774,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            },
+            {
+                "xref_id": "CIT0043",
+                "rp_string": "2018",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[4]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),385,185)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/p[2]),535,33)",
+                "pl_string": "(Fei et al. 2017; Yu et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1774,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0015",
+                "rp_string": "2011",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[5]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),1025,271)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/p[2]),1222,72)",
+                "pl_string": "(Kaur et al. 2011; Kim et al. 2014; Wilson et al. 2014; Liu et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1779,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            },
+            {
+                "xref_id": "CIT0016",
+                "rp_string": "2014",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[6]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),1025,271)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/p[2]),1222,72)",
+                "pl_string": "(Kaur et al. 2011; Kim et al. 2014; Wilson et al. 2014; Liu et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1779,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            },
+            {
+                "xref_id": "CIT0039",
+                "rp_string": "2014",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[7]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),1025,271)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/p[2]),1222,72)",
+                "pl_string": "(Kaur et al. 2011; Kim et al. 2014; Wilson et al. 2014; Liu et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1779,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            },
+            {
+                "xref_id": "CIT0020",
+                "rp_string": "2018",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[8]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),1025,271)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/p[2]),1222,72)",
+                "pl_string": "(Kaur et al. 2011; Kim et al. 2014; Wilson et al. 2014; Liu et al. 2018)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1779,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0016",
+                "rp_string": "2014",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[9]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),1296,108)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1780,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0007",
+                "rp_string": "2011",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[10]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),1404,100)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1781,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0029",
+                "rp_string": "1992",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[11]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),1504,167)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1782,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0007",
+                "rp_string": "2011",
+                "rp_xpath": "/article/body/sec[6]/p[2]/xref[12]",
+                "context_xpath": "substring(string(/article/body/sec[6]/p[2]),1671,216)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1783,
+                    "paragraph": 21,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0009",
+                "rp_string": "2007",
+                "rp_xpath": "/article/body/sec[6]/sec[1]/p/xref[1]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),1,388)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[1]/title": "Expression of antioxidant proteins"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),257,55)",
+                "pl_string": "(Dosek et al. 2007; Winterbourn 2008; Arya et al. 2013)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1787,
+                    "paragraph": 22,
+                    "section": 6
+                }
+            },
+            {
+                "xref_id": "CIT0040",
+                "rp_string": "2008",
+                "rp_xpath": "/article/body/sec[6]/sec[1]/p/xref[2]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),1,388)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[1]/title": "Expression of antioxidant proteins"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),257,55)",
+                "pl_string": "(Dosek et al. 2007; Winterbourn 2008; Arya et al. 2013)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1787,
+                    "paragraph": 22,
+                    "section": 6
+                }
+            },
+            {
+                "xref_id": "CIT0002",
+                "rp_string": "2013",
+                "rp_xpath": "/article/body/sec[6]/sec[1]/p/xref[3]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),1,388)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[1]/title": "Expression of antioxidant proteins"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),257,55)",
+                "pl_string": "(Dosek et al. 2007; Winterbourn 2008; Arya et al. 2013)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1787,
+                    "paragraph": 22,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0014",
+                "rp_string": "2005",
+                "rp_xpath": "/article/body/sec[6]/sec[1]/p/xref[4]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),1,388)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[1]/title": "Expression of antioxidant proteins"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),343,44)",
+                "pl_string": "(Jayalakshmi et al. 2005; Maiti et al. 2006)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1787,
+                    "paragraph": 22,
+                    "section": 6
+                }
+            },
+            {
+                "xref_id": "CIT0021",
+                "rp_string": "2006",
+                "rp_xpath": "/article/body/sec[6]/sec[1]/p/xref[5]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),1,388)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[1]/title": "Expression of antioxidant proteins"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),343,44)",
+                "pl_string": "(Jayalakshmi et al. 2005; Maiti et al. 2006)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1787,
+                    "paragraph": 22,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0028",
+                "rp_string": "2012",
+                "rp_xpath": "/article/body/sec[6]/sec[1]/p/xref[6]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),389,282)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[1]/title": "Expression of antioxidant proteins"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),593,76)",
+                "pl_string": "(Rosanna and Salvatore 2012; Sylvester et al. 2012; Tuder and Petrache 2012)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1788,
+                    "paragraph": 22,
+                    "section": 6
+                }
+            },
+            {
+                "xref_id": "CIT0033",
+                "rp_string": "2012",
+                "rp_xpath": "/article/body/sec[6]/sec[1]/p/xref[7]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),389,282)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[1]/title": "Expression of antioxidant proteins"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),593,76)",
+                "pl_string": "(Rosanna and Salvatore 2012; Sylvester et al. 2012; Tuder and Petrache 2012)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1788,
+                    "paragraph": 22,
+                    "section": 6
+                }
+            },
+            {
+                "xref_id": "CIT0034",
+                "rp_string": "2012",
+                "rp_xpath": "/article/body/sec[6]/sec[1]/p/xref[8]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),389,282)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[1]/title": "Expression of antioxidant proteins"
+                },
+                "pl_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),593,76)",
+                "pl_string": "(Rosanna and Salvatore 2012; Sylvester et al. 2012; Tuder and Petrache 2012)",
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1788,
+                    "paragraph": 22,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0026",
+                "rp_string": "2005",
+                "rp_xpath": "/article/body/sec[6]/sec[1]/p/xref[9]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),753,137)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[1]/title": "Expression of antioxidant proteins"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1790,
+                    "paragraph": 22,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0005",
+                "rp_string": "2015",
+                "rp_xpath": "/article/body/sec[6]/sec[1]/p/xref[10]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[1]/p),890,131)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[1]/title": "Expression of antioxidant proteins"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1791,
+                    "paragraph": 22,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0024",
+                "rp_string": "2018",
+                "rp_xpath": "/article/body/sec[6]/sec[2]/p/xref[1]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[2]/p),186,107)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[2]/title": "Expression of proteins associated with fructose metabolism"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1797,
+                    "paragraph": 23,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0018",
+                "rp_string": "2018",
+                "rp_xpath": "/article/body/sec[6]/sec[2]/p/xref[2]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[2]/p),293,323)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[2]/title": "Expression of proteins associated with fructose metabolism"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1798,
+                    "paragraph": 23,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0030",
+                "rp_string": "2011",
+                "rp_xpath": "/article/body/sec[6]/sec[2]/p/xref[3]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[2]/p),616,257)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[2]/title": "Expression of proteins associated with fructose metabolism"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1799,
+                    "paragraph": 23,
+                    "section": 6
+                }
+            }
+        ],
+        [
+            {
+                "xref_id": "CIT0035",
+                "rp_string": "2015",
+                "rp_xpath": "/article/body/sec[6]/sec[2]/p/xref[4]",
+                "context_xpath": "substring(string(/article/body/sec[6]/sec[2]/p),616,257)",
+                "containers_title": {
+                    "/article/body/sec[6]/title": "Discussion",
+                    "/article/body/sec[6]/sec[2]/title": "Expression of proteins associated with fructose metabolism"
+                },
+                "context_sequence": {
+                    "type": "Sentence",
+                    "num": 1799,
+                    "paragraph": 23,
+                    "section": 6
+                }
+            }
+        ]
+    ]
+}

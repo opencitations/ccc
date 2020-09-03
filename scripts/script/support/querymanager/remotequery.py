@@ -27,10 +27,11 @@ class RemoteQuery(QueryInterface):
         self.__orcid_api_url = 'https://pub.orcid.org/v2.1/search?q='
         self.__personal_url = "https://pub.orcid.org/v2.1/%s/personal-details"
 
+    def get_data_crossref_doi(self, entity):
+        return self.__get_data(entity)
 
-    def get_data_crossref(self, entity):
-        get_url = self.__crossref_url + entity
-        return self.__get_data(get_url)
+    def get_data_crossref_bibref(self, entity):
+        return self.__get_data(entity)
 
     def get_data_orcid(self, entity):
         get_url = self.__personal_url % entity

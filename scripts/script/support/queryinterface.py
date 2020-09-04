@@ -38,10 +38,10 @@ class LocalQuery(QueryInterface):
     def __init__(self,
                  crossref_url='http://localhost:8983/solr/crossref_without_metadata',
                  orcid_url='http://localhost:8983/solr/orcid',
-                 reper = None,
+                 reperr = None,
                  repok = None):
 
-        self.reper = reper
+        self.reperr = reperr
         self.repok = repok
 
         self.crossref_query_instance = pysolr.Solr(crossref_url, always_commit=True, timeout=100)
@@ -63,8 +63,8 @@ class LocalQuery(QueryInterface):
         results = self.crossref_query_instance.search(fl='*,score', q=query)
 
         if len(results) != 1:
-            if self.reper is not None:
-                self.reper.add_sentence("[LocalQuery - Crossref] Error with: `{}`, {} results.".format(entity, len(results)))
+            if self.reperr is not None:
+                self.reperr.add_sentence("[LocalQuery - Crossref] Error with: `{}`, {} results.".format(entity, len(results)))
             return None
         else:
             return [json.loads(str(r['original'][0]).replace("'", '"')) for r in results][0]
@@ -80,8 +80,8 @@ class LocalQuery(QueryInterface):
         results = self.crossref_query_instance.search(fl='*,score', q=query)
 
         if len(results) < 1:
-            if self.reper is not None:
-                self.reper.add_sentence("[LocalQuery - Crossref] Error with: `{}`".format(entity))
+            if self.reperr is not None:
+                self.reperr.add_sentence("[LocalQuery - Crossref] Error with: `{}`".format(entity))
             return None
         else:
 
@@ -112,7 +112,7 @@ class RemoteQuery(QueryInterface):
                                          "mailto:contact@opencitations.net)"},
                 timeout=30,
                 repok = None,
-                reper = None,
+                reperr = None,
                 is_json = True):
 
         self.max_iteration = max_iteration
@@ -120,9 +120,9 @@ class RemoteQuery(QueryInterface):
         self.headers = headers
         self.timeout = timeout
         self.repok = repok
-        self.reper = reper
+        self.reperr = reperr
         self.is_json = is_json
-        self.crossref_min_similarity_score = 0.95
+        self.crossref_min_similarity_score = crossref_min_similarity_score
         self.__crossref_doi_url = 'https://api.crossref.org/works/'
         self.__crossref_entry_url = 'https://api.crossref.org/works?query.bibliographic='
         self.__orcid_api_url = 'https://pub.orcid.org/v2.1/search?q='
@@ -210,5 +210,5 @@ class RemoteQuery(QueryInterface):
                                "when retrieving data. %s" % sys.exc_info()[0]]
 
         # If the process comes here, no valid result has been returned
-        if self.reper is not None:
-            self.reper.add_sentence(" | ".join(errors) + "\n\tRequested URL: " + get_url)
+        if self.reperr is not None:
+            self.reperr.add_sentence(" | ".join(errors) + "\n\tRequested URL: " + get_url)

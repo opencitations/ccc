@@ -7,6 +7,7 @@ from time import sleep
 import requests
 import sys
 from netifaces import ifaddresses, AF_INET
+import re
 
 class QueryInterface(ABC):
 
@@ -28,9 +29,12 @@ class QueryInterface(ABC):
 
 class LocalQuery(QueryInterface):
 
-    def __init__(self):
+    def __init__(self, reper = None, repok = None):
+        self.reper = reper
+        self.repok = repok
+
         # change these urls according to the local instance of Solr
-        self.__crossref_url = 'http://localhost:8983/solr/crossref'
+        self.__crossref_url = 'http://localhost:8983/solr/crossref_without_metadata'
         self.__orcid_url = 'http://localhost:8983/solr/orcid'
 
         self.crossref_query_instance = pysolr.Solr(self.__crossref_url, always_commit=True, timeout=100)
@@ -41,20 +45,39 @@ class LocalQuery(QueryInterface):
         results = self.crossref_query_instance.search(fl='*,score', q=query)
 
         if len(results) < 1:
-            self.reper.add_sentence("[LocalQuery - Crossref] Error with: `{}`".format(entity))
+            if self.reper is not None:
+                self.reper.add_sentence("[LocalQuery - Crossref] Error with: `{}`".format(entity))
             return None
         else:
-            return [json.loads(str(r['original']).replace("'", '"')) for r in results]
+            return [json.loads(str(r['original'][0]).replace("'", '"')) for r in results]
 
     def get_data_crossref_bibref(self, entity):
+        entity = ' '.join(item for item in entity.split() if not (item.startswith('https://') and len(item) > 7))
+        entity = ' '.join(item for item in entity.split() if not (item.startswith('http://') and len(item) > 7))
+        entity = entity.replace("et al.", "")
+        entity = entity.replace("Available at:", "")
+        entity = re.sub('\W+', ' ', entity)
+        entity = entity.strip()
+        print(entity)
         query = 'bibref:({})'.format(entity)
         results = self.crossref_query_instance.search(fl='*,score', q=query)
 
         if len(results) < 1:
-            self.reper.add_sentence("[LocalQuery - Crossref] Error with: `{}`".format(entity))
+            if self.reper is not None:
+                self.reper.add_sentence("[LocalQuery - Crossref] Error with: `{}`".format(entity))
             return None
         else:
-            return [json.loads(str(r['original']).replace("'", '"')) for r in results]
+
+            # This is a temporary code form in order to run on my local machine
+            # where the `original` field has been added only for a few amount of docs
+
+            toreturn = []
+            for r in results:
+                if 'original' in r:
+                    toreturn.append(json.loads(r['original'][0]))
+
+
+            return toreturn
 
     def get_data_orcid(self, entity):
         get_url = self.__personal_url % entity
@@ -84,15 +107,16 @@ class RemoteQuery(QueryInterface):
         self.reper = reper
         self.is_json = is_json
 
-        self.__crossref_url = 'https://api.crossref.org/works?query.bibliographic='
+        self.__crossref_doi_url = 'https://api.crossref.org/works/'
+        self.__crossref_entry_url = 'https://api.crossref.org/works?query.bibliographic='
         self.__orcid_api_url = 'https://pub.orcid.org/v2.1/search?q='
         self.__personal_url = "https://pub.orcid.org/v2.1/%s/personal-details"
 
     def get_data_crossref_doi(self, entity):
-        return self.__get_data(self.__crossref_url + entity)
+        return self.__get_data(self.__crossref_doi_url + entity)
 
     def get_data_crossref_bibref(self, entity):
-        return self.__get_data(self.__crossref_url + entity)
+        return self.__get_data(self.__crossref_entry_url + entity)
 
     def get_data_orcid(self, entity):
         return self.__get_data(self.__personal_url % entity)

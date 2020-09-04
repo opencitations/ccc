@@ -6,8 +6,10 @@ import json
 from time import sleep
 import requests
 import sys
-from netifaces import ifaddresses, AF_INET
 import re
+from script.ccc.jats2oc import Jats2OC as jt
+from script.spacin.formatproc import FormatProcessor
+
 
 class QueryInterface(ABC):
 
@@ -40,16 +42,17 @@ class LocalQuery(QueryInterface):
         self.crossref_query_instance = pysolr.Solr(self.__crossref_url, always_commit=True, timeout=100)
         self.orcid_query_instance = pysolr.Solr(self.__orcid_url, always_commit=True, timeout=100)
 
+    # This function will return exactly one if found, otherwise None
     def get_data_crossref_doi(self, entity):
         query = 'id:"{}"'.format(entity)
         results = self.crossref_query_instance.search(fl='*,score', q=query)
 
-        if len(results) < 1:
+        if len(results) != 1:
             if self.reper is not None:
-                self.reper.add_sentence("[LocalQuery - Crossref] Error with: `{}`".format(entity))
+                self.reper.add_sentence("[LocalQuery - Crossref] Error with: `{}`, {} results.".format(entity, len(results)))
             return None
         else:
-            return [json.loads(str(r['original'][0]).replace("'", '"')) for r in results]
+            return [json.loads(str(r['original'][0]).replace("'", '"')) for r in results][0]
 
     def get_data_crossref_bibref(self, entity):
         entity = ' '.join(item for item in entity.split() if not (item.startswith('https://') and len(item) > 7))
@@ -58,7 +61,6 @@ class LocalQuery(QueryInterface):
         entity = entity.replace("Available at:", "")
         entity = re.sub('\W+', ' ', entity)
         entity = entity.strip()
-        print(entity)
         query = 'bibref:({})'.format(entity)
         results = self.crossref_query_instance.search(fl='*,score', q=query)
 
@@ -68,16 +70,14 @@ class LocalQuery(QueryInterface):
             return None
         else:
 
-            # This is a temporary code form in order to run on my local machine
+            # @TODO: change this behavior before deploying it.
+            # This is a temporary code fix in order to run on my local machine
             # where the `original` field has been added only for a few amount of docs
-
             toreturn = []
             for r in results:
                 if 'original' in r:
                     toreturn.append(json.loads(r['original'][0]))
-
-
-            return toreturn
+            return toreturn[0]
 
     def get_data_orcid(self, entity):
         get_url = self.__personal_url % entity
@@ -90,6 +90,7 @@ class LocalQuery(QueryInterface):
 class RemoteQuery(QueryInterface):
 
     def __init__(self,
+                crossref_min_similarity_score = 0.95,
                 max_iteration=6,
                 sec_to_wait = 10,
                 headers = {"User-Agent": "SPACIN / CrossrefProcessor (via OpenCitations - http://opencitations.net; "
@@ -106,17 +107,35 @@ class RemoteQuery(QueryInterface):
         self.repok = repok
         self.reper = reper
         self.is_json = is_json
-
+        self.crossref_min_similarity_score = 0.95
         self.__crossref_doi_url = 'https://api.crossref.org/works/'
         self.__crossref_entry_url = 'https://api.crossref.org/works?query.bibliographic='
         self.__orcid_api_url = 'https://pub.orcid.org/v2.1/search?q='
         self.__personal_url = "https://pub.orcid.org/v2.1/%s/personal-details"
 
-    def get_data_crossref_doi(self, entity):
-        return self.__get_data(self.__crossref_doi_url + entity)
+    def __get_crossref_item(self, json_crossref, fuzzy_match=None):
+        result = None
+        if json_crossref is not None and json_crossref["status"] == "ok":
+            if json_crossref["message-type"] in ["work", "member"]:
+                result = json_crossref["message"]
+            elif json_crossref["message-type"] == "work-list":
+                result = json_crossref["message"]["items"][0]
+                if fuzzy_match is not None and result["score"] >= self.crossref_min_similarity_score:
+                    entry_cleaned = fuzzy_match
+                    result = jt.fuzzy_match(entry_cleaned, \
+                                json_crossref["message"]["items"], \
+                                self.crossref_min_similarity_score)
+                else:
+                    if result["score"] < self.crossref_min_similarity_score:
+                        result = None
+        return result
 
-    def get_data_crossref_bibref(self, entity):
-        return self.__get_data(self.__crossref_entry_url + entity)
+    def get_data_crossref_doi(self, doi):
+        return self.__get_crossref_item(self.__get_data(self.__crossref_doi_url + doi))
+
+    def get_data_crossref_bibref(self, entry):
+        entry_cleaned = FormatProcessor.clean_entry(entry)
+        return self.__get_crossref_item(self.__get_data(self.__crossref_entry_url + entry), fuzzy_match = entry_cleaned)
 
     def get_data_orcid(self, entity):
         return self.__get_data(self.__personal_url % entity)

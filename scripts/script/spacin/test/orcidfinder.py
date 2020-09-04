@@ -25,16 +25,26 @@ class SupportTest(unittest.TestCase):
 
     def setUp(self):
         self.TEST_DIR = os.path.dirname(os.path.abspath(__file__))
-        self.oc = ORCIDFinder(os.path.join(self.TEST_DIR, '..', 'orcid_conf.json'))
 
-    def test_get_orcid_records(self):
+    def test_get_orcid_records_remote(self):
+        oc = ORCIDFinder(os.path.join(self.TEST_DIR, '..', 'orcid_conf.json'), query_interface='remote')
         names = ["Peroni"]
         doi = "10.3233/DS-170012"
         orcid = "0000-0003-0530-4305"
-        items = self.oc.get_orcid_ids(doi, names)
+        items = oc.get_orcid_ids(doi, names)
         self.assertEqual(len(items), 1)
         self.assertIn(orcid, items[0]["orcid"])
 
+    def  test_get_orcid_records_local(self):
+        oc = ORCIDFinder(os.path.join(self.TEST_DIR, '..', 'orcid_conf.json'), query_interface='local')
+        names = ["Peroni"]
+        doi = "10.3233/DS-170012"
+        orcid = "0000-0003-0530-4305"
+        items = oc.get_orcid_ids(doi, names)
+        self.assertEqual(len(items), 1)
+        self.assertIn(orcid, items[0]["orcid"])
+        self.assertEquals("Silvio", items[0]["given"])
+        self.assertEquals("Peroni", items[0]["family"])
 
 if __name__ == '__main__':
     unittest.main()

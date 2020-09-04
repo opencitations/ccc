@@ -23,10 +23,6 @@ class QueryInterface(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def get_data_orcid(self, entity):
-        raise NotImplementedError
-
-    @abstractmethod
     def get_records_orcid(self, entity):
         raise NotImplementedError
 
@@ -95,9 +91,10 @@ class LocalQuery(QueryInterface):
                     toreturn.append(json.loads(r['original'][0]))
             return toreturn[0]
 
-    def get_data_orcid(self, entity):
+
+    def get_records_orcid(self, entity):
         query = 'id:"{}"'.format(entity)
-        results = self.crossref_query_instance.search(fl='*,score', q=query)
+        results = self.orcid_query_instance.search(fl='*,score', q=query)
 
         if len(results) != 1:
             if self.reperr is not None:
@@ -105,11 +102,7 @@ class LocalQuery(QueryInterface):
                     "[LocalQuery - Crossref] Error with: `{}`, {} results.".format(entity, len(results)))
             return None
         else:
-            return [json.loads(str(r['authors'][0]).replace("'", '"')) for r in results][0]
-
-    def get_records_orcid(self, entity):
-        get_url = self.__orcid_api_url + entity
-        return self.__get_data(get_url)
+            return [json.loads(r['authors'])[0] for r in results]
 
 class RemoteQuery(QueryInterface):
 
@@ -160,9 +153,6 @@ class RemoteQuery(QueryInterface):
     def get_data_crossref_bibref(self, entry):
         entry_cleaned = FormatProcessor.clean_entry(entry)
         return self.__get_crossref_item(self.__get_data(self.__crossref_entry_url + entry_cleaned), fuzzy_match = entry_cleaned)
-
-    def get_data_orcid(self, entity):
-        return self.__get_data(self.__personal_url % entity)
 
     def get_records_orcid(self, entity):
         return self.__get_data(self.__orcid_api_url + entity)

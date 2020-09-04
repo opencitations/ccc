@@ -29,18 +29,33 @@ class QueryInterface(ABC):
     def get_records_orcid(self, entity):
         raise NotImplementedError
 
+    @classmethod
+    def close(self):
+        pass
+
 class LocalQuery(QueryInterface):
 
-    def __init__(self, reper = None, repok = None):
+    def __init__(self,
+                 crossref_url='http://localhost:8983/solr/crossref_without_metadata',
+                 orcid_url='http://localhost:8983/solr/orcid',
+                 reper = None,
+                 repok = None):
+
         self.reper = reper
         self.repok = repok
 
-        # change these urls according to the local instance of Solr
-        self.__crossref_url = 'http://localhost:8983/solr/crossref_without_metadata'
-        self.__orcid_url = 'http://localhost:8983/solr/orcid'
+        self.crossref_query_instance = pysolr.Solr(crossref_url, always_commit=True, timeout=100)
+        self.orcid_query_instance = pysolr.Solr(orcid_url, always_commit=True, timeout=100)
 
-        self.crossref_query_instance = pysolr.Solr(self.__crossref_url, always_commit=True, timeout=100)
-        self.orcid_query_instance = pysolr.Solr(self.__orcid_url, always_commit=True, timeout=100)
+        try:
+            self.crossref_query_instance.ping()
+            self.orcid_query_instance.ping()
+        except Exception as e:
+            raise e
+
+    def close(self):
+        self.crossref_query_instance.get_session().close()
+        self.orcid_query_instance.get_session().close()
 
     # This function will return exactly one if found, otherwise None
     def get_data_crossref_doi(self, entity):

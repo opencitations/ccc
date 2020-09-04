@@ -10,6 +10,7 @@ import re
 from script.ccc.jats2oc import Jats2OC as jt
 from script.spacin.formatproc import FormatProcessor
 
+__author__ = 'Gabriele Pisciotta'
 
 class QueryInterface(ABC):
 
@@ -137,9 +138,9 @@ class RemoteQuery(QueryInterface):
                 result = json_crossref["message"]["items"][0]
                 if fuzzy_match is not None and result["score"] >= self.crossref_min_similarity_score:
                     entry_cleaned = fuzzy_match
-                    result = jt.fuzzy_match(entry_cleaned, \
-                                json_crossref["message"]["items"], \
-                                self.crossref_min_similarity_score)
+                    result = jt.fuzzy_match(entry_cleaned,
+                                            json_crossref["message"]["items"],
+                                            self.crossref_min_similarity_score)
                 else:
                     if result["score"] < self.crossref_min_similarity_score:
                         result = None
@@ -150,7 +151,7 @@ class RemoteQuery(QueryInterface):
 
     def get_data_crossref_bibref(self, entry):
         entry_cleaned = FormatProcessor.clean_entry(entry)
-        return self.__get_crossref_item(self.__get_data(self.__crossref_entry_url + entry), fuzzy_match = entry_cleaned)
+        return self.__get_crossref_item(self.__get_data(self.__crossref_entry_url + entry_cleaned), fuzzy_match = entry_cleaned)
 
     def get_data_orcid(self, entity):
         return self.__get_data(self.__personal_url % entity)

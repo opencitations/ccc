@@ -14,18 +14,15 @@
 # ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
 # SOFTWARE.
 
-__author__ = 'essepuntato'
+__author__ = 'essepuntato, Gabriele Pisciotta'
 
-from script.ocdm.graphlib import GraphEntity as ge
+from script.support.queryinterface import LocalQuery, RemoteQuery
 from script.support.support import dict_get as dg
-from script.support.support import get_data
 from script.support.support import encode_url
 from script.spacin.formatproc import FormatProcessor
 from script.ocdm.crossrefdatahandler import CrossrefDataHandler
 from script.ocdm.graphlib import GraphEntity
 from script.ccc.jats2oc import Jats2OC as jt
-from re import sub
-from fuzzywuzzy import fuzz
 
 
 class CrossrefProcessor(FormatProcessor):
@@ -46,53 +43,90 @@ class CrossrefProcessor(FormatProcessor):
                  use_doi_in_bibentry_as_id=True,
                  use_url_in_bibentry_as_id=True,
                  crossref_min_similarity_score=95.0,
-                 intext_refs=False):
+                 intext_refs=False,
+                 query_interface = 'local'):
+
         self.crossref_api_works = "https://api.crossref.org/works/"
         self.crossref_api_search = "https://api.crossref.org/works?rows=3&query.bibliographic=" # return 3 results
-        self.headers = headers
-        self.sec_to_wait = sec_to_wait
-        self.max_iteration = max_iteration
-        self.timeout = timeout
+
         self.rf = res_finder
         self.of = of_finder
         self.get_bib_entry_url = use_url_in_bibentry_as_id
         self.get_bib_entry_doi = use_doi_in_bibentry_as_id
         self.crossref_min_similarity_score = crossref_min_similarity_score
         self.intext_refs = intext_refs
+
         super(CrossrefProcessor, self).__init__(
             base_iri, context_base, info_dir, entries, n_file_item, supplier_prefix, "Crossref")
 
-    def __process_entity(self, entity, api_url):
-        return get_data(self.max_iteration, self.sec_to_wait, api_url + entity,
-                        self.headers, self.timeout, self.repok, self.reperr)
+        if query_interface == 'local':
+            self.query_interface = LocalQuery(reperr = self.reperr,
+                                              repok = self.repok)
+        elif query_interface == 'remote':
+            self.query_interface = RemoteQuery(self.crossref_min_similarity_score,
+                                                max_iteration,
+                                                sec_to_wait,
+                                                headers,
+                                                timeout,
+                                                reperr = self.repok,
+                                                repok = self.reperr,
+                                                is_json = True)
+        else:
+            raise ValueError("query_interface param must be `local` or `remote`")
 
-    # @param check: set it True in order to return the json (used in the test)
-    def process_entry(self, entry, check = False):
-        entry_cleaned = FormatProcessor.clean_entry(entry)
-        cur_json = self.get_crossref_item(
-            self.__process_entity(entry_cleaned, self.crossref_api_search),fuzzy_match=entry_cleaned) # returns first if similarity score > 95.0
+    def process_entry(self, entry: str, check: bool = True):
+        """
+        Process an entry (bibref), searching for it on Crossref (local/remote).
+
+        Parameters
+        ----------
+        entry : string
+            The entry to be searched.
+        check : bool
+            Set it to True only in the tests in order to return the json
+        """
+        cur_json = self.query_interface.get_data_crossref_bibref(entry)
         if cur_json is not None:
-                if check:
-                    return cur_json
-                else:
-                    return self.process_crossref_json(
-                        cur_json, self.crossref_api_search + entry_cleaned,
-                        self.name, self.id, self.source)
+            if check:
+                return cur_json
+            else:
+                return self.process_crossref_json(cur_json,
+                                                  self.crossref_api_search + FormatProcessor.clean_entry(entry),
+                                                  self.name,
+                                                  self.id,
+                                                  self.source)
 
+    def process_doi(self, doi: str, doi_curator: str, doi_source_provider: str, check=False):
+        """
+        Process a DOI searching for it on Crossref (local/remote).
 
-    # @param check: set it True in order to return the json (used in the test)
-    def process_doi(self, doi, doi_curator, doi_source_provider, check=False):
+        Parameters
+        ----------
+        doi : string
+            The DOI to be searched.
+        doi_curator : str
+            The curator(URL), e.g.: https://api.crossref.org/works/
+        doi_source_provider : str
+            The source provider, e.g.: Europe PubMed Central
+        check : bool
+            Set it to True only in the tests in order to return the json
+        """
 
+        # Check if we already have this resource
         existing_res = self.rf.retrieve_from_doi(doi)
+
+        # Otherwise query for it
         if existing_res is None:
-            cur_json = self.get_crossref_item(self.__process_entity(doi, self.crossref_api_works))
+            cur_json = self.query_interface.get_data_crossref_doi(doi)
             if cur_json is not None:
                 if check:
                     return cur_json
                 else:
-                    return self.process_crossref_json(
-                    cur_json, self.crossref_api_works + encode_url(doi), doi_curator,
-                    doi_source_provider, self.source)
+                    return self.process_crossref_json(cur_json,
+                                                      self.crossref_api_works + encode_url(doi),
+                                                      doi_curator,
+                                                      doi_source_provider,
+                                                      self.source)
         else:
             return self.process_existing_by_id(existing_res, self.id)
 
@@ -135,10 +169,7 @@ class CrossrefProcessor(FormatProcessor):
         # Add other ids if they exist
         self.__add_pmid(citing_entity, self.pmid)
         self.__add_pmcid(citing_entity, self.pmcid)
-
         cited_entities = self.process_references()
-
-
 
         if cited_entities is not None:
             cited_entities_xmlid_be = []
@@ -160,7 +191,6 @@ class CrossrefProcessor(FormatProcessor):
                     cited_entities_xmlid_be, self.reference_pointers, self.g_set, \
                     self.curator, self.source_provider, self.source)
                 self.rf.update_graph_set(self.g_set)
-
 
             return self.g_set
 
@@ -347,26 +377,7 @@ class CrossrefProcessor(FormatProcessor):
             cur_id.create_xmlid(xmlid_string)
             cur_res.has_id(cur_id)
 
-    def get_crossref_item(self, json_crossref, fuzzy_match=None):
-        result = None
-        if json_crossref is not None and json_crossref["status"] == "ok":
-            if json_crossref["message-type"] in ["work", "member"]:
-                result = json_crossref["message"]
-            elif json_crossref["message-type"] == "work-list":
-                result = json_crossref["message"]["items"][0]
-                if fuzzy_match is not None and result["score"] >= self.crossref_min_similarity_score:
-                    entry_cleaned = fuzzy_match
-                    result = jt.fuzzy_match(entry_cleaned, \
-                                json_crossref["message"]["items"], \
-                                self.crossref_min_similarity_score)
-                else:
-                    if result["score"] < self.crossref_min_similarity_score:
-                        result = None
-        return result
-
-    def process_crossref_json(
-            self, crossref_json, crossref_source,
-            doi_curator=None, doi_source_provider=None, doi_source=None):
+    def process_crossref_json(self, crossref_json, crossref_source, doi_curator=None, doi_source_provider=None, doi_source=None):
         # Check if the found bibliographic resource already exist either
         # in the triplestore or in the current graph set.
         self.rf.update_graph_set(self.g_set)

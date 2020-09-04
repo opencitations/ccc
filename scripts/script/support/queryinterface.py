@@ -96,8 +96,16 @@ class LocalQuery(QueryInterface):
             return toreturn[0]
 
     def get_data_orcid(self, entity):
-        get_url = self.__personal_url % entity
-        return self.__get_data(get_url)
+        query = 'id:"{}"'.format(entity)
+        results = self.crossref_query_instance.search(fl='*,score', q=query)
+
+        if len(results) != 1:
+            if self.reperr is not None:
+                self.reperr.add_sentence(
+                    "[LocalQuery - Crossref] Error with: `{}`, {} results.".format(entity, len(results)))
+            return None
+        else:
+            return [json.loads(str(r['authors'][0]).replace("'", '"')) for r in results][0]
 
     def get_records_orcid(self, entity):
         get_url = self.__orcid_api_url + entity

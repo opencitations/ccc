@@ -18,12 +18,14 @@ __author__ = 'essepuntato'
 
 from script.spacin.orcidfinder import ORCIDFinder
 import unittest
+import os
 
 
 class SupportTest(unittest.TestCase):
 
     def setUp(self):
-        self.oc = ORCIDFinder("./script/spacin/orcid_conf.json")
+        self.TEST_DIR = os.path.dirname(os.path.abspath(__file__))
+        self.oc = ORCIDFinder(os.path.join(self.TEST_DIR, '..', 'orcid_conf.json'))
 
     def test_get_orcid_records(self):
         names = ["Peroni"]

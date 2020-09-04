@@ -2,6 +2,9 @@ import unittest
 from script.support.queryinterface import QueryInterface, LocalQuery, RemoteQuery
 import json
 from requests.exceptions import MissingSchema
+
+__author__ = 'Gabriele Pisciotta'
+
 class QueryInterfaceTest(unittest.TestCase):
 
     def test_are_instances_of_interface(self):

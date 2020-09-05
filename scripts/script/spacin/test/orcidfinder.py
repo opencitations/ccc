@@ -34,6 +34,8 @@ class SupportTest(unittest.TestCase):
         items = oc.get_orcid_ids(doi, names)
         self.assertEqual(len(items), 1)
         self.assertIn(orcid, items[0]["orcid"])
+        self.assertEqual("Silvio", items[0]["given"])
+        self.assertEqual("Peroni", items[0]["family"])
 
     def  test_get_orcid_records_local(self):
         oc = ORCIDFinder(os.path.join(self.TEST_DIR, '..', 'orcid_conf.json'), query_interface='local')
@@ -43,8 +45,7 @@ class SupportTest(unittest.TestCase):
         items = oc.get_orcid_ids(doi, names)
         self.assertEqual(len(items), 1)
         self.assertIn(orcid, items[0]["orcid"])
-        self.assertEquals("Silvio", items[0]["given"])
-        self.assertEquals("Peroni", items[0]["family"])
+
 
 if __name__ == '__main__':
     unittest.main()

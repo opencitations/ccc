@@ -23,7 +23,11 @@ class QueryInterface(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def get_records_orcid(self, entity):
+    def get_orcid_records(self, entity):
+        raise NotImplementedError
+
+    @abstractmethod
+    def get_orcid_data(self, entity):
         raise NotImplementedError
 
     @classmethod
@@ -49,10 +53,6 @@ class LocalQuery(QueryInterface):
             self.orcid_query_instance.ping()
         except Exception as e:
             raise e
-
-    def close(self):
-        self.crossref_query_instance.get_session().close()
-        self.orcid_query_instance.get_session().close()
 
     # This function will return exactly one if found, otherwise None
     def get_data_crossref_doi(self, entity):
@@ -92,7 +92,7 @@ class LocalQuery(QueryInterface):
             return toreturn[0]
 
 
-    def get_records_orcid(self, entity):
+    def get_orcid_records(self, entity):
         query = 'id:"{}"'.format(entity)
         results = self.orcid_query_instance.search(fl='*,score', q=query)
 
@@ -103,6 +103,15 @@ class LocalQuery(QueryInterface):
             return None
         else:
             return [json.loads(r['authors'])[0] for r in results]
+
+    # We don't actually need this due to the fact that the data are denormalized in our stored collection
+    def get_orcid_data(self, entity):
+        pass
+
+    def close(self):
+        self.crossref_query_instance.get_session().close()
+        self.orcid_query_instance.get_session().close()
+
 
 class RemoteQuery(QueryInterface):
 
@@ -130,6 +139,21 @@ class RemoteQuery(QueryInterface):
         self.__orcid_api_url = 'https://pub.orcid.org/v2.1/search?q='
         self.__personal_url = "https://pub.orcid.org/v2.1/%s/personal-details"
 
+
+
+    def get_data_crossref_doi(self, doi):
+        return self.__get_crossref_item(self.__get_data(self.__crossref_doi_url + doi))
+
+    def get_data_crossref_bibref(self, entry):
+        entry_cleaned = FormatProcessor.clean_entry(entry)
+        return self.__get_crossref_item(self.__get_data(self.__crossref_entry_url + entry_cleaned), fuzzy_match = entry_cleaned)
+
+    def get_orcid_records(self, entity):
+        return self.__get_data(self.__orcid_api_url + entity)
+
+    def get_orcid_data(self, entity):
+        return self.__get_data(self.__personal_url % entity)
+
     def __get_crossref_item(self, json_crossref, fuzzy_match=None):
         result = None
         if json_crossref is not None and json_crossref["status"] == "ok":
@@ -146,16 +170,6 @@ class RemoteQuery(QueryInterface):
                     if result["score"] < self.crossref_min_similarity_score:
                         result = None
         return result
-
-    def get_data_crossref_doi(self, doi):
-        return self.__get_crossref_item(self.__get_data(self.__crossref_doi_url + doi))
-
-    def get_data_crossref_bibref(self, entry):
-        entry_cleaned = FormatProcessor.clean_entry(entry)
-        return self.__get_crossref_item(self.__get_data(self.__crossref_entry_url + entry_cleaned), fuzzy_match = entry_cleaned)
-
-    def get_records_orcid(self, entity):
-        return self.__get_data(self.__orcid_api_url + entity)
 
     def __get_data(self, get_url):
         tentative = 0

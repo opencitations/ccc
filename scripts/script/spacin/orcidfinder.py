@@ -14,7 +14,7 @@
 # ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
 # SOFTWARE.
 
-__author__ = 'essepuntato'
+__author__ = 'essepuntato, Gabriele Pisciotta'
 
 import json
 import argparse
@@ -22,7 +22,6 @@ from script.support.reporter import Reporter
 from script.support.support import dict_get as dg
 from script.support.support import dict_add as da
 from script.support.support import normalise_ascii as na
-from script.support.support import get_data
 from script.support.queryinterface import LocalQuery, RemoteQuery
 
 from urllib.parse import quote
@@ -69,8 +68,7 @@ class ORCIDFinder(object):
         self.repok.new_article()
         self.reper.new_article()
         self.__last_query_done = ORCIDFinder.__personal_url % orcid_string
-        return get_data(self.max_iteration, self.sec_to_wait, self.__last_query_done,
-                        self.headers, self.timeout, self.repok, self.reper)
+        return self.query_interface.get_orcid_data(orcid_string)
 
     def get_orcid_records(self, doi_string, family_names=[]):
         self.repok.new_article()
@@ -78,7 +76,7 @@ class ORCIDFinder(object):
 
         # If we're making a local query, we only need to use the doi string
         if isinstance(self.query_interface, LocalQuery):
-            return self.query_interface.get_records_orcid(doi_string.lower())
+            return self.query_interface.get_orcid_records(doi_string.lower())
 
         # Otherwise we need to setup the query in ther format that follows
         else:
@@ -107,7 +105,7 @@ class ORCIDFinder(object):
                 cur_query += ")"
 
             self.__last_query_done = ORCIDFinder.__api_url + quote(cur_query)
-            return self.query_interface.get_records_orcid(quote(cur_query))
+            return self.query_interface.get_orcid_records(quote(cur_query))
 
     def get_orcid_ids(self, doi_string, family_names=[]):
         result = []

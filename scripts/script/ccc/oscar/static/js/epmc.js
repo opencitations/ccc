@@ -1,11 +1,12 @@
 function expand_context(td,pointers) {
+  document.body.style.cursor = 'wait';
   var ramose_api = "http://localhost:8080/api/v1/intext-citation/"
   var pointers_list = pointers.split(";");
   var sentences = {};
   var new_td = $("<td>", {"class": "sentences remove"});
 
   $.each(pointers_list, function( index, intrepid ) {
-    document.body.style.cursor = 'wait';
+
     var query_ramose =  String(ramose_api)+ intrepid;
     //call ramose to retrieve data of indtrepids
     $.ajax({
@@ -31,6 +32,7 @@ function expand_context(td,pointers) {
                         type: 'GET',
                         dataType: "xml",
                         success: function( res_xml ) {
+                            document.body.style.cursor = 'auto';
                             if (res_xml.length == 0) { pass }
                             else {
                               var rp_content = document.evaluate("string("+rp_xpath+")", res_xml, null, XPathResult.ANY_TYPE, null);
@@ -39,6 +41,7 @@ function expand_context(td,pointers) {
                                 var sent_content = document.evaluate(sent_xpath, res_xml, null, XPathResult.ANY_TYPE, null);
                                 sentences[sent_content.stringValue] = rp_content.stringValue;
                                 $(new_td).append("<span class='sentence'>"+sent_content.stringValue+"</span>");
+
                               }
                             }
                         }
@@ -49,6 +52,5 @@ function expand_context(td,pointers) {
 
      });
   });
-  console.log(sentences);
   return [new_td, sentences];
 }

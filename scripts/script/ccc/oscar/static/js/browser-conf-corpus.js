@@ -102,12 +102,15 @@ var browser_conf = {
               {"fields": ["journal"], "classes":["journal-data"]},
               {"fields": ["journal_data"], "classes":["journal-data"]},
               {"fields": ["year"], "classes":["journal-data-separator"] }
-              //{"fields": ["FREE-TEXT", "EXT_DATA"], "values": ["Publisher: ", "crossref4doi.message.publisher"]},
+
               ],
             "metrics": [
               {"fields": ["FREE-TEXT"], "values": ["Summary"], "classes": ["metrics-title"]},
               {"fields": ["in_cits"], "classes": ["cited"]},
-              {"fields": ["out_cits"], "classes": ["refs"]}
+              {"fields": ["out_cits"], "classes": ["refs"]},
+              {"fields": ["FREE-TEXT"], "values": ["read more"], "classes":["know_more"]}
+              // {"fields": ["FREE-TEXT", "EXT_DATA"], "values": ["Publisher: ", "crossref4doi.message.publisher"]},
+              // {"fields": ["FREE-TEXT","EXT_DATA"], "values": ["test", "ramose4citations.creation"]},
             ],
             "oscar_conf": {
                 "progress_loader":{
@@ -119,18 +122,6 @@ var browser_conf = {
                         }
             },
             "oscar": [
-              // {
-              //   "query_text": "my_iri",
-              //   "rule": "doc_cites_me_list",
-              //   "label":"Cited by",
-              //   "config_mod" : [
-      				// 			{"key":"page_limit_def" ,"value":30},
-              //       //{"key":"categories.[[name,citation]].fields.[[title,Cited reference]]" ,"value":"REMOVE_ENTRY"},
-      				// 			{"key":"categories.[[name,document]].fields.[[title,Year]].sort.default" ,"value":{"order": "asc"}},
-      				// 			{"key":"progress_loader.visible" ,"value":false},
-              //       {"key":"timeout.text" ,"value":""}
-      				// 	]
-              // },
               {
                 "query_text": "my_iri",
                 "rule": "doc_cites_list",
@@ -154,9 +145,10 @@ var browser_conf = {
       					]
               }
             ]
-    },
+          },
           "ext_data": {
-            //"crossref4doi": {"name": call_crossref, "param": {"fields":["id_lit","FREE-TEXT"],"values":[null,1]}}
+            // "crossref4doi": {"name": call_crossref, "param": {"fields":["id_lit","FREE-TEXT"],"values":[null,1]}},
+            // "ramose4citations": {"name": call_ramose, "param": {"fields":["id_lit","FREE-TEXT"],"values":[null,1]}}
           }
   },
     "author": {
@@ -491,7 +483,7 @@ var browser_conf = {
               ?paragraph_iri a doco:Paragraph ; fabio:hasSequenceIdentifier ?paragraph_num .
             }
 
-            ?my_iri frbr:part*/c4o:isContextOf/co:element* ?rp .
+            ?my_iri frbr:part*/c4o:isContextOf/co:element* ?rp . ?rp a c4o:InTextReferencePointer .
             BIND(COALESCE(?article_title, "No title available") AS ?article_title).
             BIND(REPLACE(STR(?citing_br_iri), 'https://w3id.org/oc/ccc/', '', 'i') as ?short_citing_iri) .
             BIND(?id_pmid AS ?source_xml).
@@ -1114,7 +1106,7 @@ var browser_conf = {
 function call_crossref(str_doi, field){
   var call_crossref_api = "https://api.crossref.org/works/";
   var call_url =  call_crossref_api+ encodeURIComponent(str_doi);
-
+  console.log(str_doi);
   var result_data = "";
   $.ajax({
         dataType: "json",
@@ -1136,6 +1128,27 @@ function call_crossref(str_doi, field){
    return result_data;
 }
 
+function call_ramose(str_doi,field) {
+  var call_ramose_api_metadata = "http://localhost:8080/api/v1/citations/";
+  var call_full = call_ramose_api_metadata + encodeURIComponent(str_doi);
+  var result_data = "";
+  $.ajax({
+        dataType: "json",
+        url: call_full,
+        type: 'GET',
+        async: false,
+        success: function( res_obj ) {
+            if (field == 1) {
+              result_data = res_obj[0];
+            }else {
+              if (!b_util.is_undefined_key(res_obj[0],field)) {
+                result_data = b_util.get_obj_key_val(res_obj[0],field);
+              }
+            }
+        }
+   });
+   return result_data;
+}
 
 //Heuristics
 function more_than_zero(val){

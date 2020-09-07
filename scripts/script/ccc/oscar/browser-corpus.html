@@ -24,15 +24,29 @@
     <div class="banner_oc">
       <nav>
         <ul>
-          <li data-html="true" data-toggle="tooltip" data-placement="right" id="home" title="homepage"><a href="http://opencitations.net/ccc"><img id="oc_logo" src="static/img/logo.png" alt="opencitations logo"/> </a> </li>
-          <li data-html="true" data-toggle="tooltip" data-placement="right" id="search_ccc" title="search"><a href="http://opencitations.net/ccc/search"><img id="search_link" src="static/img/search.png" alt="search in ccc corpus"/> </a> </li>
-          <li data-html="true" data-toggle="tooltip" data-placement="right" id="share" title="share"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><img src="static/img/twitter.svg" alt=""> </a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-          <li data-html="true" data-toggle="tooltip" data-placement="right" id="terms" title="Data held in the <a href='http://opencitations.net/ccc/'>CCC</a> are freely available under a <a href='https://creativecommons.org/publicdomain/zero/1.0/'>CC0 license</a>. The full-text of sentences is not stored, and it is available under publishers' licenses."><img src="static/img/security.png" alt="legal terms for data reuse"></li>
+          <li data-html="true" data-container="body" data-toggle="tooltip" data-placement="right" id="home" title="homepage"><a href="http://opencitations.net/ccc"><img id="oc_logo" src="static/img/logo.png" alt="opencitations logo"/> </a> </li>
+          <li data-html="true" data-container="body" data-toggle="tooltip" data-placement="right" id="search_ccc" title="search">
+            <a id="search_oscar_menu" href="#">
+              <img id="search_link" src="static/img/search.png" alt="search in ccc corpus"/>
+            </a>
+            <div id="search_and_results" class="overlay">
+              <span class="closebtn" id="closebtn" onclick="close_search()" title="close search">×</span>
+              <div class="overlay-content">
+                <form action="browser-corpus.html" onsubmit="ccc_menu_search()" method="GET" accept-charset="ASCII">
+                    <input id="input_box" name="query" name="input_box" type="text" autocomplete="on" class="form-control oc-purple" placeholder="Search...">
+                </form>
+                <div id=ccc_menu_search_results></div>
+              </div>
+            </div>
+
+          </li>
+          <li data-html="true" data-container="body" data-toggle="tooltip" data-placement="right" id="share" title="share"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><img src="static/img/twitter.svg" alt=""> </a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+          <li data-html="true" data-container="body" data-toggle="tooltip" data-placement="right" id="terms" title="Data held in the <a href='http://opencitations.net/ccc/'>CCC</a> are freely available under a <a href='https://creativecommons.org/publicdomain/zero/1.0/'>CC0 license</a>. The full-text of sentences is not stored, and it is available under publishers' licenses."><img src="static/img/security.png" alt="legal terms for data reuse"></li>
         </ul>
       </nav>
     </div>
-    <div class="__lucinda__ container" data-content="header details metrics"></div>
-    <div class="cover __oscar__" data-type="free-text" data-view="rows_per_page sort_results" data-filter=""></div>
+    <div class="__lucinda__ container-fluid" data-content="header details metrics"></div>
+    <div class="cover __oscar__ col-md-10" data-type="free-text" data-view="rows_per_page sort_results" data-filter=""></div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -51,21 +65,72 @@
     <script type="text/javascript" src="static/js/browser-conf-corpus.js"></script>
     <script type="text/javascript" src="static/js/browser.js"></script>
     <script type="text/javascript" src ="static/js/jquery.mark.min.js"></script>
+    <script type="text/javascript" src ="static/js/underscore-min.js"></script>
     <script type="text/javascript" src ="static/js/epmc.js"></script>
-    <script>
 
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script type="text/javascript" src ="static/js/ramose.js"></script>
+    <script>
+      // search menu
+      $(document).on("click", "#search_oscar_menu", function(event) {
+        event.preventDefault();
+        document.getElementById("search_and_results").style.display = "block";
+      });
+      $(document).on("click", "#closebtn", function(event) {
+        event.preventDefault();
+        document.getElementById("search_and_results").style.display = "none";
+      });
+
+      // lucinda
       var resource_iri = null;
       var myRegexp = /browser-corpus\.html\?browse=(.*)/g;
       var groups = myRegexp.exec(String(window.location.href));
       if (groups.length > 1) {resource_iri = groups[1];}
       browser.do_sparql_query(resource_iri);
 
-      // popup
+      // graphs sidebar
+      $(document).on("click", ".know_more", function(event) {
+        if ( $(".graph_block").length == 0) {
+          document.body.style.cursor = 'wait';
+          var doi = $(".doi_before > a").attr('href').split('doi.org/')[1] ;
+          var data_citations = call_ramose_citations(doi);
+          citations_by_year(data_citations[0]);
+          //self_citations(data_citations[1]);
+          citation_venues(data_citations[2]);
+          //citing_authors(data_citations[2]);
+          $(".know_more").text("read less");
+          document.body.style.cursor = 'auto';
+        } else {
+          $(".graph_block").toggle();
+          $(".know_more").text("read more");
+        };
+        $("#browser_metrics").css("z-index","20000");
+        $("#browser_metrics").toggleClass("col-md-2 col-md-4",1000, "easeOutSine");
+        $("#browser_info").toggleClass("col-md-10 col-md-8",1000, "easeOutSine");
+        $(".__oscar__").css("width", "55%");
+        $("#rows_per_page").css("width", "36%");
+        $(".__oscar__").toggleClass("col-md-10 col-md-6",1000, "easeOutSine");
+
+
+      } );
+
+      // $(document).on("click", ".know_less", function(event) {
+      //   $("#browser_metrics").toggleClass("col-md-4 col-md-2",1000, "easeOutSine");
+      //   $("#browser_info").toggleClass("col-md-8 col-md-10",1000, "easeOutSine");
+      //   $(".__oscar__").css("width", "70%");
+      //   $("#rows_per_page").css("width", "25%");
+      //   $(".__oscar__").toggleClass("col-md-6 col-md-10",1000, "easeOutSine");
+      //   $(".know_less").text("read more").toggleClass("know_less know_more");
+      //
+      // });
+
+      // popup menu
       $("#home").tooltip();
       $("#terms").tooltip();
       $("#search_ccc").tooltip();
       $("#share").tooltip();
-      // CCC call EPMC
+
+      // CCC call EPMC for in-text citations
       $(document).on("click", "td[field='mentions']>a", function(event) {
           event.preventDefault();
           var pointers = $(this).attr('href');
@@ -92,8 +157,10 @@
           }
 
       });
-
-
+      // default image for no results / no oscar calls
+      if ( $('#search_results').is(':empty') ) {
+        $("#search_results").append("<div class='no_results'><img src='static/img/poor.png'/></div>")
+      }
     </script>
   </body>
 </html>

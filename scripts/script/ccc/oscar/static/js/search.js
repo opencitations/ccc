@@ -598,6 +598,7 @@ var search = (function () {
 					var rules = _get_rules(qtext);
 					if(rules.length != 0){
 						var sparql_query = _build_sparql_query(rules[0], qtext);
+
 						var r_cat = search_conf_json.categories[util.index_in_arrjsons(search_conf_json.categories,["name"],[rules[0].category])];
 						_call_ts(r_cat, rules, 0, sparql_query, qtext, qtext, callbk_fun);
 					}else {}
@@ -2908,6 +2909,7 @@ var htmldom = (function () {
 					new_tab_res.className = "table results-tab result-type-"+search_conf_json.categories[index_category]["name"];
 					//create tr of all the other results
 					var results = table_conf.view.data["results"]["bindings"];
+					console.log(results);
 					if (results.length > 0) {
 						var i_from = table_conf.view.page * table_conf.view.page_limit;
 						var i_to = i_from + table_conf.view.page_limit;

@@ -68,13 +68,13 @@ class CrossrefProcessor(FormatProcessor):
                                                 sec_to_wait,
                                                 headers,
                                                 timeout,
-                                                reperr = self.repok,
-                                                repok = self.reperr,
+                                                reperr = self.reperr,
+                                                repok = self.repok,
                                                 is_json = True)
         else:
             raise ValueError("query_interface param must be `local` or `remote`")
 
-    def process_entry(self, entry: str, check: bool = True):
+    def process_entry(self, entry: str, check: bool = False):
         """
         Process an entry (bibref), searching for it on Crossref (local/remote).
 
@@ -380,6 +380,7 @@ class CrossrefProcessor(FormatProcessor):
     def process_crossref_json(self, crossref_json, crossref_source, doi_curator=None, doi_source_provider=None, doi_source=None):
         # Check if the found bibliographic resource already exist either
         # in the triplestore or in the current graph set.
+
         self.rf.update_graph_set(self.g_set)
         retrieved_resource = self.rf.retrieve(CrossrefDataHandler.get_ids_for_type(crossref_json))
 

@@ -25,6 +25,14 @@ class Test(unittest.TestCase):
             self.json_object = json.load(fp)
 
 
+    def test_time_processfile(self):
+        cp = CrossrefProcessor(base_iri, context_path, self.full_info_dir, self.json_object,
+                               ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
+                               ORCIDFinder(self.orcid_conf_path), items_per_file,
+                               self.supplier_prefix, intext_refs=True, query_interface='remote')
+        cp.process()
+
+    """
     def test_wrong_initialization(self):
         self.assertRaises(ValueError, CrossrefProcessor, base_iri, context_path, self.full_info_dir, self.json_object,
                                                     ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
@@ -64,7 +72,6 @@ class Test(unittest.TestCase):
         should_be = '10.1371/journal.pntd.0004460'
         result = cp.process_entry(entry, True)
         self.assertEqual(result['DOI'], should_be)
-
     def test_process_entry_local(self):
         cp = CrossrefProcessor(base_iri, context_path, self.full_info_dir, self.json_object,
                                ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
@@ -74,6 +81,6 @@ class Test(unittest.TestCase):
         should_be = '10.1371/journal.pntd.0004460'
         result = cp.process_entry(entry, True)
         self.assertEqual(result['DOI'], should_be)
-
+    """
 if __name__ == '__main__':
     unittest.main()

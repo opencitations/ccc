@@ -95,6 +95,8 @@ class CrossrefProcessor(FormatProcessor):
                                                   self.name,
                                                   self.id,
                                                   self.source)
+        else:
+            print("Returned None for {} from Crossref ({})".format(entry, type(self.query_interface)))
 
     def process_doi(self, doi: str, doi_curator: str, doi_source_provider: str, check=False):
         """
@@ -118,6 +120,9 @@ class CrossrefProcessor(FormatProcessor):
         # Otherwise query for it
         if existing_res is None:
             cur_json = self.query_interface.get_data_crossref_doi(doi)
+
+
+
             if cur_json is not None:
                 if check:
                     return cur_json

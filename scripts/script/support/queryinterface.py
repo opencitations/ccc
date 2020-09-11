@@ -64,7 +64,18 @@ class LocalQuery(QueryInterface):
                 self.reperr.add_sentence("[LocalQuery - Crossref] Error with: `{}`, {} results.".format(entity, len(results)))
             return None
         else:
-            return [json.loads(str(r['original'][0]).replace("'", '"')) for r in results][0]
+            # @TODO: change this behavior before deploying it.
+            # This is a temporary code fix in order to run on my local machine
+            # where the `original` field has been added only for a few amount of docs
+            toreturn = []
+            for r in results:
+                if 'original' in r:
+                    toreturn.append(json.loads(r['original'][0]))
+
+            if len(toreturn) > 0:
+                return toreturn[0]
+            else:
+                return None
 
     def get_data_crossref_bibref(self, entity):
         entity = ' '.join(item for item in entity.split() if not (item.startswith('https://') and len(item) > 7))
@@ -81,7 +92,6 @@ class LocalQuery(QueryInterface):
                 self.reperr.add_sentence("[LocalQuery - Crossref] Error with: `{}`".format(entity))
             return None
         else:
-
             # @TODO: change this behavior before deploying it.
             # This is a temporary code fix in order to run on my local machine
             # where the `original` field has been added only for a few amount of docs
@@ -89,7 +99,11 @@ class LocalQuery(QueryInterface):
             for r in results:
                 if 'original' in r:
                     toreturn.append(json.loads(r['original'][0]))
-            return toreturn[0]
+
+            if len(toreturn) > 0:
+                return toreturn[0]
+            else:
+                return None
 
 
     def get_orcid_records(self, entity):
@@ -99,10 +113,12 @@ class LocalQuery(QueryInterface):
         if len(results) != 1:
             if self.reperr is not None:
                 self.reperr.add_sentence(
-                    "[LocalQuery - Crossref] Error with: `{}`, {} results.".format(entity, len(results)))
+                    "No authors found for `{}`".format(entity))
             return None
         else:
-            return [json.loads(r['authors'])[0] for r in results]
+            to_return = [json.loads(r['authors']) for r in results][0]
+            self.repok.add_sentence(
+                "{} authors found for `{}`".format(len(to_return), entity))
 
     # We don't actually need this due to the fact that the data are denormalized in our stored collection
     def get_orcid_data(self, entity):

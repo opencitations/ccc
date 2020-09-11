@@ -25,14 +25,14 @@ class Test(unittest.TestCase):
             self.json_object = json.load(fp)
 
 
-    def test_time_processfile(self):
-        cp = CrossrefProcessor(base_iri, context_path, self.full_info_dir, self.json_object,
-                               ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
-                               ORCIDFinder(self.orcid_conf_path), items_per_file,
-                               self.supplier_prefix, intext_refs=True, query_interface='remote')
-        cp.process()
+    #def test_time_processfile(self):
+    #    cp = CrossrefProcessor(base_iri, context_path, self.full_info_dir, self.json_object,
+    #                           ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
+    #                           ORCIDFinder(self.orcid_conf_path, query_interface='local'), items_per_file,
+    #                           self.supplier_prefix, intext_refs=True, query_interface='local')
+    #    cp.process()
 
-    """
+
     def test_wrong_initialization(self):
         self.assertRaises(ValueError, CrossrefProcessor, base_iri, context_path, self.full_info_dir, self.json_object,
                                                     ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
@@ -42,7 +42,7 @@ class Test(unittest.TestCase):
     def test_process_doi_remote(self):
         cp = CrossrefProcessor(base_iri, context_path, self.full_info_dir, self.json_object,
                                ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
-                               ORCIDFinder(self.orcid_conf_path), items_per_file,
+                               ORCIDFinder(self.orcid_conf_path, query_interface='remote'), items_per_file,
                                self.supplier_prefix, intext_refs=True, query_interface='remote')
         doi = '10.1080/22221751.2020.1766381'
         doi_curator = 'https://api.crossref.org/works/'
@@ -54,7 +54,7 @@ class Test(unittest.TestCase):
     def test_process_doi_local(self):
         cp = CrossrefProcessor(base_iri, context_path, self.full_info_dir, self.json_object,
                                ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
-                               ORCIDFinder(self.orcid_conf_path), items_per_file,
+                               ORCIDFinder(self.orcid_conf_path, query_interface='local'), items_per_file,
                                self.supplier_prefix, intext_refs=True, query_interface='local')
         doi = '10.1080/22221751.2020.1766381'
         doi_curator = 'https://api.crossref.org/works/'
@@ -66,21 +66,22 @@ class Test(unittest.TestCase):
     def test_process_entry_remote(self):
         cp = CrossrefProcessor(base_iri, context_path, self.full_info_dir, self.json_object,
                                ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
-                               ORCIDFinder(self.orcid_conf_path), items_per_file,
+                               ORCIDFinder(self.orcid_conf_path, query_interface='remote'), items_per_file,
                                self.supplier_prefix, intext_refs=True, query_interface='remote')
         entry = "Armién, B, Ortiz, PL, Gonzalez, P, et al. Spatial-temporal distribution of Hantavirus rodent-borne infection by Oligoryzomys fulvescens in the Agua Buena region –Panama. PLoS Negl Trop Dis. 2016; 10 DOI: DOI: 10.1371/journal.pntd.0004460."
         should_be = '10.1371/journal.pntd.0004460'
         result = cp.process_entry(entry, True)
         self.assertEqual(result['DOI'], should_be)
+
     def test_process_entry_local(self):
         cp = CrossrefProcessor(base_iri, context_path, self.full_info_dir, self.json_object,
                                ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
-                               ORCIDFinder(self.orcid_conf_path), items_per_file,
+                               ORCIDFinder(self.orcid_conf_path, query_interface='local'), items_per_file,
                                self.supplier_prefix, intext_refs=True, query_interface='local')
         entry = "Armién, B, Ortiz, PL, Gonzalez, P, et al. Spatial-temporal distribution of Hantavirus rodent-borne infection by Oligoryzomys fulvescens in the Agua Buena region –Panama. PLoS Negl Trop Dis. 2016; 10 DOI: DOI: 10.1371/journal.pntd.0004460."
         should_be = '10.1371/journal.pntd.0004460'
         result = cp.process_entry(entry, True)
         self.assertEqual(result['DOI'], should_be)
-    """
+
 if __name__ == '__main__':
     unittest.main()

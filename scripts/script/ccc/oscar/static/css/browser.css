@@ -22,23 +22,27 @@ body {
 .banner_oc ul {list-style-type: none; padding-left: 0px !important;}
 .banner_oc ul li:first-of-type {padding-top: 50px;}
 .banner_oc ul li { text-align: center; padding-bottom: 25px; padding-top: 25px;}
-.banner_oc ul li a {vertical-align: middle;}
-
+.banner_oc ul li a {vertical-align: middle; cursor: pointer;}
 .banner_oc img { width: 25px; height: auto; vertical-align: middle; }
-#oc_logo {}
-#search_link {}
-#terms {position: fixed; bottom: 30px; left:18px;}
 
+#terms {position: fixed; bottom: 30px; left:18px;}
 .tooltip {opacity: 1 !important; position: fixed;}
 .tooltip.right .tooltip-arrow {border-right-color: #E0C1FE; z-index: 2000;}
 .tooltip-inner { padding:15px; background-color: #E0C1FE; color: black; }
 #terms + .tooltip {width: 600px !important;}
 #terms + .tooltip .tooltip-inner {max-width: 600px !important;}
 
+/* search bar */
 .overlay {
   height: 100%;
   width: 100%;
-  display: none;
+  opacity: 0;
+       display:none;
+       transition: opacity 1s linear;
+       -webkit-transition: opacity 1s linear;
+       -moz-transition: opacity 1s linear;
+       -o-transition: opacity 1s linear;
+       -ms-transition: opacity 1s linear;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -53,6 +57,7 @@ body {
   text-align: center;
   margin-top: 30px;
   margin: auto;
+  transition: visibility 1s, opacity 0.4s ease-out;
 }
 
 .overlay .closebtn {
@@ -80,7 +85,6 @@ body {
 .overlay input[type=text]:hover {
   background: #f1f1f1;
 }
-
 
 
 /*main page */
@@ -500,6 +504,10 @@ select:focus {
 
 
 @media only screen and (max-width: 700px) {
+  .__oscar__ {
+    width: 75%;
+    margin-left: 90px !important;
+  }
   #oscar_nav {
     width: 100%;
     margin-bottom:5%;
@@ -508,6 +516,9 @@ select:focus {
   #browser_view div{
     width: 100%;
     display: block;
+  }
+  .sort-results {
+
   }
 }
 
@@ -640,7 +651,7 @@ a:hover { color: var(--main-bg-color); text-decoration: none;}
   font-weight: 400;
 }
 .info_box a:not(:empty)::before:hover {color: #77909c !important; }
-.in_list a:not(:empty)::before {content: "IN LIST "; }
+.in_list a:not(:empty)::before {content: "IN LIST OF IN-TEXT REFERENCES"; }
 .in_table a:not(:empty)::before {content: "IN TABLE "; }
 .in_caption a:not(:empty)::before {content: "IN CAPTION "; }
 .in_footnote a:not(:empty)::before {content: "IN FOOTNOTE "; }
@@ -759,6 +770,8 @@ td>.cited_article:before {margin-left: 2px;}
   background-size: contain;
   background-color: transparent !important;
 }
+
+td[field="short_type"] {display: none;}
 
 .no_results * {display: inline-block;}
 .no_results { text-align: center; font-family: 'Karla', sans-serif;}

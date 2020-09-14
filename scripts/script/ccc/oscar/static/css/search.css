@@ -2,7 +2,8 @@
 @charset "UTF-8";
 
 :root {
-  --main-bg-color: #9931FC;
+  /* --main-bg-color: #9931FC; */
+  --main-bg-color: #625de2;
   --hover_color: #2D22DE;
   --alert_color: #990000;
 }
@@ -65,7 +66,7 @@
   margin-top: 20px;
   border-radius: 20px;
   box-shadow: 0px 10px 30px 3px rgba(133,66,189,0.1);
-  background-color: white;
+  background-color: #dfe0f2;
 }
 
 #limit_results, #filter_btns, #filter_values_list {
@@ -134,6 +135,18 @@
 .results-tab td { margin: 0px 0px 0px 40px;list-style: none; display: list-item; padding-left: 0; display: inline-block;}
 
 /* info row */
+/* .result-type-document tbody tr::before, .result-type-document_intext tbody tr::before {
+  background-image: url('../img/article.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent !important;
+  width: 80px; height: 80px;
+  content: '';
+  position: absolute;
+} */
+
+td[field='short_type'] {display: block; background: rgb(153,49,252);
+background: linear-gradient(90deg, rgba(153,49,252,1) 35%, rgba(45,34,222,1) 100%); color: white; padding: 5px 10px !important;}
 td[field='short_iri']::before {content: "Corpus ID: "}
 td[field='doi']:not(:empty)::before {content: "DOI: ";}
 td[field='intrepid']:not(:empty)::before {content: "InTRePID: ";}
@@ -144,7 +157,7 @@ td[field='orcid']:not(:empty)::before {content: "ORCID: "}
 td[field='num_docs']:not(:empty)::before {content: "Publications: "}
 td[field='citations']:not(:empty)::before {content: "Citations: "}
 td[field='mentions']:not(:empty) a::after {content: " citation contexts"}
-td[field='author'] {width: 95%;}
+td[field='author'] {width: 85%;}
 td[field='author'] a {color:#808080;}
 
 /* sentences */
@@ -171,7 +184,7 @@ td[field='journal_data']:not(:empty) {margin-left: 6px !important;}
 .results-tab tbody tr {border-top: 1px solid #ddd !important; padding-bottom: 1em;}
 .results-tab tbody tr:nth-child(2) { border-top: none !important; }
 .results-tab tbody tr td:nth-of-type(1), .results-tab tbody tr td:nth-of-type(2)  {margin-top: 1em;}
-.results-tab tbody tr td:nth-of-type(3) {font-size: 1.4em; width: 90%; font-weight: 700;}
+.results-tab tbody tr td:nth-of-type(3) {font-size: 1.4em; width: 85%; font-weight: 700;}
 .results-tab tbody tr td:nth-of-type(3) a {color: black ;}
 .results-tab tbody tr td:nth-of-type(3) a:hover {color: var(--main-bg-color); border-bottom-color: var(--hover_color) ;}
 td:empty {margin: 0px !important;}
@@ -636,8 +649,8 @@ input[type=range]::-moz-range-track {
   }
 
   #search_filters{
-    border-top: solid;
-    border-color: #f2f2f2;
+    /* border-top: solid;
+    border-color: #f2f2f2; */
     margin-top: 10px;
     float:left;
     width: 100%;
@@ -665,14 +678,15 @@ input[type=range]::-moz-range-track {
 
   #rows_per_page {
     display:block;
-    float:left;
-    margin-left:26%;
+    float: none;
+    width: 55%;
+    margin-left: 20px !important;
   }
 
   #sort_results {
     display:block;
-    float:right;
     margin-right:3%;
+    margin-left: 20px !important;
   }
 
   #export_results{
@@ -687,13 +701,19 @@ input[type=range]::-moz-range-track {
     display: table-row;
   }
   .results-tab td {
-    display: table-row;
+    /* display: table-row; */
+    margin: 0px !important;
+    padding: 10px !important;
   }
+  .results-tab tbody tr td:nth-of-type(2), td[field='journal']:not(:empty),
+  td[field='year']:not(:empty), td[field='journal_data']:not(:empty)
+   {padding-top: 0px !important; margin-top: -10px !important;}
+  td[field='journal_data']:not(:empty) {margin-left: 0px !important;}
+
   .results-tab tr {
-    border-bottom: 1px solid;
-    margin-top: 2px;
+    margin: 10px;
     display: table;
-    width: 100%;
+    /* width: 100%; */
   }
 
   .tab-nav-btn.next{float:right; margin-top: 10px; margin-right: 10px;}

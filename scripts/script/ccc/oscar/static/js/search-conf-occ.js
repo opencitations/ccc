@@ -11,6 +11,8 @@ var search_conf = {
       {"prefix":"co","iri":"http://purl.org/co/"},
       {"prefix":"c4o","iri":"http://purl.org/spar/c4o/"},
       {"prefix":"bds","iri":"http://www.bigdata.com/rdf/search#"},
+      {"prefix":"deo","iri":"http://purl.org/spar/deo/"},
+      {"prefix":"doco","iri":"http://purl.org/spar/doco/"},
       {"prefix":"fabio","iri":"http://purl.org/spar/fabio/"},
       {"prefix":"pro","iri":"http://purl.org/spar/pro/"},
       {"prefix":"oa","iri":"http://www.w3.org/ns/oa#"},
@@ -88,9 +90,11 @@ var search_conf = {
       "category": "intext_ref",
       "regex":"(https:\/\/w3id\\.org\/oc\/ccc\/rp\/.$)",
       "query": [`
-        <[[VAR]]> ^co:isContextOf ?sent_iri .
-        ?sent_iri co:isContextOf/co:element* ?rp_iri .
-        FILTER(str(?rp_iri) != "[[VAR]]").`
+        BIND(<[[VAR]]> as ?my_iri).
+              ?sent_iri (c4o:isContextOf/co:element*) <[[VAR]]> ;
+                      c4o:isContextOf/co:element* ?rp_iri .
+        FILTER(str(?rp_iri) != "[[VAR]]").
+        ?rp_iri a c4o:InTextReferencePointer .`
       ]
     },
     {
@@ -377,9 +381,14 @@ var search_conf = {
                  BIND(REPLACE(STR(?iri), 'https://w3id.org/oc/ccc/', '', 'i') as ?short_iri) .
                  BIND(REPLACE(STR(?iri), 'https://w3id.org/oc/ccc/br/', '', 'i') as ?short_iri_id) .
                  BIND(REPLACE(STR(?iri), '/ccc/', '/browser/ccc/', 'i') as ?browser_iri) .
-                 BIND(REPLACE(STR(?type), 'http://purl.org/spar/fabio/', '', 'i') as ?short_type) .
-
-                 #list of the doc authors
+                 OPTIONAL {
+                   FILTER( STRSTARTS(STR(?type),str(fabio:)) ).
+                   FILTER( !STRSTARTS(STR(?type),str(fabio:Expre)) ).
+                   BIND(REPLACE(STR(?type), 'http://purl.org/spar/fabio/', '', 'i') as ?short_type_exp) .}
+                 OPTIONAL {FILTER( STRSTARTS(STR(?type),str(deo:)) ). FILTER(?type != 'deo:DiscourseElement'). BIND(REPLACE(STR(?type), 'http://purl.org/spar/deo/', '', 'i') as ?short_type_de) .}
+                 OPTIONAL {FILTER( STRSTARTS(STR(?type),str(doco:)) ).  BIND(REPLACE(STR(?type), 'http://purl.org/spar/doco/', '', 'i') as ?short_type_doco) .}
+                 BIND(COALESCE(?short_type_exp, ?short_type_de, ?short_type_doco) AS ?short_type_t).
+                 BIND(COALESCE(replace(str(?short_type_t), '([a-z])([A-Z])', '$1 $2') , ?short_type_t) AS ?short_type) .
                  OPTIONAL {
                    ?iri pro:isDocumentContextFor ?role .
                    ?role pro:withRole pro:author ; pro:isHeldBy [
@@ -391,8 +400,6 @@ var search_conf = {
                      BIND(REPLACE(STR(?author_iri), '/ccc/', '/browser/ccc/', 'i') as ?author_browser_iri) .
                      BIND(CONCAT(?g_name,' ',?f_name) as ?author) .
                  }
-
-
               }
               GROUP BY ?iri ?doi ?short_iri ?short_iri_id ?browser_iri ?title ?subtitle ?year ?journal ?journal_data ?short_type ?author ?author_browser_iri ORDER BY DESC(?tot)`
         ],
@@ -404,7 +411,8 @@ var search_conf = {
           {"value":"journal", "title": "Journal", "column_width":"30%","type": "text", "sort":{"value": "journal", "type":"text"}},
           {"value":"journal_data", "title": "Journal data", "column_width":"30%","type": "text"},
           {"value":"year", "title": "Year", "column_width":"30%","type": "int", "filter":{"type_sort": "int", "min": 10000, "sort": "value", "order": "desc"}, "sort":{"value": "year", "type":"int"} },
-          {"value":"in_cits", "title": "Cited by", "column_width":"30%","type": "int", "sort":{"value": "in_cits", "type":"int"}}
+          {"value":"in_cits", "title": "Cited by", "column_width":"30%","type": "int", "sort":{"value": "in_cits", "type":"int"}},
+          {"value": "short_type", "title": "Type","type": "text","filter":{"type_sort": "text", "min": 10000, "sort": "label", "order": "asc"}}
           ],
         "group_by": {"keys":["iri"], "concats":["author"]}
       },
@@ -452,13 +460,14 @@ var search_conf = {
           `SELECT DISTINCT ?my_iri ?rp_iri ?short_iri ?short_iri_id ?browser_iri ?short_type ?title ?intrepid ?be_brw_iri ?be_text ?br_iri
           WHERE{
               [[RULE]]
-               ?rp_iri rdf:type ?type ; datacite:hasIdentifier [
+               OPTIONAL {?rp_iri rdf:type ?type ; datacite:hasIdentifier [
                  datacite:usesIdentifierScheme datacite:intrepid ;
                  literal:hasLiteralValue ?intrepid
-                 ] .
+                 ] .}
                OPTIONAL {?rp_iri c4o:hasContent ?rp_title .}
                OPTIONAL {?rp_iri ^co:element ?pl_iri . ?pl_iri c4o:hasContent ?pl_title .}
                OPTIONAL {?rp_iri c4o:denotes ?be . ?be c4o:hasContent ?be_text ; biro:references ?br_iri .}
+
                BIND(COALESCE(?rp_title, ?pl_title, "no text") AS ?title) .
                BIND(COALESCE(?be_text, "No bibliographic reference available.") AS ?be_text) .
                BIND(REPLACE(STR(?rp_iri), 'https://w3id.org/oc/ccc/', '', 'i') as ?short_iri) .

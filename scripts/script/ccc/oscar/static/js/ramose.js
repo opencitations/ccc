@@ -1,5 +1,7 @@
+var ccc_api = "http://localhost:8080/api/v1/";
+
 function call_ramose_citations(str_doi) {
-  var call_ramose_api_metadata = "http://localhost:8080/api/v1/citations/";
+  var call_ramose_api_metadata = ccc_api+"citations/";
   var call_full = call_ramose_api_metadata + encodeURIComponent(str_doi);
   var result_data = {};
   var creation_data = [];
@@ -28,7 +30,7 @@ function call_ramose_citations(str_doi) {
 };
 
 function call_ramose_metadata(dois) {
-  var call_ramose_api_metadata = "http://localhost:8080/api/v1/metadata/";
+  var call_ramose_api_metadata = ccc_api+"metadata/";
   var call_full = call_ramose_api_metadata + dois;
   var venues = [];
   $.ajax({
@@ -67,18 +69,23 @@ function citation_venues(data) {
   document.body.style.cursor = 'wait';
   var dois = citing_dois(data);
   var venues = call_ramose_metadata(encodeURIComponent(dois));
-  var venues_block = "<div class='graph_block venues'><p class='title_graph'>citing venues</p>";
+  var venues_sort = [];
   for (i = 0; i < venues.length; i++) {
     for(journal in venues[i]) {
-      venues_block += "<p><span class='venue_count'>"+venues[i][journal]+"</span><span class='venue_title'>"+journal+"</span></p>";
-    }
+      venues_sort.push([journal, venues[i][journal] ]);
+      }
+  };
+
+  var venues_block = "<div class='graph_block venues'><p class='title_graph'>citing venues</p>";
+  for (i = 0; i < venues_sort.length; i++) {
+      venues_block += "<p><span class='venue_count'>"+venues_sort[i][1]+"</span><span class='venue_title'>"+venues_sort[i][0]+"</span></p>";
   };
   venues_block += '</div>';
   $("#browser_metrics").append(venues_block).show('slow');
 };
 
 function call_ramose_metadata_authors(dois) {
-  var call_ramose_api_metadata = "http://localhost:8080/api/v1/metadata/";
+  var call_ramose_api_metadata = ccc_api+"metadata/";
   var call_full = call_ramose_api_metadata + dois;
   console.log(call_full);
   var authors = {};

@@ -2730,7 +2730,7 @@ var htmldom = (function () {
 			"<input type='range' min="+String(slider_min)+" max="+String(slider_max)+" value="+String(init_val)+" class='slider' oninput='lbl_range.innerHTML=this.value; search.update_res_limit(this.value);' id='myRange'>"+
 			"</div>"+
 			"<div class='slider-footer'>"+
-			"<div class='left'>&#60; Fewer</div><div class='right'>More &#62;</div>"+
+			"<div class='left'>&#60; Less</div><div class='right'>More &#62;</div>"+
 			"</div>"
 			;
 			limitres_container.innerHTML = str_html;

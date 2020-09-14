@@ -24,23 +24,23 @@
     <div class="banner_oc">
       <nav>
         <ul>
-          <li data-html="true" data-container="body" data-toggle="tooltip" data-placement="right" id="home" title="homepage"><a href="http://opencitations.net/ccc"><img id="oc_logo" src="static/img/logo.png" alt="opencitations logo"/> </a> </li>
+          <li data-html="true" data-container="body" data-toggle="tooltip" data-placement="right" id="home" title="homepage"><a href="http://opencitations.net/ccc" target="_blank"><img id="oc_logo" src="static/img/logo.png" alt="opencitations logo"/> </a> </li>
           <li data-html="true" data-container="body" data-toggle="tooltip" data-placement="right" id="search_ccc" title="search">
-            <a id="search_oscar_menu" href="#">
+            <a id="search_oscar_menu" href="http://opencitations.net/ccc/search" target="_blank">
               <img id="search_link" src="static/img/search.png" alt="search in ccc corpus"/>
             </a>
+            <!--
             <div id="search_and_results" class="overlay">
-              <span class="closebtn" id="closebtn" onclick="close_search()" title="close search">×</span>
+              <span class="closebtn" id="closebtn" title="close search">×</span>
               <div class="overlay-content">
                 <form action="browser-corpus.html" onsubmit="ccc_menu_search()" method="GET" accept-charset="ASCII">
                     <input id="input_box" name="query" name="input_box" type="text" autocomplete="on" class="form-control oc-purple" placeholder="Search...">
                 </form>
-                <div id=ccc_menu_search_results></div>
-              </div>
-            </div>
+                </div>
+            </div> -->
 
           </li>
-          <li data-html="true" data-container="body" data-toggle="tooltip" data-placement="right" id="share" title="share"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><img src="static/img/twitter.svg" alt=""> </a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+          <li data-html="true" data-container="body" data-toggle="tooltip" data-placement="right" id="share" title="share"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw"  target="_blank" data-show-count="false"><img src="static/img/twitter.svg" alt=""> </a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
           <li data-html="true" data-container="body" data-toggle="tooltip" data-placement="right" id="terms" title="Data held in the <a href='http://opencitations.net/ccc/'>CCC</a> are freely available under a <a href='https://creativecommons.org/publicdomain/zero/1.0/'>CC0 license</a>. The full-text of sentences is not stored, and it is available under publishers' licenses."><img src="static/img/security.png" alt="legal terms for data reuse"></li>
         </ul>
       </nav>
@@ -60,25 +60,45 @@
     <script type="text/javascript" src="static/js/search-conf-occ.js"></script>
     <!-- <script type="text/javascript" src="https://opencitations.github.io/oscar/static/js/search.js"></script> -->
     <script type="text/javascript" src="static/js/search.js"></script>
-
-
     <script type="text/javascript" src="static/js/browser-conf-corpus.js"></script>
     <script type="text/javascript" src="static/js/browser.js"></script>
     <script type="text/javascript" src ="static/js/jquery.mark.min.js"></script>
     <script type="text/javascript" src ="static/js/underscore-min.js"></script>
     <script type="text/javascript" src ="static/js/epmc.js"></script>
-
-    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="static/js/d3.v6.min.js"></script>
     <script type="text/javascript" src ="static/js/ramose.js"></script>
     <script>
       // search menu
-      $(document).on("click", "#search_oscar_menu", function(event) {
-        event.preventDefault();
-        document.getElementById("search_and_results").style.display = "block";
-      });
-      $(document).on("click", "#closebtn", function(event) {
-        event.preventDefault();
-        document.getElementById("search_and_results").style.display = "none";
+      // $(document).on("click", "#search_oscar_menu", function(event) {
+      //   event.preventDefault();
+      //   $("#search_and_results").css("display", "block").css("opacity", "1");
+      //   $(".__lucinda__,#browser_metrics").css("display","none");
+      //   var detached = $(".cover.__oscar__").detach();
+      //   $(".overlay-content").append('<div class="menu __oscar__" data-type="free-text" data-view="rows_per_page sort_results" data-filter=""></div>');
+      //
+      //   $(document).on("click", "#closebtn", function(event) {
+      //     var detached_menu = $(".menu.__oscar__").detach();
+      //     event.preventDefault();
+      //     document.getElementById("search_and_results").style.display = "none";
+      //     $(".__lucinda__, .__oscar__,#browser_metrics").css("display","block");
+      //     $(".__lucinda__").after(detached);
+      //   });
+      // });
+      //
+      // function ccc_menu_search() {
+      //   event.preventDefault();
+      //   search_conf["search_base_path"] = "browser-corpus.html";
+      //   search_conf["advanced_search"] = false;
+      //   var query_term = decodeURIComponent(document.getElementById("input_box").value).replace(/\+/g, '%20');
+      //   search.do_sparql_query(query_term);
+      //   console.log(query_term);
+      // };
+
+      // cursor
+      $(document).ajaxStart(function() {
+          $(document.body).css({'cursor' : 'wait'});
+      }).ajaxStop(function() {
+          $(document.body).css({'cursor' : 'default'});
       });
 
       // lucinda
@@ -88,8 +108,10 @@
       if (groups.length > 1) {resource_iri = groups[1];}
       browser.do_sparql_query(resource_iri);
 
+      var resize = true;
       // graphs sidebar
       $(document).on("click", ".know_more", function(event) {
+
         if ( $(".graph_block").length == 0) {
           document.body.style.cursor = 'wait';
           var doi = $(".doi_before > a").attr('href').split('doi.org/')[1] ;
@@ -98,31 +120,35 @@
           //self_citations(data_citations[1]);
           citation_venues(data_citations[2]);
           //citing_authors(data_citations[2]);
-          $(".know_more").text("read less");
+
           document.body.style.cursor = 'auto';
         } else {
           $(".graph_block").toggle();
-          $(".know_more").text("read more");
         };
+
         $("#browser_metrics").css("z-index","20000");
         $("#browser_metrics").toggleClass("col-md-2 col-md-4",1000, "easeOutSine");
         $("#browser_info").toggleClass("col-md-10 col-md-8",1000, "easeOutSine");
-        $(".__oscar__").css("width", "55%");
-        $("#rows_per_page").css("width", "36%");
-        $(".__oscar__").toggleClass("col-md-10 col-md-6",1000, "easeOutSine");
-
+        if (resize) {
+          $('.__oscar__').animate({"width":"55%"},800);
+          $("#rows_per_page").css("width", "36%");
+          $(".know_more").text("read less");
+          resize = false;
+        } else {
+          $('.__oscar__').animate({"width":"70%"},1000);
+          $(".know_more").text("read more");
+          $("#rows_per_page").css("width", "30%");
+          resize = true;
+        }
+        //$(".__oscar__").width() == "70%" ? "55%" : "70%";
+        // $(".__oscar__").css("width", "55%");
+        // $(".__oscar__").toggleClass("col-md-10 col-md-6",1000, "easeOutSine");
+        // $('.__oscar__').toggle(
+        //   function() { $('.__oscar__').css("width","55%"); },
+        //   function() { $('.__oscar__').css("width","70%"); }
+        // );
 
       } );
-
-      // $(document).on("click", ".know_less", function(event) {
-      //   $("#browser_metrics").toggleClass("col-md-4 col-md-2",1000, "easeOutSine");
-      //   $("#browser_info").toggleClass("col-md-8 col-md-10",1000, "easeOutSine");
-      //   $(".__oscar__").css("width", "70%");
-      //   $("#rows_per_page").css("width", "25%");
-      //   $(".__oscar__").toggleClass("col-md-6 col-md-10",1000, "easeOutSine");
-      //   $(".know_less").text("read more").toggleClass("know_less know_more");
-      //
-      // });
 
       // popup menu
       $("#home").tooltip();

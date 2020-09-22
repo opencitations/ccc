@@ -37,6 +37,7 @@ class ResourceFinder(object):
         self.name = "SPACIN " + self.__class__.__name__
         self.loaded = set()
         self.default_dir = default_dir
+        self.index_for_graph_set = 0
         if g_set is not None:
             self.update_graph_set(g_set)
         if ts_url is None:
@@ -76,8 +77,9 @@ class ResourceFinder(object):
                 self.g.add((s, p, o))
 
     def update_graph_set(self, g_set):
-        for g in g_set.graphs():
+        for g in g_set.graphs()[self.index_for_graph_set:]:
             self.add_triples_in_graph(g)
+            self.index_for_graph_set += 1
 
     def retrieve(self, id_dict):
         for id_type in id_dict:
@@ -289,6 +291,7 @@ class ResourceFinder(object):
         return self.__query(query)
 
     def __query(self, query):
+        """
         if self.ts is not None:
             result = self.ts.query(query)
             for res, in result:
@@ -296,6 +299,24 @@ class ResourceFinder(object):
 
         # If nothing has been returned, check if there is something
         # in the current graph set
+        result = self.g.query(query)
+        for res, in result:
+            return res
+        """
+        if self.ts is not None:
+            res = self.__query_blazegraph(query)
+            if res is not None:
+                return res
+            else:
+                return self.__query_local(query)
+
+    def __query_blazegraph(self, query):
+        if self.ts is not None:
+            result = self.ts.query(query)
+            for res, in result:
+                return res
+
+    def __query_local(self, query):
         result = self.g.query(query)
         for res, in result:
             return res

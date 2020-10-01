@@ -60,10 +60,13 @@ class LocalQuery(QueryInterface):
         results = self.crossref_query_instance.search(fl='*,score', q=query)
 
         if len(results) != 1:
-            if self.reperr is not None:
-                self.reperr.add_sentence("[LocalQuery - Crossref] Error with: `{}`, {} results.".format(entity, len(results)))
+            if self.repok is not None:
+                self.repok.add_sentence("Data retrieved for '{}': {} results found, returning None".format(entity,len(results)))
             return None
         else:
+            if self.repok is not None:
+                self.repok.add_sentence("Data retrieved for '{}'".format(entity, len(results)))
+
             # @TODO: change this behavior before deploying it.
             # This is a temporary code fix in order to run on my local machine
             # where the `original` field has been added only for a few amount of docs
@@ -88,10 +91,13 @@ class LocalQuery(QueryInterface):
         results = self.crossref_query_instance.search(fl='*,score', q=query)
 
         if len(results) < 1:
-            if self.reperr is not None:
-                self.reperr.add_sentence("[LocalQuery - Crossref] Error with: `{}`".format(entity))
+            if self.repok is not None:
+                self.repok.add_sentence("Data retrieved for '{}': {} results found, returning None".format(entity,len(results)))
             return None
         else:
+            if self.repok is not None:
+                self.repok.add_sentence("Data retrieved for '{}'".format(entity, len(results)))
+
             # @TODO: change this behavior before deploying it.
             # This is a temporary code fix in order to run on my local machine
             # where the `original` field has been added only for a few amount of docs
@@ -101,7 +107,7 @@ class LocalQuery(QueryInterface):
                     toreturn.append(json.loads(r['original'][0]))
 
             if len(toreturn) > 0:
-                return toreturn[0]
+                return toreturn[0] # return the first... naive strategy to optimize
             else:
                 return None
 
@@ -111,14 +117,14 @@ class LocalQuery(QueryInterface):
         results = self.orcid_query_instance.search(fl='*,score', q=query)
 
         if len(results) != 1:
-            if self.reperr is not None:
-                self.reperr.add_sentence(
-                    "No authors found for `{}`".format(entity))
+            if self.repok is not None:
+                self.repok.add_sentence("Data retrieved for '{}': {} results found, returning None".format(entity,len(results)))
             return None
         else:
             to_return = [json.loads(r['authors']) for r in results][0]
             self.repok.add_sentence(
-                "{} authors found for `{}`".format(len(to_return), entity))
+                "Data retrieved for '{}': {} results found".format(entity, len(to_return)))
+            return to_return
 
     # We don't actually need this due to the fact that the data are denormalized in our stored collection
     def get_orcid_data(self, entity):

@@ -44,7 +44,7 @@ class CrossrefProcessor(FormatProcessor):
                  use_url_in_bibentry_as_id=True,
                  crossref_min_similarity_score=95.0,
                  intext_refs=False,
-                 query_interface = 'local'):
+                 query_interface = 'remote'):
 
         self.crossref_api_works = "https://api.crossref.org/works/"
         self.crossref_api_search = "https://api.crossref.org/works?rows=3&query.bibliographic=" # return 3 results
@@ -95,8 +95,6 @@ class CrossrefProcessor(FormatProcessor):
                                                   self.name,
                                                   self.id,
                                                   self.source)
-        else:
-            print("Returned None for {} from Crossref ({})".format(entry, type(self.query_interface)))
 
     def process_doi(self, doi: str, doi_curator: str, doi_source_provider: str, check=False):
         """
@@ -120,8 +118,6 @@ class CrossrefProcessor(FormatProcessor):
         # Otherwise query for it
         if existing_res is None:
             cur_json = self.query_interface.get_data_crossref_doi(doi)
-
-
 
             if cur_json is not None:
                 if check:
@@ -219,6 +215,7 @@ class CrossrefProcessor(FormatProcessor):
                     "processed in the past." % self.doi)
         else:  # No DOI has been specified for the citing resource
             self.reperr.add_sentence("No DOI has been specified for the citing resource.")
+        self.query_interface.close()
 
     def process_references(self, do_process_entry=True):
         result = []

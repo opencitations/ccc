@@ -68,6 +68,7 @@ class ORCIDFinder(object):
         self.repok.new_article()
         self.reper.new_article()
         self.__last_query_done = ORCIDFinder.__personal_url % orcid_string
+        print(self.__last_query_done)
         return self.query_interface.get_orcid_data(orcid_string)
 
     def get_orcid_records(self, doi_string, family_names=[]):
@@ -86,9 +87,9 @@ class ORCIDFinder(object):
             if doi_string_l != doi_string or doi_string_u != doi_string:
                 cur_query = "(" + cur_query
                 if doi_string_l != doi_string:
-                    cur_query += " OR doi-self:" + doi_string_l
+                    cur_query += " OR doi-self:\"%s\"" % doi_string_l
                 if doi_string_u != doi_string:
-                    cur_query += " OR doi-self:" + doi_string_u
+                    cur_query += " OR doi-self:\"%s\"" % doi_string_u
                 cur_query += ")"
 
             if family_names:
@@ -105,7 +106,9 @@ class ORCIDFinder(object):
                 cur_query += ")"
 
             self.__last_query_done = ORCIDFinder.__api_url + quote(cur_query)
-            return self.query_interface.get_orcid_records(quote(cur_query))
+
+            returned_data = self.query_interface.get_orcid_records(quote(cur_query))
+            return returned_data
 
     def get_orcid_ids(self, doi_string, family_names=[]):
         result = []

@@ -87,44 +87,35 @@ class LocalQuery(QueryInterface):
         entity = entity.replace("Available at:", "")
         entity = re.sub('\W+', ' ', entity)
         entity = entity.strip()
-        query = 'bibref:({})'.format(entity)
-        results = self.crossref_query_instance.search(fl='*,score', q=query)
+        query = f'bibref:({re.escape(entity)})'
+        #results = self.crossref_query_instance.search(fl='*,score', q=query)
+        results = self.crossref_query_instance.search(q=query)
+        if self.repok is not None:
+            self.repok.add_sentence(f"Data retrieved for '{entity}' in {results.qtime}ms")
 
         if len(results) < 1:
-            if self.repok is not None:
-                self.repok.add_sentence("Data retrieved for '{}': {} results found, returning None".format(entity,len(results)))
             return None
-        else:
-            if self.repok is not None:
-                self.repok.add_sentence("Data retrieved for '{}'".format(entity, len(results)))
 
-            # @TODO: change this behavior before deploying it.
-            # This is a temporary code fix in order to run on my local machine
-            # where the `original` field has been added only for a few amount of docs
-            toreturn = []
-            for r in results:
-                if 'original' in r:
-                    toreturn.append(json.loads(r['original'][0]))
-
-            if len(toreturn) > 0:
-                return toreturn[0] # return the first... naive strategy to optimize
-            else:
-                return None
+        # @TODO: change this behavior before deploying it.
+        # This is a temporary code fix in order to run on my local machine
+        # where the `original` field has been added only for a few amount of docs
+        toreturn = []
+        for r in results:
+            if 'original' in r:
+                return json.loads(r['original'][0])
 
 
     def get_orcid_records(self, entity):
         query = 'id:"{}"'.format(entity)
         results = self.orcid_query_instance.search(fl='*,score', q=query)
 
+        if self.repok is not None:
+            self.repok.add_sentence(f"Data retrieved for '{entity}'")
+
         if len(results) != 1:
-            if self.repok is not None:
-                self.repok.add_sentence("Data retrieved for '{}': {} results found, returning None".format(entity,len(results)))
             return None
         else:
-            to_return = [json.loads(r['authors']) for r in results][0]
-            self.repok.add_sentence(
-                "Data retrieved for '{}': {} results found".format(entity, len(to_return)))
-            return to_return
+            return [json.loads(r['authors']) for r in results][0]
 
     # We don't actually need this due to the fact that the data are denormalized in our stored collection
     def get_orcid_data(self, entity):

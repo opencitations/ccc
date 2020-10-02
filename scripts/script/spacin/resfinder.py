@@ -22,7 +22,7 @@ from script.ocdm.storer import Storer
 import os
 from script.support.support import find_paths
 
-
+import re
 class ResourceFinder(object):
 
     def __init__(self, g_set=None, ts_url=None, base_dir=None, base_iri=None, default_dir="_",
@@ -384,10 +384,10 @@ class ResourceFinder(object):
         for res, in result:
             return res
         """
-        res = self.__query_local(query, id_string, id_type)
-        if res is not None:
-            return res
-        elif self.ts is not None:
+        #res = self.__query_local(query, id_string, id_type)
+        #if res is not None:
+        #    return res
+        if self.ts is not None:
             res = self.__query_blazegraph(query)
             if res is not None:
                 return res

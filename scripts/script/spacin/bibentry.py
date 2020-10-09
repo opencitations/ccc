@@ -1,11 +1,5 @@
 from script.support.support import dict_get as dg
-from script.support.queryinterface import LocalQuery, RemoteQuery
-from script.support.support import dict_get as dg
-from script.support.support import encode_url
-from script.spacin.crossrefproc import CrossrefProcessor
 from script.ocdm.crossrefdatahandler import CrossrefDataHandler
-from script.ocdm.graphlib import GraphEntity
-from script.ccc.jats2oc import Jats2OC as jt
 from script.spacin.formatproc import FormatProcessor
 
 __author__ = "Gabriele Pisciotta"
@@ -56,6 +50,7 @@ class Bibentry:
         self.process_remote()
 
 
+    # Run remote queries
     def process_remote(self):
         if self.provided_doi is not None:
             self._process_doi(self.provided_doi)

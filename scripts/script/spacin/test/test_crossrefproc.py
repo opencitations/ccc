@@ -8,7 +8,7 @@ from script.spacin.resfinder import ResourceFinder as RF_1
 from script.spacin.resfinder_old import ResourceFinder as RF_2
 from script.spacin.orcidfinder import ORCIDFinder
 from script.spacin.crossrefproc import CrossrefProcessor as CP_1
-from script.spacin.crossrefproc_parallel_references import CrossrefProcessor as CP_PAR
+from script.spacin.crossrefproc import CrossrefProcessor as CP_PAR
 from script.spacin.crossrefproc_old import CrossrefProcessor as CP_2
 import os
 import tracemalloc
@@ -75,7 +75,6 @@ class Test(unittest.TestCase):
             print(index, " ", v)
         
         """
-
 
         cp = CP_PAR(base_iri, context_path, self.full_info_dir, self.json_object,
                                RF_1(ts_url=triplestore_url, default_dir=default_dir),

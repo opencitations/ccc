@@ -330,6 +330,21 @@ class ResourceFinder(object):
 
             return self.__query_blazegraph(query)
 
+    def add_doi_to_store(self, cur_res, cur_id, extracted_doi):
+        if cur_res is not None and cur_id is not None and extracted_doi is not None:
+
+            # Check if local store doesn't contains already the elements
+            if self.doi_store_type_id.__contains__(f"{cur_res}_{extracted_doi}") == False \
+            and self.doi_store_type.__contains__(f"{cur_res}") == False \
+            and self.doi_store.__contains__(f"{extracted_doi}") == False:
+
+                print(f"Adding {cur_res}, {cur_id}, {extracted_doi}")
+
+                # Add it
+                self.doi_store_type_id[f"{cur_res}_{extracted_doi}"] = cur_id
+                self.doi_store_type[f"{cur_res}"] = extracted_doi
+                self.doi_store[f"{extracted_doi}"] = cur_res
+
     def __retrieve_from_journal(self, id_dict, part_type, part_seq_id):
 
         # If not present, check in blazegraph

@@ -268,9 +268,8 @@ class CrossrefDataHandler(object):
         cur_id = self.g_set.add_id(doi_curator, doi_source_provider, doi_source)
         if cur_id.create_doi(json[key]):
             cur_br.has_id(cur_id)
-        self.rf.doi_store_type_id[f"{cur_br}_{json[key]}"] = cur_id
-        self.rf.doi_store_type[f"{cur_br}"] = json[key]
-        self.rf.doi_store[f"{json[key]}"] = cur_br
+        self.rf.add_doi_to_store(cur_br, cur_id, json[key])
+
 
     def issued(self, cur_br, key, json, *args):
         cur_br.create_pub_date(json[key]["date-parts"][0])

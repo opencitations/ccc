@@ -4,9 +4,12 @@ from script.ccc.conf_spacin import reference_dir, base_iri, context_path, info_d
     dataset_home, reference_dir_done, reference_dir_error, interface, supplier_dir, default_dir, do_parallel, \
     sharing_dir
 import json
-from script.spacin.resfinder import ResourceFinder
+from script.spacin.resfinder import ResourceFinder as RF_1
+from script.spacin.resfinder_old import ResourceFinder as RF_2
 from script.spacin.orcidfinder import ORCIDFinder
-from script.spacin.crossrefproc import CrossrefProcessor
+from script.spacin.crossrefproc import CrossrefProcessor as CP_1
+from script.spacin.crossrefproc_parallel_references import CrossrefProcessor as CP_PAR
+from script.spacin.crossrefproc_old import CrossrefProcessor as CP_2
 import os
 import tracemalloc
 tracemalloc.start()
@@ -26,16 +29,79 @@ class Test(unittest.TestCase):
         with open(os.path.join(self.TEST_DIR, 'test_json.json')) as fp:
             self.json_object = json.load(fp)
 
-    """
-        def test_time_processfile(self):
-            r = ResourceFinder(ts_url=triplestore_url, default_dir=default_dir)
-            cp = CrossrefProcessor(base_iri, context_path, self.full_info_dir, self.json_object,
-                                   r,
-                                   ORCIDFinder(self.orcid_conf_path, query_interface='local'), items_per_file,
-                                   self.supplier_prefix, intext_refs=True, query_interface='local')
-            cp.process()
-    """
 
+    def test_time_processfile(self):
+        import time
+        """"
+        cp = CP_1(base_iri, context_path, self.full_info_dir, self.json_object,
+                               RF_1(ts_url=triplestore_url, default_dir=default_dir),
+                               ORCIDFinder(self.orcid_conf_path, query_interface='local'), items_per_file,
+                               self.supplier_prefix, intext_refs=True, query_interface='local')
+        s = time.time()
+        ret = cp.process()
+        e = time.time()
+        print(f"Time {(e-s)}")
+        print(f"Printing graph")
+        n = 0
+        with open('graph_1.txt', 'w') as f:
+            for g in ret.g:
+                for (s, o, p) in g:
+                    f.write(f"{s}, {o}, {p}")
+                    n+=1
+        print(f"NNN SEQ: {n}")
+
+        
+        cp = CP_2(base_iri, context_path, self.full_info_dir, self.json_object,
+                               RF_2(ts_url=triplestore_url, default_dir=default_dir),
+                               ORCIDFinder(self.orcid_conf_path, query_interface='local'), items_per_file,
+                               self.supplier_prefix, intext_refs=True, query_interface='local')
+        s = time.time()
+        ret = cp.process()
+        e = time.time()
+        print(f"Time {(e-s)}")
+        print(f"Printing graph")
+        n = 0
+        ss = set()
+        with open('graph_3.txt', 'w') as f:
+            for g in ret.g:
+                for (s, o, p) in g:
+                    ss.add(f"{s}{o}{p}") # in the parallel version we have 1552, in this 1587
+                    #f.write(f"{s}, {o}, {p}")
+                    n+=1
+        print(f"NNN OLD: {len(ss)}") #6176
+        print(f"Process existing id time: {cp.process_existing_by_id_time}")
+        s = 0
+        for index, v in enumerate(cp.lengths):
+            print(index, " ", v)
+        
+        """
+
+
+        cp = CP_PAR(base_iri, context_path, self.full_info_dir, self.json_object,
+                               RF_1(ts_url=triplestore_url, default_dir=default_dir),
+                               ORCIDFinder(self.orcid_conf_path, query_interface='local'), items_per_file,
+                               self.supplier_prefix, intext_refs=True, query_interface='local')
+        s = time.time()
+        ret = cp.process()
+        e = time.time()
+        print(f"Time {(e-s)}")
+
+        n = 0
+        ss = set()
+        with open('graph_2.txt', 'w') as f:
+            for g in ret.g:
+                for (s, o, p) in g:
+                    #f.write(f"{s}, {o}, {p}")
+                    ss.add(f"{s}{o}{p}")
+                    n+=1
+        print(f"NNN PAR: {len(ss)}") #1552
+
+        #s = 0
+        #for index, v in enumerate(cp.lengths):
+        #    print(index, " ", v)
+
+
+    """
     def test_wrong_initialization(self):
         self.assertRaises(ValueError, CrossrefProcessor, base_iri, context_path, self.full_info_dir, self.json_object,
                                                     ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
@@ -85,6 +151,6 @@ class Test(unittest.TestCase):
         should_be = '10.1371/journal.pntd.0004460'
         result = cp.process_entry(entry, True)
         self.assertEqual(result['DOI'], should_be)
-
+    """
 if __name__ == '__main__':
     unittest.main()

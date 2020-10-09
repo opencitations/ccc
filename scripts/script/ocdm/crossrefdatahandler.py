@@ -242,7 +242,7 @@ class CrossrefDataHandler(object):
             retrieved_agent = None
             if self.rf is not None:
                 # TODO retrieve_from_fundref
-                retrieved_agent = self.rf.retrieve_from_url(cur_member_url) 
+                retrieved_agent = self.rf.retrieve_from_url(cur_member_url, 'both')
             if retrieved_agent is not None:
                 cur_agent = self.g_set.add_ra(
                     self.name, self.id, source, retrieved_agent)
@@ -268,6 +268,9 @@ class CrossrefDataHandler(object):
         cur_id = self.g_set.add_id(doi_curator, doi_source_provider, doi_source)
         if cur_id.create_doi(json[key]):
             cur_br.has_id(cur_id)
+        self.rf.doi_store_type_id[f"{cur_br}_{json[key]}"] = cur_id
+        self.rf.doi_store_type[f"{cur_br}"] = json[key]
+        self.rf.doi_store[f"{json[key]}"] = cur_br
 
     def issued(self, cur_br, key, json, *args):
         cur_br.create_pub_date(json[key]["date-parts"][0])
@@ -276,6 +279,9 @@ class CrossrefDataHandler(object):
         cur_id = self.g_set.add_id(self.name, self.id, source)
         if cur_id.create_url(json[key]):
             cur_br.has_id(cur_id)
+        self.rf.url_store_type_id[f"{cur_br}_{json[key]}"] = cur_id
+        self.rf.url_store_type[f"{cur_br}"] = json[key]
+        self.rf.url_store[f"{json[key]}"] = cur_br
 
     def page(self, cur_br, key, json, source, *args):
         cur_page = json[key]
@@ -531,7 +537,8 @@ class CrossrefDataHandler(object):
         for key in json:
             l_key = key.lower().replace("-", "_")
             try:
-                getattr(self, l_key)(cur_br, key, json, source, doi_curator, doi_source_provider, doi_source)  # TODO: say what it does
+                getattr(self, l_key)(cur_br, key, json, source, doi_curator, doi_source_provider,
+                                     doi_source)  # TODO: say what it does
 
             except AttributeError:
                 pass  # do nothing

@@ -58,7 +58,6 @@ class LocalQuery(QueryInterface):
     def get_data_crossref_doi(self, entity):
         query = 'id:"{}"'.format(entity)
         results = self.crossref_query_instance.search(fl='*,score', q=query)
-
         if len(results) != 1:
             if self.repok is not None:
                 self.repok.add_sentence("Data retrieved for '{}': {} results found, returning None".format(entity,len(results)))
@@ -90,6 +89,7 @@ class LocalQuery(QueryInterface):
         query = f'bibref:({re.escape(entity)})'
         #results = self.crossref_query_instance.search(fl='*,score', q=query)
         results = self.crossref_query_instance.search(q=query)
+
         if self.repok is not None:
             self.repok.add_sentence(f"Data retrieved for '{entity}' in {results.qtime}ms")
 

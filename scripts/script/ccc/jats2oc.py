@@ -1575,8 +1575,10 @@ class Jats2OC(object):
 			parsed_cited = []
 			for cited_entity, xmlid, be in cited_entities_xmlid_be:
 				if cited_entity not in parsed_cited:
-					gen_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, rp_num=None, source_agent=source_provider, source=source)
+					# gen_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, rp_num=None, source_agent=source_provider, source=source)
+					gen_ci = graph.add_ci(resp_agent, source_agent=source_provider, source=source)
 					gen_ci._create_citation(citing_entity, cited_entity)
+					oci = Jats2OC.add_oci(graph, gen_ci, citing_entity, cited_entity, resp_agent, source_agent=source_provider, source=source, rp_num=None)
 					gen_an = graph.add_an(resp_agent, source_provider, source)
 					gen_an._create_body_annotation(gen_ci)
 					be._create_annotation(gen_an)
@@ -1616,7 +1618,9 @@ class Jats2OC(object):
 				cur_rp.denotes_be(be)
 				rp_pid = Jats2OC.add_intrepid(graph, cur_rp, citing_entity, cited_entity, rp_num, rp_total_occurrence, resp_agent, source_provider, source)
 				cur_an = graph.add_an(resp_agent, source_provider, source)
-				cur_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, rp_num, source_provider, source)
+				# cur_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, rp_num, source_provider, source)
+				cur_ci = graph.add_ci(resp_agent, source_provider, source)
+				oci = Jats2OC.add_oci(graph, cur_ci, citing_entity, cited_entity, resp_agent, source_agent=source_provider, source=source, rp_num=rp_num)
 				cur_ci._create_citation(citing_entity, cited_entity)
 				cur_an._create_body_annotation(cur_ci)
 				cur_rp._create_annotation(cur_an)
@@ -1643,6 +1647,21 @@ class Jats2OC(object):
 			cur_id.create_intrepid(intrepid)
 			cur_rp.has_id(cur_id)
 
+	@staticmethod
+	def add_oci(graph, cur_ci, citing_entity, cited_entity, resp_agent, source_provider, source, rp_num=None):
+		citing_res , cited_res = str(citing_entity) , str(cited_entity)
+		citing_count = citing_res.rsplit('/',1)[-1]
+		cited_count = cited_res.rsplit('/',1)[-1]
+		if rp_num is not None:
+			oci = citing_count+'-'+cited_count+'/'+rp_num
+			cur_id = graph.add_id(resp_agent, source_provider, source)
+			cur_id.create_oci(oci)
+			cur_ci.has_id(cur_id)
+		else:
+			oci = citing_count+'-'+cited_count
+			cur_id = graph.add_id(resp_agent, source_provider, source)
+			cur_id.create_oci(oci)
+			cur_ci.has_id(cur_id)
 
 	@staticmethod
 	def create_context(graph, citing_entity, cur_rp_or_pl, xpath_string, context_sequence, de_resources, containers_title, resp_agent=None, source_provider=None, source=None):

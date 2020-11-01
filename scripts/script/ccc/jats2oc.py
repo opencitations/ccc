@@ -1620,7 +1620,7 @@ class Jats2OC(object):
 				cur_an = graph.add_an(resp_agent, source_provider, source)
 				# cur_ci = graph.add_ci(resp_agent, citing_entity, cited_entity, rp_num, source_provider, source)
 				cur_ci = graph.add_ci(resp_agent, source_provider, source)
-				oci = Jats2OC.add_oci(graph, cur_ci, citing_entity, cited_entity, resp_agent, source_agent=source_provider, source=source, rp_num=rp_num)
+				oci = Jats2OC.add_oci(graph, cur_ci, citing_entity, cited_entity, resp_agent, source_provider=source_provider, source=source, rp_num=rp_num)
 				cur_ci._create_citation(citing_entity, cited_entity)
 				cur_an._create_body_annotation(cur_ci)
 				cur_rp._create_annotation(cur_an)

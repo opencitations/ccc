@@ -2453,7 +2453,7 @@ var htmldom = (function () {
 
 			var str_html =
 			"<div class='rows-per-page'>"+"<select class='form-control input custom' onchange='search.update_page_limit(this.options[selectedIndex].text)'' id='sel1'> </div>"+
-				options_html+"<option disabled selected value>RESULTS PER PAGE</option></select>";
+				options_html+"<option disabled selected value>&#x2630;</option></select>";
 
 			rowsxpage_container.innerHTML = str_html;
 			return str_html;
@@ -2490,7 +2490,7 @@ var htmldom = (function () {
 
 			var str_html =
 				"<div class='sort-results'><select class='form-control input custom' onchange='search.check_sort_opt(this.options[selectedIndex])' id='sort_box_input'></div>"+
-				options_html+"<option disabled selected value>SORT BY</option></select>";
+				options_html+"<option disabled selected value>&darr; &#x2630;</option></select>";
 
 			sort_container.innerHTML = str_html;
 			return str_html;

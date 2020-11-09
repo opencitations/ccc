@@ -33,7 +33,7 @@ try:
     epmc = EuropeanPubMedCentralProcessor(
         stored_file, reference_dir, error_dir, pagination_file, Stopper(reference_dir),
         p_size=page_size, debug=debug, intext_refs=True, supplier_idx=supplier_tuple)
-    epmc.process(True,True)
+    epmc.process(True)
 except Exception as e:
     exception_string = str(e) + " " + traceback.format_exc().rstrip("\n+")
 

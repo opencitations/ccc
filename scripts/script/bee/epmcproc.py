@@ -69,6 +69,7 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
             max_iteration, timeout, debug, supplier_idx)
 
     def __get_data_from_page(self, cur_page, oa=False):
+        """ This is to get the page content exploiting two different kind of query."""
         self.repok.new_article()
         self.repok.add_sentence("Processing page %s." % str(cur_page))
         if oa:

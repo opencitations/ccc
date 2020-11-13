@@ -30,6 +30,9 @@ import pandas as pd
 import json
 import time
 import threading
+from script.support.support import normalise_id
+
+__author__ = "Gabriele Pisciotta"
 
 def run_in_thread(fn):
     def run(*k, **kw):
@@ -76,7 +79,6 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
         self.max_query_per_sec = max_query_per_sec
         self.query_count = 1
         self.sec_threshold = None
-        self.pmed_file_path = '/mie/europepmc.org/ftp/oa/'
         self.article_ids = {}
 
         self.__last_xml_source = None
@@ -88,7 +90,6 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
 
     @run_in_thread
     def process_article(self, paper, oa=False, intext_refs=False):
-        #cur_id = paper["cur_id"].values[0]
         cur_source = "MED"
         cur_doi = paper["cur_doi"]
         cur_pmid = int(paper["cur_pmid"])
@@ -132,7 +133,7 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
                 json_item = {}
                 json_item["references"] = ref_list
                 if cur_localid != "":
-                    json_item["localid"] =  str(next(str(item) for item in id_list if item is not None))
+                    json_item["localid"] =  cur_id
                 if cur_doi != "" and cur_doi != "nan" and cur_doi is not None:
                     json_item["doi"] = str(cur_doi)
                 if cur_pmid != "" and cur_pmid != "0" and cur_pmid is not None:
@@ -149,21 +150,14 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
                     json_item["reference_pointers"] = ref_pointer_list
 
                 cur_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S-%f_')
-                local_file_name = cur_time + str(uuid.uuid1()) + ".json"
-                #local_dir_name = self.new_supplier() + re.sub("^([0-9]+-[0-9]+-[0-9]+-[0-9]+).+$", "\\1", cur_time)
-                # The error variable is True if a reference in the reference list
-                # has no information at all
-                #if self.error:
-                #    new_dir_path = self.err_dir + os.sep + local_dir_name
-                #    new_file_path = new_dir_path + os.sep + local_file_name
+                local_file_name = str(uuid.uuid4()) + ".json"
+                local_dir_name = self.rs.new_supplier() +   re.sub("^([0-9]+-[0-9]+-[0-9]+-[0-9]+).+$", "\\1", cur_time)
 
-                #else:
-                new_dir_path = './test/share/ref/todo/'
+                new_dir_path = self.rs.ref_dir + os.sep + local_dir_name
                 new_file_path = new_dir_path + os.sep + local_file_name
 
                 if not os.path.exists(new_dir_path):
                     os.makedirs(new_dir_path)
-
                 try:
                     with open(new_file_path, "w") as f:
                         json.dump(json_item, f, indent=4, ensure_ascii=False)
@@ -183,9 +177,13 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
             self.repok.add_sentence("The article '%s' has been already stored." % cur_localid)
 
 
-    def process(self, oa=False, intext_refs=False):
-        dataset = os.path.join(self.pmed_file_path, 'csv', 'dataset.csv')
+    def process(self,
+                oa=False,
+                intext_refs=False,
+                dataset='/mie/europepmc.org/ftp/oa/csv/dataset.csv',
+                articles_path='/mie/europepmc.org/ftp/oa/articles/'):
         try:
+            self.articles_path = articles_path
             self.df = pd.read_csv(dataset, sep='\t')
 
             self.df['cur_pmid'] = self.df['cur_pmid'].fillna(0)
@@ -252,7 +250,7 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
 
 
                 try:
-                    with open(os.path.join(self.pmed_file_path, 'articles', cur_name), 'r') as xml_source:
+                    with open(os.path.join(self.articles_path, cur_name), 'r') as xml_source:
 
                         cur_xml = etree.fromstring(xml_source.read())
                         reference_pointers = cur_xml.xpath("//xref[@rid = //ref/@id]")

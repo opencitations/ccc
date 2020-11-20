@@ -49,6 +49,7 @@ class CrossrefDataHandler(object):
             cur_id = self.g_set.add_id(self.name, self.id, source)
             if cur_id.create_isbn(string):
                 res.has_id(cur_id)
+                self.rf.add_isbn_to_store(res, cur_id, string)
 
     def __get_ids_for_container(self, json):
         result = {}
@@ -65,10 +66,17 @@ class CrossrefDataHandler(object):
         return result
 
     def __associate_issn(self, res, json, source):
+        issnss = []
+        cur_ids = []
+
         for string in CrossrefDataHandler.get_all_issns(json):
             cur_id = self.g_set.add_id(self.name, self.id, source)
             if cur_id.create_issn(string):
                 res.has_id(cur_id)
+                cur_ids += [cur_id.res]
+                issnss += [string]
+
+        self.rf.add_issn_to_store(res, cur_ids, issnss)
 
     @staticmethod
     def create_title_from_list(title_list):
@@ -201,10 +209,10 @@ class CrossrefDataHandler(object):
             if retrieved_agent is None:
                 cur_agent = self.g_set.add_ra(self.name, self.id, source)
                 if cur_orcid_record is not None and self.of is not None:
-                    cur_agent_orcid = \
-                        self.g_set.add_id(self.of.name, self.of.id, self.of.get_last_query())
+                    cur_agent_orcid = self.g_set.add_id(self.of.name, self.of.id, self.of.get_last_query())
                     cur_agent_orcid.create_orcid(cur_orcid_record["orcid"])
                     cur_agent.has_id(cur_agent_orcid)
+                    self.rf.add_orcid_to_store(cur_agent, cur_agent_orcid, cur_orcid_record["orcid"])
 
                 if given_name_string is not None:
                     cur_agent.create_given_name(given_name_string)
@@ -216,8 +224,7 @@ class CrossrefDataHandler(object):
                 elif cur_orcid_record is not None and "family" in cur_orcid_record:
                     cur_agent.create_family_name(cur_orcid_record["family"])
             else:
-                cur_agent = self.g_set.add_ra(
-                    self.name, self.id, source, retrieved_agent)
+                cur_agent = self.g_set.add_ra(self.name, self.id, source, retrieved_agent)
 
             # Add statements related to the author resource (that could or could not
             # exist in the store)
@@ -242,7 +249,7 @@ class CrossrefDataHandler(object):
             retrieved_agent = None
             if self.rf is not None:
                 # TODO retrieve_from_fundref
-                retrieved_agent = self.rf.retrieve_from_url(cur_member_url)
+                retrieved_agent = self.rf.retrieve_from_url(cur_member_url, 'both')
             if retrieved_agent is not None:
                 cur_agent = self.g_set.add_ra(
                     self.name, self.id, source, retrieved_agent)
@@ -268,6 +275,8 @@ class CrossrefDataHandler(object):
         cur_id = self.g_set.add_id(doi_curator, doi_source_provider, doi_source)
         if cur_id.create_doi(json[key]):
             cur_br.has_id(cur_id)
+        self.rf.add_doi_to_store(cur_br, cur_id, json[key])
+
 
     def issued(self, cur_br, key, json, *args):
         cur_br.create_pub_date(json[key]["date-parts"][0])
@@ -276,6 +285,9 @@ class CrossrefDataHandler(object):
         cur_id = self.g_set.add_id(self.name, self.id, source)
         if cur_id.create_url(json[key]):
             cur_br.has_id(cur_id)
+        self.rf.url_store_type_id[f"{cur_br}_{json[key]}"] = cur_id
+        self.rf.url_store_type[f"{cur_br}"] = json[key]
+        self.rf.url_store[f"{json[key]}"] = cur_br
 
     def page(self, cur_br, key, json, source, *args):
         cur_page = json[key]
@@ -381,6 +393,9 @@ class CrossrefDataHandler(object):
                             cont_br.create_number(json["issue"])
                             if "volume" not in json:
                                 jou_br.has_part(cont_br)
+                                self.add_journal_issue(CrossrefDataHandler.get_all_issns(json), json["issue"], cont_br)
+                                self.add_journal_issue(CrossrefDataHandler.get_all_isbns(json), json["issue"], cont_br)
+                                self.rf.add_issue_to_store(jou_br, cont_br, json["issue"])
 
                         if "volume" in json:
                             cur_volume_id = json["volume"]
@@ -397,15 +412,28 @@ class CrossrefDataHandler(object):
                                         self.name, self.id, source)
                                     CrossrefDataHandler.add_volume_data(vol_br, cur_volume_id)
                                     jou_br.has_part(vol_br)
+
+                                    self.add_journal_volume(CrossrefDataHandler.get_all_issns(json), json["volume"], cont_br)
+                                    self.add_journal_volume(CrossrefDataHandler.get_all_isbns(json), json["volume"],cont_br)
+                                    self.rf.add_volume_to_store(jou_br, vol_br, cur_volume_id)
+
                                 else:
                                     vol_br = self.g_set.add_br(
                                         self.name, self.id, source, retrieved_volume)
                                 vol_br.has_part(cont_br)
+                                self.add_journal_issue(CrossrefDataHandler.get_all_issns(json), json["issue"], cont_br)
+                                self.add_journal_issue(CrossrefDataHandler.get_all_isbns(json), json["issue"], cont_br)
+                                self.rf.add_issue_to_store(jou_br, cont_br, json["issue"])
+
                             else:
                                 cur_container_type = "volume"
                                 vol_br = cont_br
                                 CrossrefDataHandler.add_volume_data(vol_br, cur_volume_id)
                                 jou_br.has_part(vol_br)
+                                self.add_journal_volume(CrossrefDataHandler.get_all_issns(json), json["volume"], vol_br)
+                                self.add_journal_volume(CrossrefDataHandler.get_all_isbns(json), json["volume"], vol_br)
+                                self.rf.add_volume_to_store(jou_br, vol_br, cur_volume_id)
+
                 elif cur_type == "journal-issue":
                     cur_container_type = "journal"
                     if "volume" in json:
@@ -420,13 +448,15 @@ class CrossrefDataHandler(object):
                         if retrieved_journal is None:
                             jou_br = self.g_set.add_br(self.name, self.id, source)
                             self.__associate_issn(jou_br, json, source)
-                            CrossrefDataHandler.add_journal_data(
-                                jou_br, cur_container_title)
+                            CrossrefDataHandler.add_journal_data(jou_br, cur_container_title)
                         else:
-                            jou_br = self.g_set.add_br(
-                                self.name, self.id, source, retrieved_journal)
+                            jou_br = self.g_set.add_br(self.name, self.id, source, retrieved_journal)
 
                         jou_br.has_part(cont_br)
+                        self.add_journal_volume(CrossrefDataHandler.get_all_issns(json), json["volume"], cont_br)
+                        self.add_journal_volume(CrossrefDataHandler.get_all_isbns(json), json["volume"], cont_br)
+                        self.rf.add_volume_to_store(jou_br, vol_br, cur_volume_id)
+
                     else:
                         jou_br = cont_br
                         CrossrefDataHandler.add_journal_data(jou_br, cur_container_title)
@@ -465,6 +495,17 @@ class CrossrefDataHandler(object):
 
         if cont_br is not None:
             cont_br.has_part(cur_br)
+
+    def add_journal_volume(self, strings, part_seq_id, cont_br):
+        # "{issn}_{GraphEntity.journal_issue} = cont_br"
+        for s in strings:
+            self.rf.add_journal_to_store(s, str(GraphEntity.journal_volume), part_seq_id, cont_br)
+
+    def add_journal_issue(self, strings, part_seq_id, cont_br):
+        # "{issn}_{GraphEntity.journal_issue} = cont_br"
+        for s in strings:
+            self.rf.add_journal_to_store(s, str(GraphEntity.journal_issue), part_seq_id, cont_br)
+
 
     def type(self, cur_br, key, json, source, *args):
         cur_type = json[key]
@@ -531,7 +572,8 @@ class CrossrefDataHandler(object):
         for key in json:
             l_key = key.lower().replace("-", "_")
             try:
-                getattr(self, l_key)(cur_br, key, json, source, doi_curator, doi_source_provider, doi_source)  # TODO: say what it does
+                getattr(self, l_key)(cur_br, key, json, source, doi_curator, doi_source_provider,
+                                     doi_source)  # TODO: say what it does
 
             except AttributeError:
                 pass  # do nothing

@@ -924,7 +924,7 @@ class Jats2OC(object):
 							and isinstance(rp_and_tails[rp_and_tails.index(el)+1],str) \
 							and len(Jats2OC.remove_spaces(rp_and_tails[rp_and_tails.index(el)+1])) >=1 \
 							and Jats2OC.remove_spaces(rp_and_tails[rp_and_tails.index(el)+1])[-1] == '.' ),None)
-						full_string_b = "".join(Jats2OC.get_text_before(first_rp_in_list)) if first_rp_in_list \
+						full_string_b = "".join(Jats2OC.get_text_before(first_rp_in_list)) if first_rp_in_list is not None \
 							else "".join(Jats2OC.get_text_before(elem))
 					else: # any case that I didn't think of yet
 						full_string_b = "".join(Jats2OC.get_text_before(elem))

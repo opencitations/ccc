@@ -16,11 +16,15 @@
 
 __author__ = 'marilena_daquino'
 
-from script.bee.conf import stored_file, reference_dir, error_dir, pagination_file, page_size, debug, supplier_tuple
+from script.bee.conf import stored_file, reference_dir, error_dir, pagination_file, page_size, debug, \
+    supplier_tuple, PARALLEL_PROCESSING, dataset_reference, article_path_reference
+
 from script.support.stopper import Stopper
 import traceback
 from datetime import datetime
+from script.bee.epmcproc_parallel import EuropeanPubMedCentralProcessor as EuropeanPubMedCentralProcessorParallel
 from script.bee.epmcproc import EuropeanPubMedCentralProcessor
+
 import os
 
 # TODO remove
@@ -29,11 +33,24 @@ import time
 
 start_time = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 exception_string = None
+
 try:
-    epmc = EuropeanPubMedCentralProcessor(
-        stored_file, reference_dir, error_dir, pagination_file, Stopper(reference_dir),
-        p_size=page_size, debug=debug, intext_refs=True, supplier_idx=supplier_tuple)
-    epmc.process(True,True)
+    if not PARALLEL_PROCESSING:
+
+        epmc = EuropeanPubMedCentralProcessor(
+            stored_file, reference_dir, error_dir, pagination_file, Stopper(reference_dir),
+            p_size=page_size, debug=debug, intext_refs=True, supplier_idx=supplier_tuple)
+        epmc.process(True)
+
+    else:
+        epmc = EuropeanPubMedCentralProcessorParallel(
+            stored_file, reference_dir, error_dir, pagination_file, Stopper(reference_dir),
+            p_size=page_size, debug=debug, intext_refs=True, supplier_idx=supplier_tuple)
+        epmc.process(oa=True,
+                     intext_refs=True,
+                     dataset=dataset_reference,
+                     articles_path=article_path_reference)
+
 except Exception as e:
     exception_string = str(e) + " " + traceback.format_exc().rstrip("\n+")
 

@@ -2,14 +2,14 @@
 
 Dependencies
 
- * install dependencies: rdflib, SPARQLWrapper, NLTK, fuzzywuzzy, lxml
- * Blazegraph.jar [Direct link to download](https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/blazegraph.jar)
+ * install dependencies with `pip install -r requirements.txt`
+ * In `ccc/scripts`, put Blazegraph.jar [Direct link to download](https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/blazegraph.jar)
 
 ### RUN BEE LOCALLY
 
  * Change `bee/conf.py` content with content of `bee/conf_local.py`
  * Change `ccc/conf_spacin.py` content with content of `ccc/conf_spacin_local.py`
- * Shell: `python3 -m script.ccc.run_bee`. It creates a folder called `test` in the same folder `scripts`.
+ * Shell (from `ccc/scripts`): `python3 -m script.ccc.run_bee`. It creates a folder called `test` in the same folder `scripts`.
  * OUTPUT JSON: `scripts/test/share/ref/todo`
  * ERRORS: `scripts/test/index/ref/issue`
 

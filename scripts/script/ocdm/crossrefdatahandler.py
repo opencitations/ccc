@@ -264,7 +264,7 @@ class CrossrefDataHandler(object):
 
             if cur_member_url is not None:
                 cur_agent_id = self.g_set.add_id(self.name, self.id, source)
-                cur_agent_id.create_url(json["member"])
+                cur_agent_id.create_crossref(json["member"])
                 cur_agent.has_id(cur_agent_id)
 
         cur_role = self.g_set.add_ar(self.name, self.id, source)

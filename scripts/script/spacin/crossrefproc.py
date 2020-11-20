@@ -244,7 +244,7 @@ class CrossrefProcessor(FormatProcessor):
                                          "PMCID", bibentry_entity.provided_pmcid))
 
                 if cur_res is None and bibentry_entity.entry is not None:  # crossref API string search
-                    if do_process_entry:
+                    if do_process_entry == True:
                         cur_res = self.process_entry(entry=bibentry_entity.entry,
                                                      cur_json=bibentry_entity.existing_bibref_entry)
                     if cur_res is None:
@@ -326,6 +326,7 @@ class CrossrefProcessor(FormatProcessor):
         :return: the reference on the graph for the processed json
         """
         self.rf.update_graph_set(self.g_set)
+        print("JSON in process_crossref_json", crossref_json)
 
         # Check if the found bibliographic resource already exist locally.
         retrieved_resource = self.rf.retrieve(CrossrefDataHandler.get_ids_for_type(crossref_json), typ='only_local')
@@ -355,7 +356,7 @@ class CrossrefProcessor(FormatProcessor):
 
         if cur_json is None:
             cur_json = self.query_interface.get_data_crossref_bibref(entry)
-
+            print("\n\n\nJSON in process_entry\n\n\n",cur_json)
         if cur_json is not None:
             return self.process_crossref_json(cur_json,
                                               self.crossref_api_search + FormatProcessor.clean_entry(entry),

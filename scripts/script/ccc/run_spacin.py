@@ -41,9 +41,13 @@ try:
                             last_local_dir = cur_local_dir_path
                             print("\n\nProcess file '%s'\n" % cur_file_path)
                             json_object = json.load(fp)
+                            # crp = CrossrefProcessor(base_iri, context_path, full_info_dir, json_object,
+                            #                         ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
+                            #                         ORCIDFinder(orcid_conf_path), items_per_file, supplier_prefix, intext_refs=True)
                             crp = CrossrefProcessor(base_iri, context_path, full_info_dir, json_object,
-                                                    ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
-                                                    ORCIDFinder(orcid_conf_path), items_per_file, supplier_prefix, intext_refs=True)
+                               ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
+                               ORCIDFinder(orcid_conf_path, query_interface='remote'),
+                               items_per_file, supplier_prefix, intext_refs=True, query_interface='remote')
                             result = crp.process()
                             if result is not None:
                                 prov = ProvSet(result, base_iri, context_path, default_dir, full_info_dir,

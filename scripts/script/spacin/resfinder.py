@@ -367,7 +367,7 @@ class ResourceFinder(object):
                 self.doi_store_type_id[f"{cur_res}_{extracted_doi}"] = cur_id
                 self.doi_store_type[f"{cur_res}"] = extracted_doi
                 self.doi_store[f"{extracted_doi}"] = cur_res
-                
+
     def add_url_to_store(self, cur_res, cur_id, extracted_url):
         if cur_res is not None and cur_id is not None and extracted_url is not None:
 
@@ -380,7 +380,7 @@ class ResourceFinder(object):
                 self.url_store_type_id[f"{cur_res}_{extracted_url}"] = cur_id
                 self.url_store_type[f"{cur_res}"] = extracted_url
                 self.url_store[f"{extracted_url}"] = cur_res
-                
+
     def add_isbn_to_store(self, cur_res, cur_id, isbn):
         if cur_res is not None and cur_id is not None and isbn is not None:
             # If empty create array
@@ -397,7 +397,7 @@ class ResourceFinder(object):
             self.isbn_store_type_id[f"{cur_res}_{isbn}"] += [cur_id]
             self.isbn_store_type[f"{cur_res}"] += [isbn]
             self.isbn_store[f"{isbn}"] += [cur_res]
-                
+
     def add_issn_to_store(self, cur_res, cur_id, issn):
         if cur_res is not None and cur_id is not None and issn is not None:
             # If empty create array
@@ -406,7 +406,7 @@ class ResourceFinder(object):
 
             if not self.issn_store_type.__contains__(f"{cur_res}"):
                 self.issn_store_type[f"{cur_res}"] = []
-                
+
             if not self.issn_store.__contains__(f"{issn}"):
                 self.issn_store[f"{issn}"] = []
 
@@ -432,7 +432,7 @@ class ResourceFinder(object):
             self.orcid_store_type_id[f"{cur_res}_{orcid}"] += [cur_id.res]
             self.orcid_store_type[f"{cur_res}"] += [orcid]
             self.orcid_store[f"{orcid}"] += [cur_res.res]
-                
+
     def add_issue_to_store(self, cur_res, cur_id, issue):
         if cur_res is not None and cur_id is not None and issue is not None:
             # Check if local store doesn't contains already the elements
@@ -522,7 +522,7 @@ class ResourceFinder(object):
 
             return self.__query_blazegraph(query, typ=typ)
 
-    def __query(self, query, typ):
+    def __query(self, query, typ='only_blazegraph'):
 
         """if typ=='both':
             res = self.__query_local(query)
@@ -555,4 +555,3 @@ class ResourceFinder(object):
                 self.cache_local[query] = result
         for res, in result:
             return res
-

@@ -107,6 +107,7 @@ class CrossrefDataHandler(object):
         result = {}
 
         if "DOI" in json:
+            print("\n\n\nJSON\n\n\n",json)
             result[GraphEntity.doi] = [json["DOI"]]
 
         if "URL" in json:

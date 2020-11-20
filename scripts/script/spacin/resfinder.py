@@ -87,8 +87,10 @@ class ResourceFinder(object):
         # {id_type}_{id_string}_{part_seq_id} and get the res
         # e.g. http://purl.org/spar/datacite/issn_1388-0209_58
         # ISSN_1388-0209_volume_58
+        self.from_journal = {}
         self.from_journal_volume = {}
         self.from_journal_issue = {}
+        self.from_issue_partof_journal = {}
 
         # Caching blazegraph queries
         self.cache = {}
@@ -118,11 +120,15 @@ class ResourceFinder(object):
                     #self.add_triples_in_graph(cur_g)
 
     def add_triples_in_graph(self, g):
+        return
+        # This is deprecated
         if g is not None:
             for s, p, o in g.triples((None, None, None)):
                 self.g.add((s, p, o))
 
     def update_graph_set(self, g_set):
+        return
+        # This is deprecated
         for g in g_set.graphs()[self.index_for_graph_set:]:
             self.add_triples_in_graph(g)
             self.index_for_graph_set += 1
@@ -215,21 +221,27 @@ class ResourceFinder(object):
         return self.__id_with_type(string, GraphEntity.isbn)
 
     def retrieve_issue_from_journal(self, id_dict, issue_id, volume_id):
+
+        # If volume_id is None, the return from then retrieve this the issue
         if volume_id is None:
             return self.__retrieve_from_journal(id_dict, GraphEntity.journal_issue, issue_id)
+
         else:
+
             retrieved_volume = self.retrieve_volume_from_journal(id_dict, volume_id)
+
             if retrieved_volume is not None:
-                query = """
-                    SELECT DISTINCT ?br WHERE {
-                        ?br a <%s> ;
-                            <%s> <%s> ;
-                            <%s> "%s"
-                    } LIMIT 1
-                """ % (GraphEntity.journal_issue,
-                       GraphEntity.part_of, str(retrieved_volume),
-                       GraphEntity.has_sequence_identifier, issue_id)
-                return self.__query(query)
+                if self.from_issue_partof_journal.__contains__(f"{str(retrieved_volume)}_{issue_id}"):
+                    return self.from_issue_partof_journal[f"{str(retrieved_volume)}_{issue_id}"]
+                else:
+                    query = f"""
+                        SELECT DISTINCT ?br WHERE {{
+                            ?br a <{GraphEntity.journal_issue}> ;
+                                <{GraphEntity.part_of}> <{str(retrieved_volume)}> ;
+                                <{GraphEntity.has_sequence_identifier}> "{issue_id}"
+                        }} LIMIT 1
+                    """
+                    return self.__query(query)
 
     def retrieve_volume_from_journal(self, id_dict, volume_id):
         return self.__retrieve_from_journal(id_dict, GraphEntity.journal_volume, volume_id)
@@ -285,7 +297,14 @@ class ResourceFinder(object):
                 store = self.issn_store_type
             elif str(id_type) == 'http://purl.org/spar/datacite/isbn':
                 store = self.isbn_store_type
-            if store.__contains__(f'{res}'):
+
+            if str(id_type) == 'http://purl.org/spar/datacite/orcid' or\
+                    str(id_type) == 'http://purl.org/spar/datacite/issn' or \
+                    str(id_type) == 'http://purl.org/spar/datacite/isbn':
+                if store.__contains__(f'{res}'):
+                    return store[f'{res}'][0]
+
+            elif store.__contains__(f'{res}'):
                 return store[f'{res}']
 
         if typ != 'only_local':
@@ -317,7 +336,13 @@ class ResourceFinder(object):
             elif str(id_type) == 'http://purl.org/spar/datacite/isbn':
                 store = self.isbn_store_type_id
 
-            if store.__contains__(f'{res}_{id_string}'):
+            if str(id_type) == 'http://purl.org/spar/datacite/orcid' or\
+                    str(id_type) == 'http://purl.org/spar/datacite/issn' or \
+                    str(id_type) == 'http://purl.org/spar/datacite/isbn':
+                if store.__contains__(f'{res}_{id_string}'):
+                    return store[f'{res}_{id_string}'][0]
+
+            elif store.__contains__(f'{res}_{id_string}'):
                 return store[f'{res}_{id_string}']
 
         if id_string is not None and typ != 'only_local':
@@ -338,14 +363,103 @@ class ResourceFinder(object):
             and self.doi_store_type.__contains__(f"{cur_res}") == False \
             and self.doi_store.__contains__(f"{extracted_doi}") == False:
 
-                print(f"Adding {cur_res}, {cur_id}, {extracted_doi}")
-
                 # Add it
                 self.doi_store_type_id[f"{cur_res}_{extracted_doi}"] = cur_id
                 self.doi_store_type[f"{cur_res}"] = extracted_doi
                 self.doi_store[f"{extracted_doi}"] = cur_res
+                
+    def add_url_to_store(self, cur_res, cur_id, extracted_url):
+        if cur_res is not None and cur_id is not None and extracted_url is not None:
+
+            # Check if local store doesn't contains already the elements
+            if self.url_store_type_id.__contains__(f"{cur_res}_{extracted_url}") == False \
+            and self.url_store_type.__contains__(f"{cur_res}") == False \
+            and self.url_store.__contains__(f"{extracted_url}") == False:
+
+                # Add it
+                self.url_store_type_id[f"{cur_res}_{extracted_url}"] = cur_id
+                self.url_store_type[f"{cur_res}"] = extracted_url
+                self.url_store[f"{extracted_url}"] = cur_res
+                
+    def add_isbn_to_store(self, cur_res, cur_id, isbn):
+        if cur_res is not None and cur_id is not None and isbn is not None:
+            # If empty create array
+            if not self.isbn_store_type_id.__contains__(f"{cur_res}_{isbn}"):
+                self.isbn_store_type_id[f"{cur_res}_{isbn}"] = []
+
+            if not self.isbn_store_type.__contains__(f"{cur_res}"):
+                self.isbn_store_type[f"{cur_res}"] = []
+
+            if not self.isbn_store.__contains__(f"{isbn}"):
+                self.isbn_store[f"{isbn}"] = []
+
+            # Add it
+            self.isbn_store_type_id[f"{cur_res}_{isbn}"] += [cur_id]
+            self.isbn_store_type[f"{cur_res}"] += [isbn]
+            self.isbn_store[f"{isbn}"] += [cur_res]
+                
+    def add_issn_to_store(self, cur_res, cur_id, issn):
+        if cur_res is not None and cur_id is not None and issn is not None:
+            # If empty create array
+            if not self.issn_store_type_id.__contains__(f"{cur_res}_{issn}"):
+                self.issn_store_type_id[f"{cur_res}_{issn}"] = []
+
+            if not self.issn_store_type.__contains__(f"{cur_res}"):
+                self.issn_store_type[f"{cur_res}"] = []
+                
+            if not self.issn_store.__contains__(f"{issn}"):
+                self.issn_store[f"{issn}"] = []
+
+            # Add it
+            self.issn_store_type_id[f"{cur_res}_{issn}"] += [cur_id]
+            self.issn_store_type[f"{cur_res}"] += [issn]
+            self.issn_store[f"{issn}"] += [cur_res]
+
+    def add_orcid_to_store(self, cur_res, cur_id, orcid):
+        if cur_res is not None and cur_id is not None and orcid is not None:
+
+            # If empty create array
+            if not self.orcid_store_type_id.__contains__(f"{cur_res}_{orcid}"):
+                self.orcid_store_type_id[f"{cur_res}_{orcid}"] = []
+
+            if not self.orcid_store_type.__contains__(f"{cur_res}"):
+                self.orcid_store_type[f"{cur_res}"] = []
+
+            if not self.orcid_store.__contains__(f"{orcid}"):
+                self.orcid_store[f"{orcid}"] = []
+
+            # Add it
+            self.orcid_store_type_id[f"{cur_res}_{orcid}"] += [cur_id.res]
+            self.orcid_store_type[f"{cur_res}"] += [orcid]
+            self.orcid_store[f"{orcid}"] += [cur_res.res]
+                
+    def add_issue_to_store(self, cur_res, cur_id, issue):
+        if cur_res is not None and cur_id is not None and issue is not None:
+            # Check if local store doesn't contains already the elements
+            if self.from_journal_issue.__contains__(f"{cur_res}_{issue}") == False:
+                # Add it
+                self.from_journal_issue[f"{cur_res}_{issue}"] = cur_id.res
+
+    def add_volume_to_store(self, cur_res, cur_id, volume):
+        if cur_res is not None and cur_id is not None and volume is not None:
+            # Check if local store doesn't contains already the elements
+            if self.from_journal_volume.__contains__(f"{cur_res}_{volume}") == False:
+                # Add it
+                self.from_journal_volume[f"{cur_res}_{volume}"] = cur_id.res
+
+    def add_journal_to_store(self, id_string, part_type, part_seq_id, res):
+        if id_string is not None and part_type is not None and part_seq_id is not None:
+            self.from_journal[f"{id_string}_{part_type}_{part_seq_id}"] = res.res
 
     def __retrieve_from_journal(self, id_dict, part_type, part_seq_id):
+        # Check locally
+        for id_type in id_dict:
+            for id_string in id_dict[id_type]:
+
+                if self.from_journal.__contains__(f"{id_string}_{part_type}_{part_seq_id}"):
+                    # The id_string belongs to the journal, while the part_seq_id is the
+                    # string related to the part type of the journal
+                    return self.from_journal[f"{id_string}_{part_type}_{part_seq_id}"]
 
         # If not present, check in blazegraph
         # a journal that has a specific ID, which <journal literal id> is given, and at which is attached, then there's a resource
@@ -389,7 +503,13 @@ class ResourceFinder(object):
             elif str(id_type) == 'http://purl.org/spar/datacite/isbn':
                 store = self.isbn_store
 
-            if store.__contains__(id_string):
+            if str(id_type) == 'http://purl.org/spar/datacite/orcid' or\
+                    str(id_type) == 'http://purl.org/spar/datacite/issn' or \
+                    str(id_type) == 'http://purl.org/spar/datacite/isbn':
+                if store.__contains__(id_string):
+                    return store[f"{id_string}"][0]
+
+            elif store.__contains__(id_string):
                 return store[f"{id_string}"]
 
         # If nothing found, query blazegraph
@@ -404,10 +524,11 @@ class ResourceFinder(object):
 
     def __query(self, query, typ):
 
-        if typ=='both':
+        """if typ=='both':
             res = self.__query_local(query)
             if res is not None:
-                return res
+                print("AAA")
+                return res"""
 
         if self.ts is not None and (typ == 'both' or typ == 'only_blazegraph'):
             res = self.__query_blazegraph(query)
@@ -425,11 +546,12 @@ class ResourceFinder(object):
                 return res
 
     def __query_local(self, query):
+        # Deprecated
         if self.cache_local.__contains__(query):
             result = self.cache_local[query]
         else:
             result = self.g.query(query)
-            if result is not None:
+            if result is not None and len(result):
                 self.cache_local[query] = result
         for res, in result:
             return res

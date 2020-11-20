@@ -34,7 +34,6 @@ def run_in_thread(fn):
         t = threading.Thread(target=fn, args=k, kwargs=kw)
         t.start()
         return t
-
     return run
 
 
@@ -307,9 +306,8 @@ class CrossrefProcessor(FormatProcessor):
                 return None
 
         results = list(results_queue.queue)
-        print(f"Tot time for processing references: {(tot)}")
+        #print(f"Tot time for processing references: {(tot)}")
 
-        print(f"Total n: {len(results)}")
         # If the process comes here, then everything worked correctly
         return results
 

@@ -332,7 +332,7 @@ For each citing resource, the fields returned by this operation are the followin
         "author_sc": "yes"
     }
 ]
-#field_type str(citing_doi) str(cited_doi) str(oci) dateTime(creation) str(?journal_sc) str(?author_sc)
+#field_type str(citing_doi) str(cited_doi) str(oci) datetime(creation) str(?journal_sc) str(?author_sc)
 #sparql PREFIX biro: <http://purl.org/spar/biro/>
 PREFIX cito: <http://purl.org/spar/cito/>
 PREFIX co: <http://purl.org/co/>

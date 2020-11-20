@@ -5,11 +5,9 @@ from script.ccc.conf_spacin import reference_dir, base_iri, context_path, info_d
     sharing_dir
 import json
 from script.spacin.resfinder import ResourceFinder as RF_1
-from script.spacin.resfinder_old import ResourceFinder as RF_2
 from script.spacin.orcidfinder import ORCIDFinder
 from script.spacin.crossrefproc import CrossrefProcessor as CP_1
 from script.spacin.crossrefproc import CrossrefProcessor as CP_PAR
-from script.spacin.crossrefproc_old import CrossrefProcessor as CP_2
 import os
 import tracemalloc
 tracemalloc.start()

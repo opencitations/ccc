@@ -67,6 +67,7 @@ class GraphEntity(object):
     orcid = DATACITE.orcid
     xpath = DATACITE["local-resource-identifier-scheme"] # new
     intrepid = DATACITE["intrepid"] # new
+    oci = DATACITE["oci"] # new
     xmlid = DATACITE["local-resource-identifier-scheme"] # new
     has_identifier = DATACITE.hasIdentifier
     identifier = DATACITE.Identifier
@@ -370,6 +371,12 @@ class GraphEntity(object):
     def create_intrepid(self, string): # new
         return self._associate_identifier_with_scheme(string, GraphEntity.intrepid)
 
+    def create_oci(self, string): # new
+        return self._associate_identifier_with_scheme(string, GraphEntity.oci)
+
+    def create_oci(self, string): # new
+        return self._associate_identifier_with_scheme(string, GraphEntity.oci)
+
     def create_xmlid(self, string): # new
         return self._associate_identifier_with_scheme(string, GraphEntity.xmlid)
 
@@ -458,6 +465,7 @@ class GraphEntity(object):
     def _create_citation(self, citing_res, cited_res):
         self.g.add(( self.res, GraphEntity.has_citing_entity, URIRef(str(citing_res)) ))
         self.g.add(( self.res, GraphEntity.has_cited_entity, URIRef(str(cited_res)) ))
+
     # /END Private Methods
 
 
@@ -551,8 +559,11 @@ class GraphSet(object):
         return self._add(self.g_br, GraphEntity.expression, res, resp_agent,
                         source_agent, source, self.br_info_path, "br")
 
-    def add_ci(self, resp_agent, citing_res, cited_res, rp_num=None, source_agent=None, source=None, res=None): # new
-        return self._add_ci(self.g_ci, GraphEntity.citation, citing_res, cited_res, rp_num, res, resp_agent,
+    # def add_ci(self, resp_agent, citing_res, cited_res, rp_num=None, source_agent=None, source=None, res=None): # new
+    #     return self._add_ci(self.g_ci, GraphEntity.citation, citing_res, cited_res, rp_num, res, resp_agent,
+    #                     source_agent, source, self.ci_info_path, "ci")
+    def add_ci(self, resp_agent, source_agent=None, source=None, res=None): # new
+        return self._add(self.g_ci, GraphEntity.citation, res, resp_agent,
                         source_agent, source, self.ci_info_path, "ci")
 
     def add_de(self, resp_agent, source_agent=None, source=None, res=None): # new

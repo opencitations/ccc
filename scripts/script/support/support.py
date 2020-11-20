@@ -159,23 +159,23 @@ def is_string_empty(string):
 
 
 def get_short_name(res):
-    if "/ci/" in str(res):
-        return re.sub("^.+/([a-z][a-z])/((0[1-9]+0)?[1-9][0-9]*-(0[1-9]+0)?[1-9][0-9]*(/[1-9][0-9]*)?)$", "\\1", str(res))
-    else:
+    # if "/ci/" in str(res):
+    #     return re.sub("^.+/([a-z][a-z])/((0[1-9]+0)?[1-9][0-9]*-(0[1-9]+0)?[1-9][0-9]*(/[1-9][0-9]*)?)$", "\\1", str(res))
+    # else:
         return re.sub("^.+/([a-z][a-z])(/[0-9]+)?$", "\\1", str(res))
 
 
 def get_prefix(res):
-    if "/ci/" in str(res):
-        return re.sub("^.+/[a-z][a-z]/((0[1-9]+0)?[1-9][0-9]*-(0[1-9]+0)?[1-9][0-9]*(/[1-9][0-9]*)?)$", "\\2", str(res))
-    else:
+    # if "/ci/" in str(res):
+    #     return re.sub("^.+/[a-z][a-z]/((0[1-9]+0)?[1-9][0-9]*-(0[1-9]+0)?[1-9][0-9]*(/[1-9][0-9]*)?)$", "\\2", str(res))
+    # else:
         return re.sub("^.+/[a-z][a-z]/(0[1-9]+0)?([1-9][0-9]*)$", "\\1", str(res))
 
 
 def get_count(res):
-    if "/ci/" in str(res):
-        return re.sub("^.+/[a-z][a-z]/((0[1-9]+0)?[1-9][0-9]*-(0[1-9]+0)?[1-9][0-9]*(/[1-9][0-9]*)?)$", "\\1", str(res))
-    else:
+    # if "/ci/" in str(res):
+    #     return re.sub("^.+/[a-z][a-z]/((0[1-9]+0)?[1-9][0-9]*-(0[1-9]+0)?[1-9][0-9]*(/[1-9][0-9]*)?)$", "\\1", str(res))
+    # else:
         return re.sub("^.+/[a-z][a-z]/(0[1-9]+0)?([1-9][0-9]*)$", "\\2", str(res))
 
 
@@ -243,25 +243,25 @@ def has_bib_entity_number(subj):
 
 
 # Variable used in several functions
-res_regex = "(.+)/(0[1-9]+0)?([1-9][0-9]*)$"
-ci_regex = "(.+)/(0[1-9]+0)?([1-9][0-9]*)(-)(0[1-9]+0)?([1-9][0-9]*)(/[1-9][0-9]*)?$"
-prov_regex = "(.+)/(0[1-9]+0)?([1-9][0-9]*)(/prov)/(.+)/([0-9]+)$"
-ci_prov_regex = "(.+)/(0[1-9]+0)?([1-9][0-9]*)(-)(0[1-9]+0)?([1-9][0-9]*)(/[1-9][0-9]*)?(/prov)/(.+)/([0-9]+)$"
+res_regex = ci_regex = "(.+)/(0[1-9]+0)?([1-9][0-9]*)$"
+#ci_regex = "(.+)/(0[1-9]+0)?([1-9][0-9]*)(-)(0[1-9]+0)?([1-9][0-9]*)(/[1-9][0-9]*)?$"
+prov_regex = ci_prov_regex = "(.+)/(0[1-9]+0)?([1-9][0-9]*)(/prov)/(.+)/([0-9]+)$"
+#ci_prov_regex = "(.+)/(0[1-9]+0)?([1-9][0-9]*)(-)(0[1-9]+0)?([1-9][0-9]*)(/[1-9][0-9]*)?(/prov)/(.+)/([0-9]+)$"
 
 
 def get_resource_number(string_iri):
     cur_number = 0
     if "/prov/" in string_iri:
         if "/pa/" not in string_iri:
-            if "/ci/" not in string_iri:
-                cur_number = int(re.sub(prov_regex, "\\3", string_iri))
-            else:
+            # if "/ci/" not in string_iri:
+            #     cur_number = int(re.sub(prov_regex, "\\3", string_iri))
+            # else:
                 cur_number = int(re.sub(ci_prov_regex, "\\3", string_iri))
     else:
-        if "/ci/" in string_iri:
-            cur_number = int(re.sub(ci_regex, "\\3", string_iri))
-        else:
-            cur_number = int(re.sub(res_regex, "\\3", string_iri))
+        # if "/ci/" in string_iri:
+        #     cur_number = int(re.sub(ci_regex, "\\3", string_iri))
+        # else:
+        cur_number = int(re.sub(res_regex, "\\3", string_iri))
 
     return cur_number
 
@@ -323,7 +323,7 @@ def find_paths(string_iri, base_dir, base_iri, default_dir, dir_split, n_file_it
                     break
 
             if "/prov/" in string_iri:  # provenance file of a bibliographic entity
-                if "/ci/" not in string_iri:
+                # if "/ci/" not in string_iri:
                     cur_dir_path = base_dir + \
                                    re.sub(("^%s" + prov_regex) % base_iri,
                                           ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
@@ -331,16 +331,16 @@ def find_paths(string_iri, base_dir, base_iri, default_dir, dir_split, n_file_it
                                    os.sep + str(cur_split) + os.sep + str(cur_file_split) + os.sep + "prov"
                     cur_file_path = cur_dir_path + os.sep + re.sub(
                         ("^%s" + prov_regex) % base_iri, "\\5", string_iri) + format_string
-                else:
-                    cur_dir_path = base_dir + \
-                                   re.sub(("^%s" + ci_prov_regex) % base_iri,
-                                          ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
-                                           "\\1%s%s" % (os.sep, default_dir)), string_iri) + \
-                                   os.sep + str(cur_split) + os.sep + str(cur_file_split) + os.sep + "prov"
-                    cur_file_path = cur_dir_path + os.sep + re.sub(
-                        ("^%s" + ci_prov_regex) % base_iri, "\\9", string_iri) + format_string
+                # else:
+                #     cur_dir_path = base_dir + \
+                #                    re.sub(("^%s" + ci_prov_regex) % base_iri,
+                #                           ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
+                #                            "\\1%s%s" % (os.sep, default_dir)), string_iri) + \
+                #                    os.sep + str(cur_split) + os.sep + str(cur_file_split) + os.sep + "prov"
+                #     cur_file_path = cur_dir_path + os.sep + re.sub(
+                #         ("^%s" + ci_prov_regex) % base_iri, "\\9", string_iri) + format_string
             else:  # regular bibliographic entity
-                if "/ci/" not in string_iri:
+                #if "/ci/" not in string_iri:
                     cur_dir_path = base_dir + \
                                    re.sub(("^%s" + res_regex) % base_iri,
                                           ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
@@ -349,19 +349,19 @@ def find_paths(string_iri, base_dir, base_iri, default_dir, dir_split, n_file_it
                                    os.sep + str(cur_split)
 
                     cur_file_path = cur_dir_path + os.sep + str(cur_file_split) + format_string
-                else:
-                    cur_dir_path = base_dir + \
-                                   re.sub(("^%s" + ci_regex) % base_iri,
-                                          ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
-                                           "\\1%s%s" % (os.sep, default_dir)),
-                                          string_iri) + \
-                                   os.sep + str(cur_split)
-
-                    cur_file_path = cur_dir_path + os.sep + str(cur_file_split) + format_string
+                # else:
+                #     cur_dir_path = base_dir + \
+                #                    re.sub(("^%s" + ci_regex) % base_iri,
+                #                           ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
+                #                            "\\1%s%s" % (os.sep, default_dir)),
+                #                           string_iri) + \
+                #                    os.sep + str(cur_split)
+                #
+                #     cur_file_path = cur_dir_path + os.sep + str(cur_file_split) + format_string
         # Enter here if no split is needed
         elif dir_split == 0:
             if "/prov/" in string_iri:
-                if "/ci/" not in string_iri:
+                #if "/ci/" not in string_iri:
                     cur_dir_path = base_dir + \
                                    re.sub(("^%s" + prov_regex) % base_iri,
                                           ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
@@ -369,16 +369,16 @@ def find_paths(string_iri, base_dir, base_iri, default_dir, dir_split, n_file_it
                                    os.sep + str(cur_file_split) + os.sep + "prov"
                     cur_file_path = cur_dir_path + os.sep + re.sub(
                         ("^%s" + prov_regex) % base_iri, "\\5", string_iri) + format_string
-                else:
-                    cur_dir_path = base_dir + \
-                                   re.sub(("^%s" + ci_prov_regex) % base_iri,
-                                          ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
-                                           "\\1%s%s" % (os.sep, default_dir)), string_iri) + \
-                                   os.sep + str(cur_file_split) + os.sep + "prov"
-                    cur_file_path = cur_dir_path + os.sep + re.sub(
-                        ("^%s" + ci_prov_regex) % base_iri, "\\9", string_iri) + format_string
+                # else:
+                #     cur_dir_path = base_dir + \
+                #                    re.sub(("^%s" + ci_prov_regex) % base_iri,
+                #                           ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
+                #                            "\\1%s%s" % (os.sep, default_dir)), string_iri) + \
+                #                    os.sep + str(cur_file_split) + os.sep + "prov"
+                #     cur_file_path = cur_dir_path + os.sep + re.sub(
+                #         ("^%s" + ci_prov_regex) % base_iri, "\\9", string_iri) + format_string
             else:
-                if "/ci/" not in string_iri:
+                #if "/ci/" not in string_iri:
                     cur_dir_path = base_dir + \
                                    re.sub(("^%s" + res_regex) % base_iri,
                                           ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
@@ -386,14 +386,14 @@ def find_paths(string_iri, base_dir, base_iri, default_dir, dir_split, n_file_it
                                           string_iri)
 
                     cur_file_path = cur_dir_path + os.sep + str(cur_file_split) + format_string
-                else:
-                    cur_dir_path = base_dir + \
-                                   re.sub(("^%s" + ci_regex) % base_iri,
-                                          ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
-                                           "\\1%s%s" % (os.sep, default_dir)),
-                                          string_iri)
-
-                    cur_file_path = cur_dir_path + os.sep + str(cur_file_split) + format_string
+                # else:
+                #     cur_dir_path = base_dir + \
+                #                    re.sub(("^%s" + ci_regex) % base_iri,
+                #                           ("\\1%s\\2" % os.sep if has_supplier_prefix(string_iri, base_iri) else
+                #                            "\\1%s%s" % (os.sep, default_dir)),
+                #                           string_iri)
+                #
+                #     cur_file_path = cur_dir_path + os.sep + str(cur_file_split) + format_string
         # Enter here if the data is about a provenance agent, e.g.,
         # /corpus/prov/
         else:

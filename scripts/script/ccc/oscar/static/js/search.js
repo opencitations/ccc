@@ -598,6 +598,7 @@ var search = (function () {
 					var rules = _get_rules(qtext);
 					if(rules.length != 0){
 						var sparql_query = _build_sparql_query(rules[0], qtext);
+
 						var r_cat = search_conf_json.categories[util.index_in_arrjsons(search_conf_json.categories,["name"],[rules[0].category])];
 						_call_ts(r_cat, rules, 0, sparql_query, qtext, qtext, callbk_fun);
 					}else {}
@@ -2452,7 +2453,7 @@ var htmldom = (function () {
 
 			var str_html =
 			"<div class='rows-per-page'>"+"<select class='form-control input custom' onchange='search.update_page_limit(this.options[selectedIndex].text)'' id='sel1'> </div>"+
-				options_html+"<option disabled selected value>RESULTS PER PAGE</option></select>";
+				options_html+"<option disabled selected value>&#x2630;</option></select>";
 
 			rowsxpage_container.innerHTML = str_html;
 			return str_html;
@@ -2489,7 +2490,7 @@ var htmldom = (function () {
 
 			var str_html =
 				"<div class='sort-results'><select class='form-control input custom' onchange='search.check_sort_opt(this.options[selectedIndex])' id='sort_box_input'></div>"+
-				options_html+"<option disabled selected value>SORT BY</option></select>";
+				options_html+"<option disabled selected value>&darr; &#x2630;</option></select>";
 
 			sort_container.innerHTML = str_html;
 			return str_html;
@@ -2729,7 +2730,7 @@ var htmldom = (function () {
 			"<input type='range' min="+String(slider_min)+" max="+String(slider_max)+" value="+String(init_val)+" class='slider' oninput='lbl_range.innerHTML=this.value; search.update_res_limit(this.value);' id='myRange'>"+
 			"</div>"+
 			"<div class='slider-footer'>"+
-			"<div class='left'>&#60; Fewer</div><div class='right'>More &#62;</div>"+
+			"<div class='left'>&#60; Less</div><div class='right'>More &#62;</div>"+
 			"</div>"
 			;
 			limitres_container.innerHTML = str_html;
@@ -2908,6 +2909,7 @@ var htmldom = (function () {
 					new_tab_res.className = "table results-tab result-type-"+search_conf_json.categories[index_category]["name"];
 					//create tr of all the other results
 					var results = table_conf.view.data["results"]["bindings"];
+					console.log(results);
 					if (results.length > 0) {
 						var i_from = table_conf.view.page * table_conf.view.page_limit;
 						var i_to = i_from + table_conf.view.page_limit;

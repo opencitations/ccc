@@ -1,11 +1,18 @@
+var ccc_api = "http://localhost:8080/api/v1/";
+
 function expand_context(td,pointers) {
-  var ramose_api = "http://localhost:8080/api/v1/intext-citation/"
+  $(document).ajaxStart(function() {
+      $(document.body).css({'cursor' : 'wait'});
+  }).ajaxStop(function() {
+      $(document.body).css({'cursor' : 'default'});
+  });
+  var ramose_api = ccc_api+"intext-citation/"
   var pointers_list = pointers.split(";");
   var sentences = {};
   var new_td = $("<td>", {"class": "sentences remove"});
 
   $.each(pointers_list, function( index, intrepid ) {
-    document.body.style.cursor = 'wait';
+
     var query_ramose =  String(ramose_api)+ intrepid;
     //call ramose to retrieve data of indtrepids
     $.ajax({
@@ -39,6 +46,7 @@ function expand_context(td,pointers) {
                                 var sent_content = document.evaluate(sent_xpath, res_xml, null, XPathResult.ANY_TYPE, null);
                                 sentences[sent_content.stringValue] = rp_content.stringValue;
                                 $(new_td).append("<span class='sentence'>"+sent_content.stringValue+"</span>");
+
                               }
                             }
                         }
@@ -49,6 +57,5 @@ function expand_context(td,pointers) {
 
      });
   });
-  console.log(sentences);
   return [new_td, sentences];
 }

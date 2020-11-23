@@ -325,8 +325,11 @@ class CrossrefProcessor(FormatProcessor):
         :param crossref_json: the json document retrieved from Crossref
         :return: the reference on the graph for the processed json
         """
-        self.rf.update_graph_set(self.g_set)
-        print("JSON in process_crossref_json", crossref_json)
+        #self.rf.update_graph_set(self.g_set)
+
+        if not isinstance(crossref_json, dict):
+            print(f"Error: crossref_json is not a dict, it's {type(crossref_json)} ")
+            return
 
         # Check if the found bibliographic resource already exist locally.
         retrieved_resource = self.rf.retrieve(CrossrefDataHandler.get_ids_for_type(crossref_json), typ='only_local')
@@ -356,7 +359,7 @@ class CrossrefProcessor(FormatProcessor):
 
         if cur_json is None:
             cur_json = self.query_interface.get_data_crossref_bibref(entry)
-            print("\n\n\nJSON in process_entry\n\n\n",cur_json)
+
         if cur_json is not None:
             return self.process_crossref_json(cur_json,
                                               self.crossref_api_search + FormatProcessor.clean_entry(entry),

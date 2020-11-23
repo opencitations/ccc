@@ -52,8 +52,12 @@ class Bibentry:
 
     # Run remote queries
     def process_remote(self):
+
         if self.provided_doi is not None:
             self._process_doi(self.provided_doi)
+
+        if self.cur_res is None and self.entry is not None:
+            self._process_entry(self.entry)
 
         if self.provided_pmid is not None:
             self._process_pmid(self.provided_pmid)
@@ -61,8 +65,7 @@ class Bibentry:
         if self.provided_pmcid is not None:
             self._process_pmcid(self.provided_pmcid)
 
-        if self.entry is not None:
-            self._process_entry(self.entry)
+
 
 
     # Remote version
@@ -95,8 +98,8 @@ class Bibentry:
     def _process_entry(self, entry: str):
         if self.do_process_entry:
             self.existing_bibref_entry = self.query_interface.get_data_crossref_bibref(entry)
-            if self.existing_bibref_entry is None:
-                self.cur_res = self.rf.retrieve(CrossrefDataHandler.get_ids_for_type(self.entry), typ='only_blazegraph')
+            if self.existing_bibref_entry is not None:
+                self.cur_res = self.rf.retrieve(CrossrefDataHandler.get_ids_for_type(self.existing_bibref_entry), typ='only_blazegraph')
 
     # Remote version
     def process_extra_doi(self):

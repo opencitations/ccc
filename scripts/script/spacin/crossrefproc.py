@@ -219,7 +219,7 @@ class CrossrefProcessor(FormatProcessor):
                 # process it
                 if bibentry_entity.provided_doi is not None and bibentry_entity.process_doi_result is not None:
                         cur_res = self.process_doi(bibentry_entity.provided_doi, self.curator, self.source_provider,
-                                                   typ='local', result=bibentry_entity.process_doi_result)
+                                                   typ='only_local', result=bibentry_entity.process_doi_result)
 
                         if cur_res is not None:
                             self.repok.add_sentence(
@@ -246,7 +246,8 @@ class CrossrefProcessor(FormatProcessor):
                 if cur_res is None and bibentry_entity.entry is not None:  # crossref API string search
                     if do_process_entry == True:
                         cur_res = self.process_entry(entry=bibentry_entity.entry,
-                                                     cur_json=bibentry_entity.existing_bibref_entry)
+                                                     cur_json=bibentry_entity.existing_bibref_entry,
+                                                     research=False)
                     if cur_res is None:
                         if self.get_bib_entry_doi and bibentry_entity.extracted_doi is not None:
                             cur_res = self.process_doi(bibentry_entity.extracted_doi, self.name, self.source_provider,
@@ -308,6 +309,8 @@ class CrossrefProcessor(FormatProcessor):
         results = list(results_queue.queue)
         #print(f"Tot time for processing references: {(tot)}")
 
+        bibentries.queue.clear()
+
         # If the process comes here, then everything worked correctly
         return results
 
@@ -348,7 +351,7 @@ class CrossrefProcessor(FormatProcessor):
                "\n\t%s: %s\n\tURL: %s" % (entity_type, entity, url)
 
 
-    def process_entry(self, entry: str, cur_json=None, check: bool = False):
+    def process_entry(self, entry: str, cur_json=None, check: bool = False, research=True):
         """
         This method let you process a bibliographic entry. It's possible both to
         :param entry: the bibliographic reference
@@ -357,7 +360,7 @@ class CrossrefProcessor(FormatProcessor):
         :return: reference of the entity processed
         """
 
-        if cur_json is None:
+        if cur_json is None and research:
             cur_json = self.query_interface.get_data_crossref_bibref(entry)
 
         if cur_json is not None:

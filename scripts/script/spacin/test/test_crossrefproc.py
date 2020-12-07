@@ -6,8 +6,7 @@ from script.ccc.conf_spacin import reference_dir, base_iri, context_path, info_d
 import json
 from script.spacin.resfinder import ResourceFinder as RF_1
 from script.spacin.orcidfinder import ORCIDFinder
-from script.spacin.crossrefproc import CrossrefProcessor as CP_1
-from script.spacin.crossrefproc import CrossrefProcessor as CP_PAR
+from script.spacin.crossrefproc import CrossrefProcessor as CrossrefProcessor
 import os
 import tracemalloc
 tracemalloc.start()
@@ -27,8 +26,33 @@ class Test(unittest.TestCase):
         with open(os.path.join(self.TEST_DIR, 'test_json.json')) as fp:
             self.json_object = json.load(fp)
 
-
     def test_time_processfile(self):
+
+        """with open(os.path.join(self.TEST_DIR, '1.json')) as fp:
+            self.json_object = json.load(fp)
+            cp = CrossrefProcessor(base_iri, context_path, self.full_info_dir, self.json_object,
+                      RF_1(ts_url=triplestore_url, default_dir=default_dir),
+                      ORCIDFinder(self.orcid_conf_path, query_interface='remote'), items_per_file,
+                      self.supplier_prefix, intext_refs=True, query_interface='remote')
+            ret = cp.process()
+            with open('1_remote.txt', 'w') as f:
+                for g in ret.g:
+                    for (s, o, p) in g:
+                        f.write(f"{s}, {o}, {p}")"""
+
+        with open(os.path.join(self.TEST_DIR, '1.json')) as fp:
+            self.json_object = json.load(fp)
+            cp = CrossrefProcessor(base_iri, context_path, self.full_info_dir, self.json_object,
+                      RF_1(ts_url=triplestore_url, default_dir=default_dir),
+                      ORCIDFinder(self.orcid_conf_path, query_interface='remote'), items_per_file,
+                      self.supplier_prefix, intext_refs=True, query_interface='remote')
+            ret = cp.process()
+            with open('1_remote.txt', 'w') as f:
+                for g in ret.g:
+                    for (s, o, p) in g:
+                        f.write(f"{s}, {o}, {p}")
+
+    def asd(self):
         import time
         """"
         cp = CP_1(base_iri, context_path, self.full_info_dir, self.json_object,
@@ -74,7 +98,7 @@ class Test(unittest.TestCase):
         
         """
 
-        cp = CP_PAR(base_iri, context_path, self.full_info_dir, self.json_object,
+        """cp = CP_PAR(base_iri, context_path, self.full_info_dir, self.json_object,
                                RF_1(ts_url=triplestore_url, default_dir=default_dir),
                                ORCIDFinder(self.orcid_conf_path, query_interface='local'), items_per_file,
                                self.supplier_prefix, intext_refs=True, query_interface='local')
@@ -91,7 +115,7 @@ class Test(unittest.TestCase):
                     #f.write(f"{s}, {o}, {p}")
                     ss.add(f"{s}{o}{p}")
                     n+=1
-        print(f"NNN PAR: {len(ss)}") #1552
+        print(f"NNN PAR: {len(ss)}") #1552"""
 
         #s = 0
         #for index, v in enumerate(cp.lengths):

@@ -33,6 +33,7 @@ class Bibentry:
         self.process_url_result = None
         self.existing_bibref_entry = None
         self.extracted_doi = None
+        self.extracted_url = None
         self.cur_res = None
         self.existing_res_on_blazegraph = None
 

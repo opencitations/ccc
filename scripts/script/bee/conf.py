@@ -33,5 +33,5 @@ supplier_tuple = (
 
 # Configuration for parallel
 PARALLEL_PROCESSING = True
-dataset_reference = '/mie/europepmc.org/ftp/oa/csv/dataset.csv'
+dataset_reference = '/mie/dataset.csv'
 article_path_reference = '/mie/europepmc.org/ftp/oa/articles/'

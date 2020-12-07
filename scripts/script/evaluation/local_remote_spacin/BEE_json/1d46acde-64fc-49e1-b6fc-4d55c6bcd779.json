@@ -1,0 +1,99 @@
+{
+    "references": [
+        {
+            "bibentry": "Emanuel, EJ. The inevitable reimagining of medical education, JAMA, 2020, 323, 12, 1127, 1128, DOI: 10.1001/jama.2020.1227, PMID: 32105294",
+            "process_entry": "True",
+            "doi": "10.1001/jama.2020.1227",
+            "pmid": "32105294",
+            "xmlid": "CR1"
+        },
+        {
+            "bibentry": "Schwartzstein, RM, Roberts, DH. Saying goodbye to lectures in medical school — paradigm shift or passing fad, New Engl J Med, 2017, 377, 7, 605, 607, DOI: 10.1056/nejmp1706474, PMID: 28813217",
+            "process_entry": "True",
+            "doi": "10.1056/nejmp1706474",
+            "pmid": "28813217",
+            "xmlid": "CR2"
+        },
+        {
+            "bibentry": "SketchyMedical. https://www.sketchymedical.com. Accessed 8 April 2020.",
+            "process_entry": "True",
+            "url": "https://www.sketchymedical.com. Accessed 8 April 2020.",
+            "xmlid": "CR3"
+        },
+        {
+            "bibentry": "Pathoma. https://www.pathoma.com. Accessed 8 April 2020.",
+            "process_entry": "True",
+            "url": "https://www.pathoma.com. Accessed 8 April 2020.",
+            "xmlid": "CR4"
+        },
+        {
+            "bibentry": "UWorld. https://www.uworld.com. Accessed 8 April 2020.",
+            "process_entry": "True",
+            "url": "https://www.uworld.com. Accessed 8 April 2020.",
+            "xmlid": "CR5"
+        },
+        {
+            "bibentry": "Michaelsen, LK, Watson, W, Cragin, JP, Fink, LD. Team learning: a potential solution to the problems of large classes, J Organ Behav Educ, 1982, 7, 1, 13, 22, DOI: 10.1177/105256298200700103",
+            "process_entry": "True",
+            "doi": "10.1177/105256298200700103",
+            "xmlid": "CR6"
+        },
+        {
+            "bibentry": "Dolmans, DH, Schmidt, HG. What do we know about cognitive and motivational effects of small group tutorials in problem-based learning, Adv Health Sci Educ, 2006, 11, 4, 321, 336, DOI: 10.1007/s10459-006-9012-8",
+            "process_entry": "True",
+            "doi": "10.1007/s10459-006-9012-8",
+            "xmlid": "CR7"
+        },
+        {
+            "bibentry": "Wray A, Wolff M, Boysen-Osborn M, Wiechmann W, Paradise P, Runcie E, Sudario G, Toohey S. Not another boring resident didactic conference. AEM Educ Train. 2019;4(S1). 10.1002/aet2.10367",
+            "process_entry": "True",
+            "xmlid": "CR8"
+        },
+        {
+            "bibentry": "Marhefka, S, Lockhart, E, Turner, D. Achieve research continuity during social distancing by rapidly implementing individual and group videoconferencing with participants: key considerations, best practices, and protocols, AIDS Behav, 2020, 24, 1983, 1989, DOI: 10.1007/s10461-020-02837-x, PMID: 32240428",
+            "process_entry": "True",
+            "doi": "10.1007/s10461-020-02837-x",
+            "pmid": "32240428",
+            "pmcid": "PMC7114952",
+            "xmlid": "CR9"
+        },
+        {
+            "bibentry": "Gaber DA, Shehata MH, Amin HA. Online team-based learning sessions as interactive methodologies during the pandemic. Med Educ. 2020;54(7):666–7.",
+            "process_entry": "True",
+            "xmlid": "CR10"
+        },
+        {
+            "bibentry": "Perednia, DA, Allen, A. Telemedicine technology and clinical applications, JAMA, 1995, 273, 6, 483, 488, DOI: 10.1001/jama.1995.03520300057037, PMID: 7837367",
+            "process_entry": "True",
+            "doi": "10.1001/jama.1995.03520300057037",
+            "pmid": "7837367",
+            "xmlid": "CR11"
+        },
+        {
+            "bibentry": "Bashshur, RL, Reardon, TG, Shannon, GW. Telemedicine: a new health care delivery system, Annu Rev Public Health, 2000, 21, 1, 613, 637, DOI: 10.1146/annurev.publhealth.21.1.613.Perednia, PMID: 10884967",
+            "process_entry": "True",
+            "doi": "10.1146/annurev.publhealth.21.1.613.perednia",
+            "pmid": "10884967",
+            "xmlid": "CR12"
+        },
+        {
+            "bibentry": "Roediger, HL, Butler, AC. The critical role of retrieval practice in long-term retention, Trends Cogn Sci, 2011, 15, 1, 20, 27, DOI: 10.1016/j.tics.2010.09.003, PMID: 20951630",
+            "process_entry": "True",
+            "doi": "10.1016/j.tics.2010.09.003",
+            "pmid": "20951630",
+            "xmlid": "CR13"
+        },
+        {
+            "bibentry": "Shepard, LA. Formative assessment: caveat emptor. In: Dwyer CA. The future of assessment: shaping teaching and learning, 2008, New York, Routledge",
+            "process_entry": "True",
+            "xmlid": "CR14"
+        }
+    ],
+    "localid": "PMID33106763",
+    "doi": "10.1007/s40670-020-01127-4",
+    "pmid": "33106763",
+    "pmcid": "PMC7577518",
+    "curator": "BEE EuropeanPubMedCentralProcessor",
+    "source_provider": "Europe PubMed Central",
+    "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/33106763/fullTextXML"
+}

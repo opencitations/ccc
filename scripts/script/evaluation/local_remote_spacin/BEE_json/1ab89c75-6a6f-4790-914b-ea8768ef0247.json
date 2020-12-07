@@ -1,0 +1,310 @@
+{
+    "references": [
+        {
+            "bibentry": "American Academy of Sleep Medicine, The International Classification of Sleep Disorders. (ICSD-3), 3rd ed, American Academy of Sleep Medicine, Illinois, IL, USA, 2014",
+            "process_entry": "True",
+            "xmlid": "B1-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Levin, R, Nielsen, T.A. Disturbed dreaming, posttraumatic stress disorder, and affect distress: A review and neurocognitive model, Psychol. Bull, 2007, 133, 482, 528, DOI: 10.1037/0033-2909.133.3.482, PMID: 17469988",
+            "process_entry": "True",
+            "doi": "10.1037/0033-2909.133.3.482",
+            "pmid": "17469988",
+            "xmlid": "B2-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Schredl, M. Researching Dreams: The Fundamentals, 1st ed, Palgrave Macmillan, Cham, Switzerland, 2018",
+            "process_entry": "True",
+            "xmlid": "B3-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Böckermann, M, Gieselmann, A, Pietrowsky, R. What does nightmare distress mean? Factorial structure and psychometric properties of the Nightmare Distress Questionnaire (NDQ), Dreaming, 2014, 24, 279, 289, DOI: 10.1037/a0037749",
+            "process_entry": "True",
+            "doi": "10.1037/a0037749",
+            "xmlid": "B4-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Belicki, K. Nightmare fequency versus nightmare distress: Relation to psychopathology and cognitive style, J. Abnorm. Psychol, 1992, 101, 592, 597, DOI: 10.1037/0021-843X.101.3.592, PMID: 1500619",
+            "process_entry": "True",
+            "doi": "10.1037/0021-843x.101.3.592",
+            "pmid": "1500619",
+            "xmlid": "B5-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Belicki, K. The relationship of nightmare frequency to nightmare suffering with implications for treatment and research, Dreaming, 1992, 2, 143, 148, DOI: 10.1037/h0094355",
+            "process_entry": "True",
+            "doi": "10.1037/h0094355",
+            "xmlid": "B6-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Lee, R, Suh, S. Nightmare distress as a mediator between nightmare frequency and suicidal ideation, Dreaming, 2016, 26, 308, 318, DOI: 10.1037/drm0000039",
+            "process_entry": "True",
+            "doi": "10.1037/drm0000039",
+            "xmlid": "B7-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Roberts, J, Lennings, C.J. Personality, psychopathology and nightmares in young people, Pers. Individ. Differ, 2006, 41, 733, 744, DOI: 10.1016/j.paid.2006.03.010",
+            "process_entry": "True",
+            "doi": "10.1016/j.paid.2006.03.010",
+            "xmlid": "B8-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Schredl, M, Göritz, A.S. Nightmare frequency and nightmare distress: Socio-demographic and personality factors, Sleep Sci, 2019, 12, 178, 184, DOI: 10.5935/1984-0063.20190080, PMID: 31890093",
+            "process_entry": "True",
+            "doi": "10.5935/1984-0063.20190080",
+            "pmid": "31890093",
+            "pmcid": "PMC6932850",
+            "xmlid": "B9-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Schredl, M. Effects of state and trait factors on nightmare frequency, Eur. Arch. Psychiatry Clin. Neurosci, 2003, 253, 241, 247, DOI: 10.1007/s00406-003-0438-1, PMID: 14504993",
+            "process_entry": "True",
+            "doi": "10.1007/s00406-003-0438-1",
+            "pmid": "14504993",
+            "xmlid": "B10-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Swart, M.L, van Schagen, A.M, Lancee, J, van den Bout, J. Prevalence of nightmare disorder in psychiatric outpatients, Psychother. Psychosom, 2013, 82, 267, 268, DOI: 10.1159/000343590, PMID: 23735876",
+            "process_entry": "True",
+            "doi": "10.1159/000343590",
+            "pmid": "23735876",
+            "xmlid": "B11-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Pack, A.I, Keenan, B.T, Byrne, E.M, Gehrman, P.R. Genetics and genomic basis of sleep disorders in humans, Principles and Practice of Sleep Medicine, 6th ed, Kryger, M, Roth, T, Dement, W.C. Elsevier, Philidelphia, PA, USA, 2017, 322, 339",
+            "process_entry": "True",
+            "xmlid": "B12-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Lipnevich, A.A, Credè, M, Hahn, E, Spinath, F.M, Roberts, R.D, Preckel, F. How distinctive are morningness and eveningness from the Big Five factors of personality? A meta-analytic investigation, J. Pers. Soc. Psychol, 2017, 112, 491, 509, DOI: 10.1037/pspp0000099, PMID: 27977220",
+            "process_entry": "True",
+            "doi": "10.1037/pspp0000099",
+            "pmid": "27977220",
+            "xmlid": "B13-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Tonetti, L, Fabbri, M, Natale, V. Relationship between Circadian Typology and Big Five Personality Domains, Chronobiol. Int, 2009, 26, 337, 347, DOI: 10.1080/07420520902750995, PMID: 19212845",
+            "process_entry": "True",
+            "doi": "10.1080/07420520902750995",
+            "pmid": "19212845",
+            "xmlid": "B14-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Kivelä, L, Papadopoulos, M.R, Antypa, N. Chronotype and Psychiatric Disorders, Curr. Sleep Med. Rep, 2018, 4, 94, 103, DOI: 10.1007/s40675-018-0113-8, PMID: 29888167",
+            "process_entry": "True",
+            "doi": "10.1007/s40675-018-0113-8",
+            "pmid": "29888167",
+            "pmcid": "PMC5972175",
+            "xmlid": "B15-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Nielsen, T. Nightmares associated with eveningness chronotype, J. Biol. Rhythms, 2010, 25, 53, 62, DOI: 10.1177/0748730409351677, PMID: 20075301",
+            "process_entry": "True",
+            "doi": "10.1177/0748730409351677",
+            "pmid": "20075301",
+            "xmlid": "B16-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Selvi, Y, Aydin, A, Gulec, M, Boysan, M, Besiroglu, L, Ozdemir, P.G, Kilic, S. Comparison of dream anxiety and subjective sleep quality between chronotypes, Sleep Biol. Rhythms, 2012, 10, 14, 22, DOI: 10.1111/j.1479-8425.2011.00511.x",
+            "process_entry": "True",
+            "doi": "10.1111/j.1479-8425.2011.00511.x",
+            "xmlid": "B17-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Randler, C, Schredl, M, Göritz, A.S. Chronotype, Sleep Behavior, and the Big Five Personality Factors, SAGE Open, 2017, 7, 1, 9, DOI: 10.1177/2158244017728321",
+            "process_entry": "True",
+            "doi": "10.1177/2158244017728321",
+            "xmlid": "B18-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Lederbogen, F, Kirsch, P, Haddad, L, Streit, F, Tost, H, Schuch, P, Wust, S, Pruessner, J.C, Rietschel, M, Deuschle, M. City living and urban upbringing affect neural social stress processing in humans, Nature, 2011, 474, 498, 501, DOI: 10.1038/nature10190, PMID: 21697947",
+            "process_entry": "True",
+            "doi": "10.1038/nature10190",
+            "pmid": "21697947",
+            "xmlid": "B19-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Jacobi, F, Höfler, M, Siegert, J, Mack, S, Gerschler, A, Scholl, L, Busch, M.A, Hapke, U, Maske, U, Seiffert, I. Twelve-month prevalence, comorbidity and correlates of mental disorders in Germany: The Mental Health Module of the German Health Interview and Examination Survey for Adults (DEGS1-MH), Int. J. Methods Psychiatr. Res, 2014, 23, 304, 319, DOI: 10.1002/mpr.1439, PMID: 24729411",
+            "process_entry": "True",
+            "doi": "10.1002/mpr.1439",
+            "pmid": "24729411",
+            "pmcid": "PMC6878234",
+            "xmlid": "B20-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Schredl, M. Nightmare frequency in a representative German sample, Int. J. Dream Res, 2013, 6, 119, 122, DOI: 10.11588/ijodr.2013.2.11127",
+            "process_entry": "True",
+            "doi": "10.11588/ijodr.2013.2.11127",
+            "xmlid": "B21-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Stepansky, R, Holzinger, B, Schmeiser-Rieder, A, Saletu, B, Kunze, M, Zeitlhofer, J. Austrian dream behavior: Results of a representative population survey, Dreaming, 1998, 8, 23, 30, DOI: 10.1023/B:DREM.0000005912.77493.d6",
+            "process_entry": "True",
+            "doi": "10.1023/b:drem.0000005912.77493.d6",
+            "xmlid": "B22-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Schredl, M. Nightmare frequency and nightmare topics in a representative German sample, Eur. Arch. Psychiatry Clin. Neurosci, 2010, 260, 565, 570, DOI: 10.1007/s00406-010-0112-3, PMID: 20229263",
+            "process_entry": "True",
+            "doi": "10.1007/s00406-010-0112-3",
+            "pmid": "20229263",
+            "xmlid": "B23-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Sandman, N, Merikanto, I, Määttänen, H, Valli, K, Kronholm, E, Laatikainen, T, Partonen, T, Paunio, T. Winter is coming: Nightmares and sleep problems during seasonal affective disorder, J. Sleep Res, 2016, 25, 612, 619, DOI: 10.1111/jsr.12416, PMID: 27174375",
+            "process_entry": "True",
+            "doi": "10.1111/jsr.12416",
+            "pmid": "27174375",
+            "xmlid": "B24-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Schredl, M. Dream recall frequency in a representative German sample, Percept. Mot. Skills, 2008, 106, 699, 702, DOI: 10.2466/pms.106.3.699-702, PMID: 18712190",
+            "process_entry": "True",
+            "doi": "10.2466/pms.106.3.699-702",
+            "pmid": "18712190",
+            "xmlid": "B25-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Schredl, M. Recall frequency of positive and negative dreams in a representative German sample, Percept. Mot. Skills, 2009, 108, 677, 680, DOI: 10.2466/pms.108.3.677-680, PMID: 19725304",
+            "process_entry": "True",
+            "doi": "10.2466/pms.108.3.677-680",
+            "pmid": "19725304",
+            "xmlid": "B26-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Statistisches Bundesamt, Bevölkerung nach Bildungsabschluss in Deutschland, Available online, https://www.destatis.de/DE/ZahlenFakten/GesellschaftStaat/BildungForschungKultur/Bildungsstand/Tabellen/Bildungsabschluss.html, (accessed on 14 May 2018)",
+            "process_entry": "True",
+            "url": "https://www.destatis.de/DE/ZahlenFakten/GesellschaftStaat/BildungForschungKultur/Bildungsstand/Tabellen/Bildungsabschluss.html",
+            "xmlid": "B27-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Blagrove, M, Farmer, L, Williams, E. The relationship of nightmare frequency and nightmare distress to well-being, J. Sleep Res, 2004, 13, 129, 136, DOI: 10.1111/j.1365-2869.2004.00394.x, PMID: 15175092",
+            "process_entry": "True",
+            "doi": "10.1111/j.1365-2869.2004.00394.x",
+            "pmid": "15175092",
+            "xmlid": "B28-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Zadra, A.L, Germain, A, Fleury, F, Raymond, I, Nielsen, T.A. Nightmare frequency versus nightmare distress among people with frequent nightmares, Sleep Supplement, 2000, 23, A170",
+            "process_entry": "True",
+            "xmlid": "B29-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Roenneberg, T, Pilz, L.K, Zerbini, G, Winnebeck, E.C. Chronotype and Social Jetlag: A (Self-) Critical Review, Biology, 2019, 8, 54, DOI: 10.3390/biology8030054",
+            "process_entry": "True",
+            "doi": "10.3390/biology8030054",
+            "xmlid": "B30-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Griefahn, B, Künemund, C, Bröde, P, Mehnert, P. Zur Validität der deutschen Übersetzung des Morningness-Eveningness-Questionnaires von Horne und Östberg, Somnology, 2001, 5, 71, 80, DOI: 10.1046/j.1439-054X.2001.01149.x",
+            "process_entry": "True",
+            "doi": "10.1046/j.1439-054x.2001.01149.x",
+            "xmlid": "B31-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Vollmer, C, Michel, U, Randler, C. Outdoor Light at Night (LAN) Is Correlated With Eveningness in Adolescents, Chronobiol. Int, 2012, 29, 502, 508, DOI: 10.3109/07420528.2011.635232, PMID: 22214237",
+            "process_entry": "True",
+            "doi": "10.3109/07420528.2011.635232",
+            "pmid": "22214237",
+            "xmlid": "B32-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Wright, K.P, McHill, A.W, Birks, B.R, Griffin, B.R, Rusterholz, T, Chinoy, E.D. Entrainment of the Human Circadian Clock to the Natural Light-Dark Cycle, Curr. Biol, 2013, 23, 1554, 1558, DOI: 10.1016/j.cub.2013.06.039, PMID: 23910656",
+            "process_entry": "True",
+            "doi": "10.1016/j.cub.2013.06.039",
+            "pmid": "23910656",
+            "pmcid": "PMC4020279",
+            "xmlid": "B33-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Wood, J.M, Bootzin, R.R. The prevalence of nightmares and their independence from anxiety, J. Abnorm. Psychol, 1990, 99, 64, 68, DOI: 10.1037/0021-843X.99.1.64, PMID: 2307768",
+            "process_entry": "True",
+            "doi": "10.1037/0021-843x.99.1.64",
+            "pmid": "2307768",
+            "xmlid": "B34-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Zadra, A.L, Donderi, D.C. Nightmares and bad dreams: Their prevalence and relationship to well-being, J. Abnorm. Psychol, 2000, 109, 273, 281, DOI: 10.1037/0021-843X.109.2.273, PMID: 10895565",
+            "process_entry": "True",
+            "doi": "10.1037/0021-843x.109.2.273",
+            "pmid": "10895565",
+            "xmlid": "B35-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Robert, G, Zadra, A.L. Measuring nightmare and bad dream frequency: Impact of retrosepective and prospective instruments, J. Sleep Res, 2008, 17, 132, 139, DOI: 10.1111/j.1365-2869.2008.00649.x, PMID: 18482103",
+            "process_entry": "True",
+            "doi": "10.1111/j.1365-2869.2008.00649.x",
+            "pmid": "18482103",
+            "xmlid": "B36-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Zunker, M, Althoff, H.K, Apel, J, Lässig, H.S, Schültke, L, Schredl, M. Comparing questionnaire and diary measures for eliciting nightmare frequency, Int. J. Dream Res, 2015, 8, 129, 134, DOI: 10.11588/ijodr.2015.2.23395",
+            "process_entry": "True",
+            "doi": "10.11588/ijodr.2015.2.23395",
+            "xmlid": "B37-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Vallat, R, Nicolas, A, Ruby, P. Brain functional connectivity upon awakening from sleep predicts inter-individual differences in dream recall frequency, Sleep, 2020, zsaa116, DOI: 10.1093/sleep/zsaa116, PMID: 32597973",
+            "process_entry": "True",
+            "doi": "10.1093/sleep/zsaa116",
+            "pmid": "32597973",
+            "xmlid": "B38-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Schredl, M, Holyba, L, Köllmer, T, Körfer, J, Proß, A. Nightmare distress, nightmare frequency, and beliefs about nightmares, Int. J. Dream Res, 2019, 12, 60, 66, DOI: 10.11588/ijodr.2019.2.62531",
+            "process_entry": "True",
+            "doi": "10.11588/ijodr.2019.2.62531",
+            "xmlid": "B39-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Schredl, M. Reliability and stability of a dream recall frequency scale, Percept. Mot. Skills, 2004, 98, 1422, 1426, DOI: 10.2466/PMS.98.3.1422-1426, PMID: 15291233",
+            "process_entry": "True",
+            "doi": "10.2466/pms.98.3.1422-1426",
+            "pmid": "15291233",
+            "xmlid": "B40-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Schredl, M, Berres, S, Klingauf, A, Schellhaas, S, Göritz, A.S. The Mannheim Dream questionnaire (MADRE): Retest reliability, age and gender effects, Int. J. Dream Res, 2014, 7, 141, 147, DOI: 10.11588/ijodr.2014.2.16675",
+            "process_entry": "True",
+            "doi": "10.11588/ijodr.2014.2.16675",
+            "xmlid": "B41-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Stumbrys, T, Erlacher, D, Schredl, M. Reliability and stability of lucid dream and nightmare frequency scales, Int. J. Dream Res, 2013, 6, 123, 126, DOI: 10.11588/ijodr.2013.2.11137",
+            "process_entry": "True",
+            "doi": "10.11588/ijodr.2013.2.11137",
+            "xmlid": "B42-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Horne, J.A, Ostberg, O. A self-assessment questionnaire to determine morningness-eveningness in human circadian rhythms, Int. J. Chronobiol, 1976, 4, 97, 110, PMID: 1027738",
+            "process_entry": "True",
+            "pmid": "1027738",
+            "xmlid": "B43-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Körner, A, Drapeau, M, Albani, C, Geyer, M, Schmutzer, G, Brähler, E. Deutsche Normierung des NEO-Fünf-Faktoren-Inventars (NEO-FFI) (German Norms for the NEO-Five Factor Inventory), Z. Med. Psychol, 2008, 17, 133, 144",
+            "process_entry": "True",
+            "xmlid": "B44-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Körner, A, Geyer, M, Roth, M, Drapeau, M, Schmutzer, G, Albani, C, Schumann, S, Brahler, E. Personlichkeitsdiagnostik mit dem NEO-Fünf-Faktoren-Inventar: Die 30-Item-Kurzversion (NEO-FFI-30) [Personality diagnostic using the NEO-Five-Factor-Inventory: The 30-Item short version (NEO-FFI-30)], Psychother. Psychosom. Med. Psychol, 2008, 58, 238, 245, DOI: 10.1055/s-2007-986199, PMID: 17899495",
+            "process_entry": "True",
+            "doi": "10.1055/s-2007-986199",
+            "pmid": "17899495",
+            "xmlid": "B45-clockssleep-02-00029"
+        },
+        {
+            "bibentry": "Wiso Panel, Available online, https://www.wisopanel.net/, (accessed on 26 June 2020)",
+            "process_entry": "True",
+            "url": "https://www.wisopanel.net/",
+            "xmlid": "B46-clockssleep-02-00029"
+        }
+    ],
+    "localid": "PMID33089212",
+    "doi": "10.3390/clockssleep2030029",
+    "pmid": "33089212",
+    "pmcid": "PMC7573802",
+    "curator": "BEE EuropeanPubMedCentralProcessor",
+    "source_provider": "Europe PubMed Central",
+    "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/33089212/fullTextXML"
+}

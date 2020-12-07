@@ -1,0 +1,74 @@
+{
+    "references": [
+        {
+            "bibentry": "Mendoza, L, Vilela, R, Voelz, K, Ibrahim, AS, Voigt, K, Lee, SC. Human fungal pathogens of mucorales and entomophthorales, Cold Spring Harb Perspect Med, 2015, 5, pii: a019562 doi: 10.1101/cshperspect.a019562",
+            "process_entry": "True",
+            "xmlid": "ref1"
+        },
+        {
+            "bibentry": "Prabhu, RM, and Patel, R. Mucormycosis and entomophthoramycosis: A review of the clinical manifestations, diagnosis and treatment, Clin Microbiol Infect, 2004, 10, 31, 47, PMID: 14748801",
+            "process_entry": "True",
+            "pmid": "14748801",
+            "xmlid": "ref2"
+        },
+        {
+            "bibentry": "Ramesh, A, Deka, RC, Vijayaraghavan, M, Ray, R, Kabra, SK, Rakesh, K. Entomophthoromycosis of the nose and paranasal sinus, Indian J Pediatr, 2000, 67, 307, 10, PMID: 10878876",
+            "process_entry": "True",
+            "pmid": "10878876",
+            "xmlid": "ref3"
+        },
+        {
+            "bibentry": "Michael, RC, Michael, JS, Mathews, MS, Rupa, V. Unusual presentation of entomophthoromycosis, Indian J Med Microbiol, 2009, 27, 156, 8, PMID: 19384042",
+            "process_entry": "True",
+            "pmid": "19384042",
+            "xmlid": "ref4"
+        },
+        {
+            "bibentry": "Bittencourt, AL, Marback, R, Nossa, LMB. Mucocutaneous entomoptharomycosis acquired by conjunctival inoculation of the fungus, Am J Trop Med Hyg, 2006, 75, 936, 8, PMID: 17123991",
+            "process_entry": "True",
+            "pmid": "17123991",
+            "xmlid": "ref5"
+        },
+        {
+            "bibentry": "Spellberg, B, Edwards, J, Jr, Ibrahim, A. Novel perspectives on mucormycosis: Pathophysiology, presentation, and management, Clin Microbiol Rev, 2005, 18, 556, 69, PMID: 16020690",
+            "process_entry": "True",
+            "doi": "10.1128/cmr.18.3.556-569.2005",
+            "pmid": "16020690",
+            "pmcid": "PMC1195964",
+            "xmlid": "ref6"
+        },
+        {
+            "bibentry": "Blumentrath, CG, Grobusch, MP, Matsiégui, PB, Pahlke, F, Zoleko-Manego, R, Nzenze-Aféne, S. Classification of rhinoentomophthoromycosis into atypical, early, intermediate, and late disease: A proposal, PLoS Negl Trop Dis, 2015, 9, e0003984, PMID: 26426120",
+            "process_entry": "True",
+            "doi": "10.1371/journal.pntd.0003984",
+            "pmid": "26426120",
+            "pmcid": "PMC4591341",
+            "xmlid": "ref7"
+        },
+        {
+            "bibentry": "Gugnani, HC. Entomophthoromycosis due to conidiobolus, Eur J Epidemiol, 1992, 8, 391, 6, PMID: 1397203",
+            "process_entry": "True",
+            "pmid": "1397203",
+            "xmlid": "ref8"
+        },
+        {
+            "bibentry": "Foss, NT, Rocha, MR, Lima, VT, Velludo, MA, Roselino, AM. Entomophthoramycosis: Therapeutic success by using amphotericin B and terbinafine, Dermatology, 1996, 193, 258, 60, PMID: 8944354",
+            "process_entry": "True",
+            "pmid": "8944354",
+            "xmlid": "ref9"
+        },
+        {
+            "bibentry": "Chowdary, A, Randhawa, HS, Khan, ZU, Ahmad, S, Khanna, G, Gupta, R. Rhinoentomophthoromycosis due to, Conidiobolus coronatus. A case report and an overview of the disease in India, Med Mycol, 2010, 48, 870, 9, PMID: 20482451",
+            "process_entry": "True",
+            "pmid": "20482451",
+            "xmlid": "ref10"
+        }
+    ],
+    "localid": "PMID32587198",
+    "doi": "10.4103/ijo.ijo_1436_19",
+    "pmid": "32587198",
+    "pmcid": "PMC7574109",
+    "curator": "BEE EuropeanPubMedCentralProcessor",
+    "source_provider": "Europe PubMed Central",
+    "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/32587198/fullTextXML"
+}

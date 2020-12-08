@@ -6,7 +6,9 @@ __author__ = "Gabriele Pisciotta"
 
 
 class Bibentry:
-    def __init__(self, full_entry, repok, reperr, query_interface, resourcefinder, get_bib_entry_doi, message, do_process_entry=True):
+    def __init__(self, full_entry, repok, reperr, query_interface, resourcefinder, get_bib_entry_doi, message,
+                process_existing_by_id,
+                 do_process_entry=True):
 
         self.id = "Crossref"
         self.repok = repok
@@ -16,6 +18,7 @@ class Bibentry:
         self.get_bib_entry_doi = get_bib_entry_doi
         self.message = message
 
+        self.process_existing_by_id = process_existing_by_id
         self.extracted_doi_used = False
         self.do_process_entry = do_process_entry
         self.entry = dg(full_entry, ["bibentry"])
@@ -57,14 +60,21 @@ class Bibentry:
         if self.provided_doi is not None:
             self._process_doi(self.provided_doi)
 
-        if self.cur_res is None and self.entry is not None:
+        if self.cur_res is None and self.process_doi_result is None and self.entry is not None:
             self._process_entry(self.entry)
 
-        if self.provided_pmid is not None:
+        if self.cur_res is None and self.get_bib_entry_doi and self.process_doi_result is None and self.extracted_doi is not None:
+            self.extracted_doi_used = True
+            self._process_doi(self.extracted_doi)
+
+        if self.cur_res is None and self.provided_pmid is not None:
             self._process_pmid(self.provided_pmid)
 
-        if self.provided_pmcid is not None:
+        if self.cur_res is None and self.provided_pmcid is not None:
             self._process_pmcid(self.provided_pmcid)
+
+        if self.cur_res is not None:
+            self.cur_res = self.process_existing_by_id(self.cur_res, self.id)
 
 
 
@@ -101,9 +111,3 @@ class Bibentry:
             self.existing_bibref_entry = self.query_interface.get_data_crossref_bibref(entry)
             if self.existing_bibref_entry is not None:
                 self.cur_res = self.rf.retrieve(CrossrefDataHandler.get_ids_for_type(self.existing_bibref_entry), typ='only_blazegraph')
-
-    # Remote version
-    def process_extra_doi(self):
-        if self.existing_bibref_entry is None and self.get_bib_entry_doi and self.extracted_doi is not None:
-            self.extracted_doi_used = True
-            self._process_doi(self.extracted_doi)

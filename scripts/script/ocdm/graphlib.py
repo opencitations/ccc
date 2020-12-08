@@ -402,6 +402,8 @@ class GraphEntity(object):
         self.g.add((self.res, GraphEntity.embodiment, URIRef(str(re_res))))
 
     def has_part(self, br_res):
+        if type(self.res) == GraphEntity:
+            self.res = URIRef(str(self.res))
         br_res.g.add((URIRef(str(br_res)), GraphEntity.part_of, self.res))
 
     def contains_in_reference_list(self, be_res):
@@ -420,6 +422,8 @@ class GraphEntity(object):
         self.g.add((self.res, GraphEntity.cites, URIRef(str(br_res))))
 
     def has_reference(self, be_res):
+        if type(self.res) == GraphEntity:
+            self.res = URIRef(str(self.res))
         be_res.g.add((URIRef(str(be_res)), GraphEntity.references, self.res))
 
     def has_role(self, ar_res):

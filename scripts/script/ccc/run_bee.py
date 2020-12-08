@@ -40,7 +40,7 @@ try:
         epmc = EuropeanPubMedCentralProcessor(
             stored_file, reference_dir, error_dir, pagination_file, Stopper(reference_dir),
             p_size=page_size, debug=debug, intext_refs=True, supplier_idx=supplier_tuple)
-        epmc.process(True)
+        epmc.process(True, intext_refs=True)
 
     else:
         epmc = EuropeanPubMedCentralProcessorParallel(

@@ -1,0 +1,369 @@
+{
+    "references": [
+        {
+            "bibentry": "Davis, BJ, Roughley, SD. Fragment-based lead discovery. Annu Rep Med Chem 2017; 50: 371–439.",
+            "process_entry": "True",
+            "xmlid": "CIT0001"
+        },
+        {
+            "bibentry": "Murray, CW, Rees, DC. The rise of fragment-based drug discovery. Nat Chem 2009; 1: 187–92. PMID: 21378847",
+            "process_entry": "True",
+            "doi": "10.1038/nchem.217",
+            "pmid": "21378847",
+            "xmlid": "CIT0002"
+        },
+        {
+            "bibentry": "Harner, MJ, Frank, AO, Fesik, SW. Fragment-based drug discovery using NMR spectroscopy. J Biomol NMR 2013; 56: 65–75. PMID: 23686385",
+            "process_entry": "True",
+            "doi": "10.1007/s10858-013-9740-z",
+            "pmid": "23686385",
+            "pmcid": "PMC3699969",
+            "xmlid": "CIT0003"
+        },
+        {
+            "bibentry": "Ma, R, Wang, P, Wu, J, Ruan, K. Process of fragment-based lead discovery –a perspective from NMR. Molecules 2016; 21: 854.",
+            "process_entry": "True",
+            "xmlid": "CIT0004"
+        },
+        {
+            "bibentry": "Verdonk, ML, Giangreco, I, Hall, RJ, et al. Docking performance of fragments and druglike compounds. J Med Chem 2011; 54: 5422–31. PMID: 21692478",
+            "process_entry": "True",
+            "doi": "10.1021/jm200558u",
+            "pmid": "21692478",
+            "xmlid": "CIT0005"
+        },
+        {
+            "bibentry": "Mortier, J, Rakers, C, Frederick, R, Wolber, G. Computational tools for in silico fragment-based drug design. Curr Top Med Chem 2012; 12: 1935–43. PMID: 23116473",
+            "process_entry": "True",
+            "doi": "10.2174/156802612804547371",
+            "pmid": "23116473",
+            "xmlid": "CIT0006"
+        },
+        {
+            "bibentry": "Zoete, V, Grosdidier, A, Michielin, O. Docking, virtual high throughput screening and in silico fragment-based drug design. J Cell Mol Med 2009; 13: 238–48. PMID: 19183238",
+            "process_entry": "True",
+            "doi": "10.1111/j.1582-4934.2008.00665.x",
+            "pmid": "19183238",
+            "pmcid": "PMC3823351",
+            "xmlid": "CIT0007"
+        },
+        {
+            "bibentry": "Caflisch, A, Miranker, A, Karplus, M. Multiple copy simultaneous search and construction of ligands in binding sites: application to inhibitors of HIV-1 aspartic proteinase. J Med Chem 1993; 36: 2142–67. PMID: 8340918",
+            "process_entry": "True",
+            "doi": "10.1021/jm00067a013",
+            "pmid": "8340918",
+            "xmlid": "CIT0008"
+        },
+        {
+            "bibentry": "Martinez-Rosell, G, Harvey, MJ, De Fabritiis, G. Molecular-simulation-driven fragment screening for the discovery of new CXCL12 inhibitors. J Chem Inf Model 2018; 58: 683–91. PMID: 29481075",
+            "process_entry": "True",
+            "doi": "10.1021/acs.jcim.7b00625",
+            "pmid": "29481075",
+            "xmlid": "CIT0009"
+        },
+        {
+            "bibentry": "Linker, SM, Magarkar, A, Köfinger, J, et al. Fragment binding pose predictions using unbiased simulations and Markov-state models. J Chem Theory Comput 2019; 15: 4974–81. PMID: 31402652",
+            "process_entry": "True",
+            "doi": "10.1021/acs.jctc.9b00069",
+            "pmid": "31402652",
+            "xmlid": "CIT0010"
+        },
+        {
+            "bibentry": "Sabbadin, D, Moro, S. Supervised molecular dynamics (SuMD) as a helpful tool to depict GPCR-ligand recognition pathway in a nanosecond time scale. J Chem Inf Model 2014; 54: 372–6. PMID: 24456045",
+            "process_entry": "True",
+            "doi": "10.1021/ci400766b",
+            "pmid": "24456045",
+            "xmlid": "CIT0011"
+        },
+        {
+            "bibentry": "Cuzzolin, A, Sturlese, M, Deganutti, G, et al. Deciphering the complexity of ligand-protein recognition pathways using supervised molecular dynamics (SuMD) simulations. J Chem Inf Model 2016; 56: 687–705. PMID: 27019343",
+            "process_entry": "True",
+            "doi": "10.1021/acs.jcim.5b00702",
+            "pmid": "27019343",
+            "xmlid": "CIT0012"
+        },
+        {
+            "bibentry": "Salmaso, V, Sturlese, M, Cuzzolin, A, Moro, S. Exploring protein-peptide recognition pathways using a supervised molecular dynamics approach. Structure 2017; 25: 655–62.e2. PMID: 28319010",
+            "process_entry": "True",
+            "doi": "10.1016/j.str.2017.02.009",
+            "pmid": "28319010",
+            "xmlid": "CIT0013"
+        },
+        {
+            "bibentry": "Oltersdorf, T, Elmore, SW, Shoemaker, AR, et al. An inhibitor of Bcl-2 family proteins induces regression of solid tumours. Nature 2005; 435: 677–81. PMID: 15902208",
+            "process_entry": "True",
+            "doi": "10.1038/nature03579",
+            "pmid": "15902208",
+            "xmlid": "CIT0014"
+        },
+        {
+            "bibentry": "Ashkenazi, A, Fairbrother, WJ, Leverson, JD, Souers, AJ. From basic apoptosis discoveries to advanced selective BCL-2 family inhibitors. Nat Rev Drug Discov 2017; 16: 273–84. PMID: 28209992",
+            "process_entry": "True",
+            "doi": "10.1038/nrd.2016.253",
+            "pmid": "28209992",
+            "xmlid": "CIT0015"
+        },
+        {
+            "bibentry": "Maity, A, Majumdar, S, Ghosh Dastidar, S. Flexibility enables to discriminate between ligands: Lessons from structural ensembles of Bcl-xl and Mcl-1. Comput Biol Chem 2018; 77: 17–27. PMID: 30195235",
+            "process_entry": "True",
+            "doi": "10.1016/j.compbiolchem.2018.08.007",
+            "pmid": "30195235",
+            "xmlid": "CIT0016"
+        },
+        {
+            "bibentry": "Aguirre, C, ten Brink, T, Walker, O, et al. BcL-xL conformational changes upon fragment binding revealed by NMR. PLoS One 2013; 8: e64400. PMID: 23717610",
+            "process_entry": "True",
+            "doi": "10.1371/journal.pone.0064400",
+            "pmid": "23717610",
+            "pmcid": "PMC3662666",
+            "xmlid": "CIT0017"
+        },
+        {
+            "bibentry": "Böttcher, J, Jestel, A, Kiefersauer, R, et al. Key factors for successful generation of protein-fragment structures: requirement on protein, crystals, and technology. Methods Enzymol 2011; 493: 61–89. PMID: 21371587",
+            "process_entry": "True",
+            "doi": "10.1016/b978-0-12-381274-2.00003-0",
+            "pmid": "21371587",
+            "xmlid": "CIT0018"
+        },
+        {
+            "bibentry": "Muchmore, SW, Sattler, M, Liang, H, et al. X-ray and NMR structure of human Bcl-xL, an inhibitor of programmed cell death. Nature 1996; 381: 335–41. PMID: 8692274",
+            "process_entry": "True",
+            "doi": "10.1038/381335a0",
+            "pmid": "8692274",
+            "xmlid": "CIT0019"
+        },
+        {
+            "bibentry": "Molecular Operating Environment (MOE), 2019.01; Chemical Computing Group ULC, 1010 Sherbooke St. West, Suite #910, Montreal, QC, Canada, H3A 2R7, 2020.",
+            "process_entry": "True",
+            "xmlid": "CIT0020"
+        },
+        {
+            "bibentry": "Case, DA, Babin, V, Berryman, J, et al. Amber 14. Univ California, San Fr. n.d.",
+            "process_entry": "True",
+            "xmlid": "CIT0021"
+        },
+        {
+            "bibentry": "Wang, J, Wolf, RM, Caldwell, JW, Kollman, PA, et al. Development and testing of a general amber force field. J Comput Chem 2004; 25: 1157–74. PMID: 15116359",
+            "process_entry": "True",
+            "doi": "10.1002/jcc.20035",
+            "pmid": "15116359",
+            "xmlid": "CIT0022"
+        },
+        {
+            "bibentry": "Berman, HM, Westbrook, J, Feng, Z, et al. The protein data bank. Nucleic Acids Res 2000; 28: 235–42. PMID: 10592235",
+            "process_entry": "True",
+            "doi": "10.1093/nar/28.1.235",
+            "pmid": "10592235",
+            "pmcid": "PMC102472",
+            "xmlid": "CIT0023"
+        },
+        {
+            "bibentry": "Petros, AM, Nettesheim, DG, Wang, Y, et al. Rationale for Bcl-xL/Bad peptide complex formation from structure, mutagenesis, and biophysical studies. Protein Sci 2000; 9: 2528–34. PMID: 11206074",
+            "process_entry": "True",
+            "doi": "10.1110/ps.9.12.2528",
+            "pmid": "11206074",
+            "pmcid": "PMC2144516",
+            "xmlid": "CIT0024"
+        },
+        {
+            "bibentry": "Labute, P. Protonate 3D: assignment of macromolecular protonation state and geometry. Chem Comput Gr. 2007: 1–17.",
+            "process_entry": "True",
+            "xmlid": "CIT0025"
+        },
+        {
+            "bibentry": "Case, D, Babin, V, Berryman, J, et al. Amber14, version AMBER14. San Francisco: University of California. 2014 Available from: http://ambermd.org/ [last accessed Oct 2015].",
+            "process_entry": "True",
+            "url": "http://ambermd.org/ [last accessed Oct 2015].",
+            "xmlid": "CIT0026"
+        },
+        {
+            "bibentry": "Wang, J, Wang, W, Kollman, PA, Case, DA. Automatic atom type and bond type perception in molecular mechanical calculations. J Mol Graph Model 2006; 25: 247–60. PMID: 16458552",
+            "process_entry": "True",
+            "doi": "10.1016/j.jmgm.2005.12.005",
+            "pmid": "16458552",
+            "xmlid": "CIT0027"
+        },
+        {
+            "bibentry": "Jakalian, A, Bush, BL, Jack, DB, Bayly, CI. Fast, efficient generation of high‐quality atomic charges. AM1‐BCC model: I. Method. J Comput Chem 2000; 21: 132–46.",
+            "process_entry": "True",
+            "xmlid": "CIT0028"
+        },
+        {
+            "bibentry": "Jakalian, A, Jack, DB, Bayly, CI. Fast, efficient generation of high-quality atomic charges. AM1-BCC model: II. Parameterization and validation. J Comput Chem 2002; 23: 1623–41. PMID: 12395429",
+            "process_entry": "True",
+            "doi": "10.1002/jcc.10128",
+            "pmid": "12395429",
+            "xmlid": "CIT0029"
+        },
+        {
+            "bibentry": "Berendsen, HJC, Postma, JPM, van Gunsteren, WF, et al. Molecular dynamics with coupling to an external bath. J Chem Phys 1984; 81: 3684–90.",
+            "process_entry": "True",
+            "xmlid": "CIT0030"
+        },
+        {
+            "bibentry": "Bakan, A, Meireles, LM, Bahar, I. ProDy: protein dynamics inferred from theory and experiments. Bioinformatics 2011; 27: 1575–7. PMID: 21471012",
+            "process_entry": "True",
+            "doi": "10.1093/bioinformatics/btr168",
+            "pmid": "21471012",
+            "pmcid": "PMC3102222",
+            "xmlid": "CIT0031"
+        },
+        {
+            "bibentry": "Ester, M, Kriegel, HP, Sander, J, Xu, X. A density-based algorithm for discovering clusters in large spatial databases with noise. In: Proceedings of the 2nd International Conference on Knowledge Discovery and Data Mining. Portland: AAAI press. 1996: 226–231.",
+            "process_entry": "True",
+            "xmlid": "CIT0032"
+        },
+        {
+            "bibentry": "Pedregosa, F, Varoquaux, GG, Gramfort, A, Michel, V, et al. Scikit-learn: machine learning in Python. J Mach Learn Res 2011; 12: 2825–30.",
+            "process_entry": "True",
+            "xmlid": "CIT0033"
+        },
+        {
+            "bibentry": "Humphrey, W, Dalke, A, Schulten, K. VMD: visual molecular dynamics. J Mol Graph 1996; 14: 3333–8.",
+            "process_entry": "True",
+            "xmlid": "CIT0034"
+        },
+        {
+            "bibentry": "Hunter, JD. Matplotlib: a 2D graphics environment. Comput Sci Eng 2007; 9: 90–5.",
+            "process_entry": "True",
+            "xmlid": "CIT0035"
+        },
+        {
+            "bibentry": "Schanda, P, Kupce, E, Brutscher, B. SOFAST-HMQC experiments for recording two-dimensional heteronuclear correlation spectra of proteins within a few seconds. J Biomol NMR 2005; 33: 199–211. PMID: 16341750",
+            "process_entry": "True",
+            "doi": "10.1007/s10858-005-4425-x",
+            "pmid": "16341750",
+            "xmlid": "CIT0036"
+        },
+        {
+            "bibentry": "Stark, JL, Eghbalnia, HR, Lee, W, et al. NMRmix: a tool for the optimization of compound mixtures in 1D (1)H NMR ligand affinity screens. J Proteome Res 2016; 15: 1360–8. PMID: 26965640",
+            "process_entry": "True",
+            "doi": "10.1021/acs.jproteome.6b00121",
+            "pmid": "26965640",
+            "pmcid": "PMC4820789",
+            "xmlid": "CIT0037"
+        },
+        {
+            "bibentry": "Ulrich, EL, Akutsu, H, Doreleijers, JF, et al. BioMagResBank. Nucleic Acids Res 2008; 36: D402–8. PMID: 17984079",
+            "process_entry": "True",
+            "doi": "10.1093/nar/gkm957",
+            "pmid": "17984079",
+            "pmcid": "PMC2238925",
+            "xmlid": "CIT0038"
+        },
+        {
+            "bibentry": "Williamson, MP. Using chemical shift perturbation to characterise ligand binding. Prog Nucl Magn Reson Spectrosc 2013; 73: 1–16. PMID: 23962882",
+            "process_entry": "True",
+            "doi": "10.1016/j.pnmrs.2013.02.001",
+            "pmid": "23962882",
+            "xmlid": "CIT0039"
+        },
+        {
+            "bibentry": "Mayer, M, Meyer, B. Characterization of ligand binding by saturation transfer difference NMR spectroscopy. Angew Chem Int Ed 1999; 38: 1784–8.",
+            "process_entry": "True",
+            "xmlid": "CIT0040"
+        },
+        {
+            "bibentry": "Dalvit, C, Fogliatto, G, Stewart, A, et al. WaterLOGSY as a method for primary NMR screening: practical aspects and range of applicability. J Biomol NMR 2001; 21: 349–59. PMID: 11824754",
+            "process_entry": "True",
+            "doi": "10.1023/a:1013302231549",
+            "pmid": "11824754",
+            "xmlid": "CIT0041"
+        },
+        {
+            "bibentry": "Hwang, TL, Shaka, AJ. Water suppression that works. excitation sculpting using arbitrary wave-forms and pulsed-field gradients. J Magn Reson Ser A 1995; 112: 275–9.",
+            "process_entry": "True",
+            "xmlid": "CIT0042"
+        },
+        {
+            "bibentry": "Lee, W, Tonelli, M, Markley, JL. NMRFAM-SPARKY: enhanced software for biomolecular NMR spectroscopy. Bioinformatics 2015; 31: 1325–7. PMID: 25505092",
+            "process_entry": "True",
+            "doi": "10.1093/bioinformatics/btu830",
+            "pmid": "25505092",
+            "pmcid": "PMC4393527",
+            "xmlid": "CIT0043"
+        },
+        {
+            "bibentry": "Bienstock, RJ. Overview: fragment-based drug design In, Bienstock, RJ, ed. Library design, search methods, and applications of fragment-based drug design. Vol. 1076 ACS Symposium Series. Washington (DC): American Chemical Society; 2011: 1–26.",
+            "process_entry": "True",
+            "xmlid": "CIT0044"
+        },
+        {
+            "bibentry": "Barelier, S, Pons, J, Marcillat, O, et al. Fragment-based deconstruction of Bcl-xL inhibitors. J Med Chem 2010; 53: 2577–88. PMID: 20192224",
+            "process_entry": "True",
+            "doi": "10.1021/jm100009z",
+            "pmid": "20192224",
+            "xmlid": "CIT0045"
+        },
+        {
+            "bibentry": "Ester, M, Kriegel, HP, Sander, J, Xu, X. A density-based algorithm for discovering clusters in large spatial databases with noise. KDD 1996; 96: 226–31.",
+            "process_entry": "True",
+            "xmlid": "CIT0046"
+        },
+        {
+            "bibentry": "Giordanetto, F, Jin, C, Willmore, L, et al. Fragment hits: what do they look like and how do they bind? J Med Chem 2019; 62: 3381–94. PMID: 30875465",
+            "process_entry": "True",
+            "doi": "10.1021/acs.jmedchem.8b01855",
+            "pmid": "30875465",
+            "pmcid": "PMC6466478",
+            "xmlid": "CIT0047"
+        },
+        {
+            "bibentry": "Ferenczy, GG, Keserű, GM. Thermodynamics of fragment binding. J Chem Inf Model 2012; 52: 1039–45. PMID: 22458364",
+            "process_entry": "True",
+            "doi": "10.1021/ci200608b",
+            "pmid": "22458364",
+            "xmlid": "CIT0048"
+        },
+        {
+            "bibentry": "Dalvit, C, Pevarello, P, Tatò, M, et al. Identification of compounds with binding affinity to proteins via magnetization transfer from bulk water. J Biomol NMR 2000; 18: 65–8. PMID: 11061229",
+            "process_entry": "True",
+            "doi": "10.1023/a:1008354229396",
+            "pmid": "11061229",
+            "xmlid": "CIT0049"
+        },
+        {
+            "bibentry": "Gossert, AD, Jahnke, W. NMR in drug discovery: a practical guide to identification and validation of ligands interacting with biological macromolecules. Prog Nucl Magn Reson Spectrosc 2016; 97: 82–125. PMID: 27888841",
+            "process_entry": "True",
+            "doi": "10.1016/j.pnmrs.2016.09.001",
+            "pmid": "27888841",
+            "xmlid": "CIT0050"
+        },
+        {
+            "bibentry": "Petros, AM, Dinges, J, Augeri, DJ, et al. Discovery of a potent inhibitor of the antiapoptotic protein Bcl-xL from NMR and parallel synthesis. J Med Chem 2006; 49: 656–63. PMID: 16420051",
+            "process_entry": "True",
+            "doi": "10.1021/jm0507532",
+            "pmid": "16420051",
+            "xmlid": "CIT0051"
+        },
+        {
+            "bibentry": "Manion, MK, O'Neill, JW, Giedt, CD, et al. Bcl-XL mutations suppress cellular sensitivity to antimycin A. J Biol Chem 2004; 279: 2159–65. PMID: 14534311",
+            "process_entry": "True",
+            "doi": "10.1074/jbc.m306021200",
+            "pmid": "14534311",
+            "xmlid": "CIT0052"
+        },
+        {
+            "bibentry": "Erlanson, DA, Davis, BJ, Jahnke, W. Fragment-based drug discovery: advancing fragments in the absence of crystal structures. Cell Chem Biol 2019; 26: 9–15. PMID: 30482678",
+            "process_entry": "True",
+            "doi": "10.1016/j.chembiol.2018.10.001",
+            "pmid": "30482678",
+            "xmlid": "CIT0053"
+        },
+        {
+            "bibentry": "Wielens, J, Headey, SJ, Rhodes, DI, et al. Parallel screening of low molecular weight fragment libraries: do differences in methodology affect hit identification? J Biomol Screen 2013; 18: 147–59. PMID: 23139382",
+            "process_entry": "True",
+            "doi": "10.1177/1087057112465979",
+            "pmid": "23139382",
+            "xmlid": "CIT0054"
+        }
+    ],
+    "localid": "MED-33115279",
+    "doi": "10.1080/14756366.2020.1838499",
+    "pmid": "33115279",
+    "pmcid": "PMC7598995",
+    "curator": "BEE EuropeanPubMedCentralProcessor",
+    "source_provider": "Europe PubMed Central",
+    "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/33115279/fullTextXML",
+    "reference_pointers": []
+}

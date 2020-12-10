@@ -74,18 +74,20 @@ def preprocessing(df):
 
     temp = deepcopy(df[df['manual_doi'] != "???"])
     n_of_not_exist = 0
-
     temp['exists_doi_in_crossref'] = 0
     for idx, row in temp.iterrows():
         if query_interface_local.check_doi_in_collection(row['manual_doi']):
             temp.loc[temp['manual_doi'] == row['manual_doi'], 'exists_doi_in_crossref'] = 1
         else:
             n_of_not_exist += 1
-    temp.to_csv('evaluation_dataset_without_notfoundmanual_with_incrossref.csv')
+    temp.to_csv('evaluation_dataset_without_notfoundmanual_with_incrossref.csv', index=False)
     final_df = temp[temp['exists_doi_in_crossref']==1]
     del final_df['exists_doi_in_crossref']
+    final_df = final_df.drop_duplicates()
     final_df.to_csv('preprocessed.csv')
     print(f"Finished: {n_of_not_exist} DOI not in crossref")
+    print(f"Total record for the experimentation: {len(final_df)}")
+
     return final_df
 
 def compute_metrics(df):
@@ -98,6 +100,10 @@ def compute_metrics(df):
     n_both_wrong_but_equals = 0
     n_both_wrong_but_different = 0
     n_both_equals_and_correct = 0
+    n_local_supplement = 0
+    n_remote_supplement = 0
+    n_local_wrong = 0
+    n_remote_wrong = 0
 
     for idx, row in df.iterrows():
         manual_doi = row['manual_doi'].strip().lower()
@@ -107,13 +113,23 @@ def compute_metrics(df):
         remote_is_correct = False
         local_remote_equals = False
 
+        if manual_doi in local_doi and manual_doi != local_doi:
+            n_local_supplement += 1
+
+        if manual_doi in remote_doi and manual_doi != remote_doi:
+            n_remote_supplement += 1
+
         if local_doi == manual_doi:
             n_corresponding_local_manual += 1
             local_is_correct = True
+        else:
+            n_local_wrong += 1
 
         if remote_doi == manual_doi:
             n_corresponding_remote_manual += 1
             remote_is_correct = True
+        else:
+            n_remote_wrong += 1
 
         if remote_doi == local_doi:
             local_remote_equals = True
@@ -135,23 +151,31 @@ def compute_metrics(df):
             else:
                 n_both_wrong_but_different += 1
 
-    print(f"N locale è corretto, remoto no: {n_local_is_correct_and_remote_is_not}")
-    print(f"N remoto è corretto, locale no: {n_remote_is_correct_and_local_is_not}")
-    print(f"N volte entrambi errati e identici: {n_both_wrong_but_equals}")
-    print(f"N volte entrambi errati ma differenti: {n_both_wrong_but_different}")
-    print(f"N volte entrambi corretti e identici: {n_both_equals_and_correct}")
-    print(f"Percentuale corrispondenza tra DOI locale e manuale: {n_corresponding_local_manual * 100 / total_rows}")
-    print(f"Percentuale corrispondenza tra DOI remoto e manuale: {n_corresponding_remote_manual * 100 / total_rows}")
-    print(f"Percentuale corrispondenza tra DOI locale e remoto: {n_corresponding_local_remote * 100 / total_rows}")
+    print(f"- Numero di volte in cui il DOI locale è corretto e quello remoto no: {n_local_is_correct_and_remote_is_not}")
+    print(f"- Numero di volte in cui il DOI remoto è corretto e quello locale no: {n_remote_is_correct_and_local_is_not}")
+    print(f"- Numero di volte in cui sono entrambi errati e identici: {n_both_wrong_but_equals}")
+    print(f"- Numero di volte in cui sono entrambi errati ma differenti: {n_both_wrong_but_different}")
+    print(f"- Numero di volte in cui sono entrambi corretti e identici: {n_both_equals_and_correct}")
+    print(f"- Numero di volte in cui vengono restituiti supplementi dall'indice locale: {n_local_supplement}")
+    print(f"- Numero di volte in cui vengono restituiti supplementi dalle API: {n_remote_supplement}")
+    print(f"- Percentuale locali sbagliati che sono supplementi (sul totale): {n_local_supplement*100/total_rows}")
+    print(f"- Percentuale remoti sbagliati che sono supplementi (sul totale): {n_remote_supplement*100/total_rows}")
+    print(f"- Percentuale locali sbagliati che sono supplementi (sui locali sbagliati): {n_local_supplement * 100 / n_local_wrong}")
+    print(f"- Percentuale remoti sbagliati che sono supplementi (sui remoti sbagliati): {n_remote_supplement * 100 / n_remote_wrong}")
+
+    print(f"- Percentuale di corrispondenza tra DOI locale e DOI manuale (quanta - correttezza usando l'indice): {n_corresponding_local_manual * 100 / total_rows}")
+    print(f"- Percentuale di corrispondenza tra DOI remoto e DOI manuale (quanta correttezza usando le API remote): {n_corresponding_remote_manual * 100 / total_rows}")
+    print(f"- Percentuale di corrispondenza tra DOI remoto e DOI locale (quanta corrispondenza tra l'indice e le API): {n_corresponding_local_remote * 100 / total_rows}")
 
     n_wrong = n_both_wrong_but_equals + n_both_wrong_but_different
-    print(f"Percentuale entrambi corretti: {n_both_equals_and_correct*100/total_rows}")
-    print(f"Percentuale entrambi errati e identici: {n_both_wrong_but_equals*100/total_rows} ")
-    print(f"Percentuale entrambi errati ma differenti: {n_both_wrong_but_different*100/total_rows} ")
-    print("----")
+    print(f"- Percentuale entrambi corretti: {n_both_equals_and_correct*100/total_rows}")
+    print(f"- Percentuale entrambi errati e identici: {n_both_wrong_but_equals*100/total_rows} ")
+    print(f"- Percentuale entrambi errati ma differenti: {n_both_wrong_but_different*100/total_rows} ")
+
     print("Circa gli errati:")
-    print(f"Percentuale entrambi errati e identici su tutti gli errati: {n_both_wrong_but_equals*100/n_wrong} ")
-    print(f"Percentuale entrambi errati ma differenti su tutti gli errati: {n_both_wrong_but_different*100/n_wrong} ")
+    print(f"- Percentuale entrambi errati e identici su tutti gli errati: {n_both_wrong_but_equals*100/n_wrong} ")
+    print(f"- Percentuale entrambi errati ma differenti su tutti gli errati: {n_both_wrong_but_different*100/n_wrong} ")
+
 
 def main():
     #extract_references()

@@ -12,7 +12,7 @@ al fine di avere un risultato su un campione di esempi più ampio e significativ
 ## Configurazione della sperimentazione
 
 - Selezionato 10 documenti citanti e relative citazioni (output di BEE)
-- Creato un CSV estraendo ogni coppia (DOI, bibref) presente nei 5 documenti citanti
+- Creato un CSV estraendo ogni coppia (DOI, bibref) presente nei documenti citanti
 - Per ogni riga del CSV, prendo la bibref ed effettuo la query sia verso l'indice locale, sia verso Crossref, salvando i risultati in altre due colonne del CSV.
 - Annoto manualmente il DOI nei casi: 
 	- DOI esplicito mancante 

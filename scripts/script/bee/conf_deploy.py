@@ -30,3 +30,8 @@ supplier_tuple = (
     "01210", "01220", "01230", "01240", "01250", "01260", "01270", "01280", "01290", "01920",
     "01310", "01320", "01330", "01340", "01350", "01360", "01370", "01380", "01390", "01930"
 )
+
+# Configuration for parallel
+PARALLEL_PROCESSING = True
+dataset_reference = '/mie/dataset.csv'
+article_path_reference = '/mie/articles/'

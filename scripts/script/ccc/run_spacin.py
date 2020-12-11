@@ -23,32 +23,43 @@ start_time = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 error = False
 last_file = None
 s = Stopper(reference_dir)
+mean_time = 0
+n_document_processed = 0
 try:
     real_dir = default_dir
     supplier_prefix = "070"
     full_reference_dir = reference_dir + real_dir
     full_info_dir = info_dir + real_dir
+
+
     for cur_dir, cur_subdir, cur_files in walk(full_reference_dir):
         if s.can_proceed():
 
             for cur_file in sorted(cur_files):
                 if s.can_proceed():
+
                     if cur_file.endswith(".json"):
                         cur_file_path = cur_dir + sep + cur_file
                         cur_local_dir_path = re.sub("^([0-9]+-[0-9]+-[0-9]+-[0-9]+).+$", "\\1", cur_file)
                         with open(cur_file_path) as fp:
+
                             last_file = cur_file_path
                             last_local_dir = cur_local_dir_path
                             print("\n\nProcess file '%s'\n" % cur_file_path)
                             json_object = json.load(fp)
-                            # crp = CrossrefProcessor(base_iri, context_path, full_info_dir, json_object,
-                            #                         ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
-                            #                         ORCIDFinder(orcid_conf_path), items_per_file, supplier_prefix, intext_refs=True)
+
+                            start_document_time = datetime.now()
+
                             crp = CrossrefProcessor(base_iri, context_path, full_info_dir, json_object,
                                ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
                                ORCIDFinder(orcid_conf_path, query_interface='remote'),
                                items_per_file, supplier_prefix, intext_refs=True, query_interface='remote')
                             result = crp.process()
+                            end_document_time = datetime.now()
+                            time_spent = (end_document_time - start_document_time).total_seconds()
+                            print(f"Time spent: {time_spent}")
+                            mean_time += time_spent
+                            n_document_processed += 1
                             if result is not None:
                                 prov = ProvSet(result, base_iri, context_path, default_dir, full_info_dir,
                                                ResourceFinder(base_dir=base_dir, base_iri=base_iri,
@@ -121,9 +132,12 @@ try:
                 else:
                     print("\n\nProcess stopped due to external reasons")
                     break
+
+
         else:
             print("\n\nProcess stopped due to external reasons")
             break
+
 except Exception as e:
     exception_string = str(e) + " " + traceback.format_exc().rstrip("\n+")
     print(exception_string)
@@ -137,3 +151,4 @@ except Exception as e:
             shutil.rmtree(cur_dir_path)
 end_time = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 print("\nStarted at:\t%s\nEnded at:\t%s" % (start_time, end_time))
+print(f"Mean time for each json: { (mean_time / n_document_processed)}, number of jsons: {n_document_processed} ")

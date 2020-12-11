@@ -37,7 +37,7 @@ class QueryInterface(ABC):
 class LocalQuery(QueryInterface):
 
     def __init__(self,
-                 crossref_url='http://localhost:8983/solr/crossref_without_metadata',
+                 crossref_url='http://localhost:8983/solr/crossref',
                  orcid_url='http://localhost:8983/solr/orcid',
                  reperr = None,
                  repok = None):
@@ -104,6 +104,34 @@ class LocalQuery(QueryInterface):
             if 'original' in r:
                 return json.loads(r['original'][0])
 
+    def get_doi_from_bibref(self, entity):
+        entity = ' '.join(item for item in entity.split() if not (item.startswith('https://') and len(item) > 7))
+        entity = ' '.join(item for item in entity.split() if not (item.startswith('http://') and len(item) > 7))
+        entity = entity.replace("et al.", "")
+        entity = entity.replace("(", "")
+        entity = entity.replace(")", "")
+        entity = entity.replace("Available at:", "")
+        entity = re.sub('\W+', ' ', entity)
+        entity = entity.strip()
+        query = f'bibref:({re.escape(entity)})'
+        # results = self.crossref_query_instance.search(fl='*,score', q=query)
+        results = self.crossref_query_instance.search(q=query)
+
+        if len(results) < 1:
+            return ""
+
+        toreturn = []
+        for r in results:
+            return r['id']
+
+    def check_doi_in_collection(self, doi):
+        query = 'id:"{}"'.format(doi)
+
+        results = self.crossref_query_instance.search(fl='*,score', q=query)
+        if len(results) < 1:
+            return False
+        else:
+            return True
 
     def get_orcid_records(self, entity):
         query = 'id:"{}"'.format(entity)

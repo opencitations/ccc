@@ -202,16 +202,16 @@ class ResourceFinder(object):
         return self.__id_with_type(
             string.lower(), GraphEntity.url, "?res <%s> ?cited" % GraphEntity.cites, typ)
 
-    def retrieve_from_doi(self, string, typ):
+    def retrieve_from_doi(self, string, typ='only_blazegraph'):
         return self.__id_with_type(string.lower(), GraphEntity.doi, typ=typ)
 
-    def retrieve_from_pmid(self, string, typ):
+    def retrieve_from_pmid(self, string, typ='only_blazegraph'):
         return self.__id_with_type(string, GraphEntity.pmid, typ=typ)
 
-    def retrieve_from_pmcid(self, string, typ):
+    def retrieve_from_pmcid(self, string, typ='only_blazegraph'):
         return self.__id_with_type(string, GraphEntity.pmcid, typ=typ)
 
-    def retrieve_from_url(self, string, typ):
+    def retrieve_from_url(self, string, typ='only_blazegraph'):
         return self.__id_with_type(string.lower(), GraphEntity.url, typ=typ)
 
     def retrieve_from_issn(self, string):
@@ -487,6 +487,7 @@ class ResourceFinder(object):
         if something has already been stored and then check on the blazegraph instance"""
 
         # First check if locally there's something
+
         if typ != 'only_blazegraph' and id_type is not None and id is not None:
             if str(id_type) == 'http://purl.org/spar/datacite/url':
                 store = self.url_store
@@ -537,13 +538,14 @@ class ResourceFinder(object):
 
     def __query_blazegraph(self, query, typ=None):
         if self.ts is not None:
+
             if self.cache.__contains__(query):
                 result = self.cache[query]
             else:
                 result = self.ts.query(query)
-                self.cache[query] = result
-            for res, in result:
-                return res
+                for res, in result:
+                    self.cache[query] = res
+                    return res
 
     def __query_local(self, query):
         # Deprecated

@@ -41,8 +41,8 @@ bibentries = queue.Queue()
 
 
 @run_in_thread
-def create_bibentry(full_entry, bibentries, repok, reperr, query_interface, rf, get_bib_entry_doi, message):
-    bibentries.put(Bibentry(full_entry, repok, reperr, query_interface, rf, get_bib_entry_doi, message))
+def create_bibentry(full_entry, bibentries, repok, reperr, query_interface, rf, get_bib_entry_doi, message, process_existing_by_id):
+    bibentries.put(Bibentry(full_entry, repok, reperr, query_interface, rf, get_bib_entry_doi, message, process_existing_by_id))
 
 
 class CrossrefProcessor(FormatProcessor):
@@ -136,6 +136,7 @@ class CrossrefProcessor(FormatProcessor):
                 if cur_bibentry is not None and cur_bibentry.strip():
                     cur_be = self.g_set.add_be(self.curator, self.source_provider, self.source)
                     citing_entity.contains_in_reference_list(cur_be)
+
                     cited_entity.has_reference(cur_be)
                     self.__add_xmlid(cur_be, cur_be_xmlid)  # new
                     cur_be.create_content(cur_bibentry.strip())
@@ -192,7 +193,8 @@ class CrossrefProcessor(FormatProcessor):
         # Insert new bibentries in the queue (in parallel)
         tasks = [create_bibentry(full_entry=full_entry, bibentries=bibentries, repok=self.repok, reperr=self.reperr,
                                  query_interface=self.query_interface, rf=self.rf,
-                                 get_bib_entry_doi=self.get_bib_entry_doi, message=self.message) for full_entry in
+                                 get_bib_entry_doi=self.get_bib_entry_doi, message=self.message,
+                                 process_existing_by_id=self.process_existing_by_id) for full_entry in
                  self.entries]
         [t.join() for t in tasks]
 
@@ -219,13 +221,22 @@ class CrossrefProcessor(FormatProcessor):
                 # process it
                 if bibentry_entity.provided_doi is not None and bibentry_entity.process_doi_result is not None:
                         cur_res = self.process_doi(bibentry_entity.provided_doi, self.curator, self.source_provider,
-                                                   typ='local', result=bibentry_entity.process_doi_result)
+                                                   typ='only_local', result=bibentry_entity.process_doi_result)
 
                         if cur_res is not None:
-                            self.repok.add_sentence(
-                                self.message("The entity has been found by means of the "
-                                             "DOI provided as input by %s." % self.source_provider,
-                                             "DOI", bibentry_entity.provided_doi))
+                                self.repok.add_sentence(
+                                    self.message("The entity has been found by means of the "
+                                                 "DOI provided as input by %s." % self.source_provider,
+                                                 "DOI", bibentry_entity.provided_doi))
+
+                if cur_res is None and bibentry_entity.extracted_doi is not None and bibentry_entity.process_doi_result is not None and bibentry_entity.extracted_doi_used:
+                    cur_res = self.process_doi(bibentry_entity.extracted_doi, self.name, self.source_provider,
+                                               typ='only_local', result=bibentry_entity.process_doi_result)
+                    if cur_res is not None:
+                        self.repok.add_sentence(
+                            self.message("The entity for '%s' has been found by means of the "
+                                         "DOI extracted from it." % bibentry_entity.entry,
+                                         "DOI", bibentry_entity.extracted_doi))
 
                 if cur_res is None and bibentry_entity.provided_pmid is not None:
                     cur_res = self.process_pmid(bibentry_entity.provided_pmid)
@@ -246,21 +257,13 @@ class CrossrefProcessor(FormatProcessor):
                 if cur_res is None and bibentry_entity.entry is not None:  # crossref API string search
                     if do_process_entry == True:
                         cur_res = self.process_entry(entry=bibentry_entity.entry,
-                                                     cur_json=bibentry_entity.existing_bibref_entry)
-                    if cur_res is None:
-                        if self.get_bib_entry_doi and bibentry_entity.extracted_doi is not None:
-                            cur_res = self.process_doi(bibentry_entity.extracted_doi, self.name, self.source_provider,
-                                                       typ='only_local', result=bibentry_entity.process_doi_result)
-                            if cur_res is not None:
-                                self.repok.add_sentence(
-                                    self.message("The entity for '%s' has been found by means of the "
-                                                 "DOI extracted from it." % bibentry_entity.entry,
-                                                 "DOI", bibentry_entity.extracted_doi))
-                    else:
-                        self.repok.add_sentence(
-                            self.message(
-                                "The entity has been retrieved by using the search API.",
-                                "entry", bibentry_entity.entry))
+                                                     cur_json=bibentry_entity.existing_bibref_entry,
+                                                     research=False)
+                        if cur_res is not None:
+                            self.repok.add_sentence(
+                                self.message(
+                                    "The entity has been retrieved by using the search API.",
+                                    "entry", bibentry_entity.entry))
 
             # If no errors were generated, proceed
             if self.reperr.is_empty():
@@ -308,6 +311,8 @@ class CrossrefProcessor(FormatProcessor):
         results = list(results_queue.queue)
         #print(f"Tot time for processing references: {(tot)}")
 
+        bibentries.queue.clear()
+
         # If the process comes here, then everything worked correctly
         return results
 
@@ -319,7 +324,7 @@ class CrossrefProcessor(FormatProcessor):
             return result
 
     def process_crossref_json(self, crossref_json: dict, crossref_source: str, doi_curator=None, doi_source_provider=None,
-                              doi_source=None):
+                              doi_source=None, typ='only_local'):
         """
         This is to process a json result from Crossref and get a fill the graph with the data
         :param crossref_json: the json document retrieved from Crossref
@@ -332,7 +337,7 @@ class CrossrefProcessor(FormatProcessor):
             return
 
         # Check if the found bibliographic resource already exist locally.
-        retrieved_resource = self.rf.retrieve(CrossrefDataHandler.get_ids_for_type(crossref_json), typ='only_local')
+        retrieved_resource = self.rf.retrieve(CrossrefDataHandler.get_ids_for_type(crossref_json), typ=typ)
 
         # If has been found, add the reference to it to the graph
         if retrieved_resource is not None:
@@ -348,7 +353,7 @@ class CrossrefProcessor(FormatProcessor):
                "\n\t%s: %s\n\tURL: %s" % (entity_type, entity, url)
 
 
-    def process_entry(self, entry: str, cur_json=None, check: bool = False):
+    def process_entry(self, entry: str, cur_json=None, check: bool = False, research=True):
         """
         This method let you process a bibliographic entry. It's possible both to
         :param entry: the bibliographic reference
@@ -357,7 +362,7 @@ class CrossrefProcessor(FormatProcessor):
         :return: reference of the entity processed
         """
 
-        if cur_json is None:
+        if cur_json is None and research:
             cur_json = self.query_interface.get_data_crossref_bibref(entry)
 
         if cur_json is not None:
@@ -439,7 +444,8 @@ class CrossrefProcessor(FormatProcessor):
                                                       self.crossref_api_works + encode_url(doi),
                                                       doi_curator,
                                                       doi_source_provider,
-                                                      self.source)
+                                                      self.source,
+                                                      typ)
 
         else:
             return self.process_existing_by_id(existing_res, self.id)
@@ -492,7 +498,10 @@ class CrossrefProcessor(FormatProcessor):
     def __add_doi(self, cur_res, extracted_doi, curator):
         # self.rf.update_graph_set(self.g_set)
         if extracted_doi is not None:
-            cur_id = self.rf.retrieve_br_doi(cur_res.res, extracted_doi, typ='only_local')
+            if hasattr(cur_res, 'res'):
+                cur_id = self.rf.retrieve_br_doi(cur_res.res, extracted_doi, typ='only_local')
+            else:
+                cur_id = self.rf.retrieve_br_doi(cur_res, extracted_doi, typ='only_local')
 
             if cur_id is None:
                 cur_id = self.g_set.add_id(curator, self.source_provider, self.source)

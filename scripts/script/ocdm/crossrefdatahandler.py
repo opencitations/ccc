@@ -285,9 +285,9 @@ class CrossrefDataHandler(object):
         cur_id = self.g_set.add_id(self.name, self.id, source)
         if cur_id.create_url(json[key]):
             cur_br.has_id(cur_id)
-        self.rf.url_store_type_id[f"{cur_br}_{json[key]}"] = cur_id
-        self.rf.url_store_type[f"{cur_br}"] = json[key]
-        self.rf.url_store[f"{json[key]}"] = cur_br
+        self.rf.url_store_type_id["{}_{}".format(cur_br, json[key])] = cur_id
+        self.rf.url_store_type["{}".format(cur_br)] = json[key]
+        self.rf.url_store["{}".format(json[key])] = cur_br
 
     def page(self, cur_br, key, json, source, *args):
         cur_page = json[key]

@@ -40,11 +40,13 @@ class LocalQuery(QueryInterface):
                  crossref_url='http://localhost:8983/solr/crossref',
                  orcid_url='http://localhost:8983/solr/orcid',
                  reperr = None,
-                 repok = None):
+                 repok = None,
+                 threshold = 19):
 
         self.reperr = reperr
         self.repok = repok
 
+        self.threshold = threshold
         self.crossref_query_instance = pysolr.Solr(crossref_url, always_commit=True, timeout=100)
         self.orcid_query_instance = pysolr.Solr(orcid_url, always_commit=True, timeout=100)
 
@@ -66,18 +68,10 @@ class LocalQuery(QueryInterface):
             if self.repok is not None:
                 self.repok.add_sentence("Data retrieved for '{}'".format(entity, len(results)))
 
-            # @TODO: change this behavior before deploying it.
-            # This is a temporary code fix in order to run on my local machine
-            # where the `original` field has been added only for a few amount of docs
-            toreturn = []
             for r in results:
-                if 'original' in r:
-                    toreturn.append(json.loads(r['original'][0]))
+                return json.loads(r['original'][0])
 
-            if len(toreturn) > 0:
-                return toreturn[0]
-            else:
-                return None
+            return None
 
     def get_data_crossref_bibref(self, entity):
         entity = ' '.join(item for item in entity.split() if not (item.startswith('https://') and len(item) > 7))
@@ -86,25 +80,23 @@ class LocalQuery(QueryInterface):
         entity = entity.replace("Available at:", "")
         entity = re.sub('\W+', ' ', entity)
         entity = entity.strip()
-        query = f'bibref:({re.escape(entity)})'
-        #results = self.crossref_query_instance.search(fl='*,score', q=query)
-        results = self.crossref_query_instance.search(q=query)
+        query = 'bibref:({})'.format(re.escape(entity))
+        results = self.crossref_query_instance.search(fl='*,score', q=query)
 
         if self.repok is not None:
-            self.repok.add_sentence(f"Data retrieved for '{entity}' in {results.qtime}ms")
+            self.repok.add_sentence("Data retrieved for '{}' in {}ms".format(entity, results.qtime))
 
         if len(results) < 1:
             return None
 
-        # @TODO: change this behavior before deploying it.
-        # This is a temporary code fix in order to run on my local machine
-        # where the `original` field has been added only for a few amount of docs
-        toreturn = []
         for r in results:
-            if 'original' in r:
+            if r['score'] > self.threshold:
                 return json.loads(r['original'][0])
 
+        return None
+
     def get_doi_from_bibref(self, entity):
+        """ Used only for test purposes, for the evaluation of local index vs crossref"""
         entity = ' '.join(item for item in entity.split() if not (item.startswith('https://') and len(item) > 7))
         entity = ' '.join(item for item in entity.split() if not (item.startswith('http://') and len(item) > 7))
         entity = entity.replace("et al.", "")
@@ -113,16 +105,18 @@ class LocalQuery(QueryInterface):
         entity = entity.replace("Available at:", "")
         entity = re.sub('\W+', ' ', entity)
         entity = entity.strip()
-        query = f'bibref:({re.escape(entity)})'
-        # results = self.crossref_query_instance.search(fl='*,score', q=query)
-        results = self.crossref_query_instance.search(q=query)
+
+        query = 'bibref:({})'.format(re.escape(entity))
+        results = self.crossref_query_instance.search(fl='*,score', q=query)
 
         if len(results) < 1:
-            return ""
+            return "", 0
 
-        toreturn = []
         for r in results:
-            return r['id']
+            if r['score'] > self.threshold:
+                return r['id'], r['score']
+            else:
+                return "",0
 
     def check_doi_in_collection(self, doi):
         query = 'id:"{}"'.format(doi)
@@ -138,7 +132,7 @@ class LocalQuery(QueryInterface):
         results = self.orcid_query_instance.search(fl='*,score', q=query)
 
         if self.repok is not None:
-            self.repok.add_sentence(f"Data retrieved for '{entity}'")
+            self.repok.add_sentence("Data retrieved for '{}'".format(entity))
 
         if len(results) != 1:
             return None

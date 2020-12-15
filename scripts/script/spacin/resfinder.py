@@ -179,11 +179,11 @@ class ResourceFinder(object):
         return self.__id_with_type(string, GraphEntity.orcid)
 
     def retrieve_entity(self, string, typ='both'):
-        query = f"""
+        query = """
                 SELECT DISTINCT ?res WHERE {{
-                    BIND(iri("{string}") as ?res) .
-                    ?res a <{str(type)}>
-                }}"""
+                    BIND(iri("{}") as ?res) .
+                    ?res a <{}>
+                }}""".format(string, str(type))
         return self.__query(query, typ=typ)
 
     def retrieve_citing_from_doi(self, string, typ='only_blazegraph'):
@@ -231,16 +231,16 @@ class ResourceFinder(object):
             retrieved_volume = self.retrieve_volume_from_journal(id_dict, volume_id)
 
             if retrieved_volume is not None:
-                if self.from_issue_partof_journal.__contains__(f"{str(retrieved_volume)}_{issue_id}"):
-                    return self.from_issue_partof_journal[f"{str(retrieved_volume)}_{issue_id}"]
+                if self.from_issue_partof_journal.__contains__("{}_{}".format(str(retrieved_volume), issue_id)):
+                    return self.from_issue_partof_journal["{}_{}".format(str(retrieved_volume), issue_id)]
                 else:
-                    query = f"""
+                    query = """
                         SELECT DISTINCT ?br WHERE {{
-                            ?br a <{GraphEntity.journal_issue}> ;
-                                <{GraphEntity.part_of}> <{str(retrieved_volume)}> ;
-                                <{GraphEntity.has_sequence_identifier}> "{issue_id}"
+                            ?br a <{}> ;
+                                <{}> <{}> ;
+                                <{}> "{}"
                         }} LIMIT 1
-                    """
+                    """.format(GraphEntity.journal_issue, GraphEntity.part_of, str(retrieved_volume), GraphEntity.has_sequence_identifier, issue_id)
                     return self.__query(query)
 
     def retrieve_volume_from_journal(self, id_dict, volume_id):
@@ -271,12 +271,12 @@ class ResourceFinder(object):
         return self.__retrieve_res_id_by_type(res, string, GraphEntity.pmcid, typ)
 
     def retrieve_last_snapshot(self, prov_subj):
-        query = f'''
+        query = '''
             SELECT DISTINCT ?se WHERE {{
-                ?se <{ProvEntity.specialization_of}> <{str(prov_subj)}> .
-                FILTER NOT EXISTS {{?se <{ProvEntity.was_invalidated_by}> ?ca }}
+                ?se <{}> <{}> .
+                FILTER NOT EXISTS {{?se <{}> ?ca }}
             }} LIMIT 1
-        '''
+        '''.format(ProvEntity.specialization_of, str(prov_subj), ProvEntity.was_invalidated_by)
         return self.__query(query)
 
     def __retrieve_res_id_string(self, res, id_type, typ):
@@ -301,20 +301,20 @@ class ResourceFinder(object):
             if str(id_type) == 'http://purl.org/spar/datacite/orcid' or\
                     str(id_type) == 'http://purl.org/spar/datacite/issn' or \
                     str(id_type) == 'http://purl.org/spar/datacite/isbn':
-                if store.__contains__(f'{res}'):
-                    return store[f'{res}'][0]
+                if store.__contains__('{}'.format(res)):
+                    return store['{}'.format(res)][0]
 
-            elif store.__contains__(f'{res}'):
-                return store[f'{res}']
+            elif store.__contains__('{}'.format(res)):
+                return store['{}'.format(res)]
 
         if typ != 'only_local':
-            query = f'''
+            query = '''
             SELECT DISTINCT ?id WHERE {{
-                <{res}> <{GraphEntity.has_identifier}> [
-                    <{GraphEntity.uses_identifier_scheme}> <{id_type}> ;
-                    <{GraphEntity.has_literal_value}> ?id
+                <{}> <{}> [
+                    <{}> <{}> ;
+                    <{}> ?id
                 ]
-            }}'''
+            }}'''.format(res, GraphEntity.has_identifier, GraphEntity.uses_identifier_scheme, id_type, GraphEntity.has_literal_value)
             return self.__query_blazegraph(query, typ)
 
     def __retrieve_res_id_by_type(self, res, id_string, id_type, typ):
@@ -339,19 +339,19 @@ class ResourceFinder(object):
             if str(id_type) == 'http://purl.org/spar/datacite/orcid' or\
                     str(id_type) == 'http://purl.org/spar/datacite/issn' or \
                     str(id_type) == 'http://purl.org/spar/datacite/isbn':
-                if store.__contains__(f'{res}_{id_string}'):
-                    return store[f'{res}_{id_string}'][0]
+                if store.__contains__('{}_{}'.format(res, id_string)):
+                    return store['{}_{}'.format(res, id_string)][0]
 
-            elif store.__contains__(f'{res}_{id_string}'):
-                return store[f'{res}_{id_string}']
+            elif store.__contains__('{}_{}'.format(res, id_string)):
+                return store['{}_{}'.format(res, id_string)]
 
         if id_string is not None and typ != 'only_local':
-            query = f'''
+            query = '''
             SELECT DISTINCT ?id WHERE {{
-                <{res}> <{GraphEntity.has_identifier}> ?id .
-                ?id <{GraphEntity.uses_identifier_scheme}> <{id_type}> ;
-                    <{GraphEntity.has_literal_value}> "{id_string}"
-            }}'''
+                <{}> <{}> ?id .
+                ?id <{}> <{}> ;
+                    <{}> "{}"
+            }}'''.format(res, GraphEntity.has_identifier, GraphEntity.uses_identifier_scheme, id_type, GraphEntity.has_literal_value,id_string )
 
             return self.__query_blazegraph(query)
 
@@ -359,107 +359,107 @@ class ResourceFinder(object):
         if cur_res is not None and cur_id is not None and extracted_doi is not None:
 
             # Check if local store doesn't contains already the elements
-            if self.doi_store_type_id.__contains__(f"{cur_res}_{extracted_doi}") == False \
-            and self.doi_store_type.__contains__(f"{cur_res}") == False \
-            and self.doi_store.__contains__(f"{extracted_doi}") == False:
+            if self.doi_store_type_id.__contains__("{}_{}".format(cur_res, extracted_doi)) == False \
+            and self.doi_store_type.__contains__("{}".format(cur_res)) == False \
+            and self.doi_store.__contains__("{}".format(extracted_doi)) == False:
 
                 # Add it
-                self.doi_store_type_id[f"{cur_res}_{extracted_doi}"] = cur_id
-                self.doi_store_type[f"{cur_res}"] = extracted_doi
-                self.doi_store[f"{extracted_doi}"] = cur_res
+                self.doi_store_type_id["{}_{}".format(cur_res, extracted_doi)] = cur_id
+                self.doi_store_type["{}".format(cur_res)] = extracted_doi
+                self.doi_store["{}".format(extracted_doi)] = cur_res
 
     def add_url_to_store(self, cur_res, cur_id, extracted_url):
         if cur_res is not None and cur_id is not None and extracted_url is not None:
 
             # Check if local store doesn't contains already the elements
-            if self.url_store_type_id.__contains__(f"{cur_res}_{extracted_url}") == False \
-            and self.url_store_type.__contains__(f"{cur_res}") == False \
-            and self.url_store.__contains__(f"{extracted_url}") == False:
+            if self.url_store_type_id.__contains__("{}_{}".format(cur_res, extracted_url)) == False \
+            and self.url_store_type.__contains__("{}".format(cur_res)) == False \
+            and self.url_store.__contains__("{}".format(extracted_url)) == False:
 
                 # Add it
-                self.url_store_type_id[f"{cur_res}_{extracted_url}"] = cur_id
-                self.url_store_type[f"{cur_res}"] = extracted_url
-                self.url_store[f"{extracted_url}"] = cur_res
+                self.url_store_type_id["{}_{}".format(cur_res, extracted_url)] = cur_id
+                self.url_store_type["{}".format(cur_res)] = extracted_url
+                self.url_store["{}".format(extracted_url)] = cur_res
 
     def add_isbn_to_store(self, cur_res, cur_id, isbn):
         if cur_res is not None and cur_id is not None and isbn is not None:
             # If empty create array
-            if not self.isbn_store_type_id.__contains__(f"{cur_res}_{isbn}"):
-                self.isbn_store_type_id[f"{cur_res}_{isbn}"] = []
+            if not self.isbn_store_type_id.__contains__("{}_{}".format(cur_res, isbn)):
+                self.isbn_store_type_id["{}_{}".format(cur_res, isbn)] = []
 
-            if not self.isbn_store_type.__contains__(f"{cur_res}"):
-                self.isbn_store_type[f"{cur_res}"] = []
+            if not self.isbn_store_type.__contains__("{}".format(cur_res)):
+                self.isbn_store_type["{}".format(cur_res)] = []
 
-            if not self.isbn_store.__contains__(f"{isbn}"):
-                self.isbn_store[f"{isbn}"] = []
+            if not self.isbn_store.__contains__("{}".format(isbn)):
+                self.isbn_store["{}".format(isbn)] = []
 
             # Add it
-            self.isbn_store_type_id[f"{cur_res}_{isbn}"] += [cur_id]
-            self.isbn_store_type[f"{cur_res}"] += [isbn]
-            self.isbn_store[f"{isbn}"] += [cur_res]
+            self.isbn_store_type_id["{}_{}".format(cur_res, isbn)] += [cur_id]
+            self.isbn_store_type["{}".format(cur_res)] += [isbn]
+            self.isbn_store["{}".format(isbn)] += [cur_res]
 
     def add_issn_to_store(self, cur_res, cur_id, issn):
         if cur_res is not None and cur_id is not None and issn is not None:
             # If empty create array
-            if not self.issn_store_type_id.__contains__(f"{cur_res}_{issn}"):
-                self.issn_store_type_id[f"{cur_res}_{issn}"] = []
+            if not self.issn_store_type_id.__contains__("{}_{}".format(cur_res, issn)):
+                self.issn_store_type_id["{}_{}".format(cur_res, issn)] = []
 
-            if not self.issn_store_type.__contains__(f"{cur_res}"):
-                self.issn_store_type[f"{cur_res}"] = []
+            if not self.issn_store_type.__contains__("{}".format(cur_res)):
+                self.issn_store_type["{}".format(cur_res)] = []
 
-            if not self.issn_store.__contains__(f"{issn}"):
-                self.issn_store[f"{issn}"] = []
+            if not self.issn_store.__contains__("{}".format(issn)):
+                self.issn_store["{}".format(issn)] = []
 
             # Add it
-            self.issn_store_type_id[f"{cur_res}_{issn}"] += [cur_id]
-            self.issn_store_type[f"{cur_res}"] += [issn]
-            self.issn_store[f"{issn}"] += [cur_res]
+            self.issn_store_type_id["{}_{}".format(cur_res, issn)] += [cur_id]
+            self.issn_store_type["{}".format(cur_res)] += [issn]
+            self.issn_store["{}".format(issn)] += [cur_res]
 
     def add_orcid_to_store(self, cur_res, cur_id, orcid):
         if cur_res is not None and cur_id is not None and orcid is not None:
 
             # If empty create array
-            if not self.orcid_store_type_id.__contains__(f"{cur_res}_{orcid}"):
-                self.orcid_store_type_id[f"{cur_res}_{orcid}"] = []
+            if not self.orcid_store_type_id.__contains__("{}_{}".format(cur_res, orcid)):
+                self.orcid_store_type_id["{}_{}".format(cur_res, orcid)] = []
 
-            if not self.orcid_store_type.__contains__(f"{cur_res}"):
-                self.orcid_store_type[f"{cur_res}"] = []
+            if not self.orcid_store_type.__contains__("{}".format(cur_res)):
+                self.orcid_store_type["{}".format(cur_res)] = []
 
-            if not self.orcid_store.__contains__(f"{orcid}"):
-                self.orcid_store[f"{orcid}"] = []
+            if not self.orcid_store.__contains__("{}".format(orcid)):
+                self.orcid_store["{}".format(orcid)] = []
 
             # Add it
-            self.orcid_store_type_id[f"{cur_res}_{orcid}"] += [cur_id.res]
-            self.orcid_store_type[f"{cur_res}"] += [orcid]
-            self.orcid_store[f"{orcid}"] += [cur_res.res]
+            self.orcid_store_type_id["{}_{}".format(cur_res, orcid)] += [cur_id.res]
+            self.orcid_store_type["{}".format(cur_res)] += [orcid]
+            self.orcid_store["{}".format(orcid)] += [cur_res.res]
 
     def add_issue_to_store(self, cur_res, cur_id, issue):
         if cur_res is not None and cur_id is not None and issue is not None:
             # Check if local store doesn't contains already the elements
-            if self.from_journal_issue.__contains__(f"{cur_res}_{issue}") == False:
+            if self.from_journal_issue.__contains__("{}_{}".format(cur_res, issue)) == False:
                 # Add it
-                self.from_journal_issue[f"{cur_res}_{issue}"] = cur_id.res
+                self.from_journal_issue["{}_{}".format(cur_res, issue)] = cur_id.res
 
     def add_volume_to_store(self, cur_res, cur_id, volume):
         if cur_res is not None and cur_id is not None and volume is not None:
             # Check if local store doesn't contains already the elements
-            if self.from_journal_volume.__contains__(f"{cur_res}_{volume}") == False:
+            if self.from_journal_volume.__contains__("{}_{}".format(cur_res, volume)) == False:
                 # Add it
-                self.from_journal_volume[f"{cur_res}_{volume}"] = cur_id.res
+                self.from_journal_volume["{}_{}".format(cur_res, volume)] = cur_id.res
 
     def add_journal_to_store(self, id_string, part_type, part_seq_id, res):
         if id_string is not None and part_type is not None and part_seq_id is not None:
-            self.from_journal[f"{id_string}_{part_type}_{part_seq_id}"] = res.res
+            self.from_journal["{}_{}_{}".format(id_string, part_type,part_seq_id)] = res.res
 
     def __retrieve_from_journal(self, id_dict, part_type, part_seq_id):
         # Check locally
         for id_type in id_dict:
             for id_string in id_dict[id_type]:
 
-                if self.from_journal.__contains__(f"{id_string}_{part_type}_{part_seq_id}"):
+                if self.from_journal.__contains__("{}_{}_{}".format(id_string, part_type, part_seq_id)):
                     # The id_string belongs to the journal, while the part_seq_id is the
                     # string related to the part type of the journal
-                    return self.from_journal[f"{id_string}_{part_type}_{part_seq_id}"]
+                    return self.from_journal["{}_{}_{}".format(id_string, part_type, part_seq_id)]
 
         # If not present, check in blazegraph
         # a journal that has a specific ID, which <journal literal id> is given, and at which is attached, then there's a resource
@@ -468,16 +468,18 @@ class ResourceFinder(object):
         for id_type in id_dict:
             for id_string in id_dict[id_type]:
 
-                query = f'''
+                query = '''
                 SELECT DISTINCT ?res WHERE {{
-                    ?j <{GraphEntity.has_identifier}> ?id .
+                    ?j <{}> ?id .
                     ?id
-                        <{GraphEntity.uses_identifier_scheme}> <{id_type}> ;
-                        <{GraphEntity.has_literal_value}> "{id_string}" .
-                    ?res a <{part_type}> ;
-                        <{GraphEntity.part_of}>+ ?j ;
-                        <{GraphEntity.has_sequence_identifier}> "{part_seq_id}"
-                }}'''
+                        <{}> <{}> ;
+                        <{}> "{}" .
+                    ?res a <{}> ;
+                        <{}>+ ?j ;
+                        <{}> "{}"
+                }}'''.format(GraphEntity.has_identifier, GraphEntity.uses_identifier_scheme, id_type,
+                             GraphEntity.has_literal_value, id_string,part_type, GraphEntity.part_of, GraphEntity.has_sequence_identifier,
+                             part_seq_id)
                 ret = self.__query(query, 'both')
                 if ret is not None:
                     return ret
@@ -508,18 +510,19 @@ class ResourceFinder(object):
                     str(id_type) == 'http://purl.org/spar/datacite/issn' or \
                     str(id_type) == 'http://purl.org/spar/datacite/isbn':
                 if store.__contains__(id_string):
-                    return store[f"{id_string}"][0]
+                    return store["{}".format(id_string)][0]
 
             elif store.__contains__(id_string):
-                return store[f"{id_string}"]
+                return store["{}".format(id_string)]
 
         # If nothing found, query blazegraph
         if typ != 'only_local':
-            query = f'''SELECT DISTINCT ?res WHERE {{ ?res <{GraphEntity.has_identifier}> ?id .
-                ?id <{GraphEntity.uses_identifier_scheme}> <{id_type}> ;
-                    <{GraphEntity.has_literal_value}> "{id_string}" .
-                {extras}
-            }}'''
+            query = '''SELECT DISTINCT ?res WHERE {{ ?res <{}> ?id .
+                ?id <{}> <{}> ;
+                    <{}> "{}" .
+                {}
+            }}'''.format(GraphEntity.has_identifier, GraphEntity.uses_identifier_scheme, id_type,
+                         GraphEntity.has_literal_value, id_string, extras)
 
             return self.__query_blazegraph(query, typ=typ)
 

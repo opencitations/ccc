@@ -52,12 +52,12 @@ try:
 
                             crp = CrossrefProcessor(base_iri, context_path, full_info_dir, json_object,
                                ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
-                               ORCIDFinder(orcid_conf_path, query_interface='remote'),
+                               ORCIDFinder(orcid_conf_path, query_interface='local'),
                                items_per_file, supplier_prefix, intext_refs=True, query_interface='remote')
                             result = crp.process()
                             end_document_time = datetime.now()
                             time_spent = (end_document_time - start_document_time).total_seconds()
-                            print(f"Time spent: {time_spent}")
+                            print("Time spent: {}".format(time_spent))
                             mean_time += time_spent
                             n_document_processed += 1
                             if result is not None:
@@ -151,4 +151,5 @@ except Exception as e:
             shutil.rmtree(cur_dir_path)
 end_time = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 print("\nStarted at:\t%s\nEnded at:\t%s" % (start_time, end_time))
-print(f"Mean time for each json: { (mean_time / n_document_processed)}, number of jsons: {n_document_processed} ")
+if n_document_processed > 0:
+    print("Mean time for each json: {}, number of jsons: {} ".format((mean_time / n_document_processed),n_document_processed))

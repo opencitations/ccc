@@ -29,7 +29,7 @@ from time import sleep
 import requests
 from urllib.parse import quote
 import sys
-from netifaces import ifaddresses, AF_INET
+#from netifaces import ifaddresses, AF_INET
 
 
 def get_ip_id(interface):

@@ -178,9 +178,14 @@ def compute_metrics(df):
 
 
 def main():
+    # First, execute the following three
     #extract_references()
     #query_local()
     #query_remote()
+
+    # Then, annotate manually the doi
+
+    # Now, execute these
     df = pd.read_csv('evaluation_dataset_plus_remote_annotated.csv')
     df = preprocessing(df)
     compute_metrics(df)

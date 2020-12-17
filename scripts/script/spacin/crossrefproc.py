@@ -333,7 +333,7 @@ class CrossrefProcessor(FormatProcessor):
         #self.rf.update_graph_set(self.g_set)
 
         if not isinstance(crossref_json, dict):
-            print(f"Error: crossref_json is not a dict, it's {type(crossref_json)} ")
+            print("Error: crossref_json is not a dict, it's {} ".format(type(crossref_json)))
             return
 
         # Check if the found bibliographic resource already exist locally.
@@ -461,9 +461,9 @@ class CrossrefProcessor(FormatProcessor):
                 cur_res.has_id(cur_id)
 
             # Update ResourceFinder's dict in order to enable a local search for it
-            self.rf.url_store_type_id[f"{cur_res}_{extracted_url}"] = cur_id
-            self.rf.url_store_type[f"{cur_res}"] = extracted_url
-            self.rf.url_store[f"{extracted_url}"] = cur_res
+            self.rf.url_store_type_id["{}_{}".format(cur_res, extracted_url)] = cur_id
+            self.rf.url_store_type["{}".format(cur_res)] = extracted_url
+            self.rf.url_store["{}".format(extracted_url)] = cur_res
 
     def __add_pmid(self, cur_res, pmid_string):
         # self.rf.update_graph_set(self.g_set)
@@ -476,9 +476,9 @@ class CrossrefProcessor(FormatProcessor):
                 cur_res.has_id(cur_id)
 
             # Update ResourceFinder's dict in order to enable a local search for it
-            self.rf.pmid_store_type_id[f"{cur_res}_{pmid_string}"] = cur_id
-            self.rf.pmid_store_type[f"{cur_res}"] = pmid_string
-            self.rf.pmid_store[f"{pmid_string}"] = cur_res
+            self.rf.pmid_store_type_id["{}_{}".format(cur_res, pmid_string)] = cur_id
+            self.rf.pmid_store_type["{}".format(cur_res)] = pmid_string
+            self.rf.pmid_store["{}".format(pmid_string)] = cur_res
 
     def __add_pmcid(self, cur_res, pmcid_string):
         # self.rf.update_graph_set(self.g_set)
@@ -491,9 +491,9 @@ class CrossrefProcessor(FormatProcessor):
                 cur_res.has_id(cur_id)
 
             # Update ResourceFinder's dict in order to enable a local search for it
-            self.rf.pmcid_store_type_id[f"{cur_res}_{pmcid_string}"] = cur_id
-            self.rf.pmcid_store_type[f"{cur_res}"] = pmcid_string
-            self.rf.pmcid_store[f"{pmcid_string}"] = cur_res
+            self.rf.pmcid_store_type_id["{}_{}".format(cur_res, pmcid_string)] = cur_id
+            self.rf.pmcid_store_type["{}".format(cur_res)] = pmcid_string
+            self.rf.pmcid_store["{}".format(pmcid_string)] = cur_res
 
     def __add_doi(self, cur_res, extracted_doi, curator):
         # self.rf.update_graph_set(self.g_set)
@@ -540,7 +540,7 @@ class CrossrefProcessor(FormatProcessor):
         ss = set()
         for g in self.g_set.g:
             for (s, o, p) in g:
-                ss.add(f"{s}{o}{p}")
+                ss.add("{}{}{}".format(s, o, p))
         self.lengths.append(len(ss))
 
     # Print all the triples in the graphset
@@ -549,4 +549,4 @@ class CrossrefProcessor(FormatProcessor):
         ss = set()
         for g in self.g_set.g:
             for (s, o, p) in g:
-                print(f"{s} {o} {p}")
+                print("{}{}{}".format(s, o, p))

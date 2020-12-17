@@ -19,18 +19,13 @@ from script.ccc.jats2oc import Jats2OC
 from script.support.support import get_data, encode_url
 from script.support.support import dict_get as dg
 import os
-from lxml import html
 from datetime import datetime
-from time import sleep
 import re
 from lxml import etree
-from urllib.parse import unquote
-import persistqueue
 import pandas as pd
 import json
 import time
 import threading
-from script.support.support import normalise_id
 
 __author__ = "Gabriele Pisciotta"
 
@@ -97,24 +92,24 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
         cur_name = paper["cur_name"]
 
         if cur_pmid != 0:
-            cur_id = f"PMID{cur_pmid}"
+            cur_id = "PMID{}".format(cur_pmid)
         elif cur_pmcid != 0:
-            cur_id = f"{cur_pmcid}"
+            cur_id = "{}".format(cur_pmcid)
         elif cur_doi is not None and cur_doi != "":
-            cur_id = f"DOI{cur_doi}"
+            cur_id = "DOI{}".format(cur_doi)
         else:
             self.repok.add_sentence("No id for this paper")
             return
 
         references = json.loads(paper["references"])
 
-        cur_localid = f"{cur_source}-{cur_id}"
+        cur_localid = "{}-{}".format(cur_source, cur_id)
         id_list = [str(cur_doi), str(cur_pmid), str(cur_pmid), cur_localid]
 
         if not self.rs.is_any_stored(id_list):
 
             self.repok.new_article()
-            self.repok.add_sentence(f"Processing article with local id {cur_localid}")
+            self.repok.add_sentence("Processing article with local id {}".format(cur_localid))
 
             if oa and not intext_refs:
                 ref_list_url, ref_list, ref_pointer_list = self.process_xml_source(cur_pmid, cur_name, cur_doi, references, intext_refs=False)
@@ -201,10 +196,10 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
             t = (e-s)
             timefordoc = t/len(self.df)
 
-            print(f"Time elapsed: {t},\n amount of time for a single doc: {timefordoc}")
+            print("Time elapsed: {},\n amount of time for a single doc: {}".format(t, timefordoc))
 
         except Exception as e:
-            print(f"Exception: {e.with_traceback()}")
+            print("Exception: {}".format(e.with_traceback()))
 
 
 
@@ -267,7 +262,7 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
                 except Exception as e:
                     ref_pointer_list = []
                     with open('exceptions.log', 'a') as exceptionslog:
-                        exceptionslog.write(f"\n--\n{e}")
+                        exceptionslog.write("\n--\n{}".format(e))
                     print("Exception with Jats! " + e)
 
 

@@ -52,3 +52,6 @@ supplier_dir = {
 
 interface = "eth0"
 sharing_dir = "test/data/"
+
+crossref_query_interface_type = 'local'
+orcid_query_interface_type = 'local'

@@ -37,8 +37,22 @@ Dependencies
  * Remove `scripts/ccc.jnl` (quit the .jar first!)
  * If you want to rerun SPACIN on the same JSON files, move the content of `scripts/test/share/ref/done` into `scripts/test/share/ref/todo`
 
-
 Other notes:
 
  * *do not change* the config file `script/ccc/conf_bee.py`
  * *do not delete* `context.json` included in `scripts/ccc/` when rerunning SPACIN
+
+## Exploiting local indexes
+BEE and SPACIN have been enhanced in order to exploit respectively a CSV dataset generated with [europe-pubmed-central-dataset tool](https://github.com/GabrielePisciotta/europe-pubmed-central-dataset) and [papendex tool](https://github.com/GabrielePisciotta/papendex). 
+- (BEE) in `scripts/script/bee/conf.py` there are:
+    - __PARALLEL_PROCESSING__: set to True in order to enable the improvement made
+    - __dataset_reference__: absolute reference to the CSV generated
+    - __article_path_reference__: absolute reference to the directory where all the XML articles are stored
+    - __n_process__: the number of processes that will be spawned. The CSV will be splitted in a number of chunks (one
+      for each process).
+
+- (SPACIN) in `script/ccc/conf_spacin.py` there are:
+    - __crossref_query_interface_type__: set to 'local' if you want to exploit the local index, otherwise 'remote'
+    - __orcid_query_interface_type__ = set to 'local' if you want to exploit the local index, otherwise 'remote'
+
+

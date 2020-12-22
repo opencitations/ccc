@@ -19,7 +19,7 @@ import pandas as pd
 import numpy as np
 
 from script.bee.conf import stored_file, reference_dir, error_dir, pagination_file, page_size, debug, \
-    supplier_tuple, PARALLEL_PROCESSING, dataset_reference, article_path_reference, n_process
+    supplier_tuple, PARALLEL_PROCESSING, dataset_reference, article_path_reference, n_process, doc_for_process
 
 from script.support.stopper import Stopper
 import traceback
@@ -58,7 +58,7 @@ try:
                      intext_refs=True)
 
     else:
-        dfs = np.array_split(pd.read_csv(dataset_reference, sep="\t"), n_process)
+        dfs = np.array_split(pd.read_csv(dataset_reference, sep="\t"), doc_for_process)
 
         with multiprocessing.Pool(n_process) as pool:
             if queue.empty():

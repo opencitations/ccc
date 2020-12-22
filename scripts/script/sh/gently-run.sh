@@ -16,7 +16,7 @@
 CUR_DIR="${pwd}"
 cd /srv/dev/ccc/scripts
 
-python -m script.support.stopper -t /srv/share/ccc/ref/todo/ --remove
+python -m script.support.stopper -t /srv/index/ccc/ref/todo/ --remove
 # And then we wait that the crontab re-run the processes, or we can also run
 # all of them by invoking:
 # ./bee-check-and-run.sh

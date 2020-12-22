@@ -32,6 +32,7 @@ supplier_tuple = (
 )
 
 # Configuration for parallel
-PARALLEL_PROCESSING = False
-dataset_reference = '/mie/dataset.csv'
-article_path_reference = '/mie/articles/'
+PARALLEL_PROCESSING = True
+dataset_reference = '/mie/temp_data_europepubmed-central-dataset/csv/dataset.csv'
+article_path_reference = '/mie/temp_data_europepubmed-central-dataset/articles/'
+n_process = 100

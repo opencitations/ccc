@@ -83,7 +83,7 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
             max_iteration, timeout, debug, supplier_idx)
 
 
-    @run_in_thread
+    #@run_in_thread
     def process_article(self, paper, oa=False, intext_refs=False):
         cur_source = "MED"
         cur_doi = paper["cur_doi"]
@@ -173,13 +173,13 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
 
 
     def process(self,
+                dataset,
                 oa=False,
                 intext_refs=False,
-                dataset='/mie/europepmc.org/ftp/oa/csv/dataset.csv',
                 articles_path='/mie/europepmc.org/ftp/oa/articles/'):
         try:
             self.articles_path = articles_path
-            self.df = pd.read_csv(dataset, sep='\t')
+            self.df = dataset
 
             self.df['cur_pmid'] = self.df['cur_pmid'].fillna(0)
             self.df['cur_pmcid'] = self.df['cur_pmcid'].fillna(0)
@@ -189,15 +189,19 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
 
             s = time.time()
 
-            tasks = [ self.process_article(paper, oa, intext_refs) for _, paper in self.df.iterrows() ]
-            [t.join() for t in tasks]
+            for _, paper in self.df.iterrows():
+                if self.stopper.can_proceed():
+                    self.process_article(paper, oa, intext_refs)
+                else:
+                    print("Stopping")
+                    break
 
             e = time.time()
             t = (e-s)
             timefordoc = t/len(self.df)
 
             print("Time elapsed: {},\n amount of time for a single doc: {}".format(t, timefordoc))
-
+            return self.stopper.can_proceed()
         except Exception as e:
             print("Exception: {}".format(e.with_traceback()))
 

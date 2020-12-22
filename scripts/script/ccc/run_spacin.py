@@ -5,7 +5,7 @@ from datetime import datetime
 from script.ccc.conf_spacin import reference_dir, base_iri, context_path, info_dir, triplestore_url, orcid_conf_path, \
     base_dir, temp_dir_for_rdf_loading, context_file_path, dir_split_number, items_per_file, triplestore_url_real, \
     dataset_home, reference_dir_done, reference_dir_error, interface, supplier_dir, default_dir, do_parallel, \
-    sharing_dir
+    sharing_dir, crossref_query_interface_type, orcid_query_interface_type
 # changed config spacin with a new local one script.ccc.conf_spacin
 from script.support.stopper import Stopper
 from script.spacin.crossrefproc import CrossrefProcessor
@@ -52,8 +52,8 @@ try:
 
                             crp = CrossrefProcessor(base_iri, context_path, full_info_dir, json_object,
                                ResourceFinder(ts_url=triplestore_url, default_dir=default_dir),
-                               ORCIDFinder(orcid_conf_path, query_interface='local'),
-                               items_per_file, supplier_prefix, intext_refs=True, query_interface='remote')
+                               ORCIDFinder(orcid_conf_path, query_interface=orcid_query_interface_type),
+                               items_per_file, supplier_prefix, intext_refs=True, query_interface=crossref_query_interface_type)
                             result = crp.process()
                             end_document_time = datetime.now()
                             time_spent = (end_document_time - start_document_time).total_seconds()

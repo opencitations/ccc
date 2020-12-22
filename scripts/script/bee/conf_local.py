@@ -35,3 +35,4 @@ supplier_tuple = (
 PARALLEL_PROCESSING = True
 dataset_reference = '/mie/dataset.csv'
 article_path_reference = '/mie/articles/'
+n_process = 2

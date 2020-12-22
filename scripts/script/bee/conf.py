@@ -18,13 +18,13 @@ __author__ = 'essepuntato'
 
 # Configuration for local test
 debug = True
-base_dir = "./test/index/ref/"
-share_dir = "./test/share/ref/"
+base_dir = "/srv/index/ccc/ref/"
+share_dir = base_dir
 reference_dir = share_dir + "todo/"
 error_dir = base_dir + "issue/"
 stored_file = share_dir + "stored-ids.csv"
 pagination_file = share_dir + "epmc-pp.txt"
-page_size = 2
+page_size = 1000
 supplier_tuple = (
     "01110", "01120", "01130", "01140", "01150", "01160", "01170", "01180", "01190", "01910",
     "01210", "01220", "01230", "01240", "01250", "01260", "01270", "01280", "01290", "01920",
@@ -33,6 +33,6 @@ supplier_tuple = (
 
 # Configuration for parallel
 PARALLEL_PROCESSING = True
-dataset_reference = '/mie/temp_data_europepubmed-central-dataset/csv/dataset.csv'
-article_path_reference = '/mie/temp_data_europepubmed-central-dataset/articles/'
-n_process = 100
+dataset_reference = '/srv/data/pubmed/csv/dataset.csv'
+article_path_reference = '/srv/data/pubmed/articles/'
+n_process = 10

@@ -48,8 +48,10 @@ BEE and SPACIN have been enhanced in order to exploit respectively a CSV dataset
     - __PARALLEL_PROCESSING__: set to True in order to enable the improvement made
     - __dataset_reference__: absolute reference to the CSV generated
     - __article_path_reference__: absolute reference to the directory where all the XML articles are stored
-    - __n_process__: the number of processes that will be spawned. The CSV will be splitted in a number of chunks (one
-      for each process).
+    - __n_process__: the number of processes that will be spawned. 
+    - __doc_for_process__: the CSV will be splitted in a number of chunks (one
+      for each process), having the number of docs specified here
+
 
 - (SPACIN) in `script/ccc/conf_spacin.py` there are:
     - __crossref_query_interface_type__: set to 'local' if you want to exploit the local index, otherwise 'remote'

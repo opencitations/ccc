@@ -36,3 +36,4 @@ PARALLEL_PROCESSING = True
 dataset_reference = '/srv/data/pubmed/csv/dataset.csv'
 article_path_reference = '/srv/data/pubmed/articles/'
 n_process = 10
+doc_for_process = 20

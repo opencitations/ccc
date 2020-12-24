@@ -267,8 +267,7 @@ class EuropeanPubMedCentralProcessor(ReferenceProcessor):
                     ref_pointer_list = []
                     with open('exceptions.log', 'a') as exceptionslog:
                         exceptionslog.write("\n--\n{}".format(e))
-                    print("Exception with Jats! " + e)
+                    print("Exception with Jats! " + str(e))
 
 
         return xml_source_url, ref_list, ref_pointer_list # now we return the ref_list, because isn't stored anymore in RS
-

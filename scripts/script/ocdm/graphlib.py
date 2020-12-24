@@ -149,8 +149,10 @@ class GraphEntity(object):
             self.res = \
                 URIRef(str(g.identifier) + (short_name + "/" if short_name != "" else "") + count)
         else:
-            print("THIS IS RES: ", res, type(res))
-            self.res = URIRef(res)
+            if type(res) is GraphEntity:
+                self.res = res.res
+            else:
+                self.res = URIRef(res)
             existing_ref = True
 
         # Associated the graph in input if no existing graph

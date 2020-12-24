@@ -40,7 +40,7 @@ try:
 
                     if cur_file.endswith(".json"):
                         cur_file_path = cur_dir + sep + cur_file
-                        cur_local_dir_path = re.sub("^([0-9]+-[0-9]+-[0-9]+-[0-9]+).+$", "\\1", cur_file)
+                        cur_local_dir_path = re.sub("^([0-9]+-[0-9]+-[0-9]+-[0-9]+).+$", "\\1", cur_subdir)
                         with open(cur_file_path) as fp:
 
                             last_file = cur_file_path

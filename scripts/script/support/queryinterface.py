@@ -69,7 +69,7 @@ class LocalQuery(QueryInterface):
                 self.repok.add_sentence("Data retrieved for '{}'".format(entity, len(results)))
 
             for r in results:
-                return json.loads(r['original'][0])
+                return json.loads(r['original'])
 
             return None
 
@@ -91,7 +91,7 @@ class LocalQuery(QueryInterface):
 
         for r in results:
             if r['score'] > self.threshold:
-                return json.loads(r['original'][0])
+                return json.loads(r['original'])
 
         return None
 

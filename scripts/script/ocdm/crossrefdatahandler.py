@@ -455,7 +455,7 @@ class CrossrefDataHandler(object):
                         jou_br.has_part(cont_br)
                         self.add_journal_volume(CrossrefDataHandler.get_all_issns(json), json["volume"], cont_br)
                         self.add_journal_volume(CrossrefDataHandler.get_all_isbns(json), json["volume"], cont_br)
-                        self.rf.add_volume_to_store(jou_br, vol_br, cur_volume_id)
+                        self.rf.add_volume_to_store(jou_br, cont_br, cur_volume_id)
 
                     else:
                         jou_br = cont_br

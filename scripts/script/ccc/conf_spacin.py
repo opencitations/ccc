@@ -1,25 +1,20 @@
 # CCC spacin configuration
-base_dir = "/srv/data/ccc/"
+base_dir = "ccc/"
 base_iri = "https://w3id.org/oc/ccc/"
-triplestore_url = "http://localhost:3002/blazegraph/sparql"
+triplestore_url = "http://localhost:9999/blazegraph/sparql"
 triplestore_url_real = "https://w3id.org/oc/ccc/sparql"
 context_path = "https://w3id.org/oc/ccc/context.json"
-context_file_path = base_dir + "context.json"
-info_dir = "/srv/index/ccc/id-counter/"
-temp_dir_for_rdf_loading = "/tmp/"
-orcid_conf_path = "/srv/dev/ccc/scripts/script/spacin/orcid_conf.json"
-reference_dir = "/srv/index/ccc/ref/todo/"
-reference_dir_error = "/srv/index/ccc/ref/spacin/err/"
-reference_dir_done = "/srv/index/ccc/ref/done/"
+context_file_path = "ccc/context.json"
+info_dir = "test/id-counter/"
+temp_dir_for_rdf_loading = "tmp/"
+orcid_conf_path = "script/spacin/orcid_conf.json"
+reference_dir = "test/share/ref/todo/"
+reference_dir_error = "test/share/ref/err/"
+reference_dir_done = "test/share/ref/done/"
 dataset_home = "https://w3id.org/oc/ccc"
 dir_split_number = 10000  # This must be multiple of the following one
 items_per_file = 1000
 default_dir = ""
-do_parallel = False
-crossref_query_interface_type = 'local'
-orcid_query_interface_type = 'local'
-
-# the following are not used in ccc
 supplier_dir = {
     "101": "01110",
     "102": "01120",
@@ -54,4 +49,8 @@ supplier_dir = {
 }
 
 interface = "eth0"
+do_parallel = False
 sharing_dir = "test/data/"
+
+crossref_query_interface_type = 'remote'
+orcid_query_interface_type = 'remote'

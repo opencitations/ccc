@@ -59,6 +59,7 @@ class ResourceFinder(object):
         self.url_store = {}
         self.issn_store = {}
         self.isbn_store = {}
+        self.crossref_store = {}
 
         # Used in __retrieve_res_id_string() when you query for the {res} and want to get ids literal values
         self.doi_store_type = {}
@@ -68,6 +69,7 @@ class ResourceFinder(object):
         self.url_store_type = {}
         self.issn_store_type = {}
         self.isbn_store_type = {}
+        self.crossref_store_type = {}
 
         # Used in __retrieve_res_id_by_type() when you query for the {res}_{id_literal} and
         # want to get id's URI,
@@ -82,6 +84,7 @@ class ResourceFinder(object):
         self.url_store_type_id = {}
         self.issn_store_type_id = {}
         self.isbn_store_type_id = {}
+        self.crossref_store_type_id = {}
 
         # Used in __retrieve_from_journal() where you query for
         # {id_type}_{id_string}_{part_seq_id} and get the res
@@ -136,7 +139,7 @@ class ResourceFinder(object):
     def retrieve(self, id_dict, typ='both'):
         for id_type in id_dict:
             for id_string in id_dict[id_type]:
-                res = self.__id_with_type(id_string, id_type, typ=typ)
+                res = self.__id_with_type(str(id_string), str(id_type), typ=typ)
                 if res is not None:
                     return res
 
@@ -175,8 +178,8 @@ class ResourceFinder(object):
         return self.__query(query)
     '''
 
-    def retrieve_from_orcid(self, string):
-        return self.__id_with_type(string, GraphEntity.orcid)
+    def retrieve_from_orcid(self, string, typ='both'):
+        return self.__id_with_type(string, GraphEntity.orcid, typ=typ)
 
     def retrieve_entity(self, string, typ='both'):
         query = """
@@ -202,23 +205,23 @@ class ResourceFinder(object):
         return self.__id_with_type(
             string.lower(), GraphEntity.url, "?res <%s> ?cited" % GraphEntity.cites, typ)
 
-    def retrieve_from_doi(self, string, typ='only_blazegraph'):
+    def retrieve_from_doi(self, string, typ='both'):
         return self.__id_with_type(string.lower(), GraphEntity.doi, typ=typ)
 
-    def retrieve_from_pmid(self, string, typ='only_blazegraph'):
+    def retrieve_from_pmid(self, string, typ='both'):
         return self.__id_with_type(string, GraphEntity.pmid, typ=typ)
 
-    def retrieve_from_pmcid(self, string, typ='only_blazegraph'):
+    def retrieve_from_pmcid(self, string, typ='both'):
         return self.__id_with_type(string, GraphEntity.pmcid, typ=typ)
 
-    def retrieve_from_url(self, string, typ='only_blazegraph'):
+    def retrieve_from_url(self, string, typ='both'):
         return self.__id_with_type(string.lower(), GraphEntity.url, typ=typ)
 
-    def retrieve_from_issn(self, string):
-        return self.__id_with_type(string, GraphEntity.issn)
+    def retrieve_from_issn(self, string, typ='both'):
+        return self.__id_with_type(string, GraphEntity.issn, typ=typ)
 
-    def retrieve_from_isbn(self, string):
-        return self.__id_with_type(string, GraphEntity.isbn)
+    def retrieve_from_isbn(self, string, typ='both'):
+        return self.__id_with_type(string, GraphEntity.isbn, typ=typ)
 
     def retrieve_issue_from_journal(self, id_dict, issue_id, volume_id):
 
@@ -381,41 +384,42 @@ class ResourceFinder(object):
                 self.url_store_type["{}".format(cur_res)] = extracted_url
                 self.url_store["{}".format(extracted_url)] = cur_res
 
-    def add_isbn_to_store(self, cur_res, cur_id, isbn):
-        if cur_res is not None and cur_id is not None and isbn is not None:
-            # If empty create array
-            if not self.isbn_store_type_id.__contains__("{}_{}".format(cur_res, isbn)):
-                self.isbn_store_type_id["{}_{}".format(cur_res, isbn)] = []
+    def add_issn_to_store(self, cur_res, cur_id, isbns):
+        for isbn in isbns:
+            if cur_res is not None and cur_id is not None and isbn is not None:
+                # If empty create array
+                if not self.isbn_store_type_id.__contains__("{}_{}".format(cur_res, isbn)):
+                    self.isbn_store_type_id["{}_{}".format(cur_res, isbn)] = [cur_id]
 
-            if not self.isbn_store_type.__contains__("{}".format(cur_res)):
-                self.isbn_store_type["{}".format(cur_res)] = []
+                if not self.isbn_store_type.__contains__("{}".format(cur_res)):
+                    self.isbn_store_type["{}".format(cur_res)] = [cur_id]
+                else:
+                    self.isbn_store_type["{}".format(cur_res)] += [cur_id]
 
-            if not self.isbn_store.__contains__("{}".format(isbn)):
-                self.isbn_store["{}".format(isbn)] = []
+                if not self.isbn_store.__contains__("{}".format(isbn)):
+                    self.isbn_store["{}".format(isbn)] = [cur_res]
+                else:
+                    self.isbn_store["{}".format(isbn)] += [cur_res]
+                    
+    def add_issn_to_store(self, cur_res, cur_id, issns):
+        for issn in issns:
+            if cur_res is not None and cur_id is not None and issn is not None:
+                # If empty create array
+                if not self.issn_store_type_id.__contains__("{}_{}".format(cur_res, issn)):
+                    self.issn_store_type_id["{}_{}".format(cur_res, issn)] = [cur_id]
 
-            # Add it
-            self.isbn_store_type_id["{}_{}".format(cur_res, isbn)] += [cur_id]
-            self.isbn_store_type["{}".format(cur_res)] += [isbn]
-            self.isbn_store["{}".format(isbn)] += [cur_res]
+                if not self.issn_store_type.__contains__("{}".format(cur_res)):
+                    self.issn_store_type["{}".format(cur_res)] = [cur_id]
+                else:
+                    self.issn_store_type["{}".format(cur_res)] += [cur_id]
 
-    def add_issn_to_store(self, cur_res, cur_id, issn):
-        if cur_res is not None and cur_id is not None and issn is not None:
-            # If empty create array
-            if not self.issn_store_type_id.__contains__("{}_{}".format(cur_res, issn)):
-                self.issn_store_type_id["{}_{}".format(cur_res, issn)] = []
-
-            if not self.issn_store_type.__contains__("{}".format(cur_res)):
-                self.issn_store_type["{}".format(cur_res)] = []
-
-            if not self.issn_store.__contains__("{}".format(issn)):
-                self.issn_store["{}".format(issn)] = []
-
-            # Add it
-            self.issn_store_type_id["{}_{}".format(cur_res, issn)] += [cur_id]
-            self.issn_store_type["{}".format(cur_res)] += [issn]
-            self.issn_store["{}".format(issn)] += [cur_res]
-
+                if not self.issn_store.__contains__("{}".format(issn)):
+                    self.issn_store["{}".format(issn)] = [cur_res]
+                else:
+                    self.issn_store["{}".format(issn)] += [cur_res]
+ 
     def add_orcid_to_store(self, cur_res, cur_id, orcid):
+
         if cur_res is not None and cur_id is not None and orcid is not None:
 
             # If empty create array
@@ -490,7 +494,7 @@ class ResourceFinder(object):
 
         # First check if locally there's something
 
-        if typ != 'only_blazegraph' and id_type is not None and id is not None:
+        if typ != 'only_blazegraph' and id_type is not None and id_string is not None:
             if str(id_type) == 'http://purl.org/spar/datacite/url':
                 store = self.url_store
             elif str(id_type) == 'http://purl.org/spar/datacite/doi':
@@ -527,12 +531,6 @@ class ResourceFinder(object):
             return self.__query_blazegraph(query, typ=typ)
 
     def __query(self, query, typ='only_blazegraph'):
-
-        """if typ=='both':
-            res = self.__query_local(query)
-            if res is not None:
-                print("AAA")
-                return res"""
 
         if self.ts is not None and (typ == 'both' or typ == 'only_blazegraph'):
             res = self.__query_blazegraph(query)

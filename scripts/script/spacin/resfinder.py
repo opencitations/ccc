@@ -217,6 +217,9 @@ class ResourceFinder(object):
     def retrieve_from_url(self, string, typ='both'):
         return self.__id_with_type(string.lower(), GraphEntity.url, typ=typ)
 
+    def retrieve_from_crossref(self, string, typ='both'):
+        return self.__id_with_type(string, GraphEntity.crossref, typ=typ)
+
     def retrieve_from_issn(self, string, typ='both'):
         return self.__id_with_type(string, GraphEntity.issn, typ=typ)
 
@@ -300,6 +303,8 @@ class ResourceFinder(object):
                 store = self.issn_store_type
             elif str(id_type) == 'http://purl.org/spar/datacite/isbn':
                 store = self.isbn_store_type
+            elif str(id_type) == 'http://purl.org/spar/datacite/crossref':
+                store = self.crossref_store_type
 
             if str(id_type) == 'http://purl.org/spar/datacite/orcid' or\
                     str(id_type) == 'http://purl.org/spar/datacite/issn' or \
@@ -338,6 +343,8 @@ class ResourceFinder(object):
                 store = self.issn_store_type_id
             elif str(id_type) == 'http://purl.org/spar/datacite/isbn':
                 store = self.isbn_store_type_id
+            elif str(id_type) == 'http://purl.org/spar/datacite/crossref':
+                store = self.crossref_store_type_id
 
             if str(id_type) == 'http://purl.org/spar/datacite/orcid' or\
                     str(id_type) == 'http://purl.org/spar/datacite/issn' or \
@@ -384,7 +391,20 @@ class ResourceFinder(object):
                 self.url_store_type["{}".format(cur_res)] = extracted_url
                 self.url_store["{}".format(extracted_url)] = cur_res
 
-    def add_issn_to_store(self, cur_res, cur_id, isbns):
+    def add_crossref_to_store(self, cur_res, cur_id, extracted_crossref):
+        if cur_res is not None and cur_id is not None and extracted_crossref is not None:
+
+            # Check if local store doesn't contains already the elements
+            if self.crossref_store_type_id.__contains__("{}_{}".format(cur_res, extracted_crossref)) == False \
+            and self.crossref_store_type.__contains__("{}".format(cur_res)) == False \
+            and self.crossref_store.__contains__("{}".format(extracted_crossref)) == False:
+
+                # Add it
+                self.crossref_store_type_id["{}_{}".format(cur_res, extracted_crossref)] = cur_id
+                self.crossref_store_type["{}".format(cur_res)] = extracted_crossref
+                self.crossref_store["{}".format(extracted_crossref)] = cur_res
+
+    def add_isbn_to_store(self, cur_res, cur_id, isbns):
         for isbn in isbns:
             if cur_res is not None and cur_id is not None and isbn is not None:
                 # If empty create array
@@ -509,15 +529,17 @@ class ResourceFinder(object):
                 store = self.issn_store
             elif str(id_type) == 'http://purl.org/spar/datacite/isbn':
                 store = self.isbn_store
+            elif str(id_type) == 'http://purl.org/spar/datacite/crossref':
+                store = self.crossref_store
 
             if str(id_type) == 'http://purl.org/spar/datacite/orcid' or\
                     str(id_type) == 'http://purl.org/spar/datacite/issn' or \
                     str(id_type) == 'http://purl.org/spar/datacite/isbn':
-                if store.__contains__(id_string):
-                    return store["{}".format(id_string)][0]
+                if store.__contains__(str(id_string)):
+                    return store["{}".format(str(id_string))][0]
 
-            elif store.__contains__(id_string):
-                return store["{}".format(id_string)]
+            elif store.__contains__(str(id_string)):
+                return store["{}".format(str(id_string))]
 
         # If nothing found, query blazegraph
         if typ != 'only_local':
@@ -542,6 +564,7 @@ class ResourceFinder(object):
 
             if self.cache.__contains__(query):
                 result = self.cache[query]
+                return result
             else:
                 result = self.ts.query(query)
                 for res, in result:

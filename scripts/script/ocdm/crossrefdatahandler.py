@@ -248,8 +248,8 @@ class CrossrefDataHandler(object):
             cur_member_url = json["member"]
             retrieved_agent = None
             if self.rf is not None:
-                # TODO retrieve_from_fundref
-                retrieved_agent = self.rf.retrieve_from_url(cur_member_url, 'both')
+                retrieved_agent = self.rf.retrieve_from_crossref(cur_member_url, 'both')
+
             if retrieved_agent is not None:
                 cur_agent = self.g_set.add_ra(
                     self.name, self.id, source, retrieved_agent)
@@ -266,6 +266,7 @@ class CrossrefDataHandler(object):
                 cur_agent_id = self.g_set.add_id(self.name, self.id, source)
                 cur_agent_id.create_crossref(json["member"])
                 cur_agent.has_id(cur_agent_id)
+                self.rf.add_crossref_to_store(cur_agent, cur_agent_id, json['member'])
 
         cur_role = self.g_set.add_ar(self.name, self.id, source)
         cur_role.create_publisher(cur_br)
@@ -310,7 +311,7 @@ class CrossrefDataHandler(object):
             if cur_type == "journal-article":
                 if cur_issue_id is None:
                     if cur_volume_id is None:
-                        retrieved_container = self.rf.retrieve(container_ids)
+                        retrieved_container = self.rf.retrieve(container_ids, 'both')
                     else:
                         retrieved_container = \
                             self.rf.retrieve_volume_from_journal(container_ids, cur_volume_id)
@@ -319,12 +320,12 @@ class CrossrefDataHandler(object):
                         container_ids, cur_issue_id, cur_volume_id)
             elif cur_type == "journal-issue":
                 if cur_volume_id is None:
-                    retrieved_container = self.rf.retrieve(container_ids)
+                    retrieved_container = self.rf.retrieve(container_ids, 'both')
                 else:
                     retrieved_container = \
                         self.rf.retrieve_volume_from_journal(container_ids, cur_volume_id)
             else:
-                retrieved_container = self.rf.retrieve(container_ids)
+                retrieved_container = self.rf.retrieve(container_ids, 'both')
 
         if retrieved_container is not None:
             cont_br = self.g_set.add_br(
@@ -377,7 +378,7 @@ class CrossrefDataHandler(object):
                         # before creating a new object for that journal
                         retrieved_journal = None
                         if self.rf is not None:
-                            retrieved_journal = self.rf.retrieve(container_ids)
+                            retrieved_journal = self.rf.retrieve(container_ids, 'both')
                         if retrieved_journal is None:
                             jou_br = self.g_set.add_br(self.name, self.id, source)
                             self.__associate_issn(jou_br, json, source)
@@ -444,7 +445,7 @@ class CrossrefDataHandler(object):
                         # before creating a new object for that journal
                         retrieved_journal = None
                         if self.rf is not None:
-                            retrieved_journal = self.rf.retrieve(container_ids)
+                            retrieved_journal = self.rf.retrieve(container_ids, 'both')
                         if retrieved_journal is None:
                             jou_br = self.g_set.add_br(self.name, self.id, source)
                             self.__associate_issn(jou_br, json, source)

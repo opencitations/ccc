@@ -233,11 +233,15 @@ class ResourceFinder(object):
             return self.__retrieve_from_journal(id_dict, GraphEntity.journal_issue, issue_id)
 
         else:
-
+            retrieved_journal = self.retrieve_journal(id_dict)
             retrieved_volume = self.retrieve_volume_from_journal(id_dict, volume_id)
             if retrieved_volume is not None:
-                if self.from_issue_partof_journal.__contains__("{}_{}".format(str(retrieved_volume), issue_id)):
-                    return self.from_issue_partof_journal["{}_{}".format(str(retrieved_volume), issue_id)]
+                print("Retrieved volume: {}".format(retrieved_volume))
+
+                print("Search issue with {}_{}_{}".format(str(retrieved_journal), str(volume_id), issue_id))
+                if self.from_issue_partof_journal.__contains__("{}_{}_{}".format(str(retrieved_journal), str(volume_id), issue_id)):
+                    print("\tFound issue: {}".format(self.from_issue_partof_journal["{}_{}_{}".format(str(retrieved_journal), str(volume_id), issue_id)]))
+                    return self.from_issue_partof_journal["{}_{}_{}".format(str(retrieved_journal), str(volume_id), issue_id)]
                 else:
                     query = """
                         SELECT DISTINCT ?br WHERE {{
@@ -248,8 +252,61 @@ class ResourceFinder(object):
                     """.format(GraphEntity.journal_issue, GraphEntity.part_of, str(retrieved_volume), GraphEntity.has_sequence_identifier, issue_id)
                     return self.__query(query)
 
-    def retrieve_volume_from_journal(self, id_dict, volume_id):
-        return self.__retrieve_from_journal(id_dict, GraphEntity.journal_volume, volume_id)
+    def retrieve_journal(self, id_dict):
+
+        # Check locally
+        for id_type in id_dict:
+            for id_string in id_dict[id_type]:
+
+                if self.from_journal.__contains__("{}".format(str(id_string))):
+                    # The id_string belongs to the journal, while the part_seq_id is the
+                    # string related to the part type of the journal
+                    return self.from_journal["{}".format(str(id_string))]
+
+    def retrieve_volume_from_journal(self, id_dict, volume_id, jou_br=None):
+        part_type = GraphEntity.journal_volume
+        if jou_br is not None:
+            if self.from_journal_volume.__contains__("{}_{}".format(str(jou_br), volume_id)):
+                print("Trovato: {}".format(self.from_journal_volume["{}_{}".format(str(jou_br), volume_id)]))
+                return self.from_journal_volume["{}_{}".format(str(jou_br), volume_id)]
+
+        else:
+            # Check locally
+            for id_type in id_dict:
+                for id_string in id_dict[id_type]:
+
+                    if self.from_journal.__contains__("{}".format(str(id_string))):
+                        # The id_string belongs to the journal, while the part_seq_id is the
+                        # string related to the part type of the journal
+                        jou_br = self.from_journal["{}".format(str(id_string))]
+
+                        if self.from_journal_volume.__contains__("{}_{}".format(str(jou_br), volume_id)):
+                            print("Trovato: {}".format(self.from_journal_volume["{}_{}".format(str(jou_br), volume_id)]))
+                            return self.from_journal_volume["{}_{}".format(str(jou_br), volume_id)]
+
+        # If not present, check in blazegraph
+        # a journal that has a specific ID, which <journal literal id> is given, and at which is attached, then there's a resource
+        # that is part of this journal that has a <sequence_identifier>(journal/issue> with a specific <part_seq_id>(literal)
+        # we want that resource
+        for id_type in id_dict:
+            for id_string in id_dict[id_type]:
+
+                query = '''
+                SELECT DISTINCT ?res WHERE {{
+                    ?j <{}> ?id .
+                    ?id
+                        <{}> <{}> ;
+                        <{}> "{}" .
+                    ?res a <{}> ;
+                        <{}>+ ?j ;
+                        <{}> "{}"
+                }}'''.format(GraphEntity.has_identifier, GraphEntity.uses_identifier_scheme, id_type,
+                             GraphEntity.has_literal_value, id_string, part_type, GraphEntity.part_of,
+                             GraphEntity.has_sequence_identifier,
+                             volume_id)
+                ret = self.__query(query, 'both')
+                if ret is not None:
+                    return ret
 
     def retrieve_url_string(self, res, typ):
         return self.__retrieve_res_id_string(res, GraphEntity.url, typ)
@@ -456,12 +513,16 @@ class ResourceFinder(object):
             self.orcid_store_type["{}".format(cur_res)] += [orcid]
             self.orcid_store["{}".format(orcid)] += [cur_res.res]
 
-    def add_issue_to_store(self, cur_res, cur_id, issue):
-        if cur_res is not None and cur_id is not None and issue is not None:
-            # Check if local store doesn't contains already the elements
-            if self.from_issue_partof_journal.__contains__("{}_{}".format(str(cur_res), issue)) == False:
-                # Add it
-                self.from_issue_partof_journal["{}_{}".format(str(cur_res), issue)] = cur_id.res
+    def add_issue_to_store(self, jou_br, volume, issue, cur_id):
+        """print("Jou br: {}".format(jou_br))
+        print("volume: {}".format(volume))
+        print("issue: {}".format(issue))
+        print("cur_id: {}".format(cur_id))
+
+        print("Add issue: {}_{}_{}".format(str(jou_br), str(volume), str(issue)))"""
+        if self.from_issue_partof_journal.__contains__("{}_{}_{}".format(str(jou_br), str(volume), str(issue))) == False:
+            self.from_issue_partof_journal["{}_{}_{}".format(str(jou_br), str(volume), str(issue))] = cur_id.res
+
 
     def add_volume_to_store(self, cur_res, cur_id, volume):
         if cur_res is not None and cur_id is not None and volume is not None:
@@ -470,20 +531,19 @@ class ResourceFinder(object):
                 # Add it
                 self.from_journal_volume["{}_{}".format(cur_res, volume)] = cur_id.res
 
-    def add_journal_to_store(self, id_string, part_type, part_seq_id, res):
-        if id_string is not None and part_type is not None and part_seq_id is not None:
-            if self.from_journal.__contains__("{}_{}_{}".format(id_string, part_type,part_seq_id)) == False:
-                self.from_journal["{}_{}_{}".format(id_string, part_type,part_seq_id)] = res.res
+    def add_journal_to_store(self, id_string, res):
+        self.from_journal["{}".format(str(id_string))] = res.res
+
 
     def __retrieve_from_journal(self, id_dict, part_type, part_seq_id):
         # Check locally
         for id_type in id_dict:
             for id_string in id_dict[id_type]:
 
-                if self.from_journal.__contains__("{}_{}_{}".format(str(id_string), part_type, part_seq_id)):
+                if self.from_journal.__contains__("{}".format(str(id_string))):
                     # The id_string belongs to the journal, while the part_seq_id is the
                     # string related to the part type of the journal
-                    return self.from_journal["{}_{}_{}".format(str(id_string), part_type, part_seq_id)]
+                    return self.from_journal["{}".format(str(id_string))]
 
         # If not present, check in blazegraph
         # a journal that has a specific ID, which <journal literal id> is given, and at which is attached, then there's a resource

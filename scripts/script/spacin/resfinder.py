@@ -237,7 +237,6 @@ class ResourceFinder(object):
             retrieved_volume = self.retrieve_volume_from_journal(id_dict, volume_id)
             if retrieved_volume is not None:
                 if self.from_issue_partof_journal.__contains__("{}_{}".format(str(retrieved_volume), issue_id)):
-                    print("Found issue: {}_{}".format(str(retrieved_volume), issue_id))
                     return self.from_issue_partof_journal["{}_{}".format(str(retrieved_volume), issue_id)]
                 else:
                     query = """
@@ -460,7 +459,6 @@ class ResourceFinder(object):
     def add_issue_to_store(self, cur_res, cur_id, issue):
         if cur_res is not None and cur_id is not None and issue is not None:
             # Check if local store doesn't contains already the elements
-            print("Add issue to store {}_{}".format(str(cur_res), issue))
             if self.from_issue_partof_journal.__contains__("{}_{}".format(str(cur_res), issue)) == False:
                 # Add it
                 self.from_issue_partof_journal["{}_{}".format(str(cur_res), issue)] = cur_id.res

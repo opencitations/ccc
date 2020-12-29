@@ -251,7 +251,6 @@ class CrossrefDataHandler(object):
                 retrieved_agent = self.rf.retrieve_from_crossref(cur_member_url, 'both')
 
             if retrieved_agent is not None:
-                print("FOUND {}".format(retrieved_agent))
                 cur_agent = self.g_set.add_ra(
                     self.name, self.id, source, retrieved_agent)
         else:

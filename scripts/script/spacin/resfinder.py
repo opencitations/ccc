@@ -235,7 +235,6 @@ class ResourceFinder(object):
         else:
 
             retrieved_volume = self.retrieve_volume_from_journal(id_dict, volume_id)
-
             if retrieved_volume is not None:
                 if self.from_issue_partof_journal.__contains__("{}_{}".format(str(retrieved_volume), issue_id)):
                     return self.from_issue_partof_journal["{}_{}".format(str(retrieved_volume), issue_id)]
@@ -460,9 +459,9 @@ class ResourceFinder(object):
     def add_issue_to_store(self, cur_res, cur_id, issue):
         if cur_res is not None and cur_id is not None and issue is not None:
             # Check if local store doesn't contains already the elements
-            if self.from_journal_issue.__contains__("{}_{}".format(cur_res, issue)) == False:
+            if self.from_issue_partof_journal.__contains__("{}_{}".format(str(cur_res), issue)) == False:
                 # Add it
-                self.from_journal_issue["{}_{}".format(cur_res, issue)] = cur_id.res
+                self.from_issue_partof_journal["{}_{}".format(str(cur_res), issue)] = cur_id.res
 
     def add_volume_to_store(self, cur_res, cur_id, volume):
         if cur_res is not None and cur_id is not None and volume is not None:
@@ -480,10 +479,10 @@ class ResourceFinder(object):
         for id_type in id_dict:
             for id_string in id_dict[id_type]:
 
-                if self.from_journal.__contains__("{}_{}_{}".format(id_string, part_type, part_seq_id)):
+                if self.from_journal.__contains__("{}_{}_{}".format(str(id_string), part_type, part_seq_id)):
                     # The id_string belongs to the journal, while the part_seq_id is the
                     # string related to the part type of the journal
-                    return self.from_journal["{}_{}_{}".format(id_string, part_type, part_seq_id)]
+                    return self.from_journal["{}_{}_{}".format(str(id_string), part_type, part_seq_id)]
 
         # If not present, check in blazegraph
         # a journal that has a specific ID, which <journal literal id> is given, and at which is attached, then there's a resource

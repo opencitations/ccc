@@ -251,6 +251,7 @@ class CrossrefDataHandler(object):
                 retrieved_agent = self.rf.retrieve_from_crossref(cur_member_url, 'both')
 
             if retrieved_agent is not None:
+                print("FOUND {}".format(retrieved_agent))
                 cur_agent = self.g_set.add_ra(
                     self.name, self.id, source, retrieved_agent)
         else:
@@ -416,7 +417,7 @@ class CrossrefDataHandler(object):
 
                                     self.add_journal_volume(CrossrefDataHandler.get_all_issns(json), json["volume"], jou_br)
                                     self.add_journal_volume(CrossrefDataHandler.get_all_isbns(json), json["volume"],jou_br)
-                                    self.rf.add_volume_to_store(jou_br, vol_br, cur_volume_id)
+                                    self.rf.add_volume_to_store(jou_br.res, vol_br, cur_volume_id)
 
                                 else:
                                     vol_br = self.g_set.add_br(
@@ -424,7 +425,7 @@ class CrossrefDataHandler(object):
                                 vol_br.has_part(cont_br)
                                 self.add_journal_issue(CrossrefDataHandler.get_all_issns(json), json["issue"], jou_br)
                                 self.add_journal_issue(CrossrefDataHandler.get_all_isbns(json), json["issue"], jou_br)
-                                self.rf.add_issue_to_store(jou_br, cont_br, json["issue"])
+                                self.rf.add_issue_to_store(jou_br.res, cont_br, json["issue"])
 
                             else:
                                 cur_container_type = "volume"
@@ -433,7 +434,7 @@ class CrossrefDataHandler(object):
                                 jou_br.has_part(vol_br)
                                 self.add_journal_volume(CrossrefDataHandler.get_all_issns(json), json["volume"], jou_br)
                                 self.add_journal_volume(CrossrefDataHandler.get_all_isbns(json), json["volume"], jou_br)
-                                self.rf.add_volume_to_store(jou_br, vol_br, cur_volume_id)
+                                self.rf.add_volume_to_store(jou_br.res, vol_br, cur_volume_id)
 
                 elif cur_type == "journal-issue":
                     cur_container_type = "journal"
@@ -456,7 +457,7 @@ class CrossrefDataHandler(object):
                         jou_br.has_part(cont_br)
                         self.add_journal_volume(CrossrefDataHandler.get_all_issns(json), json["volume"], jou_br)
                         self.add_journal_volume(CrossrefDataHandler.get_all_isbns(json), json["volume"], jou_br)
-                        self.rf.add_volume_to_store(jou_br, cont_br, cur_volume_id)
+                        self.rf.add_volume_to_store(jou_br.res, cont_br, cur_volume_id)
 
                     else:
                         jou_br = cont_br

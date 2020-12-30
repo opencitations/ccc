@@ -13,5 +13,5 @@
 # ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
 # SOFTWARE.
 
-ps -ef | grep "[s]olr" | awk '{print $2}' | xargs kill
+ps -ef | grep "solr" | awk '{print $2}' | xargs kill
 exit 0

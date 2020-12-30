@@ -66,17 +66,11 @@ class CrossrefDataHandler(object):
         return result
 
     def __associate_issn(self, res, json, source):
-        issnss = []
-        cur_ids = []
-
         for string in CrossrefDataHandler.get_all_issns(json):
             cur_id = self.g_set.add_id(self.name, self.id, source)
             if cur_id.create_issn(string):
                 res.has_id(cur_id)
-                cur_ids += [cur_id.res]
-                issnss += [string]
-
-        self.rf.add_issn_to_store(res, cur_ids, issnss)
+                self.rf.add_issn_to_store(res, cur_id, string)
 
     @staticmethod
     def create_title_from_list(title_list):
@@ -368,14 +362,11 @@ class CrossrefDataHandler(object):
                     cont_br.create_expression_collection()
                     cont_br.create_title(cur_container_title)
                 elif cur_type == "journal-article":
-                    if "issue" not in json and "volume" not in json:
+                    if cur_issue_id is None and cur_volume_id is None:
                         cur_container_type = "journal"
                         jou_br = cont_br
                         CrossrefDataHandler.add_journal_data(jou_br, cur_container_title)
-                    else:
-                        # If we have an issue or a volume specified, the journal may have
-                        # been already added to the corpus in the past. Thus, check it
-                        # before creating a new object for that journal
+                    else: # a journal issue or a journal volume exist
                         retrieved_journal = None
                         if self.rf is not None:
                             retrieved_journal = self.rf.retrieve(container_ids, 'both')
@@ -384,67 +375,44 @@ class CrossrefDataHandler(object):
                             self.__associate_issn(jou_br, json, source)
                             CrossrefDataHandler.add_journal_data(
                                 jou_br, cur_container_title)
-                            self.add_journal(CrossrefDataHandler.get_all_isbns(json), jou_br)
-                            self.add_journal(CrossrefDataHandler.get_all_issns(json), jou_br)
                         else:
                             jou_br = self.g_set.add_br(
                                 self.name, self.id, source, retrieved_journal)
 
-                        if "issue" in json:
-                            cur_container_type = "issue"
+                        if cur_issue_id is not None:
+                            cur_container_type = "journal-issue"
                             cont_br.create_issue()
-                            cont_br.create_number(json["issue"])
-                            if "volume" not in json:
+                            cont_br.create_number(cur_issue_id)
+
+                            if cur_volume_id is None:
                                 jou_br.has_part(cont_br)
-                                self.rf.add_issue_to_store(jou_br.res, None, json["issue"], cont_br)
-
-                                self.add_journal(CrossrefDataHandler.get_all_isbns(json), jou_br)
-                                self.add_journal(CrossrefDataHandler.get_all_issns(json), jou_br)
-
-                        if "volume" in json:
-                            cur_volume_id = json["volume"]
-                            if "issue" in json:
-                                # If we have an issue specified, the volume may have
-                                # been already added to the corpus in the past. Thus, check it
-                                # before creating a new object for that volume
+                            else:
                                 retrieved_volume = None
                                 if self.rf is not None:
-                                    retrieved_volume = self.rf.retrieve_volume_from_journal(
-                                        container_ids, cur_volume_id)
+                                    retrieved_volume = self.rf.retrieve_volume_from_journal(container_ids, cur_volume_id)
                                 if retrieved_volume is None:
                                     vol_br = self.g_set.add_br(
                                         self.name, self.id, source)
                                     CrossrefDataHandler.add_volume_data(vol_br, cur_volume_id)
                                     jou_br.has_part(vol_br)
                                     self.rf.add_volume_to_store(jou_br.res, vol_br, cur_volume_id)
-
-                                    self.add_journal(CrossrefDataHandler.get_all_isbns(json), jou_br)
-                                    self.add_journal(CrossrefDataHandler.get_all_issns(json), jou_br)
-
-                                else:
-                                    vol_br = self.g_set.add_br(
-                                        self.name, self.id, source, retrieved_volume)
+                                
                                 vol_br.has_part(cont_br)
-                                self.rf.add_issue_to_store(jou_br.res, json["volume"], json["issue"], cont_br)
+                            
+                            self.rf.add_issue_to_store(jou_br.res, cur_volume_id, cur_issue_id, cont_br)
 
-                                self.add_journal(CrossrefDataHandler.get_all_isbns(json), jou_br)
-                                self.add_journal(CrossrefDataHandler.get_all_issns(json), jou_br)
-
-                            else:
-                                cur_container_type = "volume"
-                                vol_br = cont_br
-                                CrossrefDataHandler.add_volume_data(vol_br, cur_volume_id)
-                                jou_br.has_part(vol_br)
-                                self.rf.add_volume_to_store(jou_br.res, vol_br, cur_volume_id)
-
-                                self.add_journal(CrossrefDataHandler.get_all_isbns(json), jou_br)
-                                self.add_journal(CrossrefDataHandler.get_all_issns(json), jou_br)
+                        elif cur_volume_id is not None:  # no issue but volume specified
+                            cur_container_type = "journal-volume"
+                            vol_br = cont_br
+                            CrossrefDataHandler.add_volume_data(vol_br, cur_volume_id)
+                            jou_br.has_part(vol_br)
+                            self.rf.add_volume_to_store(jou_br.res, vol_br, cur_volume_id)
 
                 elif cur_type == "journal-issue":
                     cur_container_type = "journal"
-                    if "volume" in json:
-                        cur_container_type = "volume"
-                        CrossrefDataHandler.add_volume_data(cont_br, json["volume"])
+                    if cur_volume_id is not None:
+                        cur_container_type = "journal-volume"
+                        CrossrefDataHandler.add_volume_data(cont_br, cur_volume_id)
                         # If we have a volume specified, the journal may have
                         # been already added to the corpus in the past. Thus, check it
                         # before creating a new object for that journal
@@ -460,18 +428,21 @@ class CrossrefDataHandler(object):
 
                         jou_br.has_part(cont_br)
                         self.rf.add_volume_to_store(jou_br.res, cont_br, cur_volume_id)
-
-                        self.add_journal(CrossrefDataHandler.get_all_isbns(json), jou_br)
-                        self.add_journal(CrossrefDataHandler.get_all_issns(json), jou_br)
-
                     else:
                         jou_br = cont_br
                         CrossrefDataHandler.add_journal_data(jou_br, cur_container_title)
+                    
+                    if cur_issue_id:
+                        cur_br.create_number(cur_issue_id)
+                        self.rf.add_issue_to_store(jou_br.res, cur_volume_id, cur_issue_id, cur_br)
 
-                elif cur_type == "journal-volume":
-                    cur_container_type = "volume"
-                    CrossrefDataHandler.add_journal_data(cont_br, cur_container_title)
-                    self.__associate_issn(cont_br, json, source)
+                elif cur_type == "journal-volume":  # the related journal surely does not exist
+                    cur_container_type = "journal"
+                    jou_br = cont_br
+                    CrossrefDataHandler.add_journal_data(jou_br, cur_container_title)
+                    if cur_volume_id is not None:
+                        cur_br.create_number(cur_volume_id)
+                        self.rf.add_volume_to_store(jou_br.res, cur_br, cur_volume_id)
                 elif cur_type == "other":
                     cont_br.create_expression_collection()
                     cont_br.create_title(cur_container_title)
@@ -502,10 +473,6 @@ class CrossrefDataHandler(object):
 
         if cont_br is not None:
             cont_br.has_part(cur_br)
-
-    def add_journal(self, strings, cont_br):
-        for s in strings:
-            self.rf.add_journal_to_store(s, cont_br)
 
 
     def type(self, cur_br, key, json, source, *args):

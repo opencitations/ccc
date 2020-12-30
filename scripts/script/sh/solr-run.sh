@@ -13,7 +13,7 @@
 # ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
 # SOFTWARE.
 
-myv=`ps -ef | grep "[s]olr"`
+myv=`ps -ef | grep "solr"`
 
 if [[ -z "$myv" ]]; then
     CUR_DIR="${pwd}"

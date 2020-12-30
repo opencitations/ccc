@@ -192,51 +192,53 @@ class ResourceFinder(object):
     def retrieve_issue_from_journal(self, id_dict, issue_id, volume_id):
         retrieved_journal = self.retrieve(id_dict, 'both')
 
-        cur_issue = self.from_issue_partof_journal.get((retrieved_journal, volume_id, issue_id))
+        if retrieved_journal is not None:
+            cur_issue = self.from_issue_partof_journal.get((retrieved_journal, volume_id, issue_id))
 
-        if cur_issue is None:
-            if volume_id is None:
+            if cur_issue is None:
+                if volume_id is None:
+                    query = """
+                            SELECT DISTINCT ?br WHERE {{
+                                ?br a <{}> ;
+                                    <{}> <{}> ;
+                                    <{}> "{}"
+                            }} LIMIT 1
+                        """.format(GraphEntity.journal_issue, GraphEntity.part_of, retrieved_journal, GraphEntity.has_sequence_identifier, issue_id)
+                else:
+                    query = """
+                            SELECT DISTINCT ?br WHERE {{
+                                ?br a <{}> ;
+                                    <{}> [
+                                        a <{}> ;
+                                        <{}> <{}> ;
+                                        <{}> "{}" 
+                                    ] ;
+                                    <{}> "{}" . 
+                            }} LIMIT 1
+                        """.format(GraphEntity.journal_issue, GraphEntity.part_of, GraphEntity.journal_volume, GraphEntity.part_of, retrieved_journal, GraphEntity.has_sequence_identifier, volume_id, GraphEntity.has_sequence_identifier, issue_id)
+                return self.__query(query)
+
+            else:
+                return cur_issue
+
+    def retrieve_volume_from_journal(self, id_dict, volume_id):
+        retrieved_journal = self.retrieve(id_dict, 'both')
+
+        if retrieved_journal is not None:
+            cur_volume = self.from_journal_volume.get((retrieved_journal, volume_id))
+
+            if cur_volume is None:
                 query = """
                         SELECT DISTINCT ?br WHERE {{
                             ?br a <{}> ;
                                 <{}> <{}> ;
                                 <{}> "{}"
                         }} LIMIT 1
-                    """.format(GraphEntity.journal_issue, GraphEntity.part_of, retrieved_journal, GraphEntity.has_sequence_identifier, issue_id)
+                    """.format(GraphEntity.journal_volume, GraphEntity.part_of, retrieved_journal, GraphEntity.has_sequence_identifier, volume_id)
+                return self.__query(query)
+
             else:
-                query = """
-                        SELECT DISTINCT ?br WHERE {{
-                            ?br a <{}> ;
-                                <{}> [
-                                    a <{}> ;
-                                    <{}> <{}> ;
-                                    <{}> "{}" .
-                                ] ;
-                                <{}> "{}" . 
-                        }} LIMIT 1
-                    """.format(GraphEntity.journal_issue, GraphEntity.part_of, GraphEntity.journal_volume, GraphEntity.part_of, retrieved_journal, GraphEntity.has_sequence_identifier, volume_id, GraphEntity.has_sequence_identifier, issue_id)
-            return self.__query(query)
-            
-        else:
-            return cur_issue
-
-    def retrieve_volume_from_journal(self, id_dict, volume_id):
-        retrieved_journal = self.retrieve(id_dict, 'both')
-
-        cur_volume = self.from_journal_volume.get((retrieved_journal, volume_id))
-
-        if cur_volume is None:
-            query = """
-                    SELECT DISTINCT ?br WHERE {{
-                        ?br a <{}> ;
-                            <{}> <{}> ;
-                            <{}> "{}"
-                    }} LIMIT 1
-                """.format(GraphEntity.journal_volume, GraphEntity.part_of, retrieved_journal, GraphEntity.has_sequence_identifier, volume_id)
-            return self.__query(query)
-            
-        else:
-            return cur_volume
+                return cur_volume
 
     def retrieve_url_string(self, res, typ):
         return self.__retrieve_res_id_string(res, GraphEntity.url, typ)

@@ -1,0 +1,394 @@
+{
+    "references": [
+        {
+            "bibentry": "Chudakov, DM, Matz, MV, Lukyanov, S, Lukyanov, KA. Fluorescent proteins and their applications in imaging living cells and tissues. Physiol Rev 2010; 90: 1103–63. PMID: 20664080",
+            "process_entry": "True",
+            "doi": "10.1152/physrev.00038.2009",
+            "pmid": "20664080",
+            "xmlid": "CIT0001"
+        },
+        {
+            "bibentry": "Liss, V, Barlag, B, Nietschke, M, Hensel, M. Self-labelling enzymes as universal tags for fluorescence microscopy, super-resolution microscopy and electron microscopy. Sci Rep 2015; 5: 17740–52. PMID: 26643905",
+            "process_entry": "True",
+            "doi": "10.1038/srep17740",
+            "pmid": "26643905",
+            "pmcid": "PMC4672345",
+            "xmlid": "CIT0002"
+        },
+        {
+            "bibentry": "Hatlem, D, Trunk, T, Linke, D, Leo, JC. Catching a SPY: using the SpyCatcher-SpyTag and related systems for labeling and localizing bacterial proteins. Int J Mol Sci 2019; 20: 2129–39.",
+            "process_entry": "True",
+            "xmlid": "CIT0003"
+        },
+        {
+            "bibentry": "Los, GV, Encell, LP, McDougall, MG, et al. HaloTag: a novel protein labeling technology for cell imaging and protein analysis. ACS Chem Biol 2008; 3: 373–82. PMID: 18533659",
+            "process_entry": "True",
+            "doi": "10.1021/cb800025k",
+            "pmid": "18533659",
+            "xmlid": "CIT0004"
+        },
+        {
+            "bibentry": "England, CG, Luo, H, Cai, W. HaloTag technology: a versatile platform for biomedical applications. Bioconjug Chem 2015; 26: 975–86. PMID: 25974629",
+            "process_entry": "True",
+            "doi": "10.1021/acs.bioconjchem.5b00191",
+            "pmid": "25974629",
+            "pmcid": "PMC4482335",
+            "xmlid": "CIT0005"
+        },
+        {
+            "bibentry": "Pegg, AE. Repair of O(6)-alkylguanine by alkyltransferases. Mutat Res 2000; 462: 83–100. PMID: 10767620",
+            "process_entry": "True",
+            "doi": "10.1016/s1383-5742(00)00017-x",
+            "pmid": "10767620",
+            "xmlid": "CIT0006"
+        },
+        {
+            "bibentry": "Daniels, DS, Mol, CD, Arvai, AS, et al. Active and alkylated human AGT structures: a novel zinc site, inhibitor and extrahelical base binding. Embo J 2000; 19: 1719–30. PMID: 10747039",
+            "process_entry": "True",
+            "doi": "10.1093/emboj/19.7.1719",
+            "pmid": "10747039",
+            "pmcid": "PMC310240",
+            "xmlid": "CIT0007"
+        },
+        {
+            "bibentry": "Daniels, DS, Woo, TT, Luu, KX, et al. DNA binding and nucleotide flipping by the human DNA repair protein AGT. Nat Struct Mol Biol 2004; 11: 714–20. PMID: 15221026",
+            "process_entry": "True",
+            "doi": "10.1038/nsmb791",
+            "pmid": "15221026",
+            "xmlid": "CIT0008"
+        },
+        {
+            "bibentry": "Keppler, A, Gendreizig, S, Gronemeyer, T, et al. A general method for the covalent labeling of fusion proteins with small molecules in vivo. Nat Biotechnol 2003; 21: 86–9. PMID: 12469133",
+            "process_entry": "True",
+            "doi": "10.1038/nbt765",
+            "pmid": "12469133",
+            "xmlid": "CIT0009"
+        },
+        {
+            "bibentry": "Keppler, A, Pick, H, Arrivoli, C, et al. Labeling of fusion proteins with synthetic fluorophores in live cells. Proc Natl Acad Sci USA 2004; 10: 9955–9.",
+            "process_entry": "True",
+            "xmlid": "CIT0010"
+        },
+        {
+            "bibentry": "Juillerat, A, Gronemeyer, T, Keppler, A, et al. Directed evolution of O6-alkylguanine-DNA alkyltransferase for efficient labeling of fusion proteins with small molecules in vivo. Chem Biol 2003; 10: 313–7. PMID: 12725859",
+            "process_entry": "True",
+            "doi": "10.1016/s1074-5521(03)00068-1",
+            "pmid": "12725859",
+            "xmlid": "CIT0011"
+        },
+        {
+            "bibentry": "Gronemeyer, T, Chidley, C, Juillerat, A, et al. Directed evolution of O6-alkylguanine-DNA alkyltransferase for applications in protein labeling. Protein Eng Des Sel 2006; 19: 309–16. PMID: 16638797",
+            "process_entry": "True",
+            "doi": "10.1093/protein/gzl014",
+            "pmid": "16638797",
+            "xmlid": "CIT0012"
+        },
+        {
+            "bibentry": "Mollwitz, B, Brunk, E, Schmitt, S, et al. Directed evolution of the suicide protein O6-alkylguanine-DNA alkyltransferase for Increased reactivity results in an alkylated protein with exceptional stability. Biochemistry 2012; 51: 986–94. PMID: 22280500",
+            "process_entry": "True",
+            "doi": "10.1021/bi2016537",
+            "pmid": "22280500",
+            "xmlid": "CIT0013"
+        },
+        {
+            "bibentry": "Gautier, A, Juillerat, A, Heinis, C, et al. An engineered protein tag for multiprotein labeling in living cells. Chem Biol 2008; 15: 128–36. PMID: 18291317",
+            "process_entry": "True",
+            "doi": "10.1016/j.chembiol.2008.01.007",
+            "pmid": "18291317",
+            "xmlid": "CIT0014"
+        },
+        {
+            "bibentry": "Vogel, P, Moschref Merkle, MM, Li, Q, et al. Efficient and precise editing of endogenous transcripts with SNAP-tagged ADARs. Nat Methods 2018; 15: 535–8. PMID: 29967493",
+            "process_entry": "True",
+            "doi": "10.1038/s41592-018-0017-z",
+            "pmid": "29967493",
+            "pmcid": "PMC6322650",
+            "xmlid": "CIT0015"
+        },
+        {
+            "bibentry": "Srikun, D, Albers, AE, Nam, CI, et al. Organelle-targetable fluorescent probes for imaging hydrogen peroxide in living cells via SNAP-Tag protein labeling. J Am Chem Soc 2010; 132: 4455–65. PMID: 20201528",
+            "process_entry": "True",
+            "doi": "10.1021/ja100117u",
+            "pmid": "20201528",
+            "pmcid": "PMC2850560",
+            "xmlid": "CIT0016"
+        },
+        {
+            "bibentry": "Abo, M, Minakami, R, Miyano, K, et al. Visualization of phagosomal hydrogen peroxide production by a novel fluorescent probe that is localized via SNAP-tag labeling. Anal Chem 2014; 86: 5983–90. PMID: 24862209",
+            "process_entry": "True",
+            "doi": "10.1021/ac501041w",
+            "pmid": "24862209",
+            "xmlid": "CIT0017"
+        },
+        {
+            "bibentry": "Griss, R, Schena, A, Reymond, L, et al. Bioluminescent sensor proteins for point-of-care therapeutic drug monitoring. Nat Chem Biol 2014; 10: 598–603. PMID: 24907901",
+            "process_entry": "True",
+            "doi": "10.1038/nchembio.1554",
+            "pmid": "24907901",
+            "xmlid": "CIT0018"
+        },
+        {
+            "bibentry": "Tomat, E, Nolan, EM, Jaworski, J, Lippard, SJ. Organelle-specific zinc detection using zinpyr-labeled fusion proteins in live cells. J Am Chem Soc 2008; 130: 15776–7. PMID: 18973293",
+            "process_entry": "True",
+            "doi": "10.1021/ja806634e",
+            "pmid": "18973293",
+            "pmcid": "PMC2645946",
+            "xmlid": "CIT0019"
+        },
+        {
+            "bibentry": "Kamiya, M, Johnsson, K. Localizable and highly sensitive calcium indicator based on a BODIPY fluorophore. Anal Chem 2010; 82: 6472–9. PMID: 20590099",
+            "process_entry": "True",
+            "doi": "10.1021/ac100741t",
+            "pmid": "20590099",
+            "xmlid": "CIT0020"
+        },
+        {
+            "bibentry": "Saccà, B, Meyer, R, Erkelenz, M, et al. Orthogonal protein decoration of DNA origami. Angew Chem Int Ed Engl 2010; 49: 9378–83. PMID: 21031395",
+            "process_entry": "True",
+            "doi": "10.1002/anie.201005931",
+            "pmid": "21031395",
+            "xmlid": "CIT0021"
+        },
+        {
+            "bibentry": "Perugino, G, Vettone, A, Illiano, G, et al. Activity and regulation of archaeal DNA alkyltransferase: conserved protein involved in repair of DNA alkylation damage. J Biol Chem 2012; 287: 4222–31. PMID: 22167184",
+            "process_entry": "True",
+            "doi": "10.1074/jbc.m111.308320",
+            "pmid": "22167184",
+            "pmcid": "PMC3281690",
+            "xmlid": "CIT0022"
+        },
+        {
+            "bibentry": "Perugino, G, Miggiano, R, Serpe, M, et al. Structure-function relationships governing activity and stability of a DNA alkylation damage repair thermostable protein. Nucleic Acids Res 2015; 43: 8801–16. PMID: 26227971",
+            "process_entry": "True",
+            "doi": "10.1093/nar/gkv774",
+            "pmid": "26227971",
+            "pmcid": "PMC4605297",
+            "xmlid": "CIT0023"
+        },
+        {
+            "bibentry": "Vettone, A, Serpe, M, Hidalgo, A, et al. A novel thermostable protein-tag: optimization of the Sulfolobus solfataricus DNA-alkyl-transferase by protein engineering. Extremophiles 2016; 20: 1–13. PMID: 26499124",
+            "process_entry": "True",
+            "doi": "10.1007/s00792-015-0791-9",
+            "pmid": "26499124",
+            "xmlid": "CIT0024"
+        },
+        {
+            "bibentry": "Visone, V, Han, W, Perugino, G, et al. In vivo and in vitro protein imaging in thermophilic archaea by exploiting a novel protein tag. PloS One 2017; 12: e0185791. PMID: 28973046",
+            "process_entry": "True",
+            "doi": "10.1371/journal.pone.0185791",
+            "pmid": "28973046",
+            "pmcid": "PMC5626487",
+            "xmlid": "CIT0025"
+        },
+        {
+            "bibentry": "Lo Gullo, G, Mattossovich, R, Perugino, G, et al. Optimization of an in vitro transcription/translation system based on Sulfolobus solfataricus cell lysate. Archaea 2019; 2019: 9848253. PMID: 30886540",
+            "process_entry": "True",
+            "doi": "10.1155/2019/9848253",
+            "pmid": "30886540",
+            "pmcid": "PMC6388310",
+            "xmlid": "CIT0026"
+        },
+        {
+            "bibentry": "Merlo, R, Del Prete, S, Valenti, A, et al. An AGT-based protein-tag system for the labelling and surface immobilization of enzymes on E. coli outer membrane. J Enzyme Inhib Med Chem 2019; 34: 490–9. PMID: 30724623",
+            "process_entry": "True",
+            "doi": "10.1080/14756366.2018.1559161",
+            "pmid": "30724623",
+            "pmcid": "PMC6366409",
+            "xmlid": "CIT0027"
+        },
+        {
+            "bibentry": "Del Prete, S, Merlo, R, Valenti, A, et al. Thermostability enhancement of the α-carbonic anhydrase from Sulfurihydrogenibium yellowstonense by using the anchoring-and-self-labelling-protein-tag system (ASL tag). J Enzyme Inhib Med Chem 2019; 34: 946–54. PMID: 31039618",
+            "process_entry": "True",
+            "doi": "10.1080/14756366.2019.1605991",
+            "pmid": "31039618",
+            "pmcid": "PMC6493269",
+            "xmlid": "CIT0028"
+        },
+        {
+            "bibentry": "Moschel, RC, McDougall, MG, Dolan, ME, et al. Structural features of substituted purine derivatives compatible with depletion of human O6-alkylguanine-DNA alkyltransferase. J Med Chem 1992; 35: 4486–91. PMID: 1447749",
+            "process_entry": "True",
+            "doi": "10.1021/jm00101a028",
+            "pmid": "1447749",
+            "xmlid": "CIT0029"
+        },
+        {
+            "bibentry": "Chae, MY, McDougall, MG, Dolan, ME, et al. Substituted O6-benzylguanine derivatives and their inactivation of human O6-alkylguanine-DNA alkyltransferase. J Med Chem 1994; 37: 342–7. PMID: 8308861",
+            "process_entry": "True",
+            "doi": "10.1021/jm00029a005",
+            "pmid": "8308861",
+            "xmlid": "CIT0030"
+        },
+        {
+            "bibentry": "Terashima, I, Kawate, H, Sakumi, K, et al. Substrate specificity of human O6-methylguanine-DNA methyltransferase for O6-benzylguanine derivatives in oligodeoxynucleotides. Chem Res Toxicol 1997; 10: 1234–9. PMID: 9403175",
+            "process_entry": "True",
+            "doi": "10.1021/tx9700580",
+            "pmid": "9403175",
+            "xmlid": "CIT0031"
+        },
+        {
+            "bibentry": "McElhinney, RS, Donnelly, DJ, McCormick, JE, et al. Inactivation of O6-alkylguanine-DNA alkyltransferase. 1. Novel O6-(hetarylmethyl)guanines having basic rings in the side chain. J Med Chem 1998; 41: 5265–71. PMID: 9857094",
+            "process_entry": "True",
+            "doi": "10.1021/jm9708644",
+            "pmid": "9857094",
+            "xmlid": "CIT0032"
+        },
+        {
+            "bibentry": "Sun, G, Fan, T, Zhang, N, et al. Identification of the structural features of guanine derivatives as MGMT inhibitors using 3D-QSAR modeling combined with molecular docking. Molecules 2016; 21: 823–44.",
+            "process_entry": "True",
+            "xmlid": "CIT0033"
+        },
+        {
+            "bibentry": "Zhang, CJ, Li, L, Chen, GYJ, et al. One-and two-photon live cell imaging using a mutant SNAP-Tag protein and its FRET substrate pairs. Org Lett 2011; 13: 4160–3. PMID: 21786765",
+            "process_entry": "True",
+            "doi": "10.1021/ol201430x",
+            "pmid": "21786765",
+            "xmlid": "CIT0034"
+        },
+        {
+            "bibentry": "Huang, M, Deng, Z, Tian, J, Liu, T. Synthesis and biological evaluation of salinomycin triazole analogues as anticancer agents. Eur J Med Chem 2017; 127: 900–8. PMID: 27876192",
+            "process_entry": "True",
+            "doi": "10.1016/j.ejmech.2016.10.067",
+            "pmid": "27876192",
+            "xmlid": "CIT0035"
+        },
+        {
+            "bibentry": "Leng, S, Qiao, Q, Miao, L, et al. A wash-free SNAP-tag fluorogenic probe based on the additive effects of quencher release and environmental sensitivity. Chem Commun 2017; 53: 6448–51.",
+            "process_entry": "True",
+            "xmlid": "CIT0036"
+        },
+        {
+            "bibentry": "Kindermann, M, George, N, Johnsson, N, Johnsson, K. Covalent and selective immobilization of fusion proteins. J Am Chem Soc 2003; 125: 7810–1. PMID: 12822993",
+            "process_entry": "True",
+            "doi": "10.1021/ja034145s",
+            "pmid": "12822993",
+            "xmlid": "CIT0037"
+        },
+        {
+            "bibentry": "Mattossovich, R, Merlo, R, Fontana, A, et al. A journey down to hell: new thermostable protein-tags for biotechnology at high temperatures. Extremophiles 2020; 24: 81–91. PMID: 31555904",
+            "process_entry": "True",
+            "doi": "10.1007/s00792-019-01134-3",
+            "pmid": "31555904",
+            "xmlid": "CIT0038"
+        },
+        {
+            "bibentry": "Rossi, F, Morrone, C, Massarotti, A, et al. Crystal structure of a thermophilic O6-alkylguanine-DNA alkyltransferase-derived self-labeling protein-tag in covalent complex with a fluorescent probe. Biochem Biophys Res Commun 2018; 500: 698–703. PMID: 29684348",
+            "process_entry": "True",
+            "doi": "10.1016/j.bbrc.2018.04.139",
+            "pmid": "29684348",
+            "xmlid": "CIT0039"
+        },
+        {
+            "bibentry": "Banks, JL, Beard, HS, Cao, Y, et al. Integrated Modeling Program, Applied Chemical Theory (IMPACT). J Comput Chem 2005; 26: 1752–80. PMID: 16211539",
+            "process_entry": "True",
+            "doi": "10.1002/jcc.20292",
+            "pmid": "16211539",
+            "pmcid": "PMC2742605",
+            "xmlid": "CIT0040"
+        },
+        {
+            "bibentry": "Toukmaji, AY, Board, JA, Jr,. Ewald summation techniques in perspective: a survey. Comput Phys Commun 1996; 95: 73–92.",
+            "process_entry": "True",
+            "xmlid": "CIT0041"
+        },
+        {
+            "bibentry": "Zielkiewicz, J. Structural properties of water: comparison of the SPC, SPCE, TIP4P, and TIP5P models of water. J Chem Phys 2005; 123: 104501. PMID: 16178604",
+            "process_entry": "True",
+            "doi": "10.1063/1.2018637",
+            "pmid": "16178604",
+            "xmlid": "CIT0042"
+        },
+        {
+            "bibentry": "Martyna, GJ, Klein, ML, Tuckerman, M. Reversible multiple time scale molecular dynamics. J Chem Phys 1992; 97: 2635–43.",
+            "process_entry": "True",
+            "xmlid": "CIT0043"
+        },
+        {
+            "bibentry": "Evans, DJ, Holian, BL. The Nose–Hoover thermostat. J Chem Phys 1985; 3: 4069.",
+            "process_entry": "True",
+            "xmlid": "CIT0044"
+        },
+        {
+            "bibentry": "Miggiano, R, Perugino, G, Ciaramella, M, et al. Crystal structure of Mycobacterium tuberculosis O6-methylguanine-DNA methyltransferase protein clusters assembled on to damaged DNA. Biochem J 2016; 473: 123–33. PMID: 26512127",
+            "process_entry": "True",
+            "doi": "10.1042/bj20150833",
+            "pmid": "26512127",
+            "xmlid": "CIT0045"
+        },
+        {
+            "bibentry": "Morrone, C, Miggiano, R, Serpe, M, et al. Interdomain interactions rearrangements control the reaction steps of a thermostable DNA alkyltransferase. Biochim Biophys Acta Gen Subj 2017; 1861: 86–96. PMID: 27777086",
+            "process_entry": "True",
+            "doi": "10.1016/j.bbagen.2016.10.020",
+            "pmid": "27777086",
+            "xmlid": "CIT0046"
+        },
+        {
+            "bibentry": "Ranson, M, Middleton, MR, Bridgewater, J, et al. Lomeguatrib, a potent inhibitor of O6-alkylguanine-DNA-alkyltransferase: phase I safety, pharmacodynamic, and pharmacokinetic trial and evaluation in combination with temozolomide in patients with advanced solid tumors. Clin Cancer Res 2006; 12: 1577–84. PMID: 16533784",
+            "process_entry": "True",
+            "doi": "10.1158/1078-0432.ccr-05-2198",
+            "pmid": "16533784",
+            "xmlid": "CIT0047"
+        },
+        {
+            "bibentry": "Colombo, M, Mazzucchelli, S, Montenegro, JM, et al. Protein oriented ligation on nanoparticles exploiting O6-alkylguanine-DNA transferase (SNAP) genetically encoded fusion. Small 2012; 8: 1492–7. PMID: 22431243",
+            "process_entry": "True",
+            "doi": "10.1002/smll.201102284",
+            "pmid": "22431243",
+            "xmlid": "CIT0048"
+        },
+        {
+            "bibentry": "Song, X, Wang, C, Han, Z, et al. Terminal alkyne substituted O6-benzylguanine for versatile and effective syntheses of fluorescent labels to genetically encoded SNAP-tags. RSC Adv 2015; 5: 23646–9.",
+            "process_entry": "True",
+            "xmlid": "CIT0049"
+        },
+        {
+            "bibentry": "Ferraris, DM, Spallek, R, Oehlmann, W, et al. Structure of Thermococcus litoralis Δ 1‐pyrroline‐2‐carboxylate reductase in complex with NADH and L‐proline. Proteins 2014; 82: 2268–74. PMID: 24615888",
+            "process_entry": "True",
+            "doi": "10.1002/prot.24548",
+            "pmid": "24615888",
+            "xmlid": "CIT0050"
+        },
+        {
+            "bibentry": "Huber, W, Perspicace, S, Kohler, J, et al. SPR-based interaction studies with small molecular weight ligands using hAGT fusion proteins. Anal Biochem 2004; 333: 280–8. PMID: 15450803",
+            "process_entry": "True",
+            "doi": "10.1016/j.ab.2004.05.058",
+            "pmid": "15450803",
+            "xmlid": "CIT0051"
+        },
+        {
+            "bibentry": "Niesen, J, Sack, M, Seidel, M, et al. SNAP-Tag technology: a useful tool to determine affinity constants and other functional parameters of novel antibody fragments. Bioconjug Chem 2016; 27: 1931–41. PMID: 27391930",
+            "process_entry": "True",
+            "doi": "10.1021/acs.bioconjchem.6b00315",
+            "pmid": "27391930",
+            "xmlid": "CIT0052"
+        },
+        {
+            "bibentry": "Testa, I, Wurm, CA, Medda, R, et al. Multicolor fluorescence nanoscopy in fixed and living cells by exciting conventional fluorophores with a single wavelength. Biophys J 2010; 99: 2686–94. PMID: 20959110",
+            "process_entry": "True",
+            "doi": "10.1016/j.bpj.2010.08.012",
+            "pmid": "20959110",
+            "pmcid": "PMC2956215",
+            "xmlid": "CIT0053"
+        },
+        {
+            "bibentry": "Miggiano, R, Valenti, A, Rossi, F, et al. Every OGT is illuminated … by fluorescent and synchrotron lights. Int J Mol Sci 2017; 18: 2613–31.",
+            "process_entry": "True",
+            "xmlid": "CIT0054"
+        },
+        {
+            "bibentry": "Zweerink, S, Kallnik, V, Ninck, S, et al. Activity-based protein profiling as a robust method for enzyme identification and screening in extremophilic Archaea. Nat Commun 2017; 8: 15352. PMID: 28480883",
+            "process_entry": "True",
+            "doi": "10.1038/ncomms15352",
+            "pmid": "28480883",
+            "pmcid": "PMC5424146",
+            "xmlid": "CIT0055"
+        }
+    ],
+    "localid": "MED-33121288",
+    "doi": "10.1080/14756366.2020.1841182",
+    "pmid": "33121288",
+    "pmcid": "PMC7599001",
+    "curator": "BEE EuropeanPubMedCentralProcessor",
+    "source_provider": "Europe PubMed Central",
+    "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/33121288/fullTextXML",
+    "reference_pointers": []
+}

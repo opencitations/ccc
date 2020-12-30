@@ -396,7 +396,9 @@ class CrossrefDataHandler(object):
                                     CrossrefDataHandler.add_volume_data(vol_br, cur_volume_id)
                                     jou_br.has_part(vol_br)
                                     self.rf.add_volume_to_store(jou_br.res, vol_br, cur_volume_id)
-                                
+                                else:
+                                    vol_br = self.g_set.add_br(
+                                        self.name, self.id, source, retrieved_volume)
                                 vol_br.has_part(cont_br)
                             
                             self.rf.add_issue_to_store(jou_br.res, cur_volume_id, cur_issue_id, cont_br)

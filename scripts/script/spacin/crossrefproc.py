@@ -453,7 +453,7 @@ class CrossrefProcessor(FormatProcessor):
     def __add_url(self, cur_res, extracted_url):
         # self.rf.update_graph_set(self.g_set)
         if extracted_url is not None:
-            cur_id = self.rf.retrieve_br_url(cur_res.res, extracted_url, typ='only_local')
+            cur_id = self.rf.retrieve_br_url(cur_res.res, extracted_url, typ='both')
 
             if cur_id is None:
                 cur_id = self.g_set.add_id(self.name, self.source_provider, self.source)
@@ -468,7 +468,7 @@ class CrossrefProcessor(FormatProcessor):
     def __add_pmid(self, cur_res, pmid_string):
         # self.rf.update_graph_set(self.g_set)
         if pmid_string is not None:
-            cur_id = self.rf.retrieve_br_pmid(cur_res.res, pmid_string, typ='only_local')
+            cur_id = self.rf.retrieve_br_pmid(cur_res.res, pmid_string, typ='both')
 
             if cur_id is None:
                 cur_id = self.g_set.add_id(self.curator, self.source_provider, self.source)
@@ -483,7 +483,7 @@ class CrossrefProcessor(FormatProcessor):
     def __add_pmcid(self, cur_res, pmcid_string):
         # self.rf.update_graph_set(self.g_set)
         if pmcid_string is not None:
-            cur_id = self.rf.retrieve_br_pmcid(cur_res.res, pmcid_string, typ='only_local')
+            cur_id = self.rf.retrieve_br_pmcid(cur_res.res, pmcid_string, typ='both')
 
             if cur_id is None:
                 cur_id = self.g_set.add_id(self.curator, self.source_provider, self.source)
@@ -499,9 +499,9 @@ class CrossrefProcessor(FormatProcessor):
         # self.rf.update_graph_set(self.g_set)
         if extracted_doi is not None:
             if hasattr(cur_res, 'res'):
-                cur_id = self.rf.retrieve_br_doi(cur_res.res, extracted_doi, typ='only_local')
+                cur_id = self.rf.retrieve_br_doi(cur_res.res, extracted_doi, typ='both')
             else:
-                cur_id = self.rf.retrieve_br_doi(cur_res, extracted_doi, typ='only_local')
+                cur_id = self.rf.retrieve_br_doi(cur_res, extracted_doi, typ='both')
 
             if cur_id is None:
                 cur_id = self.g_set.add_id(curator, self.source_provider, self.source)
@@ -521,17 +521,17 @@ class CrossrefProcessor(FormatProcessor):
 
     # Local version
     def process_pmid(self, pmid):
-        existing_res = self.rf.retrieve_from_pmid(pmid, typ='only_local')
+        existing_res = self.rf.retrieve_from_pmid(pmid, typ='both')
         return self.process_existing_by_id(existing_res, self.id)
 
     # Local version
     def process_pmcid(self, pmcid):
-        existing_res = self.rf.retrieve_from_pmcid(pmcid, typ='only_local')
+        existing_res = self.rf.retrieve_from_pmcid(pmcid, typ='both')
         return self.process_existing_by_id(existing_res, self.id)
 
     # Local version
     def process_url(self, url):
-        existing_res = self.rf.retrieve_from_url(url, typ='only_local')
+        existing_res = self.rf.retrieve_from_url(url, typ='both')
         return self.process_existing_by_id(existing_res, self.id)
 
     # Add the number of triples in the graph in a local array in order to do troubleshooting

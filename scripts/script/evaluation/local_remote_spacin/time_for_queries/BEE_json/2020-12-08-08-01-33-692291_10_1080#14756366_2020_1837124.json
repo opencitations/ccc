@@ -1,0 +1,427 @@
+{
+    "references": [
+        {
+            "bibentry": "Ferguson, FM, Gray, NS. Kinase inhibitors: the road ahead. Nat Rev Drug Discov 2018; 17: 353–77. PMID: 29545548",
+            "process_entry": "True",
+            "doi": "10.1038/nrd.2018.21",
+            "pmid": "29545548",
+            "xmlid": "CIT0001"
+        },
+        {
+            "bibentry": "Bhullar, KS, Lagaron, NO, McGowan, EM, et al. Kinase-targeted cancer therapies: progress, challenges and future directions. Mol Cancer 2018; 17: 48. PMID: 29455673",
+            "process_entry": "True",
+            "doi": "10.1186/s12943-018-0804-2",
+            "pmid": "29455673",
+            "pmcid": "PMC5817855",
+            "xmlid": "CIT0002"
+        },
+        {
+            "bibentry": "Wu, P, Nielsen, TE, Clausen, MH. FDA-approved small-molecule kinase inhibitors. Trends Pharmacol Sci 2015; 36: 422–39. PMID: 25975227",
+            "process_entry": "True",
+            "doi": "10.1016/j.tips.2015.04.005",
+            "pmid": "25975227",
+            "xmlid": "CIT0003"
+        },
+        {
+            "bibentry": "Roskoski, R, Jr. Properties of FDA-approved small molecule protein kinase inhibitors: a 2020 update. Pharmacol Res 2020; 152: 104609. PMID: 31862477",
+            "process_entry": "True",
+            "doi": "10.1016/j.phrs.2019.104609",
+            "pmid": "31862477",
+            "xmlid": "CIT0004"
+        },
+        {
+            "bibentry": "Jeong, W, Doroshow, JH, Kummar, S. United States Food and Drug Administration approved oral kinase inhibitors for the treatment of malignancies. Curr Probl Cancer 2013; 37: 110–44. PMID: 23972982",
+            "process_entry": "True",
+            "doi": "10.1016/j.currproblcancer.2013.06.001",
+            "pmid": "23972982",
+            "pmcid": "PMC3761410",
+            "xmlid": "CIT0005"
+        },
+        {
+            "bibentry": "Tadesse, S, Caldon, EC, Tilley, W, Wang, S. Cyclin-dependent kinase 2 inhibitors in cancer therapy: an update. J Med Chem 2019; 62: 4233–51. PMID: 30543440",
+            "process_entry": "True",
+            "doi": "10.1021/acs.jmedchem.8b01469",
+            "pmid": "30543440",
+            "xmlid": "CIT0006"
+        },
+        {
+            "bibentry": "Tsai, LH, Lees, E, Faha, B, et al. The cdk2 kinase is required for the G1-to-S transition in mammalian cells. Oncogene 1993; 8: 1593–602. PMID: 8502482",
+            "process_entry": "True",
+            "pmid": "8502482",
+            "xmlid": "CIT0007"
+        },
+        {
+            "bibentry": "Keyomarsi, K, Pardee, AB. Redundant cyclin overexpression and gene amplification in breast cancer cells. Proc Natl Acad Sci U S A 1993; 90: 1112–6. PMID: 8430082",
+            "process_entry": "True",
+            "doi": "10.1073/pnas.90.3.1112",
+            "pmid": "8430082",
+            "pmcid": "PMC45821",
+            "xmlid": "CIT0008"
+        },
+        {
+            "bibentry": "Yang, L, Fang, D, Chen, H, et al. Cyclin-dependent kinase 2 is an ideal target for ovary tumors with elevated cyclin E1 expression. Oncotarget 2015; 6: 20801–12. PMID: 26204491",
+            "process_entry": "True",
+            "doi": "10.18632/oncotarget.4600",
+            "pmid": "26204491",
+            "pmcid": "PMC4673230",
+            "xmlid": "CIT0009"
+        },
+        {
+            "bibentry": "Yamamoto, H, Monden, T, Miyoshi, H, et al. Cdk2/cdc2 expression in colon carcinogenesis and effects of cdk2/cdc2 inhibitor in colon cancer cells. Int J Oncol 1998; 13: 233–9. PMID: 9664116",
+            "process_entry": "True",
+            "doi": "10.3892/ijo.13.2.233",
+            "pmid": "9664116",
+            "xmlid": "CIT0010"
+        },
+        {
+            "bibentry": "Wang, J, Yang, T, Xu, G, et al. Cyclin-dependent kinase 2 promotes tumor proliferation and induces radio resistance in glioblastoma. Transl Oncol 2016; 9: 548–56. PMID: 27863310",
+            "process_entry": "True",
+            "doi": "10.1016/j.tranon.2016.08.007",
+            "pmid": "27863310",
+            "pmcid": "PMC5118617",
+            "xmlid": "CIT0011"
+        },
+        {
+            "bibentry": "Faber, AC, Chiles, TC. Inhibition of cyclin-dependent kinase-2 induces apoptosis in human diffuse large B-cell lymphomas. Cell Cycle 2007; 6: 2982–9. PMID: 18156799",
+            "process_entry": "True",
+            "doi": "10.4161/cc.6.23.4994",
+            "pmid": "18156799",
+            "xmlid": "CIT0012"
+        },
+        {
+            "bibentry": "Yin, X, Yu, J, Zhou, Y, et al. Identification of CDK2 as a novel target in treatment of prostate cancer. Future Oncol 2018; 14: 709–18. PMID: 29323532",
+            "process_entry": "True",
+            "doi": "10.2217/fon-2017-0561",
+            "pmid": "29323532",
+            "xmlid": "CIT0013"
+        },
+        {
+            "bibentry": "Lin, ZP, Zhu, YL, Ratner, ES. Targeting cyclin-dependent kinases for treatment of gynecologic cancers. Front Oncol 2018; 8: 303. PMID: 30135856",
+            "process_entry": "True",
+            "doi": "10.3389/fonc.2018.00303",
+            "pmid": "30135856",
+            "pmcid": "PMC6092490",
+            "xmlid": "CIT0014"
+        },
+        {
+            "bibentry": "Hamdouchi, C, Keyser, H, Collins, E, et al. The discovery of a new structural class of cyclin-dependent kinase inhibitors, aminoimidazo[1,2-a]pyridines. Mol Cancer Ther 2004; 3: 1–9. PMID: 14749470",
+            "process_entry": "True",
+            "doi": "10.1186/1476-4598-3-1",
+            "pmid": "14749470",
+            "xmlid": "CIT0015"
+        },
+        {
+            "bibentry": "Wyatt, PG, Woodhead, AJ, Berdini, V, et al. Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H-pyrazole-3-carboxamide (AT7519), a novel cyclin dependent kinase inhibitor using fragment-based X-ray crystallography and structure based drug design. J Med Chem 2008; 51: 4986–99. PMID: 18656911",
+            "process_entry": "True",
+            "doi": "10.1021/jm800382h",
+            "pmid": "18656911",
+            "xmlid": "CIT0016"
+        },
+        {
+            "bibentry": "Seftel, MD, Kuruvilla, J, Kouroukis, T, et al. The CDK inhibitor AT7519M in patients with relapsed or refractory chronic lymphocytic leukemia (CLL) and mantle cell lymphoma. A Phase II study of the Canadian Cancer Trials Group. Leuk Lymphoma 2017; 58: 1358–65. PMID: 27750483",
+            "process_entry": "True",
+            "doi": "10.1080/10428194.2016.1239259",
+            "pmid": "27750483",
+            "xmlid": "CIT0017"
+        },
+        {
+            "bibentry": "Cheng, C, Yun, F, Ullah, S, Yuan, Q. Discovery of novel cyclin-dependent kinase (CDK) and histone deacetylase (HDAC) dual inhibitors with potent in vitro and in vivo anticancer activity. Eur J Med Chem 2020; 189: 112073. PMID: 31991336",
+            "process_entry": "True",
+            "doi": "10.1016/j.ejmech.2020.112073",
+            "pmid": "31991336",
+            "xmlid": "CIT0018"
+        },
+        {
+            "bibentry": "Honma, T, Hayashi, K, Aoyama, T, et al. Structure-based generation of a new class of potent Cdk4 inhibitors: new de novo design strategy and library design. J Med Chem 2001; 44: 4615–27. PMID: 11741479",
+            "process_entry": "True",
+            "doi": "10.1021/jm0103256",
+            "pmid": "11741479",
+            "xmlid": "CIT0019"
+        },
+        {
+            "bibentry": "Payton, M, Chung, G, Yakowec, P, et al. Discovery and evaluation of dual CDK1 and CDK2 inhibitors. Cancer Res 2006; 66: 4299–308. PMID: 16618755",
+            "process_entry": "True",
+            "doi": "10.1158/0008-5472.can-05-2507",
+            "pmid": "16618755",
+            "xmlid": "CIT0020"
+        },
+        {
+            "bibentry": "Wróbel, TM, Kiełbus, M, Kaczor, AA, et al. Discovery of nitroaryl urea derivatives with antiproliferative properties. J Enzyme Inhib Med Chem 2016; 31: 608–18. PMID: 26114307",
+            "process_entry": "True",
+            "doi": "10.3109/14756366.2015.1057716",
+            "pmid": "26114307",
+            "xmlid": "CIT0021"
+        },
+        {
+            "bibentry": "Alexander, LT, Möbitz, H, Drueckes, P, et al. Type II inhibitors targeting CDK2. ACS Chem Biol 2015; 10: 2116–25. PMID: 26158339",
+            "process_entry": "True",
+            "doi": "10.1021/acschembio.5b00398",
+            "pmid": "26158339",
+            "xmlid": "CIT0022"
+        },
+        {
+            "bibentry": "Gouda, AM, Abdelazeem, AH, Arafa, e-SA, Abdellatif, KR. Design, synthesis and pharmacological evaluation of novel pyrrolizine derivatives as potential anticancer agents. Bioorg Chem 2014; 53: 1–7. PMID: 24462996",
+            "process_entry": "True",
+            "doi": "10.1016/j.bioorg.2014.01.001",
+            "pmid": "24462996",
+            "xmlid": "CIT0023"
+        },
+        {
+            "bibentry": "Gouda, AM, Abdelazeem, AH, Omar, HA, et al. Pyrrolizines: design, synthesis, anticancer evaluation and investigation of the potential mechanism of action. Bioorg Med Chem 2017; 25: 5637–51. PMID: 28916158",
+            "process_entry": "True",
+            "doi": "10.1016/j.bmc.2017.08.039",
+            "pmid": "28916158",
+            "xmlid": "CIT0024"
+        },
+        {
+            "bibentry": "Shawky, AM, Abourehab, MAS, Abdalla, AN, Gouda, AM. Optimization of pyrrolizine-based Schiff bases with 4-thiazolidinone motif: design, synthesis and investigation of cytotoxicity and anti-inflammatory potency. Eur J Med Chem 2020; 185: 111780. PMID: 31655429",
+            "process_entry": "True",
+            "doi": "10.1016/j.ejmech.2019.111780",
+            "pmid": "31655429",
+            "xmlid": "CIT0025"
+        },
+        {
+            "bibentry": "Cheng, W, Yang, Z, Wang, S, et al. Recent development of CDK inhibitors: an overview of CDK/inhibitor co-crystal structures. Eur J Med Chem 2019; 164: 615–39. PMID: 30639897",
+            "process_entry": "True",
+            "doi": "10.1016/j.ejmech.2019.01.003",
+            "pmid": "30639897",
+            "xmlid": "CIT0026"
+        },
+        {
+            "bibentry": "Tutone, M, Almerico, AM. Recent advances on CDK inhibitors: an insight by means of in silico methods. Eur J Med Chem 2017; 142: 300–15. PMID: 28802482",
+            "process_entry": "True",
+            "doi": "10.1016/j.ejmech.2017.07.067",
+            "pmid": "28802482",
+            "xmlid": "CIT0027"
+        },
+        {
+            "bibentry": "Ece, A, Sevin, F. The discovery of potential cyclin A/CDK2 inhibitors: a combination of 3D QSAR pharmacophore modeling, virtual screening, and molecular docking studies. Med Chem Res 2013; 22: 5832–43.",
+            "process_entry": "True",
+            "xmlid": "CIT0028"
+        },
+        {
+            "bibentry": "Mohammad, T, Batra, S, Dahiya, R, et al. Identification of high-affinity inhibitors of cyclin-dependent kinase 2 towards anticancer therapy. Molecules 2019; 24: 4589.",
+            "process_entry": "True",
+            "xmlid": "CIT0029"
+        },
+        {
+            "bibentry": "Nakanishi, I, Murata, K, Nagata, N, et al. Identification of protein kinase CK2 inhibitors using solvent dipole ordering virtual screening. Eur J Med Chem 2015; 96: 396–404. PMID: 25912672",
+            "process_entry": "True",
+            "doi": "10.1016/j.ejmech.2015.04.032",
+            "pmid": "25912672",
+            "xmlid": "CIT0030"
+        },
+        {
+            "bibentry": "Zhang, Q, Muegge, I. Scaffold hopping through virtual screening using 2D and 3D similarity descriptors: ranking, voting, and consensus scoring. J Med Chem 2006; 49: 1536–48. PMID: 16509572",
+            "process_entry": "True",
+            "doi": "10.1021/jm050468i",
+            "pmid": "16509572",
+            "xmlid": "CIT0031"
+        },
+        {
+            "bibentry": "Liang, J-W, Wang, M-Y, Wang, S, et al. Identification of novel CDK2 inhibitors by a multistage virtual screening method based on SVM, pharmacophore and docking model. J Enzyme Inhib Med Chem 2020; 35: 235–44. PMID: 31760818",
+            "process_entry": "True",
+            "doi": "10.1080/14756366.2019.1693702",
+            "pmid": "31760818",
+            "pmcid": "PMC6882486",
+            "xmlid": "CIT0032"
+        },
+        {
+            "bibentry": "Poulsen, A, William, A, Blanchard, S, et al. Structure-based design of nitrogen-linked macrocyclic kinase inhibitors leading to the clinical candidate SB1317/TG02, a potent inhibitor of cyclin dependant kinases (CDKs), Janus kinase 2 (JAK2), and Fms-like tyrosine kinase-3 (FLT3). J Mol Model 2013; 19: 119–30. PMID: 22820730",
+            "process_entry": "True",
+            "doi": "10.1007/s00894-012-1528-7",
+            "pmid": "22820730",
+            "xmlid": "CIT0033"
+        },
+        {
+            "bibentry": "Horvath, D. Pharmacophore-based virtual screening. Methods Mol Biol 2011; 672: 261–98. PMID: 20838973",
+            "process_entry": "True",
+            "doi": "10.1007/978-1-60761-839-3_11",
+            "pmid": "20838973",
+            "xmlid": "CIT0034"
+        },
+        {
+            "bibentry": "Hu, Y, Li, S, Liu, F, et al. Discovery of novel nonpeptide allosteric inhibitors interrupting the interaction of CDK2/cyclin A3 by virtual screening and bioassays. Bioorg Med Chem Lett 2015; 25: 4069–73. PMID: 26316466",
+            "process_entry": "True",
+            "doi": "10.1016/j.bmcl.2015.08.050",
+            "pmid": "26316466",
+            "xmlid": "CIT0035"
+        },
+        {
+            "bibentry": "Sunseri, J, Koes, DR. Pharmit: interactive exploration of chemical space. Nucleic Acids Res 2016; 44: W442–8. PMID: 27095195",
+            "process_entry": "True",
+            "doi": "10.1093/nar/gkw287",
+            "pmid": "27095195",
+            "pmcid": "PMC4987880",
+            "xmlid": "CIT0036"
+        },
+        {
+            "bibentry": "Gouda, AM, Ali, HI, Almalki, WH, Azim, MA, et al. Design, synthesis, and biological evaluation of some novel pyrrolizine derivatives as COX inhibitors with anti-inflammatory/analgesic activities and low ulcerogenic liability. Molecules 2016; 21: 201.",
+            "process_entry": "True",
+            "xmlid": "CIT0037"
+        },
+        {
+            "bibentry": "Attalah, KM, Abdalla, AN, Aslam, A, Ahmed, M, et al. Ethyl benzoate bearing pyrrolizine/indolizine moieties: design, synthesis and biological evaluation of anti-inflammatory and cytotoxic activities. Bioorg Chem 2020; 94: 103371. PMID: 31708230",
+            "process_entry": "True",
+            "doi": "10.1016/j.bioorg.2019.103371",
+            "pmid": "31708230",
+            "xmlid": "CIT0038"
+        },
+        {
+            "bibentry": "Gouda, AM, Abdelazeem, AH, Abdalla, AN, Ahmed, M. Pyrrolizine-5-carboxamides: exploring the impact of various substituents on anti-inflammatory and anticancer activities. Acta Pharm 2018; 68: 251–73. PMID: 31259695",
+            "process_entry": "True",
+            "doi": "10.2478/acph-2018-0026",
+            "pmid": "31259695",
+            "xmlid": "CIT0039"
+        },
+        {
+            "bibentry": "Belal, A, Gouda, AM, Ahmed, AS, Abdel Gawad, NM. Synthesis of novel indolizine, diazepinoindolizine and pyrimidoindolizine derivatives as potent and selective anticancer agents. Res Chem Intermed 2015; 41: 9687–701.",
+            "process_entry": "True",
+            "xmlid": "CIT0040"
+        },
+        {
+            "bibentry": "Elsaady, MT, Gouda, AM, Edrees, FH, Gawad, NMA. Synthesis and biological evaluation of some novel Schiff base derivatives as potential anticancer agents. J Chem Pharm Res 2016; 8: 273–82.",
+            "process_entry": "True",
+            "xmlid": "CIT0041"
+        },
+        {
+            "bibentry": "Malki, WH, Gouda, AM, Ali, HEA, et al. Structural-based design, synthesis, and antitumor activity of novel alloxazine analogues with potential selective kinase inhibition. Eur J Med Chem 2018; 152: 31–52. PMID: 29684708",
+            "process_entry": "True",
+            "doi": "10.1016/j.ejmech.2018.04.029",
+            "pmid": "29684708",
+            "xmlid": "CIT0042"
+        },
+        {
+            "bibentry": "Alkahtani, HM, Alanazi, MM, Aleanizy, FS, et al. Synthesis, anticancer, apoptosis-inducing activities and EGFR and VEGFR2 assay mechanistic studies of 5,5-diphenylimidazolidine-2,4-dione derivatives: molecular docking studies. Saudi Pharm J 2019; 27: 682–93. PMID: 31297023",
+            "process_entry": "True",
+            "doi": "10.1016/j.jsps.2019.04.003",
+            "pmid": "31297023",
+            "pmcid": "PMC6598223",
+            "xmlid": "CIT0043"
+        },
+        {
+            "bibentry": "Abdalla, AN, Shaheen, U, Abdallah, QMA, et al. Proapoptotic activity of Achillea membranacea essential oil and its major constituent 1,8-cineole against A2780 ovarian cancer cells. Molecules 2020; 25: 1582.",
+            "process_entry": "True",
+            "xmlid": "CIT0044"
+        },
+        {
+            "bibentry": "Wang, Y, Chen, Y, Cheng, X, et al. Design, synthesis and biological evaluation of pyrimidine derivatives as novel CDK2 inhibitors that induce apoptosis and cell cycle arrest in breast cancer cells. Bioorg Med Chem 2018; 26: 3491–501. PMID: 29853338",
+            "process_entry": "True",
+            "doi": "10.1016/j.bmc.2018.05.024",
+            "pmid": "29853338",
+            "xmlid": "CIT0045"
+        },
+        {
+            "bibentry": "Morris, GM, Huey, R, Lindstrom, W, et al. AutoDock4 and AutoDockTools4: automated docking with selective receptor flexibility. J Comput Chem 2009; 30: 2785–91. PMID: 19399780",
+            "process_entry": "True",
+            "doi": "10.1002/jcc.21256",
+            "pmid": "19399780",
+            "pmcid": "PMC2760638",
+            "xmlid": "CIT0046"
+        },
+        {
+            "bibentry": "Gouda, AM, Almalki, FA. Carprofen: a theoretical mechanistic study to investigate the impact of hydrophobic interactions of alkyl groups on modulation of COX-1/2 binding selectivity. SN Appl Sci 2019; 1: 332.",
+            "process_entry": "True",
+            "xmlid": "CIT0047"
+        },
+        {
+            "bibentry": "Almalki, FA, Gouda, AM, Bin Ali, MH, Almehmadi, OM. Profens: a comparative molecular docking study into cyclooxygenase-1/2. Drug Invent Today 2019; 11: 480–7.",
+            "process_entry": "True",
+            "xmlid": "CIT0048"
+        },
+        {
+            "bibentry": "Attallah, KM, Gouda, AM, Ibrahim, IT, Abouzeid, L. Design, synthesis, 99mTc labeling, and biological evaluation of a novel pyrrolizine derivative as potential anti-inflammatory agent. Radiochemistry 2017; 59: 630–8.",
+            "process_entry": "True",
+            "xmlid": "CIT0049"
+        },
+        {
+            "bibentry": "Dassault Systems BIOVIA, Discovery studio visualizer, v16.1.0.15350. San Diego (CA): Dassault Systems; 2016.",
+            "process_entry": "True",
+            "xmlid": "CIT0050"
+        },
+        {
+            "bibentry": "Lu, H, Schulze-Gahmen, U. Toward understanding the structural basis of cyclin-dependent kinase 6 specific inhibition. J Med Chem 2006; 49: 3826–31. PMID: 16789739",
+            "process_entry": "True",
+            "doi": "10.1021/jm0600388",
+            "pmid": "16789739",
+            "xmlid": "CIT0051"
+        },
+        {
+            "bibentry": "Baumli, S, Hole, AJ, Noble, ME, Endicott, JA. The CDK9 C-helix exhibits conformational plasticity that may explain the selectivity of CAN508. ACS Chem Biol 2012; 7: 811–6. PMID: 22292676",
+            "process_entry": "True",
+            "doi": "10.1021/cb2004516",
+            "pmid": "22292676",
+            "pmcid": "PMC3355656",
+            "xmlid": "CIT0052"
+        },
+        {
+            "bibentry": "Daina, A, Michielin, O, Zoete, V. SwissADME: a free web tool to evaluate pharmacokinetics, drug-likeness and medicinal chemistry friendliness of small molecules. Sci Rep 2017; 7: 42717. PMID: 28256516",
+            "process_entry": "True",
+            "doi": "10.1038/srep42717",
+            "pmid": "28256516",
+            "pmcid": "PMC5335600",
+            "xmlid": "CIT0053"
+        },
+        {
+            "bibentry": "Lipinski, CA, Lombardo, F, Dominy, BW, Feeney, PJ. Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings. Adv Drug Deliv Rev 1997; 23: 3–25.",
+            "process_entry": "True",
+            "xmlid": "CIT0054"
+        },
+        {
+            "bibentry": "Zhao, YH, Abraham, MH, Le, J, et al. Rate-limited steps of human oral absorption and QSAR studies. Pharm Res 2002; 19: 1446–57. PMID: 12425461",
+            "process_entry": "True",
+            "doi": "10.1023/a:1020444330011",
+            "pmid": "12425461",
+            "xmlid": "CIT0055"
+        },
+        {
+            "bibentry": "Atkins, JH, Gershell, LJ. Selective anticancer drugs. Nat Rev Drug Discov 2002; 1: 491–2. PMID: 12120255",
+            "process_entry": "True",
+            "doi": "10.1038/nrd842",
+            "pmid": "12120255",
+            "xmlid": "CIT0056"
+        },
+        {
+            "bibentry": "Asghar, U, Witkiewicz, AK, Turner, NC, Knudsen, ES. The history and future of targeting cyclin-dependent kinases in cancer therapy. Nat Rev Drug Discov 2015; 14: 130–46. PMID: 25633797",
+            "process_entry": "True",
+            "doi": "10.1038/nrd4504",
+            "pmid": "25633797",
+            "pmcid": "PMC4480421",
+            "xmlid": "CIT0057"
+        },
+        {
+            "bibentry": "Wang, J, Urbán, L. The impact of early ADME profiling on drug discovery and development strategy. DDW Drug Discov World 2004; 5: 73–86.",
+            "process_entry": "True",
+            "xmlid": "CIT0058"
+        },
+        {
+            "bibentry": "Li, AP. Screening for human ADME/Tox drug properties in drug discovery. Drug Discov Today 2001; 6: 357–66. PMID: 11267922",
+            "process_entry": "True",
+            "doi": "10.1016/s1359-6446(01)01712-3",
+            "pmid": "11267922",
+            "xmlid": "CIT0059"
+        },
+        {
+            "bibentry": "Gleeson, MP, Hersey, A, Hannongbua, S. In-silico ADME models: a general assessment of their utility in drug discovery applications. Curr Top Med Chem 2011; 11: 358–81. PMID: 21320065",
+            "process_entry": "True",
+            "doi": "10.2174/156802611794480927",
+            "pmid": "21320065",
+            "xmlid": "CIT0060"
+        },
+        {
+            "bibentry": "Yan, G, Wang, X, Chen, Z, et al. In-silico ADME studies for new drug discovery: from chemical compounds to Chinese herbal medicines. Curr Drug Metab 2017; 18: 535–9. PMID: 28302029",
+            "process_entry": "True",
+            "doi": "10.2174/1389200218666170316094104",
+            "pmid": "28302029",
+            "xmlid": "CIT0061"
+        }
+    ],
+    "localid": "MED-33103497",
+    "doi": "10.1080/14756366.2020.1837124",
+    "pmid": "33103497",
+    "pmcid": "PMC7594867",
+    "curator": "BEE EuropeanPubMedCentralProcessor",
+    "source_provider": "Europe PubMed Central",
+    "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/33103497/fullTextXML",
+    "reference_pointers": []
+}

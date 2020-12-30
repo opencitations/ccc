@@ -1,0 +1,254 @@
+{
+    "references": [
+        {
+            "bibentry": "Agostini, V, Chiaramello, E, Canavese, L, Bredariol, C, Knaflitz, M. Postural sway in volleyball players, Hum Mov Sci, 2013, 32, 445, 456, DOI: 10.1016/j.humov.2013.01.002, PMID: 23628360",
+            "process_entry": "True",
+            "doi": "10.1016/j.humov.2013.01.002",
+            "pmid": "23628360",
+            "xmlid": "CR1"
+        },
+        {
+            "bibentry": "Alpini, D, Mattei, V, Schlecht, H, Kohen-Raz, R. Postural control modifications induced by synchronized ice skating, Sport Sci Health, 2008, 3, 11, 17, DOI: 10.1007/s11332-008-0056-4",
+            "process_entry": "True",
+            "doi": "10.1007/s11332-008-0056-4",
+            "xmlid": "CR2"
+        },
+        {
+            "bibentry": "Kuczyński, M, Szymańska, M, Bieć, E. Dual-task effect on postural control in high-level competitive dancers, J Sports Sci, 2011, 29, 539, 545, DOI: 10.1080/02640414.2010.544046, PMID: 21294035",
+            "process_entry": "True",
+            "doi": "10.1080/02640414.2010.544046",
+            "pmid": "21294035",
+            "xmlid": "CR3"
+        },
+        {
+            "bibentry": "Stambolieva, K, Diafas, V, Bachev, V, Christova, L, Gatev, P. Postural stability of canoeing and kayaking young male athletes during quiet stance, Eur J Appl Physiol, 2012, 112, 1807, 1815, DOI: 10.1007/s00421-011-2151-5, PMID: 21909987",
+            "process_entry": "True",
+            "doi": "10.1007/s00421-011-2151-5",
+            "pmid": "21909987",
+            "xmlid": "CR4"
+        },
+        {
+            "bibentry": "Wulf, G. Attentional focus and motor learning: a review of 15 years, Int Rev Sport Exerc Psychol, 2013, 6, 77, 104, DOI: 10.1080/1750984X.2012.723728",
+            "process_entry": "True",
+            "doi": "10.1080/1750984x.2012.723728",
+            "xmlid": "CR5"
+        },
+        {
+            "bibentry": "Ihalainen, S, Linnamo, V, Mononen, K, Kuitunen, S. Relation of elite rifle shooters’ technique-test measures to competition performance, Int J Sports Physiol Perform, 2016, 11, 671, 677, DOI: 10.1123/ijspp.2015-0211, PMID: 26559498",
+            "process_entry": "True",
+            "doi": "10.1123/ijspp.2015-0211",
+            "pmid": "26559498",
+            "xmlid": "CR6"
+        },
+        {
+            "bibentry": "Era, P, Konttinen, N, Mehto, P, Saarela, P, Lyytinen, H. Postural stability and skilled performance-a study on top-level and naive rifle shooters, J Biomech, 1996, 29, 301, 306, DOI: 10.1016/0021-9290(95)00066-6, PMID: 8850636",
+            "process_entry": "True",
+            "doi": "10.1016/0021-9290(95)00066-6",
+            "pmid": "8850636",
+            "xmlid": "CR7"
+        },
+        {
+            "bibentry": "Paillard, T, Noé, F, Rivière, T, Marion, V, Montoya, R, Dupui, P. Postural performance and strategy in the unipedal stance of soccer players at different levels of competition, J Athl Train, 2006, 41, 2, 172, 176, PMID: 16791302",
+            "process_entry": "True",
+            "pmid": "16791302",
+            "pmcid": "PMC1472651",
+            "xmlid": "CR8"
+        },
+        {
+            "bibentry": "Asseman, F, Caron, O, Crémieux, J. Effects of the removal of vision on body sway during different postures in elite gymnasts, Int J Sports Med, 2005, 26, 116, 119, DOI: 10.1055/s-2004-830529, PMID: 15726495",
+            "process_entry": "True",
+            "doi": "10.1055/s-2004-830529",
+            "pmid": "15726495",
+            "xmlid": "CR9"
+        },
+        {
+            "bibentry": "Asseman, F, Caron, O, Crémieux, J. Is there a transfer of postural ability from specific to unspecific postures in elite gymnasts, Neurosci Lett, 2004, 358, 83, 86, DOI: 10.1016/j.neulet.2003.12.102, PMID: 15026154",
+            "process_entry": "True",
+            "doi": "10.1016/j.neulet.2003.12.102",
+            "pmid": "15026154",
+            "xmlid": "CR10"
+        },
+        {
+            "bibentry": "Sell, TC, Tsai, Y-S, Smoliga, JM, Myers, JB, Lephart, SM. Strength, flexibility, and balance characteristics of highly proficient golfers, J Strength Cond Res, 2007, 21, 4, 1166, 1171, PMID: 18076270",
+            "process_entry": "True",
+            "pmid": "18076270",
+            "xmlid": "CR11"
+        },
+        {
+            "bibentry": "Kim, M, Kim, Y, Kim, H, Yoon, B. Specific muscle synergies in national elite female ice hockey players in response to unexpected external perturbation, J Sports Sci, 2018, 36, 319, 325, DOI: 10.1080/02640414.2017.1306090, PMID: 28415899",
+            "process_entry": "True",
+            "doi": "10.1080/02640414.2017.1306090",
+            "pmid": "28415899",
+            "xmlid": "CR12"
+        },
+        {
+            "bibentry": "Gautier, G, Thouvarecq, R, Vuillerme, N. Postural control and perceptive configuration: influence of expertise in gymnastics, Gait Posture, 2008, 28, 46, 51, DOI: 10.1016/j.gaitpost.2007.09.007, PMID: 17976990",
+            "process_entry": "True",
+            "doi": "10.1016/j.gaitpost.2007.09.007",
+            "pmid": "17976990",
+            "xmlid": "CR13"
+        },
+        {
+            "bibentry": "Kuczyński M, Rektor Z, Borzucka D. Postural control in quiet stance in the second league male volleyball players. Hum Mov. 2009;10. 10.2478/v10038-008-0025-4.",
+            "process_entry": "True",
+            "xmlid": "CR14"
+        },
+        {
+            "bibentry": "Welch, TDJ, Ting, LH. Mechanisms of motor adaptation in reactive balance control, PLoS One, 2014, 9, e96440, DOI: 10.1371/journal.pone.0096440, PMID: 24810991",
+            "process_entry": "True",
+            "doi": "10.1371/journal.pone.0096440",
+            "pmid": "24810991",
+            "pmcid": "PMC4014487",
+            "xmlid": "CR15"
+        },
+        {
+            "bibentry": "Söderman, K, Werner, S, Pietilä, T, Engström, B, Alfredson, H. Balance board training: prevention of traumatic injuries of the lower extremities in female soccer players, Knee Surgery, Sport Traumatol Arthrosc, 2000, 8, 356, 363, DOI: 10.1007/s001670000147",
+            "process_entry": "True",
+            "doi": "10.1007/s001670000147",
+            "xmlid": "CR16"
+        },
+        {
+            "bibentry": "Verhagen, E, van der Beek, A, Twisk, J, Bouter, L, Bahr, R, van Mechelen, W. The effect of a proprioceptive balance board training program for the prevention of ankle sprains, Am J Sports Med, 2004, 32, 1385, 1393, DOI: 10.1177/0363546503262177, PMID: 15310562",
+            "process_entry": "True",
+            "doi": "10.1177/0363546503262177",
+            "pmid": "15310562",
+            "xmlid": "CR17"
+        },
+        {
+            "bibentry": "McGuine, TA, Keene, JS. The effect of a balance training program on the risk of ankle sprains in high school athletes, Am J Sports Med, 2006, 34, 1103, 1111, DOI: 10.1177/0363546505284191, PMID: 16476915",
+            "process_entry": "True",
+            "doi": "10.1177/0363546505284191",
+            "pmid": "16476915",
+            "xmlid": "CR18"
+        },
+        {
+            "bibentry": "Prieto, TE, Myklebust, JB, Hoffmann, RG, Lovett, EG, Myklebust, BM. Measures of postural steadiness: differences between healthy young and elderly adults, IEEE Trans Biomed Eng, 1996, 43, 956, 966, DOI: 10.1109/10.532130, PMID: 9214811",
+            "process_entry": "True",
+            "doi": "10.1109/10.532130",
+            "pmid": "9214811",
+            "xmlid": "CR19"
+        },
+        {
+            "bibentry": "Kuczyński, M. The second order autoregressive model in the evaluation of postural stability, Gait Posture, 1999, 9, 50, 56, DOI: 10.1016/S0966-6362(99)00003-X, PMID: 10575070",
+            "process_entry": "True",
+            "doi": "10.1016/s0966-6362(99)00003-x",
+            "pmid": "10575070",
+            "xmlid": "CR20"
+        },
+        {
+            "bibentry": "Mangiafico, SS. R handbook: two-sample Mann–Whitney U test, 2016",
+            "process_entry": "True",
+            "xmlid": "CR21"
+        },
+        {
+            "bibentry": "Horak, FB. Postural orientation and equilibrium: what do we need to know about neural control of balance to prevent falls, Age Ageing, 2006, 35, 7, 11, DOI: 10.1093/ageing/afl077",
+            "process_entry": "True",
+            "doi": "10.1093/ageing/afl077",
+            "xmlid": "CR22"
+        },
+        {
+            "bibentry": "Haddad, JM, Rietdyk, S, Claxton, LJ, Huber, JE. Task-dependent postural control throughout the lifespan, Exerc Sport Sci Rev, 2013, 41, 123, 132, DOI: 10.1097/JES.0b013e3182877cc8, PMID: 23364347",
+            "process_entry": "True",
+            "doi": "10.1097/jes.0b013e3182877cc8",
+            "pmid": "23364347",
+            "pmcid": "PMC3608710",
+            "xmlid": "CR23"
+        },
+        {
+            "bibentry": "Paillard T. Relationship between sport expertise and postural skills. Front Psychol. 2019;10. 10.3389/fpsyg.2019.01428.",
+            "process_entry": "True",
+            "xmlid": "CR24"
+        },
+        {
+            "bibentry": "Wulf, G. Attentional focus effects in balance acrobats, Res Q Exerc Sport, 2008, 79, 319, 325, DOI: 10.1080/02701367.2008.10599495, PMID: 18816943",
+            "process_entry": "True",
+            "doi": "10.1080/02701367.2008.10599495",
+            "pmid": "18816943",
+            "xmlid": "CR25"
+        },
+        {
+            "bibentry": "Wulf, G, McNevin, N, Shea, CH. The automaticity of complex motor skill learning as a function of attentional focus, Q J Exp Psychol A, 2001, 54, 1143, 1154, DOI: 10.1080/02724980143000118, PMID: 11765737",
+            "process_entry": "True",
+            "doi": "10.1080/02724980143000118",
+            "pmid": "11765737",
+            "xmlid": "CR26"
+        },
+        {
+            "bibentry": "Wulf, G, Shea, C, Park, J-H. Attention and motor performance: preferences for and advantages of an external focus, Res Q Exerc Sport, 2001, 72, 335, 344, DOI: 10.1080/02701367.2001.10608970, PMID: 11770783",
+            "process_entry": "True",
+            "doi": "10.1080/02701367.2001.10608970",
+            "pmid": "11770783",
+            "xmlid": "CR27"
+        },
+        {
+            "bibentry": "Wulf, G, Mercer, J, McNevin, N, Guadagnoli, MA. Reciprocal influences of Attentional focus on postural and Suprapostural task performance, J Mot Behav, 2004, 36, 189, 199, DOI: 10.3200/JMBR.36.2.189-199, PMID: 15130869",
+            "process_entry": "True",
+            "doi": "10.3200/jmbr.36.2.189-199",
+            "pmid": "15130869",
+            "xmlid": "CR28"
+        },
+        {
+            "bibentry": "Wulf, G, Shea, C, Lewthwaite, R. Motor skill learning and performance: a review of influential factors, Med Educ, 2010, 44, 75, 84, DOI: 10.1111/j.1365-2923.2009.03421.x, PMID: 20078758",
+            "process_entry": "True",
+            "doi": "10.1111/j.1365-2923.2009.03421.x",
+            "pmid": "20078758",
+            "xmlid": "CR29"
+        },
+        {
+            "bibentry": "Sternad, D. It’s not (only) the mean that matters: variability, noise and exploration in skill learning, Curr Opin Behav Sci, 2018, 20, 183, 195, DOI: 10.1016/j.cobeha.2018.01.004, PMID: 30035207",
+            "process_entry": "True",
+            "doi": "10.1016/j.cobeha.2018.01.004",
+            "pmid": "30035207",
+            "pmcid": "PMC6051545",
+            "xmlid": "CR30"
+        },
+        {
+            "bibentry": "Casabona, A, Leonardi, G, Aimola, E, La Grua, G, Polizzi, CM, Cioni, M. Specificity of foot configuration during bipedal stance in ballet dancers, Gait Posture, 2016, 46, 91, 97, DOI: 10.1016/j.gaitpost.2016.02.019, PMID: 27131184",
+            "process_entry": "True",
+            "doi": "10.1016/j.gaitpost.2016.02.019",
+            "pmid": "27131184",
+            "xmlid": "CR31"
+        },
+        {
+            "bibentry": "Cone, BL, Goble, DJ, Rhea, CK. Relationship between changes in vestibular sensory reweighting and postural control complexity, Exp Brain Res, 2017, 235, 547, 554, DOI: 10.1007/s00221-016-4814-2, PMID: 27812748",
+            "process_entry": "True",
+            "doi": "10.1007/s00221-016-4814-2",
+            "pmid": "27812748",
+            "xmlid": "CR32"
+        },
+        {
+            "bibentry": "Huang, HJ, Ahmed, AA. Tradeoff between stability and maneuverability during whole-body movements, PLoS One, 2011, 6, e21815, DOI: 10.1371/journal.pone.0021815, PMID: 21779336",
+            "process_entry": "True",
+            "doi": "10.1371/journal.pone.0021815",
+            "pmid": "21779336",
+            "pmcid": "PMC3136469",
+            "xmlid": "CR33"
+        },
+        {
+            "bibentry": "Acasio, J, Wu, M, Fey, NP, Gordon, KE. Stability-maneuverability trade-offs during lateral steps, Gait Posture, 2017, 52, 171, 177, DOI: 10.1016/j.gaitpost.2016.11.034, PMID: 27915220",
+            "process_entry": "True",
+            "doi": "10.1016/j.gaitpost.2016.11.034",
+            "pmid": "27915220",
+            "xmlid": "CR34"
+        },
+        {
+            "bibentry": "Le Mouel C, Brette R. Mobility as the purpose of postural control. Front Comput Neurosci. 2017;11. 10.3389/fncom.2017.00067.",
+            "process_entry": "True",
+            "xmlid": "CR35"
+        },
+        {
+            "bibentry": "Pau, M, Kim, S, Nussbaum, MA. Does load carriage differentially alter postural sway in overweight vs. normal-weight schoolchildren, Gait Posture, 2012, 35, 378, 382, DOI: 10.1016/j.gaitpost.2011.10.354, PMID: 22088849",
+            "process_entry": "True",
+            "doi": "10.1016/j.gaitpost.2011.10.354",
+            "pmid": "22088849",
+            "xmlid": "CR36"
+        }
+    ],
+    "localid": "PMID33101691",
+    "doi": "10.1186/s13102-020-00213-9",
+    "pmid": "33101691",
+    "pmcid": "PMC7576872",
+    "curator": "BEE EuropeanPubMedCentralProcessor",
+    "source_provider": "Europe PubMed Central",
+    "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/33101691/fullTextXML"
+}

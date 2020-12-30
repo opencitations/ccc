@@ -1,0 +1,158 @@
+{
+    "references": [
+        {
+            "bibentry": "GBD 2017 Causes of Death Collaborators Global, regional, and national age-sex-specific mortality for 282 causes of death in 195 countries and territories, 1980-2017: a systematic analysis for the Global Burden of Disease Study 2017. Lancet. 2018 10; 392(10159): 1736–8. PMID: 30496103",
+            "process_entry": "True",
+            "doi": "10.1016/s0140-6736(18)32203-7",
+            "pmid": "30496103",
+            "pmcid": "PMC6227606",
+            "xmlid": "cit0001"
+        },
+        {
+            "bibentry": "Campeau, L. Percutaneous radial artery approach for coronary angiography. Cathet Cardiovasc Diagn. 1989 janv; 16(1): 3–7. PMID: 2912567",
+            "process_entry": "True",
+            "doi": "10.1002/ccd.1810160103",
+            "pmid": "2912567",
+            "xmlid": "cit0002"
+        },
+        {
+            "bibentry": "Jolly, SS, Yusuf, S, Cairns, J, et al. Radial versus femoral access for coronary angiography and intervention in patients with acute coronary syndromes (RIVAL): a randomised, parallel group, multicentre trial. Lancet. 2011 avr 23; 377(9775): 1409–1420. PMID: 21470671",
+            "process_entry": "True",
+            "doi": "10.1016/s0140-6736(11)60404-2",
+            "pmid": "21470671",
+            "xmlid": "cit0003"
+        },
+        {
+            "bibentry": "Babunashvili, A, Dundua, D. Recanalization and reuse of early occluded radial artery within 6 days after previous transradial diagnostic procedure. Catheterization Cardiovasc Interventions. 2011; 77(4): 530–536.",
+            "process_entry": "True",
+            "xmlid": "cit0004"
+        },
+        {
+            "bibentry": "Kiemeneij, F. Left distal transradial access in the anatomical snuffbox for coronary angiography (ldTRA) and interventions (ldTRI) [Internet]. EuroIntervention. [ citéd 2019 10 12]. Disponible sur: https://eurointervention.pcronline.com/article/left-distal-transradial-access-in-the-anatomical-snuffbox-for-coronary-angiography-ldtra-and-interventions-ldtri",
+            "process_entry": "True",
+            "url": "https://eurointervention.pcronline.com/article/left-distal-transradial-access-in-the-anatomical-snuffbox-for-coronary-angiography-ldtra-and-interventions-ldtri",
+            "xmlid": "cit0005"
+        },
+        {
+            "bibentry": "Vefalı V, Sarıçam E. The Comparison of Traditional Radial Access and Novel Distal Radial Access for Cardiac Catheterization. Cardiovasc Revasc Med. 2020 Apr;21(4):496–500.",
+            "process_entry": "True",
+            "xmlid": "cit0006"
+        },
+        {
+            "bibentry": "Koutouzis, M, Kontopodis, E, Tassopoulos, A, et al. Distal versus traditional radial approach for coronary angiography. Cardiovasc Revascularization Med. 2019 août 1; 20(8): 678–680.",
+            "process_entry": "True",
+            "xmlid": "cit0007"
+        },
+        {
+            "bibentry": "Hamandi, M, Saad, M, Hasan, R, et al. Distal versus conventional transradial artery access for coronary angiography and intervention: A meta-analysis. Cardiovasc Revasc Med. 2020 Mars 14 DOI: DOI: 10.1016/j.carrev.2020.03.020.",
+            "process_entry": "True",
+            "doi": "10.1016/j.carrev.2020.03.020.",
+            "xmlid": "cit0008"
+        },
+        {
+            "bibentry": "Amin, MR, Singha, CK, Banerjee, SK, et al. Comparison of distal transradial in the anatomical snuffbox versus conventional transradial access for coronary angiography and intervention-an experience in 100 cases. Univ Heart J. 2017; 13(2): 40–45.",
+            "process_entry": "True",
+            "xmlid": "cit0009"
+        },
+        {
+            "bibentry": "Gajurel, RM, Sahi, R, Shrestha, H, et al. Initial experience on anatomical snuff box approach for coronary angiogram & percutaneous coronary intervention in a tertiary care center Nepal. World J Cardiovasc Dis. 2018 déc 28; 08(12): 578.",
+            "process_entry": "True",
+            "xmlid": "cit0010"
+        },
+        {
+            "bibentry": "Nairoukh, Z, Jahangir, S, Adjepong, D, et al. Distal radial artery access: the future of cardiovascular intervention. Cureus. 2020 3 7; 12(3): e7201. PMID: 32269880",
+            "process_entry": "True",
+            "doi": "10.7759/cureus.7201",
+            "pmid": "32269880",
+            "pmcid": "PMC7137675",
+            "xmlid": "cit0011"
+        },
+        {
+            "bibentry": "Coomes, EA, Haghbayan, H, Cheema, AN. Distal transradial access for cardiac catheterization: a systematic scoping review. Catheterization Cardiovasc Interventions. citéd 2020 janv 30.",
+            "process_entry": "True",
+            "xmlid": "cit0012"
+        },
+        {
+            "bibentry": "Lee, J-W, Park, SW, Son, J-W, et al. Real-world experience of the left distal transradial approach for coronary angiography and percutaneous coronary intervention: a prospective observational study (LeDRA). EuroIntervention. 2018 10 12; 14(9): e995–1003. PMID: 30222122",
+            "process_entry": "True",
+            "doi": "10.4244/eij-d-18-00635",
+            "pmid": "30222122",
+            "xmlid": "cit0013"
+        },
+        {
+            "bibentry": "Coughlan, JJ, Zebrauskaite, A, Arnous, S, et al. Left distal trans-radial access facilitates earlier discharge post-coronary angiography. J Interv Cardiol. 2018 déc; 31(6): 964–968. PMID: 30187577",
+            "process_entry": "True",
+            "doi": "10.1111/joic.12559",
+            "pmid": "30187577",
+            "xmlid": "cit0014"
+        },
+        {
+            "bibentry": "Wretowski, D, Krakowian, M, Łabyk, A, et al. Very distal transradial approach (VITRO) for coronary interventions. Postepy Kardiol Interwencyjnej. 2019; 15(1): 42–45. PMID: 31043983",
+            "process_entry": "True",
+            "doi": "10.5114/aic.2019.83771",
+            "pmid": "31043983",
+            "pmcid": "PMC6488833",
+            "xmlid": "cit0015"
+        },
+        {
+            "bibentry": "Kühn, AL, de Macedo Rodrigues, K, Singh, J, et al. Distal radial access in the anatomical snuffbox for neurointerventions: a feasibility, safety, and proof-of-concept study. J Neurointerv Surg. 2020 janv 8; 12(8): 798–801.",
+            "process_entry": "True",
+            "xmlid": "cit0016"
+        },
+        {
+            "bibentry": "Hamon, M, Pristipino, C, Mario, CD, et al. Consensus document on the radial approach in percutaneous cardiovascular interventions: position paper by the European association of percutaneous cardiovascular interventions and working groups on acute cardiac care** and thrombosis of the European society of cardiology [Internet]. EuroIntervention. [ citéd 2019 11 5]. Disponible sur: https://eurointervention.pcronline.com/article/consensus-document-on-the-radial-approach-in-percutaneous-cardiovascular-interventions-position-paper-by-the-european-association-of-percutaneous-cardiovascular-interventions-and-working-groups-on-acute-cardiac-care-and-thrombosis-of-the-european-society-of-cardiology",
+            "process_entry": "True",
+            "url": "https://eurointervention.pcronline.com/article/consensus-document-on-the-radial-approach-in-percutaneous-cardiovascular-interventions-position-paper-by-the-european-association-of-percutaneous-cardiovascular-interventions-and-working-groups-on-acute-cardiac-care-and-thrombosis-of-the-european-society-of-cardiology",
+            "xmlid": "cit0017"
+        },
+        {
+            "bibentry": "Uhlemann, M, Möbius-Winkler, S, Mende, M, et al. The leipzig prospective vascular ultrasound registry in radial artery catheterization: impact of sheath size on vascular complications. JACC Cardiovasc Interv. 2012 1 1; 5(1): 36–43. PMID: 22230148",
+            "process_entry": "True",
+            "doi": "10.1016/j.jcin.2011.08.011",
+            "pmid": "22230148",
+            "xmlid": "cit0018"
+        },
+        {
+            "bibentry": "Nagai, S, Abe, S, Sato, T, et al. Ultrasonic assessment of vascular complications in coronary angiography and angioplasty after transradial approach. Am J Cardiol. 1999 janv 15; 83(2): 180–186. PMID: 10073818",
+            "process_entry": "True",
+            "doi": "10.1016/s0002-9149(98)00821-2",
+            "pmid": "10073818",
+            "xmlid": "cit0019"
+        },
+        {
+            "bibentry": "Kaledin A, Kochanov IN, Podmetin PS, Seletsky SS, Ardeev VN. Distal radial artery in endovascular interventions; 2017.",
+            "process_entry": "True",
+            "xmlid": "cit0020"
+        },
+        {
+            "bibentry": "Mizuguchi, Y, Izumikawa, T, Hashimoto, S, et al. Efficacy and safety of the distal transradial approach in coronary angiography and percutaneous coronary intervention: a Japanese multicenter experience. Cardiovasc Interv Ther. 2019; 24.",
+            "process_entry": "True",
+            "xmlid": "cit0021"
+        },
+        {
+            "bibentry": "Amin, MR, Banerjee, SK, Biswas, E, et al. Feasibility and safety of distal transradial access in the anatomical snuffbox for coronary angiography and intervention. Mymensingh Med J. 2019 juill; 28(3): 647–654. PMID: 31391439",
+            "process_entry": "True",
+            "pmid": "31391439",
+            "xmlid": "cit0022"
+        },
+        {
+            "bibentry": "Okuyan, H, Hzal, F, Taçoy, G, et al. Angiographic evaluation of the radial artery diameter in patients who underwent coronary angiography or coronary intervention. J Invasive Cardiol. 2013 juill; 25(7): 353–357. PMID: 23813065",
+            "process_entry": "True",
+            "pmid": "23813065",
+            "xmlid": "cit0023"
+        },
+        {
+            "bibentry": "Naito, T, Sawaoka, T, Sasaki, K, et al. Evaluation of the diameter of the distal radial artery at the anatomical snuff box using ultrasound in Japanese patients. Cardiovasc Interventions Ther [Internet] 2019 janv 7 [ citéd août 21]; Disponible sur; 34: 312–316.",
+            "process_entry": "True",
+            "xmlid": "cit0024"
+        }
+    ],
+    "localid": "MED-33147107",
+    "doi": "10.1080/19932820.2020.1830600",
+    "pmid": "33147107",
+    "pmcid": "PMC7646540",
+    "curator": "BEE EuropeanPubMedCentralProcessor",
+    "source_provider": "Europe PubMed Central",
+    "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/33147107/fullTextXML",
+    "reference_pointers": []
+}

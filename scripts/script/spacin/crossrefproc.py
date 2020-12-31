@@ -164,8 +164,8 @@ class CrossrefProcessor(FormatProcessor):
                 citing_resource = self.rf.retrieve_citing_from_pmid(self.pmid, typ='only_blazegraph')
             if citing_resource is None and self.pmcid is not None:
                 citing_resource = self.rf.retrieve_citing_from_pmcid(self.pmcid, typ='only_blazegraph')
-            if citing_resource is None and self.url is not None:
-                citing_resource = self.rf.retrieve_citing_from_url(self.url, typ='only_blazegraph')
+            #if citing_resource is None and self.url is not None:
+            #    citing_resource = self.rf.retrieve_citing_from_url(self.url, typ='only_blazegraph')
 
             if citing_resource is None:
                 return self.process_citing_entity()

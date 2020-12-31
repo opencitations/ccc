@@ -47,7 +47,7 @@ class LocalQuery(QueryInterface):
         self.repok = repok
 
         self.threshold = threshold
-        self.crossref_url = crossref_url
+        self.crossref_url = crossref_url + "/select"
         self.crossref_query_instance = pysolr.Solr(crossref_url, always_commit=True, timeout=100)
         self.orcid_query_instance = pysolr.Solr(orcid_url, always_commit=True, timeout=100)
 
@@ -61,9 +61,14 @@ class LocalQuery(QueryInterface):
     def get_data_crossref_doi(self, entity):
         query = 'id:"{}"'.format(entity)
 
-        crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
-        results = crossref_query_instance.search(fl='*,score', q=query)
-        crossref_query_instance.get_session().close()
+        query = 'bibref:({})'.format(re.escape(entity))
+
+        headers = {'content-type': "application/json"}
+        results = requests.get(self.crossref_url+"?q="+query+"?fl=*,score", headers=headers).json()['response']['docs']
+
+        #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
+        #results = crossref_query_instance.search(fl='*,score', q=query)
+        #crossref_query_instance.get_session().close()
 
         if len(results) != 1:
             if self.repok is not None:
@@ -84,11 +89,15 @@ class LocalQuery(QueryInterface):
         entity = entity.replace("Available at:", "")
         entity = re.sub('\W+', ' ', entity)
         entity = entity.strip()
-        query = 'bibref:({})'.format(re.escape(entity))
 
-        crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
-        results = crossref_query_instance.search(fl='*,score', q=query)
-        crossref_query_instance.get_session().close()
+        query = 'bibref:({})'.format(re.escape(entity))
+        headers = {'content-type': "application/json"}
+
+        results = requests.get(self.crossref_url+"?q="+query+"?fl=*,score", headers=headers).json()['response']['docs']
+
+        #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
+        #results = crossref_query_instance.search(fl='*,score', q=query)
+        #crossref_query_instance.get_session().close()
 
         if self.repok is not None:
             self.repok.add_sentence("Data retrieved for '{}' in {}ms".format(entity, results.qtime))
@@ -114,10 +123,13 @@ class LocalQuery(QueryInterface):
         entity = entity.strip()
 
         query = 'bibref:({})'.format(re.escape(entity))
+        headers = {'content-type': "application/json"}
+        results = requests.get(self.crossref_url+"?q="+query+"?fl=*,score", headers=headers).json()['response']['docs']
 
-        crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
-        results = crossref_query_instance.search(fl='*,score', q=query)
-        crossref_query_instance.get_session().close()
+
+        #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
+        #results = crossref_query_instance.search(fl='*,score', q=query)
+        #crossref_query_instance.get_session().close()
 
         if len(results) < 1:
             return "", 0
@@ -130,6 +142,7 @@ class LocalQuery(QueryInterface):
 
     def check_doi_in_collection(self, doi):
         query = 'id:"{}"'.format(doi)
+
 
         crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
         results = crossref_query_instance.search(fl='*,score', q=query)

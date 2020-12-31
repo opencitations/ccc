@@ -137,7 +137,7 @@ class ResourceFinder(object):
     def retrieve(self, id_dict, typ='both'):
         for id_type in id_dict:
             for id_string in id_dict[id_type]:
-                res = self.__id_with_type(str(id_string), str(id_type), typ=typ)
+                res = self.__id_with_type(id_string, id_type, typ=typ)
                 if res is not None:
                     return res
 
@@ -388,11 +388,27 @@ class ResourceFinder(object):
 
     def add_doi_to_store(self, input_res, input_id, extracted_id):
         return self.add_id_to_store(input_res, input_id, extracted_id, 
-                                    self.doi_store_type_id, self.doi_store_type, self.doi_store)
+                                    self.doi_store_type_id,
+                                    self.doi_store_type,
+                                    self.doi_store)
 
     def add_url_to_store(self, input_res, input_id, extracted_id):
         return self.add_id_to_store(input_res, input_id, extracted_id, 
-                                    self.url_store_type_id, self.url_store_type, self.url_store)
+                                    self.url_store_type_id,
+                                    self.url_store_type,
+                                    self.url_store)
+
+    def add_pmid_to_store(self, input_res, input_id, extracted_id):
+        return self.add_id_to_store(input_res, input_id, extracted_id,
+                                    self.pmid_store_type_id,
+                                    self.pmid_store_type,
+                                    self.pmid_store)
+
+    def add_pmcid_to_store(self, input_res, input_id, extracted_id):
+        return self.add_id_to_store(input_res, input_id, extracted_id,
+                                    self.pmcid_store_type_id,
+                                    self.pmcid_store_type,
+                                    self.pmcid_store)
 
     def add_crossref_to_store(self, input_res, input_id, extracted_id):
         return self.add_id_to_store(input_res, input_id, extracted_id, 

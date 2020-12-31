@@ -450,8 +450,14 @@ class CrossrefProcessor(FormatProcessor):
         else:
             return self.process_existing_by_id(existing_res, self.id)
 
-    def __add_url(self, cur_res, extracted_url):
+    def __add_url(self, input_cur_res, extracted_url):
         # self.rf.update_graph_set(self.g_set)
+
+        if type(input_cur_res) is GraphEntity:
+            cur_res = input_cur_res.res
+        else:
+            cur_res = URIRef(input_cur_res)
+
         if extracted_url is not None:
             cur_id = self.rf.retrieve_br_url(cur_res.res, extracted_url, typ='both')
 
@@ -461,12 +467,16 @@ class CrossrefProcessor(FormatProcessor):
                 cur_res.has_id(cur_id)
 
             # Update ResourceFinder's dict in order to enable a local search for it
-            self.rf.url_store_type_id["{}_{}".format(cur_res, extracted_url)] = cur_id
-            self.rf.url_store_type["{}".format(cur_res)] = extracted_url
-            self.rf.url_store["{}".format(extracted_url)] = cur_res
+            self.rf.add_url_to_store(cur_res, cur_id, extracted_url)
 
-    def __add_pmid(self, cur_res, pmid_string):
+    def __add_pmid(self, input_cur_res, pmid_string):
         # self.rf.update_graph_set(self.g_set)
+
+        if type(input_cur_res) is GraphEntity:
+            cur_res = input_cur_res.res
+        else:
+            cur_res = URIRef(input_cur_res)
+
         if pmid_string is not None:
             cur_id = self.rf.retrieve_br_pmid(cur_res.res, pmid_string, typ='both')
 
@@ -476,12 +486,16 @@ class CrossrefProcessor(FormatProcessor):
                 cur_res.has_id(cur_id)
 
             # Update ResourceFinder's dict in order to enable a local search for it
-            self.rf.pmid_store_type_id["{}_{}".format(cur_res, pmid_string)] = cur_id
-            self.rf.pmid_store_type["{}".format(cur_res)] = pmid_string
-            self.rf.pmid_store["{}".format(pmid_string)] = cur_res
+            self.rf.add_pmid_to_store(cur_res, cur_id, pmid_string)
 
-    def __add_pmcid(self, cur_res, pmcid_string):
+    def __add_pmcid(self, input_cur_res, pmcid_string):
         # self.rf.update_graph_set(self.g_set)
+
+        if type(input_cur_res) is GraphEntity:
+            cur_res = input_cur_res.res
+        else:
+            cur_res = URIRef(input_cur_res)
+
         if pmcid_string is not None:
             cur_id = self.rf.retrieve_br_pmcid(cur_res.res, pmcid_string, typ='both')
 
@@ -491,17 +505,18 @@ class CrossrefProcessor(FormatProcessor):
                 cur_res.has_id(cur_id)
 
             # Update ResourceFinder's dict in order to enable a local search for it
-            self.rf.pmcid_store_type_id["{}_{}".format(cur_res, pmcid_string)] = cur_id
-            self.rf.pmcid_store_type["{}".format(cur_res)] = pmcid_string
-            self.rf.pmcid_store["{}".format(pmcid_string)] = cur_res
+            self.rf.add_pmcid_to_store(cur_res, cur_id, pmcid_string)
 
-    def __add_doi(self, cur_res, extracted_doi, curator):
+    def __add_doi(self, input_cur_res, extracted_doi, curator):
         # self.rf.update_graph_set(self.g_set)
+
+        if type(input_cur_res) is GraphEntity:
+            cur_res = input_cur_res.res
+        else:
+            cur_res = URIRef(input_cur_res)
+
         if extracted_doi is not None:
-            if hasattr(cur_res, 'res'):
-                cur_id = self.rf.retrieve_br_doi(cur_res.res, extracted_doi, typ='both')
-            else:
-                cur_id = self.rf.retrieve_br_doi(cur_res, extracted_doi, typ='both')
+            cur_id = self.rf.retrieve_br_doi(cur_res.res, extracted_doi, typ='both')
 
             if cur_id is None:
                 cur_id = self.g_set.add_id(curator, self.source_provider, self.source)
@@ -519,17 +534,14 @@ class CrossrefProcessor(FormatProcessor):
             cur_id.create_xmlid(xmlid_string)
             cur_res.has_id(cur_id)
 
-    # Local version
     def process_pmid(self, pmid):
         existing_res = self.rf.retrieve_from_pmid(pmid, typ='both')
         return self.process_existing_by_id(existing_res, self.id)
 
-    # Local version
     def process_pmcid(self, pmcid):
         existing_res = self.rf.retrieve_from_pmcid(pmcid, typ='both')
         return self.process_existing_by_id(existing_res, self.id)
 
-    # Local version
     def process_url(self, url):
         existing_res = self.rf.retrieve_from_url(url, typ='both')
         return self.process_existing_by_id(existing_res, self.id)

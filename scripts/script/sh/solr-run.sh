@@ -13,12 +13,12 @@
 # ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
 # SOFTWARE.
 
-myv=`ps -ef | grep "solr"`
+myv=`ps -ef | grep -v "grep" | grep "solr"`
 
 if [[ -z "$myv" ]]; then
     CUR_DIR="${pwd}"
     cd /srv/data/solr/solr-8.7.0/bin
-    ./solr start
+    /bin/bash solr start
     cd $CUR_DIR
     exit 0
 fi

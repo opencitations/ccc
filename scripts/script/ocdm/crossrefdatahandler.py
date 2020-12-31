@@ -103,8 +103,8 @@ class CrossrefDataHandler(object):
         if "DOI" in json:
             result[GraphEntity.doi] = [json["DOI"]]
 
-        if "URL" in json:
-            result[GraphEntity.url] = [json["URL"]]
+        #if "URL" in json:
+        #    result[GraphEntity.url] = [json["URL"]]
 
         if "container-title" not in json or len(json["container-title"]) == 0:
             cur_issns = CrossrefDataHandler.get_all_issns(json)

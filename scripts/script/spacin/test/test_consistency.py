@@ -450,7 +450,6 @@ class Test(unittest.TestCase):
     def test_journal_without_incoming_link(self):
         query = """SELECT ?s WHERE {{
               ?s a <http://purl.org/spar/fabio/Journal> .
-              ?x ?p ?s.
               FILTER NOT EXISTS {{ ?x <http://purl.org/vocab/frbr/core#partOf> ?s . }}
             }}"""
         found = False
@@ -503,7 +502,7 @@ class Test(unittest.TestCase):
         query = """SELECT ?s WHERE
                     {{
                         ?s a <http://purl.org/spar/fabio/Book> .
-                         FILTER NOT EXISTS {{ ?x ?p ?s . }}
+                         FILTER NOT EXISTS {{ ?x <http://purl.org/spar/cito/cites> ?s . }}
                     }} LIMIT 1"""
         found = False
         result = self.ts.query(query)

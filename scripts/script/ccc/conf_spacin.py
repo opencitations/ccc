@@ -16,7 +16,7 @@ dir_split_number = 10000  # This must be multiple of the following one
 items_per_file = 1000
 default_dir = ""
 do_parallel = False
-crossref_query_interface_type = 'remote'
+crossref_query_interface_type = 'local'
 orcid_query_interface_type = 'local'
 
 # the following are not used in ccc

@@ -13,5 +13,12 @@
 # ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
 # SOFTWARE.
 
-ps -ef | grep "solr" | awk '{print $2}' | xargs kill
-exit 0
+if [[ -z "$myv" ]]; then
+    CUR_DIR="${pwd}"
+    cd /srv/data/solr/solr-8.7.0/bin
+    /bin/bash solr stop
+    cd $CUR_DIR
+    exit 0
+fi
+
+exit 1

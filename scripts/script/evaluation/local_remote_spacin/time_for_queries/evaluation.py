@@ -9,7 +9,7 @@ import numpy as np
 
 np.set_printoptions(precision=2)
 from copy import deepcopy
-query_interface_local = LocalQuery(reperr=None, repok=None, threshold=0)
+#query_interface_local = LocalQuery(reperr=None, repok=None, threshold=0)
 query_interface_remote = RemoteQuery(0.95,
                                     headers={"User-Agent": "SPACIN / CrossrefProcessor (via OpenCitations - "
                                     "http://opencitations.net; mailto:contact@opencitations.net)"},
@@ -30,7 +30,7 @@ def extract_references():
         file_content = json.load(open(join('/home/gabriele/Universita/Ricerca/OpenCitations CCC/progetti/ccc/scripts/script/evaluation/local_remote_spacin/time_for_queries/BEE_json', f), 'r'))
 
         for reference in file_content['references']:
-            if 'bibentry' in reference:
+            if 'bibentry' in reference and 'DOI' not in reference['bibentry']:
                 bibrefs.append(reference['bibentry'])
 
             if 'doi' in reference:
@@ -57,12 +57,18 @@ def query_local_bibref(df):
 
 
 def query_remote_bibref(df):
+    toquery = []
+    for idx, row in df.iterrows():
+        if "DOI" in row['bibref']:
+            continue
+        else:
+            toquery.append(row['bibref'])
+    df = pd.DataFrame({'bibref': toquery})
+
     start = datetime.datetime.now()
     for idx, row in tqdm.tqdm(df.iterrows()):
-        try:
-            query_interface_remote.get_data_crossref_bibref(row['bibref'])
-        except:
-            continue
+
+        query_interface_remote.get_data_crossref_bibref(row['bibref'])
 
     end = datetime.datetime.now()
     print("[remote API - BIBREF] Total query {}".format(len(df)))
@@ -104,10 +110,11 @@ def main():
     print("\n---\n")
     #query_local_bibref(df_bibref)
     print("\n---\n")
-    query_remote_doi(df_doi)
-    print("\n---\n")
     query_remote_bibref(df_bibref)
     print("\n---\n")
+    query_remote_doi(df_doi)
+    print("\n---\n")
+
 
 
 if __name__ == '__main__':

@@ -22,7 +22,6 @@ from script.ocdm.storer import Storer
 import os
 from script.support.support import find_paths
 
-import re
 
 
 class ResourceFinder(object):
@@ -135,6 +134,7 @@ class ResourceFinder(object):
             self.index_for_graph_set += 1
 
     def retrieve(self, id_dict, typ='both'):
+
         for id_type in id_dict:
             for id_string in id_dict[id_type]:
                 res = self.__id_with_type(id_string, id_type, typ=typ)
@@ -354,8 +354,48 @@ class ResourceFinder(object):
 
             return self.__query_blazegraph(query)
 
+    # TODO REMOVE
+    def retrieve_res_id_by_type(self, input_res, id_string, id_type, typ):
+        if type(input_res) is GraphEntity:
+            res = input_res.res
+        else:
+            res = URIRef(input_res)
+
+        # First check if locally there's something
+        if id_type is not None and id is not None:
+            if str(id_type) == 'http://purl.org/spar/datacite/url':
+                store = self.url_store_type_id
+            elif str(id_type) == 'http://purl.org/spar/datacite/doi':
+                store = self.doi_store_type_id
+            elif str(id_type) == 'http://purl.org/spar/datacite/orcid':
+                store = self.orcid_store_type_id
+            elif str(id_type) == 'http://purl.org/spar/datacite/pmid':
+                store = self.pmid_store_type_id
+            elif str(id_type) == 'http://purl.org/spar/datacite/pmcid':
+                store = self.pmcid_store_type_id
+            elif str(id_type) == 'http://purl.org/spar/datacite/issn':
+                store = self.issn_store_type_id
+            elif str(id_type) == 'http://purl.org/spar/datacite/isbn':
+                store = self.isbn_store_type_id
+            elif str(id_type) == 'http://purl.org/spar/datacite/crossref':
+                store = self.crossref_store_type_id
+
+            if (res, id_string) in store:
+                return store[(res, id_string)]
+
+        if id_string is not None and typ != 'only_local':
+            query = '''
+            SELECT DISTINCT ?id WHERE {{
+                <{}> <{}> ?id .
+                ?id <{}> <{}> ;
+                    <{}> "{}"
+            }}'''.format(res, GraphEntity.has_identifier, GraphEntity.uses_identifier_scheme, id_type, GraphEntity.has_literal_value,id_string)
+
+            return self.__query_blazegraph(query)
+
     def add_id_to_store(self, input_res, input_id, extracted_id, store_type_id, store_type, store, 
                         is_list=False):
+
         if type(input_res) is GraphEntity:
             cur_res = input_res.res
         else:
@@ -367,18 +407,17 @@ class ResourceFinder(object):
             cur_id = URIRef(input_id)
 
         if cur_res is not None and cur_id is not None and extracted_id is not None:
-
             # Check if local store doesn't contains already the elements
+            # la seconda riga dell'if devo eliminarla
             if (cur_res, extracted_id) not in store_type_id \
-            and cur_res not in store_type \
+            and ((cur_res not in store_type and not is_list) or is_list) \
             and extracted_id not in store:
-
                 # Add it
                 store_type_id[(cur_res, extracted_id)] = cur_id
                 if is_list:
                     cur_list = store_type.get(cur_res)
                     if cur_list is None:
-                        cur_list = []
+                        cur_list = [extracted_id]
                         store_type[cur_res] = cur_list
                     if extracted_id not in cur_list:
                         cur_list.append(extracted_id)

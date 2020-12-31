@@ -309,7 +309,6 @@ class CrossrefProcessor(FormatProcessor):
                 return None
 
         results = list(results_queue.queue)
-        #print(f"Tot time for processing references: {(tot)}")
 
         bibentries.queue.clear()
 
@@ -450,78 +449,78 @@ class CrossrefProcessor(FormatProcessor):
         else:
             return self.process_existing_by_id(existing_res, self.id)
 
-    def __add_url(self, input_cur_res, extracted_url):
+    def __add_url(self, cur_res, extracted_url):
         # self.rf.update_graph_set(self.g_set)
 
-        if type(input_cur_res) is GraphEntity:
-            cur_res = input_cur_res.res
-        else:
-            cur_res = URIRef(input_cur_res)
-
         if extracted_url is not None:
-            cur_id = self.rf.retrieve_br_url(cur_res.res, extracted_url, typ='both')
+            cur_id = self.rf.retrieve_br_url(cur_res, extracted_url, typ='both')
 
             if cur_id is None:
                 cur_id = self.g_set.add_id(self.name, self.source_provider, self.source)
                 cur_id.create_url(extracted_url)
                 cur_res.has_id(cur_id)
 
+            if type(cur_res) is GraphEntity:
+                cur_res = cur_res.res
+            else:
+                cur_res = URIRef(cur_res)
+
             # Update ResourceFinder's dict in order to enable a local search for it
             self.rf.add_url_to_store(cur_res, cur_id, extracted_url)
 
-    def __add_pmid(self, input_cur_res, pmid_string):
+    def __add_pmid(self, cur_res, pmid_string):
         # self.rf.update_graph_set(self.g_set)
 
-        if type(input_cur_res) is GraphEntity:
-            cur_res = input_cur_res.res
-        else:
-            cur_res = URIRef(input_cur_res)
-
         if pmid_string is not None:
-            cur_id = self.rf.retrieve_br_pmid(cur_res.res, pmid_string, typ='both')
+            cur_id = self.rf.retrieve_br_pmid(cur_res, pmid_string, typ='both')
 
             if cur_id is None:
                 cur_id = self.g_set.add_id(self.curator, self.source_provider, self.source)
                 cur_id.create_pmid(pmid_string)
                 cur_res.has_id(cur_id)
 
+            if type(cur_res) is GraphEntity:
+                cur_res = cur_res.res
+            else:
+                cur_res = URIRef(cur_res)
+
             # Update ResourceFinder's dict in order to enable a local search for it
             self.rf.add_pmid_to_store(cur_res, cur_id, pmid_string)
 
-    def __add_pmcid(self, input_cur_res, pmcid_string):
+    def __add_pmcid(self, cur_res, pmcid_string):
         # self.rf.update_graph_set(self.g_set)
 
-        if type(input_cur_res) is GraphEntity:
-            cur_res = input_cur_res.res
-        else:
-            cur_res = URIRef(input_cur_res)
-
         if pmcid_string is not None:
-            cur_id = self.rf.retrieve_br_pmcid(cur_res.res, pmcid_string, typ='both')
+            cur_id = self.rf.retrieve_br_pmcid(cur_res, pmcid_string, typ='both')
 
             if cur_id is None:
                 cur_id = self.g_set.add_id(self.curator, self.source_provider, self.source)
                 cur_id.create_pmcid(pmcid_string)
                 cur_res.has_id(cur_id)
 
+            if type(cur_res) is GraphEntity:
+                cur_res = cur_res.res
+            else:
+                cur_res = URIRef(cur_res)
+
             # Update ResourceFinder's dict in order to enable a local search for it
             self.rf.add_pmcid_to_store(cur_res, cur_id, pmcid_string)
 
-    def __add_doi(self, input_cur_res, extracted_doi, curator):
+    def __add_doi(self, cur_res, extracted_doi, curator):
         # self.rf.update_graph_set(self.g_set)
 
-        if type(input_cur_res) is GraphEntity:
-            cur_res = input_cur_res.res
-        else:
-            cur_res = URIRef(input_cur_res)
-
         if extracted_doi is not None:
-            cur_id = self.rf.retrieve_br_doi(cur_res.res, extracted_doi, typ='both')
+            cur_id = self.rf.retrieve_br_doi(cur_res, extracted_doi, typ='both')
 
             if cur_id is None:
                 cur_id = self.g_set.add_id(curator, self.source_provider, self.source)
                 cur_id.create_doi(extracted_doi)
                 cur_res.has_id(cur_id)
+
+            if type(cur_res) is GraphEntity:
+                cur_res = cur_res.res
+            else:
+                cur_res = URIRef(cur_res)
 
             # Update ResourceFinder's dict in order to enable a local search for it
             self.rf.add_doi_to_store(cur_res, cur_id, extracted_doi)

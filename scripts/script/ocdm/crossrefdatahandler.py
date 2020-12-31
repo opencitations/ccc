@@ -46,10 +46,13 @@ class CrossrefDataHandler(object):
 
     def __associate_isbn(self, res, json, source):
         for string in CrossrefDataHandler.get_all_isbns(json):
-            cur_id = self.g_set.add_id(self.name, self.id, source)
-            if cur_id.create_isbn(string):
-                res.has_id(cur_id)
-                self.rf.add_isbn_to_store(res, cur_id, string)
+            retrieved = self.rf.retrieve_res_id_by_type(res.res, string, GraphEntity.isbn, 'both')
+            if retrieved is None:
+                cur_id = self.g_set.add_id(self.name, self.id, source)
+                if cur_id.create_issn(string):
+                    res.has_id(cur_id)
+                    self.rf.add_issn_to_store(res, cur_id, string)
+
 
     def __get_ids_for_container(self, json):
         result = {}
@@ -67,10 +70,12 @@ class CrossrefDataHandler(object):
 
     def __associate_issn(self, res, json, source):
         for string in CrossrefDataHandler.get_all_issns(json):
-            cur_id = self.g_set.add_id(self.name, self.id, source)
-            if cur_id.create_issn(string):
-                res.has_id(cur_id)
-                self.rf.add_issn_to_store(res, cur_id, string)
+            retrieved = self.rf.retrieve_res_id_by_type(res.res, string, GraphEntity.issn, 'both')
+            if retrieved is None:
+                cur_id = self.g_set.add_id(self.name, self.id, source)
+                if cur_id.create_issn(string):
+                    res.has_id(cur_id)
+                    self.rf.add_issn_to_store(res, cur_id, string)
 
     @staticmethod
     def create_title_from_list(title_list):
@@ -296,6 +301,8 @@ class CrossrefDataHandler(object):
         cont_br = None
         cur_type = json["type"]
 
+        already_associated_issn = False
+        already_associated_isbn = False
         container_ids = self.__get_ids_for_container(json)
         cur_issue_id = json["issue"] if "issue" in json else None
         cur_volume_id = json["volume"] if "volume" in json else None
@@ -351,6 +358,7 @@ class CrossrefDataHandler(object):
                     cont_book.create_book()
                     cont_book.create_title(cur_container_title)
                     self.__associate_isbn(cont_book, json, source)
+                    already_associated_isbn = True
                     cont_book.has_part(cont_br)
                     cont_br.create_book_section()
                 elif cur_type == "component":
@@ -373,6 +381,7 @@ class CrossrefDataHandler(object):
                         if retrieved_journal is None:
                             jou_br = self.g_set.add_br(self.name, self.id, source)
                             self.__associate_issn(jou_br, json, source)
+                            already_associated_issn = True
                             CrossrefDataHandler.add_journal_data(
                                 jou_br, cur_container_title)
                         else:
@@ -424,6 +433,7 @@ class CrossrefDataHandler(object):
                         if retrieved_journal is None:
                             jou_br = self.g_set.add_br(self.name, self.id, source)
                             self.__associate_issn(jou_br, json, source)
+                            already_associated_issn = True
                             CrossrefDataHandler.add_journal_data(jou_br, cur_container_title)
                         else:
                             jou_br = self.g_set.add_br(self.name, self.id, source, retrieved_journal)
@@ -468,9 +478,9 @@ class CrossrefDataHandler(object):
                 # If the current type is in any of the ISSN or ISBN list
                 # add the identifier to the resource
                 if cur_container_type is not None:
-                    if cur_container_type in CrossrefDataHandler.issn_types:
+                    if cur_container_type in CrossrefDataHandler.issn_types and not already_associated_issn :
                         self.__associate_issn(cont_br, json, source)
-                    if cur_container_type in CrossrefDataHandler.isbn_types:
+                    if cur_container_type in CrossrefDataHandler.isbn_types and not already_associated_isbn :
                         self.__associate_isbn(cont_br, json, source)
 
         if cont_br is not None:

@@ -277,7 +277,6 @@ class CrossrefDataHandler(object):
             cur_br.has_id(cur_id)
         self.rf.add_doi_to_store(cur_br, cur_id, json[key])
 
-
     def issued(self, cur_br, key, json, *args):
         cur_br.create_pub_date(json[key]["date-parts"][0])
 
@@ -285,9 +284,7 @@ class CrossrefDataHandler(object):
         cur_id = self.g_set.add_id(self.name, self.id, source)
         if cur_id.create_url(json[key]):
             cur_br.has_id(cur_id)
-        self.rf.url_store_type_id["{}_{}".format(cur_br, json[key])] = cur_id
-        self.rf.url_store_type["{}".format(cur_br)] = json[key]
-        self.rf.url_store["{}".format(json[key])] = cur_br
+        self.rf.add_url_to_store(cur_br, cur_id, json[key])
 
     def page(self, cur_br, key, json, source, *args):
         cur_page = json[key]

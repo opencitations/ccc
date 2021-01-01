@@ -64,8 +64,8 @@ class LocalQuery(QueryInterface):
 
         query = 'id:"{}"'.format(entity)
         headers = {'content-type': "application/json"}
-        s = requests.session(config={'keep_alive': False})
-        
+
+        s = requests.session()
         results = s.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers, timeout=self.timeout).json()['response']['docs']
         s.close()
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
@@ -95,11 +95,11 @@ class LocalQuery(QueryInterface):
         query = 'bibref:({})'.format(re.escape(entity))
         headers = {'content-type': "application/json"}
 
-        s = requests.session(config={'keep_alive': False})
-
+        s = requests.session()
         response = requests.get(self.crossref_url + "?q=" + query + "&fl=*,score", headers=headers,
                                 timeout=self.timeout).json()
         s.close()
+
         results = response['response']['docs']
 
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
@@ -111,11 +111,12 @@ class LocalQuery(QueryInterface):
 
         if len(results) < 1:
             return None
-
-        for r in results:
-            if r['score'] > self.threshold:
-                return json.loads(r['original'])
-
+        try:
+            for r in results:
+                if r['score'] > self.threshold:
+                    return json.loads(r['original'])
+        except:
+            return None
         return None
 
     def get_doi_from_bibref(self, entity):
@@ -131,8 +132,7 @@ class LocalQuery(QueryInterface):
 
         query = 'bibref:({})'.format(re.escape(entity))
         headers = {'content-type': "application/json"}
-
-        s = requests.session(config={'keep_alive': False})
+        s = requests.session()
         
         results = s.get(self.crossref_url + "?q=" + query + "&fl=*,score", headers=headers, timeout=self.timeout).json()[
             'response']['docs']
@@ -151,9 +151,9 @@ class LocalQuery(QueryInterface):
             else:
                 return "",0
 
+
     def check_doi_in_collection(self, doi):
         query = 'id:"{}"'.format(doi)
-
 
         crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
         results = crossref_query_instance.search(fl='*,score', q=query)
@@ -162,6 +162,20 @@ class LocalQuery(QueryInterface):
             return False
         else:
             return True
+
+    def get_all_by_doi(self, doi):
+        query = 'id:"{}"'.format(doi)
+
+        headers = {'content-type': "application/json"}
+        s = requests.session()
+        results = \
+        s.get(self.crossref_url + "?q=" + query + "&fl=*,score", headers=headers, timeout=self.timeout).json()[
+            'response']['docs']
+        s.close()
+
+        if len(results):
+            for r in results:
+                return (r['id'], r['bibref'], r['original'])
 
     def get_orcid_records(self, entity):
         query = 'id:"{}"'.format(entity)
@@ -240,6 +254,23 @@ class RemoteQuery(QueryInterface):
                 else:
                     if result["score"] < self.crossref_min_similarity_score:
                         result = None
+
+
+        # TODO REMOVE
+        """doi = result["DOI"]
+        localqi = LocalQuery()
+        doi, bibref, original = localqi.get_all_by_doi(doi)
+        doc = {
+            "id": result['DOI'].lower(),
+            "bibref": bibref[0],
+            "original": json.dumps(result)
+        }
+        localqi.crossref_query_instance.add(doc)"""
+
+
+        #cmd = 'curl -X POST -H "Content-Type: application/json" "http://localhost:8983/solr/crossref/update/json/docs" --data-binary "{}"'.format(json.dumps(d))
+        #print('\n\n', cmd.format(doi, bibref, json.dumps(result)), '\n\n')
+        #system(cmd)
         return result
 
     def __get_data(self, get_url):

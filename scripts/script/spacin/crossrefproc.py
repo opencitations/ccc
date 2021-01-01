@@ -27,7 +27,8 @@ from script.ccc.jats2oc import Jats2OC as jt
 import threading, queue
 from script.spacin.bibentry import Bibentry
 import time
-
+from multiprocessing.pool import ThreadPool
+import json
 
 def run_in_thread(fn):
     def run(*k, **kw):
@@ -37,12 +38,12 @@ def run_in_thread(fn):
     return run
 
 
-bibentries = queue.Queue()
 
+#@run_in_thread
+def create_bibentry(args):
+    full_entry, bibentries, repok, reperr, query_interface, rf, get_bib_entry_doi, message, process_existing_by_id = args
 
-@run_in_thread
-def create_bibentry(full_entry, bibentries, repok, reperr, query_interface, rf, get_bib_entry_doi, message, process_existing_by_id):
-    bibentries.put(Bibentry(full_entry, repok, reperr, query_interface, rf, get_bib_entry_doi, message, process_existing_by_id))
+    bibentries[json.dumps(full_entry)] = Bibentry(full_entry, repok, reperr, query_interface, rf, get_bib_entry_doi, message, process_existing_by_id)
 
 
 class CrossrefProcessor(FormatProcessor):
@@ -76,7 +77,11 @@ class CrossrefProcessor(FormatProcessor):
         self.crossref_min_similarity_score = crossref_min_similarity_score
         self.intext_refs = intext_refs
         self.process_existing_by_id_time = 0
-
+        self.query_type = query_interface
+        self.max_iteration = max_iteration
+        self.sec_to_wait = sec_to_wait
+        self.headers = headers
+        self.timeout = timeout
         super(CrossrefProcessor, self).__init__(
             base_iri, context_base, info_dir, entries, n_file_item, supplier_prefix, "Crossref")
 
@@ -87,10 +92,10 @@ class CrossrefProcessor(FormatProcessor):
                                               repok=self.repok)
         elif query_interface == 'remote':
             self.query_interface = RemoteQuery(self.crossref_min_similarity_score,
-                                               max_iteration,
-                                               sec_to_wait,
-                                               headers,
-                                               timeout,
+                                               self.max_iteration,
+                                               self.sec_to_wait,
+                                               self.headers,
+                                               self.timeout,
                                                reperr=self.reperr,
                                                repok=self.repok,
                                                is_json=True)
@@ -133,10 +138,10 @@ class CrossrefProcessor(FormatProcessor):
                 citing_entity.has_citation(cited_entity)
                 cur_bibentry = dg(self.entries[idx], ["bibentry"])
                 cur_be_xmlid = dg(self.entries[idx], ["xmlid"])
+
                 if cur_bibentry is not None and cur_bibentry.strip():
                     cur_be = self.g_set.add_be(self.curator, self.source_provider, self.source)
                     citing_entity.contains_in_reference_list(cur_be)
-
                     cited_entity.has_reference(cur_be)
                     self.__add_xmlid(cur_be, cur_be_xmlid)  # new
                     cur_be.create_content(cur_bibentry.strip())
@@ -181,29 +186,61 @@ class CrossrefProcessor(FormatProcessor):
         self.query_interface.close()
 
     def process_references(self, do_process_entry=True):
-        # Queue for results
-        results_queue = queue.Queue()
+        results_list = []
 
         # Clear previously created bibentries objects
-        # bibentries = queue.Queue()
+        bibentries = dict()
 
-        # Queue for done
-        done = queue.Queue()
 
-        # Insert new bibentries in the queue (in parallel)
-        tasks = [create_bibentry(full_entry=full_entry, bibentries=bibentries, repok=self.repok, reperr=self.reperr,
-                                 query_interface=self.query_interface, rf=self.rf,
-                                 get_bib_entry_doi=self.get_bib_entry_doi, message=self.message,
-                                 process_existing_by_id=self.process_existing_by_id) for full_entry in
-                 self.entries]
-        [t.join() for t in tasks]
+        # Creating the arguments for the parallel creation of BibEntry objects
+        args = []
+
+        for full_entry in self.entries:
+            if self.query_type == 'local':
+                args.append(
+                    [full_entry, bibentries,
+                     self.repok,
+                     self.reperr,
+                     LocalQuery(reperr=self.reperr, repok=self.repok),
+                    self.rf,
+                    self.get_bib_entry_doi,
+                    self.message,
+                    self.process_existing_by_id]
+                )
+
+            elif self.query_type == 'remote':
+                args.append(
+                    [full_entry, bibentries,
+                     self.repok,
+                     self.reperr,
+                     RemoteQuery(self.crossref_min_similarity_score,
+                                 self.max_iteration,
+                                 self.sec_to_wait,
+                                 self.headers,
+                                 self.timeout,
+                                 reperr=self.reperr,
+                                 repok=self.repok,
+                                 is_json=True),
+                    self.rf,
+                    self.get_bib_entry_doi,
+                    self.message,
+                    self.process_existing_by_id]
+                )
+
+        # Creating them in parallel
+        with ThreadPool() as pool:
+            pool.map(create_bibentry, args)
+
+        """for arg in args:
+            create_bibentry(arg)"""
 
         tot = 0
 
-        for bibentry_entity in list(bibentries.queue):
-            # for full_entry in self.entries:
+        print("Len of bibentries: {}".format(len(bibentries.keys())))
 
-            #    bibentry_entity = Bibentry(full_entry, self.repok, self.reperr, self.query_interface, self.rf, self.get_bib_entry_doi, self.message)
+        # Getting them sequentially
+        for full_entry in self.entries:
+            bibentry_entity = bibentries[json.dumps(full_entry)]
 
             self.repok.new_article()
             self.reperr.new_article()
@@ -214,7 +251,6 @@ class CrossrefProcessor(FormatProcessor):
             # If no resource has been found on blazegraph, then do a local search
             # and, if possible, create the resource according to returned data
             cur_res = bibentry_entity.cur_res
-
             if cur_res is None:
 
                 # In the parallel part we've already taken the json result from Crossref. So, if there's any,
@@ -296,24 +332,19 @@ class CrossrefProcessor(FormatProcessor):
                 if self.get_bib_entry_url == True and bibentry_entity.extracted_url is not None:
                     self.__add_url(cur_res, bibentry_entity.extracted_url)
 
-                results_queue.put(cur_res)
-                done.put(bibentry_entity)
+                results_list.append(cur_res)
 
                 # self.rf.update_graph_set(self.g_set)
                 e = time.time()
                 tot += e - s
 
-
             else:  # If errors have been raised, stop the process for this entry (by returning None)
-                done.put(bibentry_entity)
                 return None
 
-        results = list(results_queue.queue)
-
-        bibentries.queue.clear()
+        bibentries = dict()
 
         # If the process comes here, then everything worked correctly
-        return results
+        return results_list
 
     def process_existing_by_id(self, existing_res, source_provider):
         if existing_res is not None:

@@ -64,8 +64,10 @@ class LocalQuery(QueryInterface):
 
         query = 'id:"{}"'.format(entity)
         headers = {'content-type': "application/json"}
-        results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers).json()['response']['docs']
-
+        s = requests.session()
+        s.config['keep_alive'] = False
+        results = s.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers, timeout=self.timeout).json()['response']['docs']
+        s.close()
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
         #results = crossref_query_instance.search(fl='*,score', q=query)
         #crossref_query_instance.get_session().close()
@@ -92,7 +94,13 @@ class LocalQuery(QueryInterface):
 
         query = 'bibref:({})'.format(re.escape(entity))
         headers = {'content-type': "application/json"}
-        response = requests.get(self.crossref_url + "?q=" + query + "&fl=*,score", headers=headers).json()
+
+        s = requests.session()
+        s.config['keep_alive'] = False
+
+        response = requests.get(self.crossref_url + "?q=" + query + "&fl=*,score", headers=headers,
+                                timeout=self.timeout).json()
+        s.close()
         results = response['response']['docs']
 
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
@@ -124,8 +132,12 @@ class LocalQuery(QueryInterface):
 
         query = 'bibref:({})'.format(re.escape(entity))
         headers = {'content-type': "application/json"}
-        results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers).json()['response']['docs']
 
+        s = requests.session()
+        s.config['keep_alive'] = False
+        results = s.get(self.crossref_url + "?q=" + query + "&fl=*,score", headers=headers, timeout=self.timeout).json()[
+            'response']['docs']
+        s.close()
 
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
         #results = crossref_query_instance.search(fl='*,score', q=query)

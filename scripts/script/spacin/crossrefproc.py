@@ -76,7 +76,11 @@ class CrossrefProcessor(FormatProcessor):
         self.crossref_min_similarity_score = crossref_min_similarity_score
         self.intext_refs = intext_refs
         self.process_existing_by_id_time = 0
-
+        self.query_type = query_interface
+        self.max_iteration = max_iteration
+        self.sec_to_wait = sec_to_wait
+        self.headers = headers
+        self.timeout = timeout
         super(CrossrefProcessor, self).__init__(
             base_iri, context_base, info_dir, entries, n_file_item, supplier_prefix, "Crossref")
 
@@ -87,10 +91,10 @@ class CrossrefProcessor(FormatProcessor):
                                               repok=self.repok)
         elif query_interface == 'remote':
             self.query_interface = RemoteQuery(self.crossref_min_similarity_score,
-                                               max_iteration,
-                                               sec_to_wait,
-                                               headers,
-                                               timeout,
+                                               self.max_iteration,
+                                               self.sec_to_wait,
+                                               self.headers,
+                                               self.timeout,
                                                reperr=self.reperr,
                                                repok=self.repok,
                                                is_json=True)
@@ -191,11 +195,27 @@ class CrossrefProcessor(FormatProcessor):
         done = queue.Queue()
 
         # Insert new bibentries in the queue (in parallel)
-        tasks = [create_bibentry(full_entry=full_entry, bibentries=bibentries, repok=self.repok, reperr=self.reperr,
-                                 query_interface=self.query_interface, rf=self.rf,
-                                 get_bib_entry_doi=self.get_bib_entry_doi, message=self.message,
-                                 process_existing_by_id=self.process_existing_by_id) for full_entry in
-                 self.entries]
+        tasks = []
+
+        for full_entry in self.entries:
+            if self.query_type == 'local':
+                qi = LocalQuery(reperr=self.reperr,
+                                repok=self.repok)
+            elif self.query_type == 'remote':
+                qi = RemoteQuery(self.crossref_min_similarity_score,
+                                self.max_iteration,
+                                self.sec_to_wait,
+                                self.headers,
+                                self.timeout,
+                                reperr=self.reperr,
+                                repok=self.repok,
+                                is_json=True)
+
+            tasks.append(create_bibentry(full_entry=full_entry, bibentries=bibentries, repok=self.repok, reperr=self.reperr,
+                             query_interface=qi, rf=self.rf,
+                             get_bib_entry_doi=self.get_bib_entry_doi, message=self.message,
+                             process_existing_by_id=self.process_existing_by_id))
+
         [t.join() for t in tasks]
 
         tot = 0

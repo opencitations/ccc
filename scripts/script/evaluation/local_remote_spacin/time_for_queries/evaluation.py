@@ -8,8 +8,11 @@ import datetime
 import numpy as np
 
 np.set_printoptions(precision=2)
+from script.ccc.conf_spacin import orcid_conf_path
 from copy import deepcopy
-#query_interface_local = LocalQuery(reperr=None, repok=None, threshold=0)
+from script.spacin.orcidfinder import ORCIDFinder
+
+query_interface_local = LocalQuery(reperr=None, repok=None, threshold=0)
 query_interface_remote = RemoteQuery(0.95,
                                     headers={"User-Agent": "SPACIN / CrossrefProcessor (via OpenCitations - "
                                     "http://opencitations.net; mailto:contact@opencitations.net)"},
@@ -20,6 +23,8 @@ query_interface_remote = RemoteQuery(0.95,
                                     repok=None,
                                     is_json=True)
 
+orcid_finder_local = ORCIDFinder(orcid_conf_path, query_interface='local')
+orcid_finder_remote = ORCIDFinder(orcid_conf_path, query_interface='remote')
 
 def extract_references():
     explicit_dois = []
@@ -90,29 +95,63 @@ def query_local_doi(df):
 def query_remote_doi(df):
     start = datetime.datetime.now()
     for idx, row in tqdm.tqdm(df.iterrows()):
-        query_interface_remote.get_data_crossref_doi(row['doi'])
+        try:
+            query_interface_remote.get_data_crossref_doi(row['doi'])
+        except:
+            continue
 
     end = datetime.datetime.now()
     print("[remote API - DOI] Total query {}".format(len(df)))
     print("[remote API - DOI] Total seconds spent {}".format((end - start).total_seconds()))
     print("[remote API - DOI] Mean seconds for a query {}".format((end - start).total_seconds() / len(df)))
 
+def query_local_orcid(df):
+    start = datetime.datetime.now()
+    for idx, row in tqdm.tqdm(df.iterrows()):
+        try:
+            names = row['names'].replace("[","").replace("]", "").split(",")
+            print(orcid_finder_local.get_orcid_ids(row['doi'], names))
+        except:
+            continue
 
+    end = datetime.datetime.now()
+    print("[local index - ORCID] Total query {}".format(len(df)))
+    print("[local index - ORCID] Total seconds spent {}".format((end - start).total_seconds()))
+    print("[local index- ORCID] Mean seconds for a query {}".format((end - start).total_seconds() / len(df)))
+
+
+def query_remote_orcid(df):
+    start = datetime.datetime.now()
+    for idx, row in tqdm.tqdm(df.iterrows()):
+        try:
+            names = row['names'].replace("[","").replace("]", "").split(",")
+            orcid_finder_remote.get_orcid_ids(row['doi'], names)
+        except:
+            continue
+
+    end = datetime.datetime.now()
+    print("[remote API - ORCID] Total query {}".format(len(df)))
+    print("[remote API - ORCID] Total seconds spent {}".format((end - start).total_seconds()))
+    print("[remote API - ORCID] Mean seconds for a query {}".format((end - start).total_seconds() / len(df)))
 
 def main():
     extract_references()
 
     df_doi = pd.read_csv('/home/gabriele/Universita/Ricerca/OpenCitations CCC/progetti/ccc/scripts/script/evaluation/local_remote_spacin/time_for_queries/dataset_doi.csv')
     df_bibref = pd.read_csv('/home/gabriele/Universita/Ricerca/OpenCitations CCC/progetti/ccc/scripts/script/evaluation/local_remote_spacin/time_for_queries/dataset_bibref.csv')
+    df_orcid = pd.read_csv('/home/gabriele/Universita/Ricerca/OpenCitations CCC/progetti/ccc/scripts/script/evaluation/local_remote_spacin/time_for_queries/dataset_orcid.csv', sep=';')
 
     print("\n---\n")
+    query_local_orcid(df_orcid)
+    print("\n---\n")
+    query_remote_orcid(df_orcid)
     #query_local_doi(df_doi)
     print("\n---\n")
     #query_local_bibref(df_bibref)
     print("\n---\n")
-    query_remote_bibref(df_bibref)
+    #query_remote_bibref(df_bibref)
     print("\n---\n")
-    query_remote_doi(df_doi)
+    #query_remote_doi(df_doi)
     print("\n---\n")
 
 

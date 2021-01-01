@@ -41,10 +41,12 @@ class LocalQuery(QueryInterface):
                  orcid_url='http://localhost:8983/solr/orcid',
                  reperr = None,
                  repok = None,
-                 threshold = 19):
+                 threshold = 19,
+                 timeout = 100):
 
         self.reperr = reperr
         self.repok = repok
+        self.timeout = timeout
 
         self.threshold = threshold
         self.crossref_url = crossref_url + "/select"
@@ -62,7 +64,7 @@ class LocalQuery(QueryInterface):
 
         query = 'id:"{}"'.format(entity)
         headers = {'content-type': "application/json"}
-        results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers).json()['response']['docs']
+        results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers, timeout=self.timeout).json()['response']['docs']
 
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
         #results = crossref_query_instance.search(fl='*,score', q=query)
@@ -90,7 +92,7 @@ class LocalQuery(QueryInterface):
 
         query = 'bibref:({})'.format(re.escape(entity))
         headers = {'content-type': "application/json"}
-        response = requests.get(self.crossref_url + "?q=" + query + "&fl=*,score", headers=headers).json()
+        response = requests.get(self.crossref_url + "?q=" + query + "&fl=*,score", headers=headers, timeout=self.timeout).json()
         results = response['response']['docs']
 
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
@@ -122,7 +124,7 @@ class LocalQuery(QueryInterface):
 
         query = 'bibref:({})'.format(re.escape(entity))
         headers = {'content-type': "application/json"}
-        results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers).json()['response']['docs']
+        results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers, timeout=self.timeout).json()['response']['docs']
 
 
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)

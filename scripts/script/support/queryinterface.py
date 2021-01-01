@@ -64,8 +64,8 @@ class LocalQuery(QueryInterface):
 
         query = 'id:"{}"'.format(entity)
         headers = {'content-type': "application/json"}
-        s = requests.session(config={'keep_alive': False})
-        
+
+        s = requests.session()
         results = s.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers, timeout=self.timeout).json()['response']['docs']
         s.close()
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
@@ -95,11 +95,11 @@ class LocalQuery(QueryInterface):
         query = 'bibref:({})'.format(re.escape(entity))
         headers = {'content-type': "application/json"}
 
-        s = requests.session(config={'keep_alive': False})
-
+        s = requests.session()
         response = requests.get(self.crossref_url + "?q=" + query + "&fl=*,score", headers=headers,
                                 timeout=self.timeout).json()
         s.close()
+
         results = response['response']['docs']
 
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
@@ -131,8 +131,7 @@ class LocalQuery(QueryInterface):
 
         query = 'bibref:({})'.format(re.escape(entity))
         headers = {'content-type': "application/json"}
-
-        s = requests.session(config={'keep_alive': False})
+        s = requests.session()
         
         results = s.get(self.crossref_url + "?q=" + query + "&fl=*,score", headers=headers, timeout=self.timeout).json()[
             'response']['docs']

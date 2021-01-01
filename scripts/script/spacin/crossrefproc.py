@@ -27,7 +27,7 @@ from script.ccc.jats2oc import Jats2OC as jt
 import threading, queue
 from script.spacin.bibentry import Bibentry
 import time
-
+from multiprocessing.pool import ThreadPool
 
 def run_in_thread(fn):
     def run(*k, **kw):
@@ -40,8 +40,9 @@ def run_in_thread(fn):
 bibentries = queue.Queue()
 
 
-@run_in_thread
-def create_bibentry(full_entry, bibentries, repok, reperr, query_interface, rf, get_bib_entry_doi, message, process_existing_by_id):
+#@run_in_thread
+def create_bibentry(args):
+    full_entry, bibentries, repok, reperr, query_interface, rf, get_bib_entry_doi, message, process_existing_by_id = args
     bibentries.put(Bibentry(full_entry, repok, reperr, query_interface, rf, get_bib_entry_doi, message, process_existing_by_id))
 
 
@@ -196,30 +197,50 @@ class CrossrefProcessor(FormatProcessor):
 
         # Insert new bibentries in the queue (in parallel)
         tasks = []
+        args = []
+
 
         for full_entry in self.entries:
             if self.query_type == 'local':
-                qi = LocalQuery(reperr=self.reperr,
-                                repok=self.repok)
+                args.append(
+                    [full_entry, bibentries,
+                     self.repok,
+                     self.reperr,
+                     LocalQuery(reperr=self.reperr, repok=self.repok),
+                    self.rf,
+                    self.get_bib_entry_doi,
+                    self.message,
+                    self.process_existing_by_id]
+                )
+
             elif self.query_type == 'remote':
-                qi = RemoteQuery(self.crossref_min_similarity_score,
-                                self.max_iteration,
-                                self.sec_to_wait,
-                                self.headers,
-                                self.timeout,
-                                reperr=self.reperr,
-                                repok=self.repok,
-                                is_json=True)
+                args.append(
+                    [full_entry, bibentries,
+                     self.repok,
+                     self.reperr,
+                     RemoteQuery(self.crossref_min_similarity_score,
+                                 self.max_iteration,
+                                 self.sec_to_wait,
+                                 self.headers,
+                                 self.timeout,
+                                 reperr=self.reperr,
+                                 repok=self.repok,
+                                 is_json=True),
+                    self.rf,
+                    self.get_bib_entry_doi,
+                    self.message,
+                    self.process_existing_by_id]
+                )
 
-            tasks.append(create_bibentry(full_entry=full_entry, bibentries=bibentries, repok=self.repok, reperr=self.reperr,
-                             query_interface=qi, rf=self.rf,
-                             get_bib_entry_doi=self.get_bib_entry_doi, message=self.message,
-                             process_existing_by_id=self.process_existing_by_id))
+        with ThreadPool() as pool:
+            pool.map(create_bibentry, args)
 
-        [t.join() for t in tasks]
+        """for arg in args:
+            create_bibentry(arg)"""
 
         tot = 0
 
+        print("Len of bibentries: {}".format(len(list(bibentries.queue))))
         for bibentry_entity in list(bibentries.queue):
             # for full_entry in self.entries:
 

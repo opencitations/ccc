@@ -59,10 +59,8 @@ class LocalQuery(QueryInterface):
 
     # This function will return exactly one if found, otherwise None
     def get_data_crossref_doi(self, entity):
+
         query = 'id:"{}"'.format(entity)
-
-        query = 'bibref:({})'.format(re.escape(entity))
-
         headers = {'content-type': "application/json"}
         results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers).json()['response']['docs']
 

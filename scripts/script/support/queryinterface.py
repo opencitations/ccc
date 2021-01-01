@@ -62,7 +62,7 @@ class LocalQuery(QueryInterface):
 
         query = 'id:"{}"'.format(entity)
         headers = {'content-type': "application/json"}
-        results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers).json()['response']['docs']
+        results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score&rows=1", headers=headers).json()['response']['docs']
 
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
         #results = crossref_query_instance.search(fl='*,score', q=query)
@@ -90,14 +90,15 @@ class LocalQuery(QueryInterface):
 
         query = 'bibref:({})'.format(re.escape(entity))
         headers = {'content-type': "application/json"}
-        results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers).json()['response']['docs']
+        response = requests.get(self.crossref_url + "?q=" + query + "&fl=*,score&rows=1", headers=headers).json()
+        results = response['response']['docs']
 
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
         #results = crossref_query_instance.search(fl='*,score', q=query)
         #crossref_query_instance.get_session().close()
 
         if self.repok is not None:
-            self.repok.add_sentence("Data retrieved for '{}' in {}ms".format(entity, results.qtime))
+            self.repok.add_sentence("Data retrieved for '{}' in {}ms".format(entity, response['responseHeader']['QTime']))
 
         if len(results) < 1:
             return None
@@ -121,7 +122,7 @@ class LocalQuery(QueryInterface):
 
         query = 'bibref:({})'.format(re.escape(entity))
         headers = {'content-type': "application/json"}
-        results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers).json()['response']['docs']
+        results = requests.get(self.crossref_url+"?q="+query+"&fl=*,score&rows=1", headers=headers).json()['response']['docs']
 
 
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)

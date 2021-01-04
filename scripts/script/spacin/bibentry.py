@@ -6,6 +6,13 @@ __author__ = "Gabriele Pisciotta"
 
 
 class Bibentry:
+
+    PROVIDED_DOI = 0
+    EXTRACTED_DOI = 1
+    PROVIDED_PMID = 2
+    PROVIDED_PMCID = 3
+    PROVIDED_ENTRY = 4
+
     def __init__(self, full_entry, repok, reperr, query_interface, resourcefinder, get_bib_entry_doi, message,
                 process_existing_by_id,
                  do_process_entry=True):
@@ -39,6 +46,11 @@ class Bibentry:
         self.extracted_url = None
         self.cur_res = None
         self.existing_res_on_blazegraph = None
+        self.cur_res_obtained_via = None
+        self.cur_json_obtained_via = None
+
+        # Variable to use for disambiguation purposes
+        self.to_be_considered = True
 
         if self.process_string is not None:
             self.do_process_entry = self.process_string.lower().strip() == "true"
@@ -59,19 +71,35 @@ class Bibentry:
 
         if self.provided_doi is not None:
             self._process_doi(self.provided_doi)
-
-        if self.cur_res is None and self.process_doi_result is None and self.entry is not None:
-            self._process_entry(self.entry)
+        if self.cur_res is not None:
+            self.cur_res_obtained_via = Bibentry.PROVIDED_DOI
+        if self.cur_json_obtained_via is None and self.process_doi_result is not None:
+            self.cur_json_obtained_via = Bibentry.PROVIDED_DOI
 
         if self.cur_res is None and self.get_bib_entry_doi and self.process_doi_result is None and self.extracted_doi is not None:
             self.extracted_doi_used = True
             self._process_doi(self.extracted_doi)
+        if self.cur_res is not None:
+            self.cur_res_obtained_via = Bibentry.EXTRACTED_DOI
+        if self.cur_json_obtained_via is None and self.process_doi_result is not None:
+            self.cur_json_obtained_via = Bibentry.EXTRACTED_DOI
 
         if self.cur_res is None and self.provided_pmid is not None:
             self._process_pmid(self.provided_pmid)
+        if self.cur_res is not None:
+            self.cur_res_obtained_via = Bibentry.PROVIDED_PMID
 
         if self.cur_res is None and self.provided_pmcid is not None:
             self._process_pmcid(self.provided_pmcid)
+        if self.cur_res is not None:
+            self.cur_res_obtained_via = Bibentry.PROVIDED_PMCID
+        
+        if self.cur_res is None and self.process_doi_result is None and self.entry is not None:
+            self._process_entry(self.entry)
+        if self.cur_res is not None:
+            self.cur_res_obtained_via = Bibentry.PROVIDED_ENTRY
+        if self.cur_json_obtained_via is None and self.existing_bibref_entry is not None:
+            self.cur_json_obtained_via = Bibentry.PROVIDED_ENTRY
 
         if self.cur_res is not None:
             self.cur_res = self.process_existing_by_id(self.cur_res, self.id)
@@ -86,6 +114,7 @@ class Bibentry:
             self.cur_res = existing_res
         else:
             self.process_doi_result = self.query_interface.get_data_crossref_doi(doi)
+
 
     # Remote version
     def _process_pmid(self, pmid: str):

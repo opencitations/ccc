@@ -29,6 +29,7 @@ from script.spacin.bibentry import Bibentry
 import time
 from multiprocessing.pool import ThreadPool
 import json
+from collections import defaultdict
 
 def run_in_thread(fn):
     def run(*k, **kw):
@@ -130,7 +131,7 @@ class CrossrefProcessor(FormatProcessor):
         self.__add_pmcid(citing_entity, self.pmcid)
 
         # Process all the references contained and return related entities
-        cited_entities = self.process_references()
+        cited_entities = self.process_references(citing_entity=citing_entity, citing_doi=self.doi)
 
         if cited_entities is not None:
             cited_entities_xmlid_be = []
@@ -185,7 +186,69 @@ class CrossrefProcessor(FormatProcessor):
 
         self.query_interface.close()
 
-    def process_references(self, do_process_entry=True):
+    def keep_best_entities(self, dict_of_entities, citing_entity, citing_doi):
+        # This is the set of all the resources that have been already added to the
+        # triplestore and that are already known by the system
+        duplicate_entities = defaultdict(list)
+        duplicate_dois = defaultdict(list)
+
+        # Look for duplicate entities
+        for key, entity in dict_of_entities.items():
+            if entity.cur_res is not None:
+                duplicate_entities[entity.cur_res.res].append(entity)
+            elif entity.process_doi_result is not None:
+                duplicate_dois[entity.process_doi_result["DOI"]].append(entity)
+            elif entity.existing_bibref_entry is not None:
+                duplicate_dois[entity.existing_bibref_entry["DOI"]].append(entity)
+            else: 
+                # The entity should not be considered since it is not present neither in the triplestore nor in Crossref.
+                # Note: in principle, this could not be a problem, since we can use an identifier (e.g. a DOI) to identify 
+                # this entity anyway, even if no metadata are specified in our triplestore or Crossref. 
+                # This works well with the process only if we have the assurance that all the
+                # references of cited articles point to distinct articles (characterised by different 
+                # identifiers). However, by looking at PMC sources, it happens that different references may specify 
+                # (by mistake) the same identifiers. Thus, in order to avoid to have duplicate citations and intrepid
+                # we decided to prevent this behaviour from the beginning by not considering the identifiers of articles
+                # that have not been disambiguated (i.e. they have a record in Crossref).
+                entity.to_be_considered = False
+        
+        # Address duplicate entities only
+        for key, list_of_entities in duplicate_entities.items():
+            list_len = len(list_of_entities)
+
+            # If the citing entity appears to be also a cited entity (creating a circular citation), 
+            # then exclude the entities of such a retrieved resource from the computation
+            if key == citing_entity.res:
+                for duplicate_entity in list_of_entities:
+                    duplicate_entity.cur_res = None
+                    duplicate_entity.to_be_considered = False
+            # If there is more then one entity pointing to the same existing resourse, keep only the
+            # best one - i.e. that retrieved by the most robust identifier - and exclude the others from
+            # the computation
+            elif list_len > 1:
+                list_of_entities.sort(key=lambda x: x.cur_res_obtained_via)
+                for duplicate_entity in list_of_entities[1:]:
+                    duplicate_entity.cur_res = None
+                    duplicate_entity.to_be_considered = False
+
+        # Address duplicate DOIs only
+        for key, list_of_entities in duplicate_dois.items():
+            list_len = len(list_of_entities)
+
+            # If the citing DOI appears to be also a cited DOI (creating a circular citation), 
+            # then exclude the entities of such a DOI resource from the computation
+            if key == citing_doi:
+                for duplicate_entity in list_of_entities:
+                    duplicate_entity.to_be_considered = False
+            # If there is more then one entity pointing to the same existing DOI, keep only the
+            # best one - i.e. that retrieved by the most robust identifier - and exclude the others from
+            # the computation
+            elif list_len > 1:
+                list_of_entities.sort(key=lambda x: x.cur_json_obtained_via)
+                for duplicate_entity in list_of_entities[1:]:
+                    duplicate_entity.to_be_considered = False
+
+    def process_references(self, do_process_entry=True, citing_entity=None, citing_doi=None):
         results_list = []
 
         # Clear previously created bibentries objects
@@ -238,6 +301,10 @@ class CrossrefProcessor(FormatProcessor):
 
         print("Len of bibentries: {}".format(len(bibentries.keys())))
 
+        # Check if, among the entities and DOIs retrieved, there are duplicates and, if so, keep only one (i.e. the best one) 
+        # of these duplicates, removing the others
+        self.keep_best_entities(bibentries, citing_entity, citing_doi)
+
         # Getting them sequentially
         for full_entry in self.entries:
             bibentry_entity = bibentries[json.dumps(full_entry)]
@@ -249,15 +316,18 @@ class CrossrefProcessor(FormatProcessor):
             s = time.time()
 
             # If no resource has been found on blazegraph, then do a local search
-            # and, if possible, create the resource according to returned data
+            # and, if possible, create the resource according to returned data, unless
+            # it is a duplicate entity
             cur_res = bibentry_entity.cur_res
+            cur_res_to_process = bibentry_entity.to_be_considered
             if cur_res is None:
 
                 # In the parallel part we've already taken the json result from Crossref. So, if there's any,
                 # process it
-                if bibentry_entity.provided_doi is not None and bibentry_entity.process_doi_result is not None:
+                if cur_res_to_process and bibentry_entity.provided_doi is not None and bibentry_entity.process_doi_result is not None:
                         cur_res = self.process_doi(bibentry_entity.provided_doi, self.curator, self.source_provider,
                                                    typ='only_local', result=bibentry_entity.process_doi_result)
+                                                   # TODO: maybe we need to pass the set of already got entities to each of these process_* function to avoid the specification of a new entity if already exist -- something to check carefully
 
                         if cur_res is not None:
                                 self.repok.add_sentence(
@@ -265,7 +335,7 @@ class CrossrefProcessor(FormatProcessor):
                                                  "DOI provided as input by %s." % self.source_provider,
                                                  "DOI", bibentry_entity.provided_doi))
 
-                if cur_res is None and bibentry_entity.extracted_doi is not None and bibentry_entity.process_doi_result is not None and bibentry_entity.extracted_doi_used:
+                if cur_res_to_process and cur_res is None and bibentry_entity.extracted_doi is not None and bibentry_entity.process_doi_result is not None and bibentry_entity.extracted_doi_used:
                     cur_res = self.process_doi(bibentry_entity.extracted_doi, self.name, self.source_provider,
                                                typ='only_local', result=bibentry_entity.process_doi_result)
                     if cur_res is not None:
@@ -274,23 +344,23 @@ class CrossrefProcessor(FormatProcessor):
                                          "DOI extracted from it." % bibentry_entity.entry,
                                          "DOI", bibentry_entity.extracted_doi))
 
-                if cur_res is None and bibentry_entity.provided_pmid is not None:
-                    cur_res = self.process_pmid(bibentry_entity.provided_pmid)
+                if cur_res_to_process and cur_res is None and bibentry_entity.provided_pmid is not None:
+                    cur_res = self.process_pmid(bibentry_entity.provided_pmid, typ="only_local")
                     if cur_res is not None:
                         self.repok.add_sentence(
                             self.message("The entity has been found by means of the "
                                          "PMID provided as input by %s." % self.source_provider,
                                          "PMID", bibentry_entity.provided_doi))
 
-                if cur_res is None and bibentry_entity.provided_pmcid is not None:
-                    cur_res = self.process_pmcid(bibentry_entity.provided_pmcid)
+                if cur_res_to_process and cur_res is None and bibentry_entity.provided_pmcid is not None:
+                    cur_res = self.process_pmcid(bibentry_entity.provided_pmcid, typ="only_local")
                     if cur_res is not None:
                         self.repok.add_sentence(
                             self.message("The entity has been found by means of the "
                                          "PMCID provided as input by %s." % self.source_provider,
                                          "PMCID", bibentry_entity.provided_pmcid))
 
-                if cur_res is None and bibentry_entity.entry is not None:  # crossref API string search
+                if cur_res_to_process and cur_res is None and bibentry_entity.entry is not None:  # crossref API string search
                     if do_process_entry == True:
                         cur_res = self.process_entry(entry=bibentry_entity.entry,
                                                      cur_json=bibentry_entity.existing_bibref_entry,
@@ -309,28 +379,32 @@ class CrossrefProcessor(FormatProcessor):
                     # Add it on the graph
                     cur_res = self.g_set.add_br(self.name)
                     self.repok.add_sentence(
-                        self.message("The entity has been created even if no results have "
-                                     "been returned by the API.",
+                        self.message("The entity has been created even if either no results have "
+                                     "been returned by the API or it is some duplicate of an existing one.",
                                      "entry", bibentry_entity.entry))
 
                     # self.rf.update_graph_set(self.g_set)
 
-                # Add the DOI, the PMID and the PMCID if they have been provided by the curator
-                # (if they are not already associated to the resource)
-                self.__add_doi(cur_res, bibentry_entity.provided_doi, self.curator)
-                self.__add_pmid(cur_res, bibentry_entity.provided_pmid)
-                self.__add_pmcid(cur_res, bibentry_entity.provided_pmcid)
-                self.__add_url(cur_res, bibentry_entity.provided_url)
+                # If it is not a duplicate resource, add all the identifiers found to it, otherwise
+                # treat it as it is a new resource with no additional information (except the 
+                # bibliographic entry text associated, that will be added afterwards)
+                if cur_res_to_process:
+                    # Add the DOI, the PMID and the PMCID if they have been provided by the curator
+                    # (if they are not already associated to the resource)
+                    self.__add_doi(cur_res, bibentry_entity.provided_doi, self.curator)
+                    self.__add_pmid(cur_res, bibentry_entity.provided_pmid)
+                    self.__add_pmcid(cur_res, bibentry_entity.provided_pmcid)
+                    self.__add_url(cur_res, bibentry_entity.provided_url)
 
-                # Add any DOI extracted from the entry if it is not already included (and only if
-                # a resource has not been retrieved by a DOI specified in the entry explicitly, or
-                # by a Crossref search.
-                if self.get_bib_entry_doi and bibentry_entity.extracted_doi_used:
-                    self.__add_doi(cur_res, bibentry_entity.extracted_doi, self.name)
+                    # Add any DOI extracted from the entry if it is not already included (and only if
+                    # a resource has not been retrieved by a DOI specified in the entry explicitly, or
+                    # by a Crossref search.
+                    if self.get_bib_entry_doi and bibentry_entity.extracted_doi_used:
+                        self.__add_doi(cur_res, bibentry_entity.extracted_doi, self.name)
 
-                # Add any URL extracted from the entry if it is not already included
-                if self.get_bib_entry_url == True and bibentry_entity.extracted_url is not None:
-                    self.__add_url(cur_res, bibentry_entity.extracted_url)
+                    # Add any URL extracted from the entry if it is not already included
+                    if self.get_bib_entry_url == True and bibentry_entity.extracted_url is not None:
+                        self.__add_url(cur_res, bibentry_entity.extracted_url)
 
                 results_list.append(cur_res)
 
@@ -437,7 +511,6 @@ class CrossrefProcessor(FormatProcessor):
                                                     doi_curator,
                                                     doi_source_provider,
                                                     self.source)
-
         else:
             return self.process_existing_by_id(existing_res, self.id)
 
@@ -564,16 +637,16 @@ class CrossrefProcessor(FormatProcessor):
             cur_id.create_xmlid(xmlid_string)
             cur_res.has_id(cur_id)
 
-    def process_pmid(self, pmid):
-        existing_res = self.rf.retrieve_from_pmid(pmid, typ='both')
+    def process_pmid(self, pmid, typ="both"):
+        existing_res = self.rf.retrieve_from_pmid(pmid, typ=typ)
         return self.process_existing_by_id(existing_res, self.id)
 
-    def process_pmcid(self, pmcid):
-        existing_res = self.rf.retrieve_from_pmcid(pmcid, typ='both')
+    def process_pmcid(self, pmcid, typ="both"):
+        existing_res = self.rf.retrieve_from_pmcid(pmcid, typ=typ)
         return self.process_existing_by_id(existing_res, self.id)
 
-    def process_url(self, url):
-        existing_res = self.rf.retrieve_from_url(url, typ='both')
+    def process_url(self, url, typ="both"):
+        existing_res = self.rf.retrieve_from_url(url, typ=typ)
         return self.process_existing_by_id(existing_res, self.id)
 
     # Add the number of triples in the graph in a local array in order to do troubleshooting

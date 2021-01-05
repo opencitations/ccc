@@ -858,6 +858,7 @@ class ProvSet(GraphSet):
             self.triplestore_url = triplestore_url
             self.ts = ConjunctiveGraph('SPARQLUpdateStore')
             self.ts.open((triplestore_url, triplestore_url))
+            self.ts.namespace_manager.store.nsBindings = {}
 
         self.all_subjects = set()
         for cur_subj_g in prov_subj_graph_set.graphs():
@@ -893,6 +894,7 @@ class ProvSet(GraphSet):
         # have at least some new triples to add
         for prov_subject in self.all_subjects:
             cur_subj = self.prov_g.get_entity(prov_subject)
+            cur_snapshot = self.add_se(resp_agent, cur_subj)
 
             # In the previous version, this passage obliged us to spend a lot of time of processing, while
             # we actually can speed up everything if we consider that, in the current version
@@ -906,17 +908,12 @@ class ProvSet(GraphSet):
             # snapshot created for a particular entity.
             last_snapshot = None
             if "/br/" in str(prov_subject):
-                prov_info_path, g_prov = self._find_prov_info_path(prov_subject, "se")
-                last_snapshot_number = GraphSet._read_number(
-                    prov_info_path, find_local_line_id(prov_subject, self.n_file_item))
-
-                if last_snapshot_number:  # it is not 0 (i.e. it existed a previous snapshot)
-                    last_snapshot_res = URIRef(str(prov_subject) + "/prov/se/" + str(last_snapshot_number))
+                cur_snapshot_number = int(str(cur_snapshot.res).rsplit("/", 1)[1])
+                if cur_snapshot_number > 1:
+                    last_snapshot_res = URIRef(str(prov_subject) + "/prov/se/" + str(cur_snapshot_number - 1))
                     last_snapshot = self.add_se(resp_agent, cur_subj, last_snapshot_res)
             
-            # Snapshot
-            cur_snapshot = None
-            cur_snapshot = self.add_se(resp_agent, cur_subj)
+            # Snapshot data
             cur_snapshot.snapshot_of(cur_subj)
             cur_snapshot.create_generation_time(cur_time)
             if cur_subj.source is not None:

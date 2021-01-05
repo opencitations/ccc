@@ -377,9 +377,6 @@ class GraphEntity(object):
     def create_oci(self, string): # new
         return self._associate_identifier_with_scheme(string, GraphEntity.oci)
 
-    def create_oci(self, string): # new
-        return self._associate_identifier_with_scheme(string, GraphEntity.oci)
-
     def create_xmlid(self, string): # new
         return self._associate_identifier_with_scheme(string, GraphEntity.xmlid)
 
@@ -784,9 +781,7 @@ class ProvEntity(GraphEntity):
     specialization_of = PROV.specializationOf
     was_derived_from = PROV.wasDerivedFrom
     had_primary_source = PROV.hadPrimarySource
-    was_generated_by = PROV.wasGeneratedBy
     was_attributed_to = PROV.wasAttributedTo # new
-    was_invalidated_by = PROV.wasInvalidatedBy
     qualified_association = PROV.qualifiedAssociation
     description = GraphEntity.DCTERMS.description
     has_update_query = GraphEntity.OCO.hasUpdateQuery
@@ -834,12 +829,6 @@ class ProvEntity(GraphEntity):
 
     def has_primary_source(self, any_res):
         self.g.add((self.res, ProvEntity.had_primary_source, URIRef(str(any_res))))
-
-    def generates(self, se_res):
-        se_res.g.add((URIRef(str(se_res)), ProvEntity.was_generated_by, self.res))
-
-    def invalidates(self, se_res):
-        se_res.g.add((URIRef(str(se_res)), ProvEntity.was_invalidated_by, self.res))
 
     def involves_agent_with_role(self, cr_res):
         self.g.add((self.res, ProvEntity.qualified_association, URIRef(str(cr_res))))
@@ -897,22 +886,34 @@ class ProvSet(GraphSet):
         else:
             cur_time = datetime.fromtimestamp(c_time).strftime(time_string)
 
-        # Add all existing information for provenance agents
-        self.rf.add_prov_triples_in_filesystem(self.base_iri)
-
         if resp_agent is None:
             resp_agent = self.cur_name
+        
         # The 'all_subjects' set includes only the subject of the created graphs that
         # have at least some new triples to add
         for prov_subject in self.all_subjects:
             cur_subj = self.prov_g.get_entity(prov_subject)
 
-            # Load all provenance data of snapshots for that subject
-            self.rf.add_prov_triples_in_filesystem(str(prov_subject), "se")
+            # In the previous version, this passage obliged us to spend a lot of time of processing, while
+            # we actually can speed up everything if we consider that, in the current version
+            # of the workflow, the only entity that may be updated are br - since they are the
+            # only one that may change with additional data. Thus, the existence of a previous
+            # snapshot can be in place only for them, while all the other entities are surely
+            # new. In addition, also the 'resfinder' has been modified and old query used to 
+            # identify previous snapshot is not working anymore with the current logic. Thus, we use
+            # an approach that has been also adopted in the new version of the OCDM Python API, which
+            # use the information contained in the info dir to understand which was the last
+            # snapshot created for a particular entity.
             last_snapshot = None
-            last_snapshot_res = self.rf.retrieve_last_snapshot(prov_subject)
-            if last_snapshot_res is not None:
-                last_snapshot = self.add_se(resp_agent, cur_subj, last_snapshot_res)
+            if "/br/" in str(prov_subject):
+                prov_info_path, g_prov = self._find_prov_info_path(prov_subject, "se")
+                last_snapshot_number = GraphSet._read_number(
+                    prov_info_path, find_local_line_id(prov_subject, self.n_file_item))
+
+                if last_snapshot_number:  # it is not 0 (i.e. it existed a previous snapshot)
+                    last_snapshot_res = URIRef(str(prov_subject) + "/prov/se/" + str(last_snapshot_number))
+                    last_snapshot = self.add_se(resp_agent, cur_subj, last_snapshot_res)
+            
             # Snapshot
             cur_snapshot = None
             cur_snapshot = self.add_se(resp_agent, cur_subj)
@@ -926,11 +927,12 @@ class ProvSet(GraphSet):
             if last_snapshot is None and do_insert:  # Create a new entity
                 cur_snapshot.create_description("The entity '%s' has been created." % str(cur_subj.res))
             else:
-                if self._are_added_triples(cur_subj): # if diff != 0:
+                added_triples = self._are_added_triples(cur_subj)
+                if added_triples: # if diff != 0:
                     update_query_data = None
                     update_description = None
                     if do_insert:
-                        update_query_data = self._are_added_triples(cur_subj)
+                        update_query_data = added_triples
                         update_description = "The entity '%s' has been extended with new statements." % str(cur_subj.res)
                     else:
                         update_query_data = self._create_delete_query(cur_subj.g)
@@ -950,11 +952,9 @@ class ProvSet(GraphSet):
                 if last_snapshot is not None:
                     cur_snapshot.derives_from(last_snapshot)
                     last_snapshot.create_invalidation_time(cur_time)
-                    cur_snapshot.invalidates(last_snapshot)
 
                 # Invalidate the new snapshot if the entity has been removed
                 if remove_entity:
-                    cur_snapshot.invalidates(cur_snapshot)
                     cur_snapshot.create_invalidation_time(cur_time)
 
     @staticmethod
@@ -975,7 +975,6 @@ class ProvSet(GraphSet):
         cur_subj_g = cur_subj.g
         prev_subj_g = Graph()
         query = "CONSTRUCT {<%s> ?p ?o} WHERE {<%s> ?p ?o}" % (subj , subj)
-        print(query, '\n')
         result = self.ts.query(query)
 
         if result:
@@ -1012,7 +1011,7 @@ class ProvSet(GraphSet):
 
         return query_string + "}", are_citations, are_ids, are_others
 
-    def _add_prov(self, short_name, prov_type, res, resp_agent, prov_subject=None):
+    def _find_prov_info_path(self, prov_subject, short_name):
         if prov_subject is None:
             g_prov = self.base_iri + "prov/"
 
@@ -1026,8 +1025,12 @@ class ProvSet(GraphSet):
                            self.dir_split, self.n_file_item)[1][:-5]
 
             prov_info_path = res_file_path + os.sep + "prov" + os.sep + short_name + ".txt"
-            #prov_info_path = \
-            #    g_prov.replace(self.base_iri, self.info_dir.rsplit(os.sep, 2)[0] + os.sep) + short_name + ".txt"
+        
+        return prov_info_path, g_prov
+
+    def _add_prov(self, short_name, prov_type, res, resp_agent, prov_subject=None):
+        prov_info_path, g_prov = self._find_prov_info_path(prov_subject, short_name)
+
         return self._add(g_prov, prov_type, res, resp_agent, None, None,
                          prov_info_path, short_name, [] if prov_subject is None else [prov_subject])
 

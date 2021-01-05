@@ -100,23 +100,24 @@ class LocalQuery(QueryInterface):
                                 timeout=self.timeout).json()
         s.close()
 
-        results = response['response']['docs']
+        if "response" in response:
+            results = response['response']['docs']
+        
+            #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
+            #results = crossref_query_instance.search(fl='*,score', q=query)
+            #crossref_query_instance.get_session().close()
 
-        #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
-        #results = crossref_query_instance.search(fl='*,score', q=query)
-        #crossref_query_instance.get_session().close()
+            if self.repok is not None:
+                self.repok.add_sentence("Data retrieved for '{}' in {}ms".format(entity, response['responseHeader']['QTime']))
 
-        if self.repok is not None:
-            self.repok.add_sentence("Data retrieved for '{}' in {}ms".format(entity, response['responseHeader']['QTime']))
-
-        if len(results) < 1:
-            return None
-        try:
-            for r in results:
-                if r['score'] > self.threshold:
-                    return json.loads(r['original'])
-        except:
-            return None
+            if len(results) < 1:
+                return None
+            try:
+                for r in results:
+                    if r['score'] > self.threshold:
+                        return json.loads(r['original'])
+            except:
+                return None
         return None
 
     def get_doi_from_bibref(self, entity):

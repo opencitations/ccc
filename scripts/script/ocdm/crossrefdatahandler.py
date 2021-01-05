@@ -49,9 +49,9 @@ class CrossrefDataHandler(object):
             retrieved = self.rf.retrieve_res_id_by_type(res.res, string, GraphEntity.isbn, 'both')
             if retrieved is None:
                 cur_id = self.g_set.add_id(self.name, self.id, source)
-                if cur_id.create_issn(string):
+                if cur_id.create_isbn(string):
                     res.has_id(cur_id)
-                    self.rf.add_issn_to_store(res, cur_id, string)
+                    self.rf.add_isbn_to_store(res, cur_id, string)
 
 
     def __get_ids_for_container(self, json):

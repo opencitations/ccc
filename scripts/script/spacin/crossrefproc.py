@@ -235,8 +235,8 @@ class CrossrefProcessor(FormatProcessor):
         for key, list_of_entities in duplicate_dois.items():
             list_len = len(list_of_entities)
 
-            if key == "10.3410/f.1089488.544735":
-                print("####HERE:", list_len, "\n", "\n".join([e.entry for e in list_of_entities]))
+            if any([True for e in list_of_entities if e.entry.startswith("Khosla S, Burr D, Cauley J")]):
+                print("####HERE:", "@", key, "@")
 
             # If the citing DOI appears to be also a cited DOI (creating a circular citation), 
             # then exclude the entities of such a DOI resource from the computation
@@ -250,9 +250,6 @@ class CrossrefProcessor(FormatProcessor):
                 list_of_entities.sort(key=lambda x: x.cur_json_obtained_via)
                 for duplicate_entity in list_of_entities[1:]:
                     duplicate_entity.to_be_considered = False
-                
-                if key == "10.3410/f.1089488.544735":
-                    print("####HERE:", list_len, "\n", "\n".join([e.to_be_considered + e.entry for e in list_of_entities]))
 
     def process_references(self, do_process_entry=True, citing_entity=None, citing_doi=None):
         results_list = []

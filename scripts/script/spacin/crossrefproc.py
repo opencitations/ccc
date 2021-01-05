@@ -165,13 +165,15 @@ class CrossrefProcessor(FormatProcessor):
         # The process can start if a DOI is specified
         if self.doi is not None:
             citing_resource = self.rf.retrieve_citing_from_doi(self.doi, typ='only_blazegraph')
-
-            if citing_resource is None and self.pmid is not None:
-                citing_resource = self.rf.retrieve_citing_from_pmid(self.pmid, typ='only_blazegraph')
-            if citing_resource is None and self.pmcid is not None:
-                citing_resource = self.rf.retrieve_citing_from_pmcid(self.pmcid, typ='only_blazegraph')
-            #if citing_resource is None and self.url is not None:
-            #    citing_resource = self.rf.retrieve_citing_from_url(self.url, typ='only_blazegraph')
+            
+            # The check via PMID and PMCID is now prevented since there are id mistakes in the PubMed data
+            # that may affect the persistency of the OCIs and InTRePIDs.
+            # if citing_resource is None and self.pmid is not None:
+            #     citing_resource = self.rf.retrieve_citing_from_pmid(self.pmid, typ='only_blazegraph')
+            # if citing_resource is None and self.pmcid is not None:
+            #     citing_resource = self.rf.retrieve_citing_from_pmcid(self.pmcid, typ='only_blazegraph')
+            # if citing_resource is None and self.url is not None:
+            #     citing_resource = self.rf.retrieve_citing_from_url(self.url, typ='only_blazegraph')
 
             if citing_resource is None:
                 return self.process_citing_entity()
@@ -234,9 +236,6 @@ class CrossrefProcessor(FormatProcessor):
         # Address duplicate DOIs only
         for key, list_of_entities in duplicate_dois.items():
             list_len = len(list_of_entities)
-
-            if any([True for e in list_of_entities if e.entry.startswith("Khosla S, Burr D, Cauley J")]):
-                print("####HERE:", "@", key, "@")
 
             # If the citing DOI appears to be also a cited DOI (creating a circular citation), 
             # then exclude the entities of such a DOI resource from the computation
@@ -330,7 +329,6 @@ class CrossrefProcessor(FormatProcessor):
                 if cur_res_to_process and bibentry_entity.provided_doi is not None and bibentry_entity.process_doi_result is not None:
                         cur_res = self.process_doi(bibentry_entity.provided_doi, self.curator, self.source_provider,
                                                    typ='only_local', result=bibentry_entity.process_doi_result)
-                                                   # TODO: maybe we need to pass the set of already got entities to each of these process_* function to avoid the specification of a new entity if already exist -- something to check carefully
 
                         if cur_res is not None:
                                 self.repok.add_sentence(
@@ -347,21 +345,23 @@ class CrossrefProcessor(FormatProcessor):
                                          "DOI extracted from it." % bibentry_entity.entry,
                                          "DOI", bibentry_entity.extracted_doi))
 
-                if cur_res_to_process and cur_res is None and bibentry_entity.provided_pmid is not None:
-                    cur_res = self.process_pmid(bibentry_entity.provided_pmid, typ="only_local")
-                    if cur_res is not None:
-                        self.repok.add_sentence(
-                            self.message("The entity has been found by means of the "
-                                         "PMID provided as input by %s." % self.source_provider,
-                                         "PMID", bibentry_entity.provided_doi))
-
-                if cur_res_to_process and cur_res is None and bibentry_entity.provided_pmcid is not None:
-                    cur_res = self.process_pmcid(bibentry_entity.provided_pmcid, typ="only_local")
-                    if cur_res is not None:
-                        self.repok.add_sentence(
-                            self.message("The entity has been found by means of the "
-                                         "PMCID provided as input by %s." % self.source_provider,
-                                         "PMCID", bibentry_entity.provided_pmcid))
+                # The check via PMID and PMCID is now prevented since there are id mistakes in the PubMed data
+                # that may affect the persistency of the OCIs and InTRePIDs.
+                # if cur_res_to_process and cur_res is None and bibentry_entity.provided_pmid is not None:
+                #     cur_res = self.process_pmid(bibentry_entity.provided_pmid, typ="only_local")
+                #     if cur_res is not None:
+                #         self.repok.add_sentence(
+                #             self.message("The entity has been found by means of the "
+                #                          "PMID provided as input by %s." % self.source_provider,
+                #                          "PMID", bibentry_entity.provided_doi))
+                # 
+                # if cur_res_to_process and cur_res is None and bibentry_entity.provided_pmcid is not None:
+                #     cur_res = self.process_pmcid(bibentry_entity.provided_pmcid, typ="only_local")
+                #     if cur_res is not None:
+                #         self.repok.add_sentence(
+                #             self.message("The entity has been found by means of the "
+                #                          "PMCID provided as input by %s." % self.source_provider,
+                #                          "PMCID", bibentry_entity.provided_pmcid))
 
                 if cur_res_to_process and cur_res is None and bibentry_entity.entry is not None:  # crossref API string search
                     if do_process_entry == True:

@@ -83,16 +83,18 @@ class Bibentry:
             self.cur_res_obtained_via = Bibentry.EXTRACTED_DOI
         if self.cur_json_obtained_via is None and self.process_doi_result is not None:
             self.cur_json_obtained_via = Bibentry.EXTRACTED_DOI
-
-        if self.cur_res is None and self.provided_pmid is not None:
-            self._process_pmid(self.provided_pmid)
-        if self.cur_res is not None:
-            self.cur_res_obtained_via = Bibentry.PROVIDED_PMID
-
-        if self.cur_res is None and self.provided_pmcid is not None:
-            self._process_pmcid(self.provided_pmcid)
-        if self.cur_res is not None:
-            self.cur_res_obtained_via = Bibentry.PROVIDED_PMCID
+        
+        # The check via PMID and PMCID is now prevented since there are id mistakes in the PubMed data
+        # that may affect the persistency of the OCIs and InTRePIDs.
+        # if self.cur_res is None and self.provided_pmid is not None:
+        #     self._process_pmid(self.provided_pmid)
+        # if self.cur_res is not None:
+        #     self.cur_res_obtained_via = Bibentry.PROVIDED_PMID
+        # 
+        # if self.cur_res is None and self.provided_pmcid is not None:
+        #     self._process_pmcid(self.provided_pmcid)
+        # if self.cur_res is not None:
+        #     self.cur_res_obtained_via = Bibentry.PROVIDED_PMCID
         
         if self.cur_res is None and self.process_doi_result is None and self.entry is not None:
             self._process_entry(self.entry)

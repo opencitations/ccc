@@ -41,7 +41,7 @@ class LocalQuery(QueryInterface):
                  orcid_url='http://localhost:8983/solr/orcid',
                  reperr = None,
                  repok = None,
-                 threshold = 19,
+                 threshold = 47,
                  timeout = 100):
 
         self.reperr = reperr

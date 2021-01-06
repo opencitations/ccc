@@ -18,6 +18,7 @@ __author__ = 'essepuntato'
 from rdflib import Graph, Namespace, URIRef, ConjunctiveGraph
 from rdflib.compare import to_isomorphic, graph_diff
 from rdflib.namespace import XSD, RDFS
+from rdflib.plugin import register, Parser
 from script.support.reporter import Reporter
 import re
 import os
@@ -859,6 +860,10 @@ class ProvSet(GraphSet):
             self.ts = ConjunctiveGraph('SPARQLUpdateStore')
             self.ts.open((triplestore_url, triplestore_url))
             self.ts.namespace_manager.store.nsBindings = {}
+            # Fixing a bug when the charset UTF-8 is returned by a remote triplestore - without this
+            # registration, no plugin for RDFXML is recognised (probably because it is associated only
+            # to the string 'application/rdf+xml' without the charset)
+            register('application/rdf+xml;charset=utf-8', Parser, 'rdflib.plugins.parsers.rdfxml', 'RDFXMLParser')
 
         self.all_subjects = set()
         for cur_subj_g in prov_subj_graph_set.graphs():

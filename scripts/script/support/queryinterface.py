@@ -66,23 +66,27 @@ class LocalQuery(QueryInterface):
         headers = {'content-type': "application/json"}
 
         s = requests.session()
-        results = s.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers, timeout=self.timeout).json()['response']['docs']
+        responce = s.get(self.crossref_url+"?q="+query+"&fl=*,score", headers=headers, timeout=self.timeout).json()
         s.close()
         #crossref_query_instance = pysolr.Solr(self.crossref_url, always_commit=True, timeout=100)
         #results = crossref_query_instance.search(fl='*,score', q=query)
         #crossref_query_instance.get_session().close()
 
-        if len(results) != 1:
-            if self.repok is not None:
-                self.repok.add_sentence("Data retrieved for '{}': {} results found, returning None".format(entity,len(results)))
-            return None
-        else:
-            if self.repok is not None:
-                self.repok.add_sentence("Data retrieved for '{}'".format(entity, len(results)))
+        if "result" in responce:
+            results = responce['response']['docs']
 
-            for r in results:
-                return json.loads(r['original'])
-            return None
+            if len(results) != 1:
+                if self.repok is not None:
+                    self.repok.add_sentence("Data retrieved for '{}': {} results found, returning None".format(entity,len(results)))
+                return None
+            else:
+                if self.repok is not None:
+                    self.repok.add_sentence("Data retrieved for '{}'".format(entity))
+
+                for r in results:
+                    return json.loads(r['original'])
+                return None
+        return None
 
     def get_data_crossref_bibref(self, entity):
         entity = ' '.join(item for item in entity.split() if not (item.startswith('https://') and len(item) > 7))
